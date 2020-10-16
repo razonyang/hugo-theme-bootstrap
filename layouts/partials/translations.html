@@ -1,0 +1,12 @@
+{{ if and .IsTranslated }}
+<div class="nav-item dropdown post-translations">
+  <a class="nav-link p-0" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+    <i class="fas fa-fw fa-language"></i> {{ $.Language.LanguageName }}
+  </a>
+  <div class="dropdown-menu">
+    {{- range .Translations -}}
+    <a class="dropdown-item post-translation" href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
+    {{- end -}}
+  </div>
+</div>
+{{ end }}

@@ -1,0 +1,51 @@
+html {
+  position: relative;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-flow: column;
+}
+
+main {
+  margin-top: 70px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 1.5rem 0;
+}
+
+pre {
+  padding: 1rem;
+  border-radius: .25rem;
+}
+
+.featured-posts, .recent-posts {
+  padding-left: 1.5rem;
+}
+
+.post-date, .post-tags, .post-categories, .post-translations {
+  display: inline-block;
+}
+.post-comments {
+  padding-top: 1rem;
+}
+
+.footer {
+  font-size: 0.9rem;
+  background-color: #f5f5f5;
+  margin-top: auto;
+}
+
+.social-links .nav-link {
+    padding: .5rem;
+}

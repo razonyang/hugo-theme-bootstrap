@@ -1,0 +1,12 @@
+title = "Hugo Bootstrap Theme"
+theme = "hugo-theme-bootstrap"
+themesDir = "../../"
+
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = true
+
+# Pagination
+paginate = 10
+paginatePath = "page"
+
+disqusShortname = "yourdiscussshortname"

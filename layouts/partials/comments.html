@@ -1,0 +1,9 @@
+{{- if and (default true .Site.Params.comment) (default true .Params.comment) -}}
+{{- partial "hooks/comments-begin" . -}}
+<div class="mb-4 border-top post-comments">
+{{- if .Site.DisqusShortname -}}
+  {{- template "_internal/disqus.html" . -}}
+{{- end -}}
+</div>
+{{- partial "hooks/comments-end" . -}}
+{{- end -}}

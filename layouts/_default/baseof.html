@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="{{ .Lang }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{- block "title" . -}}{{ .Title }} {{ .Site.Params.titleSeparator }} {{ .Site.Title }}{{- end -}}</title>
+    {{- partial "head.html" . -}}
+    {{- partial "hooks/head-end" . -}}
+  </head>
+  <body>
+    {{- partial "header.html" . -}}
+    <main role="main" class="container">
+      <div class="row">
+        <div class="col-md-8 content">
+          {{- block "content" . -}}{{- end -}}
+        </div>
+        <aside class="col-md-4 sidebar">
+          {{- partial "sidebar" . -}}
+        </aside>
+      </div>    
+    </main>
+    {{- partial "footer.html" . -}}
+    {{- partial "hooks/body-end" . -}}
+  </body>
+</html>

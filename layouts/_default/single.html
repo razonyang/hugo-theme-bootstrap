@@ -1,0 +1,12 @@
+{{ define "content" }}
+<div class="post">
+  <h1 class="mb-4 post-title">{{ .Title }}</h1>
+  {{- partial "post-meta" . -}}
+  {{- partial "hooks/content-begin" . -}}
+  <div class="mb-4 post-content">
+    {{- .Content -}}
+  </div>
+  {{- partial "hooks/content-end" . -}}
+  {{- partial "comments" . -}}
+</div>
+{{ end }}

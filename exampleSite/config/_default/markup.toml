@@ -1,0 +1,12 @@
+[highlight]
+  anchorLineNos = true
+  codeFences = true
+  guessSyntax = false
+  hl_Lines = ""
+  lineAnchors = ""
+  lineNoStart = 1
+  lineNos = false
+  lineNumbersInTable = true
+  noClasses = true
+  style = "solarized-light"
+  tabWidth = 2

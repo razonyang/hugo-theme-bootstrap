@@ -1,0 +1,4 @@
+{{- $style := resources.Get "css/app.css" | resources.Minify | resources.Fingerprint -}}
+<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous">
+{{- $script := resources.Get "js/app.js" | resources.Minify | resources.Fingerprint -}}
+<script type="text/javascript" src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>

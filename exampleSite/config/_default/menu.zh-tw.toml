@@ -1,0 +1,34 @@
+[[main]]
+  name = "主頁"
+  url = "/"
+  weight = 10
+[[main]]
+  name = "分類"
+  url = "/categories"
+  weight = 20
+[[main]]
+  name = "標籤"
+  url = "/tags"
+  weight = 30
+[[main]]
+  name = "關於"
+  url = "/about"
+  weight = 40
+[[main]]
+  name = "下拉"
+  identifier = "dropdown"
+[[main]]
+  parent = "dropdown"
+  name = "菜單"
+  weight = 10
+  url = "#"
+[[main]]
+  parent = "dropdown"
+  name = "另一菜單"
+  weight = 20
+  url = "#"
+[[main]]
+  parent = "dropdown"
+  name = "外部鏈接"
+  weight = 90
+  url = "https://github.com/razonyang/hugo-theme-bootstrap"

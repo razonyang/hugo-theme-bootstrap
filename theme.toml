@@ -1,0 +1,18 @@
+name = "Hugo Bootstrap Theme"
+license = "MIT"
+licenselink = "https://github.com/razonyang/hugo-theme-bootstrap/blob/master/LICENSE"
+description = "A clean, responsive blog theme for Hugo"
+homepage = "https://github.com/razonyang/hugo-theme-bootstrap"
+tags = [
+  "bootstrap",
+  "bootstrap 5",
+  "clean",
+  "simple",
+  "blog",
+  "responsive"
+]
+features = []
+min_version = "0.41.0"
+[author]
+  name = "Razon Yang"
+  homepage = "https://razonyang.com"

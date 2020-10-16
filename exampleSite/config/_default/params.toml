@@ -1,0 +1,32 @@
+mainSections = ["post", "posts"]
+
+author = "Razon Yang"
+titleSeparator = "-"
+
+[[social]]
+key = "github"
+user = "username"
+[[social]]
+key = "gitlab"
+user = "username"
+[[social]]
+key = "twitter"
+user = "username"
+[[social]]
+key = "facebook"
+user = "username"
+[[social]]
+key = "linkedin"
+user = "username"
+[[social]]
+key = "stackoverflow"
+user = "userid"
+[[social]]
+key = "weibo"
+user = "username"
+[[social]]
+key = "zhihu"
+user = "username"
+[[social]]
+key = "email"
+user = "user@example.com"
