@@ -11,7 +11,7 @@ tags = [
 ]
 +++
 
-Cloudmusic shortcode 可以简单地添加一个网易云歌曲。
+Cloudmusic shortcode 可以简单地添加一首网易云歌曲。
 
 <!--more-->
 
