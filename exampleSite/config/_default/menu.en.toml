@@ -32,8 +32,3 @@
   name = "External"
   weight = 90
   url = "https://github.com/razonyang/hugo-theme-bootstrap"
-[[main]]
-  parent = "dropdown"
-  name = "About"
-  identifier = "aaa"
-  url = "/en/about/"
