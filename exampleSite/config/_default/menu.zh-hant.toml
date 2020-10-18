@@ -1,18 +1,18 @@
 [[main]]
   name = "主頁"
-  url = "/zh-tw/"
+  url = "/zh-hant/"
   weight = 10
 [[main]]
   name = "分類"
-  url = "/zh-tw/categories/"
+  url = "/zh-hant/categories/"
   weight = 20
 [[main]]
   name = "標籤"
-  url = "/zh-tw/tags/"
+  url = "/zh-hant/tags/"
   weight = 30
 [[main]]
   name = "關於"
-  url = "/zh-tw/about/"
+  url = "/zh-hant/about/"
   weight = 40
 [[main]]
   name = "下拉菜單"
