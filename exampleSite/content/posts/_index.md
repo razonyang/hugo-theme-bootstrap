@@ -1,3 +1,3 @@
 +++
-title = "Shortcodes"
+title = "Posts"
 +++
