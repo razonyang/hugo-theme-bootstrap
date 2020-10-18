@@ -4804,3 +4804,6 @@ pre {
 
 .social-links .nav-link {
   padding: .5rem; }
+
+.utterances {
+  max-width: 100%; }
