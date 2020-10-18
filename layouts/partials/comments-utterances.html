@@ -1,0 +1,11 @@
+{{- $params := .Site.Params.utterances -}}
+{{- with $params -}}
+<script src="https://utteranc.es/client.js"
+  repo="{{ $params.repo }}"
+  issue-term="{{ default "pathname" $params.issueTerm }}"
+  label="{{ $params.label }}"
+  theme="{{ default "github-light" $params.theme }}"
+  crossorigin="anonymous"
+  async>
+</script>
+{{- end -}}
