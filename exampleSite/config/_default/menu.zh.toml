@@ -11,9 +11,13 @@
   url = "/zh/tags/"
   weight = 30
 [[main]]
+  name = "归档"
+  url = "/zh/archives/"
+  weight = 40
+[[main]]
   name = "关于"
   url = "/zh/about/"
-  weight = 40
+  weight = 50
 [[main]]
   name = "下拉菜单"
   identifier = "dropdown"
