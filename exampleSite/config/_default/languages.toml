@@ -1,14 +1,11 @@
 [en]
   LanguageName = "English"
-  languageCode = "en_US"
   weight = 1
 
 [zh]
   LanguageName = "简体中文"
   weight = 2
-  languageCode = "zh_CN"
 
-[zh-tw]
+[zh-hant]
   LanguageName = "繁體中文"
   weight = 3
-  languageCode = "zh_TW"
