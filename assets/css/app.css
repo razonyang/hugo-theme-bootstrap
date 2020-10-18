@@ -5387,3 +5387,14 @@ pre {
   bottom: 1.5rem;
   right: 1.5rem;
   display: none; }
+
+.post-toc {
+  float: right;
+  margin-left: 1rem;
+  min-width: 180px;
+  background-color: #e9ecef;
+  color: #212529;
+  padding: .5rem 0; }
+
+.post-toc ul {
+  margin-bottom: 0; }
