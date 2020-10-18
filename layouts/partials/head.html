@@ -1,3 +1,4 @@
+{{- partial "favicons" . -}}
 {{- $style := resources.Get "css/app.css" | resources.Minify | resources.Fingerprint -}}
 <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous">
 {{- $script := resources.Get "js/app.js" | resources.Minify | resources.Fingerprint -}}
