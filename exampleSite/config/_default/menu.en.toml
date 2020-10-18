@@ -11,9 +11,13 @@
   url = "/en/tags/"
   weight = 30
 [[main]]
+  name = "Archives"
+  url = "/en/archives/"
+  weight = 40
+[[main]]
   name = "About"
   url = "/en/about/"
-  weight = 40
+  weight = 50
 [[main]]
   name = "Dropdown"
   identifier = "dropdown"
