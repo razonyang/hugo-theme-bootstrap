@@ -1,18 +1,18 @@
 [[main]]
   name = "主页"
-  url = "/zh"
+  url = "/zh/"
   weight = 10
 [[main]]
   name = "分类"
-  url = "/zh/categories"
+  url = "/zh/categories/"
   weight = 20
 [[main]]
   name = "标签"
-  url = "/zh/tags"
+  url = "/zh/tags/"
   weight = 30
 [[main]]
   name = "关于"
-  url = "/zh/about"
+  url = "/zh/about/"
   weight = 40
 [[main]]
   name = "下拉"
