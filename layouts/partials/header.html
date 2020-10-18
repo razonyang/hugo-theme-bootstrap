@@ -16,7 +16,7 @@
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               {{- range .Children -}}
               <li>
-                <a class="dropdown-item" href="{{ absLangURL .URL }}">
+                <a class="dropdown-item" href="{{ .URL }}">
                   {{- .Name -}}
                 </a>
               </li>
@@ -25,7 +25,7 @@
           </li>
           {{- else -}}
           <li class="nav-item">
-            <a class="nav-link" href="{{ absLangURL .URL }}">
+            <a class="nav-link" href="{{ .URL }}">
               {{- .Name -}}
             </a>
           </li>

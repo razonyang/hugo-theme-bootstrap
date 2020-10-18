@@ -1,18 +1,18 @@
 [[main]]
   name = "Home"
-  url = "/"
+  url = "/en"
   weight = 10
 [[main]]
   name = "Categories"
-  url = "/categories"
+  url = "/en/categories"
   weight = 20
 [[main]]
   name = "Tags"
-  url = "/tags"
+  url = "/en/tags"
   weight = 30
 [[main]]
   name = "About"
-  url = "/about"
+  url = "/en/about"
   weight = 40
 [[main]]
   name = "Dropdown"
