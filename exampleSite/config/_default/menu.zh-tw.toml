@@ -15,7 +15,7 @@
   url = "/zh-tw/about/"
   weight = 40
 [[main]]
-  name = "下拉"
+  name = "下拉菜單"
   identifier = "dropdown"
 [[main]]
   parent = "dropdown"
