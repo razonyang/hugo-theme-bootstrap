@@ -9,7 +9,7 @@ RUN dnf install -y hugo git
 # Build site
 WORKDIR /src
 COPY . /src
-RUN git submodule update --init --recursive && cd /src/exampleSite && hugo --themesDir=../../ --theme=src --minify
+RUN git submodule update --init --recursive && cd /src/exampleSite && hugo --themesDir=../../ --theme=src --minify -e=demo
 
 # Final stage
 FROM nginx
