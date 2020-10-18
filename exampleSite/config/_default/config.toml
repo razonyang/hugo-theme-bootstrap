@@ -1,6 +1,5 @@
 title = "Hugo Bootstrap Theme"
 theme = "hugo-theme-bootstrap"
-themesDir = "../../"
 
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = true
@@ -9,4 +8,4 @@ defaultContentLanguageInSubdir = true
 paginate = 10
 paginatePath = "page"
 
-disqusShortname = "yourdiscussshortname"
+# disqusShortname = "yourdiscussshortname"
