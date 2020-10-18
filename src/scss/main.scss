@@ -36,6 +36,11 @@ pre {
 .post-date, .post-tags, .post-categories, .post-translations {
   display: inline-block;
 }
+
+.post-content a {
+  color: #0d6efd;
+}
+
 .post-comments {
   padding-top: 1rem;
 }
