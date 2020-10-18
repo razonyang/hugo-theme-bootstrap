@@ -1,0 +1,12 @@
+{{ define "content" }}
+<div class="terms">
+  <h1>{{ .Title }}</h1>
+  <div>
+    {{- range .Data.Terms.ByCount -}}
+    <a href="{{ .Page.Permalink }}" class="btn btn-sm btn-primary mr-2 mb-2">
+      {{ .Page.Title }} <span class="badge bg-dark">{{ .Count }}</span>
+    </a>
+    {{- end -}}
+  </div>
+</div>
+{{ end }}
