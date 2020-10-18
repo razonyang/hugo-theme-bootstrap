@@ -1,8 +1,10 @@
 {{- $pages := .Pages -}}
 {{- if .IsHome -}}
   {{- $pages = where site.RegularPages "Type" "in" site.Params.mainSections -}}
-{{- end -}}
+{{- else -}}
+{{- partial "breadcrumb" . -}}
 <h1 class="pb-3 mb-3 border-bottom">{{ upper .Title }}</h1>
+{{- end -}}
 <div class="posts">
 {{- range (.Paginate $pages).Pages -}}
   <div class="border-bottom mb-5 post">
