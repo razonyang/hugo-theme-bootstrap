@@ -3,6 +3,8 @@ mainSections = ["post", "posts"]
 author = "Razon Yang"
 titleSeparator = "-"
 
+dateFormat = "Jan 2, 2006"
+
 [utterances]
 repo = "razonyang/hugo-theme-bootstrap"
 #issueTerm = "pathname" # pathname, url, title, og:title
