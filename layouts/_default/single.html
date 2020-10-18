@@ -3,6 +3,7 @@
 <div class="post">
   <h1 class="mb-3 post-title">{{ .Title }}</h1>
   {{- partial "post-meta" . -}}
+  {{- partial "post-toc" . -}}
   {{- partial "hooks/content-begin" . -}}
   <div class="mb-4 post-content">
     {{- .Content -}}
