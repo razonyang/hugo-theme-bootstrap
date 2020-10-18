@@ -8,15 +8,17 @@
         <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
           {{- $currentPage := . -}}
           {{- range .Site.Menus.main -}}
+          {{- $active := or ($currentPage.HasMenuCurrent "main" .) ($currentPage.IsMenuCurrent "main" .) -}}
+          {{- $active := or $active (eq $currentPage.URL .URL) -}}
           {{- if .HasChildren -}}
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle{{ if $active }} active{{ end }}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
               {{- .Name -}}
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               {{- range .Children -}}
               <li>
-                <a class="dropdown-item" href="{{ .URL }}">
+                <a class="dropdown-item{{ if or $active (eq $currentPage.URL .URL) }} active{{ end }}" href="{{ .URL }}">
                   {{- .Name -}}
                 </a>
               </li>
@@ -25,7 +27,7 @@
           </li>
           {{- else -}}
           <li class="nav-item">
-            <a class="nav-link" href="{{ .URL }}">
+            <a class="nav-link{{ if $active }} active{{ end }}" href="{{ .URL }}">
               {{- .Name -}}
             </a>
           </li>

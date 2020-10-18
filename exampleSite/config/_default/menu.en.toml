@@ -1,18 +1,18 @@
 [[main]]
   name = "Home"
-  url = "/en"
+  url = "/en/"
   weight = 10
 [[main]]
   name = "Categories"
-  url = "/en/categories"
+  url = "/en/categories/"
   weight = 20
 [[main]]
   name = "Tags"
-  url = "/en/tags"
+  url = "/en/tags/"
   weight = 30
 [[main]]
   name = "About"
-  url = "/en/about"
+  url = "/en/about/"
   weight = 40
 [[main]]
   name = "Dropdown"
@@ -32,3 +32,8 @@
   name = "External"
   weight = 90
   url = "https://github.com/razonyang/hugo-theme-bootstrap"
+[[main]]
+  parent = "dropdown"
+  name = "About"
+  identifier = "aaa"
+  url = "/en/about/"
