@@ -2007,6 +2007,27 @@ progress {
   .navbar-dark .navbar-text a:focus {
     color: #fff; }
 
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  list-style: none;
+  background-color: #e9ecef;
+  border-radius: 0.25rem; }
+
+.breadcrumb-item {
+  display: flex; }
+  .breadcrumb-item + .breadcrumb-item {
+    padding-left: 0.5rem; }
+    .breadcrumb-item + .breadcrumb-item::before {
+      display: inline-block;
+      padding-right: 0.5rem;
+      color: #6c757d;
+      content: "/"; }
+  .breadcrumb-item.active {
+    color: #6c757d; }
+
 .pagination {
   display: flex;
   padding-left: 0;
