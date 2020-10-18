@@ -1,5 +1,5 @@
 +++
-title = "Bilibili shortcode"
+title = "嗶哩嗶哩 Shortcode"
 date = 2020-10-19T00:06:22+08:00
 draft = false
 comment = true
@@ -7,11 +7,11 @@ categories = [
   "Shortcode"
 ]
 tags = [
-  "Bilibili"
+  "嗶哩嗶哩"
 ]
 +++
 
-Bilibili shortcode 可以簡單地添加一個視頻。
+嗶哩嗶哩 Shortcode 可以簡單地添加一個視頻。
 
 <!--more-->
 
