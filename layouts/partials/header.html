@@ -33,20 +33,7 @@
           </li>
           {{- end -}}
           {{- end -}}
-          <li class="nav-item dropdown">
-            <a class="nav-link" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
-              <i class="fas fa-fw fa-language"></i>
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              {{- range $.Site.Home.AllTranslations -}}
-              <li>
-                <a class="dropdown-item{{ if eq $.Lang .Language.Lang }} active{{ end }}" href="{{ .Permalink }}">
-                  {{- .Language.LanguageName -}}
-                </a>
-              </li>
-              {{- end -}}
-            </ul>
-          </li>
+          {{- partial "language-selector" . -}}
         </ul>
       </div>
     </div>
