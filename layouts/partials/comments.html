@@ -4,6 +4,7 @@
 {{- if .Site.DisqusShortname -}}
   {{- template "_internal/disqus.html" . -}}
 {{- end -}}
+{{- partial "comments-utterances" . -}}
 </div>
 {{- partial "hooks/comments-end" . -}}
 {{- end -}}
