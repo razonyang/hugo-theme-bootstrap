@@ -1,3 +1,6 @@
-<aside class="post-toc">
-  {{ .TableOfContents }}
+{{- $toc := .TableOfContents -}}
+{{- if and $toc (ne $toc "<nav id=\"TableOfContents\"></nav>") -}}
+<aside class="post-toc border">
+  {{- $toc -}}
 </aside>
+{{- end -}}

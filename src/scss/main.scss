@@ -73,13 +73,13 @@ pre {
 
 .post-toc {
   float: right;
-  background-color: #e9ecef;
-  color: #212529;
   padding: .5rem;
   padding-right: 2rem;
+  margin: 0 1rem;
 }
 
 .post-toc ul {
+  list-style: initial;
   margin-bottom: 0;
 }
 
