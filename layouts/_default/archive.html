@@ -12,7 +12,7 @@
   {{- end -}}
   <li>
     <a class="post-title" href="{{ .Permalink }}">{{ .Title }}</a>
-    <span class="float-right post-date">{{ .Date.Format $.Site.Params.dateFormat }}</span>
+    <span class="float-right text-muted post-date">{{ .Date.Format $.Site.Params.dateFormat }}</span>
   </li>
 {{- end -}}
 </div>
