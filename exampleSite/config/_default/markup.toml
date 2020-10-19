@@ -8,5 +8,5 @@
   lineNos = false
   lineNumbersInTable = true
   noClasses = true
-  style = "solarized-light"
+  style = "dracula"
   tabWidth = 2
