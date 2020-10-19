@@ -10,6 +10,7 @@ googleAnalytics = ""
 
 # Site verification
 googleSiteVerification = ""
+bingSiteVerification = ""
 
 [utterances]
 repo = "razonyang/hugo-theme-bootstrap"
