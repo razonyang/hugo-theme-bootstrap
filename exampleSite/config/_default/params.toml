@@ -8,6 +8,9 @@ dateFormat = "Jan 2, 2006"
 # Google Analytics
 googleAnalytics = ""
 
+# Google Adsense
+googleAdsense = ""
+
 # Baidu Analytics
 baiduAnalytics = ""
 
