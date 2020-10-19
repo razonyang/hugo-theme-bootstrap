@@ -45,6 +45,10 @@ pre {
 .utterances {
   max-width: 100%; }
 
+.cloudmusic-iframe {
+  --aspect-ratio: 50%;
+  max-height: 200px; }
+
 .scroll-top {
   position: fixed;
   bottom: 1.5rem;
