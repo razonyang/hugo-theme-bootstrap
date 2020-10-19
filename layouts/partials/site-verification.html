@@ -2,3 +2,6 @@
 {{- with $params.googleSiteVerification -}}
 <meta name="google-site-verification" content="{{ . }}" />
 {{- end -}}
+{{- with $params.bingSiteVerification -}}
+<meta name="msvalidate.01" content="{{ . }}" />
+{{- end -}}
