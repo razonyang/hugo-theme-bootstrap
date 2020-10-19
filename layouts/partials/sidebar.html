@@ -1,22 +1,24 @@
-{{- partial "hooks/sidebar-begin" . -}}
-{{ $posts := (where site.RegularPages "Type" "in" site.Params.mainSections) }}
-<div>
-  {{- $featuredPosts := first 5 (where $posts ".Params.featured" "eq" true) -}}
-  {{- with $featuredPosts -}}
-  <h4>{{ T "featured_posts" }}</h4>
-  <ul class="featured-posts">
-  {{- range . -}}
-    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-  {{- end -}}
-  </ul>
-  {{- end -}}
-</div>
-<div>
-  <h4>{{ T "recent_posts" }}</h4>
-  <ul class="recent-posts">
-  {{- range first 5 $posts -}}
-    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-  {{- end -}}
-  </ul>
-</div>
-{{- partial "hooks/sidebar-end" . -}}
+<aside class="col-md-4 py-2 px-3 sidebar">
+  {{- partial "hooks/sidebar-begin" . -}}
+  {{ $posts := (where site.RegularPages "Type" "in" site.Params.mainSections) }}
+  <div>
+    {{- $featuredPosts := first 5 (where $posts ".Params.featured" "eq" true) -}}
+    {{- with $featuredPosts -}}
+    <h4>{{ T "featured_posts" }}</h4>
+    <ul class="featured-posts">
+    {{- range . -}}
+      <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{- end -}}
+    </ul>
+    {{- end -}}
+  </div>
+  <div>
+    <h4>{{ T "recent_posts" }}</h4>
+    <ul class="recent-posts">
+    {{- range first 5 $posts -}}
+      <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{- end -}}
+    </ul>
+  </div>
+  {{- partial "hooks/sidebar-end" . -}}
+</aside>

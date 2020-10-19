@@ -14,9 +14,7 @@
         <div class="col-md-8 content">
           {{- block "content" . -}}{{- end -}}
         </div>
-        <aside class="col-md-4 sidebar">
-          {{- partial "sidebar" . -}}
-        </aside>
+        {{- partial "sidebar" . -}}
       </div>    
     </main>
     {{- partial "footer.html" . -}}
