@@ -10,5 +10,7 @@ paginatePath = "page"
 
 # disqusShortname = "yourdiscussshortname"
 
+enableRobotsTXT = true
+
 [blackfriday]
   hrefTargetBlank = true
