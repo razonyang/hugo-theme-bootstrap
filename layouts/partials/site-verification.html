@@ -1,0 +1,4 @@
+{{- $params := .Site.Params -}}
+{{- with $params.googleSiteVerification -}}
+<meta name="google-site-verification" content="{{ . }}" />
+{{- end -}}

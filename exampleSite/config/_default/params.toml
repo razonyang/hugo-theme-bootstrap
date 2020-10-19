@@ -8,6 +8,9 @@ dateFormat = "Jan 2, 2006"
 # Google Analytics
 googleAnalytics = ""
 
+# Site verification
+googleSiteVerification = ""
+
 [utterances]
 repo = "razonyang/hugo-theme-bootstrap"
 #issueTerm = "pathname" # pathname, url, title, og:title
