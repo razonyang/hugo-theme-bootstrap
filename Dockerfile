@@ -1,14 +1,14 @@
 # Build stage
-FROM centos:latest as builder
+FROM ubuntu:latest as builder
 
-# Install Hugo
-RUN curl -o /etc/yum.repos.d/hugo.repo https://copr.fedorainfracloud.org/coprs/daftaupe/hugo/repo/epel-8/daftaupe-hugo-epel-8.repo
-RUN dnf update -y
-RUN dnf install -y hugo git
+# Install Hugo and Git
+RUN apt-get update -y
+RUN apt-get install -y hugo git
 
 # Build site
 WORKDIR /src
 COPY . /src
+RUN hugo version
 RUN cd /src/exampleSite && hugo --themesDir=../../ --theme=src -e=demo
 
 # Final stage
