@@ -3,21 +3,14 @@
   "version": "0.0.1",
   "description": "Hugo bootstrap theme",
   "devDependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.32",
-    "@fortawesome/free-brands-svg-icons": "^5.15.1",
-    "@fortawesome/free-regular-svg-icons": "^5.15.1",
-    "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "@fortawesome/fontawesome-free": "^5.15.1",
     "bootstrap": "^5.0.0-alpha2",
     "copy-webpack-plugin": "^6.2.1",
-    "node-sass": "^4.14.1",
-    "npm-run-all": "^4.1.5",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12"
   },
   "scripts": {
-    "build:css": "node-sass --output-style expand src/scss/app.scss > assets/css/app.css",
-    "build:js": "webpack",
-    "build": "npm-run-all --parallel build:css build:js"
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -35,9 +28,5 @@
   "bugs": {
     "url": "https://github.com/razonyang/hugo-theme-bootstrap/issues"
   },
-  "homepage": "https://github.com/razonyang/hugo-theme-bootstrap#readme",
-  "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.1",
-    "popper.js": "^1.16.1"
-  }
+  "homepage": "https://github.com/razonyang/hugo-theme-bootstrap#readme"
 }
