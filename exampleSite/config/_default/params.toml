@@ -8,6 +8,9 @@ dateFormat = "Jan 2, 2006"
 # Google Analytics
 googleAnalytics = ""
 
+# Baidu Analytics
+baiduAnalytics = ""
+
 # Site verification
 googleSiteVerification = ""
 bingSiteVerification = ""
