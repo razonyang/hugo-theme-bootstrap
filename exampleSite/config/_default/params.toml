@@ -9,9 +9,9 @@ dateFormat = "Jan 2, 2006"
 googleAnalytics = ""
 
 # Site verification
-googleSiteVerification = "1"
-bingSiteVerification = "2"
-baiduSiteVerification = "3"
+googleSiteVerification = ""
+bingSiteVerification = ""
+baiduSiteVerification = ""
 
 [utterances]
 repo = "razonyang/hugo-theme-bootstrap"
