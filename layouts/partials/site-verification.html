@@ -1,10 +1,12 @@
-{{- $params := .Site.Params -}}
-{{- with $params.googleSiteVerification -}}
-<meta name="google-site-verification" content="{{ . }}" />
-{{- end -}}
-{{- with $params.bingSiteVerification -}}
-<meta name="msvalidate.01" content="{{ . }}" />
-{{- end -}}
-{{- with $params.baiduSiteVerification -}}
-<meta name="baidu-site-verification" content="{{ . }}" />
+{{- if .IsHome -}}
+  {{- $params := .Site.Params -}}
+  {{- with $params.googleSiteVerification -}}
+  <meta name="google-site-verification" content="{{ . }}" />
+  {{- end -}}
+  {{- with $params.bingSiteVerification -}}
+  <meta name="msvalidate.01" content="{{ . }}" />
+  {{- end -}}
+  {{- with $params.baiduSiteVerification -}}
+  <meta name="baidu-site-verification" content="{{ . }}" />
+  {{- end -}}
 {{- end -}}
