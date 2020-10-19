@@ -1,7 +1,7 @@
 +++
 author = "Hugo Authors"
 title = "Markdown Syntax Guide"
-date = "2020-10-18"
+date = "2019-10-18"
 featured = true
 tags = [
     "markdown",
