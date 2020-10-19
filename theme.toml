@@ -11,7 +11,13 @@ tags = [
   "blog",
   "responsive"
 ]
-features = []
+features = [
+  "hooks",
+  "i18n",
+  "social links",
+  "comments",
+  "breadcrumb"
+]
 min_version = "0.41.0"
 [author]
   name = "Razon Yang"
