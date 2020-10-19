@@ -1,38 +1,38 @@
 [[main]]
   name = "主页"
-  url = "/zh/"
+  url = "/"
+  pre = '<i class="fas fa-fw fa-home"></i> '
   weight = 10
-[[main]]
-  name = "分类"
-  url = "/zh/categories/"
-  weight = 20
-[[main]]
-  name = "标签"
-  url = "/zh/tags/"
-  weight = 30
+
 [[main]]
   name = "归档"
-  url = "/zh/archives/"
+  url = "/archives/"
+  pre = '<i class="fas fa-fw fa-file-archive"></i> '
+  weight = 20
+
+[[main]]
+  name = "分类"
+  url = "/categories/"
+  pre = '<i class="fas fa-fw fa-folder"></i> '
+  weight = 30
+
+[[main]]
+  name = "标签"
+  url = "/tags/"
+  pre = '<i class="fas fa-fw fa-tags"></i> '
   weight = 40
+
 [[main]]
   name = "关于"
-  url = "/zh/about/"
+  url = "/about/"
+  pre = '<i class="fas fa-fw fa-info-circle"></i> '
   weight = 50
+
 [[main]]
   name = "下拉菜单"
   identifier = "dropdown"
 [[main]]
   parent = "dropdown"
-  name = "菜单"
-  weight = 10
-  url = "#"
-[[main]]
-  parent = "dropdown"
-  name = "另一菜单"
-  weight = 20
-  url = "#"
-[[main]]
-  parent = "dropdown"
   name = "外部链接"
-  weight = 90
   url = "https://github.com/razonyang/hugo-theme-bootstrap"
+  pre = '<i class="fas fa-fw fa-external-link-alt"></i> '

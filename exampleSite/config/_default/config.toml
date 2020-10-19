@@ -2,10 +2,13 @@ title = "Hugo Bootstrap Theme"
 theme = "hugo-theme-bootstrap"
 
 defaultContentLanguage = "en"
-defaultContentLanguageInSubdir = true
+# defaultContentLanguageInSubdir = true
 
 # Pagination
 paginate = 10
 paginatePath = "page"
 
 # disqusShortname = "yourdiscussshortname"
+
+[blackfriday]
+  hrefTargetBlank = true

@@ -1,5 +1,5 @@
 <header>
-  <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-primary">
+  <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
     <div class="container">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -8,18 +8,17 @@
         <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
           {{- $currentPage := . -}}
           {{- range .Site.Menus.main -}}
-          {{- $active := or ($currentPage.HasMenuCurrent "main" .) ($currentPage.IsMenuCurrent "main" .) -}}
-          {{- $active := or $active (eq $currentPage.Permalink (absURL .URL)) -}}
+          {{- $active := or (eq $currentPage.Permalink (absLangURL .URL)) ($currentPage.IsMenuCurrent "main" .) -}}
           {{- if .HasChildren -}}
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle{{ if $active }} active{{ end }}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle{{ if $currentPage.HasMenuCurrent "main" . }} active{{ end }}" id="navbarDropdown-{{ .Identifier }}" role="button" data-toggle="dropdown" aria-expanded="false">
               {{- .Name -}}
             </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown-{{ .Identifier }}">
               {{- range .Children -}}
               <li>
-                <a class="dropdown-item{{ if or $active (eq $currentPage.Permalink (absURL .URL)) }} active{{ end }}" href="{{ .URL }}">
-                  {{- .Name -}}
+                <a class="dropdown-item{{ if or (eq $currentPage.Permalink (absLangURL .URL)) ($currentPage.IsMenuCurrent "main" .) }} active{{ end }}" href="{{ absLangURL .URL }}">
+                  {{ .Pre }} {{- .Name -}} {{ .Post }}
                 </a>
               </li>
               {{- end -}}
@@ -27,8 +26,8 @@
           </li>
           {{- else -}}
           <li class="nav-item">
-            <a class="nav-link{{ if $active }} active{{ end }}" href="{{ .URL }}">
-              {{- .Name -}}
+            <a class="nav-link{{ if $active }} active{{ end }}" href="{{ absLangURL .URL }}">
+              {{ .Pre }} {{- .Name -}} {{ .Post }}
             </a>
           </li>
           {{- end -}}

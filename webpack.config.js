@@ -1,4 +1,6 @@
 const path = require('path');
+const copyPlugin = require('copy-webpack-plugin');
+const basePath = path.resolve(__dirname);
 
 module.exports = {
     entry: './src/js/app.js',
@@ -6,5 +8,15 @@ module.exports = {
         path: path.resolve(__dirname, 'assets/js'),
         filename: 'app.js'
     },
-    mode: 'production'
+    mode: 'production',
+    plugins: [
+      new copyPlugin({
+        patterns: [
+          { from: 'node_modules/bootstrap/dist/css/bootstrap.min.css', to: basePath+'/static/css/bootstrap.min.css' },
+          { from: 'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js', to: basePath+'/static/js/bootstrap.bundle.min.js' },
+          { from: 'node_modules/@fortawesome/fontawesome-free/css/all.min.css', to: basePath+'/static/css/fontawesome.all.min.css' },
+          { from: 'node_modules/@fortawesome/fontawesome-free/webfonts', to: basePath+'/static/webfonts' },
+        ],
+      }),
+    ]
 };

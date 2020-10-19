@@ -1,38 +1,38 @@
 [[main]]
   name = "Home"
-  url = "/en/"
+  url = "/"
+  pre = '<i class="fas fa-fw fa-home"></i> '
   weight = 10
-[[main]]
-  name = "Categories"
-  url = "/en/categories/"
-  weight = 20
-[[main]]
-  name = "Tags"
-  url = "/en/tags/"
-  weight = 30
+
 [[main]]
   name = "Archives"
-  url = "/en/archives/"
+  url = "/archives/"
+  pre = '<i class="fas fa-fw fa-file-archive"></i> '
+  weight = 20
+
+[[main]]
+  name = "Categories"
+  url = "/categories/"
+  pre = '<i class="fas fa-fw fa-folder"></i> '
+  weight = 30
+
+[[main]]
+  name = "Tags"
+  url = "/tags/"
+  pre = '<i class="fas fa-fw fa-tags"></i> '
   weight = 40
+
 [[main]]
   name = "About"
-  url = "/en/about/"
+  url = "/about/"
+  pre = '<i class="fas fa-fw fa-info-circle"></i> '
   weight = 50
+
 [[main]]
   name = "Dropdown"
   identifier = "dropdown"
 [[main]]
   parent = "dropdown"
-  name = "Action"
-  weight = 10
-  url = "#"
-[[main]]
-  parent = "dropdown"
-  name = "Other Action"
-  weight = 20
-  url = "#"
-[[main]]
-  parent = "dropdown"
   name = "External"
-  weight = 90
   url = "https://github.com/razonyang/hugo-theme-bootstrap"
+  pre = '<i class="fas fa-fw fa-external-link-alt"></i> '
