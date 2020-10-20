@@ -1,3 +1,9 @@
 {{ define "content" }}
-<h1>404 NOT FOUND</h1>
+<div class="error text-center">
+  <h1 class="error-title">Oops!</h1>
+  <div class="mb-4 error-info">PAGE NOT FOUND</div>
+  <div class="mb-4 error-actions">
+    <a class="btn btn-primary" href="{{ absLangURL "/" }}"><i class="fas fa-fw fa-home"></i> Home</a>
+  </div>
+</div>
 {{ end }}
