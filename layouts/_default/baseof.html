@@ -11,11 +11,8 @@
   <body>
     {{- partial "header.html" . -}}
     <main role="main" class="container">
-      <div class="row">
-        <div class="col-md-8 content">
-          {{- block "content" . -}}{{- end -}}
-        </div>
-        {{- partial "sidebar" . -}}
+      <div class="row content">
+        {{- block "content" . -}}{{- end -}}
       </div>    
     </main>
     {{- partial "footer.html" . -}}
