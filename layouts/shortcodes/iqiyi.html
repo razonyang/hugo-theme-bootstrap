@@ -1,0 +1,13 @@
+{{- $vID := .Get 0 -}}
+{{- $tvID := .Get 1 -}}
+{{- $accessToken := "2.ef9c39d6c7f1d5b44768e38e5243157d" -}}
+{{- $appID := "1368" -}}
+{{- $appKey := "8c634248790d4343bcae1f66129c1010" -}}
+{{- $srcFormat := "//open.iqiyi.com/developer/player_js/coopPlayerIndex.html?vid=%s&tvId=%s&accessToken=%s&appId=%s&appKey=%s" -}}
+<div class="ratio ratio-16x9 iqiyi">
+  <iframe
+    class="iqiyi-iframe"
+    src="{{ printf $srcFormat $vID $tvID $accessToken $appID $appKey }}"
+    allowfullscreen>
+  </iframe>
+</div>
