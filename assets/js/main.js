@@ -20,7 +20,7 @@ function scrollTop() {
 
 function initTableClass() {
   let tables = document.getElementsByTagName('table')
-  let className = 'table table-bordered table-striped {{ .Site.Params.dateFormat }}'
+  let className = 'table table-bordered table-striped'
   for (let i=0; i < tables.length; i++) {
     tables[i].setAttribute('class', className)
   }
