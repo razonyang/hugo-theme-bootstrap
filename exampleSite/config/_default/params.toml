@@ -19,6 +19,8 @@ googleSiteVerification = ""
 bingSiteVerification = ""
 baiduSiteVerification = ""
 
+# poweredBy = false # Whether to show powered by.
+
 [utterances]
 repo = "razonyang/hugo-theme-bootstrap"
 #issueTerm = "pathname" # pathname, url, title, og:title
