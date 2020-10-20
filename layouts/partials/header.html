@@ -34,6 +34,11 @@
           {{- end -}}
           {{- partial "language-selector" . -}}
         </ul>
+        <ul class="navbar-nav ml-auto">
+          {{- if ne $.Permalink (.GetPage "search").Permalink -}}
+            {{- partial "search-form" . -}}
+          {{- end -}}
+        </ul>
       </div>
     </div>
   </nav>
