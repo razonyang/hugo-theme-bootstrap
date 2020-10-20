@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{- block "title" . -}}{{ .Title }} {{ .Site.Params.titleSeparator }} {{ .Site.Title }}{{- end -}}</title>
     {{- partial "head.html" . -}}
+    {{- block "head-end" . -}}{{- end -}}
     {{- partial "hooks/head-end" . -}}
   </head>
   <body>

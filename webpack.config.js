@@ -17,6 +17,8 @@ module.exports = {
           { from: 'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js.map', to: 'js/bootstrap.bundle.min.js.map', toType: 'file' },
           { from: 'node_modules/@fortawesome/fontawesome-free/css/all.min.css', to: 'css/fontawesome.all.min.css', toType: 'file' },
           { from: 'node_modules/@fortawesome/fontawesome-free/webfonts', to: 'webfonts', toType: 'dir' },
+          { from: 'node_modules/fuse.js/dist/fuse.min.js', to: 'js/fuse.min.js', toType: 'file' },
+          { from: 'node_modules/mustache/mustache.min.js', to: 'js/mustache.min.js', toType: 'file' }
         ],
       }),
     ]

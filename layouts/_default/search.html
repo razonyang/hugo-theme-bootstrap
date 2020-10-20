@@ -1,0 +1,24 @@
+{{ define "head-end" }}
+{{- $style := resources.Get "css/search.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint -}}
+<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous">
+<script src="{{ absURL "js/fuse.min.js" }}"></script>
+<script src="{{ absURL "js/mustache.min.js" }}"></script>
+{{- $script := resources.Get "js/search.js" | resources.Minify | resources.Fingerprint -}}
+<script type="text/javascript" src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>
+{{ end }}
+
+{{ define "content" }}
+<div class="search">
+  {{- partial "search-form" . -}}
+  <div id="searchResults" class="search-results"></div>
+</div>
+
+<div id="searchResultTemplate" class="d-none">
+  <div class="search-result mb-5">
+    <h3 class="search-result-title">
+      <a {{ printf "href={{permalink}}" | safeHTMLAttr }}>{{ print "{{title}}" }}</a>
+    </h3>
+    <div class="text-muted search-result-content mb-2">{{ print "{{{content}}}" }}</div>
+  </div>
+</div>
+{{ end }}
