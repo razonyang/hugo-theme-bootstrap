@@ -1,12 +1,7 @@
-{{- $params := .Site.Params -}}
 <footer class="text-muted text-center footer">
   <div class="container">
     {{- partial "social" . -}}
-    <div class="mb-2">
-      Copyright © {{ now.Format "2006" }} {{ .Site.Params.author }}. All Rights Reserved. 
-    </div>
-    <div class="mb-2">
-      Powered by <a href="https://github.com/razonyang/hugo-theme-bootstrap" target="_blank">Hugo Bootstrap Theme</a>.
-    </div>
+    {{- partial "copyright" . -}}
+    {{- partial "powered-by" . -}}
   </div>
 </footer>
