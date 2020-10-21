@@ -1,0 +1,49 @@
+<nav class="nav justify-content-center my-2 social-links">
+{{- range $key, $user := .Site.Social -}}
+  {{- if eq $key "email" -}}
+  <li class="nav-item">
+    <a class="nav-link" href="mailto:{{ $user }}"><i class="fas fa-fw fa-2x fa-envelope"></i></a>
+  </li>
+  {{- end -}}
+  {{- if eq $key "github" -}}
+  <li class="nav-item">
+    <a class="nav-link" target="_blank" href="https://github.com/{{ $user }}"><i class="fab fa-fw fa-2x fa-github"></i></a>
+  </li>
+  {{- end -}}
+  {{- if eq $key "gitlab" -}}
+  <li class="nav-item">
+    <a class="nav-link" target="_blank" href="https://gitlab.com/{{ $user }}"><i class="fab fa-fw fa-2x fa-gitlab"></i></a>
+  </li>
+  {{- end -}}
+  {{- if eq $key "twitter" -}}
+  <li class="nav-item">
+    <a class="nav-link" target="_blank" href="https://twitter.com/{{ $user }}"><i class="fab fa-fw fa-2x fa-twitter"></i></a>
+  </li>
+  {{- end -}}
+  {{- if eq $key "facebook" -}}
+  <li class="nav-item">
+    <a class="nav-link" target="_blank" href="https://facebook.com/{{ $user }}"><i class="fab fa-fw fa-2x fa-facebook"></i></a>
+  </li>
+  {{- end -}}
+  {{- if eq $key "linkedin" -}}
+  <li class="nav-item">
+    <a class="nav-link" target="_blank" href="https://linkedin.com/{{ $user }}"><i class="fab fa-fw fa-2x fa-linkedin"></i></a>
+  </li>
+  {{- end -}}
+  {{- if eq $key "stackoverflow" -}}
+  <li class="nav-item">
+    <a class="nav-link" target="_blank" href="https://stackoverflow.com/users/{{ $user }}"><i class="fab fa-fw fa-2x fa-stack-overflow"></i></a>
+  </li>
+  {{- end -}}
+  {{- if eq $key "weibo" -}}
+  <li class="nav-item">
+    <a class="nav-link" target="_blank" href="https://weibo.com/{{ $user }}"><i class="fab fa-fw fa-2x fa-weibo"></i></a>
+  </li>
+  {{- end -}}
+  {{- if eq $key "zhihu" -}}
+  <li class="nav-item">
+    <a class="nav-link" target="_blank" href="https://www.zhihu.com/people/{{ $user }}"><i class="fab fa-fw fa-2x fa-zhihu"></i></a>
+  </li>
+  {{- end -}}
+{{- end -}}
+</nav>
