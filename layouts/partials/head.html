@@ -1,5 +1,5 @@
 {{- partial "favicons" . -}}
-{{- partial "opengraph" . -}}
+{{ template "_internal/opengraph.html" . }}
 {{- template "_internal/twitter_cards.html" . -}}
 <link rel="stylesheet" href="{{ absURL "css/bootstrap.min.css" }}">
 <link rel="stylesheet" href="{{ absURL "css/fontawesome.all.min.css" }}">

@@ -1,8 +1,0 @@
-<meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
-<meta property="og:url" content="{{ .Permalink }}" />
-<meta property="og:title" content="{{ .Title }}" />
-<meta property="og:description" content="{{ .Summary }}">
-<meta property="og:locale" content="{{ .Lang }}" />
-{{- range .Translations -}}
-<meta property="og:locale:alternate" content="{{ .Lang }}" />
-{{- end -}}
