@@ -1,6 +1,6 @@
 <div class="mb-4 post-meta">
   <span class="mr-2 post-date">
-    <i class="fas fa-fw fa-calendar-alt mr-1"></i> {{ .Date.Format $.Site.Params.dateFormat }}
+    <i class="fas fa-fw fa-calendar-alt mr-1"></i> {{ .Date.Format (default "Jan 2, 2006" $.Site.Params.dateFormat) }}
   </span>
   {{- $categories := (.GetTerms "categories") -}}
   {{- with $categories -}}
