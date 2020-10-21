@@ -91,3 +91,17 @@ pre {
   width: 48px;
   height: 48px;
 }
+
+.post-item {
+  display: flex;
+}
+
+.post-item .post-thumbnail {
+  min-width: 120px;
+  max-width: 160px;
+  object-fit: contain;
+}
+
+.post-item .post-body {
+  flex: 1;
+}

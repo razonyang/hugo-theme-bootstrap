@@ -7,11 +7,16 @@
 {{- end -}}
 <div class="posts">
 {{- range (.Paginate $pages).Pages -}}
-  <div class="border rounded rounded-lg mb-4 px-3 post">
-    <h2 class="mb-3 post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-    {{- partial "post-meta" . -}}
-    <div class="mb-4 post-summary">
-      {{- .Summary | truncate 320 -}}
+  <div class="border-bottom mb-4 px-3 row post-item">
+    {{- if .Params.Images -}}
+    <img class="post-thumbnail" src="{{ index .Params.Images 0 }}"/>
+    {{- end -}}
+    <div class="post-body">
+      <h2 class="mb-3 post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+      {{- partial "post-meta" . -}}
+      <div class="mb-4 post-summary">
+        {{- .Summary | truncate 320 -}}
+      </div>
     </div>
   </div>
 {{- end -}}
