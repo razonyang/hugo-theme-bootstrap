@@ -1,14 +1,21 @@
+baseURL = "/"
 title = "Hugo Bootstrap Theme"
 theme = "hugo-theme-bootstrap"
+copyright = "Copyright © 2016-{year} Razon Yang. All Rights Reserved."
 
+# Multilingual mode
 defaultContentLanguage = "en"
 # defaultContentLanguageInSubdir = true
 
 # Pagination
-paginate = 10
-paginatePath = "page"
+# paginate = 10
+# paginatePath = "page"
 
+# Disqus
 # disqusShortname = "yourdiscussshortname"
+
+# Google analytics
+# googleAnalytics = "UA-123-45"
 
 enableRobotsTXT = true
 

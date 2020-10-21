@@ -1,2 +1,2 @@
 baseURL = "https://hugo-theme-bootstrap.razonyang.com/"
-disqusShortname = ""
+googleAnalytics = "UA-97403777-6"
