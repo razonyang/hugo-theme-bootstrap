@@ -1,6 +1,7 @@
 {{- $id := .Get 0 -}}
 <div class="ratio ratio-21x9 cloudmusic">
   <iframe class="cloudmusic-iframe"
-    src="//music.163.com/outchain/player?type=2&id={{ $id }}&auto=1">
+    src="//music.163.com/outchain/player?type=2&id={{ $id }}&auto=1"
+    loading="lazy">
   </iframe>
 </div>
