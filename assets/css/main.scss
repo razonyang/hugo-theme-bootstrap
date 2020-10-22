@@ -106,9 +106,9 @@ pre {
 }
 
 .post-item .post-thumbnail {
-  min-width: 130px;
-  max-width: 130px;
-  object-fit: contain;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .post-item .post-body {
