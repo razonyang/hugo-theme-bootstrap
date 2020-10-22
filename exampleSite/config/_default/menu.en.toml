@@ -1,26 +1,8 @@
 [[main]]
-  name = "Home"
-  url = "/"
-  pre = '<i class="fas fa-fw fa-home"></i> '
-  weight = 10
-
-[[main]]
   name = "Archives"
   url = "/archives/"
   pre = '<i class="fas fa-fw fa-file-archive"></i> '
   weight = 20
-
-[[main]]
-  name = "Categories"
-  url = "/categories/"
-  pre = '<i class="fas fa-fw fa-folder"></i> '
-  weight = 30
-
-[[main]]
-  name = "Tags"
-  url = "/tags/"
-  pre = '<i class="fas fa-fw fa-tags"></i> '
-  weight = 40
 
 [[main]]
   name = "About"

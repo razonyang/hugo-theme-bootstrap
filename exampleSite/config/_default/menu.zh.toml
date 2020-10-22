@@ -1,26 +1,8 @@
 [[main]]
-  name = "主页"
-  url = "/"
-  pre = '<i class="fas fa-fw fa-home"></i> '
-  weight = 10
-
-[[main]]
   name = "归档"
   url = "/archives/"
   pre = '<i class="fas fa-fw fa-file-archive"></i> '
   weight = 20
-
-[[main]]
-  name = "分类"
-  url = "/categories/"
-  pre = '<i class="fas fa-fw fa-folder"></i> '
-  weight = 30
-
-[[main]]
-  name = "标签"
-  url = "/tags/"
-  pre = '<i class="fas fa-fw fa-tags"></i> '
-  weight = 40
 
 [[main]]
   name = "关于"
