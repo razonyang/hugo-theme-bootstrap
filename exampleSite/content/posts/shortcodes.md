@@ -93,10 +93,13 @@ In addition to Hugo's built-in shortcodes, this theme provides some extra useful
 ## Cloud Music
 
 ```markdown
-{{</* cloudmusic "24953439" */>}}
+{{</* cloudmusic "id" [auto [type]] */>}}
 ```
 
-{{< cloudmusic "24953439" >}}
+- The `auto` controls whether to autoplay. Boolean and optional, default to `true`.
+- The `type` parameter is optional. Default to `2`.
+
+{{< cloudmusic "24953439" false >}}
 
 ## Bilibili Video
 
