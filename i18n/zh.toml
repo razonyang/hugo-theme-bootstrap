@@ -1,8 +1,14 @@
 [archives]
 other = "归档"
 
+[categories]
+other = "分类"
+
 [featured_posts]
 other = "精选文章"
 
 [recent_posts]
 other = "最近文章"
+
+[tags]
+other = "标签"

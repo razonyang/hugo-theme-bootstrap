@@ -1,8 +1,14 @@
 [archives]
 other = "Archives"
 
+[categories]
+other = "Categories"
+
 [featured_posts]
 other = "Featured posts"
 
 [recent_posts]
 other = "Recent posts"
+
+[tags]
+other = "Tags"

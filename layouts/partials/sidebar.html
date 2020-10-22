@@ -20,5 +20,19 @@
     {{- end -}}
     </ul>
   </div>
+  <div>
+    {{- range $key, $value := .Site.Taxonomies -}}
+    <h4>
+      <a href="{{ $value.Permalink }}">{{ T $key }}</a>
+    </h4>
+    <div>
+      {{- range $value.ByCount -}}
+      <a href="{{ .Page.Permalink }}" class="btn btn-sm btn-primary mr-2 mb-2">
+        {{ .Page.Title }} <span class="badge rounded-pill bg-dark">{{ .Count }}</span>
+      </a>
+      {{- end -}}
+    </div>
+    {{- end -}}
+  </div>
   {{- partial "hooks/sidebar-end" . -}}
 </aside>
