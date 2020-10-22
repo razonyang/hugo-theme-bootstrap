@@ -4,6 +4,7 @@ blockquote{
   border-left: .5rem solid #78c0a8;
   position: relative;
   background: #ededed;
+  display: flex;
 }
 
 blockquote::before{
