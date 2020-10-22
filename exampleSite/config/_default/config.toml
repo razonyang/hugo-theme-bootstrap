@@ -8,7 +8,7 @@ defaultContentLanguage = "en"
 # defaultContentLanguageInSubdir = true
 
 # Pagination
-# paginate = 10
+paginate = 5
 # paginatePath = "page"
 
 # Disqus
@@ -18,6 +18,8 @@ defaultContentLanguage = "en"
 # googleAnalytics = "UA-123-45"
 
 enableRobotsTXT = true
+
+enableEmoji = true
 
 [blackfriday]
   hrefTargetBlank = true
