@@ -1,4 +1,4 @@
-<aside class="col-md-4 py-2 px-3 sidebar">
+<aside class="col-md-4 sidebar">
   {{- partial "hooks/sidebar-begin" . -}}
   {{ $posts := (where site.RegularPages "Type" "in" site.Params.mainSections) }}
   <div>
