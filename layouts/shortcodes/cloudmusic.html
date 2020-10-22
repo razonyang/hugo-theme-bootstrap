@@ -1,7 +1,15 @@
 {{- $id := .Get 0 -}}
+{{- $auto := 1 -}}
+{{- if isset .Params 1 -}}
+  {{- $auto = cond (.Get 1) 1 0 -}}
+{{- end -}}
+{{- $type := 2 -}}
+{{- if isset .Params 2 -}}
+  {{ $type = .Get 2 }}
+{{- end -}}
 <div class="ratio ratio-21x9 cloudmusic">
   <iframe class="cloudmusic-iframe"
-    src="//music.163.com/outchain/player?type=2&id={{ $id }}&auto=1"
+    src="//music.163.com/outchain/player?type={{ $type }}&id={{ $id }}&auto={{ $auto }}"
     loading="lazy">
   </iframe>
 </div>
