@@ -33,8 +33,17 @@ pre {
   padding-left: 1.5rem;
 }
 
+.post-title {
+  margin-bottom: .5rem;
+}
+
+.post-meta {
+  margin-bottom: .5rem;
+}
+
 .post-date, .post-tags, .post-categories, .post-translations {
   display: inline-block;
+  word-break: break-all;
 }
 
 .post-content a {

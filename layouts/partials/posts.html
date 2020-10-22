@@ -12,9 +12,9 @@
     <img class="post-thumbnail" src="{{ index .Params.Images 0 | absURL }}" loading="lazy"/>
     {{- end -}}
     <div class="post-body">
-      <h2 class="mb-3 post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+      <h2 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
       {{- partial "post-meta" . -}}
-      <div class="mb-4 post-summary">
+      <div class="post-summary">
         {{- .Summary | truncate 320 -}}
       </div>
     </div>

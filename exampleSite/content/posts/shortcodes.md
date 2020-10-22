@@ -33,7 +33,7 @@ In addition to Hugo's built-in shortcodes, this theme provides some extra useful
 
 > The parameter `type` is optional. Default to `info`.
 
-### Info
+**Info**
 
 ```markdown
 {{</* alert "Info" */>}}
@@ -41,7 +41,7 @@ In addition to Hugo's built-in shortcodes, this theme provides some extra useful
 
 {{< alert "Info" >}}
 
-### Success
+**Success**
 
 ```markdown
 {{</* alert "Success" success */>}}
@@ -49,7 +49,7 @@ In addition to Hugo's built-in shortcodes, this theme provides some extra useful
 
 {{< alert "Success" success >}}
 
-### Warning
+**Warning**
 
 ```markdown
 {{</* alert "Warning" warning */>}}
@@ -57,7 +57,7 @@ In addition to Hugo's built-in shortcodes, this theme provides some extra useful
 
 {{< alert "Warning" warning >}}
 
-### Danger
+**Danger**
 
 ```markdown
 {{</* alert "Danger" danger */>}}
@@ -65,7 +65,9 @@ In addition to Hugo's built-in shortcodes, this theme provides some extra useful
 
 {{< alert "Danger" danger >}}
 
-## JSFiddle
+## Online Code Editor
+
+### JSFiddle
 
 ```markdown
 {{</* jsfiddle "user/id" */>}}
@@ -73,7 +75,7 @@ In addition to Hugo's built-in shortcodes, this theme provides some extra useful
 
 {{< jsfiddle "razonyang/bya1vuxn" >}}
 
-## CodePen
+### CodePen
 
 ```markdown
 {{</* codepen "id" */>}}
@@ -81,7 +83,7 @@ In addition to Hugo's built-in shortcodes, this theme provides some extra useful
 
 {{< codepen "YzWGJNQ" >}}
 
-## JSRUN
+### JSRUN
 
 ```markdown
 {{</* jsrun "id" */>}}
@@ -89,8 +91,9 @@ In addition to Hugo's built-in shortcodes, this theme provides some extra useful
 
 {{< jsrun "QG6Kp" >}}
 
+## Media Player
 
-## Cloud Music
+### Cloud Music Player
 
 ```markdown
 {{</* cloudmusic "id" [auto [type]] */>}}
@@ -101,7 +104,7 @@ In addition to Hugo's built-in shortcodes, this theme provides some extra useful
 
 {{< cloudmusic "24953439" false >}}
 
-## Bilibili Video
+### Bilibili Video Player
 
 ```toml
 {{</* bilibili "video id" */>}}
@@ -109,7 +112,7 @@ In addition to Hugo's built-in shortcodes, this theme provides some extra useful
 
 {{< bilibili "BV11s411c7ZU" >}}
 
-## iQiyi Video
+### iQiyi Video Player
 
 ```markdown
 {{</* iqiyi "vid" "tvid" */>}}
@@ -117,7 +120,7 @@ In addition to Hugo's built-in shortcodes, this theme provides some extra useful
 
 {{< iqiyi "e2ad67ca24d1e205fb0b87eb243f467d" "567349400" >}}
 
-## Tencent Video
+### Tencent Video Player
 
 ```markdown
 {{</* tencentvideo "vid" */>}}
@@ -125,7 +128,7 @@ In addition to Hugo's built-in shortcodes, this theme provides some extra useful
 
 {{< tencentvideo "p0015bl11hy" >}}
 
-## Youku Video
+### Youku Video Player
 
 ```markdown
 {{</* youku "XNTQwMTgxMTE2" */>}}
