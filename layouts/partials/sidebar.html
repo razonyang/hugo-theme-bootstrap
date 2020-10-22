@@ -23,7 +23,7 @@
   <div>
     {{- range $key, $value := .Site.Taxonomies -}}
     <h4>
-      <a href="{{ $value.Permalink }}">{{ T $key }}</a>
+      <a href="{{ absLangURL (urlize $key) }}">{{ T $key }}</a>
     </h4>
     <div>
       {{- range $value.ByCount -}}
