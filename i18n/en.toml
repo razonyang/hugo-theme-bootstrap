@@ -5,10 +5,10 @@ other = "Archives"
 other = "Categories"
 
 [featured_posts]
-other = "Featured posts"
+other = "Featured Posts"
 
 [recent_posts]
-other = "Recent posts"
+other = "Recent Posts"
 
 [tags]
 other = "Tags"
