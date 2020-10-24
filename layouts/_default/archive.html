@@ -1,7 +1,4 @@
 {{ define "content" }}
-{{ range .Data.RegularPages.ByDate.Reverse }}
-{{ .Title }}
-{{ end }}
 {{- $paginator := .Paginate $.Site.RegularPages.ByDate.Reverse 100 -}}
 <div class="archives">
   <h1>{{ T "archives" }}</h1>
