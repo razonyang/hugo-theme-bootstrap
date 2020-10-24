@@ -77,12 +77,29 @@ main {
 
 .footer {
   font-size: 0.9rem;
-  background-color: #f5f5f5;
+  background-color: var(--bs-light);
   margin-top: auto;
+}
+
+.social-links {
+  margin: 1rem 0;
+  justify-content: center;
 }
 
 .social-links .nav-link {
     padding: .5rem;
+}
+
+.copyright {
+  margin-bottom: 1rem;
+}
+
+.powered-by {
+  margin-bottom: 1rem;
+}
+
+.powered-by a {
+  color: var(--bs-primary);
 }
 
 /* Post */
