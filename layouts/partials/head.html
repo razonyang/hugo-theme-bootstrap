@@ -7,9 +7,9 @@
 <link rel="stylesheet" href="{{ absURL "css/fontawesome.all.min.css" }}">
 {{- $style := resources.Get "css/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint -}}
 <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous">
-<script type="text/javascript" src="{{ absURL "js/bootstrap.bundle.min.js" }}"></script>
+<script src="{{ absURL "js/bootstrap.bundle.min.js" }}"></script>
 {{- $script := resources.Get "js/main.js" | resources.Minify | resources.Fingerprint -}}
-<script type="text/javascript" src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>
+<script src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>
 {{- partial "head/google-analytics" . -}}
 {{- partial "head/site-verification" . -}}
 {{- partial "head/baidu-analytics" . -}}

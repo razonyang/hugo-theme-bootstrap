@@ -2,7 +2,7 @@
 <script src="{{ absURL "js/fuse.min.js" }}"></script>
 <script src="{{ absURL "js/mustache.min.js" }}"></script>
 {{- $script := resources.Get "js/search.js" | resources.Minify | resources.Fingerprint -}}
-<script type="text/javascript" src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>
+<script src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>
 {{ end }}
 
 {{ define "content" }}
