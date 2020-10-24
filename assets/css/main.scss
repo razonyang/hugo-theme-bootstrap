@@ -149,12 +149,30 @@ main {
   justify-content: space-between;
 }
 
-.prev-post:before {
-  content: "<";
+.prev-post,
+.next-post {
+  display: flex;
+  width: 50%;
+  align-items: center;
 }
 
-.next-post:after {
-  content: ">";
+.next-post {
+  text-align: right;
+  flex-direction: row-reverse;
+}
+
+.prev-post:before,
+.next-post:before {
+  display: flex;
+  align-items: center;
+}
+
+.prev-post:before {
+  content: "<\00a0";
+}
+
+.next-post:before {
+  content: "\00a0>";
 }
 
 .post-content a {
