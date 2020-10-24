@@ -1,16 +1,4 @@
 [[main]]
-  name = "Archives"
-  url = "/archives/"
-  pre = '<i class="fas fa-fw fa-file-archive"></i> '
-  weight = 20
-
-[[main]]
-  name = "About"
-  url = "/about/"
-  pre = '<i class="fas fa-fw fa-info-circle"></i> '
-  weight = 50
-
-[[main]]
   name = "Dropdown"
   identifier = "dropdown"
 [[main]]

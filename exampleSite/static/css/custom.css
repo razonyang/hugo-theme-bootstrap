@@ -1,10 +1,8 @@
 .hook {
-  display: inline-block;
   width: 100%;
   text-align: center;
-  color: #6c757d;
-  background-color: #f8f9fa;
-  border: 1px solid #dee2e6;
+  color: var(--bs-secondary);
+  background-color: var(--bs-light);
   margin-bottom: 1rem;
   padding: .5rem;
   overflow-wrap: break-word;

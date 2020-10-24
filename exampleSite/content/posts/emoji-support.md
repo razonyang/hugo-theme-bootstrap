@@ -6,7 +6,7 @@ description = "Guide to emoji usage in Hugo"
 categories = [
 ]
 tags = [
-    "emoji",
+    "Emoji",
 ]
 +++
 

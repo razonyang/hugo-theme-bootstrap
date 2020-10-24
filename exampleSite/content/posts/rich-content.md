@@ -4,9 +4,15 @@ title = "Rich Content"
 date = "2019-03-10"
 description = "A brief description of Hugo Shortcodes"
 featured = true
+categoories = [
+  "Shortcode"
+]
 tags = [
-    "shortcodes",
-    "privacy",
+    "Instagram",
+    "YouTube",
+    "Twitter",
+    "Vimeo",
+    "Privacy",
 ]
 images = [
   "images/rich-content.png"
@@ -19,7 +25,9 @@ Hugo ships with several [Built-in Shortcodes](https://gohugo.io/content-manageme
 
 ## Instagram Simple Shortcode
 
-{{< instagram_simple BGvuInzyFAe hidecaption >}}
+```markdown
+{{</* instagram_simple BGvuInzyFAe hidecaption */>}}
+```
 
 <br>
 
@@ -27,7 +35,9 @@ Hugo ships with several [Built-in Shortcodes](https://gohugo.io/content-manageme
 
 ## YouTube Privacy Enhanced Shortcode
 
-{{< youtube ZJthWmvUzzc >}}
+```markdown
+{{</* youtube ZJthWmvUzzc */>}}
+```
 
 <br>
 
@@ -35,7 +45,9 @@ Hugo ships with several [Built-in Shortcodes](https://gohugo.io/content-manageme
 
 ## Twitter Simple Shortcode
 
-{{< twitter_simple 1085870671291310081 >}}
+```markdown
+{{</* twitter_simple 1085870671291310081 */>}}
+```
 
 <br>
 
@@ -43,4 +55,6 @@ Hugo ships with several [Built-in Shortcodes](https://gohugo.io/content-manageme
 
 ## Vimeo Simple Shortcode
 
-{{< vimeo_simple 48912912 >}}
+```markdown
+{{</* vimeo_simple 48912912 */>}}
+```

@@ -7,9 +7,9 @@ featured = true
 categories = [
 ]
 tags = [
-    "markdown",
-    "css",
-    "html",
+    "Markdown",
+    "CSS",
+    "HTML",
 ]
 aliases = ["migrate-from-jekyl"]
 images = [

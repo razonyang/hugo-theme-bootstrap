@@ -1,16 +1,4 @@
 [[main]]
-  name = "归档"
-  url = "/archives/"
-  pre = '<i class="fas fa-fw fa-file-archive"></i> '
-  weight = 20
-
-[[main]]
-  name = "关于"
-  url = "/about/"
-  pre = '<i class="fas fa-fw fa-info-circle"></i> '
-  weight = 50
-
-[[main]]
   name = "下拉菜单"
   identifier = "dropdown"
 [[main]]

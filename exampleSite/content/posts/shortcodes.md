@@ -7,15 +7,15 @@ categories = [
   "Shortcode"
 ]
 tags = [
-    "alert",
-    "jsfiddle",
-    "codepen",
-    "jsrun",
-    "cloudmusic",
-    "bilibili",
-    "youku",
-    "tencent video",
-    "iqiyi"
+    "Alert",
+    "JSFiddle",
+    "CodePen",
+    "JSRun",
+    "Cloud Music",
+    "Bilibili",
+    "Youku",
+    "Tencent Video",
+    "iQIYI"
 ]
 images = [
   "images/shortcode.png"
