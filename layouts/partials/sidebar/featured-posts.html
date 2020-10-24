@@ -1,0 +1,11 @@
+{{- $featuredPosts := first 5 (where (where site.RegularPages "Type" "in" site.Params.mainSections) ".Params.featured" "eq" true) -}}
+{{- with $featuredPosts -}}
+<section class="featured-posts">
+  <h4>{{ T "featured_posts" }}</h4>
+  <ul>
+  {{- range . -}}
+    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+  {{- end -}}
+  </ul>
+</section>
+{{- end -}}

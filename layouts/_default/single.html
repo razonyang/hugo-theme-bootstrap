@@ -1,17 +1,17 @@
 {{ define "content" }}
 <div class="col-md-8">
   {{- partial "breadcrumb" . -}}
-  <div class="post">
-    <h1 class="mb-3 post-title">{{ .Title }}</h1>
-    {{- partial "post-meta" . -}}
+  <article class="post row">
+    <h1 class="post-title">{{ .Title }}</h1>
+    {{- partial "post/meta" . -}}
     {{- partial "hooks/content-begin" . -}}
-    <div class="mb-4 post-content">
-      {{- partial "post-toc" . -}}
+    <div class="post-content">
+      {{- partial "post/toc" . -}}
       {{- .Content -}}
     </div>
     {{- partial "hooks/content-end" . -}}
-    {{- partial "comments" . -}}
-  </div>
+    {{- partial "post/comments" . -}}
+  </article>
 </div>
 {{- partial "sidebar" . -}}
 {{ end }}

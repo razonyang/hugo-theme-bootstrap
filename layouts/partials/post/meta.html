@@ -1,0 +1,16 @@
+<div class="post-meta">
+  <span class="post-date">
+    <i class="fas fa-fw fa-calendar-alt"></i>{{ .Date.Format (default "Jan 2, 2006" $.Site.Params.dateFormat) }}
+  </span>
+  {{- range (.GetTerms "categories") -}}
+  <a href="{{ .Permalink }}" class="post-category badge bg-secondary">
+    <i class="fas fa-fw fa-folder"></i>  {{ .Name }}
+  </a>
+  {{- end -}}
+  {{- range (.GetTerms "tags") -}}
+  <a href="{{ .Permalink }}" class="post-tag badge bg-secondary">
+    <i class="fas fa-fw fa-tag"></i> {{ .Name }}
+  </a>
+  {{- end -}}
+  {{- partial "post/translations" . -}}
+</div>

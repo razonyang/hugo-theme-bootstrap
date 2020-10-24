@@ -1,6 +1,4 @@
 {{ define "head-end" }}
-{{- $style := resources.Get "css/search.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint -}}
-<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous">
 <script src="{{ absURL "js/fuse.min.js" }}"></script>
 <script src="{{ absURL "js/mustache.min.js" }}"></script>
 {{- $script := resources.Get "js/search.js" | resources.Minify | resources.Fingerprint -}}
@@ -9,7 +7,7 @@
 
 {{ define "content" }}
 <div class="search">
-  {{- partial "search-form" . -}}
+  {{- partial "header/search-form" . -}}
   <div id="searchResults" class="search-results"></div>
 </div>
 

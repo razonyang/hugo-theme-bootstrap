@@ -1,4 +1,4 @@
-{{- partial "favicons" . -}}
+{{- partial "head/favicons" . -}}
 <meta name="description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Description}}{{end}}" />
 {{- template "_internal/schema.html" . -}}
 {{ template "_internal/opengraph.html" . }}
@@ -10,7 +10,7 @@
 <script type="text/javascript" src="{{ absURL "js/bootstrap.bundle.min.js" }}"></script>
 {{- $script := resources.Get "js/main.js" | resources.Minify | resources.Fingerprint -}}
 <script type="text/javascript" src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>
-{{- partial "google-analytics" . -}}
-{{- partial "site-verification" . -}}
-{{- partial "baidu-analytics" . -}}
-{{- partial "google-adsense" . -}}
+{{- partial "head/google-analytics" . -}}
+{{- partial "head/site-verification" . -}}
+{{- partial "head/baidu-analytics" . -}}
+{{- partial "head/google-adsense" . -}}

@@ -3,7 +3,7 @@
     <div class="container">
 
       <a class="navbar-brand" href="{{ absLangURL "/" }}">
-        <img class="logo" src="{{ absURL "images/logo.png" }}" loading="lazy">
+        <img class="logo" alt="Logo" src="{{ absURL "images/logo.png" }}" loading="lazy">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -36,11 +36,11 @@
           </li>
           {{- end -}}
           {{- end -}}
-          {{- partial "language-selector" . -}}
+          {{- partial "header/language-switcher" . -}}
         </ul>
         <ul class="navbar-nav ml-auto">
           {{- if ne $.Permalink (.GetPage "search").Permalink -}}
-            {{- partial "search-form" . -}}
+            {{- partial "header/search-form" . -}}
           {{- end -}}
         </ul>
       </div>
