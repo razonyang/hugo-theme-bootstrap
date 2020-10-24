@@ -1,7 +1,7 @@
 <section class="recent-posts">
   <h4>{{ T "recent_posts" }}</h4>
   <ul>
-  {{- range first 5 (where site.RegularPages "Type" "in" site.Params.mainSections) -}}
+  {{- range first (default 5 .Site.Params.recentPostCount) (where site.RegularPages "Type" "in" site.Params.mainSections) -}}
     <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
   {{- end -}}
   </ul>
