@@ -10,6 +10,7 @@ body {
   display: flex;
   flex-flow: column;
   font-family: Arial, sans-serif;
+  background-color: var(--bs-light);
 }
 
 a {
@@ -103,6 +104,11 @@ main {
 }
 
 /* Post */
+
+.posts .post {
+  background-color: white;
+  border-radius: .25rem;
+}
 
 .post {
   display: flex;
