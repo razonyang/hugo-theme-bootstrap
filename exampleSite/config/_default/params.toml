@@ -23,6 +23,7 @@ baiduSiteVerification = ""
 
 # featuredPostCount = 5 # The number of featured posts shown in sidebar.
 # recentPostCount = 5 # The number of recent posts shown in sidebar.
+# relatedPostCount = 5 # The number of related posts.
 
 [utterances]
 #repo = "razonyang/hugo-theme-bootstrap"
