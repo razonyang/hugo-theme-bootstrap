@@ -1,0 +1,12 @@
+<article class="post row">
+  <h1 class="post-title">{{ .Title }}</h1>
+  {{- partial "post/meta" . -}}
+  {{- partial "hooks/content-begin" . -}}
+  <div class="post-content">
+    {{- partial "post/toc" . -}}
+    {{- .Content -}}
+  </div>
+  {{- partial "hooks/content-end" . -}}
+  {{- partial "post/nav" . -}}
+  {{- partial "post/comments" . -}}
+</article>

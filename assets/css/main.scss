@@ -143,6 +143,20 @@ main {
   margin-bottom: 1rem;
 }
 
+.post-nav {
+  display: flex;
+  margin-bottom: 1rem;
+  justify-content: space-between;
+}
+
+.prev-post:before {
+  content: "<";
+}
+
+.next-post:after {
+  content: ">";
+}
+
 .post-content a {
   color: var(--bs-primary);
 }
