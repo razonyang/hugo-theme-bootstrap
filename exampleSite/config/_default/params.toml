@@ -21,6 +21,9 @@ baiduSiteVerification = ""
 
 # poweredBy = false # Whether to show powered by.
 
+# featuredPostCount = 5 # The number of featured posts shown in sidebar.
+# recentPostCount = 5 # The number of recent posts shown in sidebar.
+
 [utterances]
 #repo = "razonyang/hugo-theme-bootstrap"
 #issueTerm = "pathname" # pathname, url, title, og:title
