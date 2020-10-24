@@ -10,5 +10,8 @@ other = "Featured Posts"
 [recent_posts]
 other = "Recent Posts"
 
+[related_posts]
+other = "Related Posts"
+
 [tags]
 other = "Tags"

@@ -1,6 +1,6 @@
 {{- with (.Site.RegularPages.Related . | first 5) -}}
 <section class="related-posts">
-  <h3>Related Posts</h3>
+  <h3>{{ T "related_posts" }}</h3>
   <ul class="related-posts">
     {{- range . -}}
     <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>

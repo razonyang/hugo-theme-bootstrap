@@ -10,5 +10,8 @@ other = "精选文章"
 [recent_posts]
 other = "最近文章"
 
+[related_posts]
+other = "相关文章"
+
 [tags]
 other = "标签"
