@@ -1,0 +1,10 @@
+{{- with .Site.Params.customCSS -}}
+{{- range . -}}
+<link rel="stylesheet" href="{{ absURL . }}" crossorigin="anonymous">
+{{- end -}}
+{{- end -}}
+{{- with .Site.Params.customJS -}}
+{{- range . -}}
+<script src="{{ absURL . }}" crossorigin="anonymous"></script>
+{{- end -}}
+{{- end -}}
