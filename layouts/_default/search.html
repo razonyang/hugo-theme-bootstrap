@@ -5,15 +5,16 @@
 
 {{ define "content" }}
 <div class="search">
-  {{- partial "header/search-form" . -}}
+  <h1>Search Results</h1>
+  <hr>
   <div id="searchResults" class="search-results"></div>
 </div>
 
 <div id="searchResultTemplate" class="d-none">
-  <div class="search-result mb-5">
-    <h3 class="search-result-title">
+  <div class="search-result">
+    <h2 class="search-result-title">
       <a {{ printf "href={{permalink}}" | safeHTMLAttr }}>{{ print "{{title}}" }}</a>
-    </h3>
+    </h2>
     <div class="text-muted search-result-content mb-2">{{ print "{{{content}}}" }}</div>
   </div>
 </div>

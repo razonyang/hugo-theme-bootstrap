@@ -19,11 +19,12 @@ function initSearch() {
     searchInput.value = searchQuery
     search(searchQuery)
   } else {
-    searchInput.setAttribute('placeholder', "Please enter search keywords.")
+    searchResults.innerHTML = '<p class="text-muted">Please enter search keywords.</p>'
+    searchInput.focus()
   }
 }
 
-var contentWordCount = 120
+var contentWordCount = 240
 var fuseOptions = {
   keys: [
     { name:"title", weight:0.8 },

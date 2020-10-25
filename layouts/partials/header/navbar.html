@@ -37,9 +37,7 @@
         {{- partial "header/language-switcher" . -}}
       </ul>
       <ul class="navbar-nav ml-auto">
-        {{- if ne $.Permalink (.GetPage "search").Permalink -}}
-          {{- partial "header/search-form" . -}}
-        {{- end -}}
+        {{- partial "header/search-form" . -}}
       </ul>
     </div>
   </div>

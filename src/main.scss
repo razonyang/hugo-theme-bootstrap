@@ -255,3 +255,8 @@ main {
   right: 1.5rem;
   display: none;
 }
+
+/* Search */
+.btn-search:focus {
+  outline: none;
+}
