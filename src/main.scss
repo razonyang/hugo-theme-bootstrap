@@ -109,8 +109,16 @@ main {
 /* Header */
 
 .logo {
-  width: 48px;
-  height: 48px;
+  width: 42px;
+  height: 42px;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
 }
 
 /* Sidebar */
