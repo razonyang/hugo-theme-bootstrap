@@ -1,25 +1,42 @@
 const path = require('path');
-const copyPlugin = require('copy-webpack-plugin');
-const basePath = path.resolve(__dirname);
 
 module.exports = {
-    entry: {},
-    mode: 'production',
-    output: {
-      path: __dirname + '/static'
-    },
-    plugins: [
-      new copyPlugin({
-        patterns: [
-          { from: 'node_modules/bootstrap/dist/css/bootstrap.min.css', to: 'css/bootstrap.min.css', toType: 'file' },
-          { from: 'node_modules/bootstrap/dist/css/bootstrap.min.css.map', to: 'css/bootstrap.min.css.map', toType: 'file' },
-          { from: 'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js', to: 'js/bootstrap.bundle.min.js', toType: 'file' },
-          { from: 'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js.map', to: 'js/bootstrap.bundle.min.js.map', toType: 'file' },
-          { from: 'node_modules/@fortawesome/fontawesome-free/css/all.min.css', to: 'css/fontawesome.all.min.css', toType: 'file' },
-          { from: 'node_modules/@fortawesome/fontawesome-free/webfonts', to: 'webfonts', toType: 'dir' },
-          { from: 'node_modules/fuse.js/dist/fuse.min.js', to: 'js/fuse.min.js', toType: 'file' },
-          { from: 'node_modules/mustache/mustache.min.js', to: 'js/mustache.min.js', toType: 'file' }
-        ],
-      }),
-    ]
+  entry: {
+    main: ['./src/main.js', './src/main.scss'],
+    search: ['./src/search.js', './src/search.scss'],
+  },
+  mode: 'production',
+  output: {
+    path: path.resolve(path.join(__dirname, 'assets')),
+    filename: '[name].js'
+  },
+  module: {
+    rules: [
+      {
+        test: /\.(scss)$/,
+        use: [
+          {
+            loader: 'style-loader'
+          },
+          {
+            loader: 'css-loader'
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                // postcss plugins, can be exported to postcss.config.js
+                plugins: [
+                  'autoprefixer'
+                ]
+              }
+            }
+          },
+          {
+            loader: 'sass-loader'
+          }
+        ]
+      }
+    ],
+  }
 };

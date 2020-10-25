@@ -3,14 +3,9 @@
 {{- template "_internal/schema.html" . -}}
 {{ template "_internal/opengraph.html" . }}
 {{- template "_internal/twitter_cards.html" . -}}
-<link rel="stylesheet" href="{{ absURL "css/bootstrap.min.css" }}">
-<link rel="stylesheet" href="{{ absURL "css/fontawesome.all.min.css" }}">
-{{- $style := resources.Get "css/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint -}}
-<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous">
-<script src="{{ absURL "js/bootstrap.bundle.min.js" }}"></script>
-{{- $script := resources.Get "js/main.js" | resources.Minify | resources.Fingerprint -}}
-<script src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>
 {{- partial "head/google-analytics" . -}}
 {{- partial "head/site-verification" . -}}
 {{- partial "head/baidu-analytics" . -}}
 {{- partial "head/google-adsense" . -}}
+{{- $script := resources.Get "main.js" | resources.Fingerprint -}}
+<script src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>
