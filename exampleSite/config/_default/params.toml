@@ -27,6 +27,13 @@ baiduSiteVerification = ""
 # recentPostCount = 5 # The number of recent posts shown in sidebar.
 # relatedPostCount = 5 # The number of related posts.
 
+# Custom CSS and JS
+customCSS = ["css/custom.css"]
+customJS = [
+  "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/js/solid.js",
+  "js/custom.js"
+]
+
 [utterances]
 #repo = "razonyang/hugo-theme-bootstrap"
 #issueTerm = "pathname" # pathname, url, title, og:title
