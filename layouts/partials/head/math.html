@@ -1,0 +1,4 @@
+{{- if or .Params.math .Site.Params.math -}}
+{{- $script := resources.Get "katex.js" | resources.Fingerprint -}}
+<script defer src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>
+{{- end -}}

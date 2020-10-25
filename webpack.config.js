@@ -4,6 +4,7 @@ module.exports = {
   entry: {
     main: ['./src/main.js', './src/main.scss'],
     search: ['./src/search.js', './src/search.scss'],
+    katex: ['./src/katex.js', './src/katex.scss'],
   },
   mode: 'production',
   output: {
@@ -36,6 +37,14 @@ module.exports = {
             loader: 'sass-loader'
           }
         ]
+      },
+      {
+        test: /\.(png|jpe?g|gif|ttf|woff2?)$/i,
+        use: [
+          {
+            loader: 'url-loader',
+          },
+        ],
       }
     ],
   }

@@ -19,6 +19,8 @@ googleSiteVerification = ""
 bingSiteVerification = ""
 baiduSiteVerification = ""
 
+# math = true # Enable math globally.
+
 # poweredBy = false # Whether to show powered by.
 
 # featuredPostCount = 5 # The number of featured posts shown in sidebar.
