@@ -1,6 +1,5 @@
 @mixin mode-light {
   --background-color: var(--bs-light);
-  --badge-background-color: var(--bs-secondary);
   --breadcrumb-background-color: #e9ecef;
   --breadcrumb-active-item-color: #6c757d;
   --breadcrumb-delimiter-color: #6c757d;
@@ -10,7 +9,6 @@
 
 @mixin mode-dark {
   --background-color: var(--bs-dark);
-  --badge-background-color: var(--bs-dark);
   --breadcrumb-background-color: var(--bs-secondary);
   --breadcrumb-active-item-color: var(--bs-light);
   --breadcrumb-delimiter-color: var(--bs-light);

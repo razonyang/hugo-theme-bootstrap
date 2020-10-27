@@ -17,8 +17,13 @@
   margin-bottom: .5rem;
 }
 
+.post-date {
+  margin-right: .25rem;
+}
+
 .post-translations {
   display: inline-flex;
+  margin-right: .25rem;
 }
 
 .post-thumbnail {
@@ -92,5 +97,5 @@
 }
 
 .badge {
-  background-color: var(--badge-background-color);
+  background-color: var(--bs-primary);
 }
