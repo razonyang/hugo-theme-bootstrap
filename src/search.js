@@ -26,6 +26,7 @@ function initSearch() {
 
 var contentWordCount = 240
 var fuseOptions = {
+  ignoreLocation: true,
   keys: [
     { name:"title", weight:0.8 },
     { name:"content", weight:0.5 },
