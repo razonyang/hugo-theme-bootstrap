@@ -34,10 +34,12 @@
         </li>
         {{- end -}}
         {{- end -}}
-        {{- partial "header/language-switcher" . -}}
       </ul>
       <ul class="navbar-nav ml-auto">
-        {{- partial "header/search-form" . -}}
+          {{- partial "header/search-form" . -}}
+          {{- partial "header/language-switcher" . -}}
+          {{- partial "header/color-scheme-switcher" . -}}
+        </li>
       </ul>
     </div>
   </div>

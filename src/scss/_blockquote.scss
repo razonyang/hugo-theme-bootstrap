@@ -1,0 +1,19 @@
+blockquote{
+  background: #ededed;
+  border-left: .5rem solid var(--bs-secondary);
+  color: #555;
+  display: flex;
+  padding: 1.2rem 2.5rem .2rem;
+  position: relative;
+}
+
+blockquote::before{
+  @extend .blockquote;
+  font-family: Arial;
+  content: "\201C";
+  color: var(--bs-secondary);
+  font-size: 4em;
+  position: absolute;
+  left: 10px;
+  top: -10px;
+}

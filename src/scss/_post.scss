@@ -1,0 +1,96 @@
+.posts .post {
+  background-color: var(--post-background-color);
+  border-radius: .25rem;
+  color: var(--color);
+}
+
+.post {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.post-title {
+  margin-bottom: .5rem;
+}
+
+.post-meta {
+  margin-bottom: .5rem;
+}
+
+.post-translations {
+  display: inline-flex;
+}
+
+.post-thumbnail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.post-category, .post-tag {
+  margin: .1rem;
+}
+
+.post-toc {
+  float: right;
+  padding: .5rem;
+  padding-right: 2rem;
+  margin-left: 1rem;
+}
+
+.post-toc ul {
+  list-style: initial;
+  margin-bottom: 0;
+}
+
+.post-content {
+  margin-bottom: 1rem;
+}
+
+.post-nav {
+  display: flex;
+  margin-bottom: 1rem;
+  justify-content: space-between;
+}
+
+.prev-post,
+.next-post {
+  display: flex;
+  width: 50%;
+  align-items: center;
+}
+
+.next-post {
+  text-align: right;
+  flex-direction: row-reverse;
+}
+
+.prev-post:before,
+.next-post:before {
+  display: flex;
+  align-items: center;
+}
+
+.prev-post:before {
+  content: "<\00a0";
+}
+
+.next-post:before {
+  content: "\00a0>";
+}
+
+.post-content a {
+  color: var(--bs-primary);
+}
+
+.post-comments {
+  padding-top: 1rem;
+}
+
+.post-comments .utterances {
+  max-width: 100%;
+}
+
+.badge {
+  background-color: var(--badge-background-color);
+}
