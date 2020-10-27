@@ -15,7 +15,7 @@
     <h2 class="search-result-title">
       <a {{ printf "href={{permalink}}" | safeHTMLAttr }}>{{ print "{{title}}" }}</a>
     </h2>
-    <div class="text-muted search-result-content mb-2">{{ print "{{{content}}}" }}</div>
+    <div class="search-result-content">{{ print "{{{content}}}" }}</div>
   </div>
 </div>
 {{ end }}

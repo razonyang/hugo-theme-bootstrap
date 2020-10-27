@@ -1,0 +1,11 @@
+.breadcrumb {
+  background-color: var(--breadcrumb-background-color);
+}
+
+.breadcrumb-item.active {
+  color: var(--breadcrumb-active-item-color);
+}
+
+.breadcrumb-item+.breadcrumb-item::before{
+  color: var(--breadcrumb-delimiter-color);
+}

@@ -3,12 +3,12 @@
     <i class="fas fa-fw fa-calendar-alt"></i>{{ .Date.Format (default "Jan 2, 2006" $.Site.Params.dateFormat) }}
   </span>
   {{- range (.GetTerms "categories") -}}
-  <a href="{{ .Permalink }}" class="post-category badge bg-secondary">
+  <a href="{{ .Permalink }}" class="post-category badge">
     <i class="fas fa-fw fa-folder"></i>  {{ .Name }}
   </a>
   {{- end -}}
   {{- range (.GetTerms "tags") -}}
-  <a href="{{ .Permalink }}" class="post-tag badge bg-secondary">
+  <a href="{{ .Permalink }}" class="post-tag badge">
     <i class="fas fa-fw fa-tag"></i> {{ .Name }}
   </a>
   {{- end -}}

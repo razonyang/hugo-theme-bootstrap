@@ -1,0 +1,31 @@
+.logo {
+  width: 42px;
+  height: 42px;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.btn-search:focus {
+  outline: none;
+}
+
+.search-bar {
+  display: flex;
+  margin-right: 1rem;
+}
+
+.language-switcher {
+  margin-right: 1rem;
+}
+
+.color-scheme-switcher {
+  align-items: center;
+  display: flex;
+  margin-right: 1rem;
+}

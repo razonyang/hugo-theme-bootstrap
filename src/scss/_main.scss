@@ -1,0 +1,90 @@
+@mixin mode-light {
+  --background-color: var(--bs-light);
+  --badge-background-color: var(--bs-secondary);
+  --breadcrumb-background-color: #e9ecef;
+  --breadcrumb-active-item-color: #6c757d;
+  --breadcrumb-delimiter-color: #6c757d;
+  --color: var(--bs-dark);
+  --post-background-color: #fff;
+}
+
+@mixin mode-dark {
+  --background-color: var(--bs-dark);
+  --badge-background-color: var(--bs-dark);
+  --breadcrumb-background-color: var(--bs-secondary);
+  --breadcrumb-active-item-color: var(--bs-light);
+  --breadcrumb-delimiter-color: var(--bs-light);
+  --color: var(--bs-light);
+  --post-background-color: var(--bs-secondary);
+}
+
+:root {
+  @include mode-light;
+  --prefers-color-scheme: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --prefers-color-scheme: dark;
+  }
+
+  :root:not([data-prefers-color-scheme]) {
+    @include mode-dark;
+  }
+}
+
+[data-prefers-color-scheme="light"] {
+  @include mode-light;
+}
+
+[data-prefers-color-scheme="dark"] {
+  @include mode-dark;
+}
+
+html {
+  position: relative;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--color);
+  display: flex;
+  flex-flow: column;
+  font-family: Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+code {
+  color: var(--bs-orange);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 1.5rem 0;
+}
+
+pre {
+  padding: 1rem;
+  border-radius: .25rem;
+}
+
+table {
+  @extend .table;
+  @extend .table-bordered;
+  color: var(--color);
+}
+
+main {
+  margin-top: 84px;
+}
