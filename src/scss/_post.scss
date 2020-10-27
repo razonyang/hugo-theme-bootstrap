@@ -2,12 +2,12 @@
   background-color: var(--post-background-color);
   border-radius: .25rem;
   color: var(--color);
-  padding: .5rem 0;
+  padding: 1rem .5rem;
 }
 
 .post {
   display: flex;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .post-title {
@@ -98,5 +98,9 @@
 }
 
 .badge {
-  background-color: var(--bs-primary);
+  background-color: var(--bs-secondary);
+}
+
+.posts .badge {
+  background-color: var(--badge-background-color);
 }
