@@ -45,5 +45,15 @@
     <a class="nav-link" target="_blank" href="https://www.zhihu.com/people/{{ $user }}"><i class="fab fa-fw fa-2x fa-zhihu"></i></a>
   </li>
   {{- end -}}
+  {{- if eq $key "quora" -}}
+  <li class="nav-item">
+    <a class="nav-link" target="_blank" href="https://www.quora.com/profile/{{ $user }}"><i class="fab fa-fw fa-2x fa-quora"></i></a>
+  </li>
+  {{- end -}}
+  {{- if eq $key "instagram" -}}
+  <li class="nav-item">
+    <a class="nav-link" target="_blank" href="https://www.instagram.com/{{ $user }}"><i class="fab fa-fw fa-2x fa-instagram"></i></a>
+  </li>
+  {{- end -}}
 {{- end -}}
 </nav>
