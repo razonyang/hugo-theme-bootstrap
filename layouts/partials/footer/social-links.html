@@ -55,5 +55,10 @@
     <a class="nav-link" target="_blank" href="https://www.instagram.com/{{ $user }}"><i class="fab fa-fw fa-2x fa-instagram"></i></a>
   </li>
   {{- end -}}
+  {{- if eq $key "tumblr" -}}
+  <li class="nav-item">
+    <a class="nav-link" target="_blank" href="https://{{ $user }}.tumblr.com"><i class="fab fa-fw fa-2x fa-tumblr"></i></a>
+  </li>
+  {{- end -}}
 {{- end -}}
 </nav>
