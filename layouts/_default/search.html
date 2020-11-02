@@ -1,12 +1,20 @@
 {{ define "head-end" }}
-{{- $script := resources.Get "search.js" | resources.Fingerprint -}}
+{{- $script := resources.Get "js/search.js" | resources.Fingerprint -}}
 <script src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>
 {{ end }}
 
 {{ define "content" }}
-<div class="search">
-  <h1>Search Results</h1>
-  <hr>
+<div class="search container">
+  <div class="row">
+    <div class="col-md-6">
+      <form class="search-form" action="{{ absLangURL "search" }}">
+        <div class="input-group">
+          <input class="form-control border-right-0" id="searchQuery" name="q" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn-search input-group-text" type="submit"><i class="fas fa-fw fa-search"></i></button>
+        </div>
+      </form>
+    </div>
+  </div>
   <div id="searchResults" class="search-results"></div>
 </div>
 

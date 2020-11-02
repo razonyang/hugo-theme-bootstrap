@@ -12,4 +12,5 @@
 {{- $script := resources.Get "js/main.js" | resources.Fingerprint -}}
 <script src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>
 {{- partial "head/math" . -}}
+<meta data-name="search-index" content="{{ absLangURL "index.json" }}">
 {{- partial "head/custom" . -}}

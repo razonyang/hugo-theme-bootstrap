@@ -1,11 +1,9 @@
 import Fuse from "fuse.js"
 import Mustache from "mustache"
 
-var searchForm, searchInput, searchResults, searchResultTemplate
+var searchResults, searchResultTemplate
 
 document.addEventListener('DOMContentLoaded', function() {
-  searchForm = document.getElementById('searchForm')
-  searchInput = document.getElementById('searchQuery')
   searchResults = document.getElementById('searchResults')
   searchResultTemplate = document.getElementById('searchResultTemplate').innerHTML
   initSearch()
@@ -16,11 +14,12 @@ function initSearch() {
   let searchQuery = searchParams.get("q")
 
   if (searchQuery) {
-    searchInput.value = searchQuery
+    document.body.querySelectorAll('.search-form input').forEach(function (input) {
+      input.value = searchQuery
+    })
     search(searchQuery)
   } else {
     searchResults.innerHTML = '<p class="text-muted">Please enter search keywords.</p>'
-    searchInput.focus()
   }
 }
 
@@ -51,7 +50,7 @@ function search(query) {
     }
   }
   xhr.responseType = 'json'
-  xhr.open('GET', searchForm.getAttribute("data-index"), true)
+  xhr.open('GET', document.head.querySelector('meta[data-name="search-index"]').getAttribute('content'), true)
   xhr.send(null)
 }
 

@@ -3,8 +3,8 @@ const path = require('path');
 module.exports = {
   entry: {
     main: './src/js/index.js',
-    //search: ['./src/search.js', './src/search.scss'],
-    //katex: ['./src/katex.js', './src/katex.scss'],
+    search: ['./src/search.js', './src/search.scss'],
+    katex: ['./src/katex.js', './src/katex.scss'],
   },
   mode: 'production',
   output: {
