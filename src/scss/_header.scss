@@ -48,7 +48,10 @@
   margin-right: .5rem;
 }
 
-.dropdown-item.active, .dropdown-item:active {
+.dropdown-item.active,
+.dropdown-item:active,
+.dropdown-item:hover,
+.dropdown-item:focus {
   background-color: var(--hbs-secondary);
   color: var(--hbs-secondary-text);
 }
@@ -61,7 +64,7 @@
   color: #{$white};
 }
 
-.palette-switcher .dropdown-item:hover, .dropdown-item:focus {
+.palette-switcher .dropdown-item:hover, .palette-switcher .dropdown-item:focus {
   font-weight: bold;
 }
 
