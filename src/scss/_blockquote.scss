@@ -8,10 +8,8 @@ blockquote{
 }
 
 blockquote::before{
-  @extend .blockquote;
-  font-family: Arial;
   content: "\201C";
-  color: var(--bs-secondary);
+  color: var(--hbs-secondary);
   font-size: 4em;
   position: absolute;
   left: 10px;
