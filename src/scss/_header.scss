@@ -32,6 +32,12 @@
   margin: 0 .25rem;
 }
 
+.btn-search {
+  background-color: var(--hbs-secondary);
+  border-color: var(--hbs-secondary);
+  color: var(--hbs-secondary-text);
+}
+
 .language-switcher {
   margin-right: .5rem;
 }
