@@ -15,6 +15,12 @@
     padding: .5rem;
 }
 
+.social-links .nav-link:focus,
+.social-links .nav-link:hover {
+    background-color: var(--hbs-secondary);
+    color: var(--hbs-secondary-text);
+}
+
 .copyright {
   margin-bottom: 1rem;
 }
