@@ -10,11 +10,11 @@
   {{- range (.Paginate $pages).Pages -}}
     <article class="post row">
       {{- if .Params.Images -}}
-      <div class="post-thumbnail col-md-3">
+      <div class="post-thumbnail col-md-2">
         <img class="img-fluid" src="{{ index .Params.Images 0 | absURL }}" loading="lazy"/>
       </div>
       {{- end -}}
-      <div class="post-body{{ if .Params.Images }} col-md-9{{ end }}">
+      <div class="post-body{{ if .Params.Images }} col-md-10{{ end }}">
         <h2 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
         {{- partial "post/meta" . -}}
         <div class="post-summary">
