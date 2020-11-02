@@ -6,6 +6,8 @@ titleSeparator = "-"
 description = "A clean, responsive and feature-rich blog theme for Hugo"
 # image = ["site-feature-image.jpg"]
 
+brand = "HUGO BOOTSTRAP"
+
 # dateFormat = "Jan 2, 2006"
 
 # Google Adsense
