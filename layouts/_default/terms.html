@@ -4,8 +4,8 @@
     <h1>{{ .Title }}</h1>
     <div>
       {{- range .Data.Terms.ByCount -}}
-      <a href="{{ .Page.Permalink }}" class="btn btn-sm btn-primary mr-2 mb-2">
-        {{ .Page.Title }} <span class="badge rounded-pill bg-dark">{{ .Count }}</span>
+      <a href="{{ .Page.Permalink }}" class="post-taxonomy btn btn-sm">
+        {{ .Page.Title }} <span class="badge">{{ .Count }}</span>
       </a>
       {{- end -}}
     </div>
