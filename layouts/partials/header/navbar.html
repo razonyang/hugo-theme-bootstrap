@@ -1,6 +1,6 @@
 <nav class="navbar fixed-top navbar-expand-md">
   <div class="container">
-    <a class="navbar-brand" href="{{ absLangURL "/" }}">
+    <a class="navbar-brand" href="{{ absLangURL .Site.BaseURL }}">
       <img class="logo" alt="Logo" src="{{ absURL "images/logo.png" }}" loading="lazy">
       {{- with .Site.Params.brand -}}
       {{ . }}
