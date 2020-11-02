@@ -1,0 +1,92 @@
+$blue-primary: #{$blue-900};
+$blue-secondary: #{$blue-600};
+
+$blue-gray-primary: #{$blue-gray-900};
+$blue-gray-secondary: #{$blue-gray-600};
+
+$brown-primary: #{$brown-900};
+$brown-secondary: #{$brown-600};
+
+$cyan-primary: #{$cyan-900};
+$cyan-secondary: #{$cyan-600};
+
+$gray-primary: #{$gray-900};
+$gray-secondary: #{$gray-600};
+
+$green-primary: #{$green-900};
+$green-secondary: #{$green-600};
+
+$indigo-primary: #{$indigo-900};
+$indigo-secondary: #{$indigo-600};
+
+$orange-primary: #{$orange-900};
+$orange-secondary: #{$orange-600};
+
+$pink-primary: #{$pink-900};
+$pink-secondary: #{$pink-600};
+
+$purple-primary: #{$purple-900};
+$purple-secondary: #{$purple-600};
+
+$red-primary: #{$red-900};
+$red-secondary: #{$red-600};
+
+$teal-primary: #{$teal-900};
+$teal-secondary: #{$teal-600};
+
+$yellow-primary: #{$yellow-900};
+$yellow-secondary: #{$yellow-600};
+
+/* Background Colors */
+
+.bg-blue {
+  background-color: #{$blue-primary} !important;
+}
+
+.bg-blue-gray {
+  background-color: #{$blue-gray-primary} !important;
+}
+
+.bg-brown {
+  background-color: #{$brown-primary} !important;
+}
+
+.bg-cyan {
+  background-color: #{$cyan-primary} !important;
+}
+
+.bg-gray {
+  background-color: #{$gray-primary} !important;
+}
+
+.bg-green {
+  background-color: #{$green-primary} !important;
+}
+
+.bg-indigo {
+  background-color: #{$indigo-primary} !important;
+}
+
+.bg-orange {
+  background-color: #{$orange-primary} !important;
+}
+
+.bg-pink {
+  background-color: #{$pink-primary} !important;
+}
+
+.bg-purple {
+  background-color: #{$purple-primary} !important;
+}
+
+.bg-red {
+  background-color: #{$red-primary} !important;
+}
+
+.bg-teal {
+  background-color: #{$teal-primary} !important;
+}
+
+.bg-yellow {
+  background-color: #{$yellow-primary} !important;
+}

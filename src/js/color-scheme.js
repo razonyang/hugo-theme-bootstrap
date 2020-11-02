@@ -1,5 +1,5 @@
 
-var prefersColorSchemeKey = 'prefers-color-scheme'
+var prefersColorSchemeKey = 'hbs-prefers-color-scheme'
 var colorSchemeSwitcher, colorSchemeSwitcherLabel;
 document.addEventListener('DOMContentLoaded', function() {
   colorSchemeSwitcher = document.getElementById('colorSchemeSwitcher')
@@ -33,11 +33,11 @@ function initColorScheme() {
 }
 
 function toggleColorScheme(scheme) {
-  let icon = 'sun'
+  let icon = 'moon'
   let checked = false
   if (scheme === 'dark') {
     colorSchemeSwitcher.checked
-    icon = 'moon'
+    icon = 'sun'
     checked = true
   }
   colorSchemeSwitcher.checked = checked

@@ -1,26 +1,20 @@
 @mixin mode-light {
-  --background-color: var(--bs-light);
-  --badge-background-color: var(--bs-secondary);
-  --breadcrumb-background-color: #e9ecef;
-  --breadcrumb-active-item-color: #6c757d;
-  --breadcrumb-delimiter-color: #6c757d;
-  --color: var(--bs-dark);
-  --post-background-color: #fff;
+  --hbs-bg-color:#{$white};
+  --hbs-color: var(--bs-dark);
 }
 
 @mixin mode-dark {
-  --background-color: var(--bs-dark);
-  --badge-background-color: var(--bs-dark);
-  --breadcrumb-background-color: var(--bs-secondary);
-  --breadcrumb-active-item-color: var(--bs-light);
-  --breadcrumb-delimiter-color: var(--bs-light);
-  --color: var(--bs-light);
-  --post-background-color: var(--bs-secondary);
+  --hbs-bg-color:var(--hbs-primary);
+  --hbs-color: #{$white};
 }
 
 :root {
   @include mode-light;
   --prefers-color-scheme: none;
+}
+
+:root:not([data-palette]) {
+  @include palette-blue-gray;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -50,11 +44,11 @@ html, body {
 }
 
 body {
-  background-color: var(--background-color);
-  color: var(--color);
+  background-color: var(--hbs-bg-color);
+  color: var(--hbs-color);
   display: flex;
   flex-flow: column;
-  font-family: Arial, sans-serif;
+  font-family: var(--bs-font-sans-serif);
 }
 
 a {
@@ -62,8 +56,9 @@ a {
     color: inherit;
 }
 
-code {
-  color: var(--bs-orange);
+a:hover,
+btn:hover {
+  color: inherit;
 }
 
 h1,
@@ -87,4 +82,5 @@ table {
 
 main {
   margin-top: 84px;
+  margin-bottom: 2rem;
 }

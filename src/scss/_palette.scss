@@ -1,0 +1,142 @@
+@mixin palette-blue {
+  --hbs-primary: #{$blue-primary};
+  --hbs-primary-text: #{$white};
+  --hbs-secondary: #{$blue-secondary};
+  --hbs-secondary-text: #{$white};
+}
+
+[data-palette="blue"] {
+  @include palette-blue;
+}
+
+@mixin palette-blue-gray {
+  --hbs-primary: #{$blue-gray-primary};
+  --hbs-primary-text: #{$white};
+  --hbs-secondary: #{$blue-gray-secondary};
+  --hbs-secondary-text: #{$white};
+}
+
+[data-palette="blue-gray"] {
+  @include palette-blue-gray;
+}
+
+@mixin palette-brown {
+  --hbs-primary: #{$brown-primary};
+  --hbs-primary-text: #{$white};
+  --hbs-secondary: #{$brown-secondary};
+  --hbs-secondary-secondary: #{$white};
+}
+
+[data-palette="brown"] {
+  @include palette-brown;
+}
+
+@mixin palette-cyan {
+  --hbs-primary: #{$cyan-primary};
+  --hbs-primary-text: #{$white};
+  --hbs-secondary: #{$cyan-secondary};
+  --hbs-secondary-text: #{$white};
+}
+
+[data-palette="cyan"] {
+  @include palette-cyan;
+}
+
+@mixin palette-gray {
+  --hbs-primary: #{$gray-primary};
+  --hbs-primary-text: #{$white};
+  --hbs-secondary: #{$gray-secondary};
+  --hbs-secondary-text: #{$white};
+}
+
+[data-palette="gray"] {
+  @include palette-gray;
+}
+
+@mixin palette-green {
+  --hbs-primary: #{$green-primary};
+  --hbs-primary-text: #{$white};
+  --hbs-secondary: #{$green-secondary};
+  --hbs-secondary-text: #{$white};
+}
+
+[data-palette="green"] {
+  @include palette-green;
+}
+
+@mixin palette-indigo {
+  --hbs-primary: #{$indigo-primary};
+  --hbs-primary-text: #{$white};
+  --hbs-secondary: #{$indigo-secondary};
+  --hbs-secondary-text: #{$white};
+}
+
+[data-palette="indigo"] {
+  @include palette-indigo;
+}
+
+@mixin palette-orange {
+  --hbs-primary: #{$orange-primary};
+  --hbs-primary-text: #{$white};
+  --hbs-secondary: #{$orange-secondary};
+  --hbs-secondary-text: #{$white};
+}
+
+[data-palette="orange"] {
+  @include palette-orange;
+}
+
+@mixin palette-pink {
+  --hbs-primary: #{$pink-primary};
+  --hbs-primary-text: #{$white};
+  --hbs-secondary: #{$pink-secondary};
+  --hbs-secondary-text: #{$white};
+}
+
+[data-palette="pink"] {
+  @include palette-pink;
+}
+
+@mixin palette-purple {
+  --hbs-primary: #{$purple-primary};
+  --hbs-primary-text: #{$white};
+  --hbs-secondary: #{$purple-secondary};
+  --hbs-secondary-text: #{$white};
+}
+
+[data-palette="purple"] {
+  @include palette-purple;
+}
+
+@mixin palette-red {
+  --hbs-primary: #{$red-primary};
+  --hbs-primary-text: #{$white};
+  --hbs-secondary: #{$red-secondary};
+  --hbs-secondary-text: #{$white};
+}
+
+[data-palette="red"] {
+  @include palette-red;
+}
+
+@mixin palette-teal {
+  --hbs-primary: #{$teal-primary};
+  --hbs-primary-text: #{$white};
+  --hbs-secondary: #{$teal-secondary};
+  --hbs-secondary-text: #{$white};
+}
+
+[data-palette="teal"] {
+  @include palette-teal;
+}
+
+@mixin palette-yellow {
+  --hbs-primary: #{$yellow-primary};
+  --hbs-primary-text: #{$white};
+  --hbs-secondary: #{$yellow-secondary};
+  --hbs-secondary-text: #{$white};
+}
+
+[data-palette="yellow"] {
+  @include palette-yellow;
+}

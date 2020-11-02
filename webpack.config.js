@@ -2,13 +2,13 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    main: ['./src/main.js', './src/main.scss'],
-    search: ['./src/search.js', './src/search.scss'],
-    katex: ['./src/katex.js', './src/katex.scss'],
+    main: './src/js/index.js',
+    //search: ['./src/search.js', './src/search.scss'],
+    //katex: ['./src/katex.js', './src/katex.scss'],
   },
   mode: 'production',
   output: {
-    path: path.resolve(path.join(__dirname, 'assets')),
+    path: path.resolve(path.join(__dirname, 'assets', 'js')),
     filename: '[name].js'
   },
   module: {

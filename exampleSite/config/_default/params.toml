@@ -19,6 +19,8 @@ googleSiteVerification = ""
 bingSiteVerification = ""
 baiduSiteVerification = ""
 
+bgColor = "blue"
+
 # math = true # Enable math globally.
 
 # poweredBy = false # Whether to show powered by.

@@ -4,12 +4,12 @@
   </span>
   {{- partial "post/translations" . -}}
   {{- range (.GetTerms "categories") -}}
-  <a href="{{ .Permalink }}" class="post-category badge">
+  <a href="{{ .Permalink }}" class="post-taxonomy badge">
     <i class="fas fa-fw fa-folder"></i>  {{ .Name }}
   </a>
   {{- end -}}
   {{- range (.GetTerms "tags") -}}
-  <a href="{{ .Permalink }}" class="post-tag badge">
+  <a href="{{ .Permalink }}" class="post-taxonomy badge">
     <i class="fas fa-fw fa-tag"></i> {{ .Name }}
   </a>
   {{- end -}}

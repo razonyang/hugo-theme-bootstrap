@@ -1,13 +1,5 @@
-.posts .post {
-  background-color: var(--post-background-color);
-  border-radius: .25rem;
-  color: var(--color);
-  padding: 1rem .5rem;
-}
-
 .post {
   display: flex;
-  margin-bottom: 2rem;
 }
 
 .post-title {
@@ -33,7 +25,15 @@
   justify-content: center;
 }
 
-.post-category, .post-tag {
+.post-taxonomy {
+  background-color: var(--hbs-secondary);
+  color: var(--hbs-secondary-text);
+  margin: 0 .5rem .5rem 0;
+}
+
+.post-taxonomy .badge {
+  background-color: var(--hbs-secondary-text);
+  color: var(--hbs-secondary);
   margin: .1rem;
 }
 
@@ -42,6 +42,8 @@
   padding: .5rem;
   padding-right: 2rem;
   margin-left: 1rem;
+  background-color: var(--hbs-secondary);
+  color: var(--hbs-secondary-text);
 }
 
 .post-toc ul {
@@ -85,10 +87,6 @@
   content: "\00a0>";
 }
 
-.post-content a {
-  color: var(--bs-primary);
-}
-
 .post-comments {
   padding-top: 1rem;
 }
@@ -97,10 +95,6 @@
   max-width: 100%;
 }
 
-.badge {
-  background-color: var(--bs-secondary);
-}
-
 .posts .badge {
-  background-color: var(--badge-background-color);
+  background-color: var(--hbs-secondary);
 }

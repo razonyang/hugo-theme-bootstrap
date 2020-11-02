@@ -1,0 +1,14 @@
+{{- $palettes := slice "blue" "blue gray" "brown" "cyan" "gray" "green" "indigo" "orange" "pink" "purple" "red" "teal" "yellow" -}}
+<li class="nav-item dropdown palette-switcher">
+  <a class="nav-link" id="navbarDropdownPalette" role="button" data-toggle="dropdown" aria-expanded="false">
+    <i class="fas fa-fw fa-palette"></i>
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="navbarDropdownPalette">
+    {{- range $palettes -}}
+    {{- $key := replace . " " "-" -}}
+    <li>
+      <a class="dropdown-item bg-{{ $key }}" data-palette="{{ $key }}">{{ . | title }}</a>
+    </li>
+    {{- end -}}
+  </ul>
+</li>

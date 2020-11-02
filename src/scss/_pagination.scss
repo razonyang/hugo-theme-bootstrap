@@ -1,4 +1,9 @@
 .pagination .page-link {
-  background-color: var(--background-color);
-  color: var(--color);
+  background-color: var(--hbs-bg-color);
+  border-color: var(--hbs-secondary);
+  color: var(--hbs-color);
+}
+
+.page-item.disabled .page-link {
+  border-color: var(--hbs-secondary);
 }

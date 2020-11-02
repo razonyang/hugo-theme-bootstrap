@@ -1,8 +1,8 @@
 .hook {
   width: 100%;
   text-align: center;
-  color: var(--bs-light);
-  background-color: var(--bs-secondary);
+  color: var(--hbs-secondary-text);
+  background-color: var(--hbs-secondary);
   margin-bottom: 1rem;
   padding: .5rem;
   border-radius: .25rem;
