@@ -2,6 +2,12 @@ var paletteKey = "hbs-palette"
 var paletteItems
 function initPalette() {
   let palette = localStorage.getItem(paletteKey)
+  if (!palette) {
+    let paletteMeta = document.querySelector('meta[data-name="palette"]')
+    if (paletteMeta) {
+      palette = paletteMeta.getAttribute('content')
+    }
+  }
   if (palette) {
     switchPalette(palette)
   }
