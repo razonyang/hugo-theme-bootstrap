@@ -15,7 +15,6 @@ tags = [
     "Privacy",
 ]
 images = [
-  "images/rich-content.png"
 ]
 +++
 
