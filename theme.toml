@@ -5,12 +5,15 @@ description = "A clean, responsive and feature-rich blog theme for Hugo"
 homepage = "https://github.com/razonyang/hugo-theme-bootstrap"
 tags = [
   "bootstrap",
-  "bootstrap 5",
   "clean",
   "simple",
   "blog",
   "responsive",
-  "feature-rich"
+  "feature-rich",
+  "mobile",
+  "fast",
+  "search",
+  "multilingual"
 ]
 features = [
   "hooks",
