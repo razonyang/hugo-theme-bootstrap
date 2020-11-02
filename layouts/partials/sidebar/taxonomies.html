@@ -1,14 +1,19 @@
 {{- range $key, $value := .Site.Taxonomies -}}
+{{- $countParams := dict "categories" "categoryCount" "tags" "tagCount" -}}
+{{- $param := default "" (index $countParams $key) -}}
+{{- $taxonomyCount := default 10 ($.Site.Param $param) -}}
 <section class="taxonomy-{{ $key }}">
   <h4>
     <a href="{{ absLangURL (urlize $key) }}">{{ T $key }}</a>
   </h4>
   <div>
-    {{- range $value.ByCount -}}
-    <a href="{{ .Page.Permalink }}" class="post-taxonomy btn btn-sm">
-      {{ .Page.Title }} <span class="badge">{{ .Count }}</span>
+  {{- range $idx, $taxonomy := $value.ByCount -}}
+    {{- if lt $idx $taxonomyCount -}}
+    <a href="{{ $taxonomy.Page.Permalink }}" class="post-taxonomy btn btn-sm">
+      {{ $taxonomy.Page.Title }} <span class="badge">{{ $taxonomy.Count }}</span>
     </a>
     {{- end -}}
+  {{- end -}}
   </div>
 </section>
 {{- end -}}
