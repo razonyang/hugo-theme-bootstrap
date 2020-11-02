@@ -42,9 +42,15 @@
   float: right;
   padding: .5rem;
   padding-right: 2rem;
-  margin-left: 1rem;
+  margin: 0 0 1rem 1rem;
   background-color: var(--hbs-secondary);
   color: var(--hbs-secondary-text);
+}
+
+@media (max-width: breakpoint-max(sm)) {
+  .post-toc {
+    width: 100%;
+  }
 }
 
 .post-toc ul {
