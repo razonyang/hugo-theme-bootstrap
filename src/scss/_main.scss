@@ -58,7 +58,12 @@ a {
 
 a:hover,
 btn:hover {
-  color: inherit;
+  color: var(--hbs-secondary);
+}
+
+code {
+  color: var(--hbs-secondary-text);
+  background-color: var(--hbs-secondary);
 }
 
 h1,

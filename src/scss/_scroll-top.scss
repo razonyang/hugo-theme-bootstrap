@@ -1,6 +1,7 @@
 .scroll-top {
-  position: fixed;
   bottom: 1.5rem;
-  right: 1.5rem;
+  color: var(--hbs-secondary) !important;
   display: none;
+  position: fixed;
+  right: 1.5rem;
 }
