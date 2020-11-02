@@ -39,10 +39,15 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|jpe?g|gif|ttf|woff2?)$/i,
+        test: /\.(ttf|woff2?)$/i,
         use: [
           {
-            loader: 'url-loader',
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: '../../static/fonts',
+              publicPath: '/fonts'
+            },
           },
         ],
       }
