@@ -1,19 +1,21 @@
 {{ define "content" }}
 {{- $paginator := .Paginate $.Site.RegularPages.ByDate.Reverse 100 -}}
-<div class="archives">
-  <h1>{{ T "archives" }}</h1>
-  <hr>
-  {{- range $idx, $post := $paginator.Pages -}}
-  {{- $currentYear := $post.Date.Format "2006" }}
-  {{- $lastPost := $idx | add -1 | index $paginator.Pages -}}
-  {{- if or (eq $idx 0) (ne ($lastPost.Date.Format "2006") $currentYear) -}}
-  <h3 class="archive-title">{{ $currentYear }}</h3>
-  {{- end -}}
-  <li>
-    <a class="post-title" href="{{ .Permalink }}">{{ .Title }}</a>
-    <span class="float-right text-muted post-date">{{ .Date.Format (default "Jan 2, 2006" $.Site.Params.dateFormat) }}</span>
-  </li>
-  {{- end -}}
+<div class="container">
+  <div class="archives">
+    <h1>{{ T "archives" }}</h1>
+    <hr>
+    {{- range $idx, $post := $paginator.Pages -}}
+    {{- $currentYear := $post.Date.Format "2006" }}
+    {{- $lastPost := $idx | add -1 | index $paginator.Pages -}}
+    {{- if or (eq $idx 0) (ne ($lastPost.Date.Format "2006") $currentYear) -}}
+    <h3 class="archive-title">{{ $currentYear }}</h3>
+    {{- end -}}
+    <li>
+      <a class="post-title" href="{{ .Permalink }}">{{ .Title }}</a>
+      <span class="float-right text-muted post-date">{{ .Date.Format (default "Jan 2, 2006" $.Site.Params.dateFormat) }}</span>
+    </li>
+    {{- end -}}
+  </div>
+  {{- template "_internal/pagination.html" . -}}
 </div>
-{{- template "_internal/pagination.html" . -}}
 {{ end }}
