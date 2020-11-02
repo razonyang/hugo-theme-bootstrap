@@ -4,6 +4,45 @@ other = "歸檔"
 [categories]
 other = "分類"
 
+[color_blue]
+other = "藍色"
+
+[color_blue_gray]
+other = "藍灰色"
+
+[color_brown]
+other = "棕色"
+
+[color_cyan]
+other = "青色"
+
+[color_gray]
+other = "灰色"
+
+[color_green]
+other = "綠色"
+
+[color_indigo]
+other = "靛青色"
+
+[color_orange]
+other = "橙色"
+
+[color_pink]
+other = "粉色"
+
+[color_purple]
+other = "紫色"
+
+[color_red]
+other = "紅色"
+
+[color_teal]
+other = "藍綠色"
+
+[color_yellow]
+other = "黃色"
+
 [featured_posts]
 other = "精選文章"
 

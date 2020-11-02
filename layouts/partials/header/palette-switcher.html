@@ -7,7 +7,7 @@
     {{- range $palettes -}}
     {{- $key := replace . " " "-" -}}
     <li>
-      <a class="dropdown-item bg-{{ $key }}" data-palette="{{ $key }}">{{ . | title }}</a>
+      <a class="dropdown-item bg-{{ $key }}" data-palette="{{ $key }}">{{ replace . " " "_" | printf "color_%s" | T }}</a>
     </li>
     {{- end -}}
   </ul>

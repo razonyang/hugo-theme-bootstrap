@@ -4,6 +4,45 @@ other = "Archives"
 [categories]
 other = "Categories"
 
+[color_blue]
+other = "Blue"
+
+[color_blue_gray]
+other = "Blue Gray"
+
+[color_brown]
+other = "Brown"
+
+[color_cyan]
+other = "Cyan"
+
+[color_gray]
+other = "Gray"
+
+[color_green]
+other = "Green"
+
+[color_indigo]
+other = "Indigo"
+
+[color_orange]
+other = "Orange"
+
+[color_pink]
+other = "Pink"
+
+[color_purple]
+other = "Purple"
+
+[color_red]
+other = "Red"
+
+[color_teal]
+other = "Teal"
+
+[color_yellow]
+other = "Yellow"
+
 [featured_posts]
 other = "Featured Posts"
 
