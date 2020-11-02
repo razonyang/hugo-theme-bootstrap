@@ -8,7 +8,7 @@
     {{- block "head-end" . -}}{{- end -}}
     {{- partial "hooks/head-end" . -}}
   </head>
-  <body>
+  <body{{ with .Site.Params.palette}} data-palette="{{ . }}"{{ end }}>
     {{- partial "header.html" . -}}
     <main role="main" class="container">
       <div class="row content">

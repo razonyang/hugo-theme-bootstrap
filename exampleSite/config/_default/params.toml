@@ -8,6 +8,8 @@ description = "A clean, responsive and feature-rich blog theme for Hugo"
 
 brand = "HUGO BOOTSTRAP"
 
+palette = "brown" # Default palette. Optional.
+
 # dateFormat = "Jan 2, 2006"
 
 # Google Adsense
