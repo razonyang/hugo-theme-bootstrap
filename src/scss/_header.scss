@@ -23,9 +23,13 @@
   outline: none;
 }
 
+.search-dropdown-menu {
+  width: 240px;
+}
+
 .search-bar {
   display: flex;
-  margin-right: .5rem;
+  margin: 0 .25rem;
 }
 
 .language-switcher {
@@ -61,7 +65,7 @@
 
 @media (max-width: breakpoint-max(sm)) {
   .dropdown-menu{
-    height: 240px;
+    max-height: 240px;
     overflow-y:auto;
   }
 }

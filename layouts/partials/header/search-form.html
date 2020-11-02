@@ -1,6 +1,15 @@
-<form id="searchForm" class="search-bar" action="{{ absLangURL "search" }}" data-index="{{ absLangURL "index.json" }}">
-  <div class="input-group">
-    <input class="form-control border-right-0" id="searchQuery" name="q" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn-search input-group-text bg-white border-0" type="submit"><i class="fas fa-fw fa-search bg-transparent"></i></button>
-  </div>
-</form>
+<li class="nav-item dropdown">
+  <a class="nav-link" id="navbarDropdownSearch" role="button" data-toggle="dropdown" aria-expanded="false">
+    <i class="fas fa-fw fa-search"></i>
+  </a>
+  <ul class="dropdown-menu dropdown-menu-right search-dropdown-menu" aria-labelledby="navbarDropdownSearch">
+    <li>
+      <form id="searchForm" class="search-bar" action="{{ absLangURL "search" }}" data-index="{{ absLangURL "index.json" }}">
+        <div class="input-group">
+          <input class="form-control border-right-0" id="searchQuery" name="q" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn-search input-group-text" type="submit"><i class="fas fa-fw fa-search"></i></button>
+        </div>
+      </form>
+    </li>
+  </ul>
+</li>
