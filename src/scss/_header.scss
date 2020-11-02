@@ -58,3 +58,10 @@
 .palette-switcher .dropdown-item.active {
   font-weight: bold;
 }
+
+@media (max-width: breakpoint-max(sm)) {
+  .dropdown-menu{
+    height: 240px;
+    overflow-y:auto;
+  }
+}
