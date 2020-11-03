@@ -1,56 +1,56 @@
-$blue-primary: #3F51B5;
-$blue-secondary: #5C6BC0;
-$blue-accent: #FFC107;
+$blue-primary: #3f51b5;
+$blue-secondary: #5c6bc0;
+$blue-accent: #ffc107;
 
 $blue-gray-primary: #14274e;
 $blue-gray-secondary: #394867;
-$blue-gray-accent: #EF5350;
+$blue-gray-accent: #ef5350;
 
 $brown-primary: #795548;
-$brown-secondary: #A1887F;
-$brown-accent: #FFCA28;
+$brown-secondary: #a1887f;
+$brown-accent: #ffca28;
 
 $cyan-primary: #{$cyan-900};
 $cyan-secondary: #{$cyan-600};
-$cyan-accent: #EF5350;
+$cyan-accent: #ef5350;
 
-$gray-primary: #37474F;
-$gray-secondary: #607D8B;
-$gray-accent: #F06292;
+$gray-primary: #37474f;
+$gray-secondary: #607d8b;
+$gray-accent: #f06292;
 
-$green-primary: #4CAF50;
-$green-secondary: #66BB6A;
-$green-accent: #FFC107;
+$green-primary: #4caf50;
+$green-secondary: #66bb6a;
+$green-accent: #ffc107;
 
 $indigo-primary: #{$cyan-800};
 $indigo-secondary: #{$cyan-600};
-$indigo-accent: #FFC107;
+$indigo-accent: #ffc107;
 
-$orange-primary: #FF9800;
-$orange-secondary: #FFB74D;
-$orange-accent: #29B6F6;
+$orange-primary: #ff9800;
+$orange-secondary: #ffb74d;
+$orange-accent: #29b6f6;
 
 $pink-primary: #{$pink-700};
 $pink-secondary: #{$pink-500};
-$pink-accent: #42A5F5;
+$pink-accent: #42a5f5;
 
-$purple-primary: #673AB7;
-$purple-secondary: #9575CD;
-$purple-accent: #FFCA28;
+$purple-primary: #673ab7;
+$purple-secondary: #9575cd;
+$purple-accent: #ffca28;
 
-$red-primary: #F44336;
-$red-secondary: #FF5252;
-$red-accent: #FFA726;
+$red-primary: #f44336;
+$red-secondary: #ff5252;
+$red-accent: #ffa726;
 
 $teal-primary: #{$teal-800};
 $teal-secondary: #{$teal-600};
-$teal-accent: #FF8A65;
+$teal-accent: #ff8a65;
 
-$yellow-primary: #FFC107;
-$yellow-secondary: #FFD54F;
-$yellow-accent: #4FC3F7;
+$yellow-primary: #ffc107;
+$yellow-secondary: #ffd54f;
+$yellow-accent: #4fc3f7;
 
-/* Background Colors */
+/* background colors */
 
 .bg-blue {
   background-color: #{$blue-primary} !important;
