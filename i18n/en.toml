@@ -55,5 +55,8 @@ other = "Recent Posts"
 [related_posts]
 other = "Related Posts"
 
+[search]
+other = "Search"
+
 [tags]
 other = "Tags"

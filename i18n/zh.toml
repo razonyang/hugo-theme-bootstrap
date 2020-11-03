@@ -55,5 +55,8 @@ other = "最近文章"
 [related_posts]
 other = "相关文章"
 
+[search]
+other = "搜索"
+
 [tags]
 other = "标签"
