@@ -1,14 +1,18 @@
 {{- $palettes := slice "blue" "blue gray" "brown" "cyan" "gray" "green" "indigo" "orange" "pink" "purple" "red" "teal" "yellow" -}}
-<li class="nav-item dropdown palette-switcher">
-  <a class="nav-link" id="navbarDropdownPalette" role="button" data-toggle="dropdown" aria-expanded="false">
-    <i class="fas fa-fw fa-palette"></i>
+<li class="nav-item mx-1">
+  <a class="nav-link" tabindex="0" data-trigger="focus click" data-container="#paletteSwitcher" data-toggle="popover" data-placement="bottom" 
+    data-target="#palettesPopoverBody" data-html="true">
+    <i class="fas fa-fw fa-palette" ></i>
   </a>
-  <ul class="dropdown-menu" aria-labelledby="navbarDropdownPalette">
+</li>
+<div id="paletteSwitcher"></div>
+<script type="text/html" id="palettesPopoverBody">
+  <ul class="palettes list-group">
     {{- range $palettes -}}
     {{- $key := replace . " " "-" -}}
-    <li>
-      <a class="dropdown-item bg-{{ $key }}" data-palette="{{ $key }}">{{ replace . " " "_" | printf "color_%s" | T }}</a>
+    <li id="palette-{{ $key }}" class="palette list-group-item bg-{{ $key }}" foo="bar" onclick="hbs.main.switchPalette('{{ $key }}')">
+      <a>{{ replace . " " "_" | printf "color_%s" | T }}</a>
     </li>
     {{- end -}}
   </ul>
-</li>
+</script>

@@ -9,7 +9,9 @@ module.exports = {
   mode: 'production',
   output: {
     path: path.resolve(path.join(__dirname, 'assets', 'js')),
-    filename: '[name].js'
+    filename: '[name].js',
+    library: ['hbs', '[name]'],
+    libraryTarget: 'var'
   },
   module: {
     rules: [

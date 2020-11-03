@@ -1,14 +1,16 @@
-<li class="language-switcher nav-item dropdown">
-  <a class="nav-link" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
-    <i class="fas fa-fw fa-language"></i>
+<li class="nav-item mx-1">
+  <a class="nav-link" tabindex="0" data-trigger="focus click" data-container="#languageSwitcher" data-toggle="popover"
+    data-placement="bottom" data-target="#languagesPopoverBody" data-html="true">
+    <i class="fas fa-fw fa-language" ></i>
   </a>
-  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+</li>
+<div id="languageSwitcher"></div>
+<script type="text/html" id="languagesPopoverBody">
+  <ul class="list-group">
     {{- range $.Site.Home.AllTranslations -}}
-    <li>
-      <a class="dropdown-item{{ if eq $.Lang .Language.Lang }} active{{ end }}" href="{{ .Permalink }}">
-        {{- .Language.LanguageName -}}
-      </a>
+    <li class="list-group-item{{ if eq $.Lang .Language.Lang }} active{{ end }}">
+      <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
     </li>
     {{- end -}}
   </ul>
-</li>
+</script>
