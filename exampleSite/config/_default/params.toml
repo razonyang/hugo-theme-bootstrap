@@ -10,7 +10,7 @@ brand = "HUGO BOOTSTRAP"
 
 palette = "brown" # Default palette. Optional.
 
-# fullWidth = true # Full width.
+fullWidth = true # Full width.
 
 archivePaginate = 5 # Archive pagination. Default to 100.
 
