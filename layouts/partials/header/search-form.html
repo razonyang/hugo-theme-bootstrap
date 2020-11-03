@@ -1,15 +1,6 @@
-<li class="nav-item dropdown mr-2">
-  <a class="nav-link" id="navbarDropdownSearch" role="button" data-toggle="dropdown" aria-expanded="false">
-    <i class="fas fa-fw fa-search"></i>
-  </a>
-  <ul class="dropdown-menu dropdown-menu-right search-dropdown-menu" aria-labelledby="navbarDropdownSearch">
-    <li>
-      <form class="search-form" action="{{ absLangURL "search" }}">
-        <div class="input-group">
-          <input class="form-control border-right-0" id="searchQuery" name="q" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn-search input-group-text" type="submit"><i class="fas fa-fw fa-search"></i></button>
-        </div>
-      </form>
-    </li>
-  </ul>
-</li>
+<form class="search-form" action="{{ absLangURL "search" }}">
+  <div class="input-group">
+    <input class="form-control border-right-0" id="searchQuery" name="q" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn-search input-group-text" type="submit"><i class="fas fa-fw fa-search"></i></button>
+  </div>
+</form>
