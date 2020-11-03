@@ -12,6 +12,8 @@ palette = "brown" # Default palette. Optional.
 
 # fullWidth = true # Full width.
 
+archivePaginate = 5 # Archive pagination. Default to 100.
+
 # dateFormat = "Jan 2, 2006"
 
 # Google Adsense

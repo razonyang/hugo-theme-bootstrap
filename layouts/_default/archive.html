@@ -1,5 +1,5 @@
 {{ define "content" }}
-{{- $paginator := .Paginate $.Site.RegularPages.ByDate.Reverse 100 -}}
+{{- $paginator := .Paginate $.Site.RegularPages.ByDate.Reverse (default 100 .Site.Params.archivePaginate) -}}
 <div class="container">
   <div class="archives">
     <h1>{{ T "archives" }}</h1>
