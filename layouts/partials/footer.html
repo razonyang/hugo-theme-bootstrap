@@ -1,5 +1,5 @@
 <footer class="footer">
-  <div class="container">
+  <div class="container{{ if default false .Site.Params.fullWidth }}-fluid{{ end }}">
     {{- partial "footer/social-links" . -}}
     {{- partial "footer/copyright" . -}}
     {{- partial "footer/powered-by" . -}}

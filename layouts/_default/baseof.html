@@ -10,7 +10,7 @@
   </head>
   <body>
     {{- partial "header.html" . -}}
-    <main role="main" class="container">
+    <main role="main" class="container{{ if default false .Site.Params.fullWidth }}-fluid{{ end }}">
       <div class="row content">
         {{- block "content" . -}}{{- end -}}
       </div>    

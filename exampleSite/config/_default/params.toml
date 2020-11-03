@@ -10,6 +10,8 @@ brand = "HUGO BOOTSTRAP"
 
 palette = "brown" # Default palette. Optional.
 
+# fullWidth = true # Full width.
+
 # dateFormat = "Jan 2, 2006"
 
 # Google Adsense
