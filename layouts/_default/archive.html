@@ -19,3 +19,8 @@
   {{- template "_internal/pagination.html" . -}}
 </div>
 {{ end }}
+
+{{ define "title" }}
+{{- $paginator := .Paginate $.Site.RegularPages.ByDate.Reverse (default 100 .Site.Params.archivePaginate) -}}
+{{- partial "head/title" . -}}
+{{ end }}

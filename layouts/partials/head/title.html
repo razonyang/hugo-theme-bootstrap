@@ -1,0 +1,7 @@
+{{- $pageNumber := "" -}}
+{{- if .IsNode -}}
+  {{- if gt .Paginator.PageNumber 1 -}}
+    {{- $pageNumber = printf " %s" (i18n "pagination_title" .Paginator) -}}
+  {{- end -}}
+{{- end -}}
+{{- printf "%s%s %s %s" .Title $pageNumber (default "-" .Site.Params.titleSeparator) .Site.Title -}}
