@@ -1,7 +1,7 @@
 mainSections = ["post", "posts"]
 
 author = "Razon Yang"
-titleSeparator = "-"
+# titleSeparator = "|" # Title separator. Default to "-".
 
 description = "A clean, responsive and feature-rich blog theme for Hugo"
 # image = ["site-feature-image.jpg"]
