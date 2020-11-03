@@ -45,7 +45,7 @@
 
 #languageSwitcher .popover-body,
 #paletteSwitcher .popover-body {
-  padding: .25rem;
+  padding: .5rem;
 }
 
 .color-scheme-switcher {
@@ -64,19 +64,4 @@
 
 .palettes {
   color: #{$white};
-}
-
-.palett:hover, .palette:focus {
-  font-weight: bold;
-}
-
-.palette.active {
-  font-weight: bold;
-}
-
-@media (max-width: breakpoint-max(sm)) {
-  .dropdown-menu {
-    max-height: 240px;
-    overflow-y:auto;
-  }
 }
