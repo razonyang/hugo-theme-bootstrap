@@ -46,6 +46,9 @@ other = "Yellow"
 [featured_posts]
 other = "Featured Posts"
 
+[pagination_title]
+other = "Page {{ .PageNumber }}"
+
 [recent_posts]
 other = "Recent Posts"
 
