@@ -32,11 +32,6 @@
   margin: 0 .5rem .5rem 0;
 }
 
-.post-taxonomy:focus,
-.post-taxonomy:hover {
-  color: var(--hbs-secondary-text);
-}
-
 .post-taxonomy .badge {
   background-color: var(--hbs-secondary-text);
   color: var(--hbs-secondary);
@@ -49,11 +44,6 @@
   padding-right: 2rem;
   margin: 0 0 1rem 1rem;
   background-color: var(--hbs-secondary);
-  color: var(--hbs-secondary-text);
-}
-
-.post-toc a:hover,
-.post-toc a:focus {
   color: var(--hbs-secondary-text);
 }
 

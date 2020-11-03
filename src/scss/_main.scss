@@ -57,8 +57,13 @@ a {
 }
 
 a:hover,
-btn:hover {
-  color: var(--hbs-secondary);
+btn:hover,
+.btn:hover {
+  color: var(--hbs-accent);
+}
+
+code {
+  color: var(--hbs-accent);
 }
 
 h1,

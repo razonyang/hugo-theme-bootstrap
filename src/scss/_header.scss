@@ -20,6 +20,10 @@
   color: var(--hbs-primary-text);
 }
 
+.nav-link.active {
+  color: var(--hbs-accent);
+}
+
 .btn-search:focus {
   outline: none;
 }

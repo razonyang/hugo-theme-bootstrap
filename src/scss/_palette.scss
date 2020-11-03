@@ -3,6 +3,7 @@
   --hbs-primary-text: #{$white};
   --hbs-secondary: #{$blue-secondary};
   --hbs-secondary-text: #{$white};
+  --hbs-accent: #{$blue-accent};
 }
 
 [data-palette="blue"] {
@@ -14,6 +15,7 @@
   --hbs-primary-text: #{$white};
   --hbs-secondary: #{$blue-gray-secondary};
   --hbs-secondary-text: #{$white};
+  --hbs-accent: #{$blue-gray-accent};
 }
 
 [data-palette="blue-gray"] {
@@ -25,6 +27,7 @@
   --hbs-primary-text: #{$white};
   --hbs-secondary: #{$brown-secondary};
   --hbs-secondary-secondary: #{$white};
+  --hbs-accent: #{$brown-accent};
 }
 
 [data-palette="brown"] {
@@ -36,6 +39,7 @@
   --hbs-primary-text: #{$white};
   --hbs-secondary: #{$cyan-secondary};
   --hbs-secondary-text: #{$white};
+  --hbs-accent: #{$cyan-accent};
 }
 
 [data-palette="cyan"] {
@@ -47,6 +51,7 @@
   --hbs-primary-text: #{$white};
   --hbs-secondary: #{$gray-secondary};
   --hbs-secondary-text: #{$white};
+  --hbs-accent: #{$gray-accent};
 }
 
 [data-palette="gray"] {
@@ -58,6 +63,7 @@
   --hbs-primary-text: #{$white};
   --hbs-secondary: #{$green-secondary};
   --hbs-secondary-text: #{$white};
+  --hbs-accent: #{$green-accent};
 }
 
 [data-palette="green"] {
@@ -69,6 +75,7 @@
   --hbs-primary-text: #{$white};
   --hbs-secondary: #{$indigo-secondary};
   --hbs-secondary-text: #{$white};
+  --hbs-accent: #{$indigo-accent};
 }
 
 [data-palette="indigo"] {
@@ -80,6 +87,7 @@
   --hbs-primary-text: #{$white};
   --hbs-secondary: #{$orange-secondary};
   --hbs-secondary-text: #{$white};
+  --hbs-accent: #{$orange-accent};
 }
 
 [data-palette="orange"] {
@@ -91,6 +99,7 @@
   --hbs-primary-text: #{$white};
   --hbs-secondary: #{$pink-secondary};
   --hbs-secondary-text: #{$white};
+  --hbs-accent: #{$pink-accent};
 }
 
 [data-palette="pink"] {
@@ -102,6 +111,7 @@
   --hbs-primary-text: #{$white};
   --hbs-secondary: #{$purple-secondary};
   --hbs-secondary-text: #{$white};
+  --hbs-accent: #{$purple-accent};
 }
 
 [data-palette="purple"] {
@@ -113,6 +123,7 @@
   --hbs-primary-text: #{$white};
   --hbs-secondary: #{$red-secondary};
   --hbs-secondary-text: #{$white};
+  --hbs-accent: #{$red-accent};
 }
 
 [data-palette="red"] {
@@ -124,6 +135,7 @@
   --hbs-primary-text: #{$white};
   --hbs-secondary: #{$teal-secondary};
   --hbs-secondary-text: #{$white};
+  --hbs-accent: #{$teal-accent};
 }
 
 [data-palette="teal"] {
@@ -135,6 +147,7 @@
   --hbs-primary-text: #{$white};
   --hbs-secondary: #{$yellow-secondary};
   --hbs-secondary-text: #{$white};
+  --hbs-accent: #{$yellow-accent};
 }
 
 [data-palette="yellow"] {

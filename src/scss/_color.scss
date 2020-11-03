@@ -1,41 +1,54 @@
-$blue-primary: #{$blue-900};
-$blue-secondary: #{$blue-600};
+$blue-primary: #3F51B5;
+$blue-secondary: #5C6BC0;
+$blue-accent: #FFC107;
 
-$blue-gray-primary: #{$blue-gray-900};
-$blue-gray-secondary: #{$blue-gray-600};
+$blue-gray-primary: #14274e;
+$blue-gray-secondary: #394867;
+$blue-gray-accent: #EF5350;
 
-$brown-primary: #{$brown-900};
-$brown-secondary: #{$brown-600};
+$brown-primary: #795548;
+$brown-secondary: #A1887F;
+$brown-accent: #FFCA28;
 
 $cyan-primary: #{$cyan-900};
 $cyan-secondary: #{$cyan-600};
+$cyan-accent: #EF5350;
 
-$gray-primary: #{$gray-900};
-$gray-secondary: #{$gray-600};
+$gray-primary: #37474F;
+$gray-secondary: #607D8B;
+$gray-accent: #F06292;
 
-$green-primary: #{$green-900};
-$green-secondary: #{$green-600};
+$green-primary: #4CAF50;
+$green-secondary: #66BB6A;
+$green-accent: #FFC107;
 
-$indigo-primary: #{$indigo-900};
-$indigo-secondary: #{$indigo-600};
+$indigo-primary: #{$cyan-800};
+$indigo-secondary: #{$cyan-600};
+$indigo-accent: #FFC107;
 
-$orange-primary: #{$orange-900};
-$orange-secondary: #{$orange-600};
+$orange-primary: #FF9800;
+$orange-secondary: #FFB74D;
+$orange-accent: #29B6F6;
 
-$pink-primary: #{$pink-900};
-$pink-secondary: #{$pink-600};
+$pink-primary: #{$pink-700};
+$pink-secondary: #{$pink-500};
+$pink-accent: #42A5F5;
 
-$purple-primary: #{$purple-900};
-$purple-secondary: #{$purple-600};
+$purple-primary: #673AB7;
+$purple-secondary: #9575CD;
+$purple-accent: #FFCA28;
 
-$red-primary: #{$red-900};
-$red-secondary: #{$red-600};
+$red-primary: #F44336;
+$red-secondary: #FF5252;
+$red-accent: #FFA726;
 
-$teal-primary: #{$teal-900};
+$teal-primary: #{$teal-800};
 $teal-secondary: #{$teal-600};
+$teal-accent: #FF8A65;
 
-$yellow-primary: #{$yellow-900};
-$yellow-secondary: #{$yellow-600};
+$yellow-primary: #FFC107;
+$yellow-secondary: #FFD54F;
+$yellow-accent: #4FC3F7;
 
 /* Background Colors */
 
