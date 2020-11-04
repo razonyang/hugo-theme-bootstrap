@@ -117,9 +117,10 @@ As the example site shown, the configuration are separated into multiple files, 
 | `search.fuse.distance` | Integer | - |
 | `search.fuse.useExtendedSearch` | Boolean | - |
 | **Webmaster Site Verification** 
-| `googleSiteVerification` | String | - | Google Webmaster Tool.
-| `bingSiteVerification` | String | - | Bing Webmaster Tool.
-| `baiduSiteVerification` | String | - | Baidu Webmaster Tool.
+| `siteVerification` | Map | - |
+| `siteVerification.google` | String | - | Google Webmaster Tool.
+| `siteVerification.bing` | String | - | Bing Webmaster Tool.
+| `siteVerification.baidu` | String | - | Baidu Webmaster Tool.
 | **Analytics** 
 | `googleAnalytics` | String | - | Google Analytics.
 | `baiduAnalytics` | String | - | Bing Analytics.

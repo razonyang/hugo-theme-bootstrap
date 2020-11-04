@@ -14,10 +14,6 @@ palette = "blue-gray" # Default palette. Optional.
 
 # fullWidth = true # Full width.
 
-[archive]
-  paginate = 5 # Archive pagination. Default to 100.
-  # dateFormat = "01-02" # Archive date format. Default to "Jan 2".
-
 # dateFormat = "Jan 2, 2006"
 
 # Google Adsense
@@ -25,11 +21,6 @@ googleAdsense = ""
 
 # Baidu Analytics
 baiduAnalytics = ""
-
-# Site verification
-googleSiteVerification = ""
-bingSiteVerification = ""
-baiduSiteVerification = ""
 
 # math = true # Enable math globally.
 
@@ -47,6 +38,16 @@ customJS = [
   "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/js/solid.js",
   "js/custom.js"
 ]
+
+[archive]
+  paginate = 5 # Archive pagination. Default to 100.
+  # dateFormat = "01-02" # Archive date format. Default to "Jan 2".
+
+# Site verification
+[siteVerification]
+  google = ""
+  bing = ""
+  baidu = ""
 
 [utterances]
   #repo = "razonyang/hugo-theme-bootstrap"
