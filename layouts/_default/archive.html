@@ -1,5 +1,6 @@
 {{ define "content" }}
-{{- $paginator := .Paginate $.Site.RegularPages.ByDate.Reverse (default 100 .Site.Params.archivePaginate) -}}
+{{- $pages := where .Site.RegularPages "Type" "in" (default (slice "posts") .Site.Params.mainSections) -}}
+{{- $paginator := .Paginate $pages.ByDate.Reverse (default 100 .Site.Params.archivePaginate) -}}
 <div class="container">
   <div class="archives">
     <h1>{{ T "archives" }}</h1>
@@ -21,6 +22,7 @@
 {{ end }}
 
 {{ define "title" }}
-{{- $paginator := .Paginate $.Site.RegularPages.ByDate.Reverse (default 100 .Site.Params.archivePaginate) -}}
+{{- $pages := where .Site.RegularPages "Type" "in" (default (slice "posts") .Site.Params.mainSections) -}}
+{{- $paginator := .Paginate $pages.ByDate.Reverse (default 100 .Site.Params.archivePaginate) -}}
 {{- partial "head/title" . -}}
 {{ end }}

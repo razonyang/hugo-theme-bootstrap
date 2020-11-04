@@ -1,4 +1,4 @@
-mainSections = ["post", "posts"]
+# mainSections = ["post", "posts"] # Default to ["posts"].
 
 author = "Razon Yang"
 # titleSeparator = "|" # Title separator. Default to "-".

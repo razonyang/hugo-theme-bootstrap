@@ -1,6 +1,6 @@
 {{- $pages := .RegularPages -}}
 {{- if .IsHome -}}
-  {{- $pages = where site.RegularPages "Type" "in" site.Params.mainSections -}}
+  {{- $pages = where .Site.RegularPages "Type" "in" (default (slice "posts") .Site.Params.mainSections) -}}
 {{- else -}}
 {{- partial "breadcrumb" . -}}
 <h1 class="pb-3 mb-3 border-bottom">{{ .Title }}</h1>
