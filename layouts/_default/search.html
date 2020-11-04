@@ -1,4 +1,25 @@
 {{ define "head-end" }}
+{{- $titleKey := dict "name" "title" "weight" 0.8 -}}
+{{- $contentKey := dict "name" "content" "weight" 0.5 -}}
+{{- $tagsKey := dict "name" "tags" "weight" 0.3 -}}
+{{- $categoriesKey := dict "name" "categories" "weight" 0.3 -}}
+{{- $keys := slice $titleKey $contentKey $tagsKey $categoriesKey -}}
+{{- $options := dict "ignoreLocation" true "keys" $keys -}}
+{{- $optionWhitelist := slice "ignoreLocation" "isCaseSensitive" "minMatchCharLength" "threshold" "distance" "useExtendedSearch" -}}
+{{- with .Site.Params.search.fuse -}}
+  {{- range $key, $value := . -}}
+    {{- range $optionWhitelist -}}
+      {{- if eq $key (lower .) -}}
+        {{- $options = merge $options (dict . $value) -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+<script>
+  var searchResultContentWordCount = parseInt('{{ default 240 .Site.Params.search.resultContentWordCount }}')
+  var fuseOptions = JSON.parse('{{ $options | jsonify | safeHTML }}')
+  console.log(fuseOptions)
+</script>
 {{- $script := resources.Get "js/search.js" | resources.Fingerprint -}}
 <script src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>
 {{ end }}
@@ -17,13 +38,12 @@
   </div>
   <div id="searchResults" class="search-results"></div>
 </div>
-
-<div id="searchResultTemplate" class="d-none">
+<script type="text/html" id="searchResultTemplate">
   <div class="search-result">
     <h2 class="search-result-title">
       <a {{ printf "href={{permalink}}" | safeHTMLAttr }}>{{ print "{{title}}" }}</a>
     </h2>
     <div class="search-result-content">{{ print "{{{content}}}" }}</div>
   </div>
-</div>
+</script>
 {{ end }}

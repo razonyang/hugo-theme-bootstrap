@@ -12,6 +12,7 @@ This theme is a responsive, multiple palettes and feature-rich blog theme for Hu
   - [Global Parameters](global-parameters)
   - [Page Parameters](page-parameters)
 - [Comments](#comments)
+- Search
 - [Hooks](#hooks)
 - [Social Links](#social-links).
 - [Various Shortcodes](#shortcodes).
@@ -20,9 +21,9 @@ This theme is a responsive, multiple palettes and feature-rich blog theme for Hu
 ## Features
 
 - Built on top of [Bootstrap 5](https://v5.getbootstrap.com/).
-- [Highly Configurable](#configuration).
 - Responsive.
 - [Various Palettes](#palettes).
+- [Highly Configurable](#configuration).
 - Dark Mode Switcher.
 - Multilingual(I18N).
 - Search.
@@ -102,6 +103,17 @@ As the example site shown, the configuration are separated into multiple files, 
 | `fullWidth` | Boolean | `false` | Full width.
 | `archivePaginate` | Integer | `100` | Archive pagination.
 | `archiveDateFormat` | Integer | `Jan 2` | Archive date format.
+| **Search**
+| `search` | Map | - | Search configuration.
+| `search.resultContentWordCount` | Integer | `240` | The maximum word count of result content for displaying.
+| `search.fuse` | Map | - | [Fuse.js options](https://fusejs.io/api/options.html).
+| `search.fuse.ignoreLocation` | Boolean | `true` |
+| `search.fuse.location` | Integer | - |
+| `search.fuse.isCaseSensitive` | Boolean | - |
+| `search.fuse.minMatchCharLength` | Integer | - |
+| `search.fuse.threshold` | Double | - |
+| `search.fuse.distance` | Integer | - |
+| `search.fuse.useExtendedSearch` | Boolean | - |
 | **Webmaster Site Verification** 
 | `googleSiteVerification` | String | - | Google Webmaster Tool.
 | `bingSiteVerification` | String | - | Bing Webmaster Tool.

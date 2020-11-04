@@ -23,17 +23,6 @@ function initSearch() {
   }
 }
 
-var contentWordCount = 240
-var fuseOptions = {
-  ignoreLocation: true,
-  keys: [
-    { name:"title", weight:0.8 },
-    { name:"content", weight:0.5 },
-    { name:"tags", weight:0.3 },
-    { name:"categories", weight:0.3 }
-  ]
-}
-
 function search(query) {
   var xhr = new XMLHttpRequest()
   xhr.onreadystatechange = function() {
@@ -57,8 +46,8 @@ function search(query) {
 function populateResults(results){
   searchResults.innerHTML = ''
   results.forEach(function(result) {
-    if (result.item.content.length > contentWordCount) {
-      result.item.content = result.item.content.substring(0, contentWordCount) + "..."
+    if (result.item.content.length > searchResultContentWordCount) {
+      result.item.content = result.item.content.substring(0, searchResultContentWordCount) + "..."
     }
     searchResults.insertAdjacentHTML('beforeend', Mustache.render(searchResultTemplate, result.item))
   })
