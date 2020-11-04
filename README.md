@@ -86,6 +86,7 @@ As the example site shown, the configuration are separated into multiple files, 
 | `tagCount` | Integer | `10` | The number of tags shown in sidebar.
 | `fullWidth` | Boolean | `false` | Full width.
 | `archivePaginate` | Integer | `100` | Archive pagination.
+| `archiveDateFormat` | Integer | `Jan 2` | Archive date format.
 | **Webmaster Site Verification** 
 | `googleSiteVerification` | String | - | Google Webmaster Tool.
 | `bingSiteVerification` | String | - | Bing Webmaster Tool.
