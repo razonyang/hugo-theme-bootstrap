@@ -1,5 +1,5 @@
 baseURL = "https://example.com"
-title = "Hugo Bootstrap Theme"
+title = "Hugo Bootstrap"
 theme = "hugo-theme-bootstrap"
 copyright = "Copyright © 2016-{year} Razon Yang. All Rights Reserved."
 
