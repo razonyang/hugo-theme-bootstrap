@@ -2,20 +2,10 @@
 
 This theme is a responsive, multiple palettes and feature-rich blog theme for Hugo.
 
-## Palettes
-
-Available palettes: `blue`, `blue-gray`, `brown`, `cyan`, `gray`, `green`, `indigo`, `orange`, `pink`, `purple`, `red`, `teal`, `yellow`.
-
-![Palettes](https://github.com/razonyang/hugo-theme-bootstrap/blob/master/images/palettes.png)
-
-### Palettes in Dark Mode
-
-![Palettes in Dark Mode](https://github.com/razonyang/hugo-theme-bootstrap/blob/master/images/palettes-dark.png)
-
 ## Table of Contents
 
-- [Palettes](#palettes)
 - [Features](#features)
+- [Palettes](#palettes)
 - [Installation](#installation)
 - [Configuration](#configuration)
 - [Parameters](#parameters)
@@ -44,6 +34,16 @@ Available palettes: `blue`, `blue-gray`, `brown`, `cyan`, `gray`, `green`, `indi
 - [Hooks](#hooks): provides ability to add custom code in page, such as `head`, `body`, `sidebar` etc.
 - [Social Links](#social-links).
 - [Various Shortcodes](#shortcodes).
+
+## Palettes
+
+Available palettes: `blue`, `blue-gray`, `brown`, `cyan`, `gray`, `green`, `indigo`, `orange`, `pink`, `purple`, `red`, `teal`, `yellow`.
+
+![Palettes](https://github.com/razonyang/hugo-theme-bootstrap/blob/master/images/palettes.png)
+
+### Palettes in Dark Mode
+
+![Palettes in Dark Mode](https://github.com/razonyang/hugo-theme-bootstrap/blob/master/images/palettes-dark.png)
 
 ## Installation
 
@@ -115,7 +115,7 @@ As the example site shown, the configuration are separated into multiple files, 
 | `customJS` | Array | - | Custom JS.
 | `utterances` | Map | - | [Utterances](#utterances) configuration.
 
-> Except the Google webmaster tool, the other webmaster tools cannot work with `hugo-minify`, because they cannot recognize the minified meta tag.
+> Except the Google webmaster tool, the other webmaster tools cannot work with `hugo --minify`, because they cannot recognize the minified meta tag.
 
 ### Page Parameters
 
