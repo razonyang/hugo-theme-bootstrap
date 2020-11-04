@@ -1,4 +1,5 @@
 name = "Razon Yang"
+# avatar = "images/profile.png" # Avatar image.
 bio = "Gopher, PHPer, Full Stack Engineer."
 company = "Null"
 location = "Earth"

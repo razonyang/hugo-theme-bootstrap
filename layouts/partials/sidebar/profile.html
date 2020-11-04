@@ -2,7 +2,7 @@
 <section class="profile">
   <div class="row g-3">
     <div class="col-md-4 d-flex align-items-center">
-      <img class="profile-avatar img-fluid" src="{{ absURL "images/profile.png" }}" alt="{{ .name }}">
+      <img class="profile-avatar img-fluid" src="{{ absURL (default "images/profile.png" .avatar) }}" alt="{{ .name }}">
     </div>
     <div class="col-md-8">
       <h5 class="profile-name">{{ .name }}</h5>
