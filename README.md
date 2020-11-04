@@ -73,8 +73,8 @@ As the example site shown, the configuration are separated into multiple files, 
 | `enableRobotsTXT` | Boolean | `true` |
 | `disqusShortname` | String | - | [Disqus](#disqus) shortname.
 | `googleAnalytics` | String | - | Google Analytics.
-| `social` | Map | - | A set of [social links](#social-links) that mapping from platform to user identifier.
-| `author` | Map | - | Profile information. Available parameters: `name`, `avatar`, `bio`, `company` and `location`.
+| `social` | Object | - | A set of [social links](#social-links) that mapping from platform to user identifier.
+| `author` | Object | - | Profile information. Available parameters: `name`, `avatar`, `bio`, `company` and `location`.
 
 ## Parameters
 
@@ -86,7 +86,7 @@ As the example site shown, the configuration are separated into multiple files, 
 | `mainSections` | Array | `["posts"]` | Main sections
 | `titleSeparator` | String | `-` | Title separator
 | `comment` | Boolean | `true` | Whether to enable comments
-| `utterances` | Map | - | Utterances comments
+| `utterances` | Object | - | Utterances comments
 | `dateFormat` | String | `Jan 2, 2006` | Date format. Checkout the [Hugo Date and Time Templating Reference](https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference) for details.
 | `poweredBy` | Boolean | `true` | Whether to show powered by.
 | `math` | Boolean | `false` | Whether to enable math globally.
@@ -102,13 +102,13 @@ As the example site shown, the configuration are separated into multiple files, 
 | `tagCount` | Integer | `10` | The number of tags shown in sidebar.
 | `fullWidth` | Boolean | `false` | Full width.
 | **Archive**
-| `archive` | Map | - | Archive configuration.
+| `archive` | Object | - | Archive configuration.
 | `archive.paginate` | Integer | `100` | Archive pagination.
 | `archive.dateFormat` | Integer | `Jan 2` | Archive date format.
 | **Search**
-| `search` | Map | - | Search configuration.
+| `search` | Object | - | Search configuration.
 | `search.resultContentWordCount` | Integer | `240` | The maximum word count of result content for displaying.
-| `search.fuse` | Map | - | [Fuse.js options](https://fusejs.io/api/options.html).
+| `search.fuse` | Object | - | [Fuse.js options](https://fusejs.io/api/options.html).
 | `search.fuse.ignoreLocation` | Boolean | `true` |
 | `search.fuse.location` | Integer | - |
 | `search.fuse.isCaseSensitive` | Boolean | - |
@@ -117,7 +117,7 @@ As the example site shown, the configuration are separated into multiple files, 
 | `search.fuse.distance` | Integer | - |
 | `search.fuse.useExtendedSearch` | Boolean | - |
 | **Webmaster Site Verification** 
-| `siteVerification` | Map | - |
+| `siteVerification` | Object | - |
 | `siteVerification.google` | String | - | Google Webmaster Tool.
 | `siteVerification.bing` | String | - | Bing Webmaster Tool.
 | `siteVerification.baidu` | String | - | Baidu Webmaster Tool.
@@ -128,7 +128,7 @@ As the example site shown, the configuration are separated into multiple files, 
 | `googleAdsense` | String | - | Google Adsense.
 | `customCSS` | Array | - | Custom CSS.
 | `customJS` | Array | - | Custom JS.
-| `utterances` | Map | - | [Utterances](#utterances) configuration.
+| `utterances` | Object | - | [Utterances](#utterances) configuration.
 | `utterances.repo` | String | - | Github repository.
 | `utterances.issueTerm` | String | `pathname` | `pathname`, `url`, `title`, `og:title`.
 | `utterances.label` | String | - | 
