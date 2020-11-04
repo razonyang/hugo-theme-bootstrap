@@ -79,6 +79,7 @@ As the example site shown, the configuration are separated into multiple files, 
 | `brand` | String | - | Brand text.
 | `description` | String | - | Site description.
 | `palette` | String | - | Default palette.
+| `palettes` | Array | **ALL** | Available palettes.
 | `featuredPostCount` | Integer | `5` | The number of featured posts shown in sidebar.
 | `recentPostCount` | Integer | `5` | The number of recent posts shown in sidebar.
 | `relatedPostCount` | Integer | `5` | The number of related posts.
