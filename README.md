@@ -2,6 +2,14 @@
 
 This theme is a clean, responsive and feature-rich blog theme for Hugo.
 
+**Palettes**
+
+![Palettes](https://github.com/razonyang/hugo-theme-bootstrap/blob/master/images/palettes.png)
+
+**Palettes in Dark Mode**
+
+![Palettes in Dark Mode](https://github.com/razonyang/hugo-theme-bootstrap/blob/master/images/palettes-dark.png)
+
 ## Table of Contents
 
 - [Features](#features)
