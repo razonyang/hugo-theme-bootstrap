@@ -1,0 +1,21 @@
+{{- with .Site.Author -}}
+<section class="profile">
+  <div class="row g-3">
+    <div class="col-md-4 d-flex align-items-center">
+      <img class="profile-avatar img-fluid" src="{{ absURL "images/profile.png" }}" alt="{{ .name }}">
+    </div>
+    <div class="col-md-8">
+      <h5 class="profile-name">{{ .name }}</h5>
+      {{- with .bio -}}
+      <p class="bio">{{ . }}</p>
+      {{- end -}}
+      {{- with .company -}}
+      <p class="location"><i class="fas fa-fw fa-building"></i> {{ . }}</p>
+      {{- end -}}
+      {{- with .location -}}
+      <p class="location"><i class="fas fa-fw fa-map-marker-alt"></i> {{ . }}</p>
+      {{- end -}}
+    </div>
+  </div>
+</section>
+{{- end -}}
