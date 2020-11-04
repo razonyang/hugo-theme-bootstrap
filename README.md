@@ -12,7 +12,6 @@ This theme is a responsive, multiple palettes and feature-rich blog theme for Hu
   - [Global Parameters](global-parameters)
   - [Page Parameters](page-parameters)
 - [Comments](#comments)
-- Search
 - [Hooks](#hooks)
 - [Social Links](#social-links).
 - [Various Shortcodes](#shortcodes).
