@@ -186,7 +186,7 @@ $ echo "SIDEBAR BEGIN" > layouts/partials/hooks/sidebar-begin.html
 | `youku`| Youku video player | `{{< youku "video ID" >}}`
 | `iqiyi`| iQiyi video player | `{{< iqiyi "vid" "tvid" >}}`
 | `tencentvideo`| Tencent video player | `{{< tencentvideo "video ID" >}}`
-| `cloudmusic`| Cloud music player | `{{< cloudmusic "song ID" >}}`
+| `neteasemusic`| Netease music player | `{{< neteasemusic "song ID" >}}`
 
 ## Social Links
 

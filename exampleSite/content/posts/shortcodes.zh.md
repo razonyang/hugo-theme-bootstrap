@@ -11,7 +11,7 @@ tags = [
     "JSFiddle",
     "CodePen",
     "JSRun",
-    "Cloud Music",
+    "Netease Music",
     "Bilibili",
     "Youku",
     "Tencent Video",
@@ -22,7 +22,7 @@ images = [
 ]
 +++
 
-除了 Hugo 内置的 Shortcodes 外，该主题提供了一些额外的有用的 Shortcodes，比如 `alert`、`jsfiddle`、`codepen`、`jsrun`、`cloudmusic`、`bilibili`、`youku`、`tencentvideo`、`iqiyi`。
+除了 Hugo 内置的 Shortcodes 外，该主题提供了一些额外的有用的 Shortcodes，比如 `alert`、`jsfiddle`、`codepen`、`jsrun`、`neteasemusic`、`bilibili`、`youku`、`tencentvideo`、`iqiyi`。
 <!--more-->
 
 ## 警告
@@ -96,13 +96,13 @@ images = [
 ### 网易云音乐播放器
 
 ```markdown
-{{</* cloudmusic "id" [auto [type]] */>}}
+{{</* neteasemusic "id" [auto [type]] */>}}
 ```
 
 - 参数 `auto`控制是否自动播放，布尔值，可选， 默认为 `true`。
 - 参数 `type` 可选，默认为 `2`.
 
-{{< cloudmusic "24953439" false >}}
+{{< neteasemusic "24953439" false >}}
 
 ### 哔哩哔哩视频播放器
 

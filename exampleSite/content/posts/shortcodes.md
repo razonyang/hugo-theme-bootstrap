@@ -11,7 +11,7 @@ tags = [
     "JSFiddle",
     "CodePen",
     "JSRun",
-    "Cloud Music",
+    "Netease Music",
     "Bilibili",
     "Youku",
     "Tencent Video",
@@ -22,7 +22,7 @@ images = [
 ]
 +++
 
-In addition to Hugo's built-in shortcodes, this theme provides some extra useful shortcodes. Such as `alert`, `jsfiddle`, `codepen`, `jsrun`, `cloudmusic`, `bilibili`, `youku`, `tencentvideo`, `iqiyi`.
+In addition to Hugo's built-in shortcodes, this theme provides some extra useful shortcodes. Such as `alert`, `jsfiddle`, `codepen`, `jsrun`, `neteasemusic`, `bilibili`, `youku`, `tencentvideo`, `iqiyi`.
 <!--more-->
 
 ## Alert
@@ -93,16 +93,16 @@ In addition to Hugo's built-in shortcodes, this theme provides some extra useful
 
 ## Media Player
 
-### Cloud Music Player
+### Netease Music Player
 
 ```markdown
-{{</* cloudmusic "id" [auto [type]] */>}}
+{{</* neteasemusic "id" [auto [type]] */>}}
 ```
 
 - The `auto` controls whether to autoplay. Boolean and optional, default to `true`.
 - The `type` parameter is optional. Default to `2`.
 
-{{< cloudmusic "24953439" false >}}
+{{< neteasemusic "24953439" false >}}
 
 ### Bilibili Video Player
 
