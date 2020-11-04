@@ -1,6 +1,6 @@
 {{ define "content" }}
 {{- $pages := where .Site.RegularPages "Type" "in" (default (slice "posts") .Site.Params.mainSections) -}}
-{{- $paginator := .Paginate $pages.ByDate.Reverse (default 100 .Site.Params.archivePaginate) -}}
+{{- $paginator := .Paginate $pages.ByDate.Reverse (default 100 .Site.Params.archive.paginate) -}}
 <div class="container">
   <div class="archives">
     <h1>{{ T "archives" }}</h1>
@@ -13,7 +13,7 @@
     {{- end -}}
     <li>
       <a class="archive-post-title" href="{{ .Permalink }}">{{ .Title }}</a>
-      <span class="float-right archive-post-date">{{ .Date.Format (default "Jan 2" $.Site.Params.archiveDateFormat) }}</span>
+      <span class="float-right archive-post-date">{{ .Date.Format (default "Jan 2" $.Site.Params.archive.dateFormat) }}</span>
     </li>
     {{- end -}}
   </div>
@@ -23,6 +23,6 @@
 
 {{ define "title" }}
 {{- $pages := where .Site.RegularPages "Type" "in" (default (slice "posts") .Site.Params.mainSections) -}}
-{{- $paginator := .Paginate $pages.ByDate.Reverse (default 100 .Site.Params.archivePaginate) -}}
+{{- $paginator := .Paginate $pages.ByDate.Reverse (default 100 .Site.Params.archive.paginate) -}}
 {{- partial "head/title" . -}}
 {{ end }}

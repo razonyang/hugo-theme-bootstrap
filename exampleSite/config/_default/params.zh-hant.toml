@@ -1,3 +1,4 @@
 dateFormat = "2006-01-02"
 description = "一個簡潔、響應式和功能豐富的 Hugo 博客主題"
-archiveDateFormat = "01-02"
+[archive]
+  dateFormat = "01-02"

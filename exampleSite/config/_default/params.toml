@@ -14,8 +14,9 @@ palette = "blue-gray" # Default palette. Optional.
 
 # fullWidth = true # Full width.
 
-archivePaginate = 5 # Archive pagination. Default to 100.
-# archiveDateFormat = "01-02" # Archive date format. Default to "Jan 2".
+[archive]
+  paginate = 5 # Archive pagination. Default to 100.
+  # dateFormat = "01-02" # Archive date format. Default to "Jan 2".
 
 # dateFormat = "Jan 2, 2006"
 

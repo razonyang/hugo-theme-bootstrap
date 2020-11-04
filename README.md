@@ -101,8 +101,10 @@ As the example site shown, the configuration are separated into multiple files, 
 | `categoryCount` | Integer | `10` | The number of categories shown in sidebar.
 | `tagCount` | Integer | `10` | The number of tags shown in sidebar.
 | `fullWidth` | Boolean | `false` | Full width.
-| `archivePaginate` | Integer | `100` | Archive pagination.
-| `archiveDateFormat` | Integer | `Jan 2` | Archive date format.
+| **Archive**
+| `archive` | Map | - | Archive configuration.
+| `archive.paginate` | Integer | `100` | Archive pagination.
+| `archive.dateFormat` | Integer | `Jan 2` | Archive date format.
 | **Search**
 | `search` | Map | - | Search configuration.
 | `search.resultContentWordCount` | Integer | `240` | The maximum word count of result content for displaying.
