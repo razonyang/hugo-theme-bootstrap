@@ -128,6 +128,10 @@ As the example site shown, the configuration are separated into multiple files, 
 | `customCSS` | Array | - | Custom CSS.
 | `customJS` | Array | - | Custom JS.
 | `utterances` | Map | - | [Utterances](#utterances) configuration.
+| `utterances.repo` | String | - | Github repository.
+| `utterances.issueTerm` | String | `pathname` | `pathname`, `url`, `title`, `og:title`.
+| `utterances.label` | String | - | 
+| `utterances.theme` | String | `github-light` | `github-light`, `github-dark`, `preferred-color-scheme`, `github-dark-orange`, `icy-dark`, `dark-blue`, `photon-dark`.
 
 > Except the Google webmaster tool, the other webmaster tools cannot work with `hugo --minify`, because they cannot recognize the minified meta tag.
 
