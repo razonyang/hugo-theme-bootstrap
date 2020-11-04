@@ -62,16 +62,20 @@
   margin-bottom: 1rem;
 }
 
-.post-nav {
+.post-navs {
   display: flex;
   margin-bottom: 1rem;
   justify-content: space-between;
 }
 
+.post-nav {
+  width: 50%;
+  display: flex;
+}
+
 .prev-post,
 .next-post {
   display: flex;
-  width: 50%;
   align-items: center;
 }
 
