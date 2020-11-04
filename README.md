@@ -1,6 +1,6 @@
 # Hugo Bootstrap Theme
 
-This theme is a clean, responsive and feature-rich blog theme for Hugo.
+This theme is a responsive, multiple palettes and feature-rich blog theme for Hugo.
 
 ## Palettes
 
