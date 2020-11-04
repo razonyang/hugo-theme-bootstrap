@@ -61,6 +61,7 @@ As the example site shown, the configuration are separated into multiple files, 
 | `disqusShortname` | String | - | [Disqus](#disqus) shortname.
 | `googleAnalytics` | String | - | Google Analytics.
 | `social` | Map | - | A set of [social links](#social-links) that mapping from platform to user identifier.
+| `author` | Map | - | Profile information. Available parameters: `name`, `avatar`, `bio`, `company` and `location`.
 
 ## Parameters
 
