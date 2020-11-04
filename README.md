@@ -2,16 +2,19 @@
 
 This theme is a clean, responsive and feature-rich blog theme for Hugo.
 
-**Palettes**
+## Palettes
+
+Available palettes: `blue`, `blue-gray`, `brown`, `cyan`, `gray`, `green`, `indigo`, `orange`, `pink`, `purple`, `red`, `teal`, `yellow`.
 
 ![Palettes](https://github.com/razonyang/hugo-theme-bootstrap/blob/master/images/palettes.png)
 
-**Palettes in Dark Mode**
+### Palettes in Dark Mode
 
 ![Palettes in Dark Mode](https://github.com/razonyang/hugo-theme-bootstrap/blob/master/images/palettes-dark.png)
 
 ## Table of Contents
 
+- [Palettes](#palettes)
 - [Features](#features)
 - [Installation](#installation)
 - [Configuration](#configuration)
@@ -29,7 +32,7 @@ This theme is a clean, responsive and feature-rich blog theme for Hugo.
 - Built on top of [Bootstrap 5](https://v5.getbootstrap.com/).
 - [Highly Configurable](#configuration).
 - Responsive.
-- Various Palettes: `blue`, `blue-gray`, `brown`, `cyan`, `gray`, `green`, `indigo`, `orange`, `pink`, `purple`, `red`, `teal`, `yellow`.
+- [Various Palettes](#palettes).
 - Dark Mode Switcher.
 - Multilingual(I18N).
 - Search.
