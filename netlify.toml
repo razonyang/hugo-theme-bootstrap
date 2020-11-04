@@ -1,6 +1,6 @@
 [build]
-publish = "public"
-command = "hugo"
+publish = "exampleSite/public"
+command = "cd exampleSite && hugo --themesDir=../../ --theme=repo"
 
 [context.production.environment]
 HUGO_VERSION = "0.76.0"
