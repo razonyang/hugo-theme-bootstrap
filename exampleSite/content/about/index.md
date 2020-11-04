@@ -6,7 +6,7 @@ aliases = ["about-us", "about-hugo", "contact"]
 author = "Hugo Authors"
 [menu.main]
   weight = 50
-  pre = '<i class="fas fa-fw fa-info-circle"></i> '
+  # pre = '<i class="fas fa-fw fa-info-circle"></i> '
   url = "about"
 +++
 

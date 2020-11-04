@@ -5,4 +5,4 @@
   parent = "dropdown"
   name = "外部链接"
   url = "https://github.com/razonyang/hugo-theme-bootstrap"
-  pre = '<i class="fas fa-fw fa-external-link-alt"></i> '
+  # pre = '<i class="fas fa-fw fa-external-link-alt"></i> '
