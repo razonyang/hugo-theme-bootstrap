@@ -21,6 +21,7 @@ This theme is a responsive, multiple palettes and feature-rich blog theme for Hu
 
 - Built on top of [Bootstrap 5](https://v5.getbootstrap.com/).
 - Responsive.
+- Fast: [Page Speed](https://developers.google.com/speed/pagespeed/insights/) score `90 - 100`.
 - [Various Palettes](#palettes).
 - [Highly Configurable](#configuration).
 - Dark Mode Switcher.
@@ -34,6 +35,7 @@ This theme is a responsive, multiple palettes and feature-rich blog theme for Hu
 - [Hooks](#hooks): provides ability to add custom code in page, such as `head`, `body`, `sidebar` etc.
 - [Social Links](#social-links).
 - [Various Shortcodes](#shortcodes).
+- [Twitter Cards](https://gohugo.io/templates/internal/#configure-twitter-cards) and [Open Graph](https://gohugo.io/templates/internal/#configure-open-graph).
 
 ## Palettes
 
