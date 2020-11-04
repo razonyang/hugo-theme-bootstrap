@@ -1,0 +1,5 @@
+<li class="nav-item ml-1 mr-2">
+  {{ with .OutputFormats.Get "rss" -}}
+  <a class="nav-link" href="{{ .Permalink }}"><i class="fas fa-fw fa-rss"></i></a>
+  {{ end -}}
+</li>
