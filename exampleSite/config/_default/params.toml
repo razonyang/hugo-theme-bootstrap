@@ -12,7 +12,7 @@ brand = "BOOTSTRAP"
 palette = "blue-gray" # Default palette. Optional.
 # palettes = ["blue", "blue gray", "brown", "gray"] # Available palettes. Default to ALL.
 
-fullWidth = true # Full width.
+# fullWidth = true # Full width.
 
 archivePaginate = 5 # Archive pagination. Default to 100.
 # archiveDateFormat = "01-02" # Archive date format. Default to "Jan 2".
