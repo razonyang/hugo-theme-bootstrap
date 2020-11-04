@@ -9,9 +9,10 @@ RUN apt-get install -y hugo git
 WORKDIR /src
 COPY . /src
 RUN hugo version
-RUN cd /src/exampleSite && hugo --themesDir=../../ --theme=src -e=demo
+COPY /src/docker/config /src/exampleSite/config/docker
+RUN cd /src/exampleSite && hugo --themesDir=../../ --theme=src -e=docker
 
 # Final stage
 FROM nginx
 COPY --from=builder /src/exampleSite/public /app
-COPY conf/nginx.conf /etc/nginx/conf.d/default.conf
+COPY docker/nginx/nginx.conf /etc/nginx/conf.d/default.conf
