@@ -2,8 +2,9 @@
   google = "iF5jegS65j-LFo7ic25V4H-_arhkrZ7Yam6urRfAVs0"
   bing = "39EB413CB3B9BA2FB6935744287A7780"
   baidu = "code-GePJajbzuF"
-baiduAnalytics = "d21d16b072fcae3af7b977f061737783"
-#googleAdsense = "ca-pub-7827859788508375"
+
+[analytics]
+  baidu = "d21d16b072fcae3af7b977f061737783"
 
 [utterances]
-repo = "razonyang/hugo-theme-bootstrap"
+  repo = "razonyang/hugo-theme-bootstrap"

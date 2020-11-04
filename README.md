@@ -122,8 +122,8 @@ As the example site shown, the configuration are separated into multiple files, 
 | `siteVerification.bing` | String | - | Bing Webmaster Tool.
 | `siteVerification.baidu` | String | - | Baidu Webmaster Tool.
 | **Analytics** 
-| `googleAnalytics` | String | - | Google Analytics.
-| `baiduAnalytics` | String | - | Bing Analytics.
+| `analytics` | Object | - | Analytics configuration.
+| `analytics.baidu` | String | - | Bing Analytics.
 | **Others** 
 | `googleAdsense` | String | - | Google Adsense.
 | `customCSS` | Array | - | Custom CSS.
