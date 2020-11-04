@@ -7,13 +7,13 @@
     <div class="col-md-8">
       <h5 class="profile-name">{{ .name }}</h5>
       {{- with .bio -}}
-      <p class="bio">{{ . }}</p>
+      <div class="profile-bio">{{ . }}</div>
       {{- end -}}
       {{- with .company -}}
-      <p class="company"><i class="fas fa-fw fa-building"></i> {{ . }}</p>
+      <div class="profile-company"><i class="fas fa-fw fa-building"></i> {{ . }}</div>
       {{- end -}}
       {{- with .location -}}
-      <p class="location"><i class="fas fa-fw fa-map-marker-alt"></i> {{ . }}</p>
+      <div class="profile-location"><i class="fas fa-fw fa-map-marker-alt"></i> {{ . }}</div>
       {{- end -}}
     </div>
   </div>
