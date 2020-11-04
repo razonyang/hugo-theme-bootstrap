@@ -19,7 +19,7 @@ This theme is a clean, responsive and feature-rich blog theme for Hugo.
 ## Features
 
 - Built on top of [Bootstrap 5](https://v5.getbootstrap.com/).
-- Configurable.
+- [Highly Configurable](#configuration).
 - Responsive.
 - Various Palettes: `blue`, `blue-gray`, `brown`, `cyan`, `gray`, `green`, `indigo`, `orange`, `pink`, `purple`, `red`, `teal`, `yellow`.
 - Dark Mode Switcher.
@@ -27,6 +27,7 @@ This theme is a clean, responsive and feature-rich blog theme for Hugo.
 - Search.
 - Breadcrumb.
 - Archive.
+- Lazy Loading Resources, such as `image` and `iframe`.
 - Table of Contents.
 - [Comments](#comments): supports [Disqus](#disqus) and [Utterances](#utterances).
 - [Hooks](#hooks): provides ability to add custom code in page, such as `head`, `body`, `sidebar` etc.
