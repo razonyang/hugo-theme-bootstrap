@@ -1,7 +1,9 @@
 <footer class="footer">
   <div class="container{{ if default false .Site.Params.fullWidth }}-fluid{{ end }}">
+    {{- partial "hooks/footer-begin" . -}}
     {{- partial "footer/social-links" . -}}
     {{- partial "footer/copyright" . -}}
     {{- partial "footer/powered-by" . -}}
+    {{- partial "hooks/footer-end" . -}}
   </div>
 </footer>
