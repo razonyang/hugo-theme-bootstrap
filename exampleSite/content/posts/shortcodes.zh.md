@@ -18,7 +18,6 @@ tags = [
     "iQIYI"
 ]
 images = [
-  "images/shortcode.png"
 ]
 +++
 
