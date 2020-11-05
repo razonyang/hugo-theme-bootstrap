@@ -1,7 +1,7 @@
 import { library, dom } from '@fortawesome/fontawesome-svg-core'
 import {
   faCalendarAlt, faChevronCircleUp, faEnvelope, faFolder, faLanguage, faMoon, faPalette, faSearch, faSun, faTag,
-  faBuilding, faMapMarkerAlt, faBars, faRss,
+  faBuilding, faMapMarkerAlt, faBars, faRss, faLink,
 } from '@fortawesome/free-solid-svg-icons'
 import {
   faFacebook, faGithub, faGitlab, faInstagram, faLinkedin, faQuora, faStackOverflow, faTwitter, faWeibo, faZhihu,
@@ -10,7 +10,7 @@ import {
 
 library.add(
   faCalendarAlt, faChevronCircleUp, faEnvelope, faFolder, faLanguage, faMoon, faPalette, faSearch, faSun, faTag,
-  faBuilding, faMapMarkerAlt, faBars, faRss,
+  faBuilding, faMapMarkerAlt, faBars, faRss, faLink,
 )
 library.add(
   faFacebook, faGithub, faGitlab, faInstagram, faLinkedin, faQuora, faStackOverflow, faTwitter, faWeibo, faZhihu,
