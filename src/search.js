@@ -2,9 +2,10 @@ import Fuse from "fuse.js"
 import Mustache from "mustache"
 import Mark from "mark.js"
 
-var searchResults, searchResultTemplate
+var searchResults, searchResultTemplate, searchStat
 
 document.addEventListener('DOMContentLoaded', function() {
+  searchStat = document.getElementById('searchStat')
   searchResults = document.getElementById('searchResults')
   searchResultTemplate = document.getElementById('searchResultTemplate').innerHTML
   initSearch()
@@ -20,7 +21,7 @@ function initSearch() {
     })
     search(searchQuery)
   } else {
-    searchResults.innerHTML = '<p class="text-muted">Please enter search keywords.</p>'
+    searchStat.innerHTML = document.getElementById('missingSearchKeywordsTemplate').innerHTML
   }
 }
 
@@ -35,7 +36,7 @@ function search(query) {
       if(results.length > 0){
         populateResults(results)
       }else{
-        searchResults.innerHTML = '<p class="text-muted">No results</p>'
+        searchStat.innerHTML = document.getElementById('noSearchResultsTemplate').innerHTML
       }
     }
   }
@@ -53,6 +54,7 @@ function populateResults(results){
   searchResults.innerHTML = ''
   var titleKeywords = new Array()
   var contentKeywords = new Array()
+  searchStat.innerHTML = Mustache.render(document.getElementById('searchStatTemplate').innerHTML, { total: results.length })
   results.forEach(function(result) {
     if (result.item.content.length > searchResultContentWordCount) {
       result.item.content = result.item.content.substring(0, searchResultContentWordCount) + "..."

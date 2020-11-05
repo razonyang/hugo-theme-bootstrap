@@ -58,5 +58,14 @@ other = "Related Posts"
 [search]
 other = "Search"
 
+[search_missing_keywords]
+other = "Please enter search keywords"
+
+[search_no_results]
+other = "No results found"
+
+[search_stat]
+other = "Found {{ .Total }} results"
+
 [tags]
 other = "Tags"
