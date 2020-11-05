@@ -13,6 +13,7 @@
     "file-loader": "^6.1.1",
     "fuse.js": "^6.4.1",
     "katex": "^0.12.0",
+    "mark.js": "^8.11.1",
     "mini-css-extract-plugin": "^1.2.0",
     "mustache": "^4.0.1",
     "node-sass": "^5.0.0",

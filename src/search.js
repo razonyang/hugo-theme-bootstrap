@@ -1,5 +1,6 @@
 import Fuse from "fuse.js"
 import Mustache from "mustache"
+import Mark from "mark.js"
 
 var searchResults, searchResultTemplate
 
@@ -30,7 +31,7 @@ function search(query) {
       var pages = xhr.response
       var fuse = new Fuse(pages, fuseOptions)
       var results = fuse.search(query)
-      console.log({results: results})
+      console.log(results)
       if(results.length > 0){
         populateResults(results)
       }else{
@@ -43,12 +44,36 @@ function search(query) {
   xhr.send(null)
 }
 
+var highlightOptions = {
+  element: 'span',
+  className: 'search-keyword'
+}
+
 function populateResults(results){
   searchResults.innerHTML = ''
+  var titleKeywords = new Array()
+  var contentKeywords = new Array()
   results.forEach(function(result) {
     if (result.item.content.length > searchResultContentWordCount) {
       result.item.content = result.item.content.substring(0, searchResultContentWordCount) + "..."
     }
+    result.matches.forEach(function(match) {
+      match.indices.forEach(function(index) {
+        let keyword = match.value.substring(index[0], index[1] + 1)
+        switch (match.key) {
+          case 'title':
+            titleKeywords.push(keyword)
+            break;
+          case 'content':
+            contentKeywords.push(keyword)
+            break;
+        }
+      })
+    })
     searchResults.insertAdjacentHTML('beforeend', Mustache.render(searchResultTemplate, result.item))
   })
+  let titleHighlighter = new Mark(document.querySelectorAll('.search-result-title'));
+  titleHighlighter.mark(titleKeywords, highlightOptions);
+  let contentHighlighter = new Mark(document.querySelectorAll('.search-result-content'));
+  contentHighlighter.mark(contentKeywords, highlightOptions);
 }

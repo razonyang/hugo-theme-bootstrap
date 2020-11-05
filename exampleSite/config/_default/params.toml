@@ -63,6 +63,6 @@ customJS = [
     # location = 0
     # isCaseSensitive = false
     # minMatchCharLength = 1
-    # threshold = 0.6
+    threshold = 0.1
     # distance = 100
     # useExtendedSearch = true

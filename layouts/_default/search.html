@@ -4,7 +4,7 @@
 {{- $tagsKey := dict "name" "tags" "weight" 0.3 -}}
 {{- $categoriesKey := dict "name" "categories" "weight" 0.3 -}}
 {{- $keys := slice $titleKey $contentKey $tagsKey $categoriesKey -}}
-{{- $options := dict "ignoreLocation" true "keys" $keys -}}
+{{- $options := dict "ignoreLocation" true "includeMatches" true "keys" $keys -}}
 {{- $optionWhitelist := slice "ignoreLocation" "isCaseSensitive" "minMatchCharLength" "threshold" "distance" "useExtendedSearch" -}}
 {{- with .Site.Params.search.fuse -}}
   {{- range $key, $value := . -}}
