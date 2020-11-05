@@ -1,8 +1,0 @@
-[[main]]
-  name = "下拉菜單"
-  identifier = "dropdown"
-[[main]]
-  parent = "dropdown"
-  name = "外部鏈接"
-  url = "https://github.com/razonyang/hugo-theme-bootstrap"
-  # pre = '<i class="fas fa-fw fa-external-link-alt"></i> '

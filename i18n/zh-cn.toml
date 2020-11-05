@@ -1,0 +1,68 @@
+[archives]
+other = "归档"
+
+[categories]
+other = "分类"
+
+[color_blue]
+other = "蓝色"
+
+[color_blue_gray]
+other = "蓝灰色"
+
+[color_brown]
+other = "棕色"
+
+[color_cyan]
+other = "青色"
+
+[color_gray]
+other = "灰色"
+
+[color_green]
+other = "绿色"
+
+[color_indigo]
+other = "靛青色"
+
+[color_orange]
+other = "橙色"
+
+[color_pink]
+other = "粉色"
+
+[color_purple]
+other = "紫色"
+
+[color_red]
+other = "红色"
+
+[color_teal]
+other = "蓝绿色"
+
+[color_yellow]
+other = "黄色"
+
+[featured_posts]
+other = "精选文章"
+
+[pagination_title]
+other = "第{{ .PageNumber }}页"
+
+[recent_posts]
+other = "最近文章"
+
+[related_posts]
+other = "相关文章"
+
+[search]
+other = "搜索"
+
+[search_missing_keywords]
+other = "请输入搜索关键词"
+
+[search_no_results]
+other = "找不到相关结果"
+
+[search_stat]
+other = "找到相关结果{{ .Total }}个"

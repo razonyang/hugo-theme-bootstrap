@@ -19,6 +19,7 @@
     "node-sass": "^5.0.0",
     "npm-run-all": "^4.1.5",
     "npm-watch": "^0.7.0",
+    "opencc": "^1.1.1",
     "popper.js": "^1.16.1",
     "postcss": "^8.1.4",
     "postcss-loader": "^4.0.4",
@@ -36,6 +37,7 @@
     "build": "npm-run-all --parallel build:css build:js",
     "build:css": "node-sass --output-style compressed src/scss/index.scss assets/scss/main.css",
     "build:js": "webpack",
+    "opencc": "node src/opencc.js",
     "watch": "watch 'npm run build' src"
   },
   "repository": {

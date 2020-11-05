@@ -50,7 +50,7 @@ other = "精選文章"
 other = "第{{ .PageNumber }}頁"
 
 [recent_posts]
-other = "最新文章"
+other = "最近文章"
 
 [related_posts]
 other = "相關文章"
@@ -66,6 +66,3 @@ other = "找不到相關結果"
 
 [search_stat]
 other = "找到相關結果{{ .Total }}個"
-
-[tags]
-other = "標籤"

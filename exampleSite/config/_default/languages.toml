@@ -1,11 +1,11 @@
 [en]
   LanguageName = "English"
-  weight = 1
+  Weight = 1
 
-[zh]
+[zh-cn]
   LanguageName = "简体中文"
-  weight = 2
+  Weight = 2
 
-[zh-hant]
+[zh-tw]
   LanguageName = "繁體中文"
-  weight = 3
+  Weight = 3
