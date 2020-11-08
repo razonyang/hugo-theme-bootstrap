@@ -1,10 +1,10 @@
 {{- with .Site.Author -}}
 <section class="profile">
   <div class="row g-2">
-    <div class="col-md-5 d-flex align-items-center">
+    <div class="col-lg-5 d-flex align-items-center">
       <img class="profile-avatar img-fluid" src="{{ absURL (default "images/profile.png" .avatar) }}" alt="{{ .name }}" loading="lazy">
     </div>
-    <div class="col-md-7">
+    <div class="col-lg-7">
       <h5 class="profile-name my-2">{{ .name }}</h5>
       {{- with .bio -}}
       <div class="profile-bio mb-2">{{ . }}</div>
