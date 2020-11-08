@@ -5,9 +5,9 @@
   </a>
 </li>
 <script type="text/html" id="languagesPopoverBody">
-  <ul class="list-group">
+  <ul class="languages list-group">
     {{- range $.Site.Home.AllTranslations -}}
-    <li class="list-group-item{{ if eq $.Lang .Language.Lang }} active{{ end }}">
+    <li class="language list-group-item{{ if eq $.Lang .Language.Lang }} active{{ end }}">
       <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
     </li>
     {{- end -}}

@@ -24,9 +24,16 @@
   color: var(--hbs-accent);
 }
 
-#languageSwitcher .popover-body,
-#paletteSwitcher .popover-body {
-  padding: .5rem;
+.language.active,
+.language:active,
+.language:focus,
+.language:hover {
+  background-color: var(--hbs-secondary);
+  color: var(--hbs-secondary-text);
+
+  a {
+    color: #{$white};
+  }
 }
 
 .dropdown-item.active,
