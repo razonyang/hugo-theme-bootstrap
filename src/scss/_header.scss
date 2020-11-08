@@ -24,25 +24,6 @@
   color: var(--hbs-accent);
 }
 
-.btn-search:focus {
-  outline: none;
-}
-
-.search-dropdown-menu {
-  width: 240px;
-}
-
-.search-form {
-  display: flex;
-  margin: 0 .25rem;
-}
-
-.btn-search {
-  background-color: var(--hbs-secondary);
-  border-color: var(--hbs-secondary);
-  color: var(--hbs-secondary-text);
-}
-
 #languageSwitcher .popover-body,
 #paletteSwitcher .popover-body {
   padding: .5rem;

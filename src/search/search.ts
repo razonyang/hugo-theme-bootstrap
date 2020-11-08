@@ -145,6 +145,7 @@ export class Search {
         title: result.item.title,
         content,
         id,
+        permalink: result.item.permalink,
       }));
       instance.highlight(id, titleKeywords, contentKeywords);
     });

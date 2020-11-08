@@ -1,31 +1,3 @@
-.post {
-  display: flex;
-  margin-bottom: 1rem;
-}
-
-.post-title {
-  margin-bottom: .5rem;
-}
-
-.post-meta {
-  margin-bottom: .5rem;
-}
-
-.post-date {
-  margin-right: .25rem;
-}
-
-.post-translations {
-  display: inline-flex;
-  margin-right: .25rem;
-}
-
-.post-thumbnail {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .post-taxonomy {
   background-color: var(--hbs-secondary);
   color: var(--hbs-secondary-text);
@@ -58,16 +30,6 @@
   margin-bottom: 0;
 }
 
-.post-content {
-  margin-bottom: 1rem;
-}
-
-.post-navs {
-  display: flex;
-  margin-bottom: 1rem;
-  justify-content: space-between;
-}
-
 .post-nav {
   width: 50%;
   display: flex;
@@ -96,10 +58,6 @@
 
 .next-post:before {
   content: "\00a0>";
-}
-
-.post-comments {
-  padding-top: 1rem;
 }
 
 .post-comments .utterances {

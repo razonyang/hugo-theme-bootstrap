@@ -19,7 +19,7 @@ This theme is a responsive, multiple palettes and feature-rich blog theme for Hu
 
 ## Features
 
-- Built on top of [Bootstrap 5](https://v5.getbootstrap.com/).
+- Built on top of [Material Design for Bootstrap 5](https://mdbootstrap.com/).
 - Responsive.
 - Fast: [Page Speed](https://developers.google.com/speed/pagespeed/insights/) score `90 - 100`.
 - [Various Palettes](#palettes).

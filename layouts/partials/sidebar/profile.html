@@ -1,19 +1,19 @@
 {{- with .Site.Author -}}
 <section class="profile">
-  <div class="row g-3">
-    <div class="col-md-4 d-flex align-items-center">
+  <div class="row g-2">
+    <div class="col-md-5 d-flex align-items-center">
       <img class="profile-avatar img-fluid" src="{{ absURL (default "images/profile.png" .avatar) }}" alt="{{ .name }}" loading="lazy">
     </div>
-    <div class="col-md-8">
-      <h5 class="profile-name">{{ .name }}</h5>
+    <div class="col-md-7">
+      <h5 class="profile-name my-2">{{ .name }}</h5>
       {{- with .bio -}}
-      <div class="profile-bio">{{ . }}</div>
+      <div class="profile-bio mb-2">{{ . }}</div>
       {{- end -}}
       {{- with .company -}}
-      <div class="profile-company"><i class="fas fa-fw fa-building"></i> {{ . }}</div>
+      <div class="profile-company mb-2"><i class="fas fa-fw fa-building"></i> {{ . }}</div>
       {{- end -}}
       {{- with .location -}}
-      <div class="profile-location"><i class="fas fa-fw fa-map-marker-alt"></i> {{ . }}</div>
+      <div class="profile-location mb-2"><i class="fas fa-fw fa-map-marker-alt"></i> {{ . }}</div>
       {{- end -}}
     </div>
   </div>

@@ -1,4 +1,4 @@
-import { Popover as BSPopover } from 'bootstrap';
+import { Popover as BSPopover } from 'mdb-ui-kit';
 
 class Popover {
   protected instance: BSPopover;

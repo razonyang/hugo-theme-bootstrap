@@ -2,19 +2,30 @@
 {{- $pages := where .Site.RegularPages "Type" "in" (default (slice "posts") .Site.Params.mainSections) -}}
 {{- $paginator := .Paginate $pages.ByDate.Reverse (default 100 .Site.Params.archive.paginate) -}}
 <div class="container">
-  <div class="archives">
-    <h1>{{ T "archives" }}</h1>
-    <hr>
+  <h1>{{ T "archives" }}</h1>
+  <div class="archives mb-4">
+    {{- $count := len $paginator.Pages -}}
+    {{- $lastYear := 0 -}}
     {{- range $idx, $post := $paginator.Pages -}}
     {{- $currentYear := $post.Date.Format "2006" }}
     {{- $lastPost := $idx | add -1 | index $paginator.Pages -}}
     {{- if or (eq $idx 0) (ne ($lastPost.Date.Format "2006") $currentYear) -}}
+    {{- if and (ne $lastYear 0) (ne $lastYear $currentYear) -}}
+    {{/* Different years, close the previous ul tag */}}
+    {{ printf "</ul>" | safeHTML }}
+    {{- end -}}
     <h3 class="archive-title">{{ $currentYear }}</h3>
+    <ul class="archive-posts">
     {{- end -}}
     <li>
       <a class="archive-post-title" href="{{ .Permalink }}">{{ .Title }}</a>
       <span class="float-right archive-post-date">{{ .Date.Format (default "Jan 2" $.Site.Params.archive.dateFormat) }}</span>
     </li>
+    {{- if eq $idx (sub $count 1) -}}
+    {{/* Last item, close current ul tag */}}
+    </ul>
+    {{- end -}}
+    {{- $lastYear = $currentYear }}
     {{- end -}}
   </div>
   {{- template "_internal/pagination.html" . -}}

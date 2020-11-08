@@ -1,6 +1,6 @@
 {{- if or .Prev .Next -}}
-<div class="post-navs">
-  <div class="post-nav">
+<div class="post-navs d-flex mb-3 justify-content-between">
+  <div class="post-nav w-50">
   {{- with .Prev -}}
     <div class="prev-post">
       <a href="{{ .Permalink }}">{{ .Title }}</a>

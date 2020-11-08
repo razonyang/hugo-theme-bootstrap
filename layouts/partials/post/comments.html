@@ -1,6 +1,6 @@
 {{- if and (default true .Site.Params.comment) (default true .Params.comment) -}}
 {{- partial "hooks/comments-begin" . -}}
-<div class="post-comments">
+<div class="post-comments mb-2">
 {{- partial "post/comments/disqus.html" . -}}
 {{- partial "post/comments/utterances" . -}}
 </div>

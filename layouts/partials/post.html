@@ -1,8 +1,8 @@
-<article class="post row">
-  <h1 class="post-title">{{ .Title }}</h1>
+<article class="post row mb-2">
+  <h1 class="post-title mb-3">{{ .Title }}</h1>
   {{- partial "post/meta" . -}}
   {{- partial "hooks/content-begin" . -}}
-  <div class="post-content">
+  <div class="post-content mb-3">
     {{- partial "post/toc" . -}}
     {{- .Content -}}
   </div>
