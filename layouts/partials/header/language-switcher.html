@@ -7,8 +7,13 @@
 <script type="text/html" id="languagesPopoverBody">
   <ul class="languages list-group">
     {{- range $.Site.Home.AllTranslations -}}
-    <li class="language list-group-item{{ if eq $.Lang .Language.Lang }} active{{ end }}">
+    {{- $active := eq $.Lang .Language.Lang -}}
+    <li class="language list-group-item{{ if $active }} active{{ end }}">
+      {{- if not $active }}
       <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
+      {{- else -}}
+      {{ .Language.LanguageName }}
+      {{- end -}}
     </li>
     {{- end -}}
   </ul>
