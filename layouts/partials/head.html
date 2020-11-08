@@ -4,13 +4,13 @@
 {{ template "_internal/opengraph.html" . }}
 {{- template "_internal/twitter_cards.html" . -}}
 {{- partial "head/feed" . -}}
-{{- partial "head/google-analytics" . -}}
 {{- partial "head/site-verification" . -}}
-{{- partial "head/baidu-analytics" . -}}
-{{- partial "head/google-adsense" . -}}
 <meta data-name="search-index" content="{{ absLangURL "index.json" }}">
 {{- with .Site.Params.palette -}}
 <meta data-name="palette" content="{{ . }}">
 {{- end -}}
 {{- partial "head/assets" . -}}
+{{- partial "head/google-analytics" . -}}
+{{- partial "head/baidu-analytics" . -}}
+{{- partial "head/google-adsense" . -}}
 {{- partial "head/custom" . -}}
