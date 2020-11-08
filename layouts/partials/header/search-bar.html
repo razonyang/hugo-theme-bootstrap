@@ -1,0 +1,5 @@
+{{- if ne .Permalink (absLangURL "search/") -}}
+<form class="search-bar d-flex mr-2" action="{{ absLangURL "search" }}">
+  <input class="form-control border-right-0" id="searchQuery" name="q" type="search" placeholder="{{ i18n "search" }}" aria-label="Search">
+</form>
+{{- end -}}
