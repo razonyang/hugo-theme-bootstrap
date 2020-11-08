@@ -61,4 +61,9 @@
   </li>
   {{- end -}}
 {{- end -}}
+  {{- with .OutputFormats.Get "rss" -}}
+  <li class="nav-item">
+    <a class="nav-link" target="_blank" href="{{ .Permalink }}"><i class="fas fa-fw fa-2x fa-rss"></i></a>
+  </li>
+  {{- end -}}
 </nav>

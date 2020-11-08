@@ -16,9 +16,8 @@
   {{- end -}}
 {{- end -}}
 <script>
-  var searchResultContentWordCount = parseInt('{{ default 240 .Site.Params.search.resultContentWordCount }}')
-  var fuseOptions = JSON.parse('{{ $options | jsonify | safeHTML }}')
-  console.log(fuseOptions)
+  var searchResultContentWordCount = parseInt('{{ default 240 .Site.Params.search.resultContentWordCount }}');
+  window.fuseOptions = JSON.parse('{{ $options | jsonify | safeHTML }}');
 </script>
 {{- $script := resources.Get "js/search.js" | resources.Fingerprint -}}
 <script src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>
@@ -26,34 +25,30 @@
 
 {{ define "content" }}
 <div class="search container">
-  <div class="row">
-    <div class="col-md-6">
-      <form class="search-form" action="{{ absLangURL "search" }}">
-        <div class="input-group">
-          <input class="form-control border-right-0" id="searchQuery" name="q" type="search" placeholder="{{ i18n "search" }}" aria-label="Search">
-          <button class="btn-search input-group-text" type="submit"><i class="fas fa-fw fa-search"></i></button>
-        </div>
-      </form>
+  <form id="searchForm" class="search-form">
+    <div class="input-group">
+      <input class="form-control border-right-0" name="q" type="search" placeholder="{{ i18n "search" }}" aria-label="Search">
+      <button class="btn-search input-group-text" type="submit"><i class="fas fa-fw fa-search"></i></button>
     </div>
-  </div>
+  </form>
   <div id="searchStat" class="search-stat"></div>
   <div id="searchResults" class="search-results"></div>
 </div>
-<script type="text/html" id="searchResultTemplate">
-  <div class="search-result">
+<script type="text/html" id="templateResult">
+  <div class="search-result" id="{{ print "{{id}}" }}">
     <h2 class="search-result-title">
       <a {{ printf "href={{permalink}}" | safeHTMLAttr }}>{{ print "{{title}}" }}</a>
     </h2>
     <div class="search-result-content">{{ print "{{{content}}}" }}</div>
   </div>
 </script>
-<script type="text/html" id="missingSearchKeywordsTemplate">
+<script type="text/html" id="templateMissingKeywords">
   {{ i18n "search_missing_keywords" }}
 </script>
-<script type="text/html" id="noSearchResultsTemplate">
+<script type="text/html" id="templateNoResults">
   {{ i18n "search_no_results" }}
 </script>
-<script type="text/html" id="searchStatTemplate">
+<script type="text/html" id="templateStat">
   {{ i18n "search_stat" (dict "Total" "{{total}}") }}
 </script>
 {{ end }}

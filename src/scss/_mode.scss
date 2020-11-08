@@ -1,0 +1,17 @@
+@mixin mode-light {
+  --hbs-bg-color:#{$white};
+  --hbs-color: var(--bs-dark);
+}
+
+@mixin mode-dark {
+  --hbs-bg-color:var(--hbs-primary);
+  --hbs-color: #{$white};
+}
+
+[data-mode="light"] {
+  @include mode-light;
+}
+
+[data-mode="dark"] {
+  @include mode-dark;
+}

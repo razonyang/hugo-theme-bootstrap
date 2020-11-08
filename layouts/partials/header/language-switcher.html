@@ -1,10 +1,9 @@
 <li class="nav-item mr-2">
-  <a class="nav-link" tabindex="0" data-trigger="focus" data-container="#languageSwitcher" data-toggle="popover"
+  <a class="nav-link" tabindex="0" data-trigger="click" id="languageSwitcher" data-toggle="popover"
     data-placement="bottom" data-target="#languagesPopoverBody" data-html="true">
     <i class="fas fa-fw fa-language" ></i>
   </a>
 </li>
-<div id="languageSwitcher"></div>
 <script type="text/html" id="languagesPopoverBody">
   <ul class="list-group">
     {{- range $.Site.Home.AllTranslations -}}

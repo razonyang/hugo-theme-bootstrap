@@ -38,14 +38,11 @@
         {{- end -}}
         {{- end -}}
       </ul>
-      <ul class="navbar-nav ml-auto mr-auto">
-        {{- partial "header/search-form" . -}}
-      </ul>
       <ul class="navbar-nav ml-auto d-flex flex-row">
-        {{- partial "header/feed" . -}}
+        {{- partial "header/search-form" . -}}
         {{- partial "header/language-switcher" . -}}
         {{- partial "header/palette-switcher" . -}}
-        {{- partial "header/color-scheme-switcher" . -}}
+        {{- partial "header/mode-switcher" . -}}
       </ul>
     </div>
   </div>

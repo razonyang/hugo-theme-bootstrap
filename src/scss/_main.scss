@@ -1,43 +1,20 @@
-@mixin mode-light {
-  --hbs-bg-color:#{$white};
-  --hbs-color: var(--bs-dark);
-}
-
-@mixin mode-dark {
-  --hbs-bg-color:var(--hbs-primary);
-  --hbs-color: #{$white};
-}
-
 :root {
   @include mode-light;
-  --prefers-color-scheme: none;
-}
-
-:root:not([data-palette]) {
-  @include palette-blue-gray;
+  --mode: none;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --prefers-color-scheme: dark;
+    --mode: dark;
   }
 
-  :root:not([data-prefers-color-scheme]) {
+  :root:not([data-mode]) {
     @include mode-dark;
   }
 }
 
-[data-prefers-color-scheme="light"] {
-  @include mode-light;
-}
-
-[data-prefers-color-scheme="dark"] {
-  @include mode-dark;
-}
-
 html {
   position: relative;
-  scroll-behavior: smooth;
 }
 
 html, body {

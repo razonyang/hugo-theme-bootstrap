@@ -153,3 +153,8 @@
 [data-palette="yellow"] {
   @include palette-yellow;
 }
+
+.palette.active a:after {
+  content: "√";
+  padding-left: .25rem;
+}

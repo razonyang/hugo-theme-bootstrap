@@ -3,6 +3,6 @@
   identifier = "dropdown"
 [[main]]
   parent = "dropdown"
-  name = "External"
+  name = "Github"
   url = "https://github.com/razonyang/hugo-theme-bootstrap"
-  # pre = '<i class="fas fa-fw fa-external-link-alt"></i> '
+  pre = '<i class="fab fa-fw fa-github"></i> '

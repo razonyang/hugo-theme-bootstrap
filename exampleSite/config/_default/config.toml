@@ -5,7 +5,7 @@ copyright = "Copyright © 2016-{year} Razon Yang. All Rights Reserved."
 
 # Multilingual mode
 defaultContentLanguage = "en"
-# defaultContentLanguageInSubdir = true
+defaultContentLanguageInSubdir = true
 
 # Pagination
 paginate = 5

@@ -1,22 +1,33 @@
-import { library, dom } from '@fortawesome/fontawesome-svg-core'
+import { library, dom } from '@fortawesome/fontawesome-svg-core';
 import {
-  faCalendarAlt, faChevronCircleUp, faEnvelope, faFolder, faLanguage, faMoon, faPalette, faSearch, faSun, faTag,
+  faCalendarAlt, faChevronCircleUp, faEnvelope, faFolder, faLanguage,
+  faMoon, faPalette, faSearch, faSun, faTag,
   faBuilding, faMapMarkerAlt, faBars, faRss, faLink,
-} from '@fortawesome/free-solid-svg-icons'
+  faSkullCrossbones, faExclamationTriangle, faCheckCircle, faInfoCircle,
+} from '@fortawesome/free-solid-svg-icons';
 import {
-  faFacebook, faGithub, faGitlab, faInstagram, faLinkedin, faQuora, faStackOverflow, faTwitter, faWeibo, faZhihu,
+  faFacebook, faGithub, faGitlab, faInstagram, faLinkedin,
+  faQuora, faStackOverflow, faTwitter, faWeibo, faZhihu,
   faTumblr,
-} from '@fortawesome/free-brands-svg-icons'
+} from '@fortawesome/free-brands-svg-icons';
 
 library.add(
-  faCalendarAlt, faChevronCircleUp, faEnvelope, faFolder, faLanguage, faMoon, faPalette, faSearch, faSun, faTag,
+  faCalendarAlt, faChevronCircleUp, faEnvelope, faFolder, faLanguage,
+  faMoon, faPalette, faSearch, faSun, faTag,
   faBuilding, faMapMarkerAlt, faBars, faRss, faLink,
-)
-library.add(
-  faFacebook, faGithub, faGitlab, faInstagram, faLinkedin, faQuora, faStackOverflow, faTwitter, faWeibo, faZhihu,
-  faTumblr,
-)
+  faSkullCrossbones, faExclamationTriangle, faCheckCircle, faInfoCircle,
+);
 
-document.addEventListener('DOMContentLoaded', function() {
-  dom.watch()
-})
+library.add(
+  faFacebook, faGithub, faGitlab, faInstagram, faLinkedin,
+  faQuora, faStackOverflow, faTwitter, faWeibo, faZhihu,
+  faTumblr,
+);
+
+export function watch() {
+  dom.watch();
+}
+
+export function i2svg() {
+  dom.i2svg();
+}

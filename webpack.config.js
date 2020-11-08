@@ -1,20 +1,24 @@
 const path = require('path');
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 module.exports = {
   entry: {
-    main: './src/js/index.js',
-    search: ['./src/search.js', './src/search.scss'],
-    katex: ['./src/katex.js', './src/katex.scss'],
+    main: './src/js/index.ts',
+    search: ['./src/search/index.ts', './src/search/index.scss'],
+    katex: ['./src/katex/index.ts', './src/katex/index.scss'],
   },
   mode: 'production',
   output: {
     path: path.resolve(path.join(__dirname, 'assets', 'js')),
-    filename: '[name].js',
-    library: ['hbs', '[name]'],
-    libraryTarget: 'var'
+    filename: '[name].js'
   },
   module: {
     rules: [
+      {
+        test: /\.tsx?$/,
+        use: ['babel-loader', 'ts-loader'],
+        exclude: /node_modules/,
+      },
       {
         test: /\.(scss)$/,
         use: [
@@ -54,5 +58,11 @@ module.exports = {
         ],
       }
     ],
-  }
+  },
+  resolve: {
+    extensions: [ '.tsx', '.ts', '.js', 'jsx' ],
+  },
+  plugins: [
+    new ESLintPlugin()
+  ]
 };
