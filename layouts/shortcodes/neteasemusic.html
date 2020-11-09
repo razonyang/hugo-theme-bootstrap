@@ -1,5 +1,5 @@
 {{- $id := .Get 0 -}}
-{{- $auto := 1 -}}
+{{- $auto := 0 -}}
 {{- if isset .Params 1 -}}
   {{- $auto = cond (.Get 1) 1 0 -}}
 {{- end -}}
