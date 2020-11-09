@@ -5,7 +5,9 @@
 {{- template "_internal/twitter_cards.html" . -}}
 {{- partial "head/feed" . -}}
 {{- partial "head/site-verification" . -}}
+{{- if eq .Permalink (absLangURL "search/") -}}
 <meta data-name="search-index" content="{{ absLangURL "index.json" }}">
+{{- end -}}
 {{- with .Site.Params.palette -}}
 <meta data-name="palette" content="{{ . }}">
 {{- end -}}
