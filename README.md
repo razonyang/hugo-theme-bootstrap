@@ -13,6 +13,7 @@ This theme is a responsive, multiple palettes and feature-rich blog theme for Hu
   - [Page Parameters](page-parameters)
 - [Comments](#comments)
 - [Hooks](#hooks)
+- [Custom Assets](#custom-assets).
 - [Social Links](#social-links).
 - [Various Shortcodes](#shortcodes).
 - [Contribute](#contribute)
@@ -32,6 +33,7 @@ This theme is a responsive, multiple palettes and feature-rich blog theme for Hu
 - Lazy Loading Resources, such as `image` and `iframe`.
 - Table of Contents.
 - [Comments](#comments): supports [Disqus](#disqus) and [Utterances](#utterances).
+- [Custom Assets](#custom-assets): custom CSS and JS.
 - [Hooks](#hooks): provides ability to add custom code in page, such as `head`, `body`, `sidebar` etc.
 - [Social Links](#social-links).
 - [Various Shortcodes](#shortcodes).
@@ -127,8 +129,8 @@ As the example site shown, the configuration are separated into multiple files, 
 | `analytics.baidu` | String | - | Bing Analytics.
 | **Others** 
 | `googleAdsense` | String | - | Google Adsense.
-| `customCSS` | Array | - | Custom CSS.
-| `customJS` | Array | - | Custom JS.
+| `customCSS` | Array | - | Custom CSS. It is mainly used to import external CSS. See [Custom Assets](#custom-assets).
+| `customJS` | Array | - | Custom JS. It is mainly used to import external JS. See [Custom Assets](#custom-assets).
 | `utterances` | Object | - | [Utterances](#utterances) configuration.
 | `utterances.repo` | String | - | Github repository.
 | `utterances.issueTerm` | String | `pathname` | `pathname`, `url`, `title`, `og:title`.
@@ -171,6 +173,20 @@ Checkout the [Disqus](https://disqus.com/) website for details.
 
 > Unlike Disqus, Utterances is a parameter. You should put it under the `params`.
 
+## Custom Assets
+
+There are two ways to customize the internal and external assets.
+
+### Internal Assets
+
+This is the best way to customize the theme's CSS and JS. Just create the files `assets/css/custom.css` and `assets/js/custom.js`.
+These files will be bundled into one for reducing HTTP requests.
+
+### External Assets
+
+Any external CSS and JS resources can be imported by the parameters `customCSS` and `customJS`.
+
+> Both of `customCSS` and `customJS` can also import the internal assets. Just put the files into the `static` folder.
 ## Hooks
 
 Hooks are used for adding code on pages.
