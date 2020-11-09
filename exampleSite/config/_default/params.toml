@@ -6,7 +6,7 @@ author = "Razon Yang"
 description = "A responsive, multiple palettes and feature-rich blog theme for Hugo"
 # image = ["site-feature-image.jpg"]
 
-# logo = "images/logo.png" # Logo image.
+# logo = "images/logo.png" # Logo image. Default to "images/logo.webp".
 brand = "BOOTSTRAP"
 
 palette = "blue-gray" # Default palette. Optional.

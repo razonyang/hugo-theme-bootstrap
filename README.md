@@ -91,7 +91,7 @@ As the example site shown, the configuration are separated into multiple files, 
 | `dateFormat` | String | `Jan 2, 2006` | Date format. Checkout the [Hugo Date and Time Templating Reference](https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference) for details.
 | `poweredBy` | Boolean | `true` | Whether to show powered by.
 | `math` | Boolean | `false` | Whether to enable math globally.
-| `logo` | String | `images/logo.png` | Logo image.
+| `logo` | String | `images/logo.webp` | Logo image.
 | `brand` | String | - | Brand text.
 | `description` | String | - | Site description.
 | `palette` | String | - | Default palette.

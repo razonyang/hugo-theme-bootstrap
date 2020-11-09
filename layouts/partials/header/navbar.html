@@ -1,7 +1,7 @@
 <nav class="navbar fixed-top navbar-expand-md">
   <div class="container{{ if default false .Site.Params.fullWidth }}-fluid{{ end }}">
     <a class="navbar-brand" href="{{ absLangURL "" }}">
-      <img class="logo" alt="Logo" src="{{ absURL (default "images/logo.png" .Site.Params.logo) }}" loading="lazy">
+      <img class="logo" alt="Logo" src="{{ absURL (default "images/logo.webp" .Site.Params.logo) }}" loading="lazy">
       {{- with .Site.Params.brand -}}
       {{ . }}
       {{- end -}}
