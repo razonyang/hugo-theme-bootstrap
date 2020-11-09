@@ -1,6 +1,6 @@
 # Hugo Bootstrap Theme
 
-This theme is a responsive, multiple palettes and feature-rich blog theme for Hugo.
+This theme is an extreme fast, responsive and feature-rich blog theme for Hugo.
 
 ## Table of Contents
 
@@ -20,9 +20,9 @@ This theme is a responsive, multiple palettes and feature-rich blog theme for Hu
 
 ## Features
 
+- Extreme Fast: [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/?url=https://hbs.razonyang.com/en/)'s score `95-100`.
 - Built on top of [Material Design for Bootstrap 5](https://mdbootstrap.com/).
 - Responsive.
-- Fast: [Page Speed](https://developers.google.com/speed/pagespeed/insights/) score `90 - 100`.
 - [Various Palettes](#palettes).
 - [Highly Configurable](#configuration).
 - Dark Mode Switcher.
