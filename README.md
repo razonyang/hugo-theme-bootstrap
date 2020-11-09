@@ -95,6 +95,7 @@ As the example site shown, the configuration are separated into multiple files, 
 | `math` | Boolean | `false` | Whether to enable math globally.
 | `logo` | String | `images/logo.webp` | Logo image.
 | `brand` | String | - | Brand text.
+| `menusPosition` | String | `right` | Menus position: `right`, `left`, `center`. Default to `right`.
 | `description` | String | - | Site description.
 | `palette` | String | - | Default palette.
 | `palettes` | Array | **ALL** | Available palettes.

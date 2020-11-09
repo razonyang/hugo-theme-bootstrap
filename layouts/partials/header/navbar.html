@@ -1,3 +1,4 @@
+{{- $menusPositions := dict "right" "ml-auto" "left" "mr-auto" "center" "ml-auto mr-auto" -}}
 <nav class="navbar fixed-top navbar-expand-md">
   <div class="container{{ if default false .Site.Params.fullWidth }}-fluid{{ end }}">
     <a class="navbar-brand" href="{{ absLangURL "" }}">
@@ -10,10 +11,11 @@
       <span class="navbar-toggler-icon fas fa-fw fa-bars"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav mr-2 mb-2 mb-lg-0">
         {{- partial "header/search-bar" . -}}
       </ul>
-      <ul class="navbar-nav ml-auto mb-2 mb-lg-0 mr-2">
+      {{- $menusPosition := default "right" .Site.Params.menusPosition  -}}
+      <ul class="navbar-nav mb-2 mb-lg-0 mr-2 {{ index $menusPositions $menusPosition }}">
         {{- $currentPage := . -}}
         {{- range .Site.Menus.main -}}
         {{- $active := or (eq $currentPage.Permalink (absLangURL .URL)) ($currentPage.IsMenuCurrent "main" .) -}}

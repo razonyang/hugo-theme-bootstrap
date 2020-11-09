@@ -8,6 +8,7 @@ description = "An extreme fast, responsive and feature-rich blog theme for Hugo"
 
 # logo = "images/logo.png" # Logo image. Default to "images/logo.webp".
 brand = "BOOTSTRAP"
+# menusPosition = "left" # Menus position: right(default), left or center.
 
 palette = "blue-gray" # Default palette. Optional.
 # palettes = ["blue", "blue gray", "brown", "gray"] # Available palettes. Default to ALL.
