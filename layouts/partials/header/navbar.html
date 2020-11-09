@@ -12,6 +12,8 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
         {{- partial "header/search-bar" . -}}
+      </ul>
+      <ul class="navbar-nav ml-auto mb-2 mb-lg-0 mr-2">
         {{- $currentPage := . -}}
         {{- range .Site.Menus.main -}}
         {{- $active := or (eq $currentPage.Permalink (absLangURL .URL)) ($currentPage.IsMenuCurrent "main" .) -}}
@@ -39,7 +41,7 @@
         {{- end -}}
         {{- end -}}
       </ul>
-      <ul class="navbar-nav ml-auto d-flex flex-row">
+      <ul class="navbar-nav d-flex flex-row mb-2 mb-lg-0">
         {{- partial "header/language-switcher" . -}}
         {{- partial "header/palette-switcher" . -}}
         {{- partial "header/mode-switcher" . -}}
