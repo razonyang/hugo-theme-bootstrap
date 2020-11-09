@@ -6,7 +6,7 @@
 <h1 class="pb-3 mb-3 border-bottom">{{ .Title }}</h1>
 {{- end -}}
 <div class="container">
-  <div class="posts">
+  <div class="posts mb-4">
   {{- range (.Paginate $pages).Pages -}}
     <article class="post row">
       {{- if .Params.Images -}}
