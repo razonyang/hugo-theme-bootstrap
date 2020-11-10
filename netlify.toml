@@ -3,6 +3,6 @@ publish = "exampleSite/public"
 command = "cd exampleSite && hugo --minify --themesDir=../../ --theme=repo"
 
 [context.production.environment]
-HUGO_VERSION = "0.76.0"
+HUGO_VERSION = "0.78.0"
 HUGO_ENV = "production"
 HUGO_ENABLEGITINFO = "true"
