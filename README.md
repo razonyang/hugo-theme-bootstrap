@@ -21,7 +21,7 @@ This theme is an extreme fast, responsive and feature-rich blog theme for Hugo.
 ## Features
 
 - Extreme Fast: [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/?url=https://hbs.razonyang.com/en/)'s score `95-100`.
-- Built on top of [Material Design for Bootstrap 5](https://mdbootstrap.com/).
+- Built on top of [Bootstrap 5](https://v5.getbootstrap.com/).
 - Responsive.
 - [Various Palettes](#palettes).
 - [Highly Configurable](#configuration).

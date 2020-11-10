@@ -1,94 +1,50 @@
-// CORE FUNCTIONS
-@import './node_modules/mdb-ui-kit/src/scss/bootstrap/functions';
-@import './node_modules/mdb-ui-kit/src/scss/free/functions';
+/*!
+ * Bootstrap v5.0.0-alpha2 (https://getbootstrap.com/)
+ * Copyright 2011-2020 The Bootstrap Authors
+ * Copyright 2011-2020 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
 
-// CORE VARIABLES
-@import './node_modules/mdb-ui-kit/src/scss/free/variables';
-@import './node_modules/mdb-ui-kit/src/scss/bootstrap/variables';
+// scss-docs-start import-stack
+// Configuration
+@import "./node_modules/bootstrap/scss/functions";
+@import "./node_modules/bootstrap/scss/variables";
+@import "./node_modules/bootstrap/scss/mixins";
+@import "./node_modules/bootstrap/scss/utilities";
 
-// BOOTSTRAP CORE
-@import './node_modules/mdb-ui-kit/src/scss/bootstrap/mixins';
-@import './node_modules/mdb-ui-kit/src/scss/bootstrap/utilities';
-
-// BOOTSTRAP CORE COMPONENTS
-@import './node_modules/mdb-ui-kit/src/scss/bootstrap/root';
-@import './node_modules/mdb-ui-kit/src/scss/bootstrap/reboot';
-@import './node_modules/mdb-ui-kit/src/scss/bootstrap/type';
-@import './node_modules/mdb-ui-kit/src/scss/bootstrap/images';
-@import './node_modules/mdb-ui-kit/src/scss/bootstrap/containers';
-@import './node_modules/mdb-ui-kit/src/scss/bootstrap/grid';
-
-// BOOTSTRAP COMPONENTS
-@import './node_modules/mdb-ui-kit/src/scss/bootstrap/tables';
-@import './node_modules/mdb-ui-kit/src/scss/bootstrap/forms';
-@import './node_modules/mdb-ui-kit/src/scss/bootstrap/buttons';
-@import './node_modules/mdb-ui-kit/src/scss/bootstrap/transitions';
-@import './node_modules/mdb-ui-kit/src/scss/bootstrap/dropdown';
-// @import './node_modules/mdb-ui-kit/src/scss/bootstrap/button-group';
-@import './node_modules/mdb-ui-kit/src/scss/bootstrap/nav';
-@import './node_modules/mdb-ui-kit/src/scss/bootstrap/navbar';
-// @import './node_modules/mdb-ui-kit/src/scss/bootstrap/card';
-@import './node_modules/mdb-ui-kit/src/scss/bootstrap/breadcrumb';
-@import './node_modules/mdb-ui-kit/src/scss/bootstrap/pagination';
-@import './node_modules/mdb-ui-kit/src/scss/bootstrap/badge';
-@import './node_modules/mdb-ui-kit/src/scss/bootstrap/alert';
-// @import './node_modules/mdb-ui-kit/src/scss/bootstrap/progress';
-@import './node_modules/mdb-ui-kit/src/scss/bootstrap/list-group';
-// @import './node_modules/mdb-ui-kit/src/scss/bootstrap/close';
-// @import './node_modules/mdb-ui-kit/src/scss/bootstrap/toasts';
-// @import './node_modules/mdb-ui-kit/src/scss/bootstrap/modal';
-// @import './node_modules/mdb-ui-kit/src/scss/bootstrap/tooltip';
-@import './node_modules/mdb-ui-kit/src/scss/bootstrap/popover';
-// @import './node_modules/mdb-ui-kit/src/scss/bootstrap/carousel';
-// @import './node_modules/mdb-ui-kit/src/scss/bootstrap/spinners';
-// @import './node_modules/mdb-ui-kit/src/scss/bootstrap/tooltip';
+// Layout & components
+@import "./node_modules/bootstrap/scss/root";
+@import "./node_modules/bootstrap/scss/reboot";
+@import "./node_modules/bootstrap/scss/type";
+@import "./node_modules/bootstrap/scss/images";
+@import "./node_modules/bootstrap/scss/containers";
+@import "./node_modules/bootstrap/scss/grid";
+@import "./node_modules/bootstrap/scss/tables";
+@import "./node_modules/bootstrap/scss/forms";
+@import "./node_modules/bootstrap/scss/buttons";
+@import "./node_modules/bootstrap/scss/transitions";
+@import "./node_modules/bootstrap/scss/dropdown";
+// @import "./node_modules/bootstrap/scss/button-group";
+@import "./node_modules/bootstrap/scss/nav";
+@import "./node_modules/bootstrap/scss/navbar";
+// @import "./node_modules/bootstrap/scss/card";
+@import "./node_modules/bootstrap/scss/breadcrumb";
+@import "./node_modules/bootstrap/scss/pagination";
+@import "./node_modules/bootstrap/scss/badge";
+@import "./node_modules/bootstrap/scss/alert";
+// @import "./node_modules/bootstrap/scss/progress";
+@import "./node_modules/bootstrap/scss/list-group";
+// @import "./node_modules/bootstrap/scss/close";
+// @import "./node_modules/bootstrap/scss/toasts";
+// @import "./node_modules/bootstrap/scss/modal";
+// @import "./node_modules/bootstrap/scss/tooltip";
+@import "./node_modules/bootstrap/scss/popover";
+// @import "./node_modules/bootstrap/scss/carousel";
+// @import "./node_modules/bootstrap/scss/spinners";
 
 // Helpers
-@import './node_modules/mdb-ui-kit/src/scss/bootstrap/helpers';
+@import "./node_modules/bootstrap/scss/helpers";
 
 // Utilities
-@import './node_modules/mdb-ui-kit/src/scss/bootstrap/utilities/api';
-
-// MDB CORE
-@import './node_modules/mdb-ui-kit/src/scss/free/mixins';
-
-// MDB CORE COMPONENTS
-@import './node_modules/mdb-ui-kit/src/scss/free/root';
-@import './node_modules/mdb-ui-kit/src/scss/free/reboot';
-@import './node_modules/mdb-ui-kit/src/scss/free/type';
-@import './node_modules/mdb-ui-kit/src/scss/free/colors';
-@import './node_modules/mdb-ui-kit/src/scss/free/shadows';
-@import './node_modules/mdb-ui-kit/src/scss/free/flag';
-@import './node_modules/mdb-ui-kit/src/scss/free/images';
-
-// MDB FORMS
-@import './node_modules/mdb-ui-kit/src/scss/free/forms/form-control';
-// @import './node_modules/mdb-ui-kit/src/scss/free/forms/form-select';
-@import './node_modules/mdb-ui-kit/src/scss/free/forms/form-check';
-// @import './node_modules/mdb-ui-kit/src/scss/free/forms/form-file';
-@import './node_modules/mdb-ui-kit/src/scss/free/forms/input-group';
-// @import './node_modules/mdb-ui-kit/src/scss/free/forms/validation';
-// @import './node_modules/mdb-ui-kit/src/scss/free/forms/form-range';
-
-// MDB COMPONENTS
-@import './node_modules/mdb-ui-kit/src/scss/free/tables';
-@import './node_modules/mdb-ui-kit/src/scss/free/buttons';
-// @import './node_modules/mdb-ui-kit/src/scss/free/deprecated';
-@import './node_modules/mdb-ui-kit/src/scss/free/dropdown';
-// @import './node_modules/mdb-ui-kit/src/scss/free/button-group';
-@import './node_modules/mdb-ui-kit/src/scss/free/nav';
-@import './node_modules/mdb-ui-kit/src/scss/free/navbar';
-// @import './node_modules/mdb-ui-kit/src/scss/free/card';
-@import './node_modules/mdb-ui-kit/src/scss/free/breadcrumb';
-@import './node_modules/mdb-ui-kit/src/scss/free/pagination';
-@import './node_modules/mdb-ui-kit/src/scss/free/badge';
-@import './node_modules/mdb-ui-kit/src/scss/free/alert';
-// @import './node_modules/mdb-ui-kit/src/scss/free/progress';
-@import './node_modules/mdb-ui-kit/src/scss/free/list-group';
-// @import './node_modules/mdb-ui-kit/src/scss/free/close';
-// @import './node_modules/mdb-ui-kit/src/scss/free/modal';
-// @import './node_modules/mdb-ui-kit/src/scss/free/toasts';
-// @import './node_modules/mdb-ui-kit/src/scss/free/tooltip';
-@import './node_modules/mdb-ui-kit/src/scss/free/popover';
-// @import './node_modules/mdb-ui-kit/src/scss/free/scrollspy';
-@import './node_modules/mdb-ui-kit/src/scss/free/ripple';
+@import "./node_modules/bootstrap/scss/utilities/api";
+// scss-docs-end import-stack

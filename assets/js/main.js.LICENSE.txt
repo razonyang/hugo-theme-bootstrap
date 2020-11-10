@@ -1,25 +1,12 @@
 /*!
- * Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com
- * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
- */
+  * Bootstrap v5.0.0-alpha2 (https://getbootstrap.com/)
+  * Copyright 2011-2020 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+  */
 
 /*!
- * MDB5
- *   Version: FREE 2.0.0
- * 
- * 
- *   Copyright: Material Design for Bootstrap
- *   https://mdbootstrap.com/
- * 
- *   Read the license: https://mdbootstrap.com/general/license/
- * 
- * 
- *   Documentation: https://mdbootstrap.com/docs/standard/
- * 
- *   Support: https://mdbootstrap.com/support/
- * 
- *   Contact: office@mdbootstrap.com
- * 
+ * Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 
 /**!
