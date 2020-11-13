@@ -3,7 +3,7 @@ import * as Mustache from 'mustache';
 import * as Mark from 'mark.js';
 
 declare global {
-  interface Window { fuseOptions: any; }
+  interface Window { fuseOptions: any; searchResultContentWordCount: number; }
 }
 
 export class Search {
@@ -15,7 +15,7 @@ export class Search {
 
   public stat: HTMLElement;
 
-  public resultContentWordCount: number = 240;
+  public resultContentWordCount: number;
 
   public highlightOptions = {
     element: 'span',
@@ -45,6 +45,7 @@ export class Search {
     this.tmplNoResults = document.getElementById('templateNoResults').innerHTML;
     this.tmplStat = document.getElementById('templateStat').innerHTML;
     this.tmplResult = document.getElementById('templateResult').innerHTML;
+    this.resultContentWordCount = window.searchResultContentWordCount;
     this.initForm();
     this.initFuse();
   }

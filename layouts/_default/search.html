@@ -16,7 +16,7 @@
   {{- end -}}
 {{- end -}}
 <script>
-  var searchResultContentWordCount = parseInt('{{ default 240 .Site.Params.search.resultContentWordCount }}');
+  window.searchResultContentWordCount = parseInt('{{ default 240 .Site.Params.search.resultContentWordCount }}');
   window.fuseOptions = JSON.parse('{{ $options | jsonify | safeHTML }}');
 </script>
 {{- $script := resources.Get "js/search.js" | resources.Fingerprint -}}
