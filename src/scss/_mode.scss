@@ -1,11 +1,25 @@
 @mixin mode-light {
-  --hbs-bg-color:#{$white};
-  --hbs-color: var(--bs-dark);
+  --hbs-background: #{$gray-200};
+  --hbs-on-background: var(--bs-dark);
+  --hbs-surface: #{$white};
+  --hbs-on-surface: var(--bs-dark);
+  --hbs-primary-text: #{$dark-primary};
+  --hbs-secondary-text: #{$dark-secondary};
+  --hbs-disabled-text: #{$dark-disabled};
+  --hbs-accent: var(--hbs-primary);
+  --hbs-shadow: rgba(0, 0, 0, .075);
 }
 
 @mixin mode-dark {
-  --hbs-bg-color:var(--hbs-primary);
-  --hbs-color: #{$white};
+  --hbs-background: #121212;
+  --hbs-on-background: #{$white};
+  --hbs-surface: #1e1e1e;
+  --hbs-on-surface: #{$white};
+  --hbs-primary-text: #{$white};
+  --hbs-secondary-text: #{$white-secondary};
+  --hbs-disabled-text: #{$white-disabled};
+  --hbs-accent: var(--hbs-primary-light);
+  --hbs-shadow: rgba(0, 0, 0, .75);
 }
 
 [data-mode="light"] {
@@ -14,4 +28,10 @@
 
 [data-mode="dark"] {
   @include mode-dark;
+}
+
+#modeSwitcher {
+  height: 1.125rem;
+  margin-right: .25rem;
+  width: 2.25rem;
 }

@@ -1,3 +1,12 @@
-.sidebar section {
-  margin-bottom: 1rem;
+.sidebar h1, h2, h3, h4, h5, h6 {
+  margin: .5rem 0 1rem;
+}
+
+.sidebar ul {
+  padding-left: 2rem!important;
+}
+
+.sidebar ul li,
+.post-taxonomy {
+  color: var(--hbs-secondary-text);
 }

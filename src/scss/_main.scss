@@ -22,16 +22,16 @@ html, body {
 }
 
 body {
-  background-color: var(--hbs-bg-color);
-  color: var(--hbs-color);
+  background-color: var(--hbs-background);
+  color: var(--hbs-on-background);
   display: flex;
   flex-flow: column;
   font-family: var(--bs-font-sans-serif);
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 a:hover,
@@ -70,4 +70,18 @@ main {
 
 ul {
   padding-left: 1.5rem;
+}
+
+.surface {
+  background-color: var(--hbs-surface);
+  border-radius: .25rem;
+  box-shadow: 0 .5rem 1rem var(--hbs-shadow);
+  color: var(--hbs-on-surface);
+  margin-bottom: 2rem;
+  padding: .5rem 1rem;
+}
+
+.list-group-item.active {
+  background-color: var(--hbs-accent);
+  border: var(--hbs-accent);
 }

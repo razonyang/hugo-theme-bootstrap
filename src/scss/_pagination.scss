@@ -1,9 +1,16 @@
 .pagination .page-link {
-  background-color: var(--hbs-bg-color);
-  border-color: var(--hbs-secondary);
-  color: var(--hbs-color);
+  background-color: var(--hbs-surface);
+  border-color: var(--hbs-secondary-text);
+  color: var(--hbs-secondary-text);
+}
+
+.page-item.active .page-link {
+  background-color: var(--hbs-accent);
+  border-color: var(--hbs-accent);
 }
 
 .page-item.disabled .page-link {
-  border-color: var(--hbs-secondary);
+  color: var(--hbs-disabled-text);
+  background-color: var(--hbs-surface);
+  border-color: var(--hbs-secondary-text);
 }

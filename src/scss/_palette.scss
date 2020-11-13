@@ -1,9 +1,6 @@
 @mixin palette-blue {
   --hbs-primary: #{$blue-primary};
-  --hbs-primary-text: #{$white};
-  --hbs-secondary: #{$blue-secondary};
-  --hbs-secondary-text: #{$white};
-  --hbs-accent: #{$blue-accent};
+  --hbs-primary-light: #{$blue-primary-light};
 }
 
 [data-palette="blue"] {
@@ -12,10 +9,7 @@
 
 @mixin palette-blue-gray {
   --hbs-primary: #{$blue-gray-primary};
-  --hbs-primary-text: #{$white};
-  --hbs-secondary: #{$blue-gray-secondary};
-  --hbs-secondary-text: #{$white};
-  --hbs-accent: #{$blue-gray-accent};
+  --hbs-primary-light: #{$blue-gray-primary-light};
 }
 
 [data-palette="blue-gray"] {
@@ -24,10 +18,7 @@
 
 @mixin palette-brown {
   --hbs-primary: #{$brown-primary};
-  --hbs-primary-text: #{$white};
-  --hbs-secondary: #{$brown-secondary};
-  --hbs-secondary-secondary: #{$white};
-  --hbs-accent: #{$brown-accent};
+  --hbs-primary-light: #{$brown-primary-light};
 }
 
 [data-palette="brown"] {
@@ -36,10 +27,7 @@
 
 @mixin palette-cyan {
   --hbs-primary: #{$cyan-primary};
-  --hbs-primary-text: #{$white};
-  --hbs-secondary: #{$cyan-secondary};
-  --hbs-secondary-text: #{$white};
-  --hbs-accent: #{$cyan-accent};
+  --hbs-primary-light: #{$cyan-primary-light};
 }
 
 [data-palette="cyan"] {
@@ -48,10 +36,7 @@
 
 @mixin palette-gray {
   --hbs-primary: #{$gray-primary};
-  --hbs-primary-text: #{$white};
-  --hbs-secondary: #{$gray-secondary};
-  --hbs-secondary-text: #{$white};
-  --hbs-accent: #{$gray-accent};
+  --hbs-primary-light: #{$gray-primary-light};
 }
 
 [data-palette="gray"] {
@@ -60,10 +45,7 @@
 
 @mixin palette-green {
   --hbs-primary: #{$green-primary};
-  --hbs-primary-text: #{$white};
-  --hbs-secondary: #{$green-secondary};
-  --hbs-secondary-text: #{$white};
-  --hbs-accent: #{$green-accent};
+  --hbs-primary-light: #{$green-primary-light};
 }
 
 [data-palette="green"] {
@@ -72,10 +54,7 @@
 
 @mixin palette-indigo {
   --hbs-primary: #{$indigo-primary};
-  --hbs-primary-text: #{$white};
-  --hbs-secondary: #{$indigo-secondary};
-  --hbs-secondary-text: #{$white};
-  --hbs-accent: #{$indigo-accent};
+  --hbs-primary-light: #{$indigo-primary-light};
 }
 
 [data-palette="indigo"] {
@@ -84,10 +63,7 @@
 
 @mixin palette-orange {
   --hbs-primary: #{$orange-primary};
-  --hbs-primary-text: #{$white};
-  --hbs-secondary: #{$orange-secondary};
-  --hbs-secondary-text: #{$white};
-  --hbs-accent: #{$orange-accent};
+  --hbs-primary-light: #{$orange-primary-light};
 }
 
 [data-palette="orange"] {
@@ -96,10 +72,7 @@
 
 @mixin palette-pink {
   --hbs-primary: #{$pink-primary};
-  --hbs-primary-text: #{$white};
-  --hbs-secondary: #{$pink-secondary};
-  --hbs-secondary-text: #{$white};
-  --hbs-accent: #{$pink-accent};
+  --hbs-primary-light: #{$pink-primary-light};
 }
 
 [data-palette="pink"] {
@@ -108,10 +81,7 @@
 
 @mixin palette-purple {
   --hbs-primary: #{$purple-primary};
-  --hbs-primary-text: #{$white};
-  --hbs-secondary: #{$purple-secondary};
-  --hbs-secondary-text: #{$white};
-  --hbs-accent: #{$purple-accent};
+  --hbs-primary-light: #{$purple-primary-light};
 }
 
 [data-palette="purple"] {
@@ -120,10 +90,7 @@
 
 @mixin palette-red {
   --hbs-primary: #{$red-primary};
-  --hbs-primary-text: #{$white};
-  --hbs-secondary: #{$red-secondary};
-  --hbs-secondary-text: #{$white};
-  --hbs-accent: #{$red-accent};
+  --hbs-primary-light: #{$red-primary-light};
 }
 
 [data-palette="red"] {
@@ -132,10 +99,7 @@
 
 @mixin palette-teal {
   --hbs-primary: #{$teal-primary};
-  --hbs-primary-text: #{$white};
-  --hbs-secondary: #{$teal-secondary};
-  --hbs-secondary-text: #{$white};
-  --hbs-accent: #{$teal-accent};
+  --hbs-primary-light: #{$teal-primary-light};
 }
 
 [data-palette="teal"] {
@@ -144,14 +108,15 @@
 
 @mixin palette-yellow {
   --hbs-primary: #{$yellow-primary};
-  --hbs-primary-text: #{$white};
-  --hbs-secondary: #{$yellow-secondary};
-  --hbs-secondary-text: #{$white};
-  --hbs-accent: #{$yellow-accent};
+  --hbs-primary-light: #{$yellow-primary-light};
 }
 
 [data-palette="yellow"] {
   @include palette-yellow;
+}
+
+.palettes {
+  color: #{$white};
 }
 
 .palette.active a:after {

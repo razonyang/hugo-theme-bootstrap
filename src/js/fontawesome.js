@@ -1,9 +1,9 @@
 import { library, dom } from '@fortawesome/fontawesome-svg-core';
 import {
   faCalendarAlt, faChevronCircleUp, faEnvelope, faFolder, faLanguage,
-  faMoon, faPalette, faSearch, faSun, faTag,
-  faBuilding, faMapMarkerAlt, faBars, faRss, faLink,
-  faSkullCrossbones, faExclamationTriangle, faCheckCircle, faInfoCircle,
+  faPalette, faSearch, faTags, faBuilding, faMapMarkerAlt,
+  faBars, faRss, faLink, faSkullCrossbones, faExclamationTriangle,
+  faCheckCircle, faInfoCircle,
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faFacebook, faGithub, faGitlab, faInstagram, faLinkedin,
@@ -13,9 +13,9 @@ import {
 
 library.add(
   faCalendarAlt, faChevronCircleUp, faEnvelope, faFolder, faLanguage,
-  faMoon, faPalette, faSearch, faSun, faTag,
-  faBuilding, faMapMarkerAlt, faBars, faRss, faLink,
-  faSkullCrossbones, faExclamationTriangle, faCheckCircle, faInfoCircle,
+  faPalette, faSearch, faTags, faBuilding, faMapMarkerAlt,
+  faBars, faRss, faLink, faSkullCrossbones, faExclamationTriangle,
+  faCheckCircle, faInfoCircle,
 );
 
 library.add(

@@ -1,6 +1,6 @@
-{{- $featuredPosts := first (default 5 .Site.Params.featuredPostCount) (where (where site.RegularPages "Type" "in" site.Params.mainSections) ".Params.featured" "eq" true) -}}
+{{- $featuredPosts := first (default 10 .Site.Params.featuredPostCount) (where (where site.RegularPages "Type" "in" site.Params.mainSections) ".Params.featured" "eq" true) -}}
 {{- with $featuredPosts -}}
-<section class="featured-posts">
+<section class="featured-posts row surface">
   <h4>{{ T "featured_posts" }}</h4>
   <ul>
   {{- range . -}}

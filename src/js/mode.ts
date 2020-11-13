@@ -1,13 +1,10 @@
 class ModeSwitcher {
   public key: string = 'hbs-mode';
 
-  public labelEment: HTMLLabelElement;
-
   constructor(public element: HTMLInputElement) {
   }
 
   init() {
-    this.labelEment = this.element.parentElement.querySelector('label');
     this.initListeners();
     this.initMode();
   }
@@ -48,13 +45,10 @@ class ModeSwitcher {
     localStorage.setItem(this.key, value);
     document.body.setAttribute('data-mode', value);
     let checked: boolean = false;
-    let icon: string = 'moon';
     if (value === 'dark') {
       checked = true;
-      icon = 'sun';
     }
     this.element.checked = checked;
-    this.labelEment.innerHTML = `<i class="fas fa-fw fa-${icon}"></i>`;
   }
 }
 

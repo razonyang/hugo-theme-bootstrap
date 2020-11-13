@@ -1,13 +1,23 @@
-.post-taxonomy {
-  background-color: var(--hbs-secondary);
+.post-meta {
   color: var(--hbs-secondary-text);
+}
+
+.post-summary {
+  color: var(--hbs-secondary-text);
+}
+
+.post-taxonomy {
   margin: 0 .5rem .5rem 0;
 }
 
+.post-taxonomy.btn {
+  background-color: var(--hbs-primary);
+  color: #{$white};
+}
+
 .post-taxonomy .badge {
-  background-color: var(--hbs-secondary-text);
-  color: var(--hbs-secondary);
-  margin: .1rem;
+  background-color: #{$white};
+  color: var(--hbs-primary);
 }
 
 .post-toc {
@@ -15,8 +25,6 @@
   padding: .5rem;
   padding-right: 2rem;
   margin: 0 0 1rem 1rem;
-  background-color: var(--hbs-secondary);
-  color: var(--hbs-secondary-text);
 }
 
 @media (max-width: breakpoint-max(sm)) {
@@ -62,8 +70,4 @@
 
 .post-comments .utterances {
   max-width: 100%;
-}
-
-.posts .badge {
-  background-color: var(--hbs-secondary);
 }

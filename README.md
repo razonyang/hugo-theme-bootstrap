@@ -99,9 +99,9 @@ As the example site shown, the configuration are separated into multiple files, 
 | `description` | String | - | Site description.
 | `palette` | String | - | Default palette.
 | `palettes` | Array | **ALL** | Available palettes.
-| `featuredPostCount` | Integer | `5` | The number of featured posts shown in sidebar.
-| `recentPostCount` | Integer | `5` | The number of recent posts shown in sidebar.
-| `relatedPostCount` | Integer | `5` | The number of related posts.
+| `featuredPostCount` | Integer | `10` | The number of featured posts shown in sidebar.
+| `recentPostCount` | Integer | `10` | The number of recent posts shown in sidebar.
+| `relatedPostCount` | Integer | `10` | The number of related posts.
 | `categoryCount` | Integer | `10` | The number of categories shown in sidebar.
 | `tagCount` | Integer | `10` | The number of tags shown in sidebar.
 | `fullWidth` | Boolean | `false` | Full width.

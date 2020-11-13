@@ -1,6 +1,6 @@
 {{- if ne .Site.Params.breadcrumb false -}}
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
+<nav class="row" aria-label="breadcrumb">
+  <ol class="breadcrumb surface">
     {{- template "breadcrumbnav" (dict "p1" . "p2" .) -}}
   </ol>
 </nav>

@@ -24,9 +24,9 @@ googleAdsense = ""
 
 # poweredBy = false # Whether to show powered by.
 
-# featuredPostCount = 5 # The number of featured posts shown in sidebar.
-# recentPostCount = 5 # The number of recent posts shown in sidebar.
-# relatedPostCount = 5 # The number of related posts.
+# featuredPostCount = 10 # The number of featured posts shown in sidebar.
+# recentPostCount = 10 # The number of recent posts shown in sidebar.
+# relatedPostCount = 10 # The number of related posts.
 # categoryCount = 10 # The number of categories shown in sidebar.
 # tagCount = 10 # The number of tags shown in sidebar.
 
@@ -35,7 +35,7 @@ customCSS = []
 customJS = []
 
 [archive]
-  paginate = 5 # Archive pagination. Default to 100.
+  paginate = 8 # Archive pagination. Default to 100.
   # dateFormat = "01-02" # Archive date format. Default to "Jan 2".
 
 [analytics]
@@ -48,7 +48,7 @@ customJS = []
   baidu = ""
 
 [utterances]
-  #repo = "razonyang/hugo-theme-bootstrap"
+  repo = "razonyang/hugo-theme-bootstrap"
   #issueTerm = "pathname" # pathname, url, title, og:title
   #label = "comment"
   #theme = "github-light" # github-light, github-dark, preferred-color-scheme, github-dark-orange, icy-dark, dark-blue, photon-dark.

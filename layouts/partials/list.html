@@ -1,28 +1,27 @@
 {{- $pages := .RegularPages -}}
-{{- if .IsHome -}}
-  {{- $pages = where .Site.RegularPages "Type" "in" (default (slice "posts") .Site.Params.mainSections) -}}
-{{- else -}}
-{{- partial "breadcrumb" . -}}
-<h1 class="pb-3 mb-3 border-bottom">{{ .Title }}</h1>
-{{- end -}}
 <div class="container">
+  {{- if .IsHome -}}
+    {{- $pages = where .Site.RegularPages "Type" "in" (default (slice "posts") .Site.Params.mainSections) -}}
+  {{- else -}}
+  {{- partial "breadcrumb" . -}}
+  {{- end -}}
   <div class="posts mb-4">
   {{- range (.Paginate $pages).Pages -}}
-    <article class="post row">
+    <article class="post row surface">
       {{- if .Params.Images -}}
       <div class="post-thumbnail col-md-3 d-flex align-items-center justify-content-center">
         <img class="img-fluid" src="{{ index .Params.Images 0 | absURL }}" loading="lazy"/>
       </div>
       {{- end -}}
       <div class="post-body{{ if .Params.Images }} col-md-9{{ end }}">
-        <h2 class="post-title mb-3"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        <h2 class="post-title mb-4"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
         {{- partial "post/meta" . -}}
-        <div class="post-summary mb-2">
+        <div class="post-summary mb-3">
           {{- .Summary | truncate 320 -}}
         </div>
       </div>
     </article>
   {{- end -}}
   </div>
-  {{- template "_internal/pagination.html" . -}}
+  {{- partial "pagination" . -}}
 </div>

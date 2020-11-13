@@ -1,18 +1,3 @@
-.breadcrumb {
-  background-color: var(--hbs-secondary);
-  color: var(--hbs-secondary-text);
-}
-
 .breadcrumb-item.active {
   color: var(--hbs-secondary-text);
-}
-
-.breadcrumb-item+.breadcrumb-item::before{
-  color: var(--hbs-secondary-text);
-}
-
-.page-item.active .page-link {
-  color: var(--hbs-secondary-text);
-  background-color: var(--hbs-secondary);
-  border-color: var(--hbs-secondary);
 }

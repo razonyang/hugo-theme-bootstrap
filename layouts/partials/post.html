@@ -1,5 +1,5 @@
-<article class="post row mb-2">
-  <h1 class="post-title mb-3">{{ .Title }}</h1>
+<article class="post row surface">
+  <h1 class="post-title my-3">{{ .Title }}</h1>
   {{- partial "post/meta" . -}}
   {{- partial "hooks/content-begin" . -}}
   <div class="post-content mb-3">
@@ -9,5 +9,6 @@
   {{- partial "hooks/content-end" . -}}
   {{- partial "post/nav" . -}}
   {{- partial "post/related-posts" . -}}
-  {{- partial "post/comments" . -}}
 </article>
+
+{{- partial "post/comments" . -}}

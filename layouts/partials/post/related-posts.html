@@ -1,4 +1,4 @@
-{{- with (.Site.RegularPages.Related . | first (default 5 .Site.Params.relatedPostCount)) -}}
+{{- with (.Site.RegularPages.Related . | first (default 10 .Site.Params.relatedPostCount)) -}}
 <section class="related-posts">
   <h3>{{ T "related_posts" }}</h3>
   <ul class="related-posts">

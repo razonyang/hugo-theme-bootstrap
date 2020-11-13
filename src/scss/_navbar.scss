@@ -1,0 +1,44 @@
+.navbar {
+  background-color: var(--hbs-primary);
+  color: #{$white-secondary};
+}
+
+[data-mode="dark"] .navbar {
+  background-color: var(--hbs-surface);
+}
+
+.logo {
+  height: 26px;
+  margin-right: .5rem;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-toggler-icon {
+  color: var(--hbs-primary-text);
+}
+
+.navbar a {
+  &:hover,
+  &:active,
+  &.active {
+    color: #{$white};
+  }
+}
+
+.dropdown-item {
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    color: #fff;
+    background-color: var(--hbs-accent);
+  }
+}
+
