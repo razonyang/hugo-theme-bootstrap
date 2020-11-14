@@ -10,7 +10,7 @@ description = "An extreme fast, responsive and feature-rich blog theme for Hugo"
 brand = "BOOTSTRAP"
 # menusPosition = "left" # Menus position: right(default), left or center.
 
-palette = "blue-gray" # Default palette. Optional.
+palette = "blue" # Default palette. Optional.
 # palettes = ["blue", "blue gray", "brown", "gray"] # Available palettes. Default to ALL.
 
 # fullWidth = true # Full width.

@@ -1,6 +1,7 @@
 @mixin palette-blue {
   --hbs-primary: #{$blue-primary};
   --hbs-primary-light: #{$blue-primary-light};
+  --hbs-accent: var(--hbs-primary);
 }
 
 [data-palette="blue"] {
@@ -10,6 +11,7 @@
 @mixin palette-blue-gray {
   --hbs-primary: #{$blue-gray-primary};
   --hbs-primary-light: #{$blue-gray-primary-light};
+  --hbs-accent: var(--hbs-primary);
 }
 
 [data-palette="blue-gray"] {
@@ -19,6 +21,7 @@
 @mixin palette-brown {
   --hbs-primary: #{$brown-primary};
   --hbs-primary-light: #{$brown-primary-light};
+  --hbs-accent: var(--hbs-primary);
 }
 
 [data-palette="brown"] {
@@ -28,6 +31,7 @@
 @mixin palette-cyan {
   --hbs-primary: #{$cyan-primary};
   --hbs-primary-light: #{$cyan-primary-light};
+  --hbs-accent: var(--hbs-primary);
 }
 
 [data-palette="cyan"] {
@@ -37,6 +41,7 @@
 @mixin palette-gray {
   --hbs-primary: #{$gray-primary};
   --hbs-primary-light: #{$gray-primary-light};
+  --hbs-accent: var(--hbs-primary);
 }
 
 [data-palette="gray"] {
@@ -46,6 +51,7 @@
 @mixin palette-green {
   --hbs-primary: #{$green-primary};
   --hbs-primary-light: #{$green-primary-light};
+  --hbs-accent: var(--hbs-primary);
 }
 
 [data-palette="green"] {
@@ -55,6 +61,7 @@
 @mixin palette-indigo {
   --hbs-primary: #{$indigo-primary};
   --hbs-primary-light: #{$indigo-primary-light};
+  --hbs-accent: var(--hbs-primary);
 }
 
 [data-palette="indigo"] {
@@ -64,6 +71,7 @@
 @mixin palette-orange {
   --hbs-primary: #{$orange-primary};
   --hbs-primary-light: #{$orange-primary-light};
+  --hbs-accent: var(--hbs-primary);
 }
 
 [data-palette="orange"] {
@@ -73,6 +81,7 @@
 @mixin palette-pink {
   --hbs-primary: #{$pink-primary};
   --hbs-primary-light: #{$pink-primary-light};
+  --hbs-accent: var(--hbs-primary);
 }
 
 [data-palette="pink"] {
@@ -82,6 +91,7 @@
 @mixin palette-purple {
   --hbs-primary: #{$purple-primary};
   --hbs-primary-light: #{$purple-primary-light};
+  --hbs-accent: var(--hbs-primary);
 }
 
 [data-palette="purple"] {
@@ -91,6 +101,7 @@
 @mixin palette-red {
   --hbs-primary: #{$red-primary};
   --hbs-primary-light: #{$red-primary-light};
+  --hbs-accent: var(--hbs-primary);
 }
 
 [data-palette="red"] {
@@ -100,6 +111,7 @@
 @mixin palette-teal {
   --hbs-primary: #{$teal-primary};
   --hbs-primary-light: #{$teal-primary-light};
+  --hbs-accent: var(--hbs-primary);
 }
 
 [data-palette="teal"] {
@@ -109,6 +121,7 @@
 @mixin palette-yellow {
   --hbs-primary: #{$yellow-primary};
   --hbs-primary-light: #{$yellow-primary-light};
+  --hbs-accent: var(--hbs-primary);
 }
 
 [data-palette="yellow"] {
