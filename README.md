@@ -4,8 +4,8 @@ This theme is an extreme fast, responsive and feature-rich blog theme for Hugo.
 
 ## Table of Contents
 
+- [Screenshots](#screenshots)
 - [Features](#features)
-- [Palettes](#palettes)
 - [Installation](#installation)
 - [Configuration](#configuration)
 - [Parameters](#parameters)
@@ -18,12 +18,20 @@ This theme is an extreme fast, responsive and feature-rich blog theme for Hugo.
 - [Various Shortcodes](#shortcodes).
 - [Contribute](#contribute)
 
+## Screenshots
+
+![Screenshot](https://github.com/razonyang/hugo-theme-bootstrap/blob/master/images/screenshot.png)
+
+**Dark Mode**
+
+![Screenshot in Dark Mode](https://github.com/razonyang/hugo-theme-bootstrap/blob/master/images/screenshot-dark.png)
+
 ## Features
 
 - Extreme Fast: [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/?url=https://hbs.razonyang.com/en/)'s score `95-100`.
 - Built on top of [Bootstrap 5](https://v5.getbootstrap.com/).
 - Responsive.
-- [Various Palettes](#palettes).
+- Various Palettes: `blue`, `blue-gray`, `brown`, `cyan`, `gray`, `green`, `indigo`, `orange`, `pink`, `purple`, `red`, `teal`, `yellow`.
 - [Highly Configurable](#configuration).
 - Dark Mode Switcher.
 - Multilingual(I18N).
@@ -38,16 +46,6 @@ This theme is an extreme fast, responsive and feature-rich blog theme for Hugo.
 - [Social Links](#social-links).
 - [Various Shortcodes](#shortcodes).
 - [Twitter Cards](https://gohugo.io/templates/internal/#configure-twitter-cards) and [Open Graph](https://gohugo.io/templates/internal/#configure-open-graph).
-
-## Palettes
-
-Available palettes: `blue`, `blue-gray`, `brown`, `cyan`, `gray`, `green`, `indigo`, `orange`, `pink`, `purple`, `red`, `teal`, `yellow`.
-
-![Palettes](https://github.com/razonyang/hugo-theme-bootstrap/blob/master/images/palettes.png)
-
-### Palettes in Dark Mode
-
-![Palettes in Dark Mode](https://github.com/razonyang/hugo-theme-bootstrap/blob/master/images/palettes-dark.png)
 
 ## Installation
 
