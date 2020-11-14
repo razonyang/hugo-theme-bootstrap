@@ -1,7 +1,8 @@
 # Hugo Bootstrap Theme
 
 [English](https://github.com/razonyang/hugo-theme-bootstrap/blob/master/README.md) · 
-[简体中文](https://github.com/razonyang/hugo-theme-bootstrap/blob/master/README.zh-CN.md)
+[简体中文](https://github.com/razonyang/hugo-theme-bootstrap/blob/master/README.zh-CN.md) · 
+[繁體中文](https://github.com/razonyang/hugo-theme-bootstrap/blob/master/README.zh-TW.md)
 
 This theme is an extreme fast, responsive and feature-rich blog theme for Hugo.
 
