@@ -1,5 +1,8 @@
 # Hugo Bootstrap Theme
 
+[English](https://github.com/razonyang/hugo-theme-bootstrap/blob/master/README.md) · 
+[简体中文](https://github.com/razonyang/hugo-theme-bootstrap/blob/master/README.zh-CN.md)
+
 This theme is an extreme fast, responsive and feature-rich blog theme for Hugo.
 
 ## Table of Contents
@@ -9,8 +12,8 @@ This theme is an extreme fast, responsive and feature-rich blog theme for Hugo.
 - [Installation](#installation)
 - [Configuration](#configuration)
 - [Parameters](#parameters)
-  - [Global Parameters](global-parameters)
-  - [Page Parameters](page-parameters)
+  - [Global Parameters](#global-parameters)
+  - [Page Parameters](#page-parameters)
 - [Comments](#comments)
 - [Hooks](#hooks)
 - [Custom Assets](#custom-assets).
@@ -74,7 +77,7 @@ As the example site shown, the configuration are separated into multiple files, 
 | `enableRobotsTXT` | Boolean | `true` |
 | `disqusShortname` | String | - | [Disqus](#disqus) shortname.
 | `googleAnalytics` | String | - | Google Analytics.
-| `social` | Object | - | A set of [social links](#social-links) that mapping from platform to user identifier.
+| `social` | Object | - | [Social Links](#social-links).
 | `author` | Object | - | Profile information. Available parameters: `name`, `avatar`, `bio`, `company` and `location`.
 
 ## Parameters
@@ -93,7 +96,7 @@ As the example site shown, the configuration are separated into multiple files, 
 | `math` | Boolean | `false` | Whether to enable math globally.
 | `logo` | String | `images/logo.webp` | Logo image.
 | `brand` | String | - | Brand text.
-| `menusPosition` | String | `right` | Menus position: `right`, `left`, `center`. Default to `right`.
+| `menusPosition` | String | `right` | Menus position: `right`, `left`, `center`.
 | `description` | String | - | Site description.
 | `palette` | String | - | Default palette.
 | `palettes` | Array | **ALL** | Available palettes.
@@ -120,12 +123,12 @@ As the example site shown, the configuration are separated into multiple files, 
 | `search.fuse.useExtendedSearch` | Boolean | - |
 | **Webmaster Site Verification** 
 | `siteVerification` | Object | - |
-| `siteVerification.google` | String | - | Google Webmaster Tool.
-| `siteVerification.bing` | String | - | Bing Webmaster Tool.
-| `siteVerification.baidu` | String | - | Baidu Webmaster Tool.
+| `siteVerification.google` | String | - | Google
+| `siteVerification.bing` | String | - | Bing
+| `siteVerification.baidu` | String | - | Baidu
 | **Analytics** 
 | `analytics` | Object | - | Analytics configuration.
-| `analytics.baidu` | String | - | Bing Analytics.
+| `analytics.baidu` | String | - | Baidu Analytics.
 | **Others** 
 | `googleAdsense` | String | - | Google Adsense.
 | `customCSS` | Array | - | Custom CSS. It is mainly used to import external CSS. See [Custom Assets](#custom-assets).
@@ -215,21 +218,19 @@ $ echo "SIDEBAR BEGIN" > layouts/partials/hooks/sidebar-begin.html
 
 | Shortcode | Description | Usage
 |---|---|---
-| `alert` | Alter message | `{{< alert "message" [type] >}}`, `[type]` can be one of `info`, `success`, `warning` and `danger`
+| `alert` | Alter | `{{< alert "message" [type] >}}`, `[type]` can be one of `info`, `success`, `warning` and `danger`
 | `jsfiddle` | JSFiddle | `{{< jsfiddle "user/id" >}}`
 | `codepen` | CodePen | `{{< codepen "id" >}}`
 | `jsrun` | JSRUN | `{{< jsrun "id" >}}`
-| `bilibili`| Bilibili video player | `{{< bilibili "video ID" >}}`
-| `youku`| Youku video player | `{{< youku "video ID" >}}`
-| `iqiyi`| iQiyi video player | `{{< iqiyi "vid" "tvid" >}}`
-| `tencentvideo`| Tencent video player | `{{< tencentvideo "video ID" >}}`
-| `neteasemusic`| Netease music player | `{{< neteasemusic "song ID" >}}`
+| `bilibili`| Bilibili Video Player | `{{< bilibili "video ID" >}}`
+| `youku`| Youku Video Player | `{{< youku "video ID" >}}`
+| `iqiyi`| iQiyi Video Player| `{{< iqiyi "vid" "tvid" >}}`
+| `tencentvideo`| Tencent Video Player | `{{< tencentvideo "video ID" >}}`
+| `neteasemusic`| Netease Music player | `{{< neteasemusic "song ID" >}}`
 
 ## Social Links
 
 The `social` is a set of key value pairs of social links that mapping from platform to user identifier.
-
-> 
 
 Enable social links by creating a file `config/_default/social.toml` with the following content:
 
@@ -241,18 +242,18 @@ github = "githubusername"
 
 | Platform | User Identifier |
 |---|---|
-| `email` | Email address |
-| `facebook` | Facebook username |
-| `github` | GitHub username |
-| `gitlab` | GitLab username |
-| `instagram` | Instagram username |
-| `linkedin` | LinkedIn username |
-| `quora` | Quora username |
-| `stackoverflow` | Stack Overflow user ID |
-| `tumblr` | Tumblr username |
-| `twitter` | Twitter username |
-| `weibo` | Weibo username |
-| `zhihu` | Zhihu username |
+| `email` | Email Address |
+| `facebook` | Facebook Username |
+| `github` | GitHub Username |
+| `gitlab` | GitLab Username |
+| `instagram` | Instagram Username |
+| `linkedin` | LinkedIn Username |
+| `quora` | Quora Username |
+| `stackoverflow` | Stack Overflow User ID |
+| `tumblr` | Tumblr Username |
+| `twitter` | Twitter Username |
+| `weibo` | Weibo Username |
+| `zhihu` | Zhihu Username |
 
 ## Contribute
 
