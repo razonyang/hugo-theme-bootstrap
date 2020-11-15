@@ -6,3 +6,8 @@
 .search-result-content {
   color: var(--hbs-secondary-text);
 }
+
+.btn-search {
+  color: var(--hbs-accent);
+  background-color: #{$white};
+}
