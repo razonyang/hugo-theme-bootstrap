@@ -109,6 +109,7 @@ As the example site shown, the configuration are separated into multiple files, 
 | `relatedPostCount` | Integer | `10` | The number of related posts.
 | `categoryCount` | Integer | `10` | The number of categories shown in sidebar.
 | `tagCount` | Integer | `10` | The number of tags shown in sidebar.
+| `seriesCount` | Integer | `10` | The number of series shown in sidebar.
 | `fullWidth` | Boolean | `false` | Full width.
 | `reward` | Object | - | Reward
 | `reward.alipay` | String | - | Alipay QR Code Image.

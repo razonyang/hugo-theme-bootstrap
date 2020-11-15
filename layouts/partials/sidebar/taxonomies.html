@@ -1,5 +1,5 @@
 {{- range $key, $value := .Site.Taxonomies -}}
-{{- $countParams := dict "categories" "categoryCount" "tags" "tagCount" -}}
+{{- $countParams := dict "categories" "categoryCount" "tags" "tagCount" "series" "seriesCount" -}}
 {{- $param := default "" (index $countParams $key) -}}
 {{- $taxonomyCount := default 10 ($.Site.Param $param) -}}
 <section class="taxonomy-{{ $key }} row surface">

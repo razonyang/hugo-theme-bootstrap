@@ -29,6 +29,7 @@ googleAdsense = ""
 # relatedPostCount = 10 # The number of related posts.
 # categoryCount = 10 # The number of categories shown in sidebar.
 # tagCount = 10 # The number of tags shown in sidebar.
+# seriesCount = 10 # The number of series shown in sidebar.
 
 # Custom CSS and JS
 customCSS = []

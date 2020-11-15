@@ -109,6 +109,7 @@ $ hugo server
 | `relatedPostCount` | Integer | `10` | 相關文章數
 | `categoryCount` | Integer | `10` | 分類數
 | `tagCount` | Integer | `10` | 標籤數
+| `seriesCount` | Integer | `10` | 專欄數
 | `fullWidth` | Boolean | `false` | 是否全寬
 | `reward` | Object | - | 打賞
 | `reward.alipay` | String | - | 支付寶收款二維碼圖片

@@ -109,6 +109,7 @@ $ hugo server
 | `relatedPostCount` | Integer | `10` | 相关文章数
 | `categoryCount` | Integer | `10` | 分类数
 | `tagCount` | Integer | `10` | 标签数
+| `seriesCount` | Integer | `10` | 专栏数
 | `fullWidth` | Boolean | `false` | 是否全宽
 | `reward` | Object | - | 打赏
 | `reward.alipay` | String | - | 支付宝收款二维码图片
