@@ -140,7 +140,7 @@ $ hugo server
 | `utterances.label` | String | - | 
 | `utterances.theme` | String | `github-light` | `github-light`, `github-dark`, `preferred-color-scheme`, `github-dark-orange`, `icy-dark`, `dark-blue`, `photon-dark`.
 
-> Except the Google webmaster tool, the other webmaster tools cannot work with `hugo --minify`, because they cannot recognize the minified meta tag.
+> 除了 Google 站長工具外，其他搜宿引擎站長工具無法與 `hugo --minify` 同時使用，這是因為它們無法識別優化後的元標簽。
 
 ### 頁面引數
 
@@ -182,13 +182,11 @@ disqusShortname = "yourdiscussshortname"
 
 ### 內部資源
 
-這是自定義 CSS 和 JS 的最佳方法，只需要建立 `assets/css/custom.css` 和 `assets/js/custom.js` 即可。這些檔案會被打包成單個 CSS/JS 檔案，以減少 HTTP 的請求次數。
+通過建立 `assets/css/custom.css` 和 `assets/js/custom.js` 來自定義 CSS 和 JS 是最佳的方法，因为這些檔案會被打包成單個 CSS/JS 檔案，以減少 HTTP 的請求次數。
 
 ### 外部資源
 
 任意的 CSS 和 JS 資源都可以通過 `customCSS` 和 `customJS` 引數進行匯入。
-
-Any external CSS and JS resources can be imported by the parameters `customCSS` and `customJS`.
 
 > `customCSS` 和 `customJS` 都可以匯入內部資源，只需要將檔案放到 `static` 資料夾。
 
