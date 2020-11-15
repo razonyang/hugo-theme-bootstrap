@@ -38,6 +38,7 @@
 - 多种配色：`blue`, `blue-gray`, `brown`, `cyan`, `gray`, `green`, `indigo`, `orange`, `pink`, `purple`, `red`, `teal`, `yellow`
 - [高度可配置](#配置)
 - 深色模式
+- 字体大小切换
 - 多语言/国际化
 - 搜索
 - 面包屑导航

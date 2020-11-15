@@ -38,6 +38,7 @@ This theme is an extreme fast, responsive and feature-rich blog theme for Hugo.
 - Various Palettes: `blue`, `blue-gray`, `brown`, `cyan`, `gray`, `green`, `indigo`, `orange`, `pink`, `purple`, `red`, `teal`, `yellow`.
 - [Highly Configurable](#configuration).
 - Dark Mode Switcher.
+- Font Size Switcher.
 - Multilingual(I18N).
 - Search.
 - Breadcrumb.

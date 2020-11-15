@@ -38,6 +38,7 @@
 - 多種配色：`blue`, `blue-gray`, `brown`, `cyan`, `gray`, `green`, `indigo`, `orange`, `pink`, `purple`, `red`, `teal`, `yellow`
 - [高度可配置](#配置)
 - 深色模式
+- 字體大小切換
 - 多語言/國際化
 - 搜尋
 - 麵包屑導航
