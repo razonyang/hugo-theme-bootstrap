@@ -46,6 +46,7 @@ This theme is an extreme fast, responsive and feature-rich blog theme for Hugo.
 - Resources Lazy Loading: `image` and `iframe`.
 - Reward Widget: supports Alipay and Wechat.
 - Table of Contents.
+- Share Buttons: supports [AddThis](https://www.addthis.com).
 - [Comments](#comments): supports [Disqus](#disqus) and [Utterances](#utterances).
 - [Custom Assets](#custom-assets): custom CSS and JS.
 - [Hooks](#hooks): provides ability to add custom code in page, such as `head`, `body`, `sidebar` etc.
@@ -112,6 +113,8 @@ As the example site shown, the configuration are separated into multiple files, 
 | `reward` | Object | - | Reward
 | `reward.alipay` | String | - | Alipay QR Code Image.
 | `reward.wechat` | String | - | Wechat QR Code Image.
+| `share` | Object | - | Share buttons
+| `share.addThis` | String | - | [AddThis](https://www.addthis.com)'s `pubid`.
 | **Archive**
 | `archive` | Object | - | Archive configuration.
 | `archive.paginate` | Integer | `100` | Archive pagination.

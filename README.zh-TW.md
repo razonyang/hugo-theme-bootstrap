@@ -46,6 +46,7 @@
 - 資源延遲載入：支援 `image` 和 `iframe` 等。
 - 打賞掛件：支持支付寶和微信。
 - 文章目錄導航
+- 分享按鈕：支持 [AddThis](https://www.addthis.com)。
 - [評論](#評論)：支援 [Disqus](#disqus) 和 [Utterances](#utterances)。
 - [自定義資源](#自定義資源)：自定義 CSS 和 JS。
 - [鉤子](#鉤子)：用於在頁面新增自定義程式碼。
@@ -112,6 +113,8 @@ $ hugo server
 | `reward` | Object | - | 打賞
 | `reward.alipay` | String | - | 支付寶收款二維碼圖片
 | `reward.wechat` | String | - | 微信收款/打賞二維碼圖片
+| `share` | Object | - | 分享按鈕
+| `share.addThis` | String | - | [AddThis](https://www.addthis.com) `pubid`。
 | **Archive**
 | `archive` | Object | - | 歸檔
 | `archive.paginate` | Integer | `100` | 歸檔分頁

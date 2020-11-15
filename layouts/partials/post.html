@@ -2,6 +2,7 @@
   <h1 class="post-title my-3">{{ .Title }}</h1>
   {{- partial "post/meta" . -}}
   {{- partial "hooks/content-begin" . -}}
+  {{- partial "post/share" . -}}
   <div class="post-content mb-3">
     {{- partial "post/toc" . -}}
     {{- .Content -}}

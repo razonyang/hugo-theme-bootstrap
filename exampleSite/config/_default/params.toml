@@ -68,3 +68,6 @@ customJS = []
 [reward]
   alipay = "images/reward/alipay.webp"
   wechat = "images/reward/wechat.webp"
+
+[share]
+  addThis = "ra-5fb19b4fde14befc" # AddThis pubid.
