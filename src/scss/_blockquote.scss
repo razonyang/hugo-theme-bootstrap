@@ -1,6 +1,6 @@
 blockquote{
   background: var(--bs-light);
-  border-left: .5rem solid var(--hbs-primary);
+  border-left: .5rem solid var(--hbs-accent);
   color: var(--hbs-on-surface);
   background-color: var(--hbs-surface);
   display: flex;
@@ -10,7 +10,7 @@ blockquote{
 
 blockquote::before{
   content: "\201C";
-  color: var(--hbs-primary);
+  color: var(--hbs-accent);
   font-size: 4em;
   position: absolute;
   left: .5rem;
