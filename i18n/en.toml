@@ -77,7 +77,7 @@ other = "No results found"
 other = "Found {{ .Total }} results"
 
 [series]
-other = "Serires"
+other = "Series"
 
 [tags]
 other = "Tags"
