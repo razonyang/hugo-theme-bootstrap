@@ -1,5 +1,7 @@
+{{- $enable := and (default true .Params.toc) (default true .Site.Params.toc) -}}
 {{- $toc := .TableOfContents -}}
-{{- if and $toc (ne $toc "<nav id=\"TableOfContents\"></nav>") -}}
+{{- $valid := and $toc (ne $toc "<nav id=\"TableOfContents\"></nav>") -}}
+{{- if and $enable $valid -}}
 <aside class="post-toc border col-md-4 surface">
   {{- $toc -}}
 </aside>

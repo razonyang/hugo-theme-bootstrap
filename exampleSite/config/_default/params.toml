@@ -21,6 +21,7 @@ palette = "blue" # Default palette. Optional.
 googleAdsense = ""
 
 # math = true # Enable math globally.
+# toc = false # Disable TOC globally.
 
 # poweredBy = false # Whether to show powered by.
 

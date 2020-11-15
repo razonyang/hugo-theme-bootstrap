@@ -94,6 +94,7 @@ $ hugo server
 | `mainSections` | Array | `["posts"]` | 主要的 sections
 | `titleSeparator` | String | `-` | 標題分隔符
 | `comment` | Boolean | `true` | 是否開啟評論
+| `toc` | Boolean | `true` | 是否開啟目錄
 | `utterances` | Object | - | Utterances
 | `dateFormat` | String | `Jan 2, 2006` | 日期格式。 查閱 [Hugo Date and Time Templating Reference](https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference) 以獲取詳細資訊。
 | `poweredBy` | Boolean | `true` | 是否顯示技術支援。
@@ -157,6 +158,7 @@ $ hugo server
 |---|:-:|:-:|---
 | **Page** 
 | `comment` | Boolean | `true` | 是否開啟評論，如果評論已被全域性關閉，該引數無效
+| `toc` | Boolean | `true` | 是否開啟目錄，如果目錄已被全域性關閉，該引數無效
 | `math` | Boolean | `false` | 是否開啟 `math`
 
 ## 評論

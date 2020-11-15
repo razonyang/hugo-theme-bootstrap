@@ -94,6 +94,7 @@ As the example site shown, the configuration are separated into multiple files, 
 | `mainSections` | Array | `["posts"]` | Main sections
 | `titleSeparator` | String | `-` | Title separator
 | `comment` | Boolean | `true` | Whether to enable comments
+| `toc` | Boolean | `true` | Whether to enable TOC
 | `utterances` | Object | - | Utterances comments
 | `dateFormat` | String | `Jan 2, 2006` | Date format. Checkout the [Hugo Date and Time Templating Reference](https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference) for details.
 | `poweredBy` | Boolean | `true` | Whether to show powered by.
@@ -157,6 +158,7 @@ As the example site shown, the configuration are separated into multiple files, 
 |---|:-:|:-:|---
 | **Page** 
 | `comment` | Boolean | `true` | Whether to enable comments. It won't work if `comment` has been disabled globally.
+| `toc` | Boolean | `true` | Whether to enable TOC. It won't work if `toc` has been disabled globally.
 | `math` | Boolean | `false` | Whether to enable math.
 
 ## Comments
