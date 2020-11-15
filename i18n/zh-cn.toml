@@ -1,3 +1,6 @@
+[alipay]
+other = "支付宝"
+
 [archives]
 other = "归档"
 
@@ -58,6 +61,9 @@ other = "最近文章"
 [related_posts]
 other = "相关文章"
 
+[reward]
+other = "打赏"
+
 [search]
 other = "搜索"
 
@@ -72,3 +78,6 @@ other = "找到相关结果{{ .Total }}个"
 
 [tags]
 other = "标签"
+
+[wechat]
+other = "微信"

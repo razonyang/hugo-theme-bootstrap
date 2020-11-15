@@ -1,0 +1,41 @@
+{{- $reward := .Site.Params.reward }}
+{{- if $reward -}}
+<div class="post-reward mb-4 text-center">
+  <button type="button" class="btn btn-reward" data-toggle="modal" data-target="#rewardModal">
+    {{ i18n "reward" }}
+  </button>
+</div>
+
+<div class="modal fade" id="rewardModal" tabindex="-1" aria-labelledby="rewardModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content surface">
+      <div class="modal-header">
+        <h5 class="modal-title" id="rewardModalLabel">{{ i18n "reward" }}</h5>
+        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <ul class="nav nav-tabs mb-3" role="tablist">
+          {{- $index := 0 -}}
+          {{- range $key, $value := $reward -}}
+          <li class="nav-item" role="presentation">
+            <a class="nav-link{{ if eq $index 0 }} active{{ end }}" id="reward-{{ $key }}-tab" data-toggle="tab" href="#reward-{{ $key }}" role="tab" aria-controls="reward-{{ $key }}" aria-selected="true">
+              {{ i18n $key }}
+            </a>
+          </li>
+          {{- $index = add $index 1 -}}
+          {{- end -}}
+        </ul>
+        <div class="tab-content" id="rewardTabContent">
+          {{- $index = 0 -}}
+          {{- range $key, $value := $reward -}}
+          <div class="tab-pane fade post-reward-content show{{ if eq $index 0 }} active{{ end }}" id="reward-{{ $key }}" role="tabpanel" aria-labelledby="reward-{{ $key }}-tab">
+            <img class="img-fluid post-reward-img" src="{{ absURL $value }}" loading="lazy" />
+          </div>
+          {{- $index = add $index 1 -}}
+          {{- end -}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{- end -}}

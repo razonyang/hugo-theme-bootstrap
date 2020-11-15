@@ -44,6 +44,7 @@
 - 麵包屑導航
 - 歸檔
 - 資源延遲載入：支援 `image` 和 `iframe` 等。
+- 打賞掛件：支持支付寶和微信。
 - 文章目錄導航
 - [評論](#評論)：支援 [Disqus](#disqus) 和 [Utterances](#utterances)。
 - [自定義資源](#自定義資源)：自定義 CSS 和 JS。
@@ -108,6 +109,9 @@ $ hugo server
 | `categoryCount` | Integer | `10` | 分類數
 | `tagCount` | Integer | `10` | 標籤數
 | `fullWidth` | Boolean | `false` | 是否全寬
+| `reward` | Object | - | 打賞
+| `reward.alipay` | String | - | 支付寶收款二維碼圖片
+| `reward.wechat` | String | - | 微信收款/打賞二維碼圖片
 | **Archive**
 | `archive` | Object | - | 歸檔
 | `archive.paginate` | Integer | `100` | 歸檔分頁

@@ -43,7 +43,8 @@ This theme is an extreme fast, responsive and feature-rich blog theme for Hugo.
 - Search.
 - Breadcrumb.
 - Archive.
-- Lazy Loading Resources, such as `image` and `iframe`.
+- Resources Lazy Loading: `image` and `iframe`.
+- Reward Widget: supports Alipay and Wechat.
 - Table of Contents.
 - [Comments](#comments): supports [Disqus](#disqus) and [Utterances](#utterances).
 - [Custom Assets](#custom-assets): custom CSS and JS.
@@ -108,6 +109,9 @@ As the example site shown, the configuration are separated into multiple files, 
 | `categoryCount` | Integer | `10` | The number of categories shown in sidebar.
 | `tagCount` | Integer | `10` | The number of tags shown in sidebar.
 | `fullWidth` | Boolean | `false` | Full width.
+| `reward` | Object | - | Reward
+| `reward.alipay` | String | - | Alipay QR Code Image.
+| `reward.wechat` | String | - | Wechat QR Code Image.
 | **Archive**
 | `archive` | Object | - | Archive configuration.
 | `archive.paginate` | Integer | `100` | Archive pagination.

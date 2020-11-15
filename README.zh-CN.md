@@ -44,6 +44,7 @@
 - 面包屑导航
 - 归档
 - 资源延迟加载：支持 `image` 和 `iframe` 等。
+- 打赏挂件：支持支付宝和微信。
 - 文章目录导航
 - [评论](#评论)：支持 [Disqus](#disqus) 和 [Utterances](#utterances)。
 - [自定义资源](#自定义资源)：自定义 CSS 和 JS。
@@ -108,6 +109,9 @@ $ hugo server
 | `categoryCount` | Integer | `10` | 分类数
 | `tagCount` | Integer | `10` | 标签数
 | `fullWidth` | Boolean | `false` | 是否全宽
+| `reward` | Object | - | 打赏
+| `reward.alipay` | String | - | 支付宝收款二维码图片
+| `reward.wechat` | String | - | 微信收款/打赏二维码图片
 | **Archive**
 | `archive` | Object | - | 归档
 | `archive.paginate` | Integer | `100` | 归档分页

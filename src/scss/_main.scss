@@ -50,6 +50,11 @@ btn:hover,
   color: var(--hbs-accent);
 }
 
+.btn {
+  color: var(--hbs-primary-text);
+  background-color: var(--hbs-background);
+}
+
 code {
   color: var(--hbs-accent);
 }

@@ -1,3 +1,6 @@
+[alipay]
+other = "Alipay"
+
 [archives]
 other = "Archives"
 
@@ -58,6 +61,9 @@ other = "Recent Posts"
 [related_posts]
 other = "Related Posts"
 
+[reward]
+other = "Reward"
+
 [search]
 other = "Search"
 
@@ -72,3 +78,6 @@ other = "Found {{ .Total }} results"
 
 [tags]
 other = "Tags"
+
+[wechat]
+other = "WeChat"
