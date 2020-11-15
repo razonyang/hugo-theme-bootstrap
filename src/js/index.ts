@@ -5,6 +5,7 @@ import * as FontAwesome from './fontawesome';
 import PaletteSwitcher from './palette';
 import LanguageSwitcher from './language';
 import ModeSwitcher from './mode';
+import FontSizeSwitcher from './font-size';
 
 document.addEventListener('DOMContentLoaded', () => {
   FontAwesome.watch();
@@ -26,4 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const modeSwitcher = new ModeSwitcher(document.querySelector('#modeSwitcher'));
   modeSwitcher.init();
+
+  const fontSizeSwitcher = new FontSizeSwitcher(document.querySelector('#fontSizeSwitcher'));
+  fontSizeSwitcher.init();
 });

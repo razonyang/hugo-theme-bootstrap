@@ -46,6 +46,9 @@ other = "黄色"
 [featured_posts]
 other = "精选文章"
 
+[font_size]
+other = "字体大小"
+
 [pagination_title]
 other = "第{{ .PageNumber }}页"
 

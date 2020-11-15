@@ -46,6 +46,9 @@ other = "Yellow"
 [featured_posts]
 other = "Featured Posts"
 
+[font_size]
+other = "Font Size"
+
 [pagination_title]
 other = "Page {{ .PageNumber }}"
 

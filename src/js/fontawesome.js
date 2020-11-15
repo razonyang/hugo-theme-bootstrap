@@ -3,7 +3,7 @@ import {
   faCalendarAlt, faChevronCircleUp, faEnvelope, faFolder, faLanguage,
   faPalette, faSearch, faTags, faBuilding, faMapMarkerAlt,
   faBars, faRss, faLink, faSkullCrossbones, faExclamationTriangle,
-  faCheckCircle, faInfoCircle,
+  faCheckCircle, faInfoCircle, faFont,
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faFacebook, faGithub, faGitlab, faInstagram, faLinkedin,
@@ -15,7 +15,7 @@ library.add(
   faCalendarAlt, faChevronCircleUp, faEnvelope, faFolder, faLanguage,
   faPalette, faSearch, faTags, faBuilding, faMapMarkerAlt,
   faBars, faRss, faLink, faSkullCrossbones, faExclamationTriangle,
-  faCheckCircle, faInfoCircle,
+  faCheckCircle, faInfoCircle, faFont,
 );
 
 library.add(
