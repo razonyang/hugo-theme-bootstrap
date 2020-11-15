@@ -9,6 +9,9 @@ categories = [
 tags = [
   "Alert"
 ]
+series = [
+  "User Manual"
+]
 images = [
 ]
 +++

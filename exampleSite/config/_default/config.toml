@@ -26,3 +26,8 @@ enableEmoji = true
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
+
+[taxonomies]
+  category = "categories"
+  series = "series"
+  tag = "tags"

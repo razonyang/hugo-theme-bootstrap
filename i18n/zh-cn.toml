@@ -76,6 +76,9 @@ other = "找不到相关结果"
 [search_stat]
 other = "找到相关结果{{ .Total }}个"
 
+[series]
+other = "专栏"
+
 [tags]
 other = "标签"
 

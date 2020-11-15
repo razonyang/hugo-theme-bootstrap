@@ -3,10 +3,9 @@
     <i class="fas fa-fw fa-calendar-alt"></i>{{ .Date.Format (default "Jan 2, 2006" $.Site.Params.dateFormat) }}
   </span>
   {{- partial "post/translations" . -}}
-  {{- range (.GetTerms "categories") -}}
-  <a href="{{ .Permalink }}" class="post-taxonomy">#{{ .Name }}</a>
-  {{- end -}}
-  {{- range (.GetTerms "tags") -}}
-  <a href="{{ .Permalink }}" class="post-taxonomy">#{{ .Name }}</a>
+  {{- range $key, $value := .Site.Taxonomies -}}
+    {{- range ($.GetTerms $key) -}}
+    <a href="{{ .Permalink }}" class="post-taxonomy">#{{ .Name }}</a>
+    {{- end -}}
   {{- end -}}
 </div>
