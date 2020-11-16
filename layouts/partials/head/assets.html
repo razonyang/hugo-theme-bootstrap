@@ -1,5 +1,5 @@
 {{- $mainStyle := resources.Get "css/main.css" -}}
-{{- $configStyle := resources.Get "css/config.template.css" | resources.ExecuteAsTemplate "config.css" . | resources.ToCSS -}}
+{{- $configStyle := resources.Get "css/config.template.css" | resources.ExecuteAsTemplate "config.css" . -}}
 {{- $customStyle := resources.Get "css/custom.css" -}}
 {{- $style := slice $mainStyle $configStyle $customStyle | resources.Concat "css/bundle.css" | resources.Minify | resources.Fingerprint -}}
 <link rel=stylesheet href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous">

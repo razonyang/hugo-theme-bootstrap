@@ -1,5 +1,0 @@
-[data-font-size="small"] {
-  font-size: .8rem; }
-
-[data-font-size="large"] {
-  font-size: 1.2rem; }
