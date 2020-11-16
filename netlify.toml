@@ -6,3 +6,7 @@ command = "cd exampleSite && hugo --minify --themesDir=../../ --theme=repo"
 HUGO_VERSION = "0.78.0"
 HUGO_ENV = "production"
 HUGO_ENABLEGITINFO = "true"
+
+[context.develop.environment]
+HUGO_VERSION = "0.78.0"
+HUGO_ENABLEGITINFO = "true"
