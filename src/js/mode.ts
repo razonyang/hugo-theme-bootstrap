@@ -17,6 +17,7 @@ class ModeSwitcher {
     });
 
     window.matchMedia('(prefers-color-scheme: dark)').addListener((e) => {
+      console.log('sss')
       instance.setMode(e.matches ? 'dark' : 'light');
     });
   }
@@ -33,11 +34,11 @@ class ModeSwitcher {
     let mode = localStorage.getItem(this.key);
     if (!mode) {
       // load scheme from query media
-      if (window.getComputedStyle(document.body).getPropertyValue('--prefers-color-scheme').toString().trim() === 'dark') {
+      if (window.getComputedStyle(document.body).getPropertyValue('--mode').toString().trim() === 'dark') {
         mode = 'dark';
       }
     }
-    return mode;
+    return mode ? mode : 'light';
   }
 
   setMode(value: string) {
