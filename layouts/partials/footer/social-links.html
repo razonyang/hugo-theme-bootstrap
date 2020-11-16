@@ -18,12 +18,14 @@
 {{- range $key, $user := .Site.Social -}}
   {{- if eq $key "email" -}}
   <li class="nav-item">
-    <a class="nav-link social-link" href="mailto:{{ $user }}"><i class="fas fa-fw fa-2x fa-envelope"></i></a>
+    <a class="nav-link social-link" href="mailto:{{ $user }}" title="{{ title $key }}">
+      <i class="fas fa-fw fa-2x fa-envelope"></i>
+    </a>
   </li>
   {{- else -}}
     {{- with index $items $key -}}
     <li class="nav-item">
-      <a class="nav-link social-link" target="_blank" href="{{ printf .url $user }}">
+      <a class="nav-link social-link" target="_blank" href="{{ printf .url $user }}" title="{{ title $key }}">
         <i class="fab fa-fw fa-2x fa-{{ default $key .icon }}"></i>
       </a>
     </li>
@@ -32,7 +34,9 @@
 {{- end -}}
   {{- with .OutputFormats.Get "rss" -}}
   <li class="nav-item">
-    <a class="nav-link social-link" target="_blank" href="{{ .Permalink }}"><i class="fas fa-fw fa-2x fa-rss"></i></a>
+    <a class="nav-link social-link" target="_blank" href="{{ .Permalink }}" title="RSS">
+      <i class="fas fa-fw fa-2x fa-rss"></i>
+    </a>
   </li>
   {{- end -}}
 </nav>
