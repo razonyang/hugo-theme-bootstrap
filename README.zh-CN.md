@@ -272,6 +272,9 @@ github = "githubusername"
 | `twitter` | Twitter 用户名 |
 | `weibo` | 微博用户名 |
 | `zhihu` | 知乎用户名 |
+| `reddit` | Reddit 用户名 |
+| `telegram` | Telegram 用户名 |
+| `qq` | QQ 号 |
 
 ## 贡献
 
