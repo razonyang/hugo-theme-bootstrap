@@ -1,7 +1,15 @@
+.font-size-xs {
+  font-size: {{ default ".8rem" .Site.Params.fontSize.extraSmall }};
+}
+
 .font-size-sm {
-  font-size: {{ default ".875rem" .Site.Params.fontSize.small }};
+  font-size: {{ default ".9rem" .Site.Params.fontSize.small }};
 }
 
 .font-size-lg {
-  font-size: {{ default "1.125rem" .Site.Params.fontSize.large }};
+  font-size: {{ default "1.1rem" .Site.Params.fontSize.large }};
+}
+
+.font-size-xl {
+  font-size: {{ default "1.2rem" .Site.Params.fontSize.extraLarge }};
 }

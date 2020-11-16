@@ -6,6 +6,14 @@ class FontSizeSwitcher extends Popover {
 
   reg: RegExp;
 
+  sizes: Map<string, string> = new Map([
+    ["-2", "xs"],
+    ["-1", "sm"],
+    ["0", ""],
+    ["1", "lg"],
+    ["2", "xl"],
+  ]);
+
   init() {
     this.reg = new RegExp('\\bfont-size-.+?\\b', 'g');
     const { allowList } = BSPopover.Default;
@@ -48,19 +56,8 @@ class FontSizeSwitcher extends Popover {
   }
 
   setSize(value: string) {
-    let size: string;
-    switch (value) {
-      case '-1':
-        size = 'sm';
-        break;
-      case '1':
-        size = 'lg';
-        break;
-      default:
-        size = '';
-        break;
-    }
-    document.body.className = document.body.className.replace(this.reg, '');
+    let size: string = this.sizes.get(value);
+    document.body.classList.remove('font-size-' + this.sizes.get(this.getSize()));
     if (size === '') {
       localStorage.removeItem(this.key);
     } else {

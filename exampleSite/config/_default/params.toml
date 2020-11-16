@@ -76,5 +76,7 @@ customJS = []
   # addThis = "" # AddThis pubid.
 
 [fontSize]
-  small = ".8rem"
-  large = "1.2rem"
+  # extraSmall = ".8rem"
+  # small = ".9rem"
+  # large = "1.1rem"
+  # extraLarge = "1.2rem"

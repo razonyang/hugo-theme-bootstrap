@@ -118,8 +118,10 @@ As the example site shown, the configuration are separated into multiple files, 
 | `share` | Object | - | Share buttons
 | `share.addThis` | String | - | [AddThis](https://www.addthis.com)'s `pubid`.
 | `fontSize` | Object | Font Sizes
-| `fontSize.small` | String | `.875rem` | Small font size.
-| `fontSize.large` | String | `1.125rem` | Large font size.
+| `fontSize.small` | String | `.9rem` | Small font size.
+| `fontSize.extraSmall` | String | `.8rem` | Extra small font size.
+| `fontSize.large` | String | `1.1rem` | Large font size.
+| `fontSize.extraLarge` | String | `1.2rem` | Extra large font size.
 | **Archive**
 | `archive` | Object | - | Archive configuration.
 | `archive.paginate` | Integer | `100` | Archive pagination.
