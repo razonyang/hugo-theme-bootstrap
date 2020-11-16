@@ -138,6 +138,10 @@ export class Search {
     document.title = title; // history.pushState's title was ignored.
   }
 
+  normalizeTaxonomy(text, render) {
+    return render(text).toLowerCase().replace(" ", "-");
+  }
+
   poplateResults() {
     if (!this.results) {
       return;
@@ -187,6 +191,13 @@ export class Search {
         content,
         id,
         permalink: result.item.permalink,
+        categories: result.item.categories,
+        tags: result.item.tags,
+        series: result.item.series,
+        score: (100*(1-result.score)).toFixed(2),
+        url: function() {
+          return instance.normalizeTaxonomy;
+        }
       }));
       instance.highlight(id, titleKeywords, contentKeywords);
     }

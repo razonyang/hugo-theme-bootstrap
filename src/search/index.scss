@@ -11,3 +11,17 @@
   color: var(--hbs-accent);
   background-color: #fff;
 }
+
+.search-result-meta {
+  color: var(--hbs-secondary-text);
+}
+
+.search-result-taxonomy {
+  margin: 0 .25rem .25rem 0;
+  color: var(--hbs-secondary-text);
+
+  +.search-result-taxonomy:before {
+    content: "·";
+    margin-right: .5rem;
+  }
+}
