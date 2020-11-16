@@ -2,7 +2,7 @@
 {{- if $reward -}}
 <div class="post-reward mb-4 text-center">
   <button type="button" class="btn btn-reward" data-toggle="modal" data-target="#rewardModal">
-    {{ i18n "reward" }}
+    <i class="fas fa-fw fa-medal"></i> {{ i18n "reward" }}
   </button>
 </div>
 
@@ -10,8 +10,8 @@
   <div class="modal-dialog">
     <div class="modal-content surface">
       <div class="modal-header">
-        <h5 class="modal-title" id="rewardModalLabel">{{ i18n "reward" }}</h5>
-        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+        <h5 class="modal-title" id="rewardModalLabel"><i class="fas fa-fw fa-medal"></i> {{ i18n "reward" }}</h5>
+        <a href="#" data-dismiss="modal" aria-label="Close"><i class="fas fa-fw fa-times"></i></a>
       </div>
       <div class="modal-body">
         <ul class="nav nav-tabs mb-3" role="tablist">
