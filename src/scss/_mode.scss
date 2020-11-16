@@ -38,9 +38,9 @@ $mode-switcher-checked-bg-image: url("data:image/svg+xml,<svg t='1605458255467' 
 
 #modeSwitcher {
   background-image: $mode-switcher-bg-image;
-  height: 1.125rem;
-  margin-right: .25rem;
-  width: 2.25rem;
+  height: 1.2rem;
+  width: 2.5rem;   
+  margin-bottom: .25rem;
 }
 
 #modeSwitcher:focus {
