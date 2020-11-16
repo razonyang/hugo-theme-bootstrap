@@ -8,6 +8,7 @@
   --hbs-disabled-text: #{$dark-disabled};
   --hbs-accent: var(--hbs-primary);
   --hbs-shadow: rgba(0, 0, 0, .075);
+  --hbs-navbar-bg: var(--hbs-primary);
 }
 
 @mixin mode-dark {
@@ -20,13 +21,14 @@
   --hbs-disabled-text: #{$white-disabled};
   --hbs-accent: var(--hbs-primary-light);
   --hbs-shadow: rgba(0, 0, 0, .75);
+  --hbs-navbar-bg: var(--hbs-surface);
 }
 
-[data-mode="light"] {
+.mode-light {
   @include mode-light;
 }
 
-[data-mode="dark"] {
+.mode-dark {
   @include mode-dark;
 }
 

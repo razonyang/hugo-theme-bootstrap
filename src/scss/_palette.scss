@@ -4,7 +4,7 @@
   --hbs-accent: var(--hbs-primary);
 }
 
-[data-palette="blue"] {
+.palette-blue {
   @include palette-blue;
 }
 
@@ -14,7 +14,7 @@
   --hbs-accent: var(--hbs-primary);
 }
 
-[data-palette="blue-gray"] {
+.palette-blue-gray {
   @include palette-blue-gray;
 }
 
@@ -24,7 +24,7 @@
   --hbs-accent: var(--hbs-primary);
 }
 
-[data-palette="brown"] {
+.palette-brown {
   @include palette-brown;
 }
 
@@ -34,7 +34,7 @@
   --hbs-accent: var(--hbs-primary);
 }
 
-[data-palette="cyan"] {
+.palette-cyan {
   @include palette-cyan;
 }
 
@@ -44,7 +44,7 @@
   --hbs-accent: var(--hbs-primary);
 }
 
-[data-palette="gray"] {
+.palette-gray {
   @include palette-gray;
 }
 
@@ -54,7 +54,7 @@
   --hbs-accent: var(--hbs-primary);
 }
 
-[data-palette="green"] {
+.palette-green {
   @include palette-green;
 }
 
@@ -64,7 +64,7 @@
   --hbs-accent: var(--hbs-primary);
 }
 
-[data-palette="indigo"] {
+.palette-indigo {
   @include palette-indigo;
 }
 
@@ -74,7 +74,7 @@
   --hbs-accent: var(--hbs-primary);
 }
 
-[data-palette="orange"] {
+.palette-orange {
   @include palette-orange;
 }
 
@@ -84,7 +84,7 @@
   --hbs-accent: var(--hbs-primary);
 }
 
-[data-palette="pink"] {
+.palette-pink {
   @include palette-pink;
 }
 
@@ -94,7 +94,7 @@
   --hbs-accent: var(--hbs-primary);
 }
 
-[data-palette="purple"] {
+.palette-purple {
   @include palette-purple;
 }
 
@@ -104,7 +104,7 @@
   --hbs-accent: var(--hbs-primary);
 }
 
-[data-palette="red"] {
+.palette-red {
   @include palette-red;
 }
 
@@ -114,7 +114,7 @@
   --hbs-accent: var(--hbs-primary);
 }
 
-[data-palette="teal"] {
+.palette-teal {
   @include palette-teal;
 }
 
@@ -124,7 +124,7 @@
   --hbs-accent: var(--hbs-primary);
 }
 
-[data-palette="yellow"] {
+.palette-yellow {
   @include palette-yellow;
 }
 

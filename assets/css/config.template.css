@@ -1,7 +1,7 @@
-[data-font-size="small"] {
+.font-size-sm {
   font-size: {{ default ".875rem" .Site.Params.fontSize.small }};
 }
 
-[data-font-size="large"] {
+.font-size-lg {
   font-size: {{ default "1.125rem" .Site.Params.fontSize.large }};
 }

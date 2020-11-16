@@ -1,5 +1,5 @@
 :root {
-  @include mode-light;
+  @extend .mode-light;
   --mode: none;
   --hbs-font-size: 1rem;
 }
@@ -9,7 +9,7 @@
     --mode: dark;
   }
 
-  :root:not([data-mode]) {
+  :root:not(.mode-dark) {
     @include mode-dark;
   }
 }

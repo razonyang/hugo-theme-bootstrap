@@ -1,10 +1,6 @@
 .navbar {
-  background-color: var(--hbs-primary);
+  background-color: var(--hbs-navbar-bg);
   color: #{$white-secondary};
-}
-
-[data-mode="dark"] .navbar {
-  background-color: var(--hbs-surface);
 }
 
 .logo {

@@ -4,7 +4,10 @@ import Popover from './popover';
 class FontSizeSwitcher extends Popover {
   key: string;
 
+  reg: RegExp;
+
   init() {
+    this.reg = new RegExp('\\bfont-size-.+?\\b', 'g');
     const { allowList } = BSPopover.Default;
     allowList.form = [];
     allowList.label = ['for'];
@@ -48,21 +51,21 @@ class FontSizeSwitcher extends Popover {
     let size: string;
     switch (value) {
       case '-1':
-        size = 'small';
+        size = 'sm';
         break;
       case '1':
-        size = 'large';
+        size = 'lg';
         break;
       default:
         size = '';
         break;
     }
+    document.body.className = document.body.className.replace(this.reg, '');
     if (size === '') {
       localStorage.removeItem(this.key);
-      document.body.removeAttribute('data-font-size');
     } else {
       localStorage.setItem(this.key, value);
-      document.body.setAttribute('data-font-size', size);
+      document.body.classList.add('font-size-' + size);
     }
   }
 }
