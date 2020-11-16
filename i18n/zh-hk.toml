@@ -52,6 +52,9 @@ other = "精選文章"
 [font_size]
 other = "字體大小"
 
+[load_more]
+other = "加載更多"
+
 [pagination_title]
 other = "第{{ .PageNumber }}頁"
 

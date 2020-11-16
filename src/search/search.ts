@@ -3,7 +3,11 @@ import * as Mustache from 'mustache';
 import * as Mark from 'mark.js';
 
 declare global {
-  interface Window { fuseOptions: any; searchResultContentWordCount: number; }
+  interface Window {
+    fuseOptions: any;
+    searchResultContentWordCount: number;
+    searchPaginate: number;
+  }
 }
 
 export class Search {
@@ -11,7 +15,7 @@ export class Search {
 
   private fuse: any;
 
-  public results: HTMLElement;
+  public resultsElement: HTMLElement;
 
   public stat: HTMLElement;
 
@@ -34,20 +38,37 @@ export class Search {
 
   public title: string;
 
+  public paginate: number = 10;
+
+  private page: number = 1;
+
+  private results: any;
+
+  private loading: boolean = false;
+
+  public loadMore: HTMLElement;
+
   constructor(public form: HTMLFormElement) {
   }
 
   init() {
     this.title = document.title;
-    this.results = document.getElementById('searchResults');
+    this.resultsElement = document.getElementById('searchResults');
     this.stat = document.getElementById('searchStat');
     this.tmplMissingKeywords = document.getElementById('templateMissingKeywords').innerHTML;
     this.tmplNoResults = document.getElementById('templateNoResults').innerHTML;
     this.tmplStat = document.getElementById('templateStat').innerHTML;
     this.tmplResult = document.getElementById('templateResult').innerHTML;
     this.resultContentWordCount = window.searchResultContentWordCount;
+    this.paginate = window.searchPaginate;
     this.initForm();
     this.initFuse();
+
+    const instance = this;
+    this.loadMore = document.getElementById('btnLoadMore');
+    this.loadMore.addEventListener('click', () => {
+      instance.poplateResults();
+    });
   }
 
   initFuse() {
@@ -92,12 +113,19 @@ export class Search {
   }
 
   search(query: string) {
-    this.results.innerHTML = ''; // Clear previous results.
+    this.resultsElement.innerHTML = ''; // Clear previous results.
+    this.page = 1;
     this.setPage(query);
     const results = this.fuse.search(query);
     console.debug({ results });
+    this.results = results;
+    if (this.results.length > this.paginate) {
+      this.loadMore.classList.remove('d-none');
+    } else {
+      this.loadMore.classList.add('d-none');
+    }
     if (results.length > 0) {
-      this.poplateResults(results);
+      this.poplateResults();
     } else {
       this.stat.innerHTML = this.tmplNoResults;
     }
@@ -110,10 +138,22 @@ export class Search {
     document.title = title; // history.pushState's title was ignored.
   }
 
-  poplateResults(results: any) {
-    this.stat.innerHTML = Mustache.render(this.tmplStat, { total: results.length });
+  poplateResults() {
+    if (!this.results) {
+      return;
+    }
+    if (this.loading) {
+      return;
+    }
+    this.loading = true;
+    this.loadMore.setAttribute('disabled', '');
+    this.stat.innerHTML = Mustache.render(this.tmplStat, { total: this.results.length });
     const instance = this;
-    results.forEach((result, idx) => {
+    let i = (this.page - 1) * this.paginate; let
+      count = 0;
+    for (; i < this.results.length && count < this.paginate; i += 1, count += 1) {
+      const result = this.results[i];
+      const idx = (this.page - 1) * this.paginate + i;
       const titleKeywords = [];
       const contentKeywords = [];
       result.matches.forEach((match) => {
@@ -142,14 +182,20 @@ export class Search {
         content = `${(contentStart === 0 ? '' : '...') + content.substring(contentStart, contentStart + instance.resultContentWordCount)}...`;
       }
       const id = `searchResult${idx}`;
-      instance.results.insertAdjacentHTML('beforeend', Mustache.render(instance.tmplResult, {
+      instance.resultsElement.insertAdjacentHTML('beforeend', Mustache.render(instance.tmplResult, {
         title: result.item.title,
         content,
         id,
         permalink: result.item.permalink,
       }));
       instance.highlight(id, titleKeywords, contentKeywords);
-    });
+    }
+    this.loading = false;
+    this.loadMore.removeAttribute('disabled');
+    if (this.results.length <= this.paginate * this.page) {
+      this.loadMore.classList.add('d-none');
+    }
+    this.page += 1;
   }
 
   highlight(id, titleKeywords, contentKeywords) {

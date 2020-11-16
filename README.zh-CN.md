@@ -123,6 +123,7 @@ $ hugo server
 | `archive.dateFormat` | Integer | `Jan 2` | 归档日期格式
 | **Search**
 | `search` | Object | - | 搜索配置
+| `search.paginate` | Integer | `10` | 分页
 | `search.resultContentWordCount` | Integer | `240` | 搜索结果内容最大字数
 | `search.fuse` | Object | - | [Fuse.js 参数](https://fusejs.io/api/options.html)
 | `search.fuse.ignoreLocation` | Boolean | `true` |

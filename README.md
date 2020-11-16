@@ -123,6 +123,7 @@ As the example site shown, the configuration are separated into multiple files, 
 | `archive.dateFormat` | Integer | `Jan 2` | Archive date format.
 | **Search**
 | `search` | Object | - | Search configuration.
+| `search.paginate` | Integer | `10` | Pagination
 | `search.resultContentWordCount` | Integer | `240` | The maximum word count of result content for displaying.
 | `search.fuse` | Object | - | [Fuse.js options](https://fusejs.io/api/options.html).
 | `search.fuse.ignoreLocation` | Boolean | `true` |

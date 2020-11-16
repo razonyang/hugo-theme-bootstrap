@@ -5,7 +5,7 @@ class FontSizeSwitcher extends Popover {
   key: string;
 
   init() {
-    let allowList = BSPopover.Default.allowList;
+    const { allowList } = BSPopover.Default;
     allowList.form = [];
     allowList.label = ['for'];
     allowList.input = ['type', 'min', 'max', 'step'];
@@ -26,12 +26,12 @@ class FontSizeSwitcher extends Popover {
   initPopover() {
     const instance = this;
     this.element.addEventListener('shown.bs.popover', () => {
-      let input: HTMLInputElement = document.getElementById('fontSize') as HTMLInputElement;
+      const input: HTMLInputElement = document.getElementById('fontSize') as HTMLInputElement;
       input.value = instance.getSize();
-      input.addEventListener('change', function(e) {
-        instance.setSize(this.value);
+      input.addEventListener('change', () => {
+        instance.setSize(input.value);
         instance.instance.hide();
-      })
+      });
     });
   }
 
@@ -47,15 +47,15 @@ class FontSizeSwitcher extends Popover {
   setSize(value: string) {
     let size: string;
     switch (value) {
-      case "-1":
-      size = 'small';
-      break;
-      case "1":
-      size = 'large';
-      break;
+      case '-1':
+        size = 'small';
+        break;
+      case '1':
+        size = 'large';
+        break;
       default:
-      size = '';
-      break;
+        size = '';
+        break;
     }
     if (size === '') {
       localStorage.removeItem(this.key);

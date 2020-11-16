@@ -56,6 +56,7 @@ customJS = []
   #theme = "github-light" # github-light, github-dark, preferred-color-scheme, github-dark-orange, icy-dark, dark-blue, photon-dark.
 
 [search]
+  paginate = 5 # Pagination. Default to 10.
   # resultContentWordCount = 240 # The maximum word count of result content for displaying.
   # Fuse.js options. See https://fusejs.io/api/options.html.
   [search.fuse]

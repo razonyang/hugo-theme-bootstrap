@@ -52,6 +52,9 @@ other = "Featured Posts"
 [font_size]
 other = "Font Size"
 
+[load_more]
+other = "Load More"
+
 [pagination_title]
 other = "Page {{ .PageNumber }}"
 
