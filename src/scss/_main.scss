@@ -4,14 +4,6 @@
   --hbs-font-size: 1rem;
 }
 
-[data-font-size="small"] {
-  font-size: 0.875rem;
-}
-
-[data-font-size="large"] {
-  font-size: 1.125rem;
-}
-
 @media (prefers-color-scheme: dark) {
   :root {
     --mode: dark;

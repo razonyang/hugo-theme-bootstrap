@@ -117,6 +117,9 @@ As the example site shown, the configuration are separated into multiple files, 
 | `reward.wechat` | String | - | Wechat QR Code Image.
 | `share` | Object | - | Share buttons
 | `share.addThis` | String | - | [AddThis](https://www.addthis.com)'s `pubid`.
+| `fontSize` | Object | Font Sizes
+| `fontSize.small` | String | `.875rem` | Small font size.
+| `fontSize.large` | String | `1.125rem` | Large font size.
 | **Archive**
 | `archive` | Object | - | Archive configuration.
 | `archive.paginate` | Integer | `100` | Archive pagination.

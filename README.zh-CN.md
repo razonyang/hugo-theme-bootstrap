@@ -117,6 +117,9 @@ $ hugo server
 | `reward.wechat` | String | - | 微信收款/打赏二维码图片
 | `share` | Object | - | 分享按钮
 | `share.addThis` | String | - | [AddThis](https://www.addthis.com) `pubid`。
+| `fontSize` | Object | 字体大小
+| `fontSize.small` | String | `.875rem` | 小字体
+| `fontSize.large` | String | `1.125rem` | 大字体
 | **Archive**
 | `archive` | Object | - | 归档
 | `archive.paginate` | Integer | `100` | 归档分页
