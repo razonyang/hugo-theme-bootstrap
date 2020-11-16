@@ -42,8 +42,8 @@ class ModeSwitcher {
 
   setMode(value: string) {
     console.debug(`Switch to ${value} mode`);
-    localStorage.setItem(this.key, value);
     document.body.setAttribute('data-mode', value);
+    localStorage.setItem(this.key, value);
     let checked: boolean = false;
     if (value === 'dark') {
       checked = true;

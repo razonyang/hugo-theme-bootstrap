@@ -10,6 +10,12 @@ import FontSizeSwitcher from './font-size';
 document.addEventListener('DOMContentLoaded', () => {
   FontAwesome.watch();
 
+  const modeSwitcher = new ModeSwitcher(document.querySelector('#modeSwitcher'));
+  modeSwitcher.init();
+
+  const paletteSwitcher = new PaletteSwitcher(document.querySelector('#paletteSwitcher'));
+  paletteSwitcher.init();
+
   const scroller = new Scroller(document.getElementById('btnScrollToTop'));
   scroller.init();
 
@@ -19,14 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const anchorLink = new AnchorLink(document.body.querySelectorAll('.post-content h1, h2, h3, h4, h5, h6'));
   anchorLink.init();
 
-  const paletteSwitcher = new PaletteSwitcher(document.querySelector('#paletteSwitcher'));
-  paletteSwitcher.init();
-
   const languageSwitcher = new LanguageSwitcher(document.querySelector('#languageSwitcher'));
   languageSwitcher.init();
-
-  const modeSwitcher = new ModeSwitcher(document.querySelector('#modeSwitcher'));
-  modeSwitcher.init();
 
   const fontSizeSwitcher = new FontSizeSwitcher(document.querySelector('#fontSizeSwitcher'));
   fontSizeSwitcher.init();
