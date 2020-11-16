@@ -6,6 +6,7 @@
   </button>
 </div>
 
+{{- $icons := dict "wechat" "weixin" -}}
 <div class="modal fade" id="rewardModal" tabindex="-1" aria-labelledby="rewardModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content surface">
@@ -19,7 +20,7 @@
           {{- range $key, $value := $reward -}}
           <li class="nav-item" role="presentation">
             <a class="nav-link{{ if eq $index 0 }} active{{ end }}" id="reward-{{ $key }}-tab" data-toggle="tab" href="#reward-{{ $key }}" role="tab" aria-controls="reward-{{ $key }}" aria-selected="true">
-              {{ i18n $key }}
+              <i class="fab fa-fw fa-{{ default $key (index $icons $key) }}"></i> {{ i18n $key }}
             </a>
           </li>
           {{- $index = add $index 1 -}}
