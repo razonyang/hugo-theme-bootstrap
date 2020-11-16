@@ -1,12 +1,10 @@
 class ModeSwitcher {
   public key: string = 'hbs-mode';
-  public modeReg: RegExp;
 
   constructor(public element: HTMLInputElement) {
   }
 
   init() {
-    this.modeReg = new RegExp('\\bmode-.+?\\b', 'g');
     this.initListeners();
     this.initMode();
   }
@@ -44,14 +42,14 @@ class ModeSwitcher {
 
   setMode(value: string) {
     console.debug(`Switch to ${value} mode`);
-    document.body.className =  document.body.className.replace(this.modeReg, '');
+    document.body.classList.remove('mode-' + this.getMode());
     document.body.classList.add('mode-' + value);
-    localStorage.setItem(this.key, value);
     let checked: boolean = false;
     if (value === 'dark') {
       checked = true;
     }
     this.element.checked = checked;
+    localStorage.setItem(this.key, value);
   }
 }
 

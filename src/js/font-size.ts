@@ -4,8 +4,6 @@ import Popover from './popover';
 class FontSizeSwitcher extends Popover {
   key: string;
 
-  reg: RegExp;
-
   sizes: Map<string, string> = new Map([
     ["-2", "xs"],
     ["-1", "sm"],
@@ -15,7 +13,6 @@ class FontSizeSwitcher extends Popover {
   ]);
 
   init() {
-    this.reg = new RegExp('\\bfont-size-.+?\\b', 'g');
     const { allowList } = BSPopover.Default;
     allowList.form = [];
     allowList.label = ['for'];

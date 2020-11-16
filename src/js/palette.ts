@@ -3,12 +3,9 @@ import Popover from './popover';
 class PaletteSwitcher extends Popover {
   key: string;
 
-  paletteReg: RegExp;
-
   init() {
     super.init();
     this.key = 'hbs-palette';
-    this.paletteReg = new RegExp('\\bpalette-.+?\\b', 'g');
     this.initPalette();
     this.initPopover();
   }
@@ -53,9 +50,9 @@ class PaletteSwitcher extends Popover {
 
   setPalette(palette: string) {
     console.debug(`switch to palette: ${palette}`);
-    localStorage.setItem(this.key, palette);
-    document.body.className =  document.body.className.replace(this.paletteReg, '');
+    document.body.classList.remove('palette-' + this.getPalette());
     document.body.classList.add('palette-' + palette);
+    localStorage.setItem(this.key, palette);
   }
 }
 
