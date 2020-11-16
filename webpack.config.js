@@ -1,5 +1,6 @@
 const path = require('path');
 const ESLintPlugin = require('eslint-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -63,6 +64,14 @@ module.exports = {
     extensions: [ '.tsx', '.ts', '.js', 'jsx' ],
   },
   plugins: [
-    new ESLintPlugin()
+    new ESLintPlugin(),
+    new CopyPlugin({
+      patterns: [
+        { 
+          from: path.resolve(path.join(__dirname, 'node_modules/@fortawesome/fontawesome-free/webfonts')),
+          to: path.resolve(path.join(__dirname, 'static/fonts')),
+        },
+      ],
+    }),
   ]
 };

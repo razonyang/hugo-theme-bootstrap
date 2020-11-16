@@ -1,15 +1,12 @@
 import Scroller from './scroller';
 import TableWrapper from './table';
 import AnchorLink from './anchor';
-import * as FontAwesome from './fontawesome';
 import PaletteSwitcher from './palette';
 import LanguageSwitcher from './language';
 import ModeSwitcher from './mode';
 import FontSizeSwitcher from './font-size';
 
 document.addEventListener('DOMContentLoaded', () => {
-  FontAwesome.watch();
-
   const modeSwitcher = new ModeSwitcher(document.querySelector('#modeSwitcher'));
   modeSwitcher.init();
 
