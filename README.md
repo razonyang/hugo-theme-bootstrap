@@ -35,7 +35,7 @@ This theme is an extreme fast, responsive and feature-rich blog theme for Hugo.
 - Extreme Fast: [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/?url=https://hbs.razonyang.com/en/)'s score `95-100`.
 - Built on top of [Bootstrap 5](https://v5.getbootstrap.com/).
 - Responsive.
-- Various Palettes: `blue`, `blue-gray`, `brown`, `cyan`, `gray`, `green`, `indigo`, `orange`, `pink`, `purple`, `red`, `teal`, `yellow`.
+- Various Palettes: `blue`, `blue-gray`, `brown`, `cyan`, `green`, `indigo`, `orange`, `pink`, `purple`, `red`, `teal`, `yellow`.
 - [Highly Configurable](#configuration).
 - Dark Mode Switcher.
 - Font Size Switcher.

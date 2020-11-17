@@ -18,9 +18,6 @@ $brown-primary-light: #a98274;
 $cyan-primary: #00838f;
 $cyan-primary-light: #4fb3bf;
 
-$gray-primary: #494949;
-$gray-primary-light: #a4a4a4;
-
 $green-primary: #2e7d32;
 $green-primary-light: #60ad5e;
 
@@ -61,10 +58,6 @@ $yellow-primary-light: #ffb04c;
 
 .bg-cyan {
   background-color: #{$cyan-primary} !important;
-}
-
-.bg-gray {
-  background-color: #{$gray-primary} !important;
 }
 
 .bg-green {

@@ -11,7 +11,7 @@ brand = "BOOTSTRAP"
 # menusPosition = "left" # Menus position: right(default), left or center.
 
 palette = "blue" # Default palette. Optional.
-# palettes = ["blue", "blue gray", "brown", "gray"] # Available palettes. Default to ALL.
+# palettes = ["blue", "blue gray", "brown"] # Available palettes. Default to ALL.
 
 # fullWidth = true # Full width.
 

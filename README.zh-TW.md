@@ -35,7 +35,7 @@
 - 極快：[Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/?url=https://hbs.razonyang.com/en/) 分數在 `95-100` 之間
 - 基於 [Bootstrap 5](https://v5.getbootstrap.com/)
 - 響應式
-- 多種配色：`blue`, `blue-gray`, `brown`, `cyan`, `gray`, `green`, `indigo`, `orange`, `pink`, `purple`, `red`, `teal`, `yellow`
+- 多種配色：`blue`, `blue-gray`, `brown`, `cyan`, `green`, `indigo`, `orange`, `pink`, `purple`, `red`, `teal`, `yellow`
 - [高度可配置](#配置)
 - 深色模式
 - 字體大小切換

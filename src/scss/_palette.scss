@@ -38,16 +38,6 @@
   @include palette-cyan;
 }
 
-@mixin palette-gray {
-  --hbs-primary: #{$gray-primary};
-  --hbs-primary-light: #{$gray-primary-light};
-  --hbs-accent: var(--hbs-primary);
-}
-
-.palette-gray {
-  @include palette-gray;
-}
-
 @mixin palette-green {
   --hbs-primary: #{$green-primary};
   --hbs-primary-light: #{$green-primary-light};
