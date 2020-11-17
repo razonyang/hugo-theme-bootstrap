@@ -95,6 +95,7 @@ $ hugo server
 | `titleSeparator` | String | `-` | 標題分隔符
 | `comment` | Boolean | `true` | 是否開啟評論
 | `toc` | Boolean | `true` | 是否開啟目錄
+| `breadcrumb` | Boolean | `true` | 是否開啟麵包屑導航
 | `utterances` | Object | - | Utterances
 | `dateFormat` | String | `Jan 2, 2006` | 日期格式。 查閱 [Hugo Date and Time Templating Reference](https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference) 以獲取詳細資訊。
 | `poweredBy` | Boolean | `true` | 是否顯示技術支援。
