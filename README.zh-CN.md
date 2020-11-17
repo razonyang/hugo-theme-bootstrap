@@ -82,7 +82,12 @@ $ hugo server
 | `disqusShortname` | String | - | [Disqus](#disqus) shortname.
 | `googleAnalytics` | String | - | Google Analytics.
 | `social` | Object | - | [社交链接](#社交链接)
-| `author` | Object | - | 个人档案。可用参数： `name`, `avatar`, `bio`, `company` and `location`。
+| `author` | Object | - | 个人档案
+| `author.name` | String | - | 名称
+| `author.avatar` | String | `images/profile.webp` | 头像
+| `author.bio` | String | - | 简介
+| `author.company` | String | - | 公司
+| `author.location` | String | - | 地理位置
 
 ## 参数
 

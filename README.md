@@ -82,7 +82,12 @@ As the example site shown, the configuration are separated into multiple files, 
 | `disqusShortname` | String | - | [Disqus](#disqus) shortname.
 | `googleAnalytics` | String | - | Google Analytics.
 | `social` | Object | - | [Social Links](#social-links).
-| `author` | Object | - | Profile information. Available parameters: `name`, `avatar`, `bio`, `company` and `location`.
+| `author` | Object | - | Profile shown in sidebar.
+| `author.name` | String | - | Name
+| `author.avatar` | String | `images/profile.webp` | Avatar
+| `author.bio` | String | - | Bio
+| `author.company` | String | - | Company
+| `author.location` | String | - | Location
 
 ## Parameters
 
