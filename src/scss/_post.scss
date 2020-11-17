@@ -22,21 +22,16 @@
 }
 
 .post-toc {
-  color: var(--hbs-secondary-text);
-  float: right;
-  padding: .5rem;
-  padding-right: 2rem;
-  margin: 0 0 1rem 1rem;
+  position: sticky;
+  top: 84px;
 }
 
-@media (max-width: breakpoint-max(sm)) {
-  .post-toc {
-    width: 100%;
-  }
+#TableOfContents {
+  max-height: 360px;
+  overflow: auto;
 }
 
 .post-toc ul {
-  list-style: initial;
   margin-bottom: 0;
 }
 

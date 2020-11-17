@@ -2,7 +2,10 @@
 {{- $toc := .TableOfContents -}}
 {{- $valid := and $toc (ne $toc "<nav id=\"TableOfContents\"></nav>") -}}
 {{- if and $enable $valid -}}
-<aside class="post-toc border col-md-4 surface">
-  {{- $toc -}}
-</aside>
+<section class="post-toc row surface">
+  <h4>Table Of Contents</h4>
+  <nav>
+    {{- $toc -}}
+  </nav>
+</section>
 {{- end -}}
