@@ -82,6 +82,9 @@ other = "找到相關結果{{ .Total }}個"
 [series]
 other = "專欄"
 
+[table_of_contents]
+other = "目錄"
+
 [tags]
 other = "標籤"
 

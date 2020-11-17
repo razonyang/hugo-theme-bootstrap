@@ -3,7 +3,7 @@
 {{- $valid := and $toc (ne $toc "<nav id=\"TableOfContents\"></nav>") -}}
 {{- if and $enable $valid -}}
 <section class="post-toc row surface">
-  <h4>Table Of Contents</h4>
+  <h4>{{ i18n "table_of_contents" }}</h4>
   <nav>
     {{- $toc -}}
   </nav>

@@ -82,6 +82,9 @@ other = "Found {{ .Total }} results"
 [series]
 other = "Series"
 
+[table_of_contents]
+other = "Table Of Contents"
+
 [tags]
 other = "Tags"
 
