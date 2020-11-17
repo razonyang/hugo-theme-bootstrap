@@ -1,4 +1,5 @@
 {{- $menusPositions := dict "right" "ml-auto" "left" "mr-auto" "center" "ml-auto mr-auto" -}}
+{{- $baseURL := $.Site.BaseURL -}}
 <nav class="navbar fixed-top navbar-expand-xl">
   <div class="container{{ if default false .Site.Params.fullWidth }}-fluid{{ end }}">
     <a class="navbar-brand{{ if .IsHome }} active{{ end }}" href="{{ absLangURL "" }}">
@@ -18,16 +19,19 @@
       <ul class="navbar-nav mb-2 mb-lg-0 mr-2 {{ index $menusPositions $menusPosition }}">
         {{- $currentPage := . -}}
         {{- range .Site.Menus.main -}}
+        {{- $url := absLangURL .URL -}}
         {{- $active := or (eq $currentPage.Permalink (absLangURL .URL)) ($currentPage.IsMenuCurrent "main" .) -}}
         {{- if .HasChildren -}}
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle{{ if $currentPage.HasMenuCurrent "main" . }} active{{ end }}" id="navbarDropdown-{{ .Identifier }}" role="button" data-toggle="dropdown" aria-expanded="false">
-            {{- .Name -}}
+            {{ .Pre }} {{- .Name -}} {{ .Post }}
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown-{{ .Identifier }}">
             {{- range .Children -}}
+            {{- $childURL := absLangURL .URL -}}
             <li>
-              <a class="dropdown-item{{ if or (eq $currentPage.Permalink (absLangURL .URL)) ($currentPage.IsMenuCurrent "main" .) }} active{{ end }}" href="{{ absLangURL .URL }}">
+              <a class="dropdown-item{{ if or (eq $currentPage.Permalink (absLangURL .URL)) ($currentPage.IsMenuCurrent "main" .) }} active{{ end }}"
+                href="{{ $childURL }}"{{ if not (hasPrefix $childURL $baseURL) }} target="_blank"{{ end }}>
                 {{ .Pre }} {{- .Name -}} {{ .Post }}
               </a>
             </li>
@@ -36,7 +40,7 @@
         </li>
         {{- else -}}
         <li class="nav-item">
-          <a class="nav-link{{ if $active }} active{{ end }}" href="{{ absLangURL .URL }}">
+          <a class="nav-link{{ if $active }} active{{ end }}" href="{{ $url }}"{{ if not (hasPrefix $url $baseURL) }} target="_blank"{{ end }}>
             {{ .Pre }} {{- .Name -}} {{ .Post }}
           </a>
         </li>
