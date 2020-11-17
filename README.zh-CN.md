@@ -166,6 +166,7 @@ $ hugo server
 | `comment` | Boolean | `true` | 是否开启评论，如果评论已被全局关闭，该参数无效
 | `toc` | Boolean | `true` | 是否开启目录，如果目录已被全局关闭，该参数无效
 | `math` | Boolean | `false` | 是否开启 `math`
+| `reward` | Boolean | `true` | 是否开启打赏
 
 ## 评论
 

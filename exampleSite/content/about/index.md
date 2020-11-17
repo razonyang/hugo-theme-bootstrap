@@ -4,6 +4,7 @@ description = "Hugo, the world's fastest framework for building websites"
 date = "2019-02-28"
 aliases = ["about-us", "about-hugo", "contact"]
 author = "Hugo Authors"
+reward = false
 [menu.main]
   weight = 50
   pre = '<i class="fas fa-fw fa-info-circle"></i> '
