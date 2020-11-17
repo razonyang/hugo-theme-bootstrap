@@ -91,3 +91,9 @@ $yellow-primary-light: #ffb04c;
 .bg-yellow {
   background-color: #{$yellow-primary} !important;
 }
+
+/* text colors */
+
+.text-accent {
+  color: var(--hbs-accent) !important;
+}

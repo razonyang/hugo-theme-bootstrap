@@ -23,7 +23,7 @@ export class Search {
 
   public highlightOptions = {
     element: 'span',
-    className: 'search-keyword',
+    className: 'text-accent',
   };
 
   public tmplMissingKeywords: string;
@@ -194,7 +194,7 @@ export class Search {
         categories: result.item.categories,
         tags: result.item.tags,
         series: result.item.series,
-        score: (100*(1-result.score)).toFixed(2),
+        score: instance.formatScore(result.score),
         url: function() {
           return instance.normalizeTaxonomy;
         }
@@ -207,6 +207,15 @@ export class Search {
       this.loadMore.classList.add('d-none');
     }
     this.page += 1;
+  }
+
+  formatScore(score) {
+    score = 100*(1-score)
+    if (score < 90) {
+      return score.toFixed(2) + '%'
+    }
+
+    return `<span class="text-accent">${score.toFixed(2)}%</span>`
   }
 
   highlight(id, titleKeywords, contentKeywords) {

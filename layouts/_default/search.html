@@ -55,7 +55,7 @@
       {{- end -}}
     </div>
     <div class="search-result-meta mb-3">
-      <span class="search-result-score"><i class="fas fa-fw fa-star"></i> {{ printf "{{score}}%%" }}</span>
+      <span class="search-result-score"><i class="fas fa-fw fa-star"></i> {{ printf "{{{score}}}" }}</span>
     </div>
   </div>
 </script>
@@ -66,6 +66,6 @@
   {{ i18n "search_no_results" }}
 </script>
 <script type="text/html" id="templateStat">
-  {{ i18n "search_stat" (dict "Total" "<span class=\"search-keyword\">{{total}}</span>") | safeHTML }}
+  {{ i18n "search_stat" (dict "Total" "<span class=\"text-accent\">{{total}}</span>") | safeHTML }}
 </script>
 {{ end }}
