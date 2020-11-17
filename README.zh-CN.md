@@ -111,9 +111,9 @@ $ hugo server
 | `description` | String | - | 站点描述
 | `palette` | String | - | 默认配色
 | `palettes` | Array | **ALL** | 可选配色
-| `featuredPostCount` | Integer | `10` | 精选文章数
-| `recentPostCount` | Integer | `10` | 最近文章数
-| `relatedPostCount` | Integer | `10` | 相关文章数
+| `featuredPostCount` | Integer | `5` | 精选文章数
+| `recentPostCount` | Integer | `5` | 最近文章数
+| `relatedPostCount` | Integer | `5` | 相关文章数
 | `categoryCount` | Integer | `10` | 分类数
 | `tagCount` | Integer | `10` | 标签数
 | `seriesCount` | Integer | `10` | 专栏数
