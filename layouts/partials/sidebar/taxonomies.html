@@ -9,8 +9,8 @@
   <div>
   {{- range $idx, $taxonomy := $value.ByCount -}}
     {{- if lt $idx $taxonomyCount -}}
-    <a href="{{ $taxonomy.Page.Permalink }}" class="post-taxonomy">
-      #{{ $taxonomy.Page.Title }}[{{ $taxonomy.Count }}]
+    <a href="{{ $taxonomy.Page.Permalink }}" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="{{ $taxonomy.Page.Title }}">
+      {{ $taxonomy.Page.Title }} <span class="badge rounded-pill">{{ $taxonomy.Count }}</span>
     </a>
     {{- end -}}
   {{- end -}}
