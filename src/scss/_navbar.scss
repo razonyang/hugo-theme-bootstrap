@@ -3,6 +3,19 @@
   color: #{$white-secondary};
 }
 
+.search-bar {
+  .form-control {
+    background-color: var(--hbs-background);
+    border-color: var(--hbs-background);
+    border-radius: 1rem;
+    color: var(--hbs-secondary-text);
+  
+    &:focus {
+      color: var(--hbs-primary-text);
+    }
+  }
+}
+
 .logo {
   height: 26px;
   margin-right: .5rem;
