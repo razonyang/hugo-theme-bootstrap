@@ -55,6 +55,9 @@ other = "加載更多"
 [pagination_title]
 other = "第{{ .PageNumber }}頁"
 
+[reading_time]
+other = "{{ .ReadingTime }}分鐘閱讀"
+
 [recent_posts]
 other = "最近文章"
 

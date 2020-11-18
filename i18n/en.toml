@@ -55,6 +55,9 @@ other = "Load More"
 [pagination_title]
 other = "Page {{ .PageNumber }}"
 
+[reading_time]
+other = "{{ .ReadingTime }} min read"
+
 [recent_posts]
 other = "Recent Posts"
 

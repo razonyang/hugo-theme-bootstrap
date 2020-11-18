@@ -2,6 +2,9 @@
   <span class="post-date mr-2">
     <i class="fas fa-fw fa-calendar-alt"></i>{{ .Date.Format (default "Jan 2, 2006" $.Site.Params.dateFormat) }}
   </span>
+  <span class="poost-reading-time mr-2">
+    <i class="fas fa-fw fa-coffee"></i>{{ i18n "reading_time" . }}
+  </span>
   {{- partial "post/translations" . -}}
   {{- range $key, $value := .Site.Taxonomies -}}
     {{- range ($.GetTerms $key) -}}
