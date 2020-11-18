@@ -7,12 +7,18 @@
   .form-control {
     background-color: var(--hbs-background);
     border-color: var(--hbs-background);
-    border-radius: 1rem;
     color: var(--hbs-secondary-text);
+    padding-left: 2rem;
   
     &:focus {
       color: var(--hbs-primary-text);
     }
+  }
+
+  .btn-search {
+    background-color: transparent;
+    color: var(--hbs-secondary-text);
+    z-index: 4!important;
   }
 }
 

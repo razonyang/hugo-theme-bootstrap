@@ -1,11 +1,24 @@
+.search-form {
+  .form-control {
+    background-color: var(--hbs-surface);
+    border-color: var(--hbs-surface);
+    color: var(--hbs-secondary-text);
+  
+    &:focus {
+      color: var(--hbs-primary-text);
+    }
+  }
+}
+
 .search-stat,
 .search-result-content {
   color: var(--hbs-secondary-text);
 }
 
 .btn-search {
+  background-color: transparent;
   color: var(--hbs-accent);
-  background-color: #fff;
+  z-index: 4!important;
 }
 
 .search-result-meta {

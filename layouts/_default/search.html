@@ -28,9 +28,9 @@
 {{ define "content" }}
 <div class="search container">
   <form id="searchForm" class="search-form mb-3">
-    <div class="input-group">
-      <input class="form-control border-right-0" name="q" type="search" placeholder="{{ i18n "search" }}" aria-label="Search">
-      <button class="btn btn-search input-group-text border border-left-0" type="submit"><i class="fas fa-fw fa-search"></i></button>
+    <div class="input-group input-group-lg">
+      <button class="btn btn-search disabled position-absolute left-0" type="submit"><i class="fas fa-fw fa-search"></i></button>
+      <input class="form-control rounded-pill pl-5" name="q" type="search" aria-label="Search">
     </div>
   </form>
   <div id="searchStat" class="search-stat mb-3 ml-1"></div>
