@@ -14,6 +14,9 @@
     {{- with .location -}}
     <div class="profile-location mb-2"><i class="fas fa-fw fa-map-marker-alt"></i> {{ . }}</div>
     {{- end -}}
+    {{- with $.GetPage "about" -}}
+    <div class="profile-about mb-2"><i class="fas fa-fw fa-info-circle"></i> <a href="{{ .Permalink }}">{{ .Title }}</a></div>
+    {{- end -}}
   </div>
 </section>
 {{- end -}}
