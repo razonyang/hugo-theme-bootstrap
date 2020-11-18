@@ -50,8 +50,8 @@ class PaletteSwitcher extends Popover {
 
   setPalette(palette: string) {
     console.debug(`switch to palette: ${palette}`);
-    document.body.classList.remove('palette-' + this.getPalette());
-    document.body.classList.add('palette-' + palette);
+    document.body.classList.remove(`palette-${this.getPalette()}`);
+    document.body.classList.add(`palette-${palette}`);
     localStorage.setItem(this.key, palette);
   }
 }

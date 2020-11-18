@@ -17,7 +17,7 @@ class ModeSwitcher {
     });
 
     window.matchMedia('(prefers-color-scheme: dark)').addListener((e) => {
-      console.log('sss')
+      console.log('sss');
       instance.setMode(e.matches ? 'dark' : 'light');
     });
   }
@@ -38,13 +38,13 @@ class ModeSwitcher {
         mode = 'dark';
       }
     }
-    return mode ? mode : 'light';
+    return mode || 'light';
   }
 
   setMode(value: string) {
     console.debug(`Switch to ${value} mode`);
-    document.body.classList.remove('mode-' + this.getMode());
-    document.body.classList.add('mode-' + value);
+    document.body.classList.remove(`mode-${this.getMode()}`);
+    document.body.classList.add(`mode-${value}`);
     let checked: boolean = false;
     if (value === 'dark') {
       checked = true;

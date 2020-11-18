@@ -36,15 +36,18 @@ a {
   color: inherit;
 }
 
-a:hover,
-btn:hover,
-.btn:hover {
+a:hover {
   color: var(--hbs-accent);
 }
 
+btn,
 .btn {
-  color: var(--hbs-primary-text);
-  background-color: var(--hbs-background);
+  background-color: var(--hbs-accent);
+  color: #fff;
+
+  &:hover {
+    color: #fff;
+  }
 }
 
 code {

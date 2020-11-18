@@ -112,17 +112,30 @@ export class Search {
     return new URLSearchParams(window.location.search).get('q');
   }
 
+  hideLoadMoreBtn() {
+    this.loadMore.classList.add('d-none');
+  }
+
+  showLoadMoreBtn() {
+    this.loadMore.classList.remove('d-none');
+  }
+
   search(query: string) {
     this.resultsElement.innerHTML = ''; // Clear previous results.
+    if (query === '') {
+      this.stat.innerHTML = this.tmplMissingKeywords;
+      this.hideLoadMoreBtn();
+      return;
+    }
     this.page = 1;
     this.setPage(query);
     const results = this.fuse.search(query);
     console.debug({ results });
     this.results = results;
     if (this.results.length > this.paginate) {
-      this.loadMore.classList.remove('d-none');
+      this.showLoadMoreBtn();
     } else {
-      this.loadMore.classList.add('d-none');
+      this.hideLoadMoreBtn();
     }
     if (results.length > 0) {
       this.poplateResults();
@@ -132,14 +145,14 @@ export class Search {
   }
 
   setPage(query) {
-    const title = `${query} - ${this.title}`;
+    const title = (query ? (`${query} - `) : '') + this.title;
     const url = `${window.location.pathname}?q=${encodeURIComponent(query)}`;
     window.history.pushState(null, title, url);
     document.title = title; // history.pushState's title was ignored.
   }
 
-  normalizeTaxonomy(text, render) {
-    return render(text).toLowerCase().replace(" ", "-");
+  static normalizeTaxonomy(text, render) {
+    return render(text).toLowerCase().replace(' ', '-');
   }
 
   poplateResults() {
@@ -194,10 +207,10 @@ export class Search {
         categories: result.item.categories,
         tags: result.item.tags,
         series: result.item.series,
-        score: instance.formatScore(result.score),
-        url: function() {
-          return instance.normalizeTaxonomy;
-        }
+        score: Search.formatScore(result.score),
+        url() {
+          return Search.normalizeTaxonomy;
+        },
       }));
       instance.highlight(id, titleKeywords, contentKeywords);
     }
@@ -209,13 +222,14 @@ export class Search {
     this.page += 1;
   }
 
-  formatScore(score) {
-    score = 100*(1-score)
+  static formatScore(value) {
+    const score = 100 * (1 - value);
+    const scoreStr = score.toFixed(2);
     if (score < 90) {
-      return score.toFixed(2) + '%'
+      return `${scoreStr}%`;
     }
 
-    return `<span class="text-accent">${score.toFixed(2)}%</span>`
+    return `<span class="text-accent">${scoreStr}%</span>`;
   }
 
   highlight(id, titleKeywords, contentKeywords) {

@@ -5,11 +5,11 @@ class FontSizeSwitcher extends Popover {
   key: string;
 
   sizes: Map<string, string> = new Map([
-    ["-2", "xs"],
-    ["-1", "sm"],
-    ["0", ""],
-    ["1", "lg"],
-    ["2", "xl"],
+    ['-2', 'xs'],
+    ['-1', 'sm'],
+    ['0', ''],
+    ['1', 'lg'],
+    ['2', 'xl'],
   ]);
 
   init() {
@@ -53,13 +53,13 @@ class FontSizeSwitcher extends Popover {
   }
 
   setSize(value: string) {
-    let size: string = this.sizes.get(value);
-    document.body.classList.remove('font-size-' + this.sizes.get(this.getSize()));
+    const size: string = this.sizes.get(value);
+    document.body.classList.remove(`font-size-${this.sizes.get(this.getSize())}`);
     if (size === '') {
       localStorage.removeItem(this.key);
     } else {
       localStorage.setItem(this.key, value);
-      document.body.classList.add('font-size-' + size);
+      document.body.classList.add(`font-size-${size}`);
     }
   }
 }

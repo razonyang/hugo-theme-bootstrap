@@ -8,17 +8,13 @@
 }
 
 .post-taxonomy {
+  color: #fff;
   margin: 0 .5rem .5rem 0;
-}
-
-.post-taxonomy.btn {
-  background-color: var(--hbs-primary);
-  color: #{$white};
 }
 
 .post-taxonomy .badge {
   background-color: #{$white};
-  color: var(--hbs-primary);
+  color: var(--hbs-accent);
 }
 
 .post-toc {
