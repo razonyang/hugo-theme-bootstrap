@@ -2,7 +2,7 @@
 {{- if and $reward (default true .Params.reward) -}}
 <div class="post-reward mb-4 text-center">
   <button type="button" class="btn btn-reward" data-toggle="modal" data-target="#rewardModal">
-    <i class="fas fa-fw fa-medal"></i> {{ i18n "reward" }}
+    <i class="fas fa-fw fa-medal"></i>{{ i18n "reward" }}
   </button>
 </div>
 
@@ -11,7 +11,7 @@
   <div class="modal-dialog">
     <div class="modal-content surface">
       <div class="modal-header">
-        <h5 class="modal-title" id="rewardModalLabel"><i class="fas fa-fw fa-medal"></i> {{ i18n "reward" }}</h5>
+        <h5 class="modal-title" id="rewardModalLabel"><i class="fas fa-fw fa-medal"></i>{{ i18n "reward" }}</h5>
         <a href="#" data-dismiss="modal" aria-label="Close"><i class="fas fa-fw fa-times"></i></a>
       </div>
       <div class="modal-body">
@@ -20,7 +20,7 @@
           {{- range $key, $value := $reward -}}
           <li class="nav-item" role="presentation">
             <a class="nav-link{{ if eq $index 0 }} active{{ end }}" id="reward-{{ $key }}-tab" data-toggle="tab" href="#reward-{{ $key }}" role="tab" aria-controls="reward-{{ $key }}" aria-selected="true">
-              <i class="fab fa-fw fa-{{ default $key (index $icons $key) }}"></i> {{ i18n $key }}
+              <i class="fab fa-fw fa-{{ default $key (index $icons $key) }}"></i>{{ i18n $key }}
             </a>
           </li>
           {{- $index = add $index 1 -}}

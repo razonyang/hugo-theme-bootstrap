@@ -3,5 +3,5 @@
 {{- $icons := dict "info" "info-circle" "success" "check-circle" "warning" "exclamation-triangle" "danger" "skull-crossbones"}}
 {{- $icon := default "info-circle" (index $icons $type) -}}
 <div class="alert alert-{{ $type }}" role="alert">
-  <i class="fas fa-fw fa-{{ $icon }}"></i> {{ $msg }}
+  <i class="fas fa-fw fa-{{ $icon }}"></i>{{ $msg }}
 </div>

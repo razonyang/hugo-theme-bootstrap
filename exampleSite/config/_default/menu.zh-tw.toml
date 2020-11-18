@@ -5,4 +5,4 @@
   parent = "dropdown"
   name = "Github"
   url = "https://github.com/razonyang/hugo-theme-bootstrap"
-  pre = '<i class="fab fa-fw fa-github"></i> '
+  pre = '<i class="fab fa-fw fa-github"></i>'
