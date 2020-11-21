@@ -100,6 +100,7 @@ $ hugo server
 | `titleSeparator` | String | `-` | 标题分隔符
 | `comment` | Boolean | `true` | 是否开启评论
 | `toc` | Boolean | `true` | 是否开启目录
+| `tocWordCount` | Integer | `280` | 仅当文章的字数超过此值时，才会显示目录。
 | `breadcrumb` | Boolean | `true` | 是否开启面包屑导航
 | `utterances` | Object | - | Utterances
 | `dateFormat` | String | `Jan 2, 2006` | 日期格式。 查阅 [Hugo Date and Time Templating Reference](https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference) 以获取详细信息。
