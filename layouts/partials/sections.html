@@ -1,0 +1,10 @@
+{{- with .Sections -}}
+<div class="post-sections row surface">
+<ul class="nav nav-fill">
+  {{- range . -}}
+  <li class="nav-item post-section">
+    <a class="nav-link" href="{{ .Permalink }}">{{- .Title -}}</a>
+  </li>
+  {{- end -}}
+</ul></div>
+{{- end -}}

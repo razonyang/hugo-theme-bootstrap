@@ -4,6 +4,7 @@
     {{- $pages = where .Site.RegularPages "Type" "in" (default (slice "posts") .Site.Params.mainSections) -}}
   {{- else -}}
   {{- partial "breadcrumb" . -}}
+  {{- partial "sections" . -}}
   {{- end -}}
   <div class="posts mb-4">
   {{- range (.Paginate $pages).Pages -}}
