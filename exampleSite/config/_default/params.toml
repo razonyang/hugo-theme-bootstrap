@@ -1,6 +1,5 @@
 # mainSections = ["post", "posts"] # Default to ["posts"].
 
-author = "Razon Yang"
 # titleSeparator = "|" # Title separator. Default to "-".
 
 description = "An extreme fast, responsive and feature-rich blog theme for Hugo"
