@@ -102,7 +102,6 @@ $ hugo server
 | `toc` | Boolean | `true` | 是否開啟目錄
 | `tocWordCount` | Integer | `280` | 僅當文章的字數超過此值時，才會顯示TOC。
 | `breadcrumb` | Boolean | `true` | 是否開啟麵包屑導航
-| `utterances` | Object | - | Utterances
 | `dateFormat` | String | `Jan 2, 2006` | 日期格式。 查閱 [Hugo Date and Time Templating Reference](https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference) 以獲取詳細資訊。
 | `poweredBy` | Boolean | `true` | 是否顯示技術支援。
 | `math` | Boolean | `false` | 是否開啟 `math`。

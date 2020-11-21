@@ -102,7 +102,6 @@ As the example site shown, the configuration are separated into multiple files, 
 | `toc` | Boolean | `true` | Whether to enable TOC
 | `tocWordCount` | Integer | `280` | TOC is displayed only if the post's word count exceeds this value.
 | `breadcrumb` | Boolean | `true` | Whether to enable breadcrumb
-| `utterances` | Object | - | Utterances comments
 | `dateFormat` | String | `Jan 2, 2006` | Date format. Checkout the [Hugo Date and Time Templating Reference](https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference) for details.
 | `poweredBy` | Boolean | `true` | Whether to show powered by.
 | `math` | Boolean | `false` | Whether to enable math globally.
