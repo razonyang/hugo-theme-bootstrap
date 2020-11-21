@@ -50,6 +50,7 @@ customJS = []
   google = ""
   bing = ""
   baidu = ""
+  baiduUnion = "" # Baidu Union
 
 [utterances]
   repo = "razonyang/hugo-theme-bootstrap"

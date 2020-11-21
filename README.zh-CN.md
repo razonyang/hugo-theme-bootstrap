@@ -149,6 +149,7 @@ $ hugo server
 | `siteVerification.google` | String | - | Google
 | `siteVerification.bing` | String | - | Bing
 | `siteVerification.baidu` | String | - | 百度
+| `siteVerification.baiduUnion` | String | - | 百度联盟
 | **Analytics** 
 | `analytics` | Object | - | Analytics.
 | `analytics.baidu` | String | - | 百度统计

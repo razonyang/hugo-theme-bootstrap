@@ -9,4 +9,7 @@
   {{- with $params.siteVerification.baidu -}}
   <meta name="baidu-site-verification" content="{{ . }}" />
   {{- end -}}
+  {{- with $params.siteVerification.baiduUnion -}}
+  <meta name="baidu_union_verify" content="{{ . }}">
+  {{- end -}}
 {{- end -}}

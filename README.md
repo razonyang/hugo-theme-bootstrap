@@ -149,6 +149,7 @@ As the example site shown, the configuration are separated into multiple files, 
 | `siteVerification.google` | String | - | Google
 | `siteVerification.bing` | String | - | Bing
 | `siteVerification.baidu` | String | - | Baidu
+| `siteVerification.baiduUnion` | String | - | Baidu Union
 | **Analytics** 
 | `analytics` | Object | - | Analytics configuration.
 | `analytics.baidu` | String | - | Baidu Analytics.
