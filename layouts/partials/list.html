@@ -1,4 +1,4 @@
-{{- $pages := .RegularPages -}}
+{{- $pages := .RegularPagesRecursive -}}
 <div class="container">
   {{- if .IsHome -}}
     {{- $pages = where .Site.RegularPages "Type" "in" (default (slice "posts") .Site.Params.mainSections) -}}
