@@ -53,10 +53,10 @@ other = "字体大小"
 other = "加载更多"
 
 [pagination_title]
-other = "第{{ .PageNumber }}页"
+other = "第 {{ .PageNumber }} 页"
 
 [reading_time]
-other = "{{ .ReadingTime }}分钟阅读"
+other = "{{ .ReadingTime }} 分钟阅读"
 
 [recent_posts]
 other = "最近文章"
@@ -77,7 +77,7 @@ other = "请输入搜索关键词"
 other = "找不到相关结果"
 
 [search_stat]
-other = "找到相关结果{{ .Total }}个"
+other = "找到相关结果 {{ .Total }} 个"
 
 [series]
 other = "专栏"
