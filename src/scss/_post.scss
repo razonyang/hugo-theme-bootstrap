@@ -8,8 +8,11 @@
 }
 
 .post-taxonomy {
-  color: #fff;
   margin: 0 .5rem .5rem 0;
+
+  &.btn {
+    color: #fff;
+  }
 }
 
 .post-taxonomy .badge {
