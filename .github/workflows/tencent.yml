@@ -22,7 +22,7 @@ on:
 
 # Environment variables available to all jobs and steps in this workflow
 env:
-  TKE_IMAGE_URL: hkccr.ccs.tencentyun.com/razonyang/blog
+  TKE_IMAGE_URL: hkccr.ccs.tencentyun.com/razonyang/hugo-theme-bootstrap
   TKE_REGION: ap-hongkong
   TKE_CLUSTER_ID: cls-aaytu8l0
   DEPLOYMENT_NAME: blog
