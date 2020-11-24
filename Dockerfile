@@ -1,9 +1,9 @@
 # Build stage
-FROM ubuntu:latest as builder
+FROM klakegg/hugo:ubuntu as builder
 
-# Install Hugo and Git
 RUN apt-get update -y
-RUN apt-get install -y hugo git
+
+RUN apt-get install -y git
 
 # Build site
 WORKDIR /src
