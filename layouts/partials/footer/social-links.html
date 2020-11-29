@@ -13,8 +13,9 @@
 {{- $telegram := dict "telegram" (dict "url" "https://t.me/%s") -}}
 {{- $qq := dict "qq" (dict "url" "http://wpa.qq.com/msgrd?v=3&uin=%s&site=qq&menu=yes") -}}
 {{- $dockerhub := dict "dockerhub" (dict "url" "https://hub.docker.com/u/%s" "icon" "docker") -}}
+{{- $bitbucket := dict "bitbucket" (dict "url" "https://bitbucket.org/%s") -}}
 {{- $items := merge $github $gitlab $twitter $facebook $linkedin $stackoverflow $weibo $zhihu $quora $instagram $tumblr -}}
-{{- $items = merge $items $reddit $telegram $qq $dockerhub -}}
+{{- $items = merge $items $reddit $telegram $qq $dockerhub $bitbucket -}}
 <nav class="social-links nav my-2 justify-content-center">
 {{- range $key, $user := .Site.Social -}}
   {{- if eq $key "email" -}}

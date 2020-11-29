@@ -285,6 +285,7 @@ github = "githubusername"
 | `telegram` | Telegram Username |
 | `qq` | QQ Number |
 | `dockerhub` | Docker Hub Username |
+| `bitbucket` | Bitbucket Workspace ID |
 
 ## Contribute
 
