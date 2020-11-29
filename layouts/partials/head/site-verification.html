@@ -12,4 +12,13 @@
   {{- with $params.siteVerification.baiduUnion -}}
   <meta name="baidu_union_verify" content="{{ . }}">
   {{- end -}}
+  {{- with $params.siteVerification.so -}}
+  <meta name="360-site-verification" content="{{ . }}">
+  {{- end -}}
+  {{- with $params.siteVerification.sogou -}}
+  <meta name="sogou_site_verification" content="{{ . }}">
+  {{- end -}}
+  {{- with $params.siteVerification.shenma -}}
+  <meta name="shenma-site-verification" content="{{ . }}">
+  {{- end -}}
 {{- end -}}

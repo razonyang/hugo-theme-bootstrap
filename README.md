@@ -151,6 +151,9 @@ As the example site shown, the configuration are separated into multiple files, 
 | `siteVerification.bing` | String | - | Bing
 | `siteVerification.baidu` | String | - | Baidu
 | `siteVerification.baiduUnion` | String | - | Baidu Union
+| `siteVerification.so` | String | - | Qihoo 360
+| `siteVerification.sogou` | String | - | Sogou
+| `siteVerification.shenma` | String | - | Shenma
 | **Analytics** 
 | `analytics` | Object | - | Analytics configuration.
 | `analytics.baidu` | String | - | Baidu Analytics.
