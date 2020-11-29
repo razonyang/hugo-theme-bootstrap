@@ -9,9 +9,10 @@
     "katex": "^0.12.0",
     "mark.js": "^8.11.1",
     "mustache": "^4.0.1",
-    "opencc": "^1.1.1"
+    "popper.js": "^1.16.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.12.9",
     "@typescript-eslint/eslint-plugin": "^4.6.1",
     "@typescript-eslint/parser": "^4.6.1",
     "autoprefixer": "^10.0.1",
@@ -23,6 +24,9 @@
     "eslint-config-airbnb-typescript": "^12.0.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jasmine-jquery": "^1.0.0",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-webpack-plugin": "^2.2.1",
     "fibers": "^5.0.0",
     "file-loader": "^6.1.1",
