@@ -284,6 +284,7 @@ github = "githubusername"
 | `reddit` | Reddit 使用者名稱 |
 | `telegram` | Telegram 使用者名稱 |
 | `qq` | QQ 號 |
+| `dockerhub` | Docker Hub 使用者名稱 |
 
 ## 貢獻
 
