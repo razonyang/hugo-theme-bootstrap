@@ -21,9 +21,11 @@
 }
 
 .post-toc {
-  position: sticky;
-  top: 84px;
   z-index: 1;
+
+  &.position-sticky {
+    top: 84px;
+  }
 }
 
 #TableOfContents {

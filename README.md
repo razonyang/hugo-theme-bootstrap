@@ -101,6 +101,7 @@ As the example site shown, the configuration are separated into multiple files, 
 | `comment` | Boolean | `true` | Whether to enable comments
 | `toc` | Boolean | `true` | Whether to enable TOC
 | `tocWordCount` | Integer | `280` | TOC is displayed only if the post's word count is greater than this value.
+| `tocSticky` | Boolean | `true` | Whether to make TOC stick to top when scrolling.
 | `breadcrumb` | Boolean | `true` | Whether to enable breadcrumb
 | `dateFormat` | String | `Jan 2, 2006` | Date format. Checkout the [Hugo Date and Time Templating Reference](https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference) for details.
 | `poweredBy` | Boolean | `true` | Whether to show powered by.

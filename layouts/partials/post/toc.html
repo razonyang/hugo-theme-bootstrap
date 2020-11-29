@@ -3,13 +3,14 @@
 {{- $toc := .TableOfContents -}}
 {{- $valid := and $toc (and (ne $toc "<nav id=\"TableOfContents\"></nav>") (gt .WordCount $wordCount)) -}}
 {{- if and $enable $valid -}}
-<div class="accordion accordion-flush position-sticky surface post-toc" id="accordionTOC">
+{{- $sticky := default true .Site.Params.tocSticky -}}
+<div class="accordion accordion-flush surface post-toc{{ if $sticky }} position-sticky{{ end }}" id="accordionTOC">
   <div class="accordion-item">
     <div class="accordion-header" id="headingTOC" data-toggle="collapse" data-target="#collapseTOC" aria-expanded="true" aria-controls="collapseTOC">
       <i class="fas fa-fw fa-bars"></i>{{ i18n "table_of_contents" }}
     </div>
     <div id="collapseTOC" class="accordion-collapse collapse" aria-labelledby="headingTOC" data-parent="#accordionTOC">
-      <div class="accordion-body">
+      <div class="accordion-body mt-2">
         {{ $toc }}
       </div>
     </div>

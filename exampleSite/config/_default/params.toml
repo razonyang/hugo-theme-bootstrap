@@ -37,6 +37,7 @@ customCSS = []
 customJS = []
 
 # tocWordCount = 280 # TOC is displayed only if the post's word count exceeds this value.
+# tocSticky = true # Whether to make TOC stick to top when scrolling. Default to true.
 
 [archive]
   paginate = 8 # Archive pagination. Default to 100.
