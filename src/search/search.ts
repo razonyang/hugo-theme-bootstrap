@@ -46,6 +46,8 @@ export class Search {
 
   private loading: boolean = false;
 
+  private loadingSpinner: HTMLElement;
+
   public loadMore: HTMLElement;
 
   constructor(public form: HTMLFormElement) {
@@ -55,6 +57,7 @@ export class Search {
     this.title = document.title;
     this.resultsElement = document.getElementById('searchResults');
     this.stat = document.getElementById('searchStat');
+    this.loadingSpinner = document.getElementById('loadingSpinner');
     this.tmplMissingKeywords = document.getElementById('templateMissingKeywords').innerHTML;
     this.tmplNoResults = document.getElementById('templateNoResults').innerHTML;
     this.tmplStat = document.getElementById('templateStat').innerHTML;
@@ -121,6 +124,7 @@ export class Search {
   }
 
   search(query: string) {
+    this.loadingSpinner.classList.remove('d-none');
     this.resultsElement.innerHTML = ''; // Clear previous results.
     if (query === '') {
       this.stat.innerHTML = this.tmplMissingKeywords;
@@ -132,6 +136,7 @@ export class Search {
     const results = this.fuse.search(query);
     console.debug({ results });
     this.results = results;
+    this.loadingSpinner.classList.add('d-none');
     if (this.results.length > this.paginate) {
       this.showLoadMoreBtn();
     } else {
@@ -217,7 +222,9 @@ export class Search {
     this.loading = false;
     this.loadMore.removeAttribute('disabled');
     if (this.results.length <= this.paginate * this.page) {
-      this.loadMore.classList.add('d-none');
+      this.hideLoadMoreBtn();
+    } else {
+      this.showLoadMoreBtn();
     }
     this.page += 1;
   }
