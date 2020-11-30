@@ -1,10 +1,12 @@
-{{- with .Sections -}}
+{{- with sort .Sections ".Title" "asc" -}}
 <div class="post-sections row surface">
-<ul class="nav nav-fill">
+<ul class="nav nav-pills nav-fill">
   {{- range . -}}
+  {{- if gt .Pages.Len 0 -}}
   <li class="nav-item post-section">
     <a class="nav-link" href="{{ .Permalink }}">{{- .Title -}}</a>
   </li>
+  {{- end -}}
   {{- end -}}
 </ul></div>
 {{- end -}}
