@@ -1,4 +1,4 @@
-+++
+code+++
 title = "CodePen Shortcode"
 date = "2020-10-22"
 description = "關於 CodePen shortcode 的詳細說明"
