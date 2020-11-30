@@ -49,6 +49,9 @@ other = "精選文章"
 [font_size]
 other = "字體大小"
 
+[home]
+other = "主頁"
+
 [load_more]
 other = "加載更多"
 

@@ -49,6 +49,9 @@ other = "Featured Posts"
 [font_size]
 other = "Font Size"
 
+[home]
+other = "Home"
+
 [load_more]
 other = "Load More"
 
