@@ -38,7 +38,7 @@
 
 ## 功能特性
 
-- 极快：[Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/?url=https://hbs.razonyang.com/en/) 分数在 `95-100` 之间
+- 极快：[Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/?url=https://hugo-theme-bootstrap.netlify.app/en/) 分数在 `95-100` 之间
 - 基于 [Bootstrap 5](https://v5.getbootstrap.com/)
 - 响应式
 - 多种配色：`blue`, `blue-gray`, `brown`, `cyan`, `green`, `indigo`, `orange`, `pink`, `purple`, `red`, `teal`, `yellow`
