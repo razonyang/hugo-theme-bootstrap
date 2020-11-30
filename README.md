@@ -9,6 +9,7 @@ This theme is an extreme fast, responsive and feature-rich blog theme for Hugo.
 ## Table of Contents
 
 - [Screenshots](#screenshots)
+- [Live Preview](#live-preview)
 - [Features](#features)
 - [Installation](#installation)
 - [Configuration](#configuration)
@@ -29,6 +30,11 @@ This theme is an extreme fast, responsive and feature-rich blog theme for Hugo.
 **Dark Mode**
 
 ![Screenshot in Dark Mode](https://github.com/razonyang/hugo-theme-bootstrap/blob/master/images/screenshot-dark.png)
+
+## Live Preview
+
+- https://hugo-theme-bootstrap.netlify.app/ - Deploy on Netlify.
+- https://hugo-theme-bootstrap.razonyang.com/ - A self-hosted server located in Asia. Give it a try if Netlify is too slow for you.
 
 ## Features
 

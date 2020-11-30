@@ -9,6 +9,7 @@
 ## 目錄
 
 - [截圖](#截圖)
+- [線上預覽](#線上預覽)
 - [功能特性](#功能特性)
 - [安裝](#安裝)
 - [配置](#配置)
@@ -29,6 +30,11 @@
 **Dark Mode**
 
 ![深色模式下的截圖](https://github.com/razonyang/hugo-theme-bootstrap/blob/master/images/screenshot-dark.png)
+
+## 線上預覽
+
+- https://hugo-theme-bootstrap.netlify.app/ - 部署於 Netlify。
+- https://hugo-theme-bootstrap.razonyang.com/ - 自託管伺服器（亞洲），如果 Netlify 太慢了，可以試試這個。
 
 ## 功能特性
 
