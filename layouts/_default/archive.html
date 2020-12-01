@@ -3,6 +3,7 @@
 {{- $paginator := .Paginate $pages.ByDate.Reverse (default 100 .Site.Params.archive.paginate) -}}
 <div class="container archives col-12 mb-4">
   <div class="container">
+    {{- partial "breadcrumb" . -}}
     {{- $count := len $paginator.Pages -}}
     {{- $lastYear := 0 -}}
     {{- range $idx, $post := $paginator.Pages -}}
