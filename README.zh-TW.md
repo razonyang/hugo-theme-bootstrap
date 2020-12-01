@@ -184,6 +184,7 @@ $ hugo server
 | `toc` | Boolean | `true` | 是否開啟目錄，如果目錄已被全域性關閉，該引數無效
 | `math` | Boolean | `false` | 是否開啟 `math`
 | `reward` | Boolean | `true` | 是否開啟打賞
+| `breadcrumb` | Boolean | `true` | 是否開啟麵包屑導航
 
 ## 評論
 
