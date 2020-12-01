@@ -36,6 +36,8 @@
 - https://hugo-theme-bootstrap.netlify.app/ - 部署於 Netlify。
 - https://hugo-theme-bootstrap.razonyang.com/ - 自託管伺服器（亞洲），如果 Netlify 太慢了，可以試試這個。
 
+這還有個[使用這個主題的網站列表](https://github.com/razonyang/hugo-theme-bootstrap/blob/master/USEDBY.md)
+
 ## 功能特性
 
 - 極快：[Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/?url=https://hugo-theme-bootstrap.netlify.app/en/) 分數在 `95-100` 之間
