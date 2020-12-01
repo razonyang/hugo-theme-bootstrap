@@ -6,6 +6,7 @@
   {{- partial "breadcrumb" . -}}
   {{- partial "sections" . -}}
   {{- end -}}
+  {{- partial "hooks/list-begin" . -}}
   <div class="posts mb-4">
   {{- range (.Paginate $pages).Pages -}}
     <article class="post row surface">
@@ -24,5 +25,6 @@
     </article>
   {{- end -}}
   </div>
+  {{- partial "hooks/list-end" . -}}
   {{- partial "pagination" . -}}
 </div>

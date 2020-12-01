@@ -233,6 +233,10 @@ Hooks are used for adding code on pages.
 |---|---|
 | `head-end` | Before the `<head>` end |
 | `body-end` | Before the `<body>` end |
+| `main-begin` | Above of the `<main>` |
+| `main-end` | Follow the `<main>` |
+| `list-begin` | Above of the posts list |
+| `list-end` | Follow the posts list |
 | `sidebar-begin` | At very top of the sidebar |
 | `sidebar-end` | Before the sidebar end |
 | `content-begin` | Above of the post content |
