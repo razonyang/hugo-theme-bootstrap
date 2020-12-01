@@ -233,6 +233,10 @@ disqusShortname = "yourdiscussshortname"
 |---|---|
 | `head-end` | `<head>` 結束之前 |
 | `body-end` | `<body>` 結束之前 |
+| `main-begin` | `<main>` 上方 |
+| `main-end` | `<main>` 下方 |
+| `list-begin` | 文章列表上方 |
+| `list-end` | 文章列表上方 |
 | `sidebar-begin` | 側邊欄上方 |
 | `sidebar-end` | 側邊欄下方 |
 | `content-begin` | 文章內容上方 |

@@ -10,11 +10,13 @@
   </head>
   <body>
     {{- partial "header.html" . -}}
+    {{- partial "hooks/main-begin" . -}}
     <main role="main" class="container{{ if default false .Site.Params.fullWidth }}-fluid{{ end }}">
       <div class="row content">
         {{- block "content" . -}}{{- end -}}
-      </div>    
+      </div>
     </main>
+    {{- partial "hooks/main-end" . -}}
     {{- partial "footer.html" . -}}
     {{- partial "body-end" . -}}
   </body>
