@@ -184,6 +184,7 @@ As the example site shown, the configuration are separated into multiple files, 
 | `toc` | Boolean | `true` | Whether to enable TOC. It won't work if `toc` has been disabled globally.
 | `math` | Boolean | `false` | Whether to enable math.
 | `reward` | Boolean | `true` | Whether to enable reward.
+| `breadcrumb` | Boolean | `true` | Whether to enable breadcrumb.
 
 ## Comments
 

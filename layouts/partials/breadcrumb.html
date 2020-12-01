@@ -1,4 +1,4 @@
-{{- if (default true .Site.Params.breadcrumb) -}}
+{{- if and (default true .Site.Params.breadcrumb) (default true .Params.breadcrumb) -}}
 <nav class="row" aria-label="breadcrumb">
   <ol class="breadcrumb surface">
     {{- template "breadcrumbnav" (dict "p1" . "p2" .) -}}

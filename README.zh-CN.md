@@ -184,6 +184,7 @@ $ hugo server
 | `toc` | Boolean | `true` | 是否开启目录，如果目录已被全局关闭，该参数无效
 | `math` | Boolean | `false` | 是否开启 `math`
 | `reward` | Boolean | `true` | 是否开启打赏
+| `breadcrumb` | Boolean | `true` | 是否开启面包屑导航
 
 ## 评论
 
