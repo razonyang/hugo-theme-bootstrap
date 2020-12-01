@@ -43,6 +43,12 @@ other = "Teal"
 [color_yellow]
 other = "Yellow"
 
+[copyright]
+other = "Copyright"
+
+[post_license]
+other = "This work is licensed under {{ .license }}."
+
 [featured_posts]
 other = "Featured Posts"
 
