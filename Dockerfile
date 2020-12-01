@@ -9,8 +9,7 @@ RUN apt-get install -y git
 WORKDIR /src
 COPY . /src
 RUN hugo version
-COPY ./docker/config /src/exampleSite/config/docker
-RUN cd /src/exampleSite && hugo --themesDir=../../ --theme=src -e=docker
+RUN cd /src/exampleSite && hugo --themesDir=../../ --theme=src -b https://hugo-theme-bootstrap.razonyang.com/
 
 # Final stage
 FROM nginx
