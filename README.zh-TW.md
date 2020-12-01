@@ -177,10 +177,10 @@ $ hugo server
 | `utterances.theme` | String | `github-light` | `github-light`, `github-dark`, `preferred-color-scheme`, `github-dark-orange`, `icy-dark`, `dark-blue`, `photon-dark`.
 | **Creative Commons License**
 | `creativeCommons` | Object | - |
-| `creativeCommons.by` | Boolean | `true` | Credit must be given to you, the creator.
-| `creativeCommons.nc` | Boolean | `true` | Only noncommercial use of your work is permitted.
-| `creativeCommons.nd` | Boolean | `true` | No derivatives or adaptations of your work are permitted.
-| `creativeCommons.sa` | Boolean | `true` | Adaptations must be shared under the same terms.
+| `creativeCommons.by` | Boolean | `true` | 署名
+| `creativeCommons.nc` | Boolean | `true` | 非商業
+| `creativeCommons.nd` | Boolean | `true` | 禁止改作
+| `creativeCommons.sa` | Boolean | `true` | 相同方式分享
 
 > 除了 Google 站長工具外，其他搜宿引擎站長工具無法與 `hugo --minify` 同時使用，這是因為它們無法識別優化後的元標簽。
 
@@ -196,10 +196,10 @@ $ hugo server
 | `breadcrumb` | Boolean | `true` | 是否開啟麵包屑導航
 | **Creative Commons License**
 | `creativeCommons` | Object | - |
-| `creativeCommons.by` | Boolean | `true` | Credit must be given to you, the creator.
-| `creativeCommons.nc` | Boolean | `true` | Only noncommercial use of your work is permitted.
-| `creativeCommons.nd` | Boolean | `true` | No derivatives or adaptations of your work are permitted.
-| `creativeCommons.sa` | Boolean | `true` | Adaptations must be shared under the same terms.
+| `creativeCommons.by` | Boolean | `true` | 署名
+| `creativeCommons.nc` | Boolean | `true` | 非商業
+| `creativeCommons.nd` | Boolean | `true` | 禁止改作 
+| `creativeCommons.sa` | Boolean | `true` | 相同方式分享
 
 ## 評論
 
