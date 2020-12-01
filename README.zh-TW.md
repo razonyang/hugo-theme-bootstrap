@@ -61,6 +61,7 @@
 - [社交連結](#社交連結)
 - [多樣的短程式碼](#短程式碼)
 - [Twitter Cards](https://gohugo.io/templates/internal/#configure-twitter-cards) 和 [Open Graph](https://gohugo.io/templates/internal/#configure-open-graph)
+- [知識共享許可協議](https://creativecommons.org/licenses/)
 
 ## 安裝
 
@@ -174,6 +175,12 @@ $ hugo server
 | `utterances.issueTerm` | String | `pathname` | `pathname`, `url`, `title`, `og:title`.
 | `utterances.label` | String | - | 
 | `utterances.theme` | String | `github-light` | `github-light`, `github-dark`, `preferred-color-scheme`, `github-dark-orange`, `icy-dark`, `dark-blue`, `photon-dark`.
+| **Creative Commons License**
+| `creativeCommons` | Object | - |
+| `creativeCommons.by` | Boolean | `true` | Credit must be given to you, the creator.
+| `creativeCommons.nc` | Boolean | `true` | Only noncommercial use of your work is permitted.
+| `creativeCommons.nd` | Boolean | `true` | No derivatives or adaptations of your work are permitted.
+| `creativeCommons.sa` | Boolean | `true` | Adaptations must be shared under the same terms.
 
 > 除了 Google 站長工具外，其他搜宿引擎站長工具無法與 `hugo --minify` 同時使用，這是因為它們無法識別優化後的元標簽。
 
@@ -187,6 +194,12 @@ $ hugo server
 | `math` | Boolean | `false` | 是否開啟 `math`
 | `reward` | Boolean | `true` | 是否開啟打賞
 | `breadcrumb` | Boolean | `true` | 是否開啟麵包屑導航
+| **Creative Commons License**
+| `creativeCommons` | Object | - |
+| `creativeCommons.by` | Boolean | `true` | Credit must be given to you, the creator.
+| `creativeCommons.nc` | Boolean | `true` | Only noncommercial use of your work is permitted.
+| `creativeCommons.nd` | Boolean | `true` | No derivatives or adaptations of your work are permitted.
+| `creativeCommons.sa` | Boolean | `true` | Adaptations must be shared under the same terms.
 
 ## 評論
 

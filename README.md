@@ -61,6 +61,7 @@ There is also a [list of websites that use this theme](https://github.com/razony
 - [Social Links](#social-links).
 - [Various Shortcodes](#shortcodes).
 - [Twitter Cards](https://gohugo.io/templates/internal/#configure-twitter-cards) and [Open Graph](https://gohugo.io/templates/internal/#configure-open-graph).
+- [Creative Commons License](https://creativecommons.org/licenses/)
 
 ## Installation
 
@@ -174,6 +175,12 @@ As the example site shown, the configuration are separated into multiple files, 
 | `utterances.issueTerm` | String | `pathname` | `pathname`, `url`, `title`, `og:title`.
 | `utterances.label` | String | - | 
 | `utterances.theme` | String | `github-light` | `github-light`, `github-dark`, `preferred-color-scheme`, `github-dark-orange`, `icy-dark`, `dark-blue`, `photon-dark`.
+| **Creative Commons License**
+| `creativeCommons` | Object | - |
+| `creativeCommons.by` | Boolean | `true` | Credit must be given to you, the creator.
+| `creativeCommons.nc` | Boolean | `true` | Only noncommercial use of your work is permitted.
+| `creativeCommons.nd` | Boolean | `true` | No derivatives or adaptations of your work are permitted.
+| `creativeCommons.sa` | Boolean | `true` | Adaptations must be shared under the same terms.
 
 > Except the Google webmaster tool, the other webmaster tools cannot work with `hugo --minify`, because they cannot recognize the minified meta tag.
 
@@ -187,6 +194,12 @@ As the example site shown, the configuration are separated into multiple files, 
 | `math` | Boolean | `false` | Whether to enable math.
 | `reward` | Boolean | `true` | Whether to enable reward.
 | `breadcrumb` | Boolean | `true` | Whether to enable breadcrumb.
+| **Creative Commons License**
+| `creativeCommons` | Object | - |
+| `creativeCommons.by` | Boolean | `true` | Credit must be given to you, the creator.
+| `creativeCommons.nc` | Boolean | `true` | Only noncommercial use of your work is permitted.
+| `creativeCommons.nd` | Boolean | `true` | No derivatives or adaptations of your work are permitted.
+| `creativeCommons.sa` | Boolean | `true` | Adaptations must be shared under the same terms.
 
 ## Comments
 

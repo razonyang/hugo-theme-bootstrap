@@ -43,6 +43,12 @@ other = "藍綠色"
 [color_yellow]
 other = "黃色"
 
+[copyright]
+other = "版權"
+
+[post_license]
+other = "本作品採用 {{ .license }} 授權。"
+
 [featured_posts]
 other = "精選文章"
 
