@@ -19,19 +19,19 @@
       {{- $icons = $icons | append "-sa" -}}
     {{- end -}}
   {{- end -}}
-  {{- $link = printf "https://creativecommons.org/licenses/%s/4.0/?ref=chooser-v1" (replace $linkTitle "CC " "" | lower) }}
+  {{- $link = printf "https://creativecommons.org/licenses/%s/4.0/deed" (replace $linkTitle "CC " "" | lower) }}
   {{- $linkTitle = printf "%s %s" $linkTitle "4.0 " -}}
 {{- else -}}
-  {{- $link = "https://creativecommons.org/publicdomain/zero/1.0/?ref=chooser-v1" -}}
+  {{- $link = "https://creativecommons.org/publicdomain/zero/1.0/deed" -}}
   {{- $linkTitle = "CC CC0 1.0 " }}
   {{- $icons = slice "" "-zero" -}}
 {{- end -}}
-
+{{- $langs := dict "zh-cn" "zh" "zh-tw" "zh_TW" "zh-hk" "zh_TW" -}}
 <div class="post-cc">
   {{- $iconsHTML := "" -}}
   {{- range $icons -}}
     {{- $iconsHTML = printf `%s<i class="fab fa-fw fa-creative-commons%s"></i>` $iconsHTML .  -}}
   {{- end -}}
-  {{- $license := printf `<a rel="license" href="%s">%s%s</a>` $link $linkTitle $iconsHTML -}}
+  {{- $license := printf `<a target="_blank" rel="license" href="%s.%s">%s%s</a>` $link (default "en" (index $langs .Lang)) $linkTitle $iconsHTML -}}
   {{- i18n "post_license" (dict "license" $license) | safeHTML -}}
 </div>
