@@ -1,14 +1,15 @@
-{{- $pages := .RegularPagesRecursive -}}
+{{- $pages := (.Paginate .RegularPagesRecursive).Pages -}}
 <div class="container">
   {{- if .IsHome -}}
-    {{- $pages = where .Site.RegularPages "Type" "in" (default (slice "posts") .Site.Params.mainSections) -}}
+    {{- $sections := default (slice "posts") .Site.Params.mainSections -}}
+    {{- $pages = where (.Paginate .Site.RegularPages).Pages "Type" "in" $sections -}}
   {{- else -}}
   {{- partial "breadcrumb" . -}}
   {{- partial "sections" . -}}
   {{- end -}}
   {{- partial "hooks/list-begin" . -}}
   <div class="posts mb-4">
-  {{- range (.Paginate $pages).Pages -}}
+  {{- range $pages -}}
     <article class="post row surface">
       {{- if .Params.Images -}}
       <div class="post-thumbnail col-md-3 d-flex align-items-center justify-content-center">
