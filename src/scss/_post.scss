@@ -37,6 +37,16 @@
   margin-bottom: 0;
 }
 
+.post-content {
+  a {
+    color: var(--hbs-accent);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
 .post-nav {
   width: 50%;
   display: flex;
