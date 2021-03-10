@@ -41,7 +41,7 @@
 ## 功能特性
 
 - 極快：[Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/?url=https://hugo-theme-bootstrap.netlify.app/en/) 分數在 `95-100` 之間
-- 基於 [Bootstrap 5](https://v5.getbootstrap.com/)
+- 基於 [Bootstrap 5](https://getbootstrap.com/)
 - 響應式
 - 多種配色：`blue`, `blue-gray`, `brown`, `cyan`, `green`, `indigo`, `orange`, `pink`, `purple`, `red`, `teal`, `yellow`
 - [高度可配置](#配置)
