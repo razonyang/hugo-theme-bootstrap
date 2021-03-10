@@ -12,11 +12,11 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-2 mb-2 mb-lg-0">
+      <ul class="navbar-nav me-1 mb-2 mb-lg-0">
         {{- partial "header/search-bar" . -}}
       </ul>
       {{- $menusPosition := default "right" .Site.Params.menusPosition  -}}
-      <ul class="navbar-nav mb-2 mb-lg-0 mr-2 {{ index $menusPositions $menusPosition }}">
+      <ul class="navbar-nav me-1 mb-2 mb-lg-0 me-1 {{ index $menusPositions $menusPosition }}">
         {{- $currentPage := . -}}
         {{- range .Site.Menus.main -}}
         {{- $url := absLangURL .URL -}}

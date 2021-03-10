@@ -1,7 +1,7 @@
 {{ if and .IsTranslated }}
-<div class="post-translations nav-item dropdown mr-2 d-inline-flex">
+<div class="post-translations nav-item dropdown me-2 d-inline-flex">
   <a class="nav-link p-0" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-    <i class="fas fa-fw fa-language mr-1"></i>{{ $.Language.LanguageName }}
+    <i class="fas fa-fw fa-language me-1"></i>{{ $.Language.LanguageName }}
   </a>
   <div class="dropdown-menu">
     {{- range .Translations -}}

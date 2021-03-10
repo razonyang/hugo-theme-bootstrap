@@ -6,7 +6,7 @@
       <h1>{{ .Title }}</h1>
       <div>
         {{- range .Data.Terms.ByCount -}}
-        <a href="{{ .Page.Permalink }}" class="post-taxonomy rounded-pill btn mr-3 mb-3" title="{{ .Page.Title }}">
+        <a href="{{ .Page.Permalink }}" class="post-taxonomy rounded-pill btn me-3 mb-3" title="{{ .Page.Title }}">
           {{ .Page.Title }} <span class="badge rounded-pill">{{ .Count }}</span>
         </a>
         {{- end -}}

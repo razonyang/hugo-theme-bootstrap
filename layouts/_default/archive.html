@@ -20,7 +20,7 @@
       {{- end -}}
         <li>
           <a class="archive-post-title" href="{{ .Permalink }}">{{ .Title }}</a>
-          <span class="float-right archive-post-date">{{ .Date.Format (default "Jan 2" $.Site.Params.archive.dateFormat) }}</span>
+          <span class="float-end archive-post-date">{{ .Date.Format (default "Jan 2" $.Site.Params.archive.dateFormat) }}</span>
         </li>
       {{- if eq $idx (sub $count 1) -}}
       {{/* Last item, close current ul tag */}}
