@@ -6,7 +6,7 @@
 {{- $sticky := default true .Site.Params.tocSticky -}}
 <div class="accordion accordion-flush surface post-toc{{ if $sticky }} position-sticky{{ end }}" id="accordionTOC">
   <div class="accordion-item">
-    <div class="accordion-header" id="headingTOC" data-toggle="collapse" data-target="#collapseTOC" aria-expanded="true" aria-controls="collapseTOC">
+    <div class="accordion-header" id="headingTOC" data-bs-toggle="collapse" data-bs-target="#collapseTOC" aria-expanded="true" aria-controls="collapseTOC">
       <i class="fas fa-fw fa-bars"></i>{{ i18n "table_of_contents" }}
     </div>
     <div id="collapseTOC" class="accordion-collapse collapse" aria-labelledby="headingTOC" data-parent="#accordionTOC">
