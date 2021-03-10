@@ -230,13 +230,7 @@ export class Search {
   }
 
   static formatScore(value) {
-    const score = 100 * (1 - value);
-    const scoreStr = score.toFixed(2);
-    if (score < 90) {
-      return `${scoreStr}%`;
-    }
-
-    return `<span class="text-accent">${scoreStr}%</span>`;
+    return (100 * (1 - value)).toFixed(2);
   }
 
   highlight(id, titleKeywords, contentKeywords) {

@@ -1,6 +1,6 @@
-<li class="nav-item mr-2">
-  <a class="nav-link" tabindex="0" data-trigger="click" id="languageSwitcher" data-toggle="popover"
-    data-placement="bottom" data-target="#languagesPopoverBody" data-html="true">
+<li class="nav-item me-1">
+  <a class="nav-link" tabindex="0" data-bs-trigger="click" id="languageSwitcher" data-bs-toggle="popover"
+    data-bs-placement="bottom" data-bs-target="#languagesPopoverBody" data-bs-html="true">
     <i class="fas fa-fw fa-language" ></i>
   </a>
 </li>
@@ -9,10 +9,10 @@
     {{- range $.Site.Home.AllTranslations -}}
     {{- $active := eq $.Lang .Language.Lang -}}
     <li class="language list-group-item{{ if $active }} active{{ end }}">
-      {{- if not $active }}
-      <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
+      {{- if $active }}
+      {{- .Language.LanguageName }}
       {{- else -}}
-      {{ .Language.LanguageName }}
+      <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
       {{- end -}}
     </li>
     {{- end -}}

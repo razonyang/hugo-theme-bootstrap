@@ -21,10 +21,6 @@
   z-index: 4!important;
 }
 
-.search-result-meta {
-  color: var(--hbs-secondary-text);
-}
-
 .search-result-taxonomy {
   margin: 0 .25rem .25rem 0;
   color: var(--hbs-secondary-text);
@@ -32,5 +28,28 @@
   +.search-result-taxonomy:before {
     content: "·";
     margin-right: .5rem;
+  }
+}
+
+$startContent: "★★★★★";
+
+.search-result-score {
+  font-size: 20px;
+  color: var(--hbs-disabled-text);
+  position: relative;
+  
+  &::before {
+    content: $startContent;
+  }
+
+  span {
+    color: var(--hbs-accent);
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+
+    &::before {
+      content: $startContent;
+    }
   }
 }

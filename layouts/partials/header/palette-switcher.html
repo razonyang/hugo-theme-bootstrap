@@ -1,8 +1,8 @@
 {{- $palettes := slice "blue" "blue gray" "brown" "cyan" "green" "indigo" "orange" "pink" "purple" "red" "teal" "yellow" -}}
 {{- $palettes = default $palettes .Site.Params.Palettes -}}
-<li class="nav-item mr-2">
-  <a class="nav-link" tabindex="0" data-trigger="click" id="paletteSwitcher" data-toggle="popover" data-placement="bottom" 
-    data-target="#palettesPopoverBody" data-html="true">
+<li class="nav-item me-1">
+  <a class="nav-link" tabindex="0" data-bs-trigger="click" id="paletteSwitcher" data-bs-toggle="popover" data-bs-placement="bottom" 
+    data-bs-target="#palettesPopoverBody" data-bs-html="true">
     <i class="fas fa-fw fa-palette" ></i>
   </a>
 </li>

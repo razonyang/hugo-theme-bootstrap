@@ -17,7 +17,6 @@ class ModeSwitcher {
     });
 
     window.matchMedia('(prefers-color-scheme: dark)').addListener((e) => {
-      console.log('sss');
       instance.setMode(e.matches ? 'dark' : 'light');
     });
   }

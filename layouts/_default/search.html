@@ -16,6 +16,7 @@
     {{- end -}}
   {{- end -}}
 {{- end -}}
+
 <script>
   window.searchResultContentWordCount = parseInt('{{ default 240 .Site.Params.search.resultContentWordCount }}');
   window.searchPaginate = parseInt('{{ default 10 .Site.Params.search.paginate }}');
@@ -30,7 +31,7 @@
   <form id="searchForm" class="search-form mb-3">
     <div class="input-group input-group-lg">
       <button class="btn btn-search disabled position-absolute left-0" type="submit"><i class="fas fa-fw fa-search"></i></button>
-      <input class="form-control rounded-pill pl-5" name="q" type="search" aria-label="Search">
+      <input class="form-control rounded-pill ps-5" name="q" type="search" aria-label="Search">
     </div>
   </form>
   <div class="search-stat mb-3 ml-1">
@@ -44,11 +45,13 @@
 </div>
 <script type="text/html" id="templateResult">
   <div class="search-result surface" id="{{ print "{{id}}" }}">
-    <h2 class="search-result-title mb-4">
+    <h2 class="search-result-title mb-2">
       <a {{ printf "href={{permalink}}" | safeHTMLAttr }}>{{ print "{{title}}" }}</a>
     </h2>
-    <div class="search-result-content mb-3">{{ print "{{{content}}}" }}</div>
     <div class="search-result-taxonomies mb-3">
+      <span class="search-result-score search-result-taxonomy">
+        <span {{ printf "style=\"%s\"" "width: {{{score}}}%" | safeHTMLAttr }}></span>
+      </span>
       {{- $baseURL := absLangURL "" -}}
       {{- $placeholder := "{{#url}}{{.}}{{/url}}" -}}
       {{- range slice "series" "categories" "tags" -}}
@@ -57,9 +60,7 @@
       {{ printf "{{/%s}}" . }}
       {{- end -}}
     </div>
-    <div class="search-result-meta mb-3">
-      <span class="search-result-score"><i class="fas fa-fw fa-star"></i>{{ printf "{{{score}}}" }}</span>
-    </div>
+    <div class="search-result-content mb-3">{{ print "{{{content}}}" }}</div>
   </div>
 </script>
 <script type="text/html" id="templateMissingKeywords">

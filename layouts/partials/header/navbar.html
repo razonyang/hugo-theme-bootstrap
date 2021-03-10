@@ -1,4 +1,4 @@
-{{- $menusPositions := dict "right" "ml-auto" "left" "mr-auto" "center" "ml-auto mr-auto" -}}
+{{- $menusPositions := dict "right" "ms-auto" "left" "me-auto" "center" "me-auto ms-auto" -}}
 {{- $baseURL := $.Site.BaseURL -}}
 <nav class="navbar fixed-top navbar-expand-xl">
   <div class="container{{ if default false .Site.Params.fullWidth }}-fluid{{ end }}">
@@ -8,7 +8,7 @@
       {{ . }}
       {{- end -}}
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -23,7 +23,7 @@
         {{- $active := or (eq $currentPage.Permalink (absLangURL .URL)) ($currentPage.IsMenuCurrent "main" .) -}}
         {{- if .HasChildren -}}
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle{{ if $currentPage.HasMenuCurrent "main" . }} active{{ end }}" id="navbarDropdown-{{ .Identifier }}" role="button" data-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle{{ if $currentPage.HasMenuCurrent "main" . }} active{{ end }}" id="navbarDropdown-{{ .Identifier }}" role="button" data-toggle="dropdown" data-bs-toggle="dropdown" aria-expanded="false">
             {{ .Pre }} {{- .Name -}} {{ .Post }}
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown-{{ .Identifier }}">
