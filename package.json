@@ -4,7 +4,7 @@
   "description": "Hugo bootstrap theme",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.1",
-    "bootstrap": "5.0.0-beta1",
+    "bootstrap": "^5.0.0-beta3",
     "fibers": "^5.0.0",
     "fuse.js": "^6.4.1",
     "katex": "^0.13.0",
