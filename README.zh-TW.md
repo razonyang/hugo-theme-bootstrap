@@ -315,6 +315,8 @@ github = "githubusername"
 | `qq` | QQ 號 |
 | `dockerhub` | Docker Hub 使用者名稱 |
 | `bitbucket` | Bitbucket Workspace ID |
+| `medium` | Medium 使用者名稱或自定義域名（https://yourname.medium.com） |
+| `lastfm` | Last.fm 使用者名稱 |
 
 ## 貢獻
 
