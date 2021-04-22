@@ -122,6 +122,12 @@
   color: #{$white};
 }
 
+.palette {
+  a {
+    color: white !important;
+  }
+}
+
 .palette.active a:after {
   content: "√";
   padding-left: .25rem;
