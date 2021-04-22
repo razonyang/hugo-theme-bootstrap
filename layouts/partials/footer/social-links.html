@@ -1,9 +1,9 @@
-{{- $github := dict "github" (dict "url" "https://github.com/%s") -}}
-{{- $gitlab := dict "gitlab" (dict "url" "https://gitlab.com/%s") -}}
+{{- $github := dict "github" (dict "url" "https://github.com/%s" "title" "GitHub") -}}
+{{- $gitlab := dict "gitlab" (dict "url" "https://gitlab.com/%s" "title" "GitLab") -}}
 {{- $twitter := dict "twitter" (dict "url" "https://twitter.com/%s") -}}
 {{- $facebook := dict "facebook" (dict "url" "https://facebook.com/%s" "icon" "facebook-f") -}}
-{{- $linkedin := dict "linkedin" (dict "url" "https://linkedin.com/%s" "icon" "linkedin-in") -}}
-{{- $stackoverflow := dict "stackoverflow" (dict "url" "https://stackoverflow.com/users/%s" "icon" "stack-overflow") -}}
+{{- $linkedin := dict "linkedin" (dict "url" "https://linkedin.com/%s" "icon" "linkedin-in" "title" "LinkedIn") -}}
+{{- $stackoverflow := dict "stackoverflow" (dict "url" "https://stackoverflow.com/users/%s" "icon" "stack-overflow" "title" "Stack Overflow") -}}
 {{- $weibo := dict "weibo" (dict "url" "https://weibo.com/%s") -}}
 {{- $zhihu := dict "zhihu" (dict "url" "https://www.zhihu.com/people/%s") -}}
 {{- $quora := dict "quora" (dict "url" "https://www.quora.com/profile/%s") -}}
@@ -11,11 +11,11 @@
 {{- $tumblr := dict "tumblr" (dict "url" "https://%s.tumblr.com") -}}
 {{- $reddit := dict "reddit" (dict "url" "https://www.reddit.com/user/%s") -}}
 {{- $telegram := dict "telegram" (dict "url" "https://t.me/%s" "icon" "telegram-plane") -}}
-{{- $qq := dict "qq" (dict "url" "http://wpa.qq.com/msgrd?v=3&uin=%s&site=qq&menu=yes") -}}
-{{- $dockerhub := dict "dockerhub" (dict "url" "https://hub.docker.com/u/%s" "icon" "docker") -}}
+{{- $qq := dict "qq" (dict "url" "http://wpa.qq.com/msgrd?v=3&uin=%s&site=qq&menu=yes" "title" "QQ") -}}
+{{- $dockerhub := dict "dockerhub" (dict "url" "https://hub.docker.com/u/%s" "icon" "docker" "title" "Docker Hub") -}}
 {{- $bitbucket := dict "bitbucket" (dict "url" "https://bitbucket.org/%s") -}}
 {{- $items := merge $github $gitlab $twitter $facebook $linkedin $stackoverflow $weibo $zhihu $quora $instagram -}}
-{{- $lastfm := dict "lastfm" (dict "url" "https://www.last.fm/user/%s") -}}
+{{- $lastfm := dict "lastfm" (dict "url" "https://www.last.fm/user/%s" "title" "Last.fm") -}}
 {{- $items = merge $items $tumblr $reddit $telegram $qq $dockerhub $bitbucket $lastfm -}}
 <nav class="social-links nav my-2 justify-content-center">
 {{- range $key, $user := .Site.Social -}}
@@ -31,14 +31,14 @@
       {{- $url = printf "https://medium.com/@%s" $user | urls.Parse -}}
     {{- end -}}
     <li class="nav-item">
-      <a class="nav-link social-link" target="_blank" href="{{ $url.String }}" title="{{ title $key }}">
+      <a class="nav-link social-link" target="_blank" href="{{ $url.String }}" title="Medium">
         <i class="fab fa-fw fa-2x fa-medium-m"></i>
       </a>
     </li>
   {{- else -}}
     {{- with index $items $key -}}
     <li class="nav-item">
-      <a class="nav-link social-link" target="_blank" href="{{ printf .url $user }}" title="{{ title $key }}">
+      <a class="nav-link social-link" target="_blank" href="{{ printf .url $user }}" title="{{ default (title $key) .title }}">
         <i class="fab fa-fw fa-2x fa-{{ default $key .icon }}"></i>
       </a>
     </li>
