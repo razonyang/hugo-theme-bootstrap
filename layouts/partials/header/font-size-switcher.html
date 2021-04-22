@@ -1,4 +1,4 @@
-
+{{ if isset $.Site.Params "fontsize" }}
 <li class="nav-item me-1">
   <a class="nav-link" tabindex="0" data-bs-trigger="click" id="fontSizeSwitcher" data-bs-toggle="popover" data-bs-placement="bottom" 
     data-bs-target="#fontSizesPopoverBody" data-bs-html="true">
@@ -11,3 +11,4 @@
     <input type="range" class="form-range" min="-2" max="2" id="fontSize">
   </form>
 </script>
+{{ end }}
