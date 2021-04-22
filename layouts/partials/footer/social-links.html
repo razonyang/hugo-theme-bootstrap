@@ -1,8 +1,8 @@
 {{- $github := dict "github" (dict "url" "https://github.com/%s") -}}
 {{- $gitlab := dict "gitlab" (dict "url" "https://gitlab.com/%s") -}}
 {{- $twitter := dict "twitter" (dict "url" "https://twitter.com/%s") -}}
-{{- $facebook := dict "facebook" (dict "url" "https://facebook.com/%s") -}}
-{{- $linkedin := dict "linkedin" (dict "url" "https://linkedin.com/%s") -}}
+{{- $facebook := dict "facebook" (dict "url" "https://facebook.com/%s" "icon" "facebook-f") -}}
+{{- $linkedin := dict "linkedin" (dict "url" "https://linkedin.com/%s" "icon" "linkedin-in") -}}
 {{- $stackoverflow := dict "stackoverflow" (dict "url" "https://stackoverflow.com/users/%s" "icon" "stack-overflow") -}}
 {{- $weibo := dict "weibo" (dict "url" "https://weibo.com/%s") -}}
 {{- $zhihu := dict "zhihu" (dict "url" "https://www.zhihu.com/people/%s") -}}
@@ -10,7 +10,7 @@
 {{- $instagram := dict "instagram" (dict "url" "https://www.instagram.com/%s") -}}
 {{- $tumblr := dict "tumblr" (dict "url" "https://%s.tumblr.com") -}}
 {{- $reddit := dict "reddit" (dict "url" "https://www.reddit.com/user/%s") -}}
-{{- $telegram := dict "telegram" (dict "url" "https://t.me/%s") -}}
+{{- $telegram := dict "telegram" (dict "url" "https://t.me/%s" "icon" "telegram-plane") -}}
 {{- $qq := dict "qq" (dict "url" "http://wpa.qq.com/msgrd?v=3&uin=%s&site=qq&menu=yes") -}}
 {{- $dockerhub := dict "dockerhub" (dict "url" "https://hub.docker.com/u/%s" "icon" "docker") -}}
 {{- $bitbucket := dict "bitbucket" (dict "url" "https://bitbucket.org/%s") -}}
@@ -32,7 +32,7 @@
     {{- end -}}
     <li class="nav-item">
       <a class="nav-link social-link" target="_blank" href="{{ $url.String }}" title="{{ title $key }}">
-        <i class="fab fa-fw fa-2x fa-medium"></i>
+        <i class="fab fa-fw fa-2x fa-medium-m"></i>
       </a>
     </li>
   {{- else -}}
