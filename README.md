@@ -119,7 +119,7 @@ As the example site shown, the configuration are separated into multiple files, 
 | `brand` | String | - | Brand text.
 | `menusPosition` | String | `right` | Menus position: `right`, `left`, `center`.
 | `description` | String | - | Site description.
-| `palette` | String | - | Default palette.
+| `palette` | String | - | Default palette. This will take effect after clearing the Cookie.
 | `palettes` | Array | **ALL** | Available palettes. You can disable it by setting it to empty `[]`.
 | `featuredPostCount` | Integer | `5` | The number of featured posts shown in sidebar.
 | `recentPostCount` | Integer | `5` | The number of recent posts shown in sidebar.
