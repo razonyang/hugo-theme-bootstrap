@@ -25,6 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const languageSwitcher = new LanguageSwitcher(document.querySelector('#languageSwitcher'));
   languageSwitcher.init();
 
-  const fontSizeSwitcher = new FontSizeSwitcher(document.querySelector('#fontSizeSwitcher'));
-  fontSizeSwitcher.init();
+  const fontSizeSwitcherEle: HTMLElement = document.querySelector('#fontSizeSwitcher');
+  if (fontSizeSwitcherEle) {
+    (new FontSizeSwitcher(fontSizeSwitcherEle)).init();
+  }
 });
