@@ -14,8 +14,9 @@
 {{- $qq := dict "qq" (dict "url" "http://wpa.qq.com/msgrd?v=3&uin=%s&site=qq&menu=yes") -}}
 {{- $dockerhub := dict "dockerhub" (dict "url" "https://hub.docker.com/u/%s" "icon" "docker") -}}
 {{- $bitbucket := dict "bitbucket" (dict "url" "https://bitbucket.org/%s") -}}
-{{- $items := merge $github $gitlab $twitter $facebook $linkedin $stackoverflow $weibo $zhihu $quora $instagram $tumblr -}}
-{{- $items = merge $items $reddit $telegram $qq $dockerhub $bitbucket -}}
+{{- $items := merge $github $gitlab $twitter $facebook $linkedin $stackoverflow $weibo $zhihu $quora $instagram -}}
+{{- $lastfm := dict "lastfm" (dict "url" "https://www.last.fm/user/%s") -}}
+{{- $items = merge $items $tumblr $reddit $telegram $qq $dockerhub $bitbucket $lastfm -}}
 <nav class="social-links nav my-2 justify-content-center">
 {{- range $key, $user := .Site.Social -}}
   {{- if eq $key "email" -}}
@@ -24,6 +25,16 @@
       <i class="fas fa-fw fa-2x fa-envelope"></i>
     </a>
   </li>
+  {{- else if eq $key "medium" -}}
+    {{- $url := urls.Parse $user -}}
+    {{- if eq $url.Host "" -}}
+      {{- $url = printf "https://medium.com/@%s" $user | urls.Parse -}}
+    {{- end -}}
+    <li class="nav-item">
+      <a class="nav-link social-link" target="_blank" href="{{ $url.String }}" title="{{ title $key }}">
+        <i class="fab fa-fw fa-2x fa-medium"></i>
+      </a>
+    </li>
   {{- else -}}
     {{- with index $items $key -}}
     <li class="nav-item">

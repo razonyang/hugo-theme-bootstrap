@@ -15,3 +15,5 @@ telegram = "telegramusername"
 qq = "qqnumber"
 dockerhub = "dockerhubusername"
 bitbucket = "bitbucketworkspaceid"
+medium = "yourmediumusername" # Medium username or custom domain(e.g. https://yourname.medium.com).
+lastfm = "yourlastfmusername"

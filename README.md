@@ -315,6 +315,8 @@ github = "githubusername"
 | `qq` | QQ Number |
 | `dockerhub` | Docker Hub Username |
 | `bitbucket` | Bitbucket Workspace ID |
+| `medium` | Medium Username or custom domain(e.g. https://yourname.medium.com) |
+| `lastfm` | Last.fm Username |
 
 ## Contribute
 
