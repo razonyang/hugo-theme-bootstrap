@@ -11,6 +11,7 @@ brand = "BOOTSTRAP"
 
 palette = "blue" # Default palette. Optional.
 # palettes = ["blue", "blue gray", "brown"] # Available palettes. Default to ALL.
+# palettes = [] # Disable palette switcher.
 
 # fullWidth = true # Full width.
 
