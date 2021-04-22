@@ -1,3 +1,4 @@
+{{- if gt (len $.Site.Home.AllTranslations) 1 -}}
 <li class="nav-item me-1">
   <a class="nav-link" tabindex="0" data-bs-trigger="click" id="languageSwitcher" data-bs-toggle="popover"
     data-bs-placement="bottom" data-bs-target="#languagesPopoverBody" data-bs-html="true">
@@ -18,3 +19,4 @@
     {{- end -}}
   </ul>
 </script>
+{{- end -}}
