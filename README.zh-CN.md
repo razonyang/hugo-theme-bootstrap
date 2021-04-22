@@ -120,7 +120,7 @@ $ hugo server
 | `menusPosition` | String | `right` | 菜单位置：`right`, `left`, `center`.
 | `description` | String | - | 站点描述
 | `palette` | String | - | 默认配色
-| `palettes` | Array | **ALL** | 可选配色
+| `palettes` | Array | **ALL** | 可选配色，如需禁用此选项，可将其设为空值 `[]`。
 | `featuredPostCount` | Integer | `5` | 精选文章数
 | `recentPostCount` | Integer | `5` | 最近文章数
 | `relatedPostCount` | Integer | `5` | 相关文章数

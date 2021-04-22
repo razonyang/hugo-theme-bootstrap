@@ -1,3 +1,4 @@
+{{- if not (and (isset .Site.Params "palettes") (not .Site.Params.palettes)) -}}
 {{- $palettes := slice "blue" "blue gray" "brown" "cyan" "green" "indigo" "orange" "pink" "purple" "red" "teal" "yellow" -}}
 {{- $palettes = default $palettes .Site.Params.Palettes -}}
 <li class="nav-item me-1">
@@ -16,3 +17,4 @@
     {{- end -}}
   </ul>
 </script>
+{{- end -}}

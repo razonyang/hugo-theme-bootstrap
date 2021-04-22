@@ -10,6 +10,9 @@ class Popover {
   }
 
   init() {
+    if (!this.element) {
+      return;
+    }
     const target = this.element.getAttribute('data-bs-target');
     if (target) {
       this.options.content = document.querySelector(target).innerHTML;

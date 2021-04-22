@@ -18,6 +18,9 @@ class PaletteSwitcher extends Popover {
   }
 
   initPopover() {
+    if (!this.instance) {
+      return;
+    }
     const instance = this;
     this.element.addEventListener('shown.bs.popover', () => {
       const selected = instance.getPalette();
