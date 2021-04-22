@@ -88,7 +88,7 @@ customJS = []
 [share]
   # addThis = "" # AddThis pubid.
 
-[fontSize]
+[fontSize] # Comment or remove this settings to disable font size switcher.
   # extraSmall = ".8rem"
   # small = ".9rem"
   # large = "1.1rem"

@@ -133,7 +133,7 @@ As the example site shown, the configuration are separated into multiple files, 
 | `reward.wechat` | String | - | Wechat QR Code Image.
 | `share` | Object | - | Share buttons
 | `share.addThis` | String | - | [AddThis](https://www.addthis.com)'s `pubid`.
-| `fontSize` | Object | Font Sizes
+| `fontSize` | Object | Font Sizes | Comment or remove this parameter to disable font size switcher.
 | `fontSize.small` | String | `.9rem` | Small font size.
 | `fontSize.extraSmall` | String | `.8rem` | Extra small font size.
 | `fontSize.large` | String | `1.1rem` | Large font size.

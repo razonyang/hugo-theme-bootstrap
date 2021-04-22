@@ -133,7 +133,7 @@ $ hugo server
 | `reward.wechat` | String | - | 微信收款/打賞二維碼圖片
 | `share` | Object | - | 分享按鈕
 | `share.addThis` | String | - | [AddThis](https://www.addthis.com) `pubid`。
-| `fontSize` | Object | 字體大小
+| `fontSize` | Object | 字體大小 | 註釋或刪除此參數可以禁用字體大小切換器。
 | `fontSize.small` | String | `.9rem` | 小字體
 | `fontSize.extraSmall` | String | `.8rem` | 更小的字體
 | `fontSize.large` | String | `1.1rem` | 大字體
