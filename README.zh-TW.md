@@ -119,6 +119,7 @@ $ hugo server
 | `brand` | String | - | Brand
 | `menusPosition` | String | `right` | 選單位置：`right`, `left`, `center`.
 | `description` | String | - | 站點描述
+| `color` | String | - | 顏色風格， `light`，`dark` 或者 dynamic（默認）。
 | `palette` | String | - | 預設配色，清理 Cookie 後生效。
 | `palettes` | Array | **ALL** | 可選配色，如需禁用此選項，可將其設為空值 `[]`。
 | `featuredPostCount` | Integer | `5` | 精選文章數

@@ -13,6 +13,8 @@ palette = "blue" # Default palette. Optional.
 # palettes = ["blue", "blue gray", "brown"] # Available palettes. Default to ALL.
 # palettes = [] # Disable palette switcher.
 
+# color = "dark" # light, dark or dynamic. Default to dynamic.
+
 # fullWidth = true # Full width.
 
 # dateFormat = "Jan 2, 2006"

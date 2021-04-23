@@ -7,8 +7,10 @@ import ModeSwitcher from './mode';
 import FontSizeSwitcher from './font-size';
 
 document.addEventListener('DOMContentLoaded', () => {
-  const modeSwitcher = new ModeSwitcher(document.querySelector('#modeSwitcher'));
-  modeSwitcher.init();
+  const modeSwitcherEle: HTMLInputElement = document.querySelector('#modeSwitcher');
+  if (modeSwitcherEle) {
+    (new ModeSwitcher(modeSwitcherEle)).init();
+  }
 
   const paletteSwitcher = new PaletteSwitcher(document.querySelector('#paletteSwitcher'));
   paletteSwitcher.init();
