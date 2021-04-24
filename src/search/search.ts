@@ -213,6 +213,7 @@ export class Search {
         tags: result.item.tags,
         series: result.item.series,
         score: Search.formatScore(result.score),
+        date: result.item.date,
         url() {
           return Search.normalizeTaxonomy;
         },

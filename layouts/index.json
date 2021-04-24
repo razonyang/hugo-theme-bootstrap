@@ -1,5 +1,7 @@
 {{- $.Scratch.Add "index" slice -}}
 {{- range .Site.RegularPages -}}
-    {{- $.Scratch.Add "index" (dict "title" .Title "tags" .Params.tags "categories" .Params.categories "series" .Params.series "content" .Plain "permalink" .Permalink) -}}
+    {{- $date := .Date.Format (default "Jan 2, 2006" $.Site.Params.dateFormat) -}}
+    {{- $item := (dict "title" .Title "tags" .Params.tags "categories" .Params.categories "series" .Params.series "content" .Plain "permalink" .Permalink "date" $date) -}}
+    {{- $.Scratch.Add "index" $item -}}
 {{- end -}}
 {{- $.Scratch.Get "index" | uniq | jsonify -}}
