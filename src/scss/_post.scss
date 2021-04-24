@@ -28,9 +28,16 @@
   }
 }
 
-#TableOfContents {
-  max-height: 360px;
-  overflow: auto;
+#btnTOC {
+  z-index: 1;
+  bottom: 5rem;
+  right: 1.25rem;
+  padding: 0;
+  color: var(--hbs-accent);
+}
+
+#offcanvasTOC {
+  margin-bottom: 0;
 }
 
 .post-toc ul {

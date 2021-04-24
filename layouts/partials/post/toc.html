@@ -4,16 +4,18 @@
 {{- $valid := and $toc (and (ne $toc "<nav id=\"TableOfContents\"></nav>") (gt .WordCount $wordCount)) -}}
 {{- if and $enable $valid -}}
 {{- $sticky := default true .Site.Params.tocSticky -}}
-<div class="accordion accordion-flush surface post-toc{{ if $sticky }} position-sticky{{ end }}" id="accordionTOC">
-  <div class="accordion-item">
-    <div class="accordion-header" id="headingTOC" data-bs-toggle="collapse" data-bs-target="#collapseTOC" aria-expanded="true" aria-controls="collapseTOC">
-      <i class="fas fa-fw fa-bars"></i>{{ i18n "table_of_contents" }}
-    </div>
-    <div id="collapseTOC" class="accordion-collapse collapse" aria-labelledby="headingTOC" data-parent="#accordionTOC">
-      <div class="accordion-body mt-2">
-        {{ $toc }}
-      </div>
-    </div>
+<a id="btnTOC" class="fas fa-fw fa-2x fa-list-alt position-fixed" data-bs-toggle="offcanvas" href="#offcanvasTOC" aria-controls="offcanvasTOC" role="button">
+</a>
+
+<div class="offcanvas offcanvas-end surface" tabindex="-1" id="offcanvasTOC" aria-labelledby="offcanvasTOCLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasTOCLabel">{{ i18n "table_of_contents" }}</h5>
+    <a role="button" data-bs-dismiss="offcanvas" aria-label="Close">
+      <span class="fas fa-2x fa-fw fa-times"></span>
+    </a>
+  </div>
+  <div class="offcanvas-body">
+    {{ $toc }}
   </div>
 </div>
 {{- end -}}

@@ -5,6 +5,7 @@ import PaletteSwitcher from './palette';
 import LanguageSwitcher from './language';
 import ModeSwitcher from './mode';
 import FontSizeSwitcher from './font-size';
+import TOC from './toc';
 
 document.addEventListener('DOMContentLoaded', () => {
   const modeSwitcherEle: HTMLInputElement = document.querySelector('#modeSwitcher');
@@ -30,5 +31,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const fontSizeSwitcherEle: HTMLElement = document.querySelector('#fontSizeSwitcher');
   if (fontSizeSwitcherEle) {
     (new FontSizeSwitcher(fontSizeSwitcherEle)).init();
+  }
+
+  const tocEle: HTMLElement = document.querySelector('#offcanvasTOC');
+  if (tocEle) {
+    (new TOC(tocEle)).init();
   }
 });
