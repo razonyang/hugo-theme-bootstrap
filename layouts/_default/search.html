@@ -52,6 +52,7 @@
       <span class="search-result-score search-result-taxonomy">
         <span {{ printf "style=\"%s\"" "width: {{{score}}}%" | safeHTMLAttr }}></span>
       </span>
+      <span class="search-result-taxonomy">{{ printf "{{date}}" }}</span>
       {{- $baseURL := absLangURL "" -}}
       {{- $placeholder := "{{#url}}{{.}}{{/url}}" -}}
       {{- range slice "series" "categories" "tags" -}}
