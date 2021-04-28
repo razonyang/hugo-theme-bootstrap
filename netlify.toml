@@ -1,6 +1,6 @@
 [build]
 publish = "exampleSite/public"
-command = "cd exampleSite && hugo --minify --themesDir=../../ --theme=repo"
+command = "cd exampleSite && hugo --minify --themesDir=../../ --theme=repo -b=https://hugo-theme-bootstrap.netlify.app/"
 
 [context.production.environment]
 HUGO_VERSION = "0.78.0"
