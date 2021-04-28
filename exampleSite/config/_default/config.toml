@@ -21,6 +21,8 @@ enableRobotsTXT = true
 
 enableEmoji = true
 
+# hasCJKLanguage = true # Turn on it if your content contains Chinese/Japanese/Korean Languages.
+
 [blackfriday]
   hrefTargetBlank = true
 
