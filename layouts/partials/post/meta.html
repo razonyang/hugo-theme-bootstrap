@@ -2,7 +2,7 @@
   <span class="post-date me-2">
     <i class="fas fa-fw fa-calendar-alt"></i>{{ .Date.Format (default "Jan 2, 2006" $.Site.Params.dateFormat) }}
   </span>
-  <span class="poost-reading-time me-2">
+  <span class="post-reading-time me-2">
     <i class="fas fa-fw fa-coffee"></i>{{ i18n "reading_time" . }}
   </span>
   {{- partial "post/translations" . -}}
