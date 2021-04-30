@@ -74,6 +74,8 @@ $ cp -a themes/hugo-theme-bootstrap/exampleSite/* .
 $ hugo server
 ```
 
+> 如果你使用的是 Windows，請改用 `xcopy .\themes\hugo-theme-bootstrap\exampleSite /E`。
+
 ## 配置
 
 如示例站點所展示，配置被分為多個配置檔案，這比單配置檔案更加清晰，特別是對於多語言網站。

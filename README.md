@@ -74,6 +74,8 @@ $ cp -a themes/hugo-theme-bootstrap/exampleSite/* .
 $ hugo server
 ```
 
+> If you're using Windows, use `xcopy .\themes\hugo-theme-bootstrap\exampleSite /E` instead.
+
 ## Configuration
 
 As the example site shown, the configuration are separated into multiple files, this is much clearer than a single configuration file, especially in a multilingual website.
