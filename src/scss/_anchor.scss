@@ -1,3 +1,10 @@
+:target::before {
+  content: "";
+  display: block;
+  height: 84px;
+  margin-top: -84px;
+}
+
 .anchor {
   font-size: 80%;
   visibility: hidden;
