@@ -185,7 +185,7 @@ $ hugo server
 | `creativeCommons.nd` | Boolean | `true` | 禁止演绎
 | `creativeCommons.sa` | Boolean | `true` | 相同方式共享
 
-> 除了 Google 站长工具外，其他搜宿引擎站长工具无法与 `hugo --minify` 同时使用，这是因为它们无法识别优化后的元标签。
+> 除了 Google 站长工具外，其他搜索引擎站长工具无法与 `hugo --minify` 同时使用，这是因为它们无法识别优化后的元标签。
 
 ### 页面参数
 
