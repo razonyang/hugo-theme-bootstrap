@@ -4,7 +4,7 @@
   "description": "Hugo bootstrap theme",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.1",
-    "bootstrap": "^5.0.0-beta3",
+    "bootstrap": "^5.0.0",
     "fibers": "^5.0.0",
     "fuse.js": "^6.4.1",
     "katex": "^0.13.0",
@@ -14,6 +14,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
+    "@popperjs/core": "^2.9.2",
     "@typescript-eslint/eslint-plugin": "^4.6.1",
     "@typescript-eslint/parser": "^4.6.1",
     "autoprefixer": "^10.0.1",

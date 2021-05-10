@@ -40,6 +40,20 @@ $bgNavbarTogglerIcon: url("/images/icons/menu.png");
   background-image: $bgNavbarTogglerIcon;
 }
 
+.nav-link {
+  color: var(--hbs-primary-tex);
+
+  &:focus {
+    outline: none;
+    color: var(--hbs-accent);
+  }
+
+  &:hover {
+    outline: none;
+    color: var(--hbs-accent);
+  }
+}
+
 .navbar a {
   &:hover,
   &:active,
@@ -56,8 +70,4 @@ $bgNavbarTogglerIcon: url("/images/icons/menu.png");
     color: #fff;
     background-color: var(--hbs-accent);
   }
-}
-
-.nav-link:focus {
-  outline: none;
 }

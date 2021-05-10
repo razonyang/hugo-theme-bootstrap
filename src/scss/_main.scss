@@ -33,11 +33,11 @@ body {
 
 a {
   text-decoration: none;
-  color: inherit;
-}
+  color: var(--hbs-primary-tex);
 
-a:hover {
-  color: var(--hbs-accent);
+  &:hover {
+    color: var(--hbs-accent);
+  }
 }
 
 btn,
