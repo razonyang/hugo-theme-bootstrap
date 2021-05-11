@@ -3,7 +3,6 @@
 {{- $toc := .TableOfContents -}}
 {{- $valid := and $toc (and (ne $toc "<nav id=\"TableOfContents\"></nav>") (gt .WordCount $wordCount)) -}}
 {{- if and $enable $valid -}}
-{{- $sticky := default true .Site.Params.tocSticky -}}
 <a id="btnTOC" class="fas fa-fw fa-2x fa-list-alt position-fixed" data-bs-toggle="offcanvas" href="#offcanvasTOC" aria-controls="offcanvasTOC" role="button">
 </a>
 
