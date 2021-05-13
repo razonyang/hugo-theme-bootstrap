@@ -12,6 +12,7 @@
 - [功能特性](#功能特性)
 - [线上预览](#线上预览)
 - [安装](#安装)
+- [升级](#升级)
 - [配置](#配置)
 - [参数](#参数)
   - [全局参数](#全局参数)
@@ -75,6 +76,20 @@ $ hugo server
 ```
 
 > 如果你使用的是 Windows，请改用 `xcopy .\themes\hugo-theme-bootstrap\exampleSite /E`。
+
+## 升级
+
+```shell
+$ cd themes/hugo-theme-bootstrap
+$ git fetch
+$ git checkout [version]
+$ cd ../../
+$ git add themes/hugo-theme-bootstrap
+$ git commit -m 'Upgrade the theme'
+```
+
+- 将 `[version]` 替换为最新的版本。所有版本可以通过命令 `git tag -l | sort -rV` 列出。
+- 你也可以直接使用 `master` 分支以获取最新的修改。
 
 ## 配置
 

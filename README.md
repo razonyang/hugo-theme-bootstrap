@@ -12,6 +12,7 @@ This theme is an extreme fast, responsive and feature-rich blog theme for Hugo.
 - [Live Preview](#live-preview)
 - [Features](#features)
 - [Installation](#installation)
+- [Upgrade](#upgrade)
 - [Configuration](#configuration)
 - [Parameters](#parameters)
   - [Global Parameters](#global-parameters)
@@ -75,6 +76,20 @@ $ hugo server
 ```
 
 > If you're using Windows, use `xcopy .\themes\hugo-theme-bootstrap\exampleSite /E` instead.
+
+## Upgrade
+
+```shell
+$ cd themes/hugo-theme-bootstrap
+$ git fetch
+$ git checkout [version]
+$ cd ../../
+$ git add themes/hugo-theme-bootstrap
+$ git commit -m 'Upgrade the theme'
+```
+
+- Replace the `[version]` with the latest version. The version can be listed by `git tag -l | sort -rV`.
+- You can also checkout the `master` branch for getting the latest commit.
 
 ## Configuration
 
