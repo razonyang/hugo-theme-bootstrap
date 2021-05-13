@@ -6,6 +6,7 @@ import LanguageSwitcher from './language';
 import ModeSwitcher from './mode';
 import FontSizeSwitcher from './font-size';
 import TOC from './toc';
+import Code from './code';
 
 document.addEventListener('DOMContentLoaded', () => {
   const modeSwitcherEle: HTMLInputElement = document.querySelector('#modeSwitcher');
@@ -37,4 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
   if (tocEle) {
     (new TOC(tocEle)).init();
   }
+
+  (new Code()).init();
 });

@@ -99,3 +99,16 @@ ul {
 .fa-fw {
   margin-right: .25rem;
 }
+
+pre {
+  position: relative;
+  background: var(--hbs-background);
+  color: var(--hbs-on-background);
+}
+
+.btn-copy-code {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  z-index: 1;
+}
