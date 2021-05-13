@@ -13,3 +13,15 @@
 .font-size-xl {
   font-size: {{ default "1.2rem" .Site.Params.fontSize.extraLarge }};
 }
+
+
+{{- $fixedHeader := default true .Site.Params.fixedHeader -}}
+
+main {
+  margin-top: {{ if $fixedHeader }}84px{{ else }}20px{{ end }};
+}
+
+:target::before {
+  height: {{ if $fixedHeader }}64px{{ else }}0{{ end }};
+  margin-top: {{ if $fixedHeader }}-64px{{ else }}0{{ end }};
+}

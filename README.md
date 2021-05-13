@@ -130,6 +130,7 @@ As the example site shown, the configuration are separated into multiple files, 
 | `tagCount` | Integer | `10` | The number of tags shown in sidebar.
 | `seriesCount` | Integer | `10` | The number of series shown in sidebar.
 | `fullWidth` | Boolean | `false` | Full width.
+| `fixedHeader` | Boolean | `true` | Turn on/off fixed header.
 | `reward` | Object | - | Reward
 | `reward.alipay` | String | - | Alipay QR Code Image.
 | `reward.wechat` | String | - | Wechat QR Code Image.

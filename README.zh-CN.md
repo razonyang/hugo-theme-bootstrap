@@ -130,6 +130,7 @@ $ hugo server
 | `tagCount` | Integer | `10` | 标签数
 | `seriesCount` | Integer | `10` | 专栏数
 | `fullWidth` | Boolean | `false` | 是否全宽
+| `fixedHeader` | Boolean | `true` | 是否固定头部
 | `reward` | Object | - | 打赏
 | `reward.alipay` | String | - | 支付宝收款二维码图片
 | `reward.wechat` | String | - | 微信收款/打赏二维码图片
