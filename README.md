@@ -6,24 +6,6 @@
 
 This theme is an extreme fast, responsive and feature-rich blog theme for Hugo.
 
-## Table of Contents
-
-- [Screenshots](#screenshots)
-- [Live Preview](#live-preview)
-- [Features](#features)
-- [Installation](#installation)
-- [Upgrade](#upgrade)
-- [Configuration](#configuration)
-- [Parameters](#parameters)
-  - [Global Parameters](#global-parameters)
-  - [Page Parameters](#page-parameters)
-- [Comments](#comments)
-- [Hooks](#hooks)
-- [Custom Assets](#custom-assets).
-- [Social Links](#social-links).
-- [Various Shortcodes](#shortcodes).
-- [Contribute](#contribute)
-
 ## Screenshots
 
 ![Screenshot](https://github.com/razonyang/hugo-theme-bootstrap/blob/master/images/screenshot.png)
