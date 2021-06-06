@@ -89,7 +89,7 @@ customJS = []
   #wechat = "images/reward/wechat.png"
 
 [share]
-  # addThis = "" # AddThis pubid.
+  addThis = "ra-60bcc43f59f2d04f" # AddThis pubid.
 
 [fontSize] # Comment or remove this settings to disable font size switcher.
   # extraSmall = ".8rem"
