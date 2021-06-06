@@ -96,6 +96,7 @@ As the example site shown, the configuration are separated into multiple files, 
 | `author.bio` | String | - | Bio
 | `author.company` | String | - | Company
 | `author.location` | String | - | Location
+| `author.about` | String | - | The external about page. The internal about page will be used if not set.
 
 ## Parameters
 

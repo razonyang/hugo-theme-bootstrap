@@ -96,6 +96,7 @@ $ git commit -m 'Upgrade the theme'
 | `author.bio` | String | - | 簡介
 | `author.company` | String | - | 公司
 | `author.location` | String | - | 地理位置
+| `author.about` | String | - | “關於我”的外部頁面，如果未設定，則使用內部的“關於我”的頁面。
 
 ## 引數
 
