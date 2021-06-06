@@ -3,3 +3,4 @@ name = "Razon Yang"
 bio = "Gopher, PHPer, Full Stack Engineer."
 company = "Null"
 location = "Earth"
+# about = "https://domain.tld" # The external about page. The internal about page will be used if not set.
