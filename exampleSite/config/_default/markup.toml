@@ -8,5 +8,5 @@
   lineNos = false
   lineNumbersInTable = true
   noClasses = true
-  style = "solarized-dark"
+  style = "monokai"
   tabWidth = 2
