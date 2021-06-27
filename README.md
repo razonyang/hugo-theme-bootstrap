@@ -48,6 +48,8 @@ There is also a [list of websites that use this theme](https://github.com/razony
 
 ## Installation
 
+### Create a new site from scratch
+
 ```shell
 $ hugo new site myblog
 $ cd myblog
@@ -58,6 +60,17 @@ $ hugo server
 ```
 
 > If you're using Windows, use `xcopy .\themes\hugo-theme-bootstrap\exampleSite /E` instead.
+
+### Apply to the existing site
+
+```shell
+$ cd myblog
+$ git submodule add https://github.com/razonyang/hugo-theme-bootstrap themes/hugo-theme-bootstrap
+$ mkdir config
+$ cp -a themes/hugo-theme-bootstrap/exampleSite/config/* ./config
+```
+
+In this case, you will need to copy some directories into the **content**, such as the **archives** and **search** directory.
 
 ## Upgrade
 

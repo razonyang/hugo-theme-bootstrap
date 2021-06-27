@@ -48,6 +48,8 @@
 
 ## 安装
 
+### 从头开始创建站点
+
 ```shell
 $ hugo new site myblog
 $ cd myblog
@@ -58,6 +60,17 @@ $ hugo server
 ```
 
 > 如果你使用的是 Windows，请改用 `xcopy .\themes\hugo-theme-bootstrap\exampleSite /E`。
+
+### 应用于现有站点
+
+```shell
+$ cd myblog
+$ git submodule add https://github.com/razonyang/hugo-theme-bootstrap themes/hugo-theme-bootstrap
+$ mkdir config
+$ cp -a themes/hugo-theme-bootstrap/exampleSite/config/* ./config
+```
+
+这种情况下，你还需要复制一些文件夹到 **content** 目录下，比如 **archives** 和 **search**。
 
 ## 升级
 
