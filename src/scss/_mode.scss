@@ -32,8 +32,8 @@
   @include mode-dark;
 }
 
-$bgLightMode: url("/images/icons/light.png");
-$bgDarkMode: url("/images/icons/dark.png");
+$bgLightMode: url("../images/icons/light.png");
+$bgDarkMode: url("../images/icons/dark.png");
 $mode-switcher-bg-image: $bgLightMode;
 $mode-switcher-focus-bg-image: $bgLightMode;
 $mode-switcher-checked-bg-image: $bgDarkMode;
