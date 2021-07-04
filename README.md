@@ -8,11 +8,11 @@ This theme is an extreme fast, responsive and feature-rich blog theme for Hugo.
 
 ## Screenshots
 
-![Screenshot](https://github.com/razonyang/hugo-theme-bootstrap/blob/master/images/screenshot.png)
+![Screenshot](https://raw.githubusercontent.com/razonyang/hugo-theme-bootstrap/master/images/screenshot.png)
 
 **Dark Mode**
 
-![Screenshot in Dark Mode](https://github.com/razonyang/hugo-theme-bootstrap/blob/master/images/screenshot-dark.png)
+![Screenshot in Dark Mode](https://raw.githubusercontent.com/razonyang/hugo-theme-bootstrap/master/images/screenshot-dark.png)
 
 ## Live Preview
 

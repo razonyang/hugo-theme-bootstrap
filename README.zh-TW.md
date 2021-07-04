@@ -8,11 +8,11 @@
 
 ## 截圖
 
-![截圖](https://github.com/razonyang/hugo-theme-bootstrap/blob/master/images/screenshot.png)
+![截圖](https://raw.githubusercontent.com/razonyang/hugo-theme-bootstrap/master/images/screenshot.png)
 
 **Dark Mode**
 
-![深色模式下的截圖](https://github.com/razonyang/hugo-theme-bootstrap/blob/master/images/screenshot-dark.png)
+![深色模式下的截圖](https://raw.githubusercontent.com/razonyang/hugo-theme-bootstrap/master/images/screenshot-dark.png)
 
 ## 線上預覽
 
