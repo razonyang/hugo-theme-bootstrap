@@ -6,13 +6,11 @@ homepage = "https://github.com/razonyang/hugo-theme-bootstrap"
 demosite = "https://hugo-theme-bootstrap.netlify.app/"
 tags = [
   "bootstrap",
-  "simple",
+  "personal",
   "blog",
   "responsive",
-  "feature-rich",
-  "mobile",
-  "fast",
-  "search",
+  "light",
+  "dark",
   "multilingual"
 ]
 features = [
