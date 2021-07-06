@@ -3,9 +3,11 @@
 }
 
 .post-toolbox {
-  right: 2rem;
-  top: 0;
+  left: 0;
+  top: 1rem;
   z-index: 1;
+  position: absolute;
+  text-align: right;
 }
 
 .post-meta {
@@ -39,6 +41,10 @@
 }
 
 #btnTOC {
+  z-index: 1;
+  bottom: 5rem;
+  right: 1.25rem;
+  padding: 0;
   color: var(--hbs-accent);
 }
 
