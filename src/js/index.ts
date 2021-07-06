@@ -7,6 +7,7 @@ import ModeSwitcher from './mode';
 import FontSizeSwitcher from './font-size';
 import TOC from './toc';
 import Code from './code';
+import SidebarToggler from './sidebar-toggler';
 
 document.addEventListener('DOMContentLoaded', () => {
   const modeSwitcherEle: HTMLInputElement = document.querySelector('#modeSwitcher');
@@ -37,6 +38,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const tocEle: HTMLElement = document.querySelector('#offcanvasTOC');
   if (tocEle) {
     (new TOC(tocEle)).init();
+  }
+
+  const sidebarToggler: HTMLElement = document.querySelector('#sidebarToggler');
+  if (sidebarToggler) {
+    (new SidebarToggler(sidebarToggler)).init();
   }
 
   (new Code()).init();

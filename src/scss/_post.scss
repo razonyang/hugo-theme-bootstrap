@@ -1,3 +1,13 @@
+.post {
+  position: relative;
+}
+
+.post-toolbox {
+  right: 2rem;
+  top: 0;
+  z-index: 1;
+}
+
 .post-meta {
   color: var(--hbs-secondary-text);
   word-break: break-all;
@@ -29,10 +39,10 @@
 }
 
 #btnTOC {
-  z-index: 1;
-  bottom: 5rem;
-  right: 1.25rem;
-  padding: 0;
+  color: var(--hbs-accent);
+}
+
+#sidebarToggler {
   color: var(--hbs-accent);
 }
 
