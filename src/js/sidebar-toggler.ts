@@ -38,12 +38,14 @@ class SidebarToggler {
     hide() {
         this.main.classList.replace('col-lg-8', 'col-lg-12')
         this.sidebar.classList.add('d-none')
+        this.btn.classList.replace('fa-expand-alt', 'fa-compress-alt')
         localStorage.setItem(this.key, 'hide')
     }
 
     show() {
         this.main.classList.replace('col-lg-12', 'col-lg-8')
         this.sidebar.classList.remove('d-none')
+        this.btn.classList.replace('fa-compress-alt', 'fa-expand-alt')
         localStorage.removeItem(this.key)
     }
 }
