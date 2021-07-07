@@ -2,14 +2,14 @@
 <div class="post-navs d-flex mb-3 justify-content-between">
   <div class="post-nav w-50">
   {{- with .Prev -}}
-    <div class="prev-post">
+    <div class="prev-post btn btn-sm">
       <a href="{{ .Permalink }}">{{ .Title }}</a>
     </div>
   {{- end -}}
   </div>
   <div class="post-nav flex-row-reverse">
   {{- with .Next -}}
-    <div class="next-post">
+    <div class="next-post btn btn-sm">
       <a href="{{ .Permalink }}">{{ .Title }}</a>
     </div>
   {{- end -}}

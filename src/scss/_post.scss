@@ -79,6 +79,10 @@
 .next-post {
   display: flex;
   align-items: center;
+  a:hover{
+        text-decoration: none;
+        color: #{$white};
+    }
 }
 
 .next-post {
