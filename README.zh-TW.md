@@ -98,6 +98,8 @@ $ hugo new content/en/newpost.md
 $ hugo new content/zh-CN/newpost.md
 ```
 
+> 請注意：創建的文章一般處於草稿狀態，本地預覽時，`hugo server` 需要加上 `-D` 參數才能顯示草稿文章。文章發佈時，需要將 `draft` 改為 `false`，或者直接删除 `draft`。
+
 ## 配置
 
 如示例站點所展示，配置被分為多個配置檔案，這比單配置檔案更加清晰，特別是對於多語言網站。

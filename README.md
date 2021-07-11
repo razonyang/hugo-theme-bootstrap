@@ -86,7 +86,7 @@ $ git commit -m 'Upgrade the theme'
 - Replace the `[version]` with the latest version. The version can be listed by `git tag -l | sort -rV`.
 - You can also checkout the `master` branch for getting the latest commit.
 
-### Getting Started
+## Getting Started
 
 ```shell
 $ hugo new content/en/newpost.md
@@ -97,6 +97,8 @@ The command above create a new post written in English. Similarly, we can create
 ```shell
 $ hugo new content/zh-CN/newpost.md
 ```
+
+> Please remind that, the created posts are generally in draft state. You'll need the `-D` parameter to the command `hugo server` for previewing. When publishing posts, you need to change the `draft` to `false`, or delete `draft` directly.
 
 ## Configuration
 
