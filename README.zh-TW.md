@@ -86,6 +86,18 @@ $ git commit -m 'Upgrade the theme'
 - 將 `[version]` 替換為最新的版本。所有版本可以通過 `git tag -l | sort -rV` 列出。
 - 你也可以直接使用 `master` 分支以獲取最新的提交。
 
+## 快速開始
+
+```shell
+$ hugo new content/en/newpost.md
+```
+
+上述命令創建了一篇英文文章，同樣的，我們也可以創建一篇簡體中文的文章：
+
+```shell
+$ hugo new content/zh-CN/newpost.md
+```
+
 ## 配置
 
 如示例站點所展示，配置被分為多個配置檔案，這比單配置檔案更加清晰，特別是對於多語言網站。

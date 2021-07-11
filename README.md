@@ -86,6 +86,18 @@ $ git commit -m 'Upgrade the theme'
 - Replace the `[version]` with the latest version. The version can be listed by `git tag -l | sort -rV`.
 - You can also checkout the `master` branch for getting the latest commit.
 
+### Getting Started
+
+```shell
+$ hugo new content/en/newpost.md
+```
+
+The command above create a new post written in English. Similarly, we can create a post written in Simplified Chinese:
+
+```shell
+$ hugo new content/zh-CN/newpost.md
+```
+
 ## Configuration
 
 As the example site shown, the configuration are separated into multiple files, this is much clearer than a single configuration file, especially in a multilingual website.
