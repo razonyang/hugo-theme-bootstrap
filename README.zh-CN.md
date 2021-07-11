@@ -331,6 +331,7 @@ github = "githubusername"
 | `bitbucket` | Bitbucket Workspace ID |
 | `medium` | Medium 用户名或自定义域名（比如：https://custom.domain.tld） |
 | `lastfm` | Last.fm 用户名 |
+| `bibibili` | BiliBili 用户 ID |
 
 ## 贡献
 

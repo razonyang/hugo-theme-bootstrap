@@ -331,6 +331,7 @@ github = "githubusername"
 | `bitbucket` | Bitbucket Workspace ID |
 | `medium` | Medium Username or custom domain(e.g. https://custom.domain.tld) |
 | `lastfm` | Last.fm Username |
+| `bibibili` | BiliBili User ID |
 
 ## Contribute
 
