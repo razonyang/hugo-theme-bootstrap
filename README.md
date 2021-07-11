@@ -383,3 +383,12 @@ $ npm run build
 $ cd exampleSite
 $ hugo server --themesDir=../../
 ```
+
+## FAQ
+
+### How to remove the unwanted language?
+
+- Delete the relative language items from `languages.toml`.
+- Delete the configuration files those filenames contains language code, such as `config.zh-cn.toml`, `params.zh-cn.toml`.
+- Change the value of `defaultContentLanguage` and `defaultContentLanguageInSubdir` of `config.toml`.
+- Delete the relative posts or directories in `content`, such as `rm -r content/zh-cn`.

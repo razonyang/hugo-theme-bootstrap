@@ -381,3 +381,12 @@ $ npm run build
 $ cd exampleSite
 $ hugo server --themesDir=../../
 ```
+
+## FAQ
+
+### 如何删除不需要的語言？
+
+- 删除 `languages.toml` 中不需要的語言。
+- 刪除檔名帶有語言代號的設定檔，比如 `config.zh-cn.toml`、`params.zh-cn.toml`。
+- 修改 `config.toml` 中 `defaultContentLanguage` 和 `defaultContentLanguageInSubdir` 的值。
+- 删除 `content` 中相關的文章或目錄，比如 `rm -r content/zh-cn`。
