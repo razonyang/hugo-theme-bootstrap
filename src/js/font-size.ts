@@ -1,8 +1,6 @@
-import { Popover as BSPopover } from 'bootstrap';
-import Popover from './popover';
-
-class FontSizeSwitcher extends Popover {
-  key: string;
+class FontSizeSwitcher {
+  key: string = 'hbs-font-size';
+  input: HTMLInputElement;
 
   sizes: Map<string, string> = new Map([
     ['-2', 'xs'],
@@ -13,15 +11,12 @@ class FontSizeSwitcher extends Popover {
   ]);
 
   init() {
-    const { allowList } = BSPopover.Default;
-    allowList.form = [];
-    allowList.label = ['for'];
-    allowList.input = ['type', 'min', 'max', 'step'];
-    this.options.allowList = allowList;
-    super.init();
-    this.key = 'hbs-font-size';
+    this.input = document.getElementById('fontSize') as HTMLInputElement
+    if (!this.input) {
+      return;
+    }
     this.initSize();
-    this.initPopover();
+    this.initListeners();
   }
 
   initSize() {
@@ -31,15 +26,11 @@ class FontSizeSwitcher extends Popover {
     }
   }
 
-  initPopover() {
-    const instance = this;
-    this.element.addEventListener('shown.bs.popover', () => {
-      const input: HTMLInputElement = document.getElementById('fontSize') as HTMLInputElement;
-      input.value = instance.getSize();
-      input.addEventListener('change', () => {
-        instance.setSize(input.value);
-        instance.instance.hide();
-      });
+  initListeners() {
+    this.input.value = this.getSize();
+    const self = this
+    this.input.addEventListener('change', () => {
+      self.setSize(self.input.value);
     });
   }
 

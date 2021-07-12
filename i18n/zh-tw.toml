@@ -61,11 +61,20 @@ other = "字體大小"
 [home]
 other = "主頁"
 
+[language]
+other = "語言"
+
 [load_more]
 other = "加載更多"
 
+[mode]
+other = "模式"
+
 [pagination_title]
 other = "第 {{ .PageNumber }} 頁"
+
+[palette]
+other = "配色"
 
 [reading_time]
 other = "{{ .ReadingTime }} 分鐘閱讀"
@@ -93,6 +102,9 @@ other = "找到相關結果 {{ .Total }} 個"
 
 [series]
 other = "專欄"
+
+[settings]
+other = "設置"
 
 [table_of_contents]
 other = "目錄"

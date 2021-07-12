@@ -1,0 +1,14 @@
+{{- if not (in (slice "light" "dark") $.Site.Params.color) -}}
+<section class="setting">
+  <form class="row">
+    <div class="col-auto">
+      <label><i class="fas fa-fw fa-adjust"></i> {{ i18n "mode" }}</label>
+    </div>
+    <div class="col-auto ms-auto">
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="modeSwitcher">
+      </div>
+    </div>
+  </form>
+</section>
+{{- end -}}

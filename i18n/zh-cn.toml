@@ -61,11 +61,20 @@ other = "字体大小"
 [home]
 other = "主页"
 
+[language]
+other = "语言"
+
 [load_more]
 other = "加载更多"
 
+[mode]
+other = "模式"
+
 [pagination_title]
 other = "第 {{ .PageNumber }} 页"
+
+[palette]
+other = "配色"
 
 [reading_time]
 other = "{{ .ReadingTime }} 分钟阅读"
@@ -93,6 +102,9 @@ other = "找到相关结果 {{ .Total }} 个"
 
 [series]
 other = "专栏"
+
+[settings]
+other = "设置"
 
 [table_of_contents]
 other = "目录"

@@ -119,16 +119,14 @@
 }
 
 .palettes {
-  color: #{$white};
 }
 
 .palette {
-  a {
-    color: white !important;
-  }
+  height: 2rem;
+  color: white !important;
 }
 
-.palette.active a:after {
+.palette.active:after {
   content: "√";
   padding-left: .25rem;
 }

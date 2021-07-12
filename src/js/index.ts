@@ -2,7 +2,6 @@ import Scroller from './scroller';
 import TableWrapper from './table';
 import AnchorLink from './anchor';
 import PaletteSwitcher from './palette';
-import LanguageSwitcher from './language';
 import ModeSwitcher from './mode';
 import FontSizeSwitcher from './font-size';
 import TOC from './toc';
@@ -15,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     (new ModeSwitcher(modeSwitcherEle)).init();
   }
 
-  const paletteSwitcher = new PaletteSwitcher(document.querySelector('#paletteSwitcher'));
+  const paletteSwitcher = new PaletteSwitcher();
   paletteSwitcher.init();
 
   const scroller = new Scroller(document.getElementById('btnScrollToTop'));
@@ -27,13 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const anchorLink = new AnchorLink(document.body.querySelectorAll('.post-content h1, h2, h3, h4, h5, h6'));
   anchorLink.init();
 
-  const languageSwitcher = new LanguageSwitcher(document.querySelector('#languageSwitcher'));
-  languageSwitcher.init();
-
-  const fontSizeSwitcherEle: HTMLElement = document.querySelector('#fontSizeSwitcher');
-  if (fontSizeSwitcherEle) {
-    (new FontSizeSwitcher(fontSizeSwitcherEle)).init();
-  }
+  (new FontSizeSwitcher()).init();
 
   const tocEle: HTMLElement = document.querySelector('#offcanvasTOC');
   if (tocEle) {

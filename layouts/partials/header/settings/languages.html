@@ -1,0 +1,20 @@
+{{- if gt (len $.Site.Home.AllTranslations) 1 -}}
+<section class="setting">
+  <form class="row">
+    <div class="col-auto">
+      <label><i class="fas fa-fw fa-language"></i> {{ i18n "language" }}</label>
+    </div>
+    <div class="col-auto ms-auto">
+      <select class="form-select form-select-sm language-picker" aria-label="Language dropdown" onchange="window.location = this.value;">
+        {{- range $.Site.Home.AllTranslations -}}
+          {{- if eq $.Lang .Language.Lang }}
+          <option value="{{ .Permalink }}" selected>{{ .Language.LanguageName }}</option>
+          {{- else -}}
+            <option value="{{ .Permalink }}">{{ .Language.LanguageName }}</option>
+          {{- end -}}
+        {{- end -}}
+      </select>
+    </div>
+  </form>
+</section>
+{{- end -}}

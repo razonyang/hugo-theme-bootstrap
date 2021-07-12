@@ -1,13 +1,9 @@
-import Popover from './popover';
-
-class PaletteSwitcher extends Popover {
+class PaletteSwitcher {
   key: string;
 
   init() {
-    super.init();
     this.key = 'hbs-palette';
     this.initPalette();
-    this.initPopover();
   }
 
   initPalette() {
@@ -15,24 +11,29 @@ class PaletteSwitcher extends Popover {
     if (palette) {
       this.setPalette(palette);
     }
-  }
-
-  initPopover() {
-    if (!this.instance) {
+    const selected = this.getPalette();
+    const self = this;
+    const palettePicker = document.querySelector('#palettePicker');
+    if (!palettePicker) {
       return;
     }
-    const instance = this;
-    this.element.addEventListener('shown.bs.popover', () => {
-      const selected = instance.getPalette();
-      document.querySelectorAll('.palette').forEach((element) => {
-        const palette = element.getAttribute('id').replace('palette-', '');
-        if (palette === selected) {
-          element.classList.add('active');
-        }
-        element.addEventListener('click', () => {
-          instance.setPalette(palette);
-          instance.instance.hide();
-        });
+    document.querySelector('#btnPalette').addEventListener('click', function() {
+      if (palettePicker.classList.contains('visually-hidden')) {
+        palettePicker.classList.remove('visually-hidden');
+      } else {
+        palettePicker.classList.add('visually-hidden');
+      }
+    });
+    document.querySelectorAll('.palette').forEach((element) => {
+      const palette = element.getAttribute('id').replace('palette-', '');
+      if (palette === selected) {
+        element.classList.add('active');
+      }
+      element.addEventListener('click', () => {
+        self.setPalette(palette);
+        document.querySelector('.palette.active').classList.remove('active');
+        element.classList.add('active');
+        palettePicker.classList.add('visually-hidden');
       });
     });
   }

@@ -61,11 +61,20 @@ other = "Font Size"
 [home]
 other = "Home"
 
+[language]
+other = "Language"
+
 [load_more]
 other = "Load More"
 
+[mode]
+other = "Mode"
+
 [pagination_title]
 other = "Page {{ .PageNumber }}"
+
+[palette]
+other = "Palette"
 
 [reading_time]
 other = "{{ .ReadingTime }} min read"
@@ -93,6 +102,9 @@ other = "Found {{ .Total }} results"
 
 [series]
 other = "Series"
+
+[settings]
+other = "Settings"
 
 [table_of_contents]
 other = "Table Of Contents"

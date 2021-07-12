@@ -56,6 +56,7 @@ $bgNavbarTogglerIcon: url("/images/icons/menu.png");
 
 .navbar a {
   &:hover,
+  &:focus,
   &:active,
   &.active {
     color: #{$white};

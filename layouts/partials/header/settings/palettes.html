@@ -1,0 +1,24 @@
+{{- if not (and (isset .Site.Params "palettes") (not .Site.Params.palettes)) -}}
+{{- $palettes := slice "blue" "blue gray" "brown" "cyan" "green" "indigo" "orange" "pink" "purple" "red" "teal"
+"yellow" -}}
+{{- $palettes := default $palettes .Site.Params.Palettes -}}
+<section class="setting palettes">
+  <form class="row">
+    <div class="col-auto">
+      <label><i class="fas fa-fw fa-palette"></i> {{ i18n "palette" }}</label>
+    </div>
+    <div class="col-auto ms-auto">
+      <span id="btnPalette" class="btn btn-sm"><i class="fas fa-eye-dropper"></i></span>
+    </div>
+  </form>
+  <div class="container mt-2 visually-hidden" id="palettePicker">
+    <div class="row">
+    {{- range $palettes -}}
+    {{- $key := replace . " " "-" -}}
+        <div id="palette-{{ $key }}" class="col-4 palette bg-{{ $key }}  d-flex align-items-center justify-content-center"
+        title="{{ replace . " " " _" | printf "color_%s" | T }}"></div>
+        {{- end -}}
+    </div>
+  </div>
+</section>
+{{- end -}}
