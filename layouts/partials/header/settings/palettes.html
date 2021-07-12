@@ -14,7 +14,7 @@
     <div class="btn-group">
       {{- range $palettes -}}
       {{- $key := replace . " " "-" -}}
-        <button type="button" id="palette-{{ $key }}" title="{{ replace . " " " _" | printf "color_%s" | T }}" 
+        <button type="button" id="palette-{{ $key }}" title="{{ replace . " " "_" | printf "color_%s" | T }}" 
           class="btn btn-sm palette bg-{{ $key }} d-flex align-items-center justify-content-center">
         </button>
       {{- end -}}
