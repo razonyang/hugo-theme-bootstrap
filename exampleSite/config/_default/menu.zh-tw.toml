@@ -1,7 +1,7 @@
 [[main]]
   name = "下拉菜单"
   identifier = "dropdown"
-  pre = '<i class="fas fa-fw fa-caret-down"></i>'
+  pre = '<i class="fas fa-fw fa-chevron-circle-down"></i>'
 [[main]]
   parent = "dropdown"
   id = "github"
