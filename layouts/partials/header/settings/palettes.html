@@ -1,6 +1,5 @@
 {{- if not (and (isset .Site.Params "palettes") (not .Site.Params.palettes)) -}}
-{{- $palettes := slice "blue" "blue gray" "brown" "cyan" "green" "indigo" "orange" "pink" "purple" "red" "teal"
-"yellow" -}}
+{{- $palettes := slice "blue" "blue gray" "brown" "cyan" "green" "indigo" "orange" "pink" "purple" "red" "teal" "yellow" -}}
 {{- $palettes := default $palettes .Site.Params.Palettes -}}
 <section class="setting palettes">
   <form class="row">
@@ -15,9 +14,9 @@
     <div class="row">
     {{- range $palettes -}}
     {{- $key := replace . " " "-" -}}
-        <div id="palette-{{ $key }}" class="col-4 palette bg-{{ $key }}  d-flex align-items-center justify-content-center"
+      <div id="palette-{{ $key }}" class="col-4 palette bg-{{ $key }} d-flex align-items-center justify-content-center"
         title="{{ replace . " " " _" | printf "color_%s" | T }}"></div>
-        {{- end -}}
+    {{- end -}}
     </div>
   </div>
 </section>
