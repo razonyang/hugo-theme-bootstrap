@@ -122,11 +122,13 @@
 }
 
 .palette {
-  height: 2rem;
-  color: white !important;
-}
+  height: 1rem;
+  width: 1rem;
+  margin-right: .5rem;
 
-.palette.active:after {
-  content: "√";
-  padding-left: .25rem;
+  &.active {
+    &::after {
+      content: "√";
+    }
+  }
 }

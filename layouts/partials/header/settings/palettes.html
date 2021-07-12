@@ -11,12 +11,14 @@
     </div>
   </form>
   <div class="container mt-2 visually-hidden" id="palettePicker">
-    <div class="row">
-    {{- range $palettes -}}
-    {{- $key := replace . " " "-" -}}
-      <div id="palette-{{ $key }}" class="col-4 palette bg-{{ $key }} d-flex align-items-center justify-content-center"
-        title="{{ replace . " " " _" | printf "color_%s" | T }}"></div>
-    {{- end -}}
+    <div class="btn-group">
+      {{- range $palettes -}}
+      {{- $key := replace . " " "-" -}}
+        <button type="button" id="palette-{{ $key }}" title="{{ replace . " " " _" | printf "color_%s" | T }}" 
+          class="btn btn-sm palette bg-{{ $key }} d-flex align-items-center justify-content-center">
+        </button>
+      {{- end -}}
+      </button>
     </div>
   </div>
 </section>
