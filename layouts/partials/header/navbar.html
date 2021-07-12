@@ -23,7 +23,7 @@
         {{- $active := or (eq $currentPage.Permalink (absLangURL .URL)) ($currentPage.IsMenuCurrent "main" .) -}}
         {{- if .HasChildren -}}
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle{{ if $currentPage.HasMenuCurrent "main" . }} active{{ end }}" id="navbarDropdown-{{ .Identifier }}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link{{ if $currentPage.HasMenuCurrent "main" . }} active{{ end }}" id="navbarDropdown-{{ .Identifier }}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             {{ .Pre }} {{- .Name -}} {{ .Post }}
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown-{{ .Identifier }}">
