@@ -148,12 +148,12 @@ $ hugo new content/zh-CN/newpost.md
 | `color` | String | - | 颜色风格， `light`，`dark` 或者 dynamic（默认）。 
 | `palette` | String | - | 默认配色，清理 Cookie 后生效。
 | `palettes` | Array | **ALL** | 可选配色，如需禁用此选项，可将其设为空值 `[]`。
-| `featuredPostCount` | Integer | `5` | 精选文章数
-| `recentPostCount` | Integer | `5` | 最近文章数
-| `relatedPostCount` | Integer | `5` | 相关文章数
-| `categoryCount` | Integer | `10` | 分类数
-| `tagCount` | Integer | `10` | 标签数
-| `seriesCount` | Integer | `10` | 专栏数
+| `featuredPostCount` | Integer/Boolean | `5` | 精选文章数，`false` 则隐藏。
+| `recentPostCount` | Integer/Boolean | `5` | 最近文章数，`false` 则隐藏。
+| `relatedPostCount` | Integer/Boolean | `5` | 相关文章数，`false` 则隐藏。
+| `categoryCount` | Integer/Boolean | `10` | 分类数，`false` 则隐藏。
+| `tagCount` | Integer/Boolean | `10` | 标签数，`false` 则隐藏。
+| `seriesCount` | Integer/Boolean | `10` | 专栏数，`false` 则隐藏。
 | `fullWidth` | Boolean | `false` | 是否全宽
 | `fixedHeader` | Boolean | `true` | 是否固定头部
 | `reward` | Object | - | 打赏

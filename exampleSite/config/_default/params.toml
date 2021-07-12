@@ -29,12 +29,12 @@ googleAdsense = ""
 
 # poweredBy = false # Whether to show powered by.
 
-# featuredPostCount = 10 # The number of featured posts shown in sidebar.
-# recentPostCount = 10 # The number of recent posts shown in sidebar.
-# relatedPostCount = 10 # The number of related posts.
-# categoryCount = 10 # The number of categories shown in sidebar.
-# tagCount = 10 # The number of tags shown in sidebar.
-# seriesCount = 10 # The number of series shown in sidebar.
+# featuredPostCount = 10 # The number of featured posts shown in sidebar. Turn off by setting it to false.
+# recentPostCount = 10 # The number of recent posts shown in sidebar. Turn off by setting it to false.
+# relatedPostCount = 10 # The number of related posts. Turn off by setting it to false.
+# categoryCount = 10 # The number of categories shown in sidebar. Turn off by setting it to false.
+# tagCount = 10 # The number of tags shown in sidebar. Turn off by setting it to false.
+# seriesCount = 10 # The number of series shown in sidebar. Turn off by setting it to false.
 
 # Custom CSS and JS
 customCSS = []

@@ -1,21 +1,23 @@
 {{- range $key, $value := .Site.Taxonomies -}}
-{{- $countParams := dict "categories" "categoryCount" "tags" "tagCount" "series" "seriesCount" -}}
-{{- $param := default "" (index $countParams $key) -}}
-{{- $taxonomyCount := default 10 ($.Site.Param $param) -}}
-{{- with $value.ByCount -}}
-<section class="taxonomy-{{ $key }} row surface">
-  <h4>
-    <a href="{{ absLangURL (urlize $key) }}">{{ T $key }}</a>
-  </h4>
-  <div>
-  {{- range $idx, $taxonomy := . -}}
-    {{- if lt $idx $taxonomyCount -}}
-    <a href="{{ $taxonomy.Page.Permalink }}" class="post-taxonomy rounded btn btn-sm me-2 mb-2" title="{{ $taxonomy.Page.Title }}">
-      {{ $taxonomy.Page.Title }} <span class="badge rounded-pill">{{ $taxonomy.Count }}</span>
-    </a>
+  {{- $countParams := dict "categories" "categoryCount" "tags" "tagCount" "series" "seriesCount" -}}
+  {{- $param := default "" (index $countParams $key) -}}
+  {{- $taxonomyCount := default 10 ($.Site.Param $param) -}}
+  {{- if $taxonomyCount -}}
+    {{- with $value.ByCount -}}
+    <section class="taxonomy-{{ $key }} row surface">
+      <h4>
+        <a href="{{ absLangURL (urlize $key) }}">{{ T $key }}</a>
+      </h4>
+      <div>
+      {{- range $idx, $taxonomy := . -}}
+        {{- if lt $idx $taxonomyCount -}}
+        <a href="{{ $taxonomy.Page.Permalink }}" class="post-taxonomy rounded btn btn-sm me-2 mb-2" title="{{ $taxonomy.Page.Title }}">
+          {{ $taxonomy.Page.Title }} <span class="badge rounded-pill">{{ $taxonomy.Count }}</span>
+        </a>
+        {{- end -}}
+      {{- end -}}
+      </div>
+    </section>
     {{- end -}}
   {{- end -}}
-  </div>
-</section>
-{{- end -}}
 {{- end -}}

@@ -148,11 +148,11 @@ As the example site shown, the configuration are separated into multiple files, 
 | `color` | String | - | Color mode, `light`, `dark` or dynamic. Default to dynamic.
 | `palette` | String | - | Default palette. This will take effect after clearing the Cookie.
 | `palettes` | Array | **ALL** | Available palettes. You can disable it by setting it to empty `[]`.
-| `featuredPostCount` | Integer | `5` | The number of featured posts shown in sidebar.
-| `recentPostCount` | Integer | `5` | The number of recent posts shown in sidebar.
-| `relatedPostCount` | Integer | `5` | The number of related posts.
-| `categoryCount` | Integer | `10` | The number of categories shown in sidebar.
-| `tagCount` | Integer | `10` | The number of tags shown in sidebar.
+| `featuredPostCount` | Integer/Boolean | `5` | The number of featured posts shown in sidebar. Turn off by setting it to `false`.
+| `recentPostCount` | Integer/Boolean | `5` | The number of recent posts shown in sidebar. Turn off by setting it to `false`.
+| `relatedPostCount` | Integer/Boolean | `5` | The number of related posts. Turn off by setting it to `false`.
+| `categoryCount` | Integer/Boolean | `10` | The number of categories shown in sidebar. Turn off by setting it to `false`.
+| `tagCount` | Integer/Boolean | `10` | The number of tags shown in sidebar. Turn off by setting it to `false`.
 | `seriesCount` | Integer | `10` | The number of series shown in sidebar.
 | `fullWidth` | Boolean | `false` | Full width.
 | `fixedHeader` | Boolean | `true` | Turn on/off fixed header.
