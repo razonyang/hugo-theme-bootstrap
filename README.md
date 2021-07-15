@@ -145,6 +145,7 @@ As the example site shown, the configuration are separated into multiple files, 
 | `brand` | String | - | Brand text.
 | `menusPosition` | String | `right` | Menus position: `right`, `left`, `center`.
 | `description` | String | - | Site description.
+| `keywords` | String | - | Site keywords.
 | `color` | String | - | Color mode, `light`, `dark` or dynamic. Default to dynamic.
 | `palette` | String | - | Default palette. This will take effect after clearing the Cookie.
 | `palettes` | Array | **ALL** | Available palettes. You can disable it by setting it to empty `[]`.
@@ -217,6 +218,8 @@ As the example site shown, the configuration are separated into multiple files, 
 | Name | Type  | Default | Description
 |---|:-:|:-:|---
 | **Page** 
+| `description` | String | - | Page description.
+| `keywords` | Array | - | Page keywords.
 | `comment` | Boolean | `true` | Whether to enable comments. It won't work if `comment` has been disabled globally.
 | `toc` | Boolean | `true` | Whether to enable TOC. It won't work if `toc` has been disabled globally.
 | `math` | Boolean | `false` | Whether to enable math.

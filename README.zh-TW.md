@@ -145,6 +145,7 @@ $ hugo new content/zh-CN/newpost.md
 | `brand` | String | - | Brand
 | `menusPosition` | String | `right` | 選單位置：`right`, `left`, `center`.
 | `description` | String | - | 站點描述
+| `keywords` | String | - | 站點關鍵詞
 | `color` | String | - | 顏色風格， `light`，`dark` 或者 dynamic（默認）。
 | `palette` | String | - | 預設配色，清理 Cookie 後生效。
 | `palettes` | Array | **ALL** | 可選配色，如需禁用此選項，可將其設為空值 `[]`。
@@ -217,6 +218,8 @@ $ hugo new content/zh-CN/newpost.md
 | 名稱 | 型別  | 預設值 | 說明
 |---|:-:|:-:|---
 | **Page** 
+| `description` | String | - | 頁面描述
+| `keywords` | Array | - | 頁面關鍵詞
 | `comment` | Boolean | `true` | 是否開啟評論，如果評論已被全域性關閉，該引數無效
 | `toc` | Boolean | `true` | 是否開啟目錄，如果目錄已被全域性關閉，該引數無效
 | `math` | Boolean | `false` | 是否開啟 `math`

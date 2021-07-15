@@ -145,6 +145,7 @@ $ hugo new content/zh-CN/newpost.md
 | `brand` | String | - | Brand
 | `menusPosition` | String | `right` | 菜单位置：`right`, `left`, `center`.
 | `description` | String | - | 站点描述
+| `keywords` | String | - | 站点关键词
 | `color` | String | - | 颜色风格， `light`，`dark` 或者 dynamic（默认）。 
 | `palette` | String | - | 默认配色，清理 Cookie 后生效。
 | `palettes` | Array | **ALL** | 可选配色，如需禁用此选项，可将其设为空值 `[]`。
@@ -217,6 +218,8 @@ $ hugo new content/zh-CN/newpost.md
 | 名称 | 类型  | 默认值 | 说明
 |---|:-:|:-:|---
 | **Page** 
+| `description` | String | - | 页面描述
+| `keywords` | Array | - | 页面关键词
 | `comment` | Boolean | `true` | 是否开启评论，如果评论已被全局关闭，该参数无效
 | `toc` | Boolean | `true` | 是否开启目录，如果目录已被全局关闭，该参数无效
 | `math` | Boolean | `false` | 是否开启 `math`
