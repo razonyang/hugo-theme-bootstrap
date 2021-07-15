@@ -1,4 +1,5 @@
 {{- partial "head/favicons" . -}}
+<meta name="keywords" content="{{ if .IsPage }}{{ delimit .Keywords ", " }}{{ else }}{{ $.Site.Params.keywords }}{{ end }}" />
 <meta name="description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Description}}{{end}}" />
 {{- template "_internal/schema.html" . -}}
 {{ template "_internal/opengraph.html" . }}
