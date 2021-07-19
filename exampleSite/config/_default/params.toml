@@ -89,8 +89,8 @@ customJS = []
   #alipay = "images/reward/alipay.png"
   #wechat = "images/reward/wechat.png"
 
-[share]
-  addThis = "ra-60bcc43f59f2d04f" # AddThis pubid.
+#[share]
+  #addThis = "" # AddThis pubid.
 
 [fontSize] # Comment or remove this settings to disable font size switcher.
   # extraSmall = ".8rem"
