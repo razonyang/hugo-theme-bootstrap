@@ -50,21 +50,12 @@ btn,
   }
 }
 
-code {
-  color: var(--hbs-accent);
-}
-
 h1,
 h2,
 h3,
 h4,
 h5 {
   margin: 1.5rem 0;
-}
-
-pre {
-  padding: 1rem;
-  border-radius: .25rem;
 }
 
 table {
@@ -99,20 +90,10 @@ ul {
   margin-right: .25rem;
 }
 
-pre {
-  position: relative;
-  background: var(--hbs-background);
-  color: var(--hbs-on-background);
-}
-
-.btn-copy-code {
-  position: absolute;
-  right: 5px;
-  top: 5px;
-  z-index: 1;
-}
-
 .setting {
   margin-bottom: 1rem;
 }
 
+.white-space-pre-wrap {
+  white-space: pre-wrap;
+}

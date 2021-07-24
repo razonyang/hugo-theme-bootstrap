@@ -1,7 +1,8 @@
 {{- $mainStyle := resources.Get "css/main.css" -}}
 {{- $configStyle := resources.Get "css/config.template.css" | resources.ExecuteAsTemplate "config.css" . -}}
+{{- $highlightStyle := resources.Get "css/highlight.css" -}}
 {{- $customStyle := resources.Get "css/custom.css" -}}
-{{- $style := slice $mainStyle $configStyle $customStyle | resources.Concat "css/bundle.css" | resources.Minify | resources.Fingerprint -}}
+{{- $style := slice $mainStyle $configStyle $highlightStyle $customStyle | resources.Concat "css/bundle.css" | resources.Minify | resources.Fingerprint -}}
 <link rel=stylesheet href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous">
 {{- $mainScript := resources.Get "js/main.js" }}
 {{- $customScript := resources.Get "js/custom.js" -}}

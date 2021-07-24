@@ -38,5 +38,5 @@ document.addEventListener('DOMContentLoaded', () => {
     (new SidebarToggler(sidebarToggler)).init();
   }
 
-  (new Code()).init();
+  (new Code()).run();
 });
