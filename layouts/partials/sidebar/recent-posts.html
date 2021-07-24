@@ -4,7 +4,11 @@
   <h4>{{ T "recent_posts" }}</h4>
   <ul>
   {{- range first $count (where site.RegularPages "Type" "in" site.Params.mainSections) -}}
+	{{ if .Site.Params.titleCase }}
+    <li><a href="{{ .Permalink }}">{{ title .Title }}</a></li>
+	{{ else }}
     <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+	{{ end }}
   {{- end -}}
   </ul>
 </section>

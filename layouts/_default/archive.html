@@ -19,7 +19,11 @@
       <ul class="archive-posts">
       {{- end -}}
         <li>
+		  {{ if .Site.Params.titleCase }}
+          <a class="archive-post-title" href="{{ .Permalink }}">{{ title .Title }}</a>
+		  {{ else }}
           <a class="archive-post-title" href="{{ .Permalink }}">{{ .Title }}</a>
+		  {{ end }}
           <span class="float-end archive-post-date">{{ .Date.Format (default "Jan 2" $.Site.Params.archive.dateFormat) }}</span>
         </li>
       {{- if eq $idx (sub $count 1) -}}
@@ -39,3 +43,4 @@
 {{- $paginator := .Paginate $pages.ByDate.Reverse (default 100 .Site.Params.archive.paginate) -}}
 {{- partial "head/title" . -}}
 {{ end }}
+
