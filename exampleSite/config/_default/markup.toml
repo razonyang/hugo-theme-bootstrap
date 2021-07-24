@@ -1,12 +1,12 @@
 [highlight]
-  anchorLineNos = true
+  anchorLineNos = false
   codeFences = true
-  guessSyntax = false
+  guessSyntax = true
   hl_Lines = ""
   lineAnchors = ""
   lineNoStart = 1
-  lineNos = false
-  lineNumbersInTable = true
-  noClasses = true
+  lineNos = true
+  lineNumbersInTable = false
+  noClasses = false
   style = "monokai"
   tabWidth = 2
