@@ -1,0 +1,15 @@
+
+{{- if gt (len $.Site.Home.AllTranslations) 1 -}}
+<li class="nav-item dropdown">
+  <a class="nav-link" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <i class="fas fa-fw fa-language"></i> {{ $.Language.LanguageName }}
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+    {{- range $.Site.Home.AllTranslations -}}
+      {{- if ne $.Lang .Language.Lang -}}
+      <li><a class="dropdown-item" href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
+      {{- end -}}
+    {{- end -}}
+  </ul>
+</li>
+{{- end -}}
