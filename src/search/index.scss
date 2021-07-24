@@ -31,7 +31,11 @@
   }
 }
 
-$startContent: "★★★★★";
+@mixin scoreContent {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  content: "\f005\f005\f005\f005\f005";
+}
 
 .search-result-score {
   font-size: 20px;
@@ -39,7 +43,7 @@ $startContent: "★★★★★";
   position: relative;
   
   &::before {
-    content: $startContent;
+    @include scoreContent;
   }
 
   span {
@@ -49,7 +53,7 @@ $startContent: "★★★★★";
     position: absolute;
 
     &::before {
-      content: $startContent;
+      @include scoreContent;
     }
   }
 }
