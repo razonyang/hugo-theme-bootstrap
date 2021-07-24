@@ -1,10 +1,6 @@
 <article class="post row surface">
   {{- partial "post/toolbox" . -}}
-  {{ if .Site.Params.titleCase }}
-  <h1 class="post-title my-3">{{ title .Title }}</h1>
-  {{ else }}
-  <h1 class="post-title my-3">{{ .Title }}</h1>
-  {{ end }}
+  <h1 class="post-title my-3">{{ partial "helpers/title" . }}</h1>
   {{- partial "post/meta" . -}}
   {{- partial "hooks/content-begin" . -}}
   {{- partial "post/share" . -}}

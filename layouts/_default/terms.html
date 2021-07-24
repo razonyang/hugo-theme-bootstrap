@@ -3,11 +3,7 @@
   <div class="container">
     {{- partial "breadcrumb" . -}}
     <div class="terms row surface">
-	  {{ if .Site.Params.titleCase }}
-      <h1>{{ title .Title }}</h1>
-	  {{ else }}
-      <h1>{{ .Title }}</h1>
-	  {{ end }}
+      <h1>{{ partial "helpers/title" . }}</h1>
       <div>
         {{- range .Data.Terms.ByCount -}}
         <a href="{{ .Page.Permalink }}" class="post-taxonomy rounded btn me-3 mb-3" title="{{ .Page.Title }}">

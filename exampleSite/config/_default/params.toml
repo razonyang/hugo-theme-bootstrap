@@ -43,8 +43,7 @@ customJS = []
 
 # tocWordCount = 280 # TOC is displayed only if the post's word count exceeds this value.
 
-# Title case
-titleCase = false
+titleCase = true # Capitalized title.
 
 [archive]
   paginate = 8 # Archive pagination. Default to 100.
