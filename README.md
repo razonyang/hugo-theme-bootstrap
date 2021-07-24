@@ -133,6 +133,7 @@ As the example site shown, the configuration are separated into multiple files, 
 |---|:-:|:-:|---
 | **Page** 
 | `mainSections` | Array | `["posts"]` | Main sections
+| `titleCase` | Boolean | `false` | Capitalized title or not
 | `titleSeparator` | String | `-` | Title separator
 | `comment` | Boolean | `true` | Whether to enable comments
 | `toc` | Boolean | `true` | Whether to enable TOC

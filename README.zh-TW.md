@@ -133,6 +133,7 @@ $ hugo new content/zh-CN/posts/newpost.md
 |---|:-:|:-:|---
 | **Page** 
 | `mainSections` | Array | `["posts"]` | 主要的 sections
+| `titleCase` | Boolean | `false` | 標題首字母是否大寫
 | `titleSeparator` | String | `-` | 標題分隔符
 | `comment` | Boolean | `true` | 是否開啟評論
 | `toc` | Boolean | `true` | 是否開啟目錄
