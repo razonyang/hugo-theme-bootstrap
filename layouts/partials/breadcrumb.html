@@ -1,4 +1,4 @@
-{{- if or (default true .Site.Params.breadcrumb) (default true .Params.breadcrumb) -}}
+{{- if and (default true .Site.Params.breadcrumb) (default true .Params.breadcrumb) -}}
 {{- $titleCase := default false $.Site.Params.titleCase -}}
 <nav class="row" aria-label="breadcrumb">
   <ol class="breadcrumb surface">
