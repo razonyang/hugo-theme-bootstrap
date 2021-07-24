@@ -5,7 +5,11 @@
     <h3>{{ T "related_posts" }}</h3>
     <ul class="related-posts">
       {{- range . -}}
+	  {{ if .Site.Params.titleCase }}
+      <li><a href="{{ .Permalink }}">{{ title .Title }}</a></li>
+	  {{ else }}
       <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+	  {{ end }}
       {{- end -}}
     </ul>
   </section>

@@ -12,8 +12,9 @@
 {{- template "breadcrumbnav" (dict "p1" .p1.Site.Home "p2" .p2 )  -}}
 {{- end -}}
 {{- if eq .p1 .p2 -}}
-<li class="breadcrumb-item active">{{ .p1.Title }}</li>
+<li class="breadcrumb-item active">{{ if .Site.Params.titleCase }}{{ title .p1.Title }}{{ else }}{{ .p1.Title }}{{ end }}</li>
 {{- else -}}
 <li class="breadcrumb-item"><a href="{{ .p1.Permalink }}">{{ if .p1.IsHome }}{{ i18n "home" }}{{ else }}{{ .p1.Title }}{{ end }}</a></li>
 {{- end -}}
 {{- end -}}
+

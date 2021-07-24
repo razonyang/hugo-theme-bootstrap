@@ -17,7 +17,11 @@
       </div>
       {{- end -}}
       <div class="post-body{{ if .Params.Images }} col-md-9{{ end }}">
+		{{ if .Site.Params.TitleCase }}
+        <h2 class="post-title mb-4"><a href="{{ .Permalink }}">{{ title .Title }}</a></h2>
+		{{ else }}
         <h2 class="post-title mb-4"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+		{{ end }}
         {{- partial "post/meta" . -}}
         <div class="post-summary mb-3">
           {{- .Summary | truncate 320 -}}
@@ -29,3 +33,4 @@
   {{- partial "hooks/list-end" . -}}
   {{- partial "pagination" . -}}
 </div>
+
