@@ -3,22 +3,14 @@
   <div class="post-nav w-50">
   {{- with .Prev -}}
     <div class="prev-post btn btn-sm">
-	{{ if .Site.Params.titleCase }}
-      <a href="{{ .Permalink }}">{{ title .Title }}</a>
-	{{ else }}
-      <a href="{{ .Permalink }}">{{ .Title }}</a>
-	{{ end }}
+      <a href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a>
     </div>
   {{- end -}}
   </div>
   <div class="post-nav flex-row-reverse">
   {{- with .Next -}}
     <div class="next-post btn btn-sm">
-	{{ if .Site.Params.titleCase }}
-      <a href="{{ .Permalink }}">{{ title .Title }}</a>
-	{{ else }}
-      <a href="{{ .Permalink }}">{{ .Title }}</a>
-	{{ end }}
+      <a href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a>
     </div>
   {{- end -}}
   </div>

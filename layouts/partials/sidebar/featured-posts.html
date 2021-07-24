@@ -6,11 +6,7 @@
     <h4>{{ T "featured_posts" }}</h4>
     <ul>
     {{- range . -}}
-	{{ if .Site.Params.titleCase }}
-      <li><a href="{{ .Permalink }}">{{ title .Title }}</a></li>
-	{{ else }}
-      <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-	{{ end }}
+      <li><a href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a></li>
     {{- end -}}
     </ul>
   </section>

@@ -1,7 +1,12 @@
+{{- $titleCase := default false $.Site.Params.titleCase -}}
 {{- $.Scratch.Add "index" slice -}}
 {{- range .Site.RegularPages -}}
     {{- $date := .Date.Format (default "Jan 2, 2006" $.Site.Params.dateFormat) -}}
-    {{- $item := (dict "title" .Title "tags" .Params.tags "categories" .Params.categories "series" .Params.series "content" .Plain "permalink" .Permalink "date" $date) -}}
+    {{- $title := .Title }}
+    {{- if $titleCase -}}
+        {{- $title = title $title -}}
+    {{- end -}}
+    {{- $item := (dict "title" $title "tags" .Params.tags "categories" .Params.categories "series" .Params.series "content" .Plain "permalink" .Permalink "date" $date) -}}
     {{- $.Scratch.Add "index" $item -}}
 {{- end -}}
 {{- $.Scratch.Get "index" | uniq | jsonify -}}
