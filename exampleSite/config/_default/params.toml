@@ -43,6 +43,9 @@ customJS = []
 
 # tocWordCount = 280 # TOC is displayed only if the post's word count exceeds this value.
 
+# Title case
+titleCase = false
+
 [archive]
   paginate = 8 # Archive pagination. Default to 100.
   # dateFormat = "01-02" # Archive date format. Default to "Jan 2".
