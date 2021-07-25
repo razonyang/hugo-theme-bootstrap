@@ -1,5 +1,19 @@
-<div class="post-panel">
-  <div class="col-12 d-none d-lg-block">
-    <a id="sidebarToggler" class="fas fa-fw fa-2x fa-expand-alt" role="button"></a>
+<div class="post-panel d-flex flex-row-reverse">
+  
+  <a id="sidebarToggler" class="action d-none d-lg-block" role="button">
+    <i class="fas fa-expand-alt"></i>
+  </a>
+
+  {{ if and .IsTranslated }}
+  <div class="post-translations nav-item dropdown action">
+    <a class="nav-link p-0" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+      <i class="fas fa-language me-1"></i>
+    </a>
+    <div class="dropdown-menu">
+      {{- range .Translations -}}
+      <a class="dropdown-item post-translation" href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
+      {{- end -}}
+    </div>
   </div>
+  {{ end }}
 </div>

@@ -3,10 +3,14 @@
 
   .post-panel {
     left: 0;
-    top: 1rem;
+    top: .5rem;
     z-index: 1;
     position: absolute;
     text-align: right;
+
+    .action {
+      margin-left: .5rem;
+    }
   }
 
   .post-meta {
@@ -49,10 +53,6 @@
   bottom: 5rem;
   right: 1.25rem;
   padding: 0;
-  color: var(--hbs-accent);
-}
-
-#sidebarToggler {
   color: var(--hbs-accent);
 }
 
