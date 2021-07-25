@@ -232,6 +232,10 @@ $ hugo new content/zh-CN/posts/newpost.md
 | `creativeCommons.nc` | Boolean | `true` | 非商業
 | `creativeCommons.nd` | Boolean | `true` | 禁止改作 
 | `creativeCommons.sa` | Boolean | `true` | 相同方式分享
+| **Code Block** 
+| `codeBlock` | Object | - | 
+| `codeBlock.maxLines` | Integer | `7` | 
+| `codeBlock.lineNos` | Boolean | `true` | `true`/`false` 表示默認情况下顯示/隱藏行號。
 
 ## 語法高亮
 
