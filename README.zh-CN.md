@@ -233,6 +233,24 @@ $ hugo new content/zh-CN/posts/newpost.md
 | `creativeCommons.nd` | Boolean | `true` | 禁止演绎
 | `creativeCommons.sa` | Boolean | `true` | 相同方式共享
 
+## 语法高亮
+
+本主题要求以下参数设置为特定值。
+
+- `lineNos`: `true`
+- `lineNumbersInTable`: `false`
+- `noClasses`: `false`
+
+另外可参阅 [Configure Highlight](https://gohugo.io/getting-started/configuration-markup#highlight).
+
+### 样式
+
+```shell
+$ hugo gen chromastyles --style=solarized-dark > assets/css/highlight.css
+```
+
+另外可参阅[所有支持的样式](https://xyproto.github.io/splash/docs/all.html).
+
 ## 评论
 
 ### Disqus
