@@ -1,4 +1,4 @@
-{{- $key := default "summary" $.Site.Params.post.excerpt -}}
+{{- $key := $.Site.Params.post.excerpt -}}
 {{- $content :=  "" -}}
 {{- if eq $key "description" -}}
   {{- $content = .Description -}}
