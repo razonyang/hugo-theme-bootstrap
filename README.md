@@ -212,6 +212,10 @@ As the example site shown, the configuration are separated into multiple files, 
 | `creativeCommons.nc` | Boolean | `true` | Only noncommercial use of your work is permitted.
 | `creativeCommons.nd` | Boolean | `true` | No derivatives or adaptations of your work are permitted.
 | `creativeCommons.sa` | Boolean | `true` | Adaptations must be shared under the same terms.
+| **Code Block** 
+| `codeBlock` | Object | - | 
+| `codeBlock.maxLines` | Integer | `7` | 
+| `codeBlock.lineNos` | Boolean | `true` | `true`/`false` represents that show/hide the line numbers by default.
 
 > Except the Google webmaster tool, the other webmaster tools cannot work with `hugo --minify`, because they cannot recognize the minified meta tag.
 

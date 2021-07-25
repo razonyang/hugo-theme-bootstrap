@@ -211,6 +211,10 @@ $ hugo new content/zh-CN/posts/newpost.md
 | `creativeCommons.nc` | Boolean | `true` | 非商业
 | `creativeCommons.nd` | Boolean | `true` | 禁止演绎
 | `creativeCommons.sa` | Boolean | `true` | 相同方式共享
+| **Code Block** 
+| `codeBlock` | Object | - | 
+| `codeBlock.maxLines` | Integer | `7` | 
+| `codeBlock.lineNos` | Boolean | `true` | `true`/`false` 表示默认情况下显示/隐藏行号。
 
 > 除了 Google 站长工具外，其他搜索引擎站长工具无法与 `hugo --minify` 同时使用，这是因为它们无法识别优化后的元标签。
 
