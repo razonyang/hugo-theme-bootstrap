@@ -7,11 +7,11 @@ class Scroller {
   }
 
   show() {
-    this.element.style.display = 'block';
+    this.element.classList.add('active');
   }
 
   hide() {
-    this.element.style.display = 'none';
+    this.element.classList.remove('active');
   }
 
   run() {
