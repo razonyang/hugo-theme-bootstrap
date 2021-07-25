@@ -49,6 +49,10 @@ titleCase = true # Capitalized title.
   # maxLines = 8
   # lineNos = false # true/false represents that show/hide the line numbers by default.
 
+[post]
+  # excerpt = "description"
+  # excerptMaxLength = 120
+
 [archive]
   paginate = 8 # Archive pagination. Default to 100.
   # dateFormat = "01-02" # Archive date format. Default to "Jan 2".

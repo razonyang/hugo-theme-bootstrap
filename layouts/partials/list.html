@@ -20,7 +20,7 @@
         <h2 class="post-title mb-4"><a href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a></h2>
         {{- partial "post/meta" . -}}
         <div class="post-summary mb-3">
-          {{- .Summary | truncate 320 -}}
+          {{ partial "post/excerpt" . }}
         </div>
       </div>
     </article>

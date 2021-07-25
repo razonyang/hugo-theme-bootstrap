@@ -1,0 +1,9 @@
+{{- $key := default "summary" $.Site.Params.post.excerpt -}}
+{{- $content :=  "" -}}
+{{- if eq $key "description" -}}
+  {{- $content = .Description -}}
+{{- else -}}
+  {{- $content = .Summary -}}
+{{- end -}}
+{{- $maxLength := default 320 $.Site.Params.post.excerptMaxLength -}}
+{{- $content | truncate $maxLength -}}
