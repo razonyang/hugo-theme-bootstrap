@@ -215,6 +215,10 @@ $ hugo new content/zh-CN/posts/newpost.md
 | `codeBlock` | Object | - | 
 | `codeBlock.maxLines` | Integer | `7` | 
 | `codeBlock.lineNos` | Boolean | `true` | `true`/`false` 表示默认情况下显示/隐藏行号。
+| **Post** 
+| `post` | Object | - | 
+| `post.excerpt` | String | `Summary` | 可选项：`description`
+| `post.excerptMaxLength` | Integer | `320` | 
 
 > 除了 Google 站长工具外，其他搜索引擎站长工具无法与 `hugo --minify` 同时使用，这是因为它们无法识别优化后的元标签。
 

@@ -216,6 +216,10 @@ As the example site shown, the configuration are separated into multiple files, 
 | `codeBlock` | Object | - | 
 | `codeBlock.maxLines` | Integer | `7` | 
 | `codeBlock.lineNos` | Boolean | `true` | `true`/`false` represents that show/hide the line numbers by default.
+| **Post** 
+| `post` | Object | - | 
+| `post.excerpt` | String | `Summary` | Options: `description`
+| `post.excerptMaxLength` | Integer | `320` | 
 
 > Except the Google webmaster tool, the other webmaster tools cannot work with `hugo --minify`, because they cannot recognize the minified meta tag.
 
