@@ -46,7 +46,8 @@ customJS = []
 titleCase = true # Capitalized title.
 
 [codeBlock]
-  maxLines = 8
+  # maxLines = 8
+  # lineNos = false # true/false represents show/hide the line numbers by default.
 
 [archive]
   paginate = 8 # Archive pagination. Default to 100.

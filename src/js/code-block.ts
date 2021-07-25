@@ -5,13 +5,15 @@ class CodeBlock {
     code: HTMLElement;
     panel: HTMLElement;
 
-    maxLines: number;
+    params: any;
+
+    maxHeight: number;
 
     constructor(element: HTMLElement) {
         this.element = element;
         this.pre = element.querySelector('pre');
         this.code = this.pre.querySelector('code');
-        this.maxLines = window.params.codeBlock.maxlines;
+        this.params = window.params.codeBlock;
     }
 
     run() {
@@ -42,11 +44,20 @@ class CodeBlock {
     appendPanel() {
         this.panel = document.createElement('div');
         this.panel.className = 'chroma panel';
+        this.calculateMaxHeight();
         this.appendCopyButton();
         this.appendLineNumberButton();
         this.appendLineWrapButton();
         this.appendExpandButton();
         this.wrapper.appendChild(this.panel);
+    }
+
+    calculateMaxHeight() {
+        const lineNumbers = this.lineNumbers();
+        if (lineNumbers > this.params.maxLines) {
+            const maxLine = this.code.querySelectorAll('.ln')[this.params.maxLines] as HTMLElement;
+            this.maxHeight = maxLine.offsetTop;
+        }
     }
 
     appendCopyButton() {
@@ -68,20 +79,23 @@ class CodeBlock {
     appendLineNumberButton() {
         if (this.hasLineNumbers()) {
             const btn = document.createElement('span');
-            btn.className = 'action';
-            btn.innerHTML = '<i class="fas fa-bars"></i>';
+            btn.className = 'action active';
+            btn.innerHTML = '<i class="fas fa-list"></i>';
             const self = this;
             btn.addEventListener('click', function() {
                 const classList = self.code.classList;
                 const className = 'no-ln';
                 if(classList.contains(className)) {
                     classList.remove(className);
-                    btn.classList.remove('active');
+                    btn.classList.add('active');
                 } else {
                     classList.add(className);
-                    btn.classList.add('active');
+                    btn.classList.remove('active');
                 }
             });
+            if (this.params.lineNos === false) {
+                btn.click();
+            }
             this.panel.appendChild(btn);
         }
     }
@@ -115,28 +129,25 @@ class CodeBlock {
 
     appendExpandButton() {
         const self = this;
-        const lineNumbers = this.lineNumbers();
-        if (lineNumbers > this.maxLines) {
-            const maxLine = this.code.querySelectorAll('.ln')[this.maxLines] as HTMLElement;
-            const maxHeight = maxLine.offsetTop;
-            this.pre.style.maxHeight = `${maxHeight}px`;
+        if (this.maxHeight) {
+            this.pre.style.maxHeight = `${this.maxHeight}px`;
 
             const btn = document.createElement('span');
             btn.className = 'action';
             btn.innerHTML = '<i class="fas fa-arrows-alt-v"></i>';
             btn.addEventListener('click', function() {
-                self.toggleExpand(maxHeight);
+                self.toggleExpand();
             });
             this.panel.appendChild(btn);
         }
     }
 
-    toggleExpand(maxHeight) {
+    toggleExpand() {
         const style = this.pre.style;
         if (style.maxHeight) {
             style.maxHeight = null;
         } else {
-            style.maxHeight = maxHeight + 'px';
+            style.maxHeight = this.maxHeight + 'px';
         }
     }
 }

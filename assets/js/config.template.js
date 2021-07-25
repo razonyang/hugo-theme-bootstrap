@@ -1,4 +1,7 @@
 {{- $params := $.Site.Params -}}
 window.params = {
-    codeBlock: {{ $params.codeBlock | jsonify }},
+    codeBlock: {
+        maxLines: {{ default 7 $params.codeBlock.maxLines }},
+        lineNos: {{ default true $params.codeBlock.lineNos }},
+    },
 }
