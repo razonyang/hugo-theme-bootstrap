@@ -34,6 +34,7 @@ There is also a [list of websites that use this theme](https://github.com/razony
 - Search.
 - Breadcrumb.
 - Archive.
+- [Syntax Highlighting](#syntax-highlighting)
 - Resources Lazy Loading: `image` and `iframe`.
 - Reward Widget: supports Alipay and Wechat.
 - Table of Contents.
@@ -232,6 +233,24 @@ As the example site shown, the configuration are separated into multiple files, 
 | `creativeCommons.nc` | Boolean | `true` | Only noncommercial use of your work is permitted.
 | `creativeCommons.nd` | Boolean | `true` | No derivatives or adaptations of your work are permitted.
 | `creativeCommons.sa` | Boolean | `true` | Adaptations must be shared under the same terms.
+
+## Syntax Highlighting
+
+This theme requires the following parameters to be set to specific values.
+
+- `lineNos`: `true`
+- `lineNumbersInTable`: `false`
+- `noClasses`: `false`
+
+See also [Configure Highlight](https://gohugo.io/getting-started/configuration-markup#highlight).
+
+### Style
+
+```shell
+$ hugo gen chromastyles --style=solarized-dark > assets/css/highlight.css
+```
+
+See also [All Supported Styles](https://xyproto.github.io/splash/docs/all.html).
 
 ## Comments
 
