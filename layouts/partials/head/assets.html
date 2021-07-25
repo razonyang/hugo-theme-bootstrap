@@ -5,7 +5,8 @@
 {{- $style := slice $mainStyle $configStyle $highlightStyle $customStyle | resources.Concat "css/bundle.css" | resources.Minify | resources.Fingerprint -}}
 <link rel=stylesheet href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous">
 {{- $mainScript := resources.Get "js/main.js" }}
+{{- $configScript := resources.Get "js/config.template.js" | resources.ExecuteAsTemplate "config.js" . -}}
 {{- $customScript := resources.Get "js/custom.js" -}}
-{{- $script := slice $mainScript $customScript | resources.Concat "js/bundle.js" | resources.Minify | resources.Fingerprint -}}
+{{- $script := slice $mainScript $configScript $customScript | resources.Concat "js/bundle.js" | resources.Minify | resources.Fingerprint -}}
 <script src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>
 {{- partial "head/math" . -}}

@@ -45,6 +45,9 @@ customJS = []
 
 titleCase = true # Capitalized title.
 
+[codeBlock]
+  maxLines = 8
+
 [archive]
   paginate = 8 # Archive pagination. Default to 100.
   # dateFormat = "01-02" # Archive date format. Default to "Jan 2".
