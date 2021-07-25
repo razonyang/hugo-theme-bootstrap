@@ -4,7 +4,7 @@
 [简体中文](https://github.com/razonyang/hugo-theme-bootstrap/blob/master/README.zh-CN.md) · 
 [繁體中文](https://github.com/razonyang/hugo-theme-bootstrap/blob/master/README.zh-TW.md)
 
-本主題是一個極快、響應式和功能豐富的 Hugo 部落格主題。
+一個極快、響應式和功能豐富的 Hugo 部落格主題。
 
 ## 截圖
 
