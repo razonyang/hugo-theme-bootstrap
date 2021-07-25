@@ -5,12 +5,13 @@ class CodeBlock {
     code: HTMLElement;
     panel: HTMLElement;
 
-    maxLineNumbers: number = 7;
+    maxLines: number;
 
     constructor(element: HTMLElement) {
         this.element = element;
         this.pre = element.querySelector('pre');
         this.code = this.pre.querySelector('code');
+        this.maxLines = window.params.codeBlock.maxlines;
     }
 
     run() {
@@ -115,8 +116,8 @@ class CodeBlock {
     appendExpandButton() {
         const self = this;
         const lineNumbers = this.lineNumbers();
-        if (lineNumbers > this.maxLineNumbers) {
-            const maxLine = this.code.querySelectorAll('.ln')[this.maxLineNumbers] as HTMLElement;
+        if (lineNumbers > this.maxLines) {
+            const maxLine = this.code.querySelectorAll('.ln')[this.maxLines] as HTMLElement;
             const maxHeight = maxLine.offsetTop;
             this.pre.style.maxHeight = `${maxHeight}px`;
 

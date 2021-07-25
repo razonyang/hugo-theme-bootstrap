@@ -8,6 +8,12 @@ import TOC from './toc';
 import Code from './code';
 import SidebarToggler from './sidebar-toggler';
 
+declare global {
+  interface Window {
+    params: any;
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   const modeSwitcherEle: HTMLInputElement = document.querySelector('#modeSwitcher');
   if (modeSwitcherEle) {
