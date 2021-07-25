@@ -414,6 +414,12 @@ $ cd exampleSite
 $ hugo server --themesDir=../../
 ```
 
+**格式化代碼**
+
+```shell
+$ npm run lint
+```
+
 ## FAQ
 
 ### 如何删除不需要的語言？

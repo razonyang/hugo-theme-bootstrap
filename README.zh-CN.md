@@ -413,6 +413,13 @@ $ npm run build
 $ cd exampleSite
 $ hugo server --themesDir=../../
 ```
+
+**格式化代码**
+
+```shell
+$ npm run lint
+```
+
 ## FAQ
 
 ### 如何删除不需要的语言？

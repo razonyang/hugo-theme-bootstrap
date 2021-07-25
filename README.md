@@ -417,6 +417,12 @@ $ cd exampleSite
 $ hugo server --themesDir=../../
 ```
 
+**Formating Code**
+
+```shell
+$ npm run lint
+```
+
 ## FAQ
 
 ### How to remove the unwanted language?
