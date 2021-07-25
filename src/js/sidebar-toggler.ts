@@ -9,6 +9,10 @@ class SidebarToggler {
   }
 
   run() {
+    if (!this.button) {
+      return;
+    }
+
     this.main = document.querySelector('.content>div:first-child');
     this.sidebar = document.querySelector('.content .sidebar');
     const self = this;
