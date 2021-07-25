@@ -1,12 +1,18 @@
-.sidebar h1, h2, h3, h4, h5, h6 {
-  margin-top: 1rem !important;
-}
+.sidebar {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 1rem !important;
+  }
 
-.sidebar ul {
-  padding-left: 2rem!important;
-}
+  ul {
+    padding-left: 2rem !important;
 
-.sidebar ul li,
-.post-taxonomy {
-  color: var(--hbs-secondary-text);
+    li {
+      color: var(--hbs-secondary-text);
+    }
+  }
 }

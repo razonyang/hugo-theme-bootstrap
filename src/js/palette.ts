@@ -1,7 +1,7 @@
 class PaletteSwitcher {
   key: string;
 
-  init() {
+  run() {
     this.key = 'hbs-palette';
     this.initPalette();
   }
@@ -17,7 +17,7 @@ class PaletteSwitcher {
     if (!palettePicker) {
       return;
     }
-    document.querySelector('#btnPalette').addEventListener('click', function() {
+    document.querySelector('#btnPalette').addEventListener('click', () => {
       if (palettePicker.classList.contains('visually-hidden')) {
         palettePicker.classList.remove('visually-hidden');
       } else {
@@ -25,12 +25,12 @@ class PaletteSwitcher {
       }
     });
     document.querySelectorAll('.palette').forEach((element) => {
-      const palette = element.getAttribute('id').replace('palette-', '');
-      if (palette === selected) {
+      const paletteId = element.getAttribute('id').replace('palette-', '');
+      if (paletteId === selected) {
         element.classList.add('active');
       }
       element.addEventListener('click', () => {
-        self.setPalette(palette);
+        self.setPalette(paletteId);
         document.querySelector('.palette.active').classList.remove('active');
         element.classList.add('active');
         palettePicker.classList.add('visually-hidden');

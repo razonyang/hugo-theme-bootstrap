@@ -1,17 +1,17 @@
-blockquote{
+blockquote {
   background: var(--bs-light);
-  border-left: .5rem solid var(--hbs-accent);
+  border-left: 0.5rem solid var(--hbs-accent);
   color: var(--hbs-on-surface);
   background-color: var(--hbs-surface);
-  padding: 1.2rem 2.5rem .2rem;
+  padding: 1.2rem 2.5rem 0.2rem;
   position: relative;
-}
 
-blockquote::before{
-  content: "\201C";
-  color: var(--hbs-accent);
-  font-size: 4em;
-  position: absolute;
-  left: .5rem;
-  top: -1rem;
+  &::before {
+    content: "\201C";
+    color: var(--hbs-accent);
+    font-size: 4em;
+    position: absolute;
+    left: 0.5rem;
+    top: -1rem;
+  }
 }

@@ -1,12 +1,12 @@
-import CodeBlock from "./code-block";
+import CodeBlock from './code-block';
 
 class Code {
-    run() {
-        document.querySelectorAll('.highlight').forEach(function(element: HTMLElement) {
-            const block = new CodeBlock(element);
-            block.run();
-        });
-    }
+  static run() {
+    document.querySelectorAll('.highlight').forEach((element: HTMLElement) => {
+      const block = new CodeBlock(element);
+      block.run();
+    });
+  }
 }
 
 export default Code;

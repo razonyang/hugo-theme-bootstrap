@@ -118,13 +118,10 @@
   @include palette-yellow;
 }
 
-.palettes {
-}
-
 .palette {
   height: 1rem;
   width: 1rem;
-  margin-right: .5rem;
+  margin-right: 0.5rem;
 
   &.active {
     &::after {

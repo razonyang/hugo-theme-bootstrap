@@ -1,5 +1,6 @@
 :root {
   @extend .mode-light;
+
   --mode: none;
   --hbs-font-size: 1rem;
 }
@@ -18,7 +19,8 @@ html {
   position: relative;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -40,7 +42,6 @@ a {
   }
 }
 
-btn,
 .btn {
   background-color: var(--hbs-accent);
   color: #fff;
@@ -61,6 +62,7 @@ h5 {
 table {
   @extend .table;
   @extend .table-bordered;
+
   color: var(--color);
 }
 
@@ -74,20 +76,22 @@ ul {
 
 .surface {
   background-color: var(--hbs-surface);
-  border-radius: .25rem;
-  box-shadow: 0 .5rem 1rem var(--hbs-shadow);
+  border-radius: 0.25rem;
+  box-shadow: 0 0.5rem 1rem var(--hbs-shadow);
   color: var(--hbs-on-surface);
   margin-bottom: 2rem;
   padding: 1rem;
 }
 
-.list-group-item.active {
-  background-color: var(--hbs-accent);
-  border: var(--hbs-accent);
+.list-group-item {
+  .active {
+    background-color: var(--hbs-accent);
+    border: var(--hbs-accent);
+  }
 }
 
 .fa-fw {
-  margin-right: .25rem;
+  margin-right: 0.25rem;
 }
 
 .setting {

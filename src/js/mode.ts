@@ -4,7 +4,11 @@ class ModeSwitcher {
   constructor(public element: HTMLInputElement) {
   }
 
-  init() {
+  run() {
+    if (!this.element) {
+      return;
+    }
+
     this.initListeners();
     this.initMode();
   }

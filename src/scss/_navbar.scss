@@ -1,6 +1,15 @@
 .navbar {
   background-color: var(--hbs-navbar-bg);
   color: #{$white-secondary};
+
+  a {
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      color: #{$white};
+    }
+  }
 }
 
 .search-bar {
@@ -9,7 +18,7 @@
     border-color: var(--hbs-background);
     color: var(--hbs-secondary-text);
     padding-left: 2rem;
-  
+
     &:focus {
       color: var(--hbs-primary-text);
     }
@@ -18,24 +27,25 @@
   .btn-search {
     background-color: transparent;
     color: var(--hbs-secondary-text);
-    z-index: 4!important;
+    z-index: 4 !important;
   }
 }
 
 .logo {
   height: 26px;
-  margin-right: .5rem;
+  margin-right: 0.5rem;
 }
 
 .navbar-toggler {
   border: none;
-}
 
-.navbar-toggler:focus {
-  box-shadow: none;
+  &:focus {
+    box-shadow: none;
+  }
 }
 
 $bgNavbarTogglerIcon: url("/images/icons/menu.png");
+
 .navbar-toggler-icon {
   background-image: $bgNavbarTogglerIcon;
 }
@@ -54,21 +64,18 @@ $bgNavbarTogglerIcon: url("/images/icons/menu.png");
   }
 }
 
-.navbar a {
-  &:hover,
-  &:focus,
-  &:active,
-  &.active {
-    color: #{$white};
-  }
-}
+.dropdown-menu {
+  background-color: var(--hbs-surface);
 
-.dropdown-item {
-  &:hover,
-  &:focus,
-  &:active,
-  &.active {
-    color: #fff;
-    background-color: var(--hbs-accent);
+  .dropdown-item {
+    color: var(--hbs-on-surface);
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      color: #fff;
+      background-color: var(--hbs-accent);
+    }
   }
 }

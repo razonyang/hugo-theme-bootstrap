@@ -19,8 +19,8 @@
       <ul class="archive-posts">
       {{- end -}}
         <li>
-          <a class="archive-post-title" href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a>
-          <span class="float-end archive-post-date">{{ .Date.Format (default "Jan 2" $.Site.Params.archive.dateFormat) }}</span>
+          <a class="post-title" href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a>
+          <span class="float-end post-date">{{ .Date.Format (default "Jan 2" $.Site.Params.archive.dateFormat) }}</span>
         </li>
       {{- if eq $idx (sub $count 1) -}}
       {{/* Last item, close current ul tag */}}

@@ -1,42 +1,46 @@
 .post {
   position: relative;
-}
 
-.post-toolbox {
-  left: 0;
-  top: 1rem;
-  z-index: 1;
-  position: absolute;
-  text-align: right;
-}
+  .post-panel {
+    left: 0;
+    top: 1rem;
+    z-index: 1;
+    position: absolute;
+    text-align: right;
+  }
 
-.post-meta {
-  color: var(--hbs-secondary-text);
-  word-break: break-all;
-}
+  .post-meta {
+    color: var(--hbs-secondary-text);
+    word-break: break-all;
+  }
 
-.post-summary {
-  color: var(--hbs-secondary-text);
-}
+  .post-summary {
+    color: var(--hbs-secondary-text);
+  }
 
-.post-taxonomy {
-  margin: 0 .5rem .5rem 0;
+  .post-toc {
+    z-index: 1;
 
-  &.btn {
-    color: #fff;
+    ul {
+      margin-bottom: 0;
+    }
+
+    &.position-sticky {
+      top: 84px;
+    }
   }
 }
 
-.post-taxonomy .badge {
-  background-color: #{$white};
-  color: var(--hbs-accent);
-}
+.post-taxonomy {
+  margin: 0 0.5rem 0.5rem 0;
 
-.post-toc {
-  z-index: 1;
+  .badge {
+    background-color: #{$white};
+    color: var(--hbs-accent);
+  }
 
-  &.position-sticky {
-    top: 84px;
+  &.btn {
+    color: #fff;
   }
 }
 
@@ -56,10 +60,6 @@
   margin-bottom: 0;
 }
 
-.post-toc ul {
-  margin-bottom: 0;
-}
-
 .post-content {
   a {
     color: var(--hbs-accent);
@@ -73,40 +73,44 @@
 .post-nav {
   width: 50%;
   display: flex;
-  margin: 0 .125rem;
-}
+  margin: 0 0.125rem;
 
-.prev-post,
-.next-post {
-  display: flex;
-  align-items: center;
-  a:hover{
-        text-decoration: none;
-        color: #{$white};
+  .prev-post,
+  .next-post {
+    display: flex;
+    align-items: center;
+
+    a:hover {
+      text-decoration: none;
+      color: #{$white};
     }
+
+    &::before {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .prev-post {
+    &::before {
+      content: "<\00a0";
+    }
+  }
+
+  .next-post {
+    text-align: right;
+    flex-direction: row-reverse;
+
+    &::before {
+      content: "\00a0>";
+    }
+  }
 }
 
-.next-post {
-  text-align: right;
-  flex-direction: row-reverse;
-}
-
-.prev-post:before,
-.next-post:before {
-  display: flex;
-  align-items: center;
-}
-
-.prev-post:before {
-  content: "<\00a0";
-}
-
-.next-post:before {
-  content: "\00a0>";
-}
-
-.post-comments .utterances {
-  max-width: 100%;
+.post-comments {
+  .utterances {
+    max-width: 100%;
+  }
 }
 
 .post-reward-content {

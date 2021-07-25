@@ -53,7 +53,7 @@ export class Search {
   constructor(public form: HTMLFormElement) {
   }
 
-  init() {
+  run() {
     this.title = document.title;
     this.resultsElement = document.getElementById('searchResults');
     this.stat = document.getElementById('searchStat');

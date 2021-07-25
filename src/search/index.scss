@@ -3,7 +3,7 @@
     background-color: var(--hbs-surface);
     border-color: var(--hbs-surface);
     color: var(--hbs-secondary-text);
-  
+
     &:focus {
       color: var(--hbs-primary-text);
     }
@@ -18,16 +18,16 @@
 .btn-search {
   background-color: transparent;
   color: var(--hbs-accent);
-  z-index: 4!important;
+  z-index: 4 !important;
 }
 
 .search-result-taxonomy {
-  margin: 0 .25rem .25rem 0;
+  margin: 0 0.25rem 0.25rem 0;
   color: var(--hbs-secondary-text);
 
-  +.search-result-taxonomy:before {
+  +.search-result-taxonomy::before {
     content: "·";
-    margin-right: .5rem;
+    margin-right: 0.5rem;
   }
 }
 
@@ -41,7 +41,7 @@
   font-size: 20px;
   color: var(--hbs-disabled-text);
   position: relative;
-  
+
   &::before {
     @include scoreContent;
   }

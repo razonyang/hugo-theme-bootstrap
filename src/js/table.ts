@@ -1,8 +1,8 @@
 class TableWrapper {
-  constructor(public elements: NodeListOf<HTMLElement>) {
+  constructor(public elements?: NodeListOf<HTMLElement>) {
   }
 
-  init() {
+  run() {
     if (this.elements.length === 0) {
       return;
     }

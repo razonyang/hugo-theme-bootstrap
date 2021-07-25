@@ -1,4 +1,12 @@
-.form-check-input:checked {
-  background-color: var(--hbs-accent);
-  border-color: var(--hbs-accent);
+.form-control {
+  &:focus {
+    box-shadow: 0 0 0 0.125rem var(--hbs-accent);
+  }
+}
+
+.form-check-input {
+  &:checked {
+    background-color: var(--hbs-accent);
+    border-color: var(--hbs-accent);
+  }
 }

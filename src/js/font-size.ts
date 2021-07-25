@@ -1,6 +1,8 @@
 class FontSizeSwitcher {
   key: string = 'hbs-font-size';
-  input: HTMLInputElement;
+
+  constructor(public input: HTMLInputElement) {
+  }
 
   sizes: Map<string, string> = new Map([
     ['-2', 'xs'],
@@ -10,8 +12,7 @@ class FontSizeSwitcher {
     ['2', 'xl'],
   ]);
 
-  init() {
-    this.input = document.getElementById('fontSize') as HTMLInputElement
+  run() {
     if (!this.input) {
       return;
     }
@@ -28,7 +29,7 @@ class FontSizeSwitcher {
 
   initListeners() {
     this.input.value = this.getSize();
-    const self = this
+    const self = this;
     this.input.addEventListener('change', () => {
       self.setSize(self.input.value);
     });

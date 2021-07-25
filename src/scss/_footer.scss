@@ -1,7 +1,11 @@
 .footer {
   color: var(--hbs-secondary-text);
-}
 
-.powered-by a {
-  color: var(--hbs-accent);
+  .powered-by a {
+    color: var(--hbs-accent);
+  }
+
+  .social-link {
+    padding: 0.5rem;
+  }
 }

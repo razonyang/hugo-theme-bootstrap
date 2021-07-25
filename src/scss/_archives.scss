@@ -1,8 +1,10 @@
-.archive ul {
-  padding-left: 2rem;
-}
+.archive {
+  ul {
+    padding-left: 2rem;
+  }
 
-.archive-post-title,
-.archive-post-date {
-  color: var(--hbs-secondary-text);
+  .post-title,
+  .post-date {
+    color: var(--hbs-secondary-text);
+  }
 }

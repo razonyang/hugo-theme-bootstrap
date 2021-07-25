@@ -1,3 +1,5 @@
-.breadcrumb-item.active {
-  color: var(--hbs-secondary-text);
+.breadcrumb-item {
+  .active {
+    color: var(--hbs-secondary-text);
+  }
 }

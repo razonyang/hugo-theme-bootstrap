@@ -14,7 +14,10 @@ class Scroller {
     this.element.style.display = 'none';
   }
 
-  init() {
+  run() {
+    if (!this.element) {
+      return;
+    }
     const instance = this;
     window.addEventListener('scroll', () => {
       if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {

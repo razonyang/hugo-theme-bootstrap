@@ -15,34 +15,21 @@ declare global {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  const modeSwitcherEle: HTMLInputElement = document.querySelector('#modeSwitcher');
-  if (modeSwitcherEle) {
-    (new ModeSwitcher(modeSwitcherEle)).init();
-  }
+  (new ModeSwitcher(document.querySelector('#modeSwitcher'))).run();
 
-  const paletteSwitcher = new PaletteSwitcher();
-  paletteSwitcher.init();
+  (new PaletteSwitcher()).run();
 
-  const scroller = new Scroller(document.getElementById('btnScrollToTop'));
-  scroller.init();
+  (new Scroller(document.getElementById('btnScrollToTop'))).run();
 
-  const tableWrapper = new TableWrapper(document.querySelectorAll('table'));
-  tableWrapper.init();
+  (new TableWrapper(document.querySelectorAll('table'))).run();
 
-  const anchorLink = new AnchorLink(document.body.querySelectorAll('.post-content h1, h2, h3, h4, h5, h6'));
-  anchorLink.init();
+  (new AnchorLink(document.body.querySelectorAll('.post-content'))).run();
 
-  (new FontSizeSwitcher()).init();
+  (new FontSizeSwitcher(document.getElementById('fontSize') as HTMLInputElement)).run();
 
-  const tocEle: HTMLElement = document.querySelector('#offcanvasTOC');
-  if (tocEle) {
-    (new TOC(tocEle)).init();
-  }
+  (new TOC(document.querySelector('#offcanvasTOC'))).run();
 
-  const sidebarToggler: HTMLElement = document.querySelector('#sidebarToggler');
-  if (sidebarToggler) {
-    (new SidebarToggler(sidebarToggler)).init();
-  }
+  (new SidebarToggler(document.querySelector('#sidebarToggler'))).run();
 
-  (new Code()).run();
+  Code.run();
 });
