@@ -104,13 +104,13 @@ $ git commit -m 'Upgrade the theme'
 ## Getting Started
 
 ```shell
-$ hugo new content/en/posts/newpost.md
+$ hugo new -c content/en posts/newpost.md
 ```
 
 The command above create a new post written in English. Similarly, we can create a post written in Simplified Chinese:
 
 ```shell
-$ hugo new content/zh-CN/posts/newpost.md
+$ hugo new -c content/zh-cn posts/newpost.md
 ```
 
 > Please remind that, the created posts are generally in draft state. You'll need the `-D` parameter to the command `hugo server` for previewing. When publishing posts, you need to change the `draft` to `false`, or delete `draft` directly.
