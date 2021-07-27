@@ -1,0 +1,8 @@
+{{- $enable := and (default true .Params.toc) (default true .Site.Params.toc) -}}
+{{- $wordCount := default 280 .Site.Params.tocWordCount -}}
+{{- $toc := .TableOfContents -}}
+{{- $valid := and $toc (and (ne $toc "<nav id=\"TableOfContents\"></nav>") (gt .WordCount $wordCount)) -}}
+{{- if and $enable $valid -}}
+<a id="btnTOC" class="fas fa-fw fa-list-alt" data-bs-toggle="offcanvas" href="#offcanvasTOC" aria-controls="offcanvasTOC" role="button">
+</a>
+{{- end -}}
