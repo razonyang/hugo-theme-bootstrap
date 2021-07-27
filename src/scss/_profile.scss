@@ -1,3 +1,14 @@
 .profile {
   color: var(--hbs-secondary-text);
+
+  .profile-avatar {
+    max-width: 100px;
+  }
+
+  .profile-meta {
+    * {
+      margin-right: 0.5rem;
+      white-space: pre;
+    }
+  }
 }
