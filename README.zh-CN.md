@@ -16,8 +16,7 @@
 
 ## 线上预览
 
-- https://hugo-theme-bootstrap.netlify.app/ - 部署于 Netlify。
-- https://hugo-theme-bootstrap.razonyang.com/ - 自托管服务器（亚洲）。
+- https://hbs.razonyang.com/ - 部署于 Netlify。
 
 这还有个[使用这个主题的网站列表](https://github.com/razonyang/hugo-theme-bootstrap/blob/master/USERS.md)。
 

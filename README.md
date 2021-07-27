@@ -16,8 +16,7 @@ An extreme fast, responsive and feature-rich blog theme for Hugo.
 
 ## Live Preview
 
-- https://hugo-theme-bootstrap.netlify.app/ - Deploy on Netlify.
-- https://hugo-theme-bootstrap.razonyang.com/ - A self-hosted server located in Asia.
+- https://hbs.razonyang.com/ - Deploy on Netlify.
 
 There is also a [list of websites that use this theme](https://github.com/razonyang/hugo-theme-bootstrap/blob/master/USERS.md).
 
