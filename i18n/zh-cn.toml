@@ -49,9 +49,6 @@ other = "黄色"
 [copyright]
 other = "版权"
 
-[post_license]
-other = "本作品采用 {{ .license }} 授权。"
-
 [featured_posts]
 other = "精选文章"
 

@@ -7,6 +7,7 @@ import FontSizeSwitcher from './font-size';
 import TOC from './toc';
 import Code from './code';
 import SidebarToggler from './sidebar-toggler';
+import PopOver from './popover';
 
 declare global {
   interface Window {
@@ -32,4 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
   (new SidebarToggler(document.querySelector('#sidebarToggler'))).run();
 
   Code.run();
+
+  PopOver.run();
 });

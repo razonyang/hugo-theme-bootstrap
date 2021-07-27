@@ -1,0 +1,33 @@
+.popover {
+  background-color: var(--hbs-background);
+
+  .popover-body {
+    color: var(--hbs-on-background);
+  }
+}
+
+.bs-popover-bottom {
+  .popover-arrow::after {
+    border-bottom-color: var(--hbs-background);
+  }
+}
+
+.bs-popover-start {
+  .popover-arrow::after {
+    border-left-color: var(--hbs-background);
+  }
+}
+
+.bs-popover-auto {
+  &[data-popper-placement^=bottom] {
+    .popover-arrow::after {
+      border-bottom-color: var(--hbs-background);
+    }
+  }
+
+  &[data-popper-placement^=left] {
+    .popover-arrow::after {
+      border-left-color: var(--hbs-background);
+    }
+  }
+}
