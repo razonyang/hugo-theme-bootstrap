@@ -1,7 +1,14 @@
+{{- $titles := .Title -}}
 {{- $pageNumber := "" -}}
 {{- if .IsNode -}}
   {{- if gt .Paginator.PageNumber 1 -}}
-    {{- $pageNumber = printf " %s" (i18n "pagination_title" .Paginator) -}}
+    {{- $titles = printf "$s %s" $titles (i18n "pagination_title" .Paginator) -}}
   {{- end -}}
 {{- end -}}
-{{- printf "%s%s %s %s" .Title $pageNumber (default "-" .Site.Params.titleSeparator) .Site.Title -}}
+{{- $titles := slice $titles -}}
+{{- if eq .Kind "term" -}}
+  {{- $titles = $titles | append (i18n .Data.Plural)  -}}
+{{- end -}}
+{{- $titles = $titles | append .Site.Title -}}
+{{- $separator := printf " %s " (default "-" .Site.Params.titleSeparator) -}}
+{{- delimit $titles $separator -}}
