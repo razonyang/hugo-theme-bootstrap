@@ -95,9 +95,9 @@ titleCase = true # Capitalized title.
     # distance = 100
     # useExtendedSearch = true
 
-#[reward]
-  #alipay = "images/reward/alipay.png"
-  #wechat = "images/reward/wechat.png"
+[reward]
+  alipay = "images/reward/alipay.png"
+  wechat = "images/reward/wechat.png"
 
 #[share]
   #addThis = "" # AddThis pubid.

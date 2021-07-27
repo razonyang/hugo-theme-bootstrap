@@ -1,0 +1,6 @@
+{{- $reward := .Site.Params.reward }}
+{{- if and $reward (default true .Params.reward) -}}
+<a class="action btn-reward" role="button" data-bs-toggle="modal" data-bs-target="#rewardModal" title="{{ i18n "reward" }}">
+  <i class="fas fa-fw fa-medal"></i>
+</a>
+{{- end -}}

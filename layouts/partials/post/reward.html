@@ -1,11 +1,5 @@
 {{- $reward := .Site.Params.reward }}
 {{- if and $reward (default true .Params.reward) -}}
-<div class="post-reward mb-4 text-center">
-  <button type="button" class="btn btn-reward" data-bs-toggle="modal" data-bs-target="#rewardModal">
-    <i class="fas fa-fw fa-medal"></i>{{ i18n "reward" }}
-  </button>
-</div>
-
 {{- $icons := dict "wechat" "weixin" -}}
 <div class="modal fade" id="rewardModal" tabindex="-1" aria-labelledby="rewardModalLabel" aria-hidden="true">
   <div class="modal-dialog">
