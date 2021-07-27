@@ -41,14 +41,14 @@ class SidebarToggler {
   hide() {
     this.main.classList.replace('col-lg-8', 'col-lg-12');
     this.sidebar.classList.add('d-none');
-    this.button.querySelector('.fas').classList.replace('fa-expand-alt', 'fa-compress-alt');
+    this.button.classList.add('active');
     localStorage.setItem(this.key, 'hide');
   }
 
   show() {
     this.main.classList.replace('col-lg-12', 'col-lg-8');
     this.sidebar.classList.remove('d-none');
-    this.button.querySelector('.fas').classList.replace('fa-compress-alt', 'fa-expand-alt');
+    this.button.classList.remove('active');
     localStorage.removeItem(this.key);
   }
 }

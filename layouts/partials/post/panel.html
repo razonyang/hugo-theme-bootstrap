@@ -1,5 +1,7 @@
-<div class="post-panel d-flex flex-row-reverse">
-  {{ partial "post/panel/sidebar-toggler" . }}
-  {{ partial "post/panel/translations" . }}
-  {{ partial "post/panel/copyright" . }}
+<div class="post-panel-wrapper">
+  <div class="post-panel d-flex flex-column">
+    {{ partial "post/panel/sidebar-toggler" . }}
+    {{ partial "post/panel/translations" . }}
+    {{ partial "post/panel/copyright" . }}
+  </div>
 </div>
