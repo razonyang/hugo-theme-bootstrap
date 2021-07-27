@@ -72,6 +72,21 @@ $ cp -a themes/hugo-theme-bootstrap/exampleSite/config/* ./config
 
 In this case, you will need to copy some directories into the **content**, such as the **archives** and **search** directory.
 
+### Note
+
+If you're making a fresh clone, you will be need to update your submodule
+
+```shell
+$ git clone <your-repo>
+$ git submodule update --init --recursive
+```
+
+Or combine into one
+
+```shell
+$ git clone --recursive <your-repo>
+```
+
 ## Upgrade
 
 ```shell

@@ -71,6 +71,21 @@ $ cp -a themes/hugo-theme-bootstrap/exampleSite/config/* ./config
 
 這種情況下，你還需要複製一些文件夾到 **content** 目錄下，比如 **archives** 和 **search**。
 
+### 注意
+
+如果你重新尅隆倉庫，你將需要更新submodule
+
+```shell
+$ git clone <your-repo>
+$ git submodule update --init --recursive
+```
+
+或者合併成一條命令
+
+```shell
+$ git clone --recursive <your-repo>
+```
+
 ## 升級
 
 ```shell
