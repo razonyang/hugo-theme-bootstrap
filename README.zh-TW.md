@@ -139,7 +139,7 @@ $ hugo new -c content/zh-cn posts/newpost.md
 | `author.location` | String | - | 地理位置
 | `author.about` | String | - | “關於我”的外部頁面，如果未設定，則使用內部的“關於我”的頁面。
 | `author.params` | Object | - |
-| `author.params.layout` | String | - | 可选值：`compact`
+| `author.params.layout` | String | - | 可選值：`compact`
 
 ## 引數
 
