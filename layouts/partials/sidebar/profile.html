@@ -1,28 +1,8 @@
-{{- with .Site.Author -}}
-<section class="profile surface row text-center">
-  <div class="col-12 d-flex align-items-center justify-content-center">
-    <img class="profile-avatar rounded-circle" src="{{ absURL (default "images/profile.webp" .avatar) }}" alt="{{ .name }}" loading="lazy">
-  </div>
-  <div class="col-12">
-    <h5 class="profile-name my-2">{{ .name }}</h5>
-    {{- with .bio -}}
-    <div class="profile-bio mb-2">{{ . }}</div>
-    {{- end -}}
-    <div class="profile-meta">
-      {{- with .company -}}
-      <span class="profile-company"><i class="fas fa-fw fa-building"></i>{{ . }}</span>
-      {{- end -}}
-      {{- with .location -}}
-      <span class="profile-location"><i class="fas fa-fw fa-map-marker-alt"></i>{{ . }}</span>
-      {{- end -}}
-      {{- if .about -}}
-        <span class="profile-about"><i class="fas fa-fw fa-info-circle"></i><a target="_blank" href="{{ .about }}">{{ i18n "about_me" }}</a></span>
-      {{- else -}}
-        {{- with $.GetPage "about" -}}
-        <span class="profile-about"><i class="fas fa-fw fa-info-circle"></i><a href="{{ .Permalink }}">{{ .Title }}</a></span>
-        {{- end -}}
-      {{- end -}}
-    </div>
-  </div>
-</section>
+{{- if .Site.Author -}}
+{{- $layout := default "" .Site.Author.params.layout -}}
+{{- if eq $layout "compact" -}}
+  {{- partial "sidebar/profile/compact" . -}}
+{{- else -}}
+  {{- partial "sidebar/profile/default" . -}}
+{{- end -}}
 {{- end -}}

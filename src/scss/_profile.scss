@@ -6,9 +6,35 @@
   }
 
   .profile-meta {
+    margin-top: .5rem;
+
     * {
-      margin-right: 0.5rem;
-      white-space: pre;
+      margin-bottom: .25rem;
     }
+  }
+
+  .profile-name {
+    font-weight: bold;
+  }
+
+  .profile-company,
+  .profile-about,
+  .profile-location {
+    display: inline;
+    margin-right: 0.5rem;
+    white-space: pre;
+  }
+}
+
+.profile-compact {
+  .profile-avatar {
+    max-width: 100%;
+    border-radius: 0!important;
+  }
+
+  .profile-company,
+  .profile-about,
+  .profile-location {
+    display: block;
   }
 }

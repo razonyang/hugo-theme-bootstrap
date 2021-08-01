@@ -1,0 +1,19 @@
+{{- with .Site.Author -}}
+<div class="profile-name">{{ .name }}</div>
+{{- with .bio -}}
+<div class="profile-bio">{{ . }}</div>
+{{- end -}}
+{{- with .company -}}
+<div class="profile-company"><i class="fas fa-fw fa-building"></i>{{ . }}</div>
+{{- end -}}
+{{- with .location -}}
+<div class="profile-location"><i class="fas fa-fw fa-map-marker-alt"></i>{{ . }}</div>
+{{- end -}}
+{{- if .about -}}
+<div class="profile-about"><i class="fas fa-fw fa-info-circle"></i><a target="_blank" href="{{ .about }}">{{ i18n "about_me" }}</a></div>
+{{- else -}}
+{{- with $.GetPage "about" -}}
+<div class="profile-about"><i class="fas fa-fw fa-info-circle"></i><a href="{{ .Permalink }}">{{ .Title }}</a></div>
+{{- end -}}
+{{- end -}}
+{{- end -}}
