@@ -138,6 +138,8 @@ $ hugo new -c content/zh-cn posts/newpost.md
 | `author.company` | String | - | 公司
 | `author.location` | String | - | 地理位置
 | `author.about` | String | - | “关于我”的外部页面，如果未设置，则使用内部的“关于我”的页面。
+| `author.params` | Object | - |
+| `author.params.layout` | String | - | 可选值：`compact`
 
 ## 参数
 
