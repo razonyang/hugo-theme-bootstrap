@@ -6,4 +6,4 @@ location = "Earth"
 # about = "https://domain.tld" # The external about page. The internal about page will be used if not set.
 
 [params]
-  layout = "compact"
+  #layout = "compact"
