@@ -1,0 +1,113 @@
+[about_me]
+other = "Men haqimda"
+
+[alipay]
+other = "Alipay"
+
+[archives]
+other = "Arxiv"
+
+[categories]
+other = "Bo'limlar"
+
+[color_blue]
+other = "Ko'k"
+
+[color_blue_gray]
+other = "Siyohrang"
+
+[color_brown]
+other = "Jigarrang"
+
+[color_cyan]
+other = "Moviy"
+
+[color_green]
+other = "Yashil"
+
+[color_indigo]
+other = "Antiqa"
+
+[color_orange]
+other = "Zarg'aldoq"
+
+[color_pink]
+other = "Pushti"
+
+[color_purple]
+other = "Binafsharang"
+
+[color_red]
+other = "Qizil"
+
+[color_teal]
+other = "Zumrad"
+
+[color_yellow]
+other = "Sariq"
+
+[copyright]
+other = "Mualliflik huquqi"
+
+[featured_posts]
+other = "Ko'p o'qilganlar"
+
+[font_size]
+other = "Harf o'lchami"
+
+[home]
+other = "Bosh sahifa"
+
+[language]
+other = "Til"
+
+[load_more]
+other = "Davomini yuklash"
+
+[mode]
+other = "Holat"
+
+[pagination_title]
+other = "{{ .PageNumber }} - sahifa"
+
+[palette]
+other = "Palitra"
+
+[reading_time]
+other = "{{ .ReadingTime }} daqiqada o'qiysiz"
+
+[recent_posts]
+other = "Oxirgi maqolalar"
+
+[related_posts]
+other = "O'xshash maqolalar"
+
+[reward]
+other = "Qaytish"
+
+[search]
+other = "Qidirish"
+
+[search_missing_keywords]
+other = "Izlanadigan matnni kiriting"
+
+[search_no_results]
+other = "Natija topilmadi"
+
+[search_stat]
+other = "Jami {{ .Total }} natija"
+
+[series]
+other = "Ruknlar"
+
+[settings]
+other = "Sozlamalar"
+
+[table_of_contents]
+other = "Mundarija"
+
+[tags]
+other = "Mavzular"
+
+[wechat]
+other = "WeChat"
