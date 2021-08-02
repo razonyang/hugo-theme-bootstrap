@@ -3,7 +3,7 @@
 <script src="https://utteranc.es/client.js"
   repo="{{ $params.repo }}"
   issue-term="{{ default "pathname" $params.issueTerm }}"
-  label="{{ $params.label }}"
+  label="{{ default "comment" $params.label }}"
   theme="{{ default "github-light" $params.theme }}"
   crossorigin="anonymous"
   async>
