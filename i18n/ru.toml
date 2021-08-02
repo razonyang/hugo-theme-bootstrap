@@ -1,0 +1,113 @@
+[about_me]
+other = "Обо мне"
+
+[alipay]
+other = "Alipay"
+
+[archives]
+other = "Архив"
+
+[categories]
+other = "Категории"
+
+[color_blue]
+other = "Синий"
+
+[color_blue_gray]
+other = "Темно-синий"
+
+[color_brown]
+other = "Коричневый"
+
+[color_cyan]
+other = "Фиолетовый"
+
+[color_green]
+other = "Зеленый"
+
+[color_indigo]
+other = "Индиго"
+
+[color_orange]
+other = "Оранжевый"
+
+[color_pink]
+other = "Розовый"
+
+[color_purple]
+other = "Фиолетовый"
+
+[color_red]
+other = "Красный"
+
+[color_teal]
+other = "Изумрудный"
+
+[color_yellow]
+other = "Желтый"
+
+[copyright]
+other = "Авторское право"
+
+[featured_posts]
+other = "Главные статьи"
+
+[font_size]
+other = "Размер шрифта"
+
+[home]
+other = "Главная"
+
+[language]
+other = "Язык"
+
+[load_more]
+other = "Читать далее"
+
+[mode]
+other = "Режим"
+
+[pagination_title]
+other = "{{ .PageNumber }} - страница"
+
+[palette]
+other = "Palitra"
+
+[reading_time]
+other = "Читается за {{ .ReadingTime }} минуты"
+
+[recent_posts]
+other = "Последние обновления"
+
+[related_posts]
+other = "Похожие публикации"
+
+[reward]
+other = "Возврат"
+
+[search]
+other = "Поиск"
+
+[search_missing_keywords]
+other = "Введите ключевые слова"
+
+[search_no_results]
+other = "Результатов нет"
+
+[search_stat]
+other = "Всего {{ .Total }} результатов"
+
+[series]
+other = "Серии"
+
+[settings]
+other = "Настройки"
+
+[table_of_contents]
+other = "Содержание"
+
+[tags]
+other = "Теги"
+
+[wechat]
+other = "WeChat"
