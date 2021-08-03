@@ -1,0 +1,113 @@
+[about_me]
+other = "À propos"
+
+[alipay]
+other = "Alipay"
+
+[archives]
+other = "Archives"
+
+[categories]
+other = "Catégories"
+
+[color_blue]
+other = "Bleu"
+
+[color_blue_gray]
+other = "Blue Gris"
+
+[color_brown]
+other = "Marron"
+
+[color_cyan]
+other = "Cyan"
+
+[color_green]
+other = "Vert"
+
+[color_indigo]
+other = "Indigo"
+
+[color_orange]
+other = "Orange"
+
+[color_pink]
+other = "Rose"
+
+[color_purple]
+other = "Mauve"
+
+[color_red]
+other = "Rouge"
+
+[color_teal]
+other = "Bleu Turquoise"
+
+[color_yellow]
+other = "Jaune"
+
+[copyright]
+other = "Copyright"
+
+[featured_posts]
+other = "Articles à la Une"
+
+[font_size]
+other = "Taille de la Police"
+
+[home]
+other = "Accueil"
+
+[language]
+other = "Langage"
+
+[load_more]
+other = "Voir plus"
+
+[mode]
+other = "Mode"
+
+[pagination_title]
+other = "Page {{ .PageNumber }}"
+
+[palette]
+other = "Palette"
+
+[reading_time]
+other = "{{ .ReadingTime }} min de lecture"
+
+[recent_posts]
+other = "Articles Récents"
+
+[related_posts]
+other = "Articles en Relations"
+
+[reward]
+other = "Récompenser"
+
+[search]
+other = "Chercher"
+
+[search_missing_keywords]
+other = "Merci de saisir les mots clés"
+
+[search_no_results]
+other = "Aucun résultat trouvé"
+
+[search_stat]
+other = "{{ .Total }} résultats trouvés"
+
+[series]
+other = "Séries"
+
+[settings]
+other = "Réglages"
+
+[table_of_contents]
+other = "Sommaire"
+
+[tags]
+other = "Tags"
+
+[wechat]
+other = "WeChat"
