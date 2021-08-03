@@ -10,18 +10,18 @@
           <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
         </h2>
         <div class="taxonomy-meta">
-          <span class="taxonomy-posts-count"><i class="fas fa-fw fa-file-alt"></i>{{ i18n "posts_count" . }}</span>
+          <span class="taxonomy-post-count"><i class="fas fa-fw fa-file-alt"></i>{{ i18n "post_count" . }}</span>
         </div>
-        {{- $postsCount := default 3 $.Site.Params.taxonomyPostsCount -}}
-        {{- if $postsCount -}}
+        {{- $postCount := default 3 $.Site.Params.taxonomyPostCount -}}
+        {{- if $postCount -}}
         <ul class="taxonomy-posts">
-          {{- range first $postsCount .Pages -}}
+          {{- range first $postCount .Pages -}}
           <li class="taxonomy-post">
             <a href="{{ .Permalink }}">{{ .Title }}</a>
             <span class="float-end post-date">{{ .Date.Format (default "Jan 2" $.Site.Params.archive.dateFormat) }}</span>
           </li>
           {{- end -}}
-          {{- if gt $count 3 -}}
+          {{- if gt $count $postCount -}}
           <li class="taxonomy-post">
             <a href="{{ .Page.Permalink }}">...</a>
           </li>

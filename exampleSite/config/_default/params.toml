@@ -36,6 +36,7 @@ googleAdsense = ""
 # categoryCount = 10 # The number of categories shown in sidebar. Turn off by setting it to false.
 # tagCount = 10 # The number of tags shown in sidebar. Turn off by setting it to false.
 # seriesCount = 10 # The number of series shown in sidebar. Turn off by setting it to false.
+# taxonomyPostCount = 5 # The number of posts of taxonomy. Turn off by setting it to false.
 
 # Custom CSS and JS
 customCSS = []

@@ -172,6 +172,7 @@ $ hugo new -c content/zh-cn posts/newpost.md
 | `categoryCount` | Integer/Boolean | `10` | 分類數，`false` 則隱藏。
 | `tagCount` | Integer/Boolean | `10` | 標籤數，`false` 則隱藏。
 | `seriesCount` | Integer/Boolean | `10` | 專欄數，`false` 則隱藏。
+| `taxonomyPostCount` | Integer | `3` | 分類的文章數，`false` 則隱藏。
 | `fullWidth` | Boolean | `false` | 是否全寬
 | `fixedHeader` | Boolean | `true` | 是否固定頭部
 | `reward` | Object | - | 打賞

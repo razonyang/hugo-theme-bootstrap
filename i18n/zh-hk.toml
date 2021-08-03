@@ -73,7 +73,7 @@ other = "第 {{ .PageNumber }} 頁"
 [palette]
 other = "配色"
 
-[posts_count]
+[post_count]
 other = "總共 {{ .Count }} 篇文章"
 
 [reading_time]
