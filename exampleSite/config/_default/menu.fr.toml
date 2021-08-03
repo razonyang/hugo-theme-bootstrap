@@ -1,0 +1,10 @@
+[[main]]
+  name = "Dropdown"
+  identifier = "dropdown"
+  pre = '<i class="fas fa-fw fa-chevron-circle-down"></i>'
+[[main]]
+  id = "github"
+  parent = "dropdown"
+  name = "Github"
+  url = "https://github.com/razonyang/hugo-theme-bootstrap"
+  pre = '<i class="fab fa-fw fa-github"></i>'
