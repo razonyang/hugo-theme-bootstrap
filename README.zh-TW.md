@@ -157,6 +157,8 @@ $ hugo new -c content/zh-cn posts/newpost.md
 | `breadcrumb` | Boolean | `true` | 是否開啟麵包屑導航
 | `dateFormat` | String | `Jan 2, 2006` | 日期格式。 查閱 [Hugo Date and Time Templating Reference](https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference) 以獲取詳細資訊。
 | `poweredBy` | Boolean | `true` | 是否顯示技術支援。
+| `readingTime` | Boolean | `true` | 是否顯示閱讀時間
+| `postDate` | Boolean | `true` | 是否显示发表日期
 | `math` | Boolean | `false` | 是否開啟 `math`。
 | `logo` | String | `images/logo.webp` | Logo
 | `brand` | String | - | Brand
@@ -251,6 +253,8 @@ $ hugo new -c content/zh-cn posts/newpost.md
 | `math` | Boolean | `false` | 是否開啟 `math`
 | `reward` | Boolean | `true` | 是否開啟打賞
 | `breadcrumb` | Boolean | `true` | 是否開啟麵包屑導航
+| `poweredBy` | Boolean | `true` | 是否顯示技術支援
+| `readingTime` | Boolean | `true` | 是否顯示閱讀時間
 | **Creative Commons License**
 | `creativeCommons` | Object | - |
 | `creativeCommons.by` | Boolean | `true` | 署名

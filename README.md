@@ -158,6 +158,8 @@ As the example site shown, the configuration are separated into multiple files, 
 | `breadcrumb` | Boolean | `true` | Whether to enable breadcrumb
 | `dateFormat` | String | `Jan 2, 2006` | Date format. Checkout the [Hugo Date and Time Templating Reference](https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference) for details.
 | `poweredBy` | Boolean | `true` | Whether to show powered by.
+| `readingTime` | Boolean | `true` | Whether to display the reading time.
+| `postDate` | Boolean | `true` | Whether to display the post date in the post meta section.
 | `math` | Boolean | `false` | Whether to enable math globally.
 | `logo` | String | `images/logo.webp` | Logo image.
 | `brand` | String | - | Brand text.
@@ -252,6 +254,8 @@ As the example site shown, the configuration are separated into multiple files, 
 | `math` | Boolean | `false` | Whether to enable math.
 | `reward` | Boolean | `true` | Whether to enable reward.
 | `breadcrumb` | Boolean | `true` | Whether to enable breadcrumb.
+| `readingTime` | Boolean | `true` | Whether to display the reading time.
+| `postDate` | Boolean | `true` | Whether to display the post date in the post meta section.
 | **Creative Commons License**
 | `creativeCommons` | Object | - |
 | `creativeCommons.by` | Boolean | `true` | Credit must be given to you, the creator.
