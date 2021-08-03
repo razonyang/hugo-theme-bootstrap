@@ -220,7 +220,7 @@ $ hugo new -c content/zh-cn posts/newpost.md
 | `utterances.repo` | String | - | Github 仓库.
 | `utterances.issueTerm` | String | `pathname` | `pathname`, `url`, `title`, `og:title`.
 | `utterances.label` | String | - | 
-| `utterances.theme` | String | `github-light` | `github-light`, `github-dark`, `preferred-color-scheme`, `github-dark-orange`, `icy-dark`, `dark-blue`, `photon-dark`.
+| `utterances.theme` | String | - | 默认地，亮色调和暗色调分别对应 `github-light` 和 `github-dark`。`github-light`, `github-dark`, `preferred-color-scheme`, `github-dark-orange`, `icy-dark`, `dark-blue`, `photon-dark`.
 | **Creative Commons License**
 | `creativeCommons` | Object | - |
 | `creativeCommons.by` | Boolean | `true` | 署名
@@ -296,7 +296,7 @@ disqusShortname = "yourdiscussshortname"
   repo = "user/repo"
   #issueTerm = "pathname" # pathname, url, title, og:title.
   #label = "comment" # Optional.
-  #theme = "github-light" # github-light, github-dark, preferred-color-scheme, github-dark-orange, icy-dark, dark-blue, photon-dark.
+  #theme = ""
 ```
 
 > 不同于 Disqus，Utterances 是一个参数。请将其放置在 `params`。

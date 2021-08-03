@@ -221,7 +221,7 @@ As the example site shown, the configuration are separated into multiple files, 
 | `utterances.repo` | String | - | Github repository.
 | `utterances.issueTerm` | String | `pathname` | `pathname`, `url`, `title`, `og:title`.
 | `utterances.label` | String | - | 
-| `utterances.theme` | String | `github-light` | `github-light`, `github-dark`, `preferred-color-scheme`, `github-dark-orange`, `icy-dark`, `dark-blue`, `photon-dark`.
+| `utterances.theme` | String | - | By default, light and dark mode correspond to `github-light` and `github-dark`, respectively. `github-light`, `github-dark`, `preferred-color-scheme`, `github-dark-orange`, `icy-dark`, `dark-blue`, `photon-dark`.
 | **Creative Commons License**
 | `creativeCommons` | Object | - |
 | `creativeCommons.by` | Boolean | `true` | Credit must be given to you, the creator.
@@ -297,7 +297,7 @@ Checkout the [Disqus](https://disqus.com/) website for details.
   repo = "user/repo"
   #issueTerm = "pathname" # pathname, url, title, og:title.
   #label = "comment" # Optional.
-  #theme = "github-light" # github-light, github-dark, preferred-color-scheme, github-dark-orange, icy-dark, dark-blue, photon-dark.
+  #theme = ""
 ```
 
 > Unlike Disqus, Utterances is a parameter. You should put it under the `params`.
