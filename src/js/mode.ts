@@ -64,7 +64,7 @@ class ModeSwitcher {
     if (!this.utterances.repo) {
       return;
     }
-    if (this.utterances.theme && this.utterances.theme !== 'auto') {
+    if (this.utterances.theme !== '') {
       return;
     }
     const comments = document.querySelector('.post-comments');
