@@ -2,15 +2,34 @@
 <div class="col-lg-8">
   <div class="container">
     {{- partial "breadcrumb" . -}}
-    <div class="terms row surface">
-      <h1>{{ partial "helpers/title" . }}</h1>
-      <div>
-        {{- range .Data.Terms.ByCount -}}
-        <a href="{{ .Page.Permalink }}" class="post-taxonomy rounded btn me-3 mb-3" title="{{ .Page.Title }}">
-          {{ .Page.Title }} <span class="badge rounded-pill">{{ .Count }}</span>
-        </a>
+    <div class="taxonomys">
+      {{- range .Data.Terms.ByCount -}}
+      {{- $count := .Count -}}
+      <div class="taxonomy row surface">
+        <h2 class="taxonomy-title">
+          <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+        </h2>
+        <div class="taxonomy-meta">
+          <span class="taxonomy-posts-count"><i class="fas fa-fw fa-file-alt"></i>{{ i18n "posts_count" . }}</span>
+        </div>
+        {{- $postsCount := default 3 $.Site.Params.taxonomyPostsCount -}}
+        {{- if $postsCount -}}
+        <ul class="taxonomy-posts">
+          {{- range first $postsCount .Pages -}}
+          <li class="taxonomy-post">
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+            <span class="float-end post-date">{{ .Date.Format (default "Jan 2" $.Site.Params.archive.dateFormat) }}</span>
+          </li>
+          {{- end -}}
+          {{- if gt $count 3 -}}
+          <li class="taxonomy-post">
+            <a href="{{ .Page.Permalink }}">...</a>
+          </li>
+          {{- end -}}
+        </ul>
         {{- end -}}
       </div>
+      {{- end -}}
     </div>
   </div>
 </div>

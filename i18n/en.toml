@@ -73,6 +73,10 @@ other = "Page {{ .PageNumber }}"
 [palette]
 other = "Palette"
 
+[posts_count]
+one = "{{ .Count }} post in total"
+other = "{{ .Count }} posts in total"
+
 [reading_time]
 other = "{{ .ReadingTime }} min read"
 

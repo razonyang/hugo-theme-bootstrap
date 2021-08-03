@@ -73,6 +73,9 @@ other = "第 {{ .PageNumber }} 页"
 [palette]
 other = "配色"
 
+[posts_count]
+other = "总共 {{ .Count }} 篇文章"
+
 [reading_time]
 other = "{{ .ReadingTime }} 分钟阅读"
 
