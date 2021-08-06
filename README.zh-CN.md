@@ -379,6 +379,7 @@ github = "githubusername"
 |---|---|
 | `email` | 电子邮箱 |
 | `facebook` | Facebook 用户名 |
+| `facebookgroup` | Facebook 群组名 |
 | `github` | GitHub 用户名 |
 | `gitlab` | GitLab 用户名 |
 | `instagram` | Instagram 用户名 |
@@ -397,6 +398,9 @@ github = "githubusername"
 | `medium` | Medium 用户名或自定义域名（比如：https://custom.domain.tld） |
 | `lastfm` | Last.fm 用户名 |
 | `bibibili` | BiliBili 用户 ID |
+| `youtube` | Youtube 频道 ID |
+| `discord` | Discord 邀请码 |
+| `discourse` | 论坛 URL |
 
 ## 贡献
 
