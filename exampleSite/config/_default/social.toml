@@ -18,3 +18,7 @@ bitbucket = "yourbitbucketworkspaceid"
 medium = "yourmediumusername" # Medium username or custom domain(e.g. https://custom.domain.tld).
 lastfm = "yourlastfmusername"
 bilibili = "yourbilibiliuserid"
+youtube = "yourchannelname" #code after https://www.youtube.com/channel/
+discord = "yourinvitecode" #code after https://discord.com/invite/
+discourse = "https://yourforum.xyz" #full url
+facebookgroup = "yourgroupname"

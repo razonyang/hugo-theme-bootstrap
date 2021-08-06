@@ -2,6 +2,7 @@
 {{- $gitlab := dict "gitlab" (dict "url" "https://gitlab.com/%s" "title" "GitLab") -}}
 {{- $twitter := dict "twitter" (dict "url" "https://twitter.com/%s") -}}
 {{- $facebook := dict "facebook" (dict "url" "https://facebook.com/%s" "icon" "fab fa-facebook-f") -}}
+{{- $facebookGroup := dict "facebookgroup" (dict "url" "https://facebook.com/groups/%s" "icon" "fab fa-facebook-square") -}}
 {{- $linkedin := dict "linkedin" (dict "url" "https://linkedin.com/%s" "icon" "fab fa-linkedin-in" "title" "LinkedIn") -}}
 {{- $stackoverflow := dict "stackoverflow" (dict "url" "https://stackoverflow.com/users/%s" "icon" "fab fa-stack-overflow" "title" "Stack Overflow") -}}
 {{- $weibo := dict "weibo" (dict "url" "https://weibo.com/%s") -}}
@@ -14,7 +15,10 @@
 {{- $qq := dict "qq" (dict "url" "http://wpa.qq.com/msgrd?v=3&uin=%s&site=qq&menu=yes" "title" "QQ") -}}
 {{- $dockerhub := dict "dockerhub" (dict "url" "https://hub.docker.com/u/%s" "icon" "fab fa-docker" "title" "Docker Hub") -}}
 {{- $bitbucket := dict "bitbucket" (dict "url" "https://bitbucket.org/%s") -}}
-{{- $items := merge $github $gitlab $twitter $facebook $linkedin $stackoverflow $weibo $zhihu $quora $instagram -}}
+{{- $youtube := dict "youtube" (dict "url" "https://www.youtube.com/channel/%s" "icon" "fab fa-youtube") -}}
+{{- $discord := dict "discord" (dict "url" "https://discord.com/invite/%s" "icon" "fab fa-discord") -}}
+{{- $discourse := dict "discourse" (dict "url" "%s" "icon" "fab fa-discourse") -}}
+{{- $items := merge $github $gitlab $twitter $facebook $facebookGroup $linkedin $stackoverflow $weibo $zhihu $quora $instagram $discourse $discord $youtube -}}
 {{- $lastfm := dict "lastfm" (dict "url" "https://www.last.fm/user/%s" "title" "Last.fm") -}}
 {{- $bilibili := dict "bilibili" (dict "url" "https://space.bilibili.com/%s" "title" "bilibili" "icon" "fas fa-tv") -}}
 {{- $items = merge $items $tumblr $reddit $telegram $qq $dockerhub $bitbucket $lastfm $bilibili -}}
