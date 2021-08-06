@@ -380,6 +380,7 @@ github = "githubusername"
 |---|---|
 | `email` | Email Address |
 | `facebook` | Facebook Username |
+| `facebookgroup` | Facebook Group Name |
 | `github` | GitHub Username |
 | `gitlab` | GitLab Username |
 | `instagram` | Instagram Username |
@@ -398,6 +399,9 @@ github = "githubusername"
 | `medium` | Medium Username or custom domain(e.g. https://custom.domain.tld) |
 | `lastfm` | Last.fm Username |
 | `bibibili` | BiliBili User ID |
+| `youtube` | Youtube Channel ID |
+| `discord` | Discord Invite Code |
+| `discourse` | Forum URL |
 
 ## Contribute
 
