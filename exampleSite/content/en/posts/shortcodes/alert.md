@@ -10,7 +10,7 @@ tags = [
   "Alert"
 ]
 series = [
-  "User Manual"
+  "Manual"
 ]
 images = [
 ]
