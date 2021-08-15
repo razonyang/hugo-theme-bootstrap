@@ -75,6 +75,10 @@ ul {
   padding-left: 1.5rem;
 }
 
+::marker {
+  color: var(--hbs-accent);
+}
+
 hr {
   color: var(--hbs-accent);
 }
