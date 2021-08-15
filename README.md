@@ -33,6 +33,7 @@ There is also a [list of websites that use this theme](https://github.com/razony
 - Search.
 - Breadcrumb.
 - Archive.
+- Aligning images: center, left and right.
 - [Syntax Highlighting](#syntax-highlighting)
 - Resources Lazy Loading: `image` and `iframe`.
 - Reward Widget: supports Alipay and Wechat.
