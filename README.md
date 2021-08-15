@@ -33,7 +33,7 @@ There is also a [list of websites that use this theme](https://github.com/razony
 - Search.
 - Breadcrumb.
 - Archive.
-- Aligning images: center, left and right.
+- Aligning images by adding URL fragments, such as `#center`, `#floatleft` and `#floatright` represents align center, float left and float right respectively.
 - [Syntax Highlighting](#syntax-highlighting)
 - Resources Lazy Loading: `image` and `iframe`.
 - Reward Widget: supports Alipay and Wechat.
