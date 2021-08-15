@@ -1,7 +1,7 @@
 class ModeSwitcher {
   public key: string = 'hbs-mode';
 
-  utterances: any
+  utterances: any;
 
   constructor(public element: HTMLInputElement) {
     this.utterances = window.params.utterances;
@@ -72,11 +72,11 @@ class ModeSwitcher {
       return;
     }
 
-    const js = document.createElement('script')
+    const js = document.createElement('script');
     js.setAttribute('src', 'https://utteranc.es/client.js');
     js.setAttribute('repo', this.utterances.repo);
     js.setAttribute('issue-term', this.utterances.issueTerm);
-    js.setAttribute('theme', mode === 'dark' ? 'github-dark':'github-light');
+    js.setAttribute('theme', mode === 'dark' ? 'github-dark' : 'github-light');
     const clone = comments.cloneNode(false);
     clone.appendChild(js);
     comments.parentNode.replaceChild(clone, comments);
