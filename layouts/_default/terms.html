@@ -3,14 +3,14 @@
   <div class="container">
     {{- partial "breadcrumb" . -}}
     <div class="taxonomys">
-      {{- range .Data.Terms.ByCount -}}
-      {{- $count := .Count -}}
+      {{- range (.Paginate .Data.Terms.ByCount).Pages -}}
+      {{- $count := len .Pages -}}
       <div class="taxonomy row surface">
         <h2 class="taxonomy-title">
           <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
         </h2>
         <div class="taxonomy-meta">
-          <span class="taxonomy-post-count"><i class="fas fa-fw fa-file-alt"></i>{{ i18n "post_count" . }}</span>
+          <span class="taxonomy-post-count"><i class="fas fa-fw fa-file-alt"></i>{{ i18n "post_count" (dict "Count" $count) }}</span>
         </div>
         {{- $postCount := default 3 $.Site.Params.taxonomyPostCount -}}
         {{- if $postCount -}}
@@ -31,6 +31,7 @@
       </div>
       {{- end -}}
     </div>
+    {{- partial "pagination" . -}}
   </div>
 </div>
 {{- partial "sidebar" . -}}
