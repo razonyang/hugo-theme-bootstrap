@@ -117,7 +117,7 @@ Tables aren't part of the core Markdown spec, but Hugo supports supports them ou
 * Another item
 * And another item
 
-### Nested list
+### Nested List
 
 * Fruit
   * Apple
@@ -126,6 +126,11 @@ Tables aren't part of the core Markdown spec, but Hugo supports supports them ou
 * Dairy
   * Milk
   * Cheese
+
+### TODO List
+
+- [x] Done
+- [ ] WIP
 
 ## Other Elements — abbr, sub, sup, kbd, mark
 
