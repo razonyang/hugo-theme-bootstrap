@@ -307,6 +307,15 @@ disqusShortname = "yourdiscussshortname"
 
 > 不同于 Disqus，Utterances 是一个参数。请将其放置在 `params`。
 
+### 自定义评论
+
+```shell
+$ mkdir -p layouts/partials/post/comments
+$ echo "MY COMMENTS WIDGET" > layouts/partials/post/comments/custom.html
+```
+
+> 你还需要删除其他评论组件的配置。
+
 ## 自定义资源
 
 有两种方法可以自定义内部和外部的资源。

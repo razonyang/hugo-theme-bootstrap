@@ -307,6 +307,15 @@ disqusShortname = "yourdiscussshortname"
 
 > 不同於 Disqus，Utterances 是一個引數。請將其放置在 `params`。
 
+### 自定義評論
+
+```shell
+$ mkdir -p layouts/partials/post/comments
+$ echo "MY COMMENTS WIDGET" > layouts/partials/post/comments/custom.html
+```
+
+> 你還需要删除其他評論組件的配置。
+
 ## 自定義資源
 
 有兩種方法可以自定義內部和外部的資源。

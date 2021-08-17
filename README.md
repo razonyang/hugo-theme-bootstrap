@@ -308,6 +308,15 @@ Checkout the [Disqus](https://disqus.com/) website for details.
 
 > Unlike Disqus, Utterances is a parameter. You should put it under the `params`.
 
+### Custom Comments
+
+```shell
+$ mkdir -p layouts/partials/post/comments
+$ echo "MY COMMENTS WIDGET" > layouts/partials/post/comments/custom.html
+```
+
+> You will be need to remove the other comments widget's configurations.
+
 ## Custom Assets
 
 There are two ways to customize the internal and external assets.
