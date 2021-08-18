@@ -4,5 +4,6 @@
 - [AwesomeJob](https://dikea.github.io/): 优质内推资讯网站
 - [Sudip Ghimire](https://sudipg.com.np)
 - [Cups of Code](https://cupsOfCode.com)
+- [JO's USB](https://josusb.com/)
 
 > List your blog or website by creating a PR.
