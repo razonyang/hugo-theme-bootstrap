@@ -10,3 +10,11 @@ HUGO_ENABLEGITINFO = "true"
 [context.deploy-preview.environment]
 HUGO_VERSION = "0.87.0"
 HUGO_ENABLEGITINFO = "true"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "deny"
+    X-XSS-Protection = "1; mode=block"
