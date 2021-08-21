@@ -31,6 +31,12 @@ body {
   flex-flow: column;
   font-family: var(--bs-font-sans-serif);
   font-size: var(--hbs-font-size);
+
+  &.offcanvas-enabled {
+    main, footer {
+      filter: blur(5px);
+    }
+  }
 }
 
 a {

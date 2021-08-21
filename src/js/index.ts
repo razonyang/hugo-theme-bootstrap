@@ -5,6 +5,7 @@ import PaletteSwitcher from './palette';
 import ModeSwitcher from './mode';
 import FontSizeSwitcher from './font-size';
 import TOC from './toc';
+import SettingsOffCanvasListener from './settings-offcanvas-listener';
 import Code from './code';
 import SidebarToggler from './sidebar-toggler';
 import PopOver from './popover';
@@ -31,6 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
   (new TOC(document.querySelector('#offcanvasTOC'))).run();
 
   (new SidebarToggler(document.querySelector('#sidebarToggler'))).run();
+
+  (new SettingsOffCanvasListener(document.getElementById('offcanvasSettings'))).run();
 
   Code.run();
 
