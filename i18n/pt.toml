@@ -1,0 +1,117 @@
+[about_me]
+other = "Sobre MIm"
+
+[alipay]
+other = "Alipay"
+
+[archives]
+other = "Archives"
+
+[categories]
+other = "Categorias"
+
+[color_blue]
+other = "Azul"
+
+[color_blue_gray]
+other = "Azul Cinza"
+
+[color_brown]
+other = "Marrom"
+
+[color_cyan]
+other = "Ciano"
+
+[color_green]
+other = "Verde"
+
+[color_indigo]
+other = "Indigo"
+
+[color_orange]
+other = "Laranja"
+
+[color_pink]
+other = "Pink"
+
+[color_purple]
+other = "Roxo"
+
+[color_red]
+other = "Vermelho"
+
+[color_teal]
+other = "Azul-Petróleo"
+
+[color_yellow]
+other = "Amarelo"
+
+[copyright]
+other = "Copyright"
+
+[featured_posts]
+other = "Posts Destacados"
+
+[font_size]
+other = "Tamanho da Fonte"
+
+[home]
+other = "Home"
+
+[language]
+other = "Língua"
+
+[load_more]
+other = "Carregar Mais"
+
+[mode]
+other = "Tema"
+
+[pagination_title]
+other = "Página {{ .PageNumber }}"
+
+[palette]
+other = "Paleta"
+
+[post_count]
+one = "{{ .Count }} post no total"
+other = "{{ .Count }} posts no total"
+
+[reading_time]
+other = "{{ .ReadingTime }} min leitura"
+
+[recent_posts]
+other = "Posts Recentes"
+
+[related_posts]
+other = "Posts Relacionados"
+
+[reward]
+other = "Doação"
+
+[search]
+other = "Pesquisar"
+
+[search_missing_keywords]
+other = "Insira os dados de pesquisa"
+
+[search_no_results]
+other = "Nenhum resultado encontrado"
+
+[search_stat]
+other = "{{ .Total }} resultados encontrados"
+
+[series]
+other = "Series"
+
+[settings]
+other = "Configurações"
+
+[table_of_contents]
+other = "Índice"
+
+[tags]
+other = "Tags"
+
+[wechat]
+other = "WeChat"
