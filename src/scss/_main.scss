@@ -32,6 +32,9 @@ body {
   font-family: var(--bs-font-sans-serif);
   font-size: var(--hbs-font-size);
 
+  main, footer {
+    transition: filter 0.5s;
+  }
   &.offcanvas-enabled {
     main, footer {
       filter: blur(5px);
