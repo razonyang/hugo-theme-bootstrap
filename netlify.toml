@@ -1,11 +1,14 @@
 [build]
 publish = "exampleSite/public"
-command = "cd exampleSite && hugo --minify --themesDir=../../ --theme=repo"
+command = "cd exampleSite && hugo --minify --themesDir=../../ --theme=repo -b=https://hbs.razonyang.com/"
 
 [context.production.environment]
 HUGO_VERSION = "0.87.0"
 HUGO_ENV = "production"
 HUGO_ENABLEGITINFO = "true"
+
+[context.deploy-preview.build]
+command = "cd exampleSite && hugo --minify --themesDir=../../ --theme=repo -b=/"
 
 [context.deploy-preview.environment]
 HUGO_VERSION = "0.87.0"
