@@ -20,9 +20,7 @@ images = [
 ]
 +++
 
-We can easily align images by adding URL fragments.
-
-Such as `#center`, `#floatleft` and `#floatright` represents align center, float left and float right respectively.
+We can easily align images by adding URL fragments. Such as `#center`, `#floatleft` and `#floatright` represents align center, float left and float right respectively.
 <!--more-->
 
 ## Center
