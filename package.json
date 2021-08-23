@@ -9,6 +9,7 @@
     "katex": "^0.13.13",
     "mark.js": "^8.11.1",
     "mustache": "^4.0.1",
+    "node-sass": "^6.0.1",
     "popper.js": "^1.16.1"
   },
   "devDependencies": {
@@ -32,7 +33,6 @@
     "file-loader": "^6.1.1",
     "line-column": "^1.0.2",
     "mini-css-extract-plugin": "^1.6.2",
-    "node-sass": "^5.0.0",
     "npm-run-all": "^4.1.5",
     "npm-watch": "^0.7.0",
     "postcss": "^8.3.6",
