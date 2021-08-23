@@ -60,7 +60,9 @@
     "eslint": "eslint ./src --ext .js,.jsx,.ts,.tsx --fix",
     "stylelint": "stylelint ./src/**/*.scss --fix",
     "i18n": "node src/scripts/i18n.js",
-    "watch": "watch 'npm run build' src"
+    "watch": "watch 'npm run build' src",
+    "watch:css": "watch 'npm run build:css' src",
+    "watch:js": "watch 'npm run build:js' src"
   },
   "repository": {
     "type": "git",
