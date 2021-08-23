@@ -1,9 +1,9 @@
-.post-body {
+.post-summary {
   img {
     float: left;
     margin-right: 1rem;
     max-width: 180px;
-    padding-bottom: .5rem;
+    padding-bottom: .125rem;
   }
 
   @include media-breakpoint-down(sm) {

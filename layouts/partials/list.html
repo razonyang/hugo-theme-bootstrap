@@ -13,13 +13,11 @@
     <article class="post row surface">
       <h2 class="post-title mb-4"><a href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a></h2>
       {{- partial "post/meta" . -}}
-      <div class="post-body">
+      <div class="post-summary mb-3">
         {{ if  .Params.Images }}
         <img class="img-fluid" src="{{ index .Params.Images 0 | absURL }}" loading="lazy"/>
         {{ end }}
-        <div class="post-summary mb-3">
-          {{ partial "post/excerpt" . }}
-        </div>
+        {{ partial "post/excerpt" . }}
       </div>
     </article>
   {{- end -}}
