@@ -208,6 +208,7 @@ export class Search {
         title: result.item.title,
         content,
         id,
+        img: result.item.img,
         permalink: result.item.permalink,
         categories: result.item.categories,
         tags: result.item.tags,

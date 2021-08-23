@@ -5,7 +5,7 @@ const CopyPlugin = require('copy-webpack-plugin');
 module.exports = {
   entry: {
     main: './src/js/index.ts',
-    search: ['./src/search/index.ts', './src/search/index.scss'],
+    search: ['./src/search/index.ts'],
     katex: ['./src/katex/index.ts', './src/katex/index.scss'],
   },
   mode: 'production',

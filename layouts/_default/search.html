@@ -38,13 +38,13 @@
     <i id="loadingSpinner" class="fas fa-fw fa-spin fa-spinner"></i>
     <span id="searchStat"></span>
   </div>
-  <div id="searchResults" class="search-results mb-3"></div>
+  <div id="searchResults" class="search-results container mb-3"></div>
   <div class="text-center mb-3">
     <button class="btn d-none" type="button" id="btnLoadMore">{{ i18n "load_more" }}</button>
   </div>
 </div>
 <script type="text/html" id="templateResult">
-  <div class="search-result surface" id="{{ print "{{id}}" }}">
+  <div class="search-result row surface" id="{{ print "{{id}}" }}">
     <h2 class="search-result-title mb-2">
       <a {{ printf "href={{permalink}}" | safeHTMLAttr }}>{{ print "{{title}}" }}</a>
     </h2>
@@ -61,7 +61,7 @@
       {{ printf "{{/%s}}" . }}
       {{- end -}}
     </div>
-    <div class="search-result-content mb-3">{{ print "{{{content}}}" }}</div>
+    <div class="search-result-content mb-3">{{ print "{{{#img}}}<img src=\"{{{img}}}\"/>{{{/img}}}" | safeHTML }}{{ print "{{{content}}}" }}</div>
   </div>
 </script>
 <script type="text/html" id="templateMissingKeywords">
