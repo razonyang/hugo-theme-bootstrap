@@ -239,6 +239,8 @@ $ hugo new -c content/zh-cn posts/newpost.md
 | `post` | Object | - | 
 | `post.excerpt` | String | `Summary` | 可選項：`description`
 | `post.excerptMaxLength` | Integer | `320` | 
+| **Katex**
+| `katex` | Object | - | Katex 參數，請參閱 https://katex.org/docs/autorender.html 和 https://katex.org/docs/options.html
 
 > 除了 Google 站長工具外，其他搜索引擎站長工具無法與 `hugo --minify` 同時使用，這是因為它們無法識別優化後的元標簽。
 
