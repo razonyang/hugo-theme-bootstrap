@@ -1,11 +1,11 @@
 import * as renderMathInElement from 'katex/dist/contrib/auto-render';
 
-document.addEventListener('DOMContentLoaded', () => {
-  const posts = document.querySelectorAll('.post');
-  if (posts) {
-    posts.forEach((post) => {
-      renderMathInElement(post, {
-      });
-    });
+declare global {
+  interface Window {
+    params: any;
   }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  renderMathInElement(document.body, window.params.katex);
 });
