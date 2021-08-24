@@ -414,6 +414,7 @@ github = "githubusername"
 | `youtube` | Youtube Channel ID |
 | `discord` | Discord Invite Code |
 | `discourse` | Forum URL |
+| `tiktok` | Tiktok Username |
 
 ## Contribute
 
