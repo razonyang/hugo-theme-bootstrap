@@ -113,3 +113,42 @@ titleCase = true # Capitalized title.
   # small = ".9rem"
   # large = "1.1rem"
   # extraLarge = "1.2rem"
+  
+# Katex options, see also https://katex.org/docs/autorender.html and https://katex.org/docs/options.html
+[katex]
+  [[katex.delimiters]]
+    left = "$$"
+    right = "$$"
+    display = true
+  [[katex.delimiters]]
+    left = "$"
+    right = "$"
+    display = false
+  [[katex.delimiters]]
+    left = "\\("
+    right = "\\)"
+    display = false
+  [[katex.delimiters]]
+    left = "\\begin{equation}"
+    right = "\\end{equation}"
+    display = true
+  [[katex.delimiters]]
+    left = "\\begin{align}"
+    right = "\\end{align}"
+    display = true
+  [[katex.delimiters]]
+    left = "\\begin{alignat}"
+    right = "\\end{alignat}"
+    display = true
+  [[katex.delimiters]]
+    left = "\\begin{gather}"
+    right = "\\end{gather}"
+    display = true
+  [[katex.delimiters]]
+    left = "\\begin{CD}"
+    right = "\\end{CD}"
+    display = true
+  [[katex.delimiters]]
+    left = "\\["
+    right = "\\]"
+    display = true

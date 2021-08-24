@@ -10,4 +10,5 @@ window.params = {
         issueTerm: {{ default "pathname" $params.utterances.issueTerm | printf "%q" }},
         label: {{ default "comment" $params.utterances.label | printf "%q" }},
     },
+    katex: {{ if $params.katex }}{{ $params.katex | jsonify }}{{ else }}{{ printf "{}" }}{{ end }}
 }
