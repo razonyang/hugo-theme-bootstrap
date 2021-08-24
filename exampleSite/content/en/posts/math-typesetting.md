@@ -21,10 +21,16 @@ This theme supports [KaTeX](https://katex.org/).
 
 ## Examples
 
+### Inline
+
+Such as \\(\KaTeX\\) and $\LaTeX$.
+
+### Block
+
 $$
   \(\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…\)
 $$
 
-$$
+\\[
   \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } } 
-$$
+\\]
