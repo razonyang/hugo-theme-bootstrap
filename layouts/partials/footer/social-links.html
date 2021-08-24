@@ -25,36 +25,28 @@
 <nav class="social-links nav my-2 justify-content-center">
 {{- range $key, $user := .Site.Social -}}
   {{- if eq $key "email" -}}
-  <li class="nav-item">
     <a class="nav-link social-link" href="mailto:{{ $user }}" title="{{ title $key }}" rel="noopener noreferrer">
       <i class="fas fa-fw fa-2x fa-envelope"></i>
     </a>
-  </li>
   {{- else if eq $key "medium" -}}
     {{- $url := urls.Parse $user -}}
     {{- if eq $url.Host "" -}}
       {{- $url = printf "https://medium.com/@%s" $user | urls.Parse -}}
     {{- end -}}
-    <li class="nav-item">
       <a class="nav-link social-link" target="_blank" href="{{ $url.String }}" title="Medium" rel="noopener noreferrer">
         <i class="fab fa-fw fa-2x fa-medium-m"></i>
       </a>
-    </li>
   {{- else -}}
     {{- with index $items $key -}}
-    <li class="nav-item">
       <a class="nav-link social-link" target="_blank" href="{{ printf .url $user }}" title="{{ default (title $key) .title }}" rel="noopener noreferrer">
         <i class="fa-fw fa-2x {{ default ( printf "fab fa-%s" $key ) .icon }}"></i>
       </a>
-    </li>
     {{- end -}}
   {{- end -}}
 {{- end -}}
   {{- with .OutputFormats.Get "rss" -}}
-  <li class="nav-item">
     <a class="nav-link social-link" target="_blank" href="{{ .Permalink }}" title="RSS" rel="noopener noreferrer">
       <i class="fas fa-fw fa-2x fa-rss"></i>
     </a>
-  </li>
   {{- end -}}
 </nav>
