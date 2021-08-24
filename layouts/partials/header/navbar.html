@@ -31,7 +31,7 @@
             {{- $childURL := absLangURL .URL -}}
             <li>
               <a class="dropdown-item{{ if or (eq $currentPage.Permalink (absLangURL .URL)) ($currentPage.IsMenuCurrent "main" .) }} active{{ end }}"
-                href="{{ $childURL }}"{{ if not (hasPrefix $childURL $baseURL) }} target="_blank"{{ end }}>
+                href="{{ $childURL }}"{{ if not (hasPrefix $childURL $baseURL) }} target="_blank" rel="noopener noreferrer"{{ end }}>
                 {{ .Pre }} {{- .Name -}} {{ .Post }}
               </a>
             </li>
@@ -40,7 +40,7 @@
         </li>
         {{- else -}}
         <li class="nav-item">
-          <a class="nav-link{{ if $active }} active{{ end }}" href="{{ $url }}"{{ if not (hasPrefix $url $baseURL) }} target="_blank"{{ end }}>
+          <a class="nav-link{{ if $active }} active{{ end }}" href="{{ $url }}"{{ if not (hasPrefix $url $baseURL) }} target="_blank" rel="noopener noreferrer"{{ end }}>
             {{ .Pre }} {{- .Name -}} {{ .Post }}
           </a>
         </li>
