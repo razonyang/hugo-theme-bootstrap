@@ -51,7 +51,7 @@ $bgNavbarTogglerIcon: url("/images/icons/menu.png");
 }
 
 .nav-link {
-  color: var(--hbs-primary-tex);
+  color: inherit;
 
   &:focus {
     outline: none;
