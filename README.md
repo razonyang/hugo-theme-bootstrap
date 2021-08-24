@@ -240,6 +240,8 @@ As the example site shown, the configuration are separated into multiple files, 
 | `post` | Object | - | 
 | `post.excerpt` | String | `Summary` | Options: `description`
 | `post.excerptMaxLength` | Integer | `320` | 
+| **Katex**
+| `katex` | Object | - | Katex options, see also https://katex.org/docs/autorender.html and https://katex.org/docs/options.html
 
 > Except the Google webmaster tool, the other webmaster tools cannot work with `hugo --minify`, because they cannot recognize the minified meta tag.
 
