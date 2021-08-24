@@ -413,6 +413,8 @@ github = "githubusername"
 | `youtube` | Youtube 频道 ID |
 | `discord` | Discord 邀请码 |
 | `discourse` | 论坛 URL |
+| `tiktok` | TikTok 用户名 |
+
 
 ## 贡献
 

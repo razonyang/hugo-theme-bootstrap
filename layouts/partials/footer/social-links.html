@@ -21,7 +21,8 @@
 {{- $items := merge $github $gitlab $twitter $facebook $facebookGroup $linkedin $stackoverflow $weibo $zhihu $quora $instagram $discourse $discord $youtube -}}
 {{- $lastfm := dict "lastfm" (dict "url" "https://www.last.fm/user/%s" "title" "Last.fm") -}}
 {{- $bilibili := dict "bilibili" (dict "url" "https://space.bilibili.com/%s" "title" "bilibili" "icon" "fas fa-tv") -}}
-{{- $items = merge $items $tumblr $reddit $telegram $qq $dockerhub $bitbucket $lastfm $bilibili -}}
+{{- $tiktok := dict "tiktok" (dict "url" "https://www.tiktok.com/@%s" "title" "TikTok" "icon" "fab fa-tiktok") -}}
+{{- $items = merge $items $tumblr $reddit $telegram $qq $dockerhub $bitbucket $lastfm $bilibili $tiktok -}}
 <nav class="social-links nav my-2 justify-content-center">
 {{- range $key, $user := .Site.Social -}}
   {{- if eq $key "email" -}}
