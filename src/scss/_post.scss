@@ -2,13 +2,14 @@
   img {
     float: left;
     margin-right: 1rem;
-    max-width: 180px;
+    width: 180px;
+    height: auto;
     padding-bottom: .125rem;
   }
 
   @include media-breakpoint-down(sm) {
     img {
-      max-width: 100%;
+      width: 100%;
     }
   }
 }
