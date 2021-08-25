@@ -15,9 +15,13 @@
       {{- partial "post/meta" . -}}
       <div class="post-summary mb-3">
         {{ if  .Params.Images }}
+        {{- $img := false -}}
         {{- $imgFilename := index .Params.Images 0 -}}
-        {{- $img := imageConfig (path.Join "static" $imgFilename) -}}
-        <img class="img-fluid" alt="{{ .Title }}" src="{{ $imgFilename | absURL }}" width="{{ $img.Width }}" height="{{ $img.Height }}" loading="lazy"/>
+        {{- $url := urls.Parse $imgFilename -}}
+        {{- if not $url.Scheme -}}
+          {{- $img = imageConfig (path.Join "static" $imgFilename) -}}
+        {{- end -}}
+        <img class="img-fluid" alt="{{ .Title }}" src="{{ $imgFilename | absURL }}"{{ if $img }} width="{{ $img.Width }}" height="{{ $img.Height }}"{{ end }} loading="lazy"/>
         {{ end }}
         {{ partial "post/excerpt" . }}
       </div>
