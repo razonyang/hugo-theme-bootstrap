@@ -1,7 +1,21 @@
 {{- $img := false -}}
+{{- $parts := split .filename "#" -}}
+{{- $filename := path.Join "static" (index $parts 0) -}}
 {{- $url := urls.Parse .filename -}}
 {{- if not $url.Scheme -}}
-  {{- $img = imageConfig (path.Join "static" .filename) -}}
+  {{- $img = imageConfig $filename -}}
 {{- end -}}
-<img class="{{ .class }}" alt="{{ .alt }}" src="{{ .filename | absURL }}"
+{{- $className := default "img-fluid" .class -}}
+{{- $pos := "" -}}
+{{- if gt (len $parts) 1 -}}
+  {{- $pos = index $parts 1 -}}
+{{- end -}}
+{{- if eq $pos "center" -}}
+{{- $className = printf "%s %s" $className "mx-auto d-block" -}}
+{{- else if eq $pos "floatleft" -}}
+{{- $className = printf "%s %s" $className "float-start me-2" -}}
+{{- else if eq $pos "floatright" -}}
+  {{- $className = printf "%s %s" $className "float-end ms-2" -}}
+{{- end -}}
+<img class="{{ $className }}" alt="{{ .alt }}" src="{{ .filename | absURL }}"
   {{ if $img }} width="{{ $img.Width }}" height="{{ $img.Height }}"{{ end }} loading="lazy" />

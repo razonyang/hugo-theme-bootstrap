@@ -1,9 +1,1 @@
-{{- $img := false -}}
-{{- $url := urls.Parse .Destination -}}
-{{- if not $url.Scheme -}}
-  {{- $parts := split .Destination "#" -}}
-  {{- $filename := path.Join "static" (index $parts 0) -}}
-  {{- $img = imageConfig $filename -}}
-{{- end -}}
-<img class="img-fluid" src="{{ .Destination | safeURL }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}"{{ end }} loading="lazy"
-  {{ if $img }} width="{{ $img.Width }}" height="{{ $img.Height }}"{{ end }} />
+{{ partial "helpers/image" (dict "filename" .Destination "alt" .Text "class" "img-fluid") }}
