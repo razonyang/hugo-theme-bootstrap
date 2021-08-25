@@ -1,0 +1,7 @@
+{{- $img := false -}}
+{{- $url := urls.Parse .filename -}}
+{{- if not $url.Scheme -}}
+  {{- $img = imageConfig (path.Join "static" .filename) -}}
+{{- end -}}
+<img class="{{ .class }}" alt="{{ .alt }}" src="{{ .filename | absURL }}"
+  {{ if $img }} width="{{ $img.Width }}" height="{{ $img.Height }}"{{ end }} loading="lazy" />

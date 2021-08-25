@@ -3,7 +3,7 @@
 <nav class="navbar navbar-expand-xl{{ if (default true $.Site.Params.fixedHeader) }} fixed-top{{ end }}">
   <div class="container{{ if default false .Site.Params.fullWidth }}-fluid{{ end }}">
     <a class="navbar-brand{{ if .IsHome }} active{{ end }}" href="{{ absLangURL "" }}">
-      <img class="logo" alt="Logo" src="{{ absURL (default "images/logo.webp" .Site.Params.logo) }}" loading="lazy">
+      {{ partial "helpers/image" (dict "filename" (default "images/logo.webp" .Site.Params.logo) "alt" "Logo" "class" "logo") }}
       {{- with .Site.Params.brand -}}
       {{ . }}
       {{- end -}}
