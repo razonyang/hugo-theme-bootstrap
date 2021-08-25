@@ -41,6 +41,11 @@
   .post-meta {
     color: var(--hbs-secondary-text);
     word-break: break-all;
+    
+    .post-taxonomy+.post-taxonomy::before {
+      content: "·";
+      margin-right: .5rem;
+    }
   }
 
   .post-summary {
