@@ -3,7 +3,8 @@
 {{- $highlightStyle := resources.Get "css/highlight.css" -}}
 {{- $customStyle := resources.Get "css/custom.css" -}}
 {{- $style := slice $mainStyle $configStyle $highlightStyle $customStyle | resources.Concat "css/bundle.css" | resources.Minify | resources.Fingerprint -}}
-<link rel=stylesheet href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous">
+<link rel="preload" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous" as="style" onload="this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous"></noscript>
 {{- $mainScript := resources.Get "js/main.js" }}
 {{- $configScript := resources.Get "js/config.template.js" | resources.ExecuteAsTemplate "config.js" . -}}
 {{- $customScript := resources.Get "js/custom.js" -}}
