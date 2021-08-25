@@ -1,74 +1,73 @@
 .search-form {
-    .form-control {
-      background-color: var(--hbs-surface);
-      border-color: var(--hbs-surface);
-      color: var(--hbs-secondary-text);
-  
-      &:focus {
-        color: var(--hbs-primary-text);
-      }
+  .form-control {
+    background-color: var(--hbs-surface);
+    border-color: var(--hbs-surface);
+    color: var(--hbs-secondary-text);
+
+    &:focus {
+      color: var(--hbs-primary-text);
     }
   }
-  
-  .search-stat,
-  .search-result-content {
-    color: var(--hbs-secondary-text);
+}
+
+.search-stat,
+.search-result-content {
+  color: var(--hbs-secondary-text);
+}
+
+.btn-search {
+  background-color: transparent;
+  color: var(--hbs-accent);
+  z-index: 4 !important;
+}
+
+.search-result-taxonomy {
+  margin: 0 0.25rem 0.25rem 0;
+  color: var(--hbs-secondary-text);
+
+  +.search-result-taxonomy::before {
+    content: "·";
+    margin-right: 0.5rem;
   }
-  
-  .btn-search {
-    background-color: transparent;
+}
+
+@mixin scoreContent {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  content: "\f005\f005\f005\f005\f005";
+}
+
+.search-result-score {
+  font-size: 20px;
+  color: var(--hbs-disabled-text);
+  position: relative;
+
+  &::before {
+    @include scoreContent;
+  }
+
+  span {
     color: var(--hbs-accent);
-    z-index: 4 !important;
-  }
-  
-  .search-result-taxonomy {
-    margin: 0 0.25rem 0.25rem 0;
-    color: var(--hbs-secondary-text);
-  
-    +.search-result-taxonomy::before {
-      content: "·";
-      margin-right: 0.5rem;
-    }
-  }
-  
-  @mixin scoreContent {
-    font-family: "Font Awesome 5 Free";
-    font-weight: 400;
-    content: "\f005\f005\f005\f005\f005";
-  }
-  
-  .search-result-score {
-    font-size: 20px;
-    color: var(--hbs-disabled-text);
-    position: relative;
-  
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+
     &::before {
       @include scoreContent;
     }
-  
-    span {
-      color: var(--hbs-accent);
-      left: 0;
-      overflow: hidden;
-      position: absolute;
-  
-      &::before {
-        @include scoreContent;
-      }
-    }
   }
-  
-  .search-result-content {
+}
+
+.search-result-content {
+  img {
+    float: left;
+    margin-right: 1rem;
+    max-width: 180px;
+  }
+
+  @include media-breakpoint-down(sm) {
     img {
-      float: left;
-      margin-right: 1rem;
-      max-width: 180px;
-    }
-  
-    @include media-breakpoint-down(sm) {
-      img {
-        max-width: 100%;
-      }
+      max-width: 100%;
     }
   }
-  
+}
