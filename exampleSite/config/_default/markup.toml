@@ -10,3 +10,25 @@
   noClasses = false
   # style = "monokai" # This parameter affects nothing, see https://github.com/razonyang/hugo-theme-bootstrap#syntax-highlighting.
   tabWidth = 2
+
+[goldmark]
+[goldmark.extensions]
+definitionList = true
+footnote = true
+linkify = true
+strikethrough = true
+table = true
+taskList = true
+typographer = true
+
+[goldmark.parser]
+autoHeadingID = true
+autoHeadingIDType = 'github'
+[markup.goldmark.parser.attribute]
+block = false
+title = true
+
+[goldmark.renderer]
+hardWraps = false
+unsafe = false
+xhtml = false
