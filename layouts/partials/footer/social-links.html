@@ -26,7 +26,7 @@
 <nav class="social-links nav my-2 justify-content-center">
 {{- range $key, $user := .Site.Social -}}
   {{- if eq $key "email" -}}
-    <a class="nav-link social-link" href="mailto:{{ $user }}" title="{{ title $key }}" rel="noopener noreferrer">
+    <a class="nav-link social-link" href="mailto:{{ $user }}" title="{{ title $key }}">
       <i class="fas fa-fw fa-2x fa-envelope"></i>
     </a>
   {{- else if eq $key "medium" -}}
