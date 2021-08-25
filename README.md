@@ -22,7 +22,7 @@ There is also a [list of websites that use this theme](https://github.com/razony
 
 ## Features
 
-- Extreme Fast: [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/?url=https://hugo-theme-bootstrap.netlify.app/en/)'s score `95-100`.
+- Extreme Fast: [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/?url=https://hbs.razonyang.com/en/)'s score `95-100`.
 - Built on top of [Bootstrap 5](https://getbootstrap.com/).
 - Responsive.
 - Various Palettes: `blue`, `blue-gray`, `brown`, `cyan`, `green`, `indigo`, `orange`, `pink`, `purple`, `red`, `teal`, `yellow`.
