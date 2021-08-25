@@ -22,7 +22,7 @@
 
 ## 功能特性
 
-- 極快：[Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/?url=https://hbs.razonyang.com/en/) 分數在 `95-100` 之間
+- 快速：[Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/?url=https://hbs.razonyang.com/en/) 分數在 `90-100` 之間
 - 基於 [Bootstrap 5](https://getbootstrap.com/)
 - 響應式
 - 多種配色：`blue`, `blue-gray`, `brown`, `cyan`, `green`, `indigo`, `orange`, `pink`, `purple`, `red`, `teal`, `yellow`
