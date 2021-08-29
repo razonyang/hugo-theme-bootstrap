@@ -15,6 +15,7 @@
 {{- $qq := dict "qq" (dict "url" "http://wpa.qq.com/msgrd?v=3&uin=%s&site=qq&menu=yes" "title" "QQ") -}}
 {{- $dockerhub := dict "dockerhub" (dict "url" "https://hub.docker.com/u/%s" "icon" "fab fa-docker" "title" "Docker Hub") -}}
 {{- $bitbucket := dict "bitbucket" (dict "url" "https://bitbucket.org/%s") -}}
+{{- $kaggle := dict "kaggle" (dict "url" "https://kaggle.com/%s") -}}
 {{- $youtube := dict "youtube" (dict "url" "https://www.youtube.com/channel/%s" "icon" "fab fa-youtube") -}}
 {{- $discord := dict "discord" (dict "url" "https://discord.com/invite/%s" "icon" "fab fa-discord") -}}
 {{- $discourse := dict "discourse" (dict "url" "%s" "icon" "fab fa-discourse") -}}
@@ -22,7 +23,7 @@
 {{- $lastfm := dict "lastfm" (dict "url" "https://www.last.fm/user/%s" "title" "Last.fm") -}}
 {{- $bilibili := dict "bilibili" (dict "url" "https://space.bilibili.com/%s" "title" "bilibili" "icon" "fas fa-tv") -}}
 {{- $tiktok := dict "tiktok" (dict "url" "https://www.tiktok.com/@%s" "title" "TikTok" "icon" "fab fa-tiktok") -}}
-{{- $items = merge $items $tumblr $reddit $telegram $qq $dockerhub $bitbucket $lastfm $bilibili $tiktok -}}
+{{- $items = merge $items $tumblr $reddit $telegram $qq $dockerhub $bitbucket $kaggle $lastfm $bilibili $tiktok -}}
 <nav class="social-links nav my-2 justify-content-center">
 {{- range $key, $user := .Site.Social -}}
   {{- if eq $key "email" -}}
