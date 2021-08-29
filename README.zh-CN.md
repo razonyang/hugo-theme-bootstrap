@@ -407,6 +407,7 @@ github = "githubusername"
 | `qq` | QQ 号 |
 | `dockerhub` | Docker Hub 用户名 |
 | `bitbucket` | Bitbucket Workspace ID |
+| `kaggle` | Kaggle 用户名 |
 | `medium` | Medium 用户名或自定义域名（比如：https://custom.domain.tld） |
 | `lastfm` | Last.fm 用户名 |
 | `bibibili` | BiliBili 用户 ID |
