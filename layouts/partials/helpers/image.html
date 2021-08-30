@@ -1,23 +1,20 @@
 {{- $img := false -}}
 {{- $link := "" -}}
 {{- $parts := split .filename "#" -}}
-{{- $filename := path.Join "static" (index $parts 0) -}}
+{{- $filename := index $parts 0 -}}
 {{- $url := urls.Parse .filename -}}
 {{- if not $url.Scheme -}}
-{{- .resources.ByType "image" -}}
-  {{- if .resources -}}
-    {{- $resource := .resources.GetMatch (strings.TrimPrefix "/" .filename) -}}
-    {{- if $resource -}}
-      {{- $img = $resource -}}
-      {{- $link = $resource.Permalink -}}
-    {{- end -}}
-  {{- end -}}
-  {{- if not $img -}}
+  {{- $resource := .resources.GetMatch (strings.TrimPrefix "/" $filename) -}}
+  {{- if $resource -}}
+    {{- $img = $resource -}}
+    {{- $link = $resource.Permalink -}}
+  {{- else -}}
+    {{- $filename = path.Join "static" $filename -}}
     {{- if fileExists $filename -}}
       {{- $img = imageConfig $filename -}}
       {{- $link = .filename | absURL }}
     {{- else -}}
-      {{- errorf "no such image: %s" .filename -}}
+      {{- errorf "no such image can be found in page resources and the static folder: %s" .filename -}}
     {{- end -}}
   {{- end -}}
 {{- end -}}
