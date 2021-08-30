@@ -1,9 +1,25 @@
 {{- $img := false -}}
+{{- $link := "" -}}
 {{- $parts := split .filename "#" -}}
 {{- $filename := path.Join "static" (index $parts 0) -}}
 {{- $url := urls.Parse .filename -}}
 {{- if not $url.Scheme -}}
-  {{- $img = imageConfig $filename -}}
+{{- .resources.ByType "image" -}}
+  {{- if .resources -}}
+    {{- $resource := .resources.GetMatch (strings.TrimPrefix "/" .filename) -}}
+    {{- if $resource -}}
+      {{- $img = $resource -}}
+      {{- $link = $resource.Permalink -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if not $img -}}
+    {{- if fileExists $filename -}}
+      {{- $img = imageConfig $filename -}}
+      {{- $link = .filename | absURL }}
+    {{- else -}}
+      {{- errorf "no such image: %s" .filename -}}
+    {{- end -}}
+  {{- end -}}
 {{- end -}}
 {{- $className := default "img-fluid" .class -}}
 {{- $pos := "" -}}
@@ -17,5 +33,5 @@
 {{- else if eq $pos "floatright" -}}
   {{- $className = printf "%s %s" $className "float-end ms-2" -}}
 {{- end -}}
-<img class="{{ $className }}" alt="{{ .alt }}" src="{{ .filename | absURL }}"
+<img class="{{ $className }}" alt="{{ .alt }}" src="{{ $link }}"
   {{ if $img }} width="{{ $img.Width }}" height="{{ $img.Height }}"{{ end }} loading="lazy" />
