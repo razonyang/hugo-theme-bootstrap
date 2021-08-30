@@ -17,6 +17,8 @@
 .post {
   position: relative;
 
+  word-break: break-all;
+
   .post-panel-wrapper {
     position: sticky;
     top: 84px;
