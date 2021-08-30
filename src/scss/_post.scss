@@ -17,7 +17,7 @@
 .post {
   position: relative;
 
-  word-break: break-all;
+  word-break: break-word;
 
   .post-panel-wrapper {
     position: sticky;
@@ -42,7 +42,7 @@
 
   .post-meta {
     color: var(--hbs-secondary-text);
-    word-break: break-all;
+    word-break: break-word;
 
     .post-taxonomy + .post-taxonomy::before {
       content: "·";
