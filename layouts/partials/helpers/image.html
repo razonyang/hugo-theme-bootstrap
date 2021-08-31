@@ -17,6 +17,8 @@
       {{- errorf "no such image can be found in page resources and the static folder: %s" .filename -}}
     {{- end -}}
   {{- end -}}
+{{- else -}}
+  {{- $link = .filename -}}
 {{- end -}}
 {{- $className := default "img-fluid" .class -}}
 {{- $pos := "" -}}
