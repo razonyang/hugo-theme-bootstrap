@@ -9,6 +9,7 @@
   --hbs-accent: var(--hbs-primary);
   --hbs-shadow: rgba(0, 0, 0, 0.075);
   --hbs-navbar-bg: white;
+  --hbs-svg-filter: invert(0%);
 }
 
 @mixin mode-dark {
@@ -22,6 +23,7 @@
   --hbs-accent: var(--hbs-primary-light);
   --hbs-shadow: rgba(0, 0, 0, 0.75);
   --hbs-navbar-bg: var(--hbs-surface);
+  --hbs-svg-filter: invert(100%);
 }
 
 .mode-light {
@@ -51,4 +53,8 @@ $mode-switcher-checked-bg-image: $bgDarkMode;
   &:checked {
     background-image: $mode-switcher-checked-bg-image;
   }
+}
+
+.theme-invert-filter {
+  filter: var(--hbs-svg-filter);
 }

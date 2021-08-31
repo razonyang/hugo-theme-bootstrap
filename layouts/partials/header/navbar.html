@@ -3,7 +3,7 @@
 <nav class="navbar navbar-expand-xl{{ if (default true $.Site.Params.fixedHeader) }} fixed-top{{ end }}">
   <div class="container{{ if default false .Site.Params.fullWidth }}-fluid{{ end }}">
     <a class="navbar-brand d-flex align-items-center" href="{{ absLangURL "" }}">
-      <img class="img img-responsive" src="{{ absURL "images/parallel-cat-2-compressed.svg" }}" alt="{{ .Site.Title }}"
+      <img class="img img-responsive theme-invert-filter" src="{{ absURL "images/parallel-cat-2-compressed.svg" }}" alt="{{ .Site.Title }}"
            loading="lazy">
       <div class="d-flex flex-column">
           {{ .Site.Title }}
