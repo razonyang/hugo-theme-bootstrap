@@ -2,52 +2,56 @@
 {{- $baseURL := $.Site.BaseURL -}}
 <nav class="navbar navbar-expand-xl{{ if (default true $.Site.Params.fixedHeader) }} fixed-top{{ end }}">
   <div class="container{{ if default false .Site.Params.fullWidth }}-fluid{{ end }}">
-    <a class="navbar-brand{{ if .IsHome }} active{{ end }}" href="{{ absLangURL "" }}">
-      <img class="logo" alt="Logo" src="{{ absURL (default "images/logo.webp" .Site.Params.logo) }}" loading="lazy">
-      {{- with .Site.Params.brand -}}
-      {{ . }}
-      {{- end -}}
+    <a class="navbar-brand d-flex align-items-center" href="{{ absLangURL "" }}">
+      <img class="img img-responsive" src="{{ absURL "images/parallel-cat-2-compressed.svg" }}" alt="{{ .Site.Title }}"
+           loading="lazy">
+      <div class="d-flex flex-column">
+          {{ .Site.Title }}
+        <small class="d-none d-sm-inline">{{ .Site.Params.headerHeadline }}</small>
+      </div>
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="fas fa-2x fa-bars"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-1 mb-2 mb-lg-0">
-        {{- partial "header/search-bar" . -}}
-      </ul>
-      {{- $menusPosition := default "right" .Site.Params.menusPosition  -}}
+        {{- $menusPosition := default "right" .Site.Params.menusPosition  -}}
       <ul class="navbar-nav me-1 mb-2 mb-lg-0 me-1 {{ index $menusPositions $menusPosition }}">
-        {{- $currentPage := . -}}
-        {{- range .Site.Menus.main -}}
-        {{- $url := absLangURL .URL -}}
-        {{- $active := or (eq $currentPage.Permalink (absLangURL .URL)) ($currentPage.IsMenuCurrent "main" .) -}}
-        {{- if .HasChildren -}}
-        <li class="nav-item dropdown">
-          <a class="nav-link{{ if $currentPage.HasMenuCurrent "main" . }} active{{ end }}" id="navbarDropdown-{{ .Identifier }}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            {{ .Pre }} {{- .Name -}} {{ .Post }}
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown-{{ .Identifier }}">
-            {{- range .Children -}}
-            {{- $childURL := absLangURL .URL -}}
-            <li>
-              <a class="dropdown-item{{ if or (eq $currentPage.Permalink (absLangURL .URL)) ($currentPage.IsMenuCurrent "main" .) }} active{{ end }}"
-                href="{{ $childURL }}"{{ if not (hasPrefix $childURL $baseURL) }} target="_blank"{{ end }}>
-                {{ .Pre }} {{- .Name -}} {{ .Post }}
-              </a>
-            </li>
-            {{- end -}}
-          </ul>
-        </li>
-        {{- else -}}
-        <li class="nav-item">
-          <a class="nav-link{{ if $active }} active{{ end }}" href="{{ $url }}"{{ if not (hasPrefix $url $baseURL) }} target="_blank"{{ end }}>
-            {{ .Pre }} {{- .Name -}} {{ .Post }}
-          </a>
-        </li>
-        {{- end -}}
-        {{- end -}}
-        {{- partial "header/languages" . -}}
-        {{- partial "header/settings" . -}}
+          {{- $currentPage := . -}}
+          {{- range .Site.Menus.main -}}
+              {{- $url := absLangURL .URL -}}
+              {{- $active := or (eq $currentPage.Permalink (absLangURL .URL)) ($currentPage.IsMenuCurrent "main" .) -}}
+              {{- if .HasChildren -}}
+                <li class="nav-item dropdown">
+                  <a class="nav-link{{ if $currentPage.HasMenuCurrent "main" . }} active{{ end }}"
+                     id="navbarDropdown-{{ .Identifier }}" role="button" data-bs-toggle="dropdown"
+                     aria-expanded="false">
+                      {{ .Pre }} {{- .Name -}} {{ .Post }}
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown-{{ .Identifier }}">
+                      {{- range .Children -}}
+                          {{- $childURL := absLangURL .URL -}}
+                          <li>
+                            <a
+                              class="dropdown-item{{ if or (eq $currentPage.Permalink (absLangURL .URL)) ($currentPage.IsMenuCurrent "main" .) }} active{{ end }}"
+                              href="{{ $childURL }}"{{ if not (hasPrefix $childURL $baseURL) }} target="_blank"{{ end }}>
+                                {{ .Pre }} {{- .Name -}} {{ .Post }}
+                            </a>
+                          </li>
+                      {{- end -}}
+                  </ul>
+                </li>
+              {{- else -}}
+                <li class="nav-item">
+                  <a class="nav-link{{ if $active }} active{{ end }}"
+                     href="{{ $url }}"{{ if not (hasPrefix $url $baseURL) }} target="_blank"{{ end }}>
+                      {{ .Pre }} {{- .Name -}} {{ .Post }}
+                  </a>
+                </li>
+              {{- end -}}
+          {{- end -}}
+          {{- partial "header/languages" . -}}
+          {{- partial "header/settings" . -}}
       </ul>
     </div>
   </div>
