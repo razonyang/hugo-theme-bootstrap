@@ -11,8 +11,14 @@
     }
   }
 
-  &-brand img {
-    width: 6.5rem;
+  &-brand {
+    img {
+      width: 6.5rem;
+    }
+
+    small {
+      font-size: 0.6em !important;
+    }
   }
 }
 
