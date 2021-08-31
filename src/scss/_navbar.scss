@@ -1,14 +1,18 @@
 .navbar {
   background-color: var(--hbs-navbar-bg);
-  color: #{$white-secondary};
+  color: var(--hbs-secondary-text);
 
   a {
     &:hover,
     &:focus,
     &:active,
     &.active {
-      color: #{$white};
+      color: var(--hbs-primary-text);
     }
+  }
+
+  &-brand img {
+    width: 6.5rem;
   }
 }
 
