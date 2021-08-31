@@ -5,6 +5,7 @@
   transition: opacity 0.5s;
   position: fixed;
   right: 1.25rem;
+  cursor: pointer;
 
   &.active {
     opacity: 1;
