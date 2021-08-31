@@ -54,7 +54,7 @@
   },
   "scripts": {
     "build": "npm-run-all --parallel build:css build:js",
-    "build:css": "node-sass --output-style compressed src/scss/index.scss assets/css/main.css",
+    "build:css": "sass --style compressed --load-path=node_modules src/scss/index.scss assets/css/main.css",
     "build:js": "webpack",
     "lint": "npm-run-all --parallel eslint stylelint",
     "eslint": "eslint ./src --ext .js,.jsx,.ts,.tsx --fix",
