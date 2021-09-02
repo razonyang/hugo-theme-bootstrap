@@ -36,7 +36,7 @@ body {
     transition: filter 0.5s;
   }
   &.offcanvas-enabled {
-    main, footer {
+    main, footer, .navbar-brand, .navbar-nav > .nav-item {
       filter: blur(5px);
     }
   }
