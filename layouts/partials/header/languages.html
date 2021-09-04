@@ -1,15 +1,28 @@
-
 {{- if gt (len $.Site.Home.AllTranslations) 1 -}}
-<li class="nav-item dropdown">
-  <a class="nav-link d-flex align-items-center" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    <span>{{ $.Language.LanguageName }}</span><img title="{{ $.Language.LanguageName }}" class="country-flag mx-1" src="{{ absURL (print "images/lang/flag-" $.Language ".svg") }}"/>
-  </a>
-  <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-    {{- range $.Site.Home.AllTranslations -}}
-      {{- if ne $.Lang .Language.Lang -}}
-        <li><a class="dropdown-item d-flex align-items-center" href="{{ .Permalink }}"><span>{{ .Language.LanguageName }}</span><img title="{{ .Language.LanguageName }}" class="country-flag mx-1" src="{{ absURL (print "images/lang/flag-" .Language ".svg") }}"/></a></li>
-      {{- end -}}
-    {{- end -}}
-  </ul>
-</li>
+  <li class="nav-item dropdown">
+    <a class="nav-link d-flex align-items-center" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown"
+       aria-expanded="false">
+      <span>{{ $.Language.LanguageName }}</span><img title="{{ $.Language.LanguageName }}" class="country-flag mx-1"
+                                                     src="{{ absURL (print "images/lang/flag-" $.Language ".svg") }}"/>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+        {{- if .IsTranslated -}}
+            {{- range .Translations -}}
+              <li><a class="dropdown-item d-flex align-items-center"
+                     href="{{ .Permalink }}"><span>{{ .Language.LanguageName }}</span><img
+                    title="{{ .Language.LanguageName }}" class="country-flag mx-1"
+                    src="{{ absURL (print "images/lang/flag-" .Language ".svg") }}"/></a></li>
+            {{- end -}}
+        {{- else -}}
+            {{- range $.Site.Home.AllTranslations -}}
+                {{- if ne $.Lang .Language.Lang -}}
+                  <li><a class="dropdown-item d-flex align-items-center"
+                         href="{{ .Permalink }}"><span>{{ .Language.LanguageName }}</span><img
+                        title="{{ .Language.LanguageName }}" class="country-flag mx-1"
+                        src="{{ absURL (print "images/lang/flag-" .Language ".svg") }}"/></a></li>
+                {{- end -}}
+            {{- end -}}
+        {{- end -}}
+    </ul>
+  </li>
 {{- end -}}
