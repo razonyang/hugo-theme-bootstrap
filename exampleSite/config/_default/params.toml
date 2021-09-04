@@ -153,3 +153,6 @@ titleCase = true # Capitalized title.
     left = "\\["
     right = "\\]"
     display = true
+
+[mermaid] # See https://mermaid-js.github.io/mermaid/#/Setup?id=configuration
+  theme = "dark"

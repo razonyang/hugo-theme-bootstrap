@@ -162,6 +162,7 @@ $ hugo new -c content/zh-cn posts/newpost.md
 | `postDate` | Boolean | `true` | 是否显示发表日期
 | `math` | Boolean | `false` | 是否开启 `math`。
 | `diagram` | Boolean | `false` | 是否开启 `diagram`。
+| `mermaid` | Object | - | [Mermaid 配置](https://mermaid-js.github.io/mermaid/#/Setup?id=configuration).
 | `logo` | String | `images/logo.webp` | Logo
 | `brand` | String | - | Brand
 | `menusPosition` | String | `right` | 菜单位置：`right`, `left`, `center`.

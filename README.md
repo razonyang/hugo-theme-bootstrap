@@ -163,6 +163,7 @@ As the example site shown, the configuration are separated into multiple files, 
 | `postDate` | Boolean | `true` | Whether to display the post date in the post meta section.
 | `math` | Boolean | `false` | Whether to enable math globally.
 | `diagram` | Boolean | `false` | Whether to enable diagram globally.
+| `mermaid` | Object | - | [Mermaid Configuration](https://mermaid-js.github.io/mermaid/#/Setup?id=configuration).
 | `logo` | String | `images/logo.webp` | Logo image.
 | `brand` | String | - | Brand text.
 | `menusPosition` | String | `right` | Menus position: `right`, `left`, `center`.
