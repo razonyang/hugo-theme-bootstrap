@@ -11,3 +11,4 @@
 {{- $script := slice $mainScript $configScript $customScript | resources.Concat "js/bundle.js" | resources.Minify | resources.Fingerprint -}}
 <script src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>
 {{- partial "head/math" . -}}
+{{- partial "head/mermaid" . -}}

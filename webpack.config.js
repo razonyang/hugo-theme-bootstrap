@@ -7,6 +7,7 @@ module.exports = {
     main: './src/js/index.ts',
     search: ['./src/search/index.ts'],
     katex: ['./src/katex/index.ts', './src/katex/index.scss'],
+    mermaid: ['./src/mermaid/index.ts'],
   },
   mode: 'production',
   output: {
