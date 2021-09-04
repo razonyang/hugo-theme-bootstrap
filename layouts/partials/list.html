@@ -1,32 +1,33 @@
 {{- $pages := (.Paginate .RegularPagesRecursive).Pages -}}
 <div class="container">
-  {{- if .IsHome -}}
-    {{- $sections := default (slice "posts") .Site.Params.mainSections -}}
-    {{- $pages = where (.Paginate .Site.RegularPages).Pages "Type" "in" $sections -}}
-  {{- else -}}
-  {{- partial "breadcrumb" . -}}
-  {{- partial "sections" . -}}
-  {{- end -}}
-  {{- partial "hooks/list-begin" . -}}
+    {{- if .IsHome -}}
+        {{- $sections := default (slice "posts") .Site.Params.mainSections -}}
+        {{- $pages = where (.Paginate .Site.RegularPages).Pages "Type" "in" $sections -}}
+    {{- else -}}
+        {{- partial "breadcrumb" . -}}
+        {{- partial "sections" . -}}
+    {{- end -}}
+    {{- partial "hooks/list-begin" . -}}
   <div class="posts mb-4">
-  {{- range $pages -}}
-    <article class="post row surface">
-      {{- if .Params.Images -}}
-      <div class="post-thumbnail col-md-3 d-flex align-items-center justify-content-center">
-        <img class="img-fluid" src="{{ index .Params.Images 0 | absURL }}" loading="lazy"/>
-      </div>
+      {{- range $pages -}}
+        <article class="post row surface d-flex">
+            {{- if .Params.Images -}}
+              <div class="post-thumbnail col-md-3 d-flex align-items-center justify-content-center">
+                <a href="{{ .Permalink }}"><img class="img-fluid" src="{{ index .Params.Images 0 | absURL }}"
+                                                loading="lazy"/></a>
+              </div>
+            {{- end -}}
+          <div class="post-body{{ if .Params.Images }} col-md-9{{ end }}">
+            <a href="{{ .Permalink }}"><h2 class="post-title mb-4">{{ partial "helpers/title" . }}</h2></a>
+              {{- partial "post/meta" . -}}
+            <div class="post-summary mb-3">
+              <a href="{{ .Permalink }}">{{ partial "post/excerpt" . }}</a>
+            </div>
+          </div>
+        </article>
       {{- end -}}
-      <div class="post-body{{ if .Params.Images }} col-md-9{{ end }}">
-        <h2 class="post-title mb-4"><a href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a></h2>
-        {{- partial "post/meta" . -}}
-        <div class="post-summary mb-3">
-          {{ partial "post/excerpt" . }}
-        </div>
-      </div>
-    </article>
-  {{- end -}}
   </div>
-  {{- partial "hooks/list-end" . -}}
-  {{- partial "pagination" . -}}
+    {{- partial "hooks/list-end" . -}}
+    {{- partial "pagination" . -}}
 </div>
 
