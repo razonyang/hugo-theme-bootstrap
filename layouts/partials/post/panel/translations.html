@@ -1,11 +1,11 @@
 {{ if and .IsTranslated }}
   <div class="post-translations nav-item dropdown action">
-    <a class="nav-link p-0" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-      <i class="fas fa-fw fa-language"></i>
+    <a class="nav-link p-0 d-flex" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+      <img title="{{ $.Language.LanguageName }}" class="country-flag" src="{{ absURL (print "images/lang/flag-" $.Language ".svg") }}"/>
     </a>
     <div class="dropdown-menu">
       {{- range .Translations -}}
-      <a class="dropdown-item post-translation" href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
+      <a class="dropdown-item post-translation d-flex" href="{{ .Permalink }}"><img title="{{ .Language.LanguageName }}" class="country-flag mx-1" src="{{ absURL (print "images/lang/flag-" .Language ".svg") }}"/>{{ .Language.LanguageName }}</a>
       {{- end -}}
     </div>
   </div>
