@@ -161,6 +161,7 @@ $ hugo new -c content/zh-cn posts/newpost.md
 | `readingTime` | Boolean | `true` | 是否显示阅读时间
 | `postDate` | Boolean | `true` | 是否显示发表日期
 | `math` | Boolean | `false` | 是否开启 `math`。
+| `diagram` | Boolean | `false` | 是否开启 `diagram`。
 | `logo` | String | `images/logo.webp` | Logo
 | `brand` | String | - | Brand
 | `menusPosition` | String | `right` | 菜单位置：`right`, `left`, `center`.
@@ -254,6 +255,7 @@ $ hugo new -c content/zh-cn posts/newpost.md
 | `comment` | Boolean | `true` | 是否开启评论，如果评论已被全局关闭，该参数无效
 | `toc` | Boolean | `true` | 是否开启目录，如果目录已被全局关闭，该参数无效
 | `math` | Boolean | `false` | 是否开启 `math`
+| `diagram` | Boolean | `false` | 是否开启 `diagram`
 | `reward` | Boolean | `true` | 是否开启打赏
 | `breadcrumb` | Boolean | `true` | 是否开启面包屑导航
 | `readingTime` | Boolean | `true` | 是否显示阅读时间
