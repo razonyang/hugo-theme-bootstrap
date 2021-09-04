@@ -1,0 +1,4 @@
+{{- if or .Params.diagram .Site.Params.diagram -}}
+{{- $script := resources.Get "js/mermaid.js" | resources.Fingerprint -}}
+<script defer src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>
+{{- end -}}

@@ -27,6 +27,7 @@ googleAdsense = ""
 # math = true # Enable math globally.
 # toc = false # Disable TOC globally.
 # breadcrumb = false # Disable breadcrumb
+# diagram = true
 
 # poweredBy = false # Whether to show powered by.
 
