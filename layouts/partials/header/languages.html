@@ -2,12 +2,12 @@
 {{- if gt (len $.Site.Home.AllTranslations) 1 -}}
 <li class="nav-item dropdown">
   <a class="nav-link d-flex align-items-center" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    <img title="{{ $.Language.LanguageName }}" class="country-flag" src="{{ absURL (print "images/lang/flag-" $.Language ".svg") }}"/><span>{{ $.Language.LanguageName }}</span>
+    <span>{{ $.Language.LanguageName }}</span><img title="{{ $.Language.LanguageName }}" class="country-flag mx-1" src="{{ absURL (print "images/lang/flag-" $.Language ".svg") }}"/>
   </a>
   <ul class="dropdown-menu" aria-labelledby="languageDropdown">
     {{- range $.Site.Home.AllTranslations -}}
       {{- if ne $.Lang .Language.Lang -}}
-      <li><a class="dropdown-item d-flex align-items-center" href="{{ .Permalink }}"><img title="{{ .Language.LanguageName }}" class="country-flag" src="{{ absURL (print "images/lang/flag-" .Language ".svg") }}"/> {{ .Language.LanguageName }}</a></li>
+        <li><a class="dropdown-item d-flex align-items-center" href="{{ .Permalink }}"><span>{{ .Language.LanguageName }}</span><img title="{{ .Language.LanguageName }}" class="country-flag mx-1" src="{{ absURL (print "images/lang/flag-" .Language ".svg") }}"/></a></li>
       {{- end -}}
     {{- end -}}
   </ul>
