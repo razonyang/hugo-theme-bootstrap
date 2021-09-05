@@ -42,6 +42,12 @@
       top: 84px;
     }
   }
+
+  .post-img-header {
+    .post-title {
+      padding-left: calc(var(--bs-gutter-x) * .5);
+    }
+  }
 }
 
 .post-taxonomy {
@@ -125,4 +131,15 @@
 .btn.btn-reward {
   color: #fff;
   background-color: var(--hbs-accent);
+}
+
+.post-thumbnail {
+  overflow: hidden;
+  max-height: 15rem;
+  @include media-breakpoint-down(md) {
+    max-height: 10rem
+  }
+  @include media-breakpoint-up(xl) {
+    max-height: 18rem;
+  }
 }
