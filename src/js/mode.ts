@@ -38,12 +38,6 @@ class ModeSwitcher {
   getMode(): string {
     // load scheme from localStorage.
     let mode = localStorage.getItem(this.key);
-    if (!mode) {
-      // load scheme from query media
-      if (window.getComputedStyle(document.body).getPropertyValue('--mode').toString().trim() === 'dark') {
-        mode = 'dark';
-      }
-    }
     return mode || 'light';
   }
 
