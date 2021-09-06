@@ -1,0 +1,6 @@
+<script>
+  const theme = localStorage.getItem('hbs-mode') || 'light';
+  if (!!theme) {
+    document.body.classList.add('mode-' + theme);
+  }
+</script>
