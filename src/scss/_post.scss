@@ -151,4 +151,14 @@
   @include media-breakpoint-up(xl) {
     max-height: 18rem;
   }
+
+  .img-container {
+    max-height: inherit;
+    transform: translateY(50%);
+
+    img {
+      display: block;
+      transform: translateY(-50%);
+    }
+  }
 }

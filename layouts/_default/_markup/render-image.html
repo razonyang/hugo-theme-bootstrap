@@ -1,1 +1,12 @@
-<img class="img-fluid" src="{{ .Destination | safeURL }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}"{{ end }} loading="lazy" />
+{{ if .Title }}
+  <figure>
+    <img class="img-fluid" src="{{ .Destination | safeURL }}"
+         alt="{{ .Text }}" title="{{ .Text }}"
+         loading="lazy"/>
+    <figcaption class="figure-caption text-center">{{ .Title | .Page.RenderString }}</figcaption>
+  </figure>
+{{ else }}
+  <img class="img-fluid" src="{{ .Destination | safeURL }}"
+       alt="{{ .Text }}" title="{{ .Text }}"
+       loading="lazy"/>
+{{ end }}
