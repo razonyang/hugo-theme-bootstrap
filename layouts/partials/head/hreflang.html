@@ -1,0 +1,10 @@
+{{- if .IsTranslated -}}
+    {{- range .AllTranslations -}}
+      <link rel="alternate" hreflang="{{ .Language }}" href="{{ .Permalink }}" />
+    {{- end -}}
+{{- else -}}
+    {{- range $.Site.Home.AllTranslations -}}
+      <link rel="alternate" hreflang="{{ .Language }}" href="{{ .Permalink }}" />
+    {{- end -}}
+{{- end -}}
+<link rel="alternate" hreflang="x-default" href="{{ $.Site.BaseURL }}" />
