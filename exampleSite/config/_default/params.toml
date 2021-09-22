@@ -9,7 +9,6 @@ keywords = "Hugo, Bootstrap, Blog Theme"
 # logo = "images/logo.png" # Logo image. Default to "images/logo.webp".
 # logo = false # Disable Logo
 brand = "BOOTSTRAP"
-# menusPosition = "left" # Menus position: right(default), left or center.
 
 palette = "blue" # Default palette. Optional.
 # palettes = ["blue", "blue gray", "brown"] # Available palettes. Default to ALL.

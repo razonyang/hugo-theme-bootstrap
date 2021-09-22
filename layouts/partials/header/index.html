@@ -1,4 +1,3 @@
-{{- $menusPositions := dict "right" "ms-auto" "left" "me-auto" "center" "me-auto ms-auto" -}}
 {{- $baseURL := $.Site.BaseURL -}}
 <nav class="navbar flex-nowrap{{ if (default true $.Site.Params.fixedHeader) }} fixed-top{{ end }} top-app-bar">
   <div class="container{{ if default false .Site.Params.fullWidth }}-fluid{{ end }}">
@@ -30,8 +29,7 @@
       <div class="offcanvas-body">
         <ul class="navbar-nav me-1 mb-2 mb-lg-0">
         </ul>
-        {{- $menusPosition := default "right" .Site.Params.menusPosition  -}}
-        <ul class="navbar-nav me-1 mb-2 mb-lg-0 me-1 {{ index $menusPositions $menusPosition }}">
+        <ul class="navbar-nav me-1 mb-2 mb-lg-0 me-1">
           {{- $currentPage := . -}}
           {{- range .Site.Menus.main -}}
           {{- $url := absLangURL .URL -}}
