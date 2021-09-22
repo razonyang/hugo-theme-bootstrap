@@ -5,10 +5,10 @@
 {{- if and $enable $valid -}}
 <div class="offcanvas offcanvas-end surface" tabindex="-1" id="offcanvasTOC" aria-labelledby="offcanvasTOCLabel">
   <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasTOCLabel">{{ i18n "table_of_contents" }}</h5>
-    <a role="button" data-bs-dismiss="offcanvas" aria-label="Close">
-      <span class="fas fa-2x fa-fw fa-times"></span>
-    </a>
+    <h2 class="offcanvas-title" id="offcanvasTOCLabel">{{ i18n "table_of_contents" }}</h5>
+      <button type="button" class="btn btn-sm btn-outline" data-bs-dismiss="offcanvas" aria-label="Close">
+        <i class="fas fa-times"></i>
+      </button>
   </div>
   <div class="offcanvas-body">
     {{ $toc }}

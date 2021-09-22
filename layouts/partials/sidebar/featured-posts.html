@@ -2,13 +2,15 @@
 {{- if $count -}}
   {{- $featuredPosts := first $count (where (where site.RegularPages "Type" "in" site.Params.mainSections) ".Params.featured" "eq" true) -}}
   {{- with $featuredPosts -}}
-  <section class="featured-posts row surface">
-    <h4>{{ T "featured_posts" }}</h4>
-    <ul>
-    {{- range . -}}
-      <li><a href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a></li>
-    {{- end -}}
-    </ul>
+  <section class="featured-posts row card">
+    <div class="card-body">
+      <h4 class="card-title">{{ T "featured_posts" }}</h4>
+      <ul>
+      {{- range . -}}
+        <li><a href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a></li>
+      {{- end -}}
+      </ul>
+    </div>
   </section>
   {{- end -}}
 {{- end -}}

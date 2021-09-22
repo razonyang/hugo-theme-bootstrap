@@ -1,13 +1,17 @@
-.taxonomy-title {
-  margin-bottom: 1rem;
-}
-
-.taxonomy-meta {
-  margin-bottom: 1rem;
-  color: var(--hbs-secondary-text);
-}
-
-.taxonomy-posts {
-  color: var(--hbs-secondary-text);
-  padding-left: 2rem;
+.taxonomy {
+  margin-bottom: 2rem;
+  
+  .taxonomy-title {
+    margin-bottom: 1rem;
+  }
+  
+  .taxonomy-meta {
+    margin-bottom: 1rem;
+    color: var(--hbs-secondary-text-on-surface);
+  }
+  
+  .taxonomy-posts {
+    color: var(--hbs-secondary-text-on-surface);
+    padding-left: 2rem;
+  }
 }

@@ -36,6 +36,8 @@ export class Search {
 
   public input: HTMLInputElement;
 
+  public searchBarInput: HTMLInputElement;
+
   public title: string;
 
   public paginate: number = 10;
@@ -97,17 +99,21 @@ export class Search {
 
   initForm() {
     this.input = this.form.querySelector('input[name="q"]');
+    this.searchBarInput = document.querySelector('.search-bar input[name="q"]');
     if (this.input.value === '') {
       this.input.value = Search.getKeywordFromURL();
     }
+    this.searchBarInput.value = this.input.value;
+    document.querySelector('.search-bar input')
     const instance = this;
     this.form.addEventListener('submit', (event) => {
-      Search.handleSubmit(event, instance);
+      instance.handleSubmit(event);
     });
   }
 
-  static handleSubmit(event, instance: Search) {
-    instance.search(instance.input.value);
+  handleSubmit(event) {
+    this.search(this.input.value);
+    this.searchBarInput.value = this.input.value;
     event.preventDefault();
   }
 

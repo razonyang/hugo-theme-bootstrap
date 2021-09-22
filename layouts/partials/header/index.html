@@ -1,0 +1,65 @@
+{{- $menusPositions := dict "right" "ms-auto" "left" "me-auto" "center" "me-auto ms-auto" -}}
+{{- $baseURL := $.Site.BaseURL -}}
+<nav class="navbar flex-nowrap{{ if (default true $.Site.Params.fixedHeader) }} fixed-top{{ end }} top-app-bar">
+  <div class="container{{ if default false .Site.Params.fullWidth }}-fluid{{ end }}">
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+      aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+    <span class="text-truncate me-auto navbar-title">{{ .Title }}</span>
+    <button class="d-none btn-back" type="button" aria-expanded="false" aria-label="Cancel action">
+      <i class="fas fa-arrow-left"></i>
+    </button>
+    {{ partial "header/search-bar" . }}
+    {{ partial "header/actions" . }}
+    <div class="offcanvas offcanvas-start surface" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <a class="navbar-brand d-flex" href="{{ "" | absURL }}">
+          <div class="flex-shrink-0">
+            {{ partial "helpers/image" (dict "filename" (default "images/logo.webp" .Site.Params.logo) "alt" "Logo" "class" "logo" "resources" .Resources) }}
+          </div>
+          <div class="flex-grow-1 ms-3">{{ .Site.Params.brand }}</div>
+        </a>
+        <button type="button" class="btn btn-sm btn-outline" data-bs-dismiss="offcanvas" aria-label="Close">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav me-1 mb-2 mb-lg-0">
+        </ul>
+        {{- $menusPosition := default "right" .Site.Params.menusPosition  -}}
+        <ul class="navbar-nav me-1 mb-2 mb-lg-0 me-1 {{ index $menusPositions $menusPosition }}">
+          {{- $currentPage := . -}}
+          {{- range .Site.Menus.main -}}
+          {{- $url := absLangURL .URL -}}
+          {{- $active := or (eq $currentPage.Permalink (absLangURL .URL)) ($currentPage.IsMenuCurrent "main" .) -}}
+          {{- if .HasChildren -}}
+          <li class="nav-item dropdown">
+            <a class="nav-link{{ if $currentPage.HasMenuCurrent "main" . }} active{{ end }}" id="navbarDropdown-{{ .Identifier }}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              {{ .Pre }} {{- .Name -}} {{ .Post }}
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown-{{ .Identifier }}">
+              {{- range .Children -}}
+              {{- $childURL := absLangURL .URL -}}
+              <li>
+                <a class="dropdown-item{{ if or (eq $currentPage.Permalink (absLangURL .URL)) ($currentPage.IsMenuCurrent "main" .) }} active{{ end }}"
+                  href="{{ $childURL }}"{{ if not (hasPrefix $childURL $baseURL) }} target="_blank" rel="noopener noreferrer"{{ end }}>
+                  {{ .Pre }} {{- .Name -}} {{ .Post }}
+                </a>
+              </li>
+              {{- end -}}
+            </ul>
+          </li>
+          {{- else -}}
+          <li class="nav-item">
+            <a class="nav-link{{ if $active }} active{{ end }}" href="{{ $url }}"{{ if not (hasPrefix $url $baseURL) }} target="_blank" rel="noopener noreferrer"{{ end }}>
+              {{ .Pre }} {{- .Name -}} {{ .Post }}
+            </a>
+          </li>
+          {{- end -}}
+          {{- end -}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>

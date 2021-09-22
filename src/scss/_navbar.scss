@@ -1,33 +1,27 @@
 .navbar {
-  background-color: var(--hbs-navbar-bg);
-  color: #{$white-secondary};
+  background-color: var(--hbs-navbar);
+  color: var(--hbs-primary-text-on-navbar);
 
   a {
     &:hover,
     &:focus,
     &:active,
     &.active {
-      color: #{$white};
+      color: var(--hbs-accent-text-on-navbar);
+    }
+  }
+
+  .btn {
+    &:hover,
+    &:focus {
+      color: var(--hbs-on-primary);
     }
   }
 }
 
-.search-bar {
-  .form-control {
-    background-color: var(--hbs-background);
-    border-color: var(--hbs-background);
-    color: var(--hbs-secondary-text);
-    padding-left: 2rem;
-
-    &:focus {
-      color: var(--hbs-primary-text);
-    }
-  }
-
-  .btn-search {
-    background-color: transparent;
-    color: var(--hbs-secondary-text);
-    z-index: 4 !important;
+.navbar-title {
+  &:hover {
+    color: var(--hbs-accent-text-on-navbar);
   }
 }
 
@@ -66,16 +60,16 @@ $bgNavbarTogglerIcon: url("/images/icons/menu.png");
 }
 
 .dropdown-menu {
-  background-color: var(--hbs-surface);
+  background-color: var(--hbs-background);
 
   .dropdown-item {
-    color: var(--hbs-on-surface);
+    color: var(--hbs-primary-text-on-background);
 
     &:hover,
     &:focus,
     &:active,
     &.active {
-      color: #fff;
+      color: var(--hbs-on-primary);
       background-color: var(--hbs-accent);
     }
   }

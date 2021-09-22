@@ -7,6 +7,9 @@ other = "支付宝"
 [archives]
 other = "归档"
 
+[buy_me_a_coffee]
+other = "打赏"
+
 [categories]
 other = "分类"
 
@@ -84,9 +87,6 @@ other = "最近文章"
 
 [related_posts]
 other = "相关文章"
-
-[reward]
-other = "打赏"
 
 [search]
 other = "搜索"

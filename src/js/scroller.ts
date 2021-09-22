@@ -1,23 +1,29 @@
 class Scroller {
+  private btn: HTMLElement;
+
   public x: number = 0;
 
   public y: number = 0;
 
-  constructor(public element: HTMLElement) {
+  constructor() {
+    const btn = document.createElement('a');
+    btn.setAttribute('role', 'button');
+    btn.setAttribute('aria-label', 'Scroll to top');
+    btn.className = 'btn-scroll-to-top';
+    btn.innerHTML = '<i class="fas fa-chevron-circle-up fa-2x"></i>';
+    window.document.body.append(btn);
+    this.btn = btn;
   }
 
   show() {
-    this.element.classList.add('active');
+    this.btn.classList.add('active');
   }
 
   hide() {
-    this.element.classList.remove('active');
+    this.btn.classList.remove('active');
   }
 
   run() {
-    if (!this.element) {
-      return;
-    }
     const instance = this;
     window.addEventListener('scroll', () => {
       if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -26,7 +32,7 @@ class Scroller {
         instance.hide();
       }
     });
-    this.element.addEventListener('click', () => {
+    this.btn.addEventListener('click', () => {
       instance.scroll();
     });
   }
@@ -40,4 +46,6 @@ class Scroller {
   }
 }
 
-export default Scroller;
+document.addEventListener('DOMContentLoaded', () => {
+  (new Scroller()).run();
+});

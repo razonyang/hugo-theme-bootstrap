@@ -1,0 +1,34 @@
+@use "@material/elevation/mixins" as mdc-mixins;
+
+.btn {
+  @include mdc-mixins.elevation(2);
+
+  background: var(--hbs-accent);
+  color: var(--hbs-on-primary);
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+.btn-outline {
+  background: var(--hbs-on-primary);
+  border-color: var(--hbs-accent);
+  color: var(--hbs-primary);
+  
+  &:hover,
+  &:focus{
+    background: var(--hbs-accent);
+    color: var(--hbs-on-primary);
+
+    .badge {
+      background-color: var(--hbs-on-primary);
+      color: var(--hbs-accent);
+    }
+  }
+
+  .badge {
+    background-color: var(--hbs-accent);
+    color: var(--hbs-on-primary);
+  }
+}

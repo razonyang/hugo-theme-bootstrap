@@ -1,6 +1,6 @@
 {{- if isset .Site.Params "creativecommons" -}}
 <a class="action" data-bs-container="body" data-bs-toggle="popover" data-bs-html="true" data-bs-placement="bottom"
-  data-bs-trigger="focus" tabindex="0"
+  data-bs-trigger="focus" tabindex="0" type="button" aria-label="Copyright" 
   data-bs-content="{{- partial "post/panel/cc" . -}}">
   <i class="fas fa-fw fa-copyright"></i>
 </a>

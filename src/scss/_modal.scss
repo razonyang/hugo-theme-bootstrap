@@ -1,0 +1,10 @@
+@use "@material/elevation/mixins" as mdc-mixins;
+
+.modal {
+  @include mdc-mixins.elevation(24);
+}
+
+.mode-content {
+  background: var(--hbs-surface);
+  color: var(--hbs-on-surface);
+}

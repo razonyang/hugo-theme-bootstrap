@@ -53,4 +53,6 @@ class SidebarToggler {
   }
 }
 
-export default SidebarToggler;
+document.addEventListener('DOMContentLoaded', () => {
+  (new SidebarToggler(document.querySelector('#sidebarToggler'))).run();
+});

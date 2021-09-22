@@ -1,0 +1,110 @@
+$palette-blue: (
+  "primary": #1564bf,
+  "primary-light": #5e91f2,
+  "on-primary": #fff,
+);
+
+$palette-blue-gray: (
+  "primary": #34515e,
+  "primary-light": #8eacbb,
+  "on-primary": #fff,
+);
+
+$palette-brown: (
+  "primary": #795548,
+  "primary-light": #a98274,
+  "on-primary": #fff,
+);
+
+$palette-cyan: (
+  "primary": #00838f,
+  "primary-light": #4fb3bf,
+  "on-primary": #fff,
+);
+
+$palette-green: (
+  "primary": #2e7d32,
+  "primary-light": #60ad5e,
+  "on-primary": #fff,
+);
+
+$palette-indigo: (
+  "primary": #3f51b5,
+  "primary-light": #757de8,
+  "on-primary": #fff,
+);
+
+$palette-orange: (
+  "primary": #bb4d00,
+  "primary-light": #ffad42,
+  "on-primary": #fff,
+);
+
+$palette-pink: (
+  "primary": #c2185b,
+  "primary-light": #fa5788,
+  "on-primary": #fff,
+);
+
+$palette-purple: (
+  "primary": #7e57c2,
+  "primary-light": #b085f5,
+  "on-primary": #fff,
+);
+
+$palette-red: (
+  "primary": #d32f2f,
+  "primary-light": #ff6659,
+  "on-primary": #fff,
+);
+
+$palette-teal: (
+  "primary": #00796b,
+  "primary-light": #48a999,
+  "on-primary": #fff,
+);
+
+$palette-yellow: (
+  "primary": #bc5100,
+  "primary-light": #ffb04c,
+  "on-primary": #fff,
+);
+
+$palettes: (
+  "blue": $palette-blue,
+  "blue-gray": $palette-blue-gray,
+  "brown": $palette-brown,
+  "cyan": $palette-cyan,
+  "green": $palette-green,
+  "indigo": $palette-indigo,
+  "orange": $palette-orange,
+  "pink": $palette-pink,
+  "purple": $palette-purple,
+  "red": $palette-red,
+  "teal": $palette-teal,
+  "yellow": $palette-yellow,
+);
+
+@each $name, $colors in $palettes {
+  [data-palette="#{$name}"] {
+    @each $key, $color in $colors {
+      --hbs-#{$key}: #{$color};
+    }
+  }
+}
+
+.palette {
+  height: 20px;
+  width: 32px;
+  margin: .25rem 0 .25rem .25rem;
+  background: var(--hbs-primary) !important;
+  color: var(--hbs-on-primary) !important;
+}
+
+#palettePicker {
+  overflow-y: scroll;
+}
+
+.text-accent {
+  color: var(--hbs-accent) !important;
+}

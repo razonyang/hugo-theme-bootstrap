@@ -9,9 +9,6 @@
 {{- if eq .Permalink (absLangURL "search/") -}}
 <meta data-name="search-index" content="{{ absLangURL "index.json" }}">
 {{- end -}}
-{{- with .Site.Params.palette -}}
-<meta data-name="palette" content="{{ . }}">
-{{- end -}}
 {{- partial "head/assets" . -}}
 {{- partial "head/google-analytics" . -}}
 {{- partial "head/baidu-analytics" . -}}

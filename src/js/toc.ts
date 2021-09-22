@@ -25,4 +25,6 @@ class TOC {
   }
 }
 
-export default TOC;
+document.addEventListener('DOMContentLoaded', () => {
+  (new TOC(document.querySelector('#offcanvasTOC'))).run();
+});

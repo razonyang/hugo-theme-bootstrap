@@ -65,7 +65,9 @@ class CodeBlock {
   }
 
   appendCopyButton() {
-    const btn = document.createElement('span');
+    const btn = document.createElement('a');
+    btn.setAttribute('role', 'button');
+    btn.setAttribute('aria-label', 'Copy Code');
     btn.className = 'action';
     btn.innerHTML = '<i class="fas fa-copy"></i>';
     const self = this;
@@ -82,7 +84,9 @@ class CodeBlock {
 
   appendLineNumberButton() {
     if (this.hasLineNumbers()) {
-      const btn = document.createElement('span');
+      const btn = document.createElement('a');
+      btn.setAttribute('role', 'button');
+      btn.setAttribute('aria-label', 'Line number toggler');
       btn.className = 'action active';
       btn.innerHTML = '<i class="fas fa-list"></i>';
       const self = this;
@@ -114,7 +118,9 @@ class CodeBlock {
 
   appendLineWrapButton() {
     const self = this;
-    const btn = document.createElement('span');
+    const btn = document.createElement('a');
+    btn.setAttribute('role', 'button');
+    btn.setAttribute('aria-label', 'Line wrap toggler');
     btn.className = 'action';
     btn.innerHTML = '<i class="fas fa-code"></i>';
     btn.addEventListener('click', () => {
@@ -136,24 +142,25 @@ class CodeBlock {
     if (this.maxHeight) {
       this.pre.style.maxHeight = `${this.maxHeight}px`;
 
-      const btn = document.createElement('span');
+      const btn = document.createElement('a');
+      btn.setAttribute('role', 'button');
+      btn.setAttribute('aria-label', 'Code block expand toggler');
       btn.className = 'action';
       btn.innerHTML = '<i class="fas fa-arrows-alt-v"></i>';
       btn.addEventListener('click', () => {
-        self.toggleExpand();
+        const { style } = this.pre;
+        if (style.maxHeight) {
+          style.maxHeight = null;
+          btn.classList.add('active');
+        } else {
+          style.maxHeight = `${this.maxHeight}px`;
+          btn.classList.remove('active');
+        }
       });
       this.panel.appendChild(btn);
     }
   }
 
-  toggleExpand() {
-    const { style } = this.pre;
-    if (style.maxHeight) {
-      style.maxHeight = null;
-    } else {
-      style.maxHeight = `${this.maxHeight}px`;
-    }
-  }
 }
 
 export default CodeBlock;
