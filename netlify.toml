@@ -8,7 +8,7 @@ HUGO_ENV = "production"
 HUGO_ENABLEGITINFO = "true"
 
 [context.develop]
-command = "cd exampleSite && hugo --minify --themesDir=../../ --theme=repo -b=/"
+command = "cd exampleSite && hugo --minify --themesDir=../../ --theme=repo -b=https://develop.hbs.razonyang.com/"
 
 [context.develop.environment]
 HUGO_VERSION = "0.87.0"
