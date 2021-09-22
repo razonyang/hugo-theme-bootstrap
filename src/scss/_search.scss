@@ -1,3 +1,5 @@
+@use './mixins';
+
 .search-result {
   margin-bottom: 2rem;
 }
@@ -43,6 +45,10 @@
     margin-right: 0.25rem;
     display: inline-block;
   }
+}
+
+a.search-result-taxonomy {
+  @include mixins.accent-link;
 }
 
 @mixin scoreContent {
