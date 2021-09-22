@@ -1,25 +1,28 @@
 class TopAppBar {
   btnSearch: HTMLButtonElement;
-  
+
   searchInput: HTMLInputElement;
 
   btnBack: HTMLButtonElement;
 
   constructor(public appBar: HTMLElement) {
-    const self = this;
-
     this.btnSearch = appBar.querySelector('.navbar-action-search');
-    this.btnSearch.addEventListener('click', function () {
-      self.showSearchBar();
-    })
 
     this.searchInput = appBar.querySelector('.search-bar input');
 
     this.btnBack = appBar.querySelector('.btn-back');
-    this.btnBack.addEventListener('click', function () {
-      self.back();
-    })
+  }
 
+  run() {
+    const self = this;
+
+    this.btnSearch.addEventListener('click', () => {
+      self.showSearchBar();
+    });
+
+    this.btnBack.addEventListener('click', () => {
+      self.back();
+    });
   }
 
   showSearchBar() {
@@ -33,5 +36,5 @@ class TopAppBar {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  new TopAppBar(document.querySelector('.top-app-bar'));
-})
+  new TopAppBar(document.querySelector('.top-app-bar')).run();
+});

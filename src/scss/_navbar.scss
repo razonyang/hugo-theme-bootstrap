@@ -17,6 +17,23 @@
       color: var(--hbs-on-primary);
     }
   }
+
+  .btn-back {
+    @extend .navbar-toggler;
+  }
+}
+
+.navbar-toggler {
+  color: inherit;
+  border: none;
+
+  &:focus {
+    box-shadow: none;
+  }
+
+  &:hover {
+    color: var(--hbs-accent-text-on-navbar);
+  }
 }
 
 .navbar-title {
@@ -29,14 +46,6 @@
   height: 26px;
   width: auto;
   margin-right: 0.5rem;
-}
-
-.navbar-toggler {
-  border: none;
-
-  &:focus {
-    box-shadow: none;
-  }
 }
 
 $bgNavbarTogglerIcon: url("/images/icons/menu.png");

@@ -104,7 +104,7 @@ export class Search {
       this.input.value = Search.getKeywordFromURL();
     }
     this.searchBarInput.value = this.input.value;
-    document.querySelector('.search-bar input')
+    document.querySelector('.search-bar input');
     const instance = this;
     this.form.addEventListener('submit', (event) => {
       instance.handleSubmit(event);

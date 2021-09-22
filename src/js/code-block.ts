@@ -138,7 +138,6 @@ class CodeBlock {
   }
 
   appendExpandButton() {
-    const self = this;
     if (this.maxHeight) {
       this.pre.style.maxHeight = `${this.maxHeight}px`;
 
@@ -160,7 +159,6 @@ class CodeBlock {
       this.panel.appendChild(btn);
     }
   }
-
 }
 
 export default CodeBlock;
