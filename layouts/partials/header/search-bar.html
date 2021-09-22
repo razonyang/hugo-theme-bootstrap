@@ -1,8 +1,6 @@
-{{- if ne .Permalink (absLangURL "search/") -}}
-<form class="search-bar d-flex ms-1" action="{{ absLangURL "search" }}">
-  <div class="input-group input-group-sm">
-    <button class="btn btn-search disabled position-absolute left-0" type="submit" aria-label="submit"><i class="fas fa-fw fa-search"></i></button>
-    <input class="form-control rounded-pill" id="searchQuery" name="q" type="search" aria-label="Search">
+<form class="search-bar d-none d-flex flex-fill ms-2" action="{{ absLangURL "search" }}">
+  <div class="input-group">
+    <button class="btn btn-search disabled position-absolute left-0"><i class="fas fa-fw fa-search"></i></button>
+    <input class="form-control" name="q" type="search" aria-label="Search">
   </div>
 </form>
-{{- end -}}

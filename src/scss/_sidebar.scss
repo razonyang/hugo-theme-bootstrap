@@ -6,13 +6,12 @@
   h5,
   h6 {
     margin-top: 1rem !important;
+    margin-bottom: 1.5rem;
   }
 
   ul {
-    padding-left: 2rem !important;
-
     li {
-      color: var(--hbs-secondary-text);
+      color: var(--hbs-secondary-text-on-surface);
     }
   }
 }

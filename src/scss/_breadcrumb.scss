@@ -1,5 +1,13 @@
+.breadcrumb {
+  margin-bottom: 0;
+}
+
 .breadcrumb-item {
-  .active {
-    color: var(--hbs-secondary-text);
+  &.active {
+    color: var(--hbs-secondary-text-on-surface);
+  }
+
+  a {
+    text-decoration: none;
   }
 }

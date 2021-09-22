@@ -44,9 +44,9 @@ class PaletteSwitcher {
       return palette;
     }
 
-    const paletteMeta = document.querySelector('meta[data-name="palette"]');
+    const paletteMeta = document.body.parentElement.getAttribute('data-palette');
     if (paletteMeta) {
-      return paletteMeta.getAttribute('content');
+      return paletteMeta;
     }
 
     return '';
@@ -54,10 +54,11 @@ class PaletteSwitcher {
 
   setPalette(palette: string) {
     console.debug(`switch to palette: ${palette}`);
-    document.body.classList.remove(`palette-${this.getPalette()}`);
-    document.body.classList.add(`palette-${palette}`);
+    document.body.parentElement.setAttribute('data-palette', palette);
     localStorage.setItem(this.key, palette);
   }
 }
 
-export default PaletteSwitcher;
+document.addEventListener('DOMContentLoaded', () => {
+  (new PaletteSwitcher()).run();
+});

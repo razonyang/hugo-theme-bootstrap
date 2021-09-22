@@ -9,7 +9,7 @@
     {{- partial "hooks/head-end" . -}}
   </head>
   {{- $color := $.Site.Params.color -}}
-  <body{{ if in (slice "light" "dark") $color }}{{ printf " class=\"mode-%s\"" $color | safeHTMLAttr }}{{ end }}>
+  <body{{ if in (slice "light" "dark") $color }}{{ printf " data-mode=\"%s\"" $color | safeHTMLAttr }}{{ end }}>
     {{- partial "header.html" . -}}
     {{- partial "hooks/main-begin" . -}}
     <main role="main" class="container{{ if default false .Site.Params.fullWidth }}-fluid{{ end }}">

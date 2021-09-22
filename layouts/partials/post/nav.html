@@ -1,18 +1,16 @@
 {{- if or .Prev .Next -}}
-<div class="post-navs d-flex mb-3 justify-content-between">
-  <div class="post-nav w-50">
+<div class="post-navs d-flex mb-3 justify-content-evenly">
+  <div class="post-nav post-prev">
   {{- with .Prev -}}
-    <div class="prev-post btn btn-sm">
-      <a href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a>
-    </div>
-  {{- end -}}
+    <i class="fas fa-fw fa-chevron-left"></i>
+    <a href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a>
   </div>
-  <div class="post-nav flex-row-reverse">
+  {{- end -}}
   {{- with .Next -}}
-    <div class="next-post btn btn-sm">
-      <a href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a>
-    </div>
-  {{- end -}}
+  <div class="post-nav post-next">
+    <a href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a>
+    <i class="fas fa-fw fa-chevron-right"></i>
   </div>
+  {{- end -}}
 </div>
 {{- end -}}

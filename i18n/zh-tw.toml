@@ -7,6 +7,9 @@ other = "支付寶"
 [archives]
 other = "歸檔"
 
+[buy_me_a_coffee]
+other = "打賞"
+
 [categories]
 other = "分類"
 
@@ -76,6 +79,12 @@ other = "配色"
 [post_count]
 other = "總共 {{ .Count }} 篇文章"
 
+[post_previous]
+other = "上一篇"
+
+[post_next]
+other = "下一篇"
+
 [reading_time]
 other = "{{ .ReadingTime }} 分鐘閱讀"
 
@@ -84,9 +93,6 @@ other = "最近文章"
 
 [related_posts]
 other = "相關文章"
-
-[reward]
-other = "打賞"
 
 [search]
 other = "搜尋"

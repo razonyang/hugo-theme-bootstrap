@@ -9,4 +9,6 @@ class Code {
   }
 }
 
-export default Code;
+document.addEventListener('DOMContentLoaded', () => {
+  
+});

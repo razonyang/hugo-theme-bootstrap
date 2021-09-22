@@ -12,19 +12,21 @@
     {{- if or (eq $idx 0) (ne ($lastPost.Date.Format "2006") $currentYear) -}}
     {{- if and (ne $lastYear 0) (ne $lastYear $currentYear) -}}
     {{/* Different years, close the previous ul tag */}}
-    {{ printf "</ul></div>" | safeHTML }}
+    {{ printf "</ul></div></div>" | safeHTML }}
     {{- end -}}
-    <div class="archive surface row">
-      <h3 class="archive-title">{{ $currentYear }}</h3>
-      <ul class="archive-posts">
-      {{- end -}}
-        <li>
-          <a class="post-title" href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a>
-          <span class="float-end post-date">{{ .Date.Format (default "Jan 2" $.Site.Params.archive.dateFormat) }}</span>
-        </li>
-      {{- if eq $idx (sub $count 1) -}}
-      {{/* Last item, close current ul tag */}}
-      </ul>
+    <div class="archive card row">
+      <div class="card-body">
+        <h3 class="archive-title card-title">{{ $currentYear }}</h3>
+        <ul class="archive-posts">
+        {{- end -}}
+          <li>
+            <a class="post-title" href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a>
+            <span class="float-end post-date">{{ .Date.Format (default "Jan 2" $.Site.Params.archive.dateFormat) }}</span>
+          </li>
+        {{- if eq $idx (sub $count 1) -}}
+        {{/* Last item, close current ul tag */}}
+        </ul>
+      </div>
     </div>
     {{- end -}}
     {{- $lastYear = $currentYear }}

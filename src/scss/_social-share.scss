@@ -1,0 +1,12 @@
+.social-share-buttons {
+  overflow-y: scroll;
+  padding-bottom: .5rem;
+
+  .social-share-button {
+    margin-right: .5rem;
+    display: flex;
+    white-space: nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+}

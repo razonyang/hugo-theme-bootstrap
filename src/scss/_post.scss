@@ -16,8 +16,27 @@
 
 .post {
   position: relative;
-
   word-break: break-word;
+  padding: 0 .5rem .5rem;
+
+  .post-title {
+    margin: 1rem 0 1.5rem;
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .post-meta {
+    margin-bottom: 1rem;
+
+    * {
+      margin-right: .5rem;
+    }
+  }
+
+  .post-summary {
+    margin-bottom: 1rem;
+  }
 
   .post-panel-wrapper {
     position: sticky;
@@ -27,31 +46,33 @@
     .post-panel {
       position: absolute;
       text-align: right;
-      right: -1rem;
-      top: -1rem;
+      right: -1.5rem;
+      top: -.5rem;
 
       .action {
         margin-bottom: 0.5rem;
 
         &.active {
-          color: var(--hbs-accent);
+          color: var(--hbs-primary);
         }
       }
     }
   }
 
   .post-meta {
-    color: var(--hbs-secondary-text);
-    word-break: break-word;
+    color: var(--hbs-secondary-text-on-surface);
+    word-break: break-all;
 
     .post-taxonomy + .post-taxonomy::before {
       content: "·";
       margin-right: 0.5rem;
+      display: inline-block;
+      text-decoration: none;
     }
   }
 
   .post-summary {
-    color: var(--hbs-secondary-text);
+    color: var(--hbs-secondary-text-on-surface);
   }
 
   .post-toc {
@@ -68,67 +89,21 @@
 }
 
 .post-taxonomy {
-  margin: 0 0.5rem 0.5rem 0;
-
-  .badge {
-    background-color: #{$white};
-    color: var(--hbs-accent);
-  }
-
-  &.btn {
-    color: #fff;
-  }
+  margin: 0 0.25rem 0.25rem 0;
 }
 
 #offcanvasTOC {
   margin-bottom: 0;
 }
 
-.post-content {
-  a {
-    color: var(--hbs-accent);
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
+.post-navs {
+  flex-wrap: wrap;
 }
 
 .post-nav {
-  width: 50%;
+  margin: .25rem;
   display: flex;
-  margin: 0 0.125rem;
-
-  .prev-post,
-  .next-post {
-    display: flex;
-    align-items: center;
-
-    a:hover {
-      text-decoration: none;
-      color: #{$white};
-    }
-
-    &::before {
-      display: flex;
-      align-items: center;
-    }
-  }
-
-  .prev-post {
-    &::before {
-      content: "<\00a0";
-    }
-  }
-
-  .next-post {
-    text-align: right;
-    flex-direction: row-reverse;
-
-    &::before {
-      content: "\00a0>";
-    }
-  }
+  align-items: center;
 }
 
 .post-comments {
@@ -141,11 +116,7 @@
   text-align: center;
 }
 
-.post-reward-img {
-  max-width: 280px;
-}
-
 .btn.btn-reward {
   color: #fff;
-  background-color: var(--hbs-accent);
+  background-color: var(--hbs-primary);
 }

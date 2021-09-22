@@ -24,11 +24,14 @@
     transition: opacity 0.5s;
 
     .action {
+      color: var(--hbs-on-primary);
+
       &:not(:last-child) {
         margin-right: 1rem;
       }
 
-      &.active {
+      &.active,
+      &:hover {
         color: var(--hbs-accent);
       }
     }

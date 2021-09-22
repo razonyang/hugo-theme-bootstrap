@@ -1,0 +1,17 @@
+
+.offcanvas {
+  height: 100%;
+  
+  a {
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      color: var(--hbs-accent);
+    }
+  }
+
+  .offcanvas-title {
+    margin: 0;
+  }
+}

@@ -16,4 +16,6 @@ class TableWrapper {
   }
 }
 
-export default TableWrapper;
+document.addEventListener('DOMContentLoaded', () => {
+  (new TableWrapper(document.querySelectorAll('table'))).run();
+});

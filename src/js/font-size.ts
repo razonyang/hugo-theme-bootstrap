@@ -56,4 +56,6 @@ class FontSizeSwitcher {
   }
 }
 
-export default FontSizeSwitcher;
+document.addEventListener('DOMContentLoaded', () => {
+  (new FontSizeSwitcher(document.getElementById('fontSize') as HTMLInputElement)).run();
+});

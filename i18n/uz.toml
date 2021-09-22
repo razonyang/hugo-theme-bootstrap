@@ -7,6 +7,9 @@ other = "Alipay"
 [archives]
 other = "Arxiv"
 
+[buy_me_a_coffee]
+other = "Buy me a coffee"
+
 [categories]
 other = "Bo'limlar"
 
@@ -81,9 +84,6 @@ other = "Oxirgi maqolalar"
 
 [related_posts]
 other = "O'xshash maqolalar"
-
-[reward]
-other = "Qaytish"
 
 [search]
 other = "Qidirish"

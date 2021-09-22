@@ -1,17 +1,19 @@
 .archive {
-  ul {
-    padding-left: 2rem;
+  margin-bottom: 2rem;
+
+  .archive-title {
+    margin: 1rem 0;
   }
 
   .post-title {
-    color: var(--hbs-secondary-text);
+    color: var(--hbs-secondary-text-on-surface);
 
     &:hover {
-      color: var(--hbs-accent);
+      color: var(--hbs-primary);
     }
   }
 
   .post-date {
-    color: var(--hbs-secondary-text);
+    color: var(--hbs-secondary-text-on-surface);
   }
 }

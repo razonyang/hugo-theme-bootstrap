@@ -1,0 +1,20 @@
+<ul class="nav flex-nowrap actions">
+  {{ partial "header/actions/search" . }}
+  <li class="nav-item">
+    <a class="nav-link" data-bs-toggle="offcanvas" href="#offcanvasSettings" role="button" aria-controls="offcanvasSettings">
+      <i class="fas fa-ellipsis-v"></i>
+    </a>
+  </li>
+</ul>
+
+<div class="offcanvas offcanvas-end surface" tabindex="-1" id="offcanvasSettings" aria-labelledby="offcanvasSettings">
+  <div class="offcanvas-header">
+    <h3 class="offcanvas-title">{{ i18n "settings" }}</h3>
+    <button type="button" class="btn btn-sm btn-outline" data-bs-dismiss="offcanvas" aria-label="Close">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+  <div class="offcanvas-body">
+    {{- partial "header/actions/settings" . -}}
+  </div>
+</div>

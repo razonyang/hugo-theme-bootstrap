@@ -5,14 +5,14 @@
   <div class="modal-dialog">
     <div class="modal-content surface">
       <div class="modal-header">
-        <h5 class="modal-title" id="rewardModalLabel"><i class="fas fa-fw fa-medal"></i>{{ i18n "reward" }}</h5>
-        <a href="#" data-bs-dismiss="modal" aria-label="Close"><i class="fas fa-fw fa-times"></i></a>
+        <h5 class="modal-title" id="rewardModalLabel"><i class="fas fa-fw fa-coffee"></i>{{ i18n "buy_me_a_coffee" }}</h5>
+        <a href="#" data-bs-dismiss="modal" class="btn btn-sm btn-outline" aria-label="Close"><i class="fas fa-times"></i></a>
       </div>
       <div class="modal-body">
-        <ul class="nav nav-tabs mb-3" role="tablist">
+        <ul class="nav nav-tabs flex-nowrap mb-3" role="tablist">
           {{- $index := 0 -}}
           {{- range $key, $value := $reward -}}
-          <li class="nav-item" role="presentation">
+          <li class="nav-item text-nowrap" role="presentation">
             <a class="nav-link{{ if eq $index 0 }} active{{ end }}" id="reward-{{ $key }}-tab" data-bs-toggle="tab" href="#reward-{{ $key }}" role="tab" aria-controls="reward-{{ $key }}" aria-selected="true">
               <i class="fab fa-fw fa-{{ default $key (index $icons $key) }}"></i>{{ i18n $key }}
             </a>

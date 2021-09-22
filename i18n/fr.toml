@@ -7,6 +7,9 @@ other = "Alipay"
 [archives]
 other = "Archives"
 
+[buy_me_a_coffee]
+other = "Buy me a coffee"
+
 [categories]
 other = "Catégories"
 
@@ -81,9 +84,6 @@ other = "Articles Récents"
 
 [related_posts]
 other = "Articles en Relations"
-
-[reward]
-other = "Récompenser"
 
 [search]
 other = "Chercher"

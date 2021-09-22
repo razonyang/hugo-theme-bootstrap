@@ -7,4 +7,7 @@ class PopOver {
   }
 }
 
-export default PopOver;
+
+document.addEventListener('DOMContentLoaded', () => {
+  PopOver.run();
+});

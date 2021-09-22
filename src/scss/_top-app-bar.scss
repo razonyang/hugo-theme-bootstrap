@@ -1,0 +1,72 @@
+@use "@material/elevation/mixins" as mdc-mixins;
+
+.search-bar {
+  .form-control {
+    background-color: var(--hbs-background);
+    border-color: var(--hbs-background);
+    color: var(--hbs-secondary-text-on-surface);
+    padding-left: 2.5rem;
+
+    &:focus {
+      color: var(--hbs-primary-text-on-surface);
+      box-shadow: none;
+    }
+  }
+
+  .btn-search {
+    background-color: transparent!important;
+    box-shadow: none;
+  }
+}
+
+.top-app-bar-search {
+  .search-bar {
+    display: block !important;
+  }
+}
+
+.top-app-bar-share {
+  .social-share-buttons {
+    display: flex !important;
+  }
+}
+
+.top-app-bar-search, .top-app-bar-share {
+  .btn-back {
+    display: block !important;
+  }
+
+  .navbar-toggler {
+    display: none;
+  }
+
+  .navbar-title {
+    display: none;
+  }
+
+  .actions {
+    display: none;
+  }
+}
+
+.top-app-bar {
+  @include mdc-mixins.elevation(4);
+
+  .actions {
+    .dropdown-menu {
+      min-width: auto;
+    }
+  }
+}
+
+.navbar-toggler {
+  color: inherit;
+  
+  &:hover {
+    color: var(--hbs-accent-text-on-navbar);
+  }  
+}
+
+.btn-back {
+  @extend .navbar-toggler;
+}

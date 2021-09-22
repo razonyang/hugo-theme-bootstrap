@@ -8,7 +8,13 @@
     {{- end -}}
     {{- $img := "" -}}
     {{- if .Params.Images -}}
-    {{- $img = index .Params.Images 0 | absURL -}}
+      {{- $imgFile := index .Params.Images 0 -}}
+      {{- $resource := .Resources.GetMatch (strings.TrimPrefix "/" $imgFile) -}}
+      {{- if $resource -}}
+        {{- $img = $resource.Permalink -}}
+      {{- else -}}
+        {{- $img = $imgFile | absURL -}}
+      {{- end -}}
     {{- end -}}
     {{- $item := (dict "title" $title "tags" .Params.tags "categories" .Params.categories "series" .Params.series "content" .Plain "permalink" .Permalink "date" $date "img" $img) -}}
     {{- $.Scratch.Add "index" $item -}}

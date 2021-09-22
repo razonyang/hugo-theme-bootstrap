@@ -49,8 +49,7 @@ class ModeSwitcher {
 
   setMode(value: string) {
     console.debug(`Switch to ${value} mode`);
-    document.body.classList.remove(`mode-${this.getMode()}`);
-    document.body.classList.add(`mode-${value}`);
+    document.body.parentElement.setAttribute('data-mode', value);
     let checked: boolean = false;
     if (value === 'dark') {
       checked = true;
@@ -67,7 +66,7 @@ class ModeSwitcher {
     if (this.utterances.theme !== '') {
       return;
     }
-    const comments = document.querySelector('.post-comments');
+    const comments = document.querySelector('.post-comments .card-body');
     if (!comments) {
       return;
     }
@@ -83,4 +82,6 @@ class ModeSwitcher {
   }
 }
 
-export default ModeSwitcher;
+document.addEventListener('DOMContentLoaded', () => {
+  (new ModeSwitcher(document.querySelector('#modeSwitcher'))).run();
+});
