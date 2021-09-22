@@ -18,6 +18,8 @@ body {
 
 a {
   color: inherit;
+  font-weight: 500;
+  text-decoration: none;
 }
 
 h1,
@@ -27,15 +29,11 @@ h4,
 h5 {
   margin: 1rem 0 1.5rem;
   clear: both;
-
-  a {
-    text-decoration: none;
-  }
 }
 
 a:hover {
   color: var(--hbs-accent);
-  text-underline-offset: 0.2em;
+  text-decoration: underline;
 }
 
 main {
