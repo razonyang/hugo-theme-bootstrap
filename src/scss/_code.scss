@@ -44,17 +44,10 @@
   }
 }
 
-pre {
-  background: var(--hbs-background);
-  border-radius: 0.25rem;
-  color: var(--hbs-on-background);
-  padding: 1rem;
-  position: relative;
-}
-
 code {
-  background: var(--hbs-disabled-text-on-surface);
-  color: var(--hbs-surface);
+  background: var(--hbs-primary-text-on-background);
+  color: var(--hbs-background);
+  opacity: 0.87;
 
   &.no-ln {
     .ln {
@@ -64,8 +57,14 @@ code {
 }
 
 pre {
+  background: var(--hbs-background);
+  border-radius: 0.25rem;
+  color: var(--hbs-on-background);
+  padding: 1rem;
+  position: relative;
+
   code {
-    background: inherit!important;
-    color: inherit!important;
+    background: inherit !important;
+    color: inherit !important;
   }
 }

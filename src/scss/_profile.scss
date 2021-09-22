@@ -1,5 +1,11 @@
+@use './mixins';
+
 .profile {
   color: var(--hbs-secondary-text-on-surface) !important;
+
+  a {
+    @include mixins.accent-link;
+  }
 
   .profile-avatar {
     height: 120px;

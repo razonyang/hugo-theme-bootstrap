@@ -1,3 +1,12 @@
+@use './mixins';
+
+.post-meta,
+.post-content {
+  a {
+    @include mixins.accent-link;
+  }
+}
+
 .post-summary {
   img {
     float: left;
@@ -23,6 +32,7 @@
     margin: 1rem 0 1.5rem;
 
     a {
+      color: inherit;
       text-decoration: none;
     }
   }
@@ -42,7 +52,7 @@
         margin-bottom: 0.5rem;
 
         &.active {
-          color: var(--hbs-primary);
+          color: var(--hbs-accent);
         }
       }
     }
@@ -114,4 +124,14 @@
 .btn.btn-reward {
   color: #fff;
   background-color: var(--hbs-primary);
+}
+
+#TableOfContents {
+  a {
+    color: inherit;
+
+    &:hover {
+      color: var(--hbs-accent);
+    }
+  }
 }
