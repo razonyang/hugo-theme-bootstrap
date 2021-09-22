@@ -14,11 +14,14 @@
     {{ partial "header/actions" . }}
     <div class="offcanvas offcanvas-start surface" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
       <div class="offcanvas-header">
+        {{- $logo := (default "images/logo.webp" .Site.Params.logo) -}}
         <a class="navbar-brand d-flex" href="{{ "" | absURL }}">
+          {{- if $logo -}}
           <div class="flex-shrink-0">
-            {{ partial "helpers/image" (dict "filename" (default "images/logo.webp" .Site.Params.logo) "alt" "Logo" "class" "logo" "resources" .Resources) }}
+            {{ partial "helpers/image" (dict "filename" $logo "alt" "Logo" "class" "logo" "resources" .Resources) }}
           </div>
-          <div class="flex-grow-1 ms-3">{{ .Site.Params.brand }}</div>
+          {{- end -}}
+          <div class="flex-grow-1{{ if $logo }} ms-3{{ end }}">{{ with .Site.Params.brand }}{{ . }}{{ else }}{{ $.Site.Title }}{{ end }}</div>
         </a>
         <button type="button" class="btn btn-sm btn-outline" data-bs-dismiss="offcanvas" aria-label="Close">
           <i class="fas fa-times"></i>
