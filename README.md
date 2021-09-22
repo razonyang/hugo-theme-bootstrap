@@ -164,7 +164,7 @@ As the example site shown, the configuration are separated into multiple files, 
 | `math` | Boolean | `false` | Whether to enable math globally.
 | `diagram` | Boolean | `false` | Whether to enable diagram globally.
 | `mermaid` | Object | - | [Mermaid Configuration](https://mermaid-js.github.io/mermaid/#/Setup?id=configuration).
-| `logo` | String | `images/logo.webp` | Logo image.
+| `logo` | String/Boolean | `images/logo.webp` | Logo image. Disable logo by setting it to `false`.
 | `brand` | String | - | Brand text.
 | `menusPosition` | String | `right` | Menus position: `right`, `left`, `center`.
 | `description` | String | - | Site description.
