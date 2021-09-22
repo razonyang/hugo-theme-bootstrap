@@ -14,7 +14,7 @@
   }
 
   .btn-search {
-    background-color: transparent!important;
+    background-color: transparent !important;
     box-shadow: none;
   }
 }
@@ -23,15 +23,7 @@
   .search-bar {
     display: block !important;
   }
-}
 
-.top-app-bar-share {
-  .social-share-buttons {
-    display: flex !important;
-  }
-}
-
-.top-app-bar-search, .top-app-bar-share {
   .btn-back {
     display: block !important;
   }
@@ -57,16 +49,4 @@
       min-width: auto;
     }
   }
-}
-
-.navbar-toggler {
-  color: inherit;
-  
-  &:hover {
-    color: var(--hbs-accent-text-on-navbar);
-  }  
-}
-
-.btn-back {
-  @extend .navbar-toggler;
 }

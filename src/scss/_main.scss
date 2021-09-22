@@ -18,13 +18,7 @@ body {
 
 a {
   color: inherit;
-
-  &:hover {
-    color: var(--hbs-accent);
-    text-underline-offset: 0.2em;
-  }
 }
-
 
 h1,
 h2,
@@ -33,10 +27,15 @@ h4,
 h5 {
   margin: 1rem 0 1.5rem;
   clear: both;
-  
+
   a {
     text-decoration: none;
   }
+}
+
+a:hover {
+  color: var(--hbs-accent);
+  text-underline-offset: 0.2em;
 }
 
 main {
