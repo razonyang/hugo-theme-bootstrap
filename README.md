@@ -166,7 +166,6 @@ As the example site shown, the configuration are separated into multiple files, 
 | `mermaid` | Object | - | [Mermaid Configuration](https://mermaid-js.github.io/mermaid/#/Setup?id=configuration).
 | `logo` | String/Boolean | `images/logo.webp` | Logo image. Disable logo by setting it to `false`.
 | `brand` | String | - | Brand text.
-| `menusPosition` | String | `right` | Menus position: `right`, `left`, `center`.
 | `description` | String | - | Site description.
 | `keywords` | String | - | Site keywords.
 | `color` | String | - | Color mode, `light`, `dark` or dynamic. Default to dynamic.

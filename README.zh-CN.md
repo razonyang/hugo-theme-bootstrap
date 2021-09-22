@@ -165,7 +165,6 @@ $ hugo new -c content/zh-cn posts/newpost.md
 | `mermaid` | Object | - | [Mermaid 配置](https://mermaid-js.github.io/mermaid/#/Setup?id=configuration).
 | `logo` | String/Boolean | `images/logo.webp` | Logo。设置为 `false` 以禁用 Logo。
 | `brand` | String | - | Brand
-| `menusPosition` | String | `right` | 菜单位置：`right`, `left`, `center`.
 | `description` | String | - | 站点描述
 | `keywords` | String | - | 站点关键词
 | `color` | String | - | 颜色风格， `light`，`dark` 或者 dynamic（默认）。 
