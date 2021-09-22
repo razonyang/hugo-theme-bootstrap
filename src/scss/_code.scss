@@ -53,12 +53,19 @@ pre {
 }
 
 code {
-  color: var(--hbs-accent);
-  font-weight: bold;
+  background: var(--hbs-disabled-text-on-surface);
+  color: var(--hbs-surface);
 
   &.no-ln {
     .ln {
       display: none;
     }
+  }
+}
+
+pre {
+  code {
+    background: inherit!important;
+    color: inherit!important;
   }
 }
