@@ -1,44 +1,46 @@
 $mode-light: (
-  "background": #fff,
-  "primary-text-on-background": #000,
-  "surface": #fff,
-  "primary-text-on-surface": $dark-primary,
-  "secondary-text-on-surface": $dark-secondary,
-  "disabled-text-on-surface": $dark-disabled,
-  "navbar": var(--hbs-primary),
-  "primary-text-on-navbar": $white-secondary,
-  "accent-text-on-navbar": #fff,
-  "accent": var(--hbs-primary),
+  'background': #fff,
+  'background-light': rgba(225, 225, 225, 0.3),
+  'primary-text-on-background': #000,
+  'surface': #fff,
+  'primary-text-on-surface': $dark-primary,
+  'secondary-text-on-surface': $dark-secondary,
+  'disabled-text-on-surface': $dark-disabled,
+  'navbar': var(--hbs-primary),
+  'primary-text-on-navbar': $white-secondary,
+  'accent-text-on-navbar': #fff,
+  'accent': var(--hbs-primary),
 );
 
 $mode-dark: (
-  "background": #121212,
-  "primary-text-on-background": #fff,
-  "surface": #1e1e1e,
-  "primary-text-on-surface": $white-primary,
-  "secondary-text-on-surface": $white-secondary,
-  "disabled-text-on-surface": $white-disabled,
-  "navbar": var(--hbs-surface),
-  "primary-text-on-navbar": $white-primary,
-  "accent-text-on-navbar": var(--hbs-primary-light),
-  "accent": var(--hbs-primary-light),
+  'background': #121212,
+  'background-light': #333,
+  'primary-text-on-background': #fff,
+  'surface': #1e1e1e,
+  'primary-text-on-surface': $white-primary,
+  'secondary-text-on-surface': $white-secondary,
+  'disabled-text-on-surface': $white-disabled,
+  'navbar': var(--hbs-surface),
+  'primary-text-on-navbar': $white-primary,
+  'accent-text-on-navbar': var(--hbs-primary-light),
+  'accent': var(--hbs-primary-light),
 );
 
 $modes: (
-  "light": $mode-light,
-  "dark": $mode-dark,
+  'light': $mode-light,
+  'dark': $mode-dark,
 );
 
 @each $name, $colors in $modes {
-  [data-mode="#{$name}"] {
+  [data-mode='#{$name}'] {
     @each $key, $color in $colors {
       --hbs-#{$key}: #{$color};
     }
   }
 }
 
-$bgLightMode: url("../images/icons/light.png");
-$bgDarkMode: url("../images/icons/dark.png");
+$bgLightMode: url('../images/icons/light.png');
+$bgDarkMode: url('../images/icons/dark.png');
 $mode-switcher-bg-image: $bgLightMode;
 $mode-switcher-focus-bg-image: $bgLightMode;
 $mode-switcher-checked-bg-image: $bgDarkMode;
