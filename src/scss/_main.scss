@@ -21,7 +21,7 @@ a {
   font-weight: 500;
   text-decoration: none;
 
-  &:hover {
+  &:hover:not(.btn) {
     text-decoration: underline;
   }
 }
@@ -33,6 +33,15 @@ h4,
 h5 {
   margin: 1rem 0 1.5rem;
   clear: both;
+
+  a {
+    color: inherit;
+
+    &:hover {
+      color: var(--hbs-accent);
+      text-decoration: none !important;
+    }
+  }
 }
 
 main {

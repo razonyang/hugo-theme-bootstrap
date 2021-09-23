@@ -28,17 +28,6 @@
     }
   }
 
-  .card-title {
-    a {
-      color: inherit;
-    }
-
-    a:hover {
-      color: var(--hbs-accent);
-      text-decoration: none;
-    }
-  }
-
   .card-body {
     padding-left: 2rem;
     padding-right: 2rem;
