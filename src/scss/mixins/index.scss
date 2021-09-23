@@ -1,7 +1,0 @@
-@mixin accent-link {
-  color: var(--hbs-accent);
-
-  &:hover {
-    text-decoration: underline;
-  }
-}
