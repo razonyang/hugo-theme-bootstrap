@@ -1,36 +1,45 @@
 {{- $img := false -}}
+{{- $width := false -}}
+{{- $height := false -}}
 {{- $link := "" -}}
-{{- $parts := split .filename "#" -}}
-{{- $filename := index $parts 0 -}}
 {{- $url := urls.Parse .filename -}}
 {{- if not $url.Scheme -}}
-  {{- $resource := .resources.GetMatch (strings.TrimPrefix "/" $filename) -}}
+  {{- $resource := .resources.GetMatch (strings.TrimPrefix "/" $url.Path) -}}
   {{- if $resource -}}
     {{- $img = $resource -}}
     {{- $link = $resource.Permalink -}}
   {{- else -}}
-    {{- $filename = path.Join "static" $filename -}}
+    {{- $filename := path.Join "static" $url.Path -}}
     {{- if fileExists $filename -}}
       {{- $img = imageConfig $filename -}}
       {{- $link = .filename | absURL }}
     {{- else -}}
-      {{- errorf "no such image can be found in page resources and the static folder: %s" .filename -}}
+      {{- warnf "no such image can be found in page resources and the static folder: %s" .filename -}}
     {{- end -}}
   {{- end -}}
 {{- else -}}
   {{- $link = .filename -}}
 {{- end -}}
-{{- $className := default "img-fluid" .class -}}
-{{- $pos := "" -}}
-{{- if gt (len $parts) 1 -}}
-  {{- $pos = index $parts 1 -}}
+{{- $params := dict -}}
+{{- $query := split $url.RawQuery "&" -}}
+{{- range $item := $query -}}
+  {{- $pair := split $item "=" -}}
+  {{- $params = merge $params (dict (index $pair 0) (index $pair 1)) -}}
 {{- end -}}
-{{- if eq $pos "center" -}}
+{{- if index $params "width" -}}
+  {{- $width = $params.width -}}
+{{- end -}}
+{{- if index $params "height" -}}
+  {{- $height = $params.height -}}
+{{- end -}}
+{{- $className := default "img-fluid" .class -}}
+{{- if eq $url.Fragment "center" -}}
 {{- $className = printf "%s %s" $className "mx-auto d-block" -}}
-{{- else if eq $pos "floatleft" -}}
+{{- else if eq $url.Fragment "floatleft" -}}
 {{- $className = printf "%s %s" $className "float-start me-2" -}}
-{{- else if eq $pos "floatright" -}}
+{{- else if eq $url.Fragment "floatright" -}}
   {{- $className = printf "%s %s" $className "float-end ms-2" -}}
 {{- end -}}
-<img class="{{ $className }}" alt="{{ .alt }}" src="{{ $link }}"
-  {{ if $img }} width="{{ $img.Width }}" height="{{ $img.Height }}"{{ end }} loading="lazy" />
+<img class="{{ $className }}" alt="{{ .alt }}" src="{{ $link }}" loading="lazy"
+  {{ with $img }} width="{{ $img.Width }}" height="{{ $img.Height }}"{{ end }}
+  {{ if or $width $height }}style="{{ with $width }}width: {{ $width }}{{ end }}{{ with $height }};height: {{ $height }}{{ end }}"{{ end }} />
