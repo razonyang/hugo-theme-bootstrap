@@ -32,7 +32,7 @@
         <ul class="navbar-nav me-1 mb-2 mb-lg-0 me-1">
           {{- $currentPage := . -}}
           {{- range .Site.Menus.main -}}
-          {{- $url := absLangURL .URL -}}
+          {{- $url := .URL | absURL -}}
           {{- $active := or (eq $currentPage.Permalink (absLangURL .URL)) ($currentPage.IsMenuCurrent "main" .) -}}
           {{- if .HasChildren -}}
           <li class="nav-item dropdown">
