@@ -1,14 +1,25 @@
 {{- $title := .Title -}}
 {{- $pageNumber := "" -}}
-{{- if .IsNode -}}
-  {{- if gt .Paginator.PageNumber 1 -}}
-    {{- $title = printf "%s %s" $title (i18n "pagination_title" .Paginator) -}}
-  {{- end -}}
+{{- $paginator := false -}}
+{{- if .IsHome -}}
+  {{- $sections := default (slice "posts") .Site.Params.mainSections -}}
+  {{- $paginator = .Paginate (where .Site.RegularPages "Type" "in" $sections) -}}
+{{- else if eq .Kind "taxonomy" -}}
+  {{- $paginator = .Paginator -}}
+{{- else -}}
+  {{- $paginator = .Paginate .RegularPagesRecursive -}}
 {{- end -}}
+{{- if $paginator -}}
+  {{- if gt $paginator.PageNumber 1 -}}
+    {{- $title = printf "%s %s" $title (i18n "pagination_title" $paginator) -}}
+  {{- end -}}
+{{- end  -}}
 {{- $titles := slice $title -}}
 {{- if eq .Kind "term" -}}
   {{- $titles = $titles | append (i18n .Data.Plural)  -}}
 {{- end -}}
-{{- $titles = $titles | append .Site.Title -}}
+{{- if not .IsHome -}}
+  {{- $titles = $titles | append .Site.Title -}}
+{{- end -}}
 {{- $separator := printf " %s " (default "-" .Site.Params.titleSeparator) -}}
 {{- delimit $titles $separator -}}

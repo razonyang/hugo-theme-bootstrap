@@ -1,15 +1,11 @@
-{{- $pages := (.Paginate .RegularPagesRecursive).Pages -}}
 <div class="container">
-  {{- if .IsHome -}}
-    {{- $sections := default (slice "posts") .Site.Params.mainSections -}}
-    {{- $pages = where (.Paginate .Site.RegularPages).Pages "Type" "in" $sections -}}
-  {{- else -}}
-  {{- partial "breadcrumb" . -}}
-  {{- partial "sections" . -}}
+  {{- if not .IsHome -}}
+    {{- partial "breadcrumb" . -}}
+    {{- partial "sections" . -}}
   {{- end -}}
   {{- partial "hooks/list-begin" . -}}
   <div class="posts mb-4">
-  {{- range $pages -}}
+  {{- range .Paginator.Pages -}}
     <article class="row card post">
       <div class="card-body">
         <h2 class="card-title post-title"><a href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a></h2>
@@ -27,4 +23,3 @@
   {{- partial "hooks/list-end" . -}}
   {{- partial "pagination" . -}}
 </div>
-
