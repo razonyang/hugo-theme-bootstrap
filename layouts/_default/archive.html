@@ -1,7 +1,7 @@
 {{ define "content" }}
 {{- $pages := where .Site.RegularPages "Type" "in" (default (slice "posts") .Site.Params.mainSections) -}}
 {{- $paginator := .Paginate $pages.ByDate.Reverse (default 100 .Site.Params.archive.paginate) -}}
-<div class="container archives col-12 mb-4">
+<div class="container col-12 mb-4 content archives">
   <div class="container">
     {{- partial "breadcrumb" . -}}
     {{- $count := len $paginator.Pages -}}
@@ -12,20 +12,20 @@
     {{- if or (eq $idx 0) (ne ($lastPost.Date.Format "2006") $currentYear) -}}
     {{- if and (ne $lastYear 0) (ne $lastYear $currentYear) -}}
     {{/* Different years, close the previous ul tag */}}
-    {{ printf "</ul></div></div>" | safeHTML }}
+    {{ printf "</table></div></div>" | safeHTML }}
     {{- end -}}
     <div class="archive card row">
       <div class="card-body">
         <h3 class="archive-title card-title">{{ $currentYear }}</h3>
-        <ul class="archive-posts">
-        {{- end -}}
-          <li>
-            <a class="post-title" href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a>
-            <span class="float-end post-date">{{ .Date.Format (default "Jan 2" $.Site.Params.archive.dateFormat) }}</span>
-          </li>
-        {{- if eq $idx (sub $count 1) -}}
-        {{/* Last item, close current ul tag */}}
-        </ul>
+        <table class="table table-borderless w-auto">
+          {{- end -}}
+          <tr>
+            <td><a href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a></td>
+            <td><span class="post-date">{{ .Date.Format (default "Jan 2" $.Site.Params.archive.dateFormat) }}</span></td>
+          </tr>
+          {{- if eq $idx (sub $count 1) -}}
+          {{/* Last item, close current ul tag */}}
+        </table>
       </div>
     </div>
     {{- end -}}
@@ -41,4 +41,3 @@
 {{- $paginator := .Paginate $pages.ByDate.Reverse (default 100 .Site.Params.archive.paginate) -}}
 {{- partial "head/title" . -}}
 {{ end }}
-

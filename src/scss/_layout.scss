@@ -1,0 +1,151 @@
+.content {
+  a {
+    color: var(--hbs-accent);
+    font-weight: 500;
+    text-decoration: none;
+
+    &:hover:not(.btn) {
+      text-decoration: underline;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 1rem 0 1.5rem;
+    clear: both;
+
+    a {
+      color: inherit;
+
+      &:hover {
+        color: var(--hbs-accent);
+        text-decoration: none !important;
+      }
+    }
+
+    .anchor {
+      margin-left: 0.5rem;
+      font-size: 75%;
+      color: var(--hbs-accent);
+      opacity: 0;
+      transition: opacity 0.5s;
+    }
+
+    &:hover {
+      .anchor {
+        opacity: 1;
+      }
+    }
+  }
+
+  ::marker {
+    color: var(--hbs-accent);
+  }
+
+  :target::before {
+    content: '';
+    display: block;
+  }
+}
+
+.post {
+  ul {
+    padding-left: 1.5rem;
+  }
+
+  hr {
+    color: var(--hbs-accent);
+  }
+
+  table {
+    @extend .table;
+    @extend .table-bordered;
+
+    color: var(--color);
+  }
+
+  blockquote {
+    background: var(--bs-light);
+    border-left: 0.5rem solid var(--hbs-primary);
+    color: var(--hbs-on-surface);
+    background-color: var(--hbs-surface);
+    padding: 1.2rem 2.5rem 0.2rem;
+    position: relative;
+
+    &::before {
+      content: '\201C';
+      color: var(--hbs-primary);
+      font-size: 4em;
+      position: absolute;
+      left: 0.5rem;
+      top: -1rem;
+    }
+  }
+}
+
+.sidebar {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 1rem !important;
+    margin-bottom: 1.5rem;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+
+      &:hover {
+        color: var(--hbs-accent);
+        text-decoration: none !important;
+      }
+    }
+  }
+
+  .card-body {
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    a {
+      color: inherit;
+      font-weight: 500;
+      text-decoration: none;
+
+      &:hover:not(.btn) {
+        color: var(--hbs-accent);
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .link-list {
+    padding-left: 1rem;
+    list-style-type: none;
+  }
+}
+
+.link-list {
+  padding-left: 1rem;
+  list-style-type: none;
+
+  li {
+    margin-top: 0.6rem;
+    margin-bottom: 0.6rem;
+
+    a {
+      color: inherit;
+      font-weight: 400 !important;
+      text-decoration: none !important;
+
+      &:hover {
+        color: var(--hbs-accent);
+      }
+    }
+  }
+}

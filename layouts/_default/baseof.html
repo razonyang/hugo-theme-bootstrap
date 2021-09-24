@@ -13,7 +13,7 @@
     {{- partial "header.html" . -}}
     {{- partial "hooks/main-begin" . -}}
     <main role="main" class="container{{ if default false .Site.Params.fullWidth }}-fluid{{ end }}">
-      <div class="row content">
+      <div class="row">
         {{- block "content" . -}}{{- end -}}
       </div>
     </main>
