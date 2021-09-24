@@ -3,7 +3,7 @@
   <div class="container">
     {{- partial "breadcrumb" . -}}
     <div class="taxonomys">
-      {{- range (.Paginate .Data.Terms.ByCount).Pages -}}
+      {{- range .Paginator.Pages -}}
       {{- $count := len .Pages -}}
       <div class="taxonomy row card">
         <div class="card-body">

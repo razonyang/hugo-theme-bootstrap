@@ -4,11 +4,3 @@
 </div>
 {{- partial "sidebar" . -}}
 {{ end }}
-
-{{ define "title" }}
-{{- $pageNumber := "" -}}
-{{- if gt .Paginator.PageNumber 1 -}}
-  {{- $pageNumber = printf " %s" (i18n "pagination_title" .Paginator) -}}
-{{- end -}}
-{{- printf "%s%s" .Site.Title $pageNumber -}}
-{{ end }}
