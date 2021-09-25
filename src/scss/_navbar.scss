@@ -72,12 +72,3 @@ $bgNavbarTogglerIcon: url('/images/icons/menu.png');
 
   display: inline !important;
 }
-
-.navbar-collapse {
-  &.show {
-    .search-bar {
-      margin: 0.5rem 0;
-      margin-left: 0 !important;
-    }
-  }
-}
