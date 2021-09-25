@@ -3,7 +3,7 @@
   <div class="container{{ if default false .Site.Params.fullWidth }}-fluid{{ end }}">
     {{ partial "header/settings" . }}
     {{- $logo := (default "images/logo.webp" .Site.Params.logo) -}}
-    <a class="navbar-brand{{ if .IsHome }} active{{ end }}" href="{{ "" | absURL }}">
+    <a class="navbar-brand me-3{{ if .IsHome }} active{{ end }}" href="{{ "" | absURL }}">
       {{- if $logo -}}
         {{ partial "helpers/image" (dict "filename" $logo "alt" "Logo" "class" "logo" "resources" .Resources) }}
       {{- end -}}
