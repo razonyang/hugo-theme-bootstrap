@@ -6,10 +6,11 @@ $mode-light: (
   'primary-text-on-surface': $dark-primary,
   'secondary-text-on-surface': $dark-secondary,
   'disabled-text-on-surface': $dark-disabled,
-  'navbar': var(--hbs-primary),
+  'navbar': variable('primary'),
   'primary-text-on-navbar': $white-secondary,
   'accent-text-on-navbar': #fff,
-  'accent': var(--hbs-primary),
+  'accent': variable('primary'),
+  'accent-dark': variable('primary-dark'),
 );
 
 $mode-dark: (
@@ -20,10 +21,11 @@ $mode-dark: (
   'primary-text-on-surface': $white-primary,
   'secondary-text-on-surface': $white-secondary,
   'disabled-text-on-surface': $white-disabled,
-  'navbar': var(--hbs-surface),
+  'navbar': variable('surface'),
   'primary-text-on-navbar': $white-primary,
-  'accent-text-on-navbar': var(--hbs-primary-light),
-  'accent': var(--hbs-primary-light),
+  'accent-text-on-navbar': variable('primary-light'),
+  'accent': variable('primary-light'),
+  'accent-dark': variable('primary'),
 );
 
 $modes: (

@@ -1,92 +1,104 @@
 $palette-blue: (
-  "primary": #1564bf,
-  "primary-light": #5e91f2,
-  "on-primary": #fff,
+  'primary': #1565c0,
+  'primary-dark': #003c8f,
+  'primary-light': #5e92f3,
+  'on-primary': #fff,
 );
 
 $palette-blue-gray: (
-  "primary": #34515e,
-  "primary-light": #8eacbb,
-  "on-primary": #fff,
+  'primary': #37474f,
+  'primary-dark': #102027,
+  'primary-light': #62727b,
+  'on-primary': #fff,
 );
 
 $palette-brown: (
-  "primary": #795548,
-  "primary-light": #a98274,
-  "on-primary": #fff,
+  'primary': #5d4037,
+  'primary-dark': #321911,
+  'primary-light': #8b6b61,
+  'on-primary': #fff,
 );
 
 $palette-cyan: (
-  "primary": #00838f,
-  "primary-light": #4fb3bf,
-  "on-primary": #fff,
+  'primary': #00838f,
+  'primary-dark': #005662,
+  'primary-light': #4fb3bf,
+  'on-primary': #fff,
 );
 
 $palette-green: (
-  "primary": #2e7d32,
-  "primary-light": #60ad5e,
-  "on-primary": #fff,
+  'primary': #2e7d32,
+  'primary-dark': #005005,
+  'primary-light': #60ad5e,
+  'on-primary': #fff,
 );
 
 $palette-indigo: (
-  "primary": #3f51b5,
-  "primary-light": #757de8,
-  "on-primary": #fff,
+  'primary': #303f9f,
+  'primary-dark': #001970,
+  'primary-light': #666ad1,
+  'on-primary': #fff,
 );
 
 $palette-orange: (
-  "primary": #bb4d00,
-  "primary-light": #ffad42,
-  "on-primary": #fff,
+  'primary': #bb4d00,
+  'primary-dark': #b53d00,
+  'primary-light': #ffad42,
+  'on-primary': #fff,
 );
 
 $palette-pink: (
-  "primary": #c2185b,
-  "primary-light": #fa5788,
-  "on-primary": #fff,
+  'primary': #c2185b,
+  'primary-dark': #8c0032,
+  'primary-light': #fa5788,
+  'on-primary': #fff,
 );
 
 $palette-purple: (
-  "primary": #7e57c2,
-  "primary-light": #b085f5,
-  "on-primary": #fff,
+  'primary': #7b1fa2,
+  'primary-dark': #4a0072,
+  'primary-light': #ae52d4,
+  'on-primary': #fff,
 );
 
 $palette-red: (
-  "primary": #d32f2f,
-  "primary-light": #ff6659,
-  "on-primary": #fff,
+  'primary': #d32f2f,
+  'primary-dark': #9a0007,
+  'primary-light': #ff6659,
+  'on-primary': #fff,
 );
 
 $palette-teal: (
-  "primary": #00796b,
-  "primary-light": #48a999,
-  "on-primary": #fff,
+  'primary': #00796b,
+  'primary-dark': #004c40,
+  'primary-light': #48a999,
+  'on-primary': #fff,
 );
 
 $palette-yellow: (
-  "primary": #bc5100,
-  "primary-light": #ffb04c,
-  "on-primary": #fff,
+  'primary': #bc5100,
+  'primary-dark': #833900,
+  'primary-light': #ffb04c,
+  'on-primary': #fff,
 );
 
 $palettes: (
-  "blue": $palette-blue,
-  "blue-gray": $palette-blue-gray,
-  "brown": $palette-brown,
-  "cyan": $palette-cyan,
-  "green": $palette-green,
-  "indigo": $palette-indigo,
-  "orange": $palette-orange,
-  "pink": $palette-pink,
-  "purple": $palette-purple,
-  "red": $palette-red,
-  "teal": $palette-teal,
-  "yellow": $palette-yellow,
+  'blue': $palette-blue,
+  'blue-gray': $palette-blue-gray,
+  'brown': $palette-brown,
+  'cyan': $palette-cyan,
+  'green': $palette-green,
+  'indigo': $palette-indigo,
+  'orange': $palette-orange,
+  'pink': $palette-pink,
+  'purple': $palette-purple,
+  'red': $palette-red,
+  'teal': $palette-teal,
+  'yellow': $palette-yellow,
 );
 
 @each $name, $colors in $palettes {
-  [data-palette="#{$name}"] {
+  [data-palette='#{$name}'] {
     @each $key, $color in $colors {
       --hbs-#{$key}: #{$color};
     }
@@ -97,8 +109,8 @@ $palettes: (
   height: 20px;
   width: 32px;
   margin: 0.25rem 0 0.25rem 0.25rem;
-  background: var(--hbs-primary) !important;
-  color: var(--hbs-on-primary) !important;
+  background: variable('primary') !important;
+  color: variable('on-primary') !important;
 }
 
 #palettePicker {
@@ -106,5 +118,5 @@ $palettes: (
 }
 
 .text-accent {
-  color: var(--hbs-accent) !important;
+  color: variable('accent') !important;
 }

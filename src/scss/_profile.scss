@@ -1,5 +1,5 @@
 .profile {
-  color: var(--hbs-secondary-text-on-surface) !important;
+  color: variable('secondary-text-on-surface') !important;
 
   .profile-avatar {
     height: 120px;
@@ -24,6 +24,10 @@
     display: inline;
     margin-right: 0.5rem;
     white-space: pre;
+  }
+
+  a {
+    color: variable('accent');
   }
 }
 

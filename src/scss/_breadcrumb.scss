@@ -4,10 +4,10 @@
 
 .breadcrumb-item {
   &.active {
-    color: var(--hbs-secondary-text-on-surface);
+    color: variable('secondary-text-on-surface');
   }
 
   a {
-    text-decoration: none;
+    color: variable('accent');
   }
 }

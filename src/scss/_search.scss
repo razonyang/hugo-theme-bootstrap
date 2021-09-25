@@ -1,3 +1,5 @@
+@use './mixins';
+
 .search-result {
   margin-bottom: 2rem;
 }
@@ -14,30 +16,30 @@
 .search-form {
   .form-control {
     background-color: transparent;
-    border-color: var(--hbs-accent);
-    color: var(--hbs-secondary-text-on-surface);
+    border-color: variable('accent');
+    color: variable('secondary-text-on-surface');
 
     &:focus {
-      color: var(--hbs-primary-text);
+      color: variable('primary-text-on-surface');
     }
   }
 }
 
 .search-stat,
 .search-result-content {
-  color: var(--hbs-secondary-text-on-surface);
+  color: variable('secondary-text-on-surface');
 }
 
 .btn-search {
   background: transparent !important;
-  color: var(--hbs-accent) !important;
+  color: variable('accent') !important;
   z-index: 4 !important;
   box-shadow: none !important;
 }
 
 .search-result-taxonomy {
   margin: 0 0.125rem 0.125rem 0;
-  color: var(--hbs-secondary-text-on-surface);
+  color: variable('secondary-text-on-surface');
 
   + .search-result-taxonomy::before {
     content: '·';
@@ -47,15 +49,15 @@
 }
 
 @mixin scoreContent {
-  font-family: 'Font Awesome 5 Free';
   font-weight: 400;
-  content: '\f005\f005\f005\f005\f005';
+
+  @include mixins.fontAwesome('\f005\f005\f005\f005\f005');
 }
 
 .search-result-score {
   white-space: nowrap;
   font-size: 20px;
-  color: var(--hbs-disabled-text-on-surface);
+  color: variable('disabled-text-on-surface');
   position: relative;
 
   &::before {
@@ -63,7 +65,7 @@
   }
 
   span {
-    color: var(--hbs-accent);
+    color: variable('accent');
     left: 0;
     overflow: hidden;
     position: absolute;

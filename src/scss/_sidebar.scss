@@ -10,26 +10,23 @@
   }
 
   ul {
-    padding-left: 0;
-    list-style-type: none;
+    padding-left: 0.25rem;
+    list-style: none;
 
     li {
-      margin-top: 0.6rem;
-      margin-bottom: 0.6rem;
+      margin: 0.25rem 0;
 
       a {
-        color: inherit;
-        font-weight: 400;
-      }
+        color: variable('secondary-text-on-surface');
 
-      a:hover {
-        color: var(--hbs-accent);
+        &:hover {
+          color: variable('accent');
+        }
       }
     }
   }
 
   .card-body {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding: 1rem 2rem !important;
   }
 }

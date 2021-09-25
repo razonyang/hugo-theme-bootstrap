@@ -1,0 +1,16 @@
+.dropdown-menu {
+  background-color: variable('background');
+
+  .dropdown-item {
+    color: variable('primary-text-on-background') !important;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      color: variable('on-primary') !important;
+      background-color: variable('accent') !important;
+      text-decoration: none;
+    }
+  }
+}

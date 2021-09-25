@@ -1,6 +1,6 @@
 {{- if and (default true .Site.Params.breadcrumb) (default true .Params.breadcrumb) -}}
 {{- $titleCase := default false $.Site.Params.titleCase -}}
-<nav class="row card" aria-label="breadcrumb">
+<nav class="row card component" aria-label="breadcrumb">
   <div class="card-body">
     <ol class="breadcrumb ">
       {{- template "breadcrumbnav" (dict "p1" . "p2" . "titleCase" $titleCase) -}}

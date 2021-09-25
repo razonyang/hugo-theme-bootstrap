@@ -1,69 +1,11 @@
-html {
-  position: relative;
-}
-
-html,
-body {
-  height: 100%;
-}
-
-body {
-  display: flex;
-  flex-flow: column;
-  background-color: var(--hbs-background);
-  color: var(--hbs-primary-text-on-background);
-  font-family: var(--hbs-font-sans-serif);
-  font-size: var(--hbs-font-size);
-}
-
-a {
-  color: var(--hbs-accent);
-  font-weight: 500;
-  text-decoration: none;
-
-  &:hover:not(.btn) {
-    text-decoration: underline;
-  }
-}
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-  margin: 1rem 0 1.5rem;
-  clear: both;
-
-  a {
-    color: inherit;
-
-    &:hover {
-      color: var(--hbs-accent);
-      text-decoration: none !important;
-    }
-  }
-}
-
 main {
   margin-bottom: 2rem;
 }
 
-ul {
-  padding-left: 1.5rem;
-}
-
-::marker {
-  color: var(--hbs-accent);
-}
-
-hr {
-  color: var(--hbs-accent);
-}
-
 .list-group-item {
   .active {
-    background-color: var(--hbs-accent);
-    border: var(--hbs-accent);
+    background-color: variable('accent');
+    border: variable('accent');
   }
 }
 

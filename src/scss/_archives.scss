@@ -6,14 +6,19 @@
   }
 
   .post-title {
-    color: var(--hbs-secondary-text-on-surface);
+    color: variable('secondary-text-on-surface');
 
     &:hover {
-      color: var(--hbs-primary);
+      color: variable('accent');
     }
   }
 
   .post-date {
-    color: var(--hbs-secondary-text-on-surface);
+    color: variable('secondary-text-on-surface');
   }
+}
+
+.archive-posts {
+  list-style: none;
+  padding-left: 0.25rem;
 }

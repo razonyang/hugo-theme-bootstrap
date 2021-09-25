@@ -5,7 +5,7 @@
     <div class="taxonomys">
       {{- range .Paginator.Pages -}}
       {{- $count := len .Pages -}}
-      <div class="taxonomy row card">
+      <div class="taxonomy row card component">
         <div class="card-body">
           <h2 class="taxonomy-title card-title">
             <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
@@ -18,16 +18,16 @@
           <ul class="taxonomy-posts">
             {{- range first $postCount .Pages -}}
             <li class="taxonomy-post">
-              <a href="{{ .Permalink }}">{{ .Title }}</a>
+              <a class="post-title" href="{{ .Permalink }}">{{ .Title }}</a>
               <span class="float-end post-date">{{ .Date.Format (default "Jan 2" $.Site.Params.archive.dateFormat) }}</span>
             </li>
             {{- end -}}
-            {{- if gt $count $postCount -}}
-            <li class="taxonomy-post">
-              <a href="{{ .Page.Permalink }}">...</a>
-            </li>
-            {{- end -}}
           </ul>
+          <div class="taxonomy-actions">
+            {{- if gt $count $postCount -}}
+            <a class="btn btn-sm btn-outline-primary" href="{{ .Page.Permalink }}">Read More</a>
+            {{- end -}}
+          </div>
           {{- end -}}
         </div>
       </div>

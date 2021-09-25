@@ -1,6 +1,6 @@
 .btn-scroll-to-top {
   bottom: 1.5rem;
-  color: var(--hbs-accent);
+  color: variable('accent');
   opacity: 0;
   transition: opacity 0.5s;
   position: fixed;

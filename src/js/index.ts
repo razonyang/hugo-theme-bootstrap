@@ -1,6 +1,5 @@
 import './mode';
 import './palette';
-import './top-app-bar';
 import './social-share';
 import './scroller';
 import './table';

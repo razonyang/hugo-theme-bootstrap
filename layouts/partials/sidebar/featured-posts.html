@@ -2,7 +2,7 @@
 {{- if $count -}}
   {{- $featuredPosts := first $count (where (where site.RegularPages "Type" "in" site.Params.mainSections) ".Params.featured" "eq" true) -}}
   {{- with $featuredPosts -}}
-  <section class="featured-posts row card">
+  <section class="featured-posts row card component">
     <div class="card-body">
       <h4 class="card-title">{{ T "featured_posts" }}</h4>
       <ul>

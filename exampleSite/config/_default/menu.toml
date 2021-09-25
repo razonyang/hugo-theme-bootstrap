@@ -9,8 +9,8 @@
   url = "https://github.com/razonyang/hugo-theme-bootstrap"
   pre = '<i class="fab fa-fw fa-github"></i>'
 [[main]]
-  id = "search"
+  id = "manual"
   parent = "dropdown"
-  name = "Search"
-  url = "search"
-  pre = '<i class="fas fa-fw fa-search"></i>'
+  name = "Manual"
+  url = "en/series/manual"
+  pre = '<i class="fas fa-fw fa-book"></i>'
