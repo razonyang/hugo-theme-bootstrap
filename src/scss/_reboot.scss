@@ -1,0 +1,32 @@
+html {
+  position: relative;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: variable('background');
+  color: variable('primary-text-on-background');
+}
+
+a {
+  color: inherit;
+  font-weight: 500;
+  text-decoration: none;
+
+  &:hover {
+    color: variable(accent);
+    text-decoration: underline;
+  }
+
+  &.btn {
+    text-decoration: none !important;
+  }
+}
+
+hr {
+  color: variable('accent');
+}

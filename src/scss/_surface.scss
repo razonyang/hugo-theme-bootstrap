@@ -1,4 +1,4 @@
 .surface {
-  background: var(--hbs-surface);
-  color: var(--hbs-primary-text-on-surface);
+  background: variable('surface');
+  color: variable('primary-text-on-surface');
 }

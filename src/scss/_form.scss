@@ -1,12 +1,14 @@
 .form-control {
   &:focus {
-    box-shadow: 0 0 0 0.125rem var(--hbs-accent);
+    box-shadow: 0 0 0 0.125rem variable('accent');
   }
 }
 
 .form-check-input {
-  &:checked {
-    background-color: var(--hbs-accent);
-    border-color: var(--hbs-accent);
+  &:checked,
+  &:focus {
+    background-color: variable('accent');
+    border-color: variable('accent');
+    box-shadow: variable('accent-light');
   }
 }

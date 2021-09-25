@@ -4,13 +4,13 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--hbs-accent);
+  background: variable('secondary-text-on-surface');
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: variable('surface');
 }
 
 ::-webkit-scrollbar-corner {
-  background: var(--hbs-accent);
+  background: variable('primary-text-on-surface');
 }

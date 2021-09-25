@@ -6,7 +6,7 @@
   {{- partial "hooks/list-begin" . -}}
   <div class="posts mb-4">
   {{- range .Paginator.Pages -}}
-    <article class="row card post">
+    <article class="row card post component">
       <div class="card-body">
         <h2 class="card-title post-title"><a href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a></h2>
         {{- partial "post/meta" . -}}

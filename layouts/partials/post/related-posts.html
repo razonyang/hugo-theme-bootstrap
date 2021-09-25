@@ -1,7 +1,7 @@
 {{- $count := default 5 .Site.Params.relatedPostCount -}}
 {{- if $count -}}
   {{- with (.Site.RegularPages.Related . | first $count) -}}
-  <section class="related-posts">
+  <section class="related-posts-wrapper">
     <h3>{{ T "related_posts" }}</h3>
     <ul class="related-posts">
       {{- range . -}}

@@ -1,9 +1,9 @@
-$form-range-thumb-bg: var(--hbs-accent);
-$fa-font-path: "../fonts";
-$enable-smooth-scroll: false;
-
 $variable-prefix: hbs-;
 
-// Remove all of Bootstrap built-in colors.
+$form-range-thumb-bg: var(--#{$variable-prefix}accent);
+
+$fa-font-path: '../fonts';
+
+$enable-smooth-scroll: false;
+
 $colors: ();
-$theme-colors: ();

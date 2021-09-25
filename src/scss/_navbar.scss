@@ -1,20 +1,23 @@
 .navbar {
-  background-color: var(--hbs-navbar);
-  color: var(--hbs-primary-text-on-navbar);
+  background-color: variable('navbar');
+  color: variable('primary-text-on-navbar');
 
   a {
     &:hover,
     &:focus,
     &:active,
     &.active {
-      color: var(--hbs-accent-text-on-navbar);
+      color: variable('accent-text-on-navbar');
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 8px;
     }
   }
 
   .btn {
     &:hover,
     &:focus {
-      color: var(--hbs-on-primary);
+      color: variable('on-primary');
     }
   }
 
@@ -32,13 +35,7 @@
   }
 
   &:hover {
-    color: var(--hbs-accent-text-on-navbar);
-  }
-}
-
-.navbar-title {
-  &:hover {
-    color: var(--hbs-accent-text-on-navbar);
+    color: variable('accent-text-on-navbar');
   }
 }
 
@@ -48,7 +45,7 @@
   margin-right: 0.5rem;
 }
 
-$bgNavbarTogglerIcon: url("/images/icons/menu.png");
+$bgNavbarTogglerIcon: url('/images/icons/menu.png');
 
 .navbar-toggler-icon {
   background-image: $bgNavbarTogglerIcon;
@@ -57,29 +54,30 @@ $bgNavbarTogglerIcon: url("/images/icons/menu.png");
 .nav-link {
   color: inherit;
 
-  &:focus {
-    outline: none;
-    color: var(--hbs-accent);
-  }
-
+  &:focus,
   &:hover {
     outline: none;
-    color: var(--hbs-accent);
+    color: variable('accent');
+    text-decoration: none;
   }
 }
 
-.dropdown-menu {
-  background-color: var(--hbs-background);
+.navbar-brand {
+  color: inherit;
+  text-decoration: none !important;
+}
 
-  .dropdown-item {
-    color: var(--hbs-primary-text-on-background);
+.navbar-settings {
+  @extend .navbar-toggler;
 
-    &:hover,
-    &:focus,
-    &:active,
-    &.active {
-      color: var(--hbs-on-primary);
-      background-color: var(--hbs-accent);
+  display: inline !important;
+}
+
+.navbar-collapse {
+  &.show {
+    .search-bar {
+      margin: 0.5rem 0;
+      margin-left: 0 !important;
     }
   }
 }

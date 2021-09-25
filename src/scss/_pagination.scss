@@ -1,13 +1,13 @@
 .pagination {
   .page-link {
-    background-color: var(--hbs-surface);
-    border-color: var(--hbs-secondary-text-on-surface);
-    color: var(--hbs-secondary-text-on-surface);
+    background-color: variable('surface');
+    border-color: variable('secondary-text-on-surface');
+    color: variable('secondary-text-on-surface');
   }
 
   .page-item {
     .page-link {
-      border-color: var(--hbs-secondary-text-on-surface);
+      border-color: variable('secondary-text-on-surface');
 
       &:focus {
         box-shadow: none;
@@ -16,14 +16,14 @@
 
     &.active {
       .page-link {
-        background-color: var(--hbs-primary);
+        background-color: variable('primary');
       }
     }
 
     &.disabled {
       .page-link {
-        color: var(--hbs-disabled-text-on-surface);
-        background-color: var(--hbs-surface);
+        color: variable('disabled-text-on-surface');
+        background-color: variable('surface');
       }
     }
   }
