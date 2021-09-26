@@ -13,4 +13,3 @@
   parent = "dropdown"
   name = "用户手册"
   url = "zh-cn/series/manual"
-  pre = '<i class="fas fa-fw fa-book"></i>'

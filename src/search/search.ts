@@ -1,5 +1,5 @@
 import Fuse from 'fuse.js';
-import * as Mustache from 'mustache';
+import Mustache from 'mustache';
 import * as Mark from 'mark.js';
 
 declare global {
@@ -238,7 +238,7 @@ export class Search {
   }
 
   static formatScore(value) {
-    return (100 * (1 - value)).toFixed(2);
+    return (100 * (1 - value)).toFixed(1);
   }
 
   highlight(id, titleKeywords, contentKeywords) {

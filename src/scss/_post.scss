@@ -86,7 +86,8 @@
       color: inherit;
       margin-bottom: 0.5rem;
 
-      &:hover {
+      &:hover,
+      &.active {
         color: variable('accent');
       }
     }

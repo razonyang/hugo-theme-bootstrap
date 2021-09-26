@@ -1,4 +1,4 @@
-import { Popover as BasePopover } from 'bootstrap';
+import  * as BasePopover  from 'bootstrap/js/dist/popover';
 
 class PopOver {
   static run() {

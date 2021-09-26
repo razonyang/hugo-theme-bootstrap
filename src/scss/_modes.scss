@@ -7,8 +7,8 @@ $mode-light: (
   'secondary-text-on-surface': $dark-secondary,
   'disabled-text-on-surface': $dark-disabled,
   'navbar': variable('primary'),
-  'primary-text-on-navbar': $white-secondary,
-  'accent-text-on-navbar': #fff,
+  'primary-text-on-navbar': $white-primary,
+  'accent-text-on-navbar': $white-primary,
   'accent': variable('primary'),
   'accent-dark': variable('primary-dark'),
 );

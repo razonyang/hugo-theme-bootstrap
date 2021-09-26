@@ -13,4 +13,3 @@
   parent = "dropdown"
   name = "Manual"
   url = "en/series/manual"
-  pre = '<i class="fas fa-fw fa-book"></i>'

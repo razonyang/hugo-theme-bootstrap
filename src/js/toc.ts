@@ -1,4 +1,4 @@
-import { Offcanvas } from 'bootstrap';
+import * as Offcanvas from 'bootstrap/js/dist/offcanvas';
 
 class TOC {
   instance: Offcanvas;

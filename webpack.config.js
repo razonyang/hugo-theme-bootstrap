@@ -1,5 +1,6 @@
 const path = require('path');
 const ESLintPlugin = require('eslint-webpack-plugin');
+const TerserPlugin = require("terser-webpack-plugin");
 const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
@@ -10,6 +11,11 @@ module.exports = {
     mermaid: ['./src/mermaid/index.ts'],
   },
   mode: 'production',
+  optimization: {
+    usedExports: true,
+    minimize: true,
+    minimizer: [new TerserPlugin()],
+  },
   output: {
     path: path.resolve(path.join(__dirname, 'assets', 'js')),
     filename: '[name].js'
@@ -66,13 +72,13 @@ module.exports = {
   },
   plugins: [
     new ESLintPlugin(),
-    new CopyPlugin({
-      patterns: [
-        { 
-          from: path.resolve(path.join(__dirname, 'node_modules/@fortawesome/fontawesome-free/webfonts')),
-          to: path.resolve(path.join(__dirname, 'static/fonts')),
-        },
-      ],
-    }),
+    // new CopyPlugin({
+    //   patterns: [
+    //     { 
+    //       from: path.resolve(path.join(__dirname, 'node_modules/@fortawesome/fontawesome-free/webfonts')),
+    //       to: path.resolve(path.join(__dirname, 'static/fonts')),
+    //     },
+    //   ],
+    // }),
   ]
 };
