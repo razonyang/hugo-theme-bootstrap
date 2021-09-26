@@ -17,9 +17,6 @@ tags = [
 series = [
   "Manual"
 ]
-images = [
-  "https://mermaid-js.github.io/mermaid/img/header.png"
-]
 +++
 
 This article offers a sample of basic diagram usage that can be used in Hugo content files.

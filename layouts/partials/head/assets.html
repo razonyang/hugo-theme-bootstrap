@@ -5,10 +5,6 @@
 {{- $style := slice $mainStyle $configStyle $highlightStyle $customStyle | resources.Concat "css/bundle.css" | resources.Minify | resources.Fingerprint -}}
 <link rel="preload" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous" as="style" onload="this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous"></noscript>
-{{- $mainScript := resources.Get "js/main.js" }}
-{{- $configScript := resources.Get "js/config.template.js" | resources.ExecuteAsTemplate "config.js" . -}}
-{{- $customScript := resources.Get "js/custom.js" -}}
-{{- $script := slice $mainScript $configScript $customScript | resources.Concat "js/bundle.js" | resources.Minify | resources.Fingerprint -}}
-<script src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>
-{{- partial "head/math" . -}}
-{{- partial "head/mermaid" . -}}
+{{- range .Site.Params.customCSS -}}
+<link rel="stylesheet" href="{{ absURL . }}" crossorigin="anonymous">
+{{- end -}}

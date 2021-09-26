@@ -4,7 +4,7 @@
   {{- with $featuredPosts -}}
   <section class="featured-posts row card component">
     <div class="card-body">
-      <h4 class="card-title">{{ T "featured_posts" }}</h4>
+      <h2 class="card-title">{{ T "featured_posts" }}</h2>
       <ul>
       {{- range . -}}
         <li><a href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a></li>

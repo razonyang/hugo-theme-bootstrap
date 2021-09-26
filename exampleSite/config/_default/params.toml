@@ -43,8 +43,10 @@ googleAdsense = ""
 # taxonomyPostCount = 5 # The number of posts of taxonomy. Turn off by setting it to false.
 
 # Custom CSS and JS
-customCSS = []
-customJS = []
+customCSS = [
+]
+customJS = [
+]
 
 # tocWordCount = 280 # TOC is displayed only if the post's word count exceeds this value.
 

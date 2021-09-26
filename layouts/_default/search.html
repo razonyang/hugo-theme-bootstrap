@@ -32,7 +32,7 @@
     <div class="row">
       <form id="searchForm" class="search-form mb-3 p-0">
         <div class="input-group input-group-lg">
-          <button class="btn btn-search disabled position-absolute left-0" type="submit" aria-label="submit"><i class="fas fa-fw fa-search"></i></button>
+          <span class="btn btn-search disabled position-absolute left-0" type="submit" aria-label="submit"><i class="fas fa-fw fa-search"></i></span>
           <input class="form-control rounded ps-5" name="q" type="search" aria-label="Search">
         </div>
       </form>
@@ -54,9 +54,6 @@
         <a {{ printf "href={{permalink}}" | safeHTMLAttr }}>{{ print "{{title}}" }}</a>
       </h2>
       <div class="search-result-taxonomies mb-3">
-        <span class="search-result-score search-result-taxonomy">
-          <span {{ printf "style=\"%s\"" "width: {{{score}}}%" | safeHTMLAttr }}></span>
-        </span>
         <span class="search-result-taxonomy">{{ printf "{{date}}" }}</span>
         {{- $baseURL := absLangURL "" -}}
         {{- $placeholder := "{{#url}}{{.}}{{/url}}" -}}
