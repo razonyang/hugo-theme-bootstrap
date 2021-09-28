@@ -10,9 +10,9 @@
 
 ![截图](https://raw.githubusercontent.com/razonyang/hugo-theme-bootstrap/master/images/screenshot.png)
 
-**Dark Mode**
+**Light Mode**
 
-![深色模式下的截图](https://raw.githubusercontent.com/razonyang/hugo-theme-bootstrap/master/images/screenshot-dark.png)
+![深色模式下的截图](https://raw.githubusercontent.com/razonyang/hugo-theme-bootstrap/master/images/screenshot-light.png)
 
 ## 线上预览
 
