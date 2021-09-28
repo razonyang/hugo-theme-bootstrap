@@ -3,7 +3,7 @@ import {
   faAdjust, faArrowsAltV, faBars, faBuilding, faCalendarAlt, faCheckCircle, faChevronCircleDown, faChevronCircleUp, faChevronLeft, faChevronRight,
   faCode, faCoffee, faColumns, faCopy, faCopyright, faEdit, faEllipsisV, faEnvelope, faExclamationTriangle, faExpandArrowsAlt, faEyeDropper,
   faFont, faFileAlt, faFileArchive, faFolder, faInfoCircle, faLanguage, faLink, faList, faListAlt, faMapMarkerAlt, faPalette, faRss, faSearch,
-  faShare, faSkullCrossbones, faShareAlt, faTags, faTimes, faTv, faUser,
+  faShare, faSkullCrossbones, faShareAlt, faSpinner, faTags, faTimes, faTv, faUser,
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faStar,
@@ -22,7 +22,7 @@ library.add(
   faAdjust, faArrowsAltV, faBars, faBuilding, faCalendarAlt, faCheckCircle, faChevronCircleDown, faChevronCircleUp, faChevronLeft, faChevronRight,
   faCode, faCoffee, faColumns, faCopy, faCopyright, faEdit, faEllipsisV, faEnvelope, faExclamationTriangle, faExpandArrowsAlt, faEyeDropper,
   faFont, faFileAlt, faFileArchive, faFolder, faInfoCircle, faLanguage, faLink, faList, faListAlt, faMapMarkerAlt, faPalette, faRss, faSearch,
-  faShare, faSkullCrossbones, faShareAlt, faTags, faTimes, faTv, faUser,
+  faShare, faSkullCrossbones, faShareAlt, faSpinner, faTags, faTimes, faTv, faUser,
 
   // Regular Icons
   faStar,
