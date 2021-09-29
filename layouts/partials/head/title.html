@@ -5,7 +5,7 @@
   {{- $sections := default (slice "posts") .Site.Params.mainSections -}}
   {{- $paginator = .Paginate (where .Site.RegularPages "Type" "in" $sections) -}}
 {{- else if eq .Kind "taxonomy" -}}
-  {{- $paginator = .Paginator -}}
+  {{- $paginator = .Paginate .Pages (default 10 .Site.Params.taxonomyPaginate) -}}
 {{- else -}}
   {{- $paginator = .Paginate .RegularPagesRecursive -}}
 {{- end -}}
