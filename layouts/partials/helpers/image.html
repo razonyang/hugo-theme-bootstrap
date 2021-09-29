@@ -47,17 +47,17 @@
   <!-- Resize to actual entered size -->
   {{- $resize := (printf "%sx%s" (strings.TrimSuffix "px" $width) (strings.TrimSuffix "px" $height)) -}}
   {{- $img = $img.Resize $resize -}}
-  {{- $link = $img.RelPermalink | safeURL -}}
+  {{- $link = $img.Permalink | safeURL -}}
 {{- else if and (ne $width false) $pageResource }}
   <!-- Resize width to entered size, keeping aspect ratio -->
   {{- $resize := (printf "%sx" (strings.TrimSuffix "px" $width)) -}}
   {{- $img = $img.Resize $resize -}}
-  {{- $link = $img.RelPermalink | safeURL -}}
+  {{- $link = $img.Permalink | safeURL -}}
 {{- else if and (ne $height false) $pageResource }}
   <!-- Resize height to entered size, keeping aspect ratio -->
   {{- $resize := (printf "x%s" (strings.TrimSuffix "px" $height)) -}}
   {{- $img = $img.Resize $resize -}}
-  {{- $link = $img.RelPermalink | safeURL -}}
+  {{- $link = $img.Permalink | safeURL -}}
 {{- end -}}
 
 <img class="{{ $className }}" alt="{{ .alt }}" src="{{ $link }}" loading="lazy"
