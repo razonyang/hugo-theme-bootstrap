@@ -177,6 +177,7 @@ As the example site shown, the configuration are separated into multiple files, 
 | `categoryCount` | Integer/Boolean | `10` | The number of categories shown in sidebar. Turn off by setting it to `false`.
 | `tagCount` | Integer/Boolean | `10` | The number of tags shown in sidebar. Turn off by setting it to `false`.
 | `seriesCount` | Integer | `10` | The number of series shown in sidebar.
+| `taxonomyPaginate` | Integer | `10` |
 | `taxonomyPostCount` | Integer | `3` | The number of posts of taxonomy. Turn off by setting it to false.
 | `fullWidth` | Boolean | `false` | Full width.
 | `fixedHeader` | Boolean | `true` | Turn on/off fixed header.
