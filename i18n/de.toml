@@ -80,6 +80,15 @@ other = "Palette"
 one = "{{ .Count }} Beitrag insgesamt"
 other = "{{ .Count }} Beiträge insgesamt"
 
+[post_created_on]
+other = "erstellt am"
+
+[post_reading_time]
+other = "Lesezeit"
+
+[post_updated_on]
+other = "aktualisiert am"
+
 [reading_time]
 one = "{{ .ReadingTime }} Minute Lesezeit"
 other = "{{ .ReadingTime }} Minuten Lesezeit"
