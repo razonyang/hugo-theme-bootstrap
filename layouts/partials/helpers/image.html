@@ -1,6 +1,7 @@
 {{- $img := false -}}
 {{- $width := false -}}
 {{- $height := false -}}
+{{- $pageResource := false -}}
 {{- $link := "" -}}
 {{- $url := urls.Parse .filename -}}
 {{- if not $url.Scheme -}}
@@ -8,6 +9,7 @@
   {{- if $resource -}}
     {{- $img = $resource -}}
     {{- $link = $resource.Permalink -}}
+    {{- $pageResource = true -}}
   {{- else -}}
     {{- $filename := path.Join "static" $url.Path -}}
     {{- if fileExists $filename -}}
@@ -34,12 +36,30 @@
 {{- end -}}
 {{- $className := default "img-fluid" .class -}}
 {{- if eq $url.Fragment "center" -}}
-{{- $className = printf "%s %s" $className "mx-auto d-block" -}}
+  {{- $className = printf "%s %s" $className "mx-auto d-block" -}}
 {{- else if eq $url.Fragment "floatleft" -}}
-{{- $className = printf "%s %s" $className "float-start me-2" -}}
+  {{- $className = printf "%s %s" $className "float-start me-2" -}}
 {{- else if eq $url.Fragment "floatright" -}}
   {{- $className = printf "%s %s" $className "float-end ms-2" -}}
 {{- end -}}
+
+{{- if and $width $height $pageResource -}}
+  <!-- Resize to actual entered size -->
+  {{- $resize := (printf "%sx%s" (strings.TrimSuffix "px" $width) (strings.TrimSuffix "px" $height)) -}}
+  {{- $img = $img.Resize $resize -}}
+  {{- $link = $img.RelPermalink | safeURL -}}
+{{- else if and (ne $width false) $pageResource }}
+  <!-- Resize width to entered size, keeping aspect ratio -->
+  {{- $resize := (printf "%sx" (strings.TrimSuffix "px" $width)) -}}
+  {{- $img = $img.Resize $resize -}}
+  {{- $link = $img.RelPermalink | safeURL -}}
+{{- else if and (ne $height false) $pageResource }}
+  <!-- Resize height to entered size, keeping aspect ratio -->
+  {{- $resize := (printf "x%s" (strings.TrimSuffix "px" $height)) -}}
+  {{- $img = $img.Resize $resize -}}
+  {{- $link = $img.RelPermalink | safeURL -}}
+{{- end -}}
+
 <img class="{{ $className }}" alt="{{ .alt }}" src="{{ $link }}" loading="lazy"
   {{ with $img }} width="{{ $img.Width }}" height="{{ $img.Height }}"{{ end }}
   {{ if or $width $height }}style="{{ with $width }}width: {{ $width }}{{ end }}{{ with $height }};height: {{ $height }}{{ end }}"{{ end }} />
