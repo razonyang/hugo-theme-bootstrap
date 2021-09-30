@@ -16,6 +16,7 @@ import './code';
 import './sidebar-toggler';
 import './popover';
 import './fonts';
+import './image-viewer';
 
 declare global {
   interface Window {
