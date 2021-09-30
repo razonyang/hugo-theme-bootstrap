@@ -33,6 +33,8 @@
 - 搜尋
 - 麵包屑導航
 - 歸檔
+- 圖片查看器
+- 可以通過 URL 參數調整圖片大小，比如 `width=300px` 和 `height=200px`
 - 可以通過添加 URL 段實現圖片對齊，比如 `#center`，`#floatleft` 和 `#floatright` 分別表示居中、左浮動和右浮動。
 - 資源延遲載入：支援 `image` 和 `iframe` 等。
 - 打賞掛件：支持支付寶和微信。
@@ -433,6 +435,8 @@ github = "githubusername"
 
 ### 開發
 
+> 在提交 PR 之前，請遵循[常規提交規範](https://www.conventionalcommits.org/en/v1.0.0/)。
+
 本主題依賴於 `npm` 和 `webpack` 進行開發，原始碼目錄為 `src`。
 
 **安裝依賴**
@@ -452,8 +456,7 @@ $ npm run build
 **預覽**
 
 ```shell
-$ cd exampleSite
-$ hugo server --themesDir=../../
+$ npm run serve
 ```
 
 **格式化代碼**

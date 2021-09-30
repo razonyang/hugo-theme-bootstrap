@@ -33,6 +33,8 @@
 - 搜索
 - 面包屑导航
 - 归档
+- 图片查看器
+- 可以通过 URL 参数调整图片大小，比如 `width=300px` 和 `height=200px`
 - 可以通过添加 URL 段实现图片对齐，比如 `#center`, `#floatleft` 和 `#floatright` 分别表示居中、左浮动和右浮动。
 - 资源延迟加载：支持 `image` 和 `iframe` 等。
 - 打赏挂件：支持支付宝和微信。
@@ -434,6 +436,8 @@ github = "githubusername"
 
 ### 开发
 
+> 在提交 PR 之前，请遵循[常规提交规范](https://www.conventionalcommits.org/en/v1.0.0/)。
+
 本主题依赖于 `npm` 和 `webpack` 进行开发，源码目录为 `src`。
 
 **安装依赖**
@@ -453,8 +457,7 @@ $ npm run build
 **预览**
 
 ```shell
-$ cd exampleSite
-$ hugo server --themesDir=../../
+$ npm run serve
 ```
 
 **格式化代码**

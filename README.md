@@ -33,6 +33,8 @@ There is also a [list of websites that use this theme](https://github.com/razony
 - Search.
 - Breadcrumb.
 - Archive.
+- Image Viewer.
+- Resizing images by adding URL query, such as `width=300px` and `height=200px`.
 - Aligning images by adding URL fragments, such as `#center`, `#floatleft` and `#floatright` represents align center, float left and float right respectively.
 - [Syntax Highlighting](#syntax-highlighting)
 - Resources Lazy Loading: `image` and `iframe`.
@@ -436,6 +438,8 @@ github = "githubusername"
 
 ### Develop
 
+> Please follow the [Conventional Commits Specification](https://www.conventionalcommits.org/en/v1.0.0/) before submitting a PR.
+
 This theme relies on `npm` and `webpack` for development. The source of `js` and `scss` are placed in `src` directory.
 
 **Install dependencies**
@@ -455,8 +459,7 @@ $ npm run build
 **Preview**
 
 ```shell
-$ cd exampleSite
-$ hugo server --themesDir=../../
+$ npm run serve
 ```
 
 **Formating Code**
