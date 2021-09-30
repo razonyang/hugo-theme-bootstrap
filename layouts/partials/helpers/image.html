@@ -62,4 +62,4 @@
 
 <img class="{{ $className }}" alt="{{ .alt }}" src="{{ $link }}" loading="lazy"
   {{ with $img }} width="{{ $img.Width }}" height="{{ $img.Height }}"{{ end }}
-  {{ if or $width $height }}style="{{ with $width }}width: {{ $width }}{{ end }}{{ with $height }};height: {{ $height }}{{ end }}"{{ end }} />
+  {{ if and (not $pageResource) (or $width $height) }}style="{{ with $width }}width: {{ $width }}{{ end }}{{ with $height }};height: {{ $height }}{{ end }}"{{ end }} />
