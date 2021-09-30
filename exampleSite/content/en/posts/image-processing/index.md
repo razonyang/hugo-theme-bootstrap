@@ -64,11 +64,11 @@ Adding the `#center` fragment for aligning images to the center.
 
 For example: `![Center](/images/center.png#center)`.
 
-![Center](/images/center.png?width=120px#center)
+![Center](/images/center.png#center)
 
 ### Float Left
 
-![Float Left](/images/left.png?height=60px#floatleft)
+![Float Left](/images/left.png#floatleft)
 
 Adding the `#floatleft` fragment for floating images to the left.
 
@@ -76,7 +76,7 @@ For example: `![Float Left](/images/left.png#floatleft)`.
 
 ### Float Right
 
-![Float Right](/images/right.png?width=120px&height=60px#floatright)
+![Float Right](/images/right.png#floatright)
 
 Similarly, we can also float images to the right by adding the `#floatright` fragment.
 
