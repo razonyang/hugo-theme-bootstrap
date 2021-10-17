@@ -1,9 +1,11 @@
 <div class="post-panel-wrapper">
   <div class="d-flex flex-column component rounded post-panel">
+    {{ partial "hooks/post-panel-begin" . }}
     {{ partial "post/panel/sidebar-toggler" . }}
     {{ partial "post/panel/translations" . }}
     {{ partial "post/panel/reward" . }}
     {{ partial "post/panel/copyright" . }}
     {{ partial "post/panel/toc" . }}
+    {{ partial "hooks/post-panel-end" . }}
   </div>
 </div>
