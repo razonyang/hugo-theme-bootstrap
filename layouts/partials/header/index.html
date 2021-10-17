@@ -1,7 +1,10 @@
 {{- $baseURL := $.Site.BaseURL -}}
 <nav class="navbar top-app-bar top-app-bar-expand-lg{{ if (default true $.Site.Params.fixedHeader) }} fixed-top{{ end }}">
   <div class="container{{ if default false .Site.Params.fullWidth }}-fluid{{ end }}">
-    {{ partial "header/settings" . }}
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
     {{- $logo := (default "images/logo.webp" .Site.Params.logo) -}}
     <a class="navbar-brand me-3{{ if .IsHome }} active{{ end }}" href="{{ "" | absLangURL }}">
       {{- if $logo -}}
@@ -9,10 +12,7 @@
       {{- end -}}
       {{ with .Site.Params.brand }}{{ . }}{{ else }}{{ $.Site.Title }}{{ end }}
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <i class="fas fa-ellipsis-v"></i>
-    </button>
+    {{ partial "header/settings" . }}
     <div class="collapse navbar-collapse" tabindex="-1" id="navbarSupportedContent" aria-labelledby="navbarSupportedContent">
       {{ partial "header/search-bar" . }}
       <ul class="navbar-nav ms-auto">

@@ -69,3 +69,9 @@
     }
   }
 }
+
+.navbar-settings {
+  @include media-breakpoint-up(lg) {
+    order: 1;
+  }
+}
