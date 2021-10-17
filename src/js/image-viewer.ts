@@ -55,10 +55,12 @@ class ImageViewer {
 
 
     document.querySelectorAll('img').forEach(function (img) {
-      img.addEventListener('click', function () {
-        self.reset(img);
-        self.modal.show();
-      });
+      if (img.parentElement.tagName !== 'A') {
+        img.addEventListener('click', function () {
+          self.reset(img);
+          self.modal.show();
+        });
+      }
     });
   }
 
