@@ -357,6 +357,8 @@ $ echo "MY COMMENTS WIDGET" > layouts/partials/post/comments/custom.html
 | `comments-end` | 评论下方 |
 | `footer-begin` | `footer` 上方 |
 | `footer-end` | `footer` 下方 |
+| `post-panel-begin` | 文章工具栏上方 |
+| `post-panel-end` | 文章工具栏下方 |
 
 要使用钩子，以钩子名称创建一个 HTML 文件，并保存到 `layouts/partials/hooks` 目录即可。
 

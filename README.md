@@ -358,6 +358,8 @@ Hooks are used for adding code on pages.
 | `comments-end` | Follow the comments |
 | `footer-begin` | At very top of the footer |
 | `footer-end` | Before the footer end |
+| `post-panel-begin` | At very top of the post panel |
+| `post-panel-end` | Before the post panel end |
 
 For using a hook, you need to create an HTML file named with the hook name in the directory `layouts/partials/hooks`.
 
