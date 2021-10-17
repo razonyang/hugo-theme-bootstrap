@@ -1,19 +1,19 @@
-<article class="post row card mb-4 component">
-  <div class="card-body">
-    {{- partial "post/panel" . -}}
-    <h1 class="card-title my-3">{{ partial "helpers/title" . }}</h1>
-    {{- partial "post/meta" . -}}
-    {{- partial "hooks/content-begin" . -}}
-    {{- partial "post/share" . -}}
-    {{- partial "post/toc" . -}}
-    <div class="post-content mb-3">
-      {{- .Content -}}
-    </div>
-    {{- partial "post/reward" . -}}
-    {{- partial "hooks/content-end" . -}}
-    <hr />
-    {{- partial "post/nav" . -}}
-    {{- partial "post/related-posts" . -}}
-  </div>
-</article>
-{{- partial "post/comments" . -}}
+    <article class="row card component mb-4 post">
+      {{- partial "post/panel" . -}}
+      <div class="card-body">
+        <h1 class="card-title my-3">{{ partial "helpers/title" . }}</h1>
+        {{- partial "post/meta" . -}}
+        {{- partial "hooks/content-begin" . -}}
+        {{- partial "post/share" . -}}
+        {{- partial "post/toc" . -}}
+        <div class="post-content mb-3">
+          {{- .Content -}}
+        </div>
+        {{- partial "post/reward" . -}}
+        {{- partial "hooks/content-end" . -}}
+        <hr />
+        {{- partial "post/nav" . -}}
+        {{- partial "post/related-posts" . -}}
+      </div>
+    </article>
+    {{- partial "post/comments" . -}}

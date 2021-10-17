@@ -81,14 +81,23 @@
     text-align: right;
     right: -1.5rem;
     top: -0.5rem;
+    margin-top: 8px;
 
     a {
       color: inherit;
-      margin-bottom: 0.5rem;
 
       &:hover,
       &.active {
         color: variable('accent');
+      }
+    }
+
+    .action {
+      margin-top: 0.25rem;
+      padding: .125rem .5rem .25rem;
+
+      &:not(:last-child) {
+        border-bottom: 1px #{$gray-500} dashed;
       }
     }
   }

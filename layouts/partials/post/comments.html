@@ -1,6 +1,6 @@
 {{- if and (default true .Site.Params.comment) (default true .Params.comment) -}}
 {{- partial "hooks/comments-begin" . -}}
-<div class="post-comments card row component">
+<div class="card component row post-comments">
   <div class="card-body">
     {{- partial "post/comments/disqus.html" . -}}
     {{- partial "post/comments/utterances" . -}}
