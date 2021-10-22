@@ -1,10 +1,7 @@
 class ModeSwitcher {
   public key: string = 'hbs-mode';
 
-  utterances: any;
-
   constructor(public element: HTMLInputElement) {
-    this.utterances = window.params.utterances;
   }
 
   run() {
@@ -56,29 +53,8 @@ class ModeSwitcher {
     }
     this.element.checked = checked;
     localStorage.setItem(this.key, value);
-    this.rerenderComments(value);
-  }
-
-  rerenderComments(mode: string) {
-    if (!this.utterances.repo) {
-      return;
-    }
-    if (this.utterances.theme !== '') {
-      return;
-    }
-    const comments = document.querySelector('.post-comments .card-body');
-    if (!comments) {
-      return;
-    }
-
-    const js = document.createElement('script');
-    js.setAttribute('src', 'https://utteranc.es/client.js');
-    js.setAttribute('repo', this.utterances.repo);
-    js.setAttribute('issue-term', this.utterances.issueTerm);
-    js.setAttribute('theme', mode === 'dark' ? 'github-dark' : 'github-light');
-    const clone = comments.cloneNode(false);
-    clone.appendChild(js);
-    comments.parentNode.replaceChild(clone, comments);
+    const event = new CustomEvent('hbs:mode', {'detail': {'mode': value}});
+    document.dispatchEvent(event);
   }
 }
 

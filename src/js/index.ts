@@ -17,6 +17,7 @@ import './sidebar-toggler';
 import './popover';
 import './fonts';
 import './image-viewer';
+import './utterances';
 
 declare global {
   interface Window {
