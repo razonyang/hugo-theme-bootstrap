@@ -6,7 +6,6 @@ import 'bootstrap/js/dist/modal';
 import 'bootstrap/js/dist/tab';
 import './mode';
 import './palette';
-import './social-share';
 import './scroller';
 import './table';
 import './anchor';
