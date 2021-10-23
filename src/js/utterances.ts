@@ -12,9 +12,9 @@ class Utterances {
             document.addEventListener('hbs:mode', function(e: CustomEvent) {
                 self.rerender(self.getTheme(e.detail.mode));
             });
-            if (localStorage.getItem('hbs-mode') === 'dark') {
-                self.rerender('github-dark');
-            }
+            setTimeout(function() {
+                self.rerender('github-' + localStorage.getItem('hbs-mode'));
+            }, 2000);
         }
     }
 
@@ -29,7 +29,6 @@ class Utterances {
         };
         const iframe = document.querySelector<HTMLIFrameElement>('.utterances-frame');
         iframe?.contentWindow?.postMessage(msg, 'https://utteranc.es');
-        console.log(1)
     }
 }
 
