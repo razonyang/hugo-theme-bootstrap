@@ -422,6 +422,7 @@ github = "githubusername"
 | `discord` | Discord 邀請碼 |
 | `discourse` | 論壇 URL |
 | `tiktok` | TikTok 使用者名稱 |
+| `pinterest` | Pinterest 使用者名稱 |
 
 ## 貢獻
 

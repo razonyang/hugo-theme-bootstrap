@@ -23,7 +23,8 @@
 {{- $lastfm := dict "lastfm" (dict "url" "https://www.last.fm/user/%s" "title" "Last.fm") -}}
 {{- $bilibili := dict "bilibili" (dict "url" "https://space.bilibili.com/%s" "title" "bilibili" "icon" "fas fa-tv") -}}
 {{- $tiktok := dict "tiktok" (dict "url" "https://www.tiktok.com/@%s" "title" "TikTok" "icon" "fab fa-tiktok") -}}
-{{- $items = merge $items $tumblr $reddit $telegram $qq $dockerhub $bitbucket $kaggle $lastfm $bilibili $tiktok -}}
+{{- $pinterest := dict "pinterest" (dict "url" "https://www.pinterest.com/%s" "icon" "fab fa-pinterest") -}}
+{{- $items = merge $items $tumblr $reddit $telegram $qq $dockerhub $bitbucket $kaggle $lastfm $bilibili $tiktok $pinterest -}}
 <nav class="social-links nav my-2 justify-content-center">
 {{- range $key, $user := .Site.Social -}}
   {{- if eq $key "email" -}}

@@ -423,6 +423,7 @@ github = "githubusername"
 | `discord` | Discord Invite Code |
 | `discourse` | Forum URL |
 | `tiktok` | TikTok Username |
+| `pinterest` | Pinterest Username |
 
 ## Contribute
 
