@@ -67,7 +67,7 @@ $bgNavbarTogglerIcon: url('/images/icons/menu.png');
   text-decoration: none !important;
 }
 
-.navbar-settings {
+.navbar-settings, .navbar-social-share {
   @extend .navbar-toggler;
 
   display: inline !important;

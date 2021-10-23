@@ -1,9 +1,9 @@
 import { library, dom, config } from '@fortawesome/fontawesome-svg-core';
 import {
   faAdjust, faArrowsAltV, faBars, faBuilding, faCalendarAlt, faCheckCircle, faChevronCircleDown, faChevronCircleUp, faChevronLeft, faChevronRight,
-  faCode, faCoffee, faColumns, faCopy, faCopyright, faEdit, faEnvelope, faExclamationTriangle, faExpandAlt, faEyeDropper, faFont, faFileAlt, 
+  faCode, faCoffee, faColumns, faCopy, faCopyright, faEdit, faEllipsisV, faEnvelope, faExclamationTriangle, faExpandAlt, faEyeDropper, faFont, faFileAlt, 
   faFileArchive, faFolder, faInfoCircle, faLanguage, faLink, faList, faListAlt, faMapMarkerAlt, faPalette, faRss, faSearch, faShare, faSkullCrossbones,
-  faShareAlt, faSlidersH, faSpinner, faSyncAlt, faTags, faTimes, faTv, faUndo, faUser,
+  faShareAlt, faSpinner, faSyncAlt, faTags, faTimes, faTv, faUndo, faUser,
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faStar,
@@ -20,9 +20,9 @@ config.searchPseudoElements = true;
 library.add(
   // Solid Icons
   faAdjust, faArrowsAltV, faBars, faBuilding, faCalendarAlt, faCheckCircle, faChevronCircleDown, faChevronCircleUp, faChevronLeft, faChevronRight,
-  faCode, faCoffee, faColumns, faCopy, faCopyright, faEdit, faEnvelope, faExclamationTriangle, faExpandAlt, faEyeDropper, faFont, faFileAlt, 
+  faCode, faCoffee, faColumns, faCopy, faCopyright, faEdit, faEllipsisV, faEnvelope, faExclamationTriangle, faExpandAlt, faEyeDropper, faFont, faFileAlt, 
   faFileArchive, faFolder, faInfoCircle, faLanguage, faLink, faList, faListAlt, faMapMarkerAlt, faPalette, faRss, faSearch, faShare, faSkullCrossbones,
-  faShareAlt, faSlidersH, faSpinner, faSyncAlt, faTags, faTimes, faTv, faUndo, faUser,
+  faShareAlt, faSpinner, faSyncAlt, faTags, faTimes, faTv, faUndo, faUser,
 
   // Regular Icons
   faStar,

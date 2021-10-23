@@ -72,6 +72,12 @@
 
 .navbar-settings {
   @include media-breakpoint-up(lg) {
-    order: 1;
+    order: 5;
+  }
+}
+
+.navbar-social-share {
+  @include media-breakpoint-up(lg) {
+    order: 4;
   }
 }
