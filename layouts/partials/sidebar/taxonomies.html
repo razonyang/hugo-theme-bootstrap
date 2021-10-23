@@ -12,7 +12,7 @@
         <div>
         {{- range $idx, $taxonomy := . -}}
           {{- if lt $idx $taxonomyCount -}}
-          <a href="{{ $taxonomy.Page.Permalink }}" class="post-taxonomy rounded btn btn-sm btn-outline-primary me-2 mb-2" title="{{ $taxonomy.Page.Title }}">
+          <a href="{{ $taxonomy.Page.Permalink }}" class="badge bg-primary text-white rounded post-taxonomy" title="{{ $taxonomy.Page.Title }}">
             {{ $taxonomy.Page.Title }}
           </a>
           {{- end -}}

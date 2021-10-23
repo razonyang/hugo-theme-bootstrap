@@ -54,12 +54,12 @@
         <a {{ printf "href={{permalink}}" | safeHTMLAttr }}>{{ print "{{title}}" }}</a>
       </h2>
       <div class="search-result-taxonomies mb-3">
-        <span class="search-result-taxonomy">{{ printf "{{date}}" }}</span>
+        <span class="post-date">{{ printf "{{date}}" }}</span>
         {{- $baseURL := absLangURL "" -}}
         {{- $placeholder := "{{#url}}{{.}}{{/url}}" -}}
         {{- range slice "series" "categories" "tags" -}}
         {{ printf "{{#%s}}" . }}
-        <a {{ printf "href=\"%s%s/%s/\"" $baseURL . $placeholder | safeHTMLAttr }} class="search-result-taxonomy">{{ printf "{{.}}" }}</a>
+        <a {{ printf "href=\"%s%s/%s/\"" $baseURL . $placeholder | safeHTMLAttr }} class="badge bg-primary text-white rounded-pill post-taxonomy">{{ printf "{{.}}" }}</a>
         {{ printf "{{/%s}}" . }}
         {{- end -}}
       </div>

@@ -17,7 +17,7 @@
   {{- end -}}
   {{- range $key, $value := .Site.Taxonomies -}}
     {{- range ($.GetTerms $key) -}}
-    <a href="{{ .Permalink }}" class="post-taxonomy">{{ .Name }}</a>
+    <a href="{{ .Permalink }}" class="badge rounded-pill text-white bg-primary post-taxonomy">{{ .Name }}</a>
     {{- end -}}
   {{- end -}}
 </div>

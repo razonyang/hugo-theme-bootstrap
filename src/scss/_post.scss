@@ -4,13 +4,6 @@
   color: variable('secondary-text-on-surface');
   word-break: break-all;
 
-  .post-taxonomy + .post-taxonomy::before {
-    content: '·';
-    margin-right: 0.5rem;
-    display: inline-block;
-    text-decoration: none;
-  }
-
   * {
     margin-right: 0.5rem;
   }
@@ -126,7 +119,13 @@
 }
 
 .post-taxonomy {
-  margin: 0 0.25rem 0.25rem 0;
+  margin: .25rem;
+  opacity: 0.9;
+
+  &:hover {
+    opacity: 1;
+    text-decoration: none;
+  }
 }
 
 #offcanvasTOC {

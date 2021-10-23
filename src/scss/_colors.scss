@@ -5,3 +5,7 @@ $dark-disabled: rgba(0, 0, 0, 0.38);
 $white-primary: rgb(225, 225, 225);
 $white-secondary: rgba(225, 225, 225, 0.7);
 $white-disabled: rgba(225, 225, 225, 0.5);
+
+.bg-primary {
+    background-color: variable('primary')!important;
+}
