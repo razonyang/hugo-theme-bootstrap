@@ -9,6 +9,7 @@ module.exports = {
     search: ['./src/search/index.ts'],
     katex: ['./src/katex/index.ts', './src/katex/index.scss'],
     mermaid: ['./src/mermaid/index.ts'],
+    utterances: ['./src/utterances/index.ts'],
     viewer: ['./src/viewer/index.ts', './src/viewer/index.scss'],
   },
   mode: 'production',
