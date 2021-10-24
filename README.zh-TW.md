@@ -4,7 +4,7 @@
 [简体中文](https://github.com/razonyang/hugo-theme-bootstrap/blob/master/README.zh-CN.md) · 
 [繁體中文](https://github.com/razonyang/hugo-theme-bootstrap/blob/master/README.zh-TW.md)
 
-一個極快、響應式和功能豐富的 Hugo 部落格主題。
+一個快速、響應式和功能豐富的 Hugo 部落格主題。
 
 ## 截圖
 
@@ -164,7 +164,6 @@ $ hugo new -c content/zh-cn posts/newpost.md
 | `postDate` | Boolean | `true` | 是否显示发表日期
 | `math` | Boolean | `false` | 是否開啟 `math`。
 | `diagram` | Boolean | `false` | 是否開啟 `diagram`。
-| `mermaid` | Object | - | [Mermaid 配置](https://mermaid-js.github.io/mermaid/#/Setup?id=configuration).
 | `logo` | String | `images/logo.webp` | Logo。設置為 `false` 以禁用 Logo。
 | `brand` | String | - | Brand
 | `description` | String | - | 站點描述
@@ -243,8 +242,6 @@ $ hugo new -c content/zh-cn posts/newpost.md
 | `post` | Object | - | 
 | `post.excerpt` | String | `Summary` | 可選項：`description`
 | `post.excerptMaxLength` | Integer | `320` | 
-| **Katex**
-| `katex` | Object | - | Katex 參數，請參閱 https://katex.org/docs/autorender.html 和 https://katex.org/docs/options.html
 | **Image Viewer**
 | `viewer` | Boolean | true | 是否開啟圖片瀏覽器
 

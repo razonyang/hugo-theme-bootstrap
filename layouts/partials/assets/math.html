@@ -1,4 +1,6 @@
 {{- if or .Params.math .Site.Params.math -}}
-{{- $script := resources.Get "js/katex.js" | resources.Fingerprint -}}
+{{- $mainScript := resources.Get "js/katex.js" }}
+{{- $configScript := resources.Get "js/katex.config.js" | resources.ExecuteAsTemplate "katex.config.js" . -}}
+{{- $script := slice $configScript $mainScript | resources.Concat "js/katex.js" | resources.Minify | resources.Fingerprint -}}
 <script defer src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>
 {{- end -}}

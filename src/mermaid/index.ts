@@ -2,8 +2,8 @@ import * as Mermaid from 'mermaid';
 
 declare global {
   interface Window {
-    params: any;
+    mermaidOptions: any;
   }
 }
 
-Mermaid.initialize(window.params.mermaid);
+Mermaid.initialize(window.mermaidOptions);

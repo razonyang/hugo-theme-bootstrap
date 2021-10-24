@@ -1,4 +1,6 @@
 {{- if or .Params.diagram .Site.Params.diagram -}}
-{{- $script := resources.Get "js/mermaid.js" | resources.Fingerprint -}}
+{{- $mainScript := resources.Get "js/mermaid.js" }}
+{{- $configScript := resources.Get "js/mermaid.config.js" | resources.ExecuteAsTemplate "mermaid.config.js" . -}}
+{{- $script := slice $configScript $mainScript | resources.Concat "js/mermaid.js" | resources.Minify | resources.Fingerprint -}}
 <script defer src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>
 {{- end -}}
