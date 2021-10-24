@@ -33,7 +33,7 @@ There is also a [list of websites that use this theme](https://github.com/razony
 - Search.
 - Breadcrumb.
 - Archive.
-- Image Viewer.
+- [Image Viewer](#image-viewer).
 - Resizing images by adding URL query, such as `width=300px` and `height=200px`.
 - Aligning images by adding URL fragments, such as `#center`, `#floatleft` and `#floatright` represents align center, float left and float right respectively.
 - [Syntax Highlighting](#syntax-highlighting)
@@ -246,6 +246,8 @@ As the example site shown, the configuration are separated into multiple files, 
 | `post.excerptMaxLength` | Integer | `320` | 
 | **Katex**
 | `katex` | Object | - | Katex options, see also https://katex.org/docs/autorender.html and https://katex.org/docs/options.html
+| **Image Viewer**
+| `viewer` | Boolean | true | Turn on/off image viewer.
 
 > Except the Google webmaster tool, the other webmaster tools cannot work with `hugo --minify`, because they cannot recognize the minified meta tag.
 
@@ -368,6 +370,22 @@ For example:
 ```shell
 $ echo "SIDEBAR BEGIN" > layouts/partials/hooks/sidebar-begin.html
 ```
+
+## Image Viewer
+
+Image Viewer was turned on by default, you can turn it off by setting the parameter `viewer` as `false`.
+
+### Options
+
+```js
+// assets/js/viewer.config.js
+window.viewerOptions = {
+    className: "image-viewer",
+    // ...
+};
+```
+
+Avialable options are listed on [Viewer.js Options](https://github.com/fengyuanchen/viewerjs#options).
 
 ## Shortcodes
 

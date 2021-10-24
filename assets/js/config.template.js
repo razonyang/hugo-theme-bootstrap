@@ -8,5 +8,5 @@ window.params = {
         theme: {{ default "" $params.utterances.theme | printf "%q" }},
     },
     katex: {{ if $params.katex }}{{ $params.katex | jsonify }}{{ else }}{{ printf "{}" }}{{ end }},
-    mermaid: {{ if $params.mermaid }}{{ $params.mermaid | jsonify }}{{ else }}{{ printf "{}" }}{{ end }}
+    mermaid: {{ if $params.mermaid }}{{ $params.mermaid | jsonify }}{{ else }}{{ printf "{}" }}{{ end }},
 }
