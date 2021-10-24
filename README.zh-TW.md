@@ -33,7 +33,7 @@
 - 搜尋
 - 麵包屑導航
 - 歸檔
-- 圖片查看器
+- [圖片瀏覽器](#圖片瀏覽器)
 - 可以通過 URL 參數調整圖片大小，比如 `width=300px` 和 `height=200px`
 - 可以通過添加 URL 段實現圖片對齊，比如 `#center`，`#floatleft` 和 `#floatright` 分別表示居中、左浮動和右浮動。
 - 資源延遲載入：支援 `image` 和 `iframe` 等。
@@ -245,6 +245,8 @@ $ hugo new -c content/zh-cn posts/newpost.md
 | `post.excerptMaxLength` | Integer | `320` | 
 | **Katex**
 | `katex` | Object | - | Katex 參數，請參閱 https://katex.org/docs/autorender.html 和 https://katex.org/docs/options.html
+| **Image Viewer**
+| `viewer` | Boolean | true | 是否開啟圖片瀏覽器
 
 > 除了 Google 站長工具外，其他搜索引擎站長工具無法與 `hugo --minify` 同時使用，這是因為它們無法識別優化後的元標簽。
 
@@ -367,6 +369,22 @@ $ echo "MY COMMENTS WIDGET" > layouts/partials/post/comments/custom.html
 ```shell
 $ echo "SIDEBAR BEGIN" > layouts/partials/hooks/sidebar-begin.html
 ```
+
+## 圖片瀏覽器
+
+圖片瀏覽器默認啟用，你可以通過設定 `viewer` 參數為 `false` 以關閉該功能。
+
+### 選項
+
+```js
+// assets/js/viewer.config.js
+window.viewerOptions = {
+    className: "image-viewer",
+    // ...
+};
+```
+
+[Viewer.js Options](https://github.com/fengyuanchen/viewerjs#options) 列出了可用的選項。
 
 ## 短程式碼
 
