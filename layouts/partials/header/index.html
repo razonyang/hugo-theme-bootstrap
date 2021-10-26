@@ -12,7 +12,6 @@
       {{- end -}}
       {{ with .Site.Params.brand }}{{ . }}{{ else }}{{ $.Site.Title }}{{ end }}
     </a>
-    {{ partial "header/social-share" . }}
     {{ partial "header/settings" . }}
     <div class="collapse navbar-collapse" tabindex="-1" id="navbarSupportedContent" aria-labelledby="navbarSupportedContent">
       {{ partial "header/search-bar" . }}
@@ -47,6 +46,9 @@
         {{- end -}}
         {{- end -}}
       </ul>
+
+      <form class="mode-switcher-form d-flex align-items-center"><div class="form-check form-switch"><input class="form-check-input" type="checkbox" id="modeSwitcher"></div></form>
+
     </div>
   </div>
 </nav>
