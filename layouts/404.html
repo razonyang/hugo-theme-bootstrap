@@ -7,3 +7,16 @@
   </div>
 </div>
 {{ end }}
+
+{{ define "main"}}
+    <main id="notFound" class="d-flex flex-column">
+        <h1 class="p-2 justify-content-center">Something went wrong but it works on my computer</h1>
+        <a class="p-2" href="{{ "/" | relURL }}"><img src="/images/404.png"></a>
+    </main>
+{{ end }}
+{{ define "sidebar"}}
+<div></div>
+{{ end }}
+
+
+sidebar
