@@ -124,3 +124,20 @@ viewer = true # Image Viewer
   # small = ".9rem"
   # large = "1.1rem"
   # extraLarge = "1.2rem"
+
+[pwa]
+  [pwa.manifest]
+    # name = "" # Default to site title.
+    short_name = "HBS"
+    # display = "fullscreen" # Default to standalone.
+    # description = "" # Default to site description.
+    # theme_color = ""
+    # background_color = ""
+
+    # Icons
+    # [[pwa.manifest.icons]]
+    #   sizes = "96x96"
+    #   src = "/images/icons/icon-96x96.png"
+    # [[pwa.manifest.icons]]
+    #   sizes = "144x144"
+    #   src = "/images/icons/icon-144x144.png"
