@@ -29,8 +29,18 @@ pygmentsUseClasses = true
 [blackfriday]
   hrefTargetBlank = true
 
+[mediaTypes]
+  [mediaTypes."application/manifest+json"]
+    suffixes = ["json"]
+  
+[outputFormats]
+  [outputFormats.MANIFEST]
+    name = "manifest"
+    baseName = "manifest"
+    mediaType = "application/manifest+json"
+
 [outputs]
-  home = ["HTML", "RSS", "JSON"]
+  home = ["HTML", "RSS", "JSON", "MANIFEST"]
 
 [taxonomies]
   category = "categories"

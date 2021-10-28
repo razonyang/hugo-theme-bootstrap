@@ -17,7 +17,11 @@
     "mustache": "^4.0.1",
     "node-sass": "^6.0.1",
     "popper.js": "^1.16.1",
-    "viewerjs": "^1.10.2"
+    "viewerjs": "^1.10.2",
+    "workbox-cacheable-response": "^6.3.0",
+    "workbox-expiration": "^6.3.0",
+    "workbox-routing": "^6.3.0",
+    "workbox-strategies": "^6.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
