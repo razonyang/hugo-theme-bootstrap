@@ -1,0 +1,31 @@
+{{ define "content" }}
+<div class="col-lg-8">
+    {{- partial "breadcrumb" . -}}
+    <div class="contact row component card">
+        <div class="card-body">
+            <form class="needs-validation" name="contact" method="POST" data-netlify="true" novalidate>
+                <div class="mb-3">
+                  <label for="contactName" class="form-label">{{ "contact_name" | i18n }}</label>
+                  <input name="name" class="form-control" id="contactName" required>
+                </div>
+                <div class="mb-3">
+                  <label for="contactEmail" class="form-label">{{ "contact_email" | i18n }}</label>
+                  <input type="email" name="email" class="form-control" id="contactEmail" aria-describedby="emailHelp" required>
+                  <div id="emailHelp" class="form-text">{{ "contact_email_help" | i18n }}</div>
+                </div>
+                <div class="mb-3">
+                  <label for="contactSubject" class="form-label">{{ "contact_subject" | i18n }}</label>
+                  <input class="form-control" name="subject" id="contactSubject" required>
+                </div>
+                <div class="mb-3">
+                  <label for="contactMessage" class="form-label">{{ "contact_message" | i18n }}</label>
+                  <textarea class="form-control" name="message" id="contactMessage"></textarea>
+                </div>
+                <button type="submit" class="btn btn-outline-primary">{{ "button_submit" | i18n }}</button>
+              </form>
+        </div>
+    </div>
+</div>
+{{- partial "sidebar" . -}}
+{{ end }}
+  

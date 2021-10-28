@@ -16,4 +16,7 @@
 <div class="profile-about"><i class="fas fa-fw fa-user"></i><a href="{{ .Permalink }}">{{ .Title }}</a></div>
 {{- end -}}
 {{- end -}}
+{{- with $.GetPage "contact" -}}
+<div class="profile-contact"><i class="fas fa-fw fa-question-circle"></i><a href="{{ .Permalink }}">{{ .Title }}</a></div>
+{{- end -}}
 {{- end -}}

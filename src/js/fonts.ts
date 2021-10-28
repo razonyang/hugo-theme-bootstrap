@@ -2,7 +2,8 @@ import { library, dom, config } from '@fortawesome/fontawesome-svg-core';
 import {
   faAdjust, faArrowsAltV, faBars, faBuilding, faCalendarAlt, faCheckCircle, faChevronCircleDown, faChevronCircleUp, faChevronLeft, faChevronRight,
   faCode, faCoffee, faColumns, faCopy, faCopyright, faEdit, faEllipsisV, faEnvelope, faExclamationTriangle, faExpandAlt, faEyeDropper, faFont, faFileAlt, 
-  faFileArchive, faFolder, faInfoCircle, faLanguage, faLink, faList, faListAlt, faMapMarkerAlt, faPalette, faRss, faSearch, faShareAlt, faSkullCrossbones,
+  faFileArchive, faFolder, faInfoCircle, faLanguage, faLink, faList, faListAlt, faMapMarkerAlt, faPalette, faQuestion, faQuestionCircle, faRss, faSearch, 
+  faShareAlt, faSkullCrossbones,
   faSpinner, faSyncAlt, faTags, faTimes, faTv, faUndo, faUser,
 } from '@fortawesome/free-solid-svg-icons';
 import {
@@ -21,7 +22,8 @@ library.add(
   // Solid Icons
   faAdjust, faArrowsAltV, faBars, faBuilding, faCalendarAlt, faCheckCircle, faChevronCircleDown, faChevronCircleUp, faChevronLeft, faChevronRight,
   faCode, faCoffee, faColumns, faCopy, faCopyright, faEdit, faEllipsisV, faEnvelope, faExclamationTriangle, faExpandAlt, faEyeDropper, faFont, faFileAlt, 
-  faFileArchive, faFolder, faInfoCircle, faLanguage, faLink, faList, faListAlt, faMapMarkerAlt, faPalette, faRss, faSearch, faShareAlt, faSkullCrossbones,
+  faFileArchive, faFolder, faInfoCircle, faLanguage, faLink, faList, faListAlt, faMapMarkerAlt, faPalette, faQuestion, faQuestionCircle, faRss, faSearch, 
+  faShareAlt, faSkullCrossbones,
   faSpinner, faSyncAlt, faTags, faTimes, faTv, faUndo, faUser,
 
   // Regular Icons
