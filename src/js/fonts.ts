@@ -12,8 +12,8 @@ import {
 import {
   faAlipay, faBitbucket, faCreativeCommons, faCreativeCommonsBy, faCreativeCommonsNc, faCreativeCommonsNd, faCreativeCommonsSa,
   faDiscord, faDiscourse, faDocker, faFacebookF, faFacebookSquare, faGithub, faGitlab, faInstagram, faKaggle, faLastfm,
-  faLinkedinIn, faMediumM, faPinterest, faQq, faQuora, faReddit, faStackOverflow, faTelegramPlane, faTiktok, faTumblr, faTwitter,
-  faYoutube, faWeibo, faWeixin, faZhihu,
+  faLinkedinIn, faMediumM, faPaypal, faPatreon, faPinterest, faQq, faQuora, faReddit, faStackOverflow, faTelegramPlane, faTiktok, 
+  faTumblr, faTwitter, faYoutube, faWeibo, faWeixin, faZhihu,
 } from '@fortawesome/free-brands-svg-icons';
 
 config.searchPseudoElements = true;
@@ -32,8 +32,8 @@ library.add(
   // Brands
   faAlipay, faBitbucket, faCreativeCommons, faCreativeCommonsBy, faCreativeCommonsNc, faCreativeCommonsNd, faCreativeCommonsSa,
   faDiscord, faDiscourse, faDocker, faFacebookF, faFacebookSquare, faGithub, faGitlab, faInstagram, faKaggle, faLastfm,
-  faLinkedinIn, faMediumM, faPinterest, faQq, faQuora, faReddit, faStackOverflow, faTelegramPlane, faTiktok, faTumblr, faTwitter,
-  faYoutube, faWeibo, faWeixin, faZhihu,
+  faLinkedinIn, faMediumM, faPaypal, faPatreon, faPinterest, faQq, faQuora, faReddit, faStackOverflow, faTelegramPlane, faTiktok, 
+  faTumblr, faTwitter, faYoutube, faWeibo, faWeixin, faZhihu,
 );
 
 document.addEventListener('DOMContentLoaded', () => {
