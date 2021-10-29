@@ -1,5 +1,7 @@
+import faBilibili from './faBilibili';
 import faLiberapay from './faLiberapay';
 
-export default {
+export {
+  faBilibili,
   faLiberapay,
 };

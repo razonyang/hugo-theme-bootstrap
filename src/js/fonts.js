@@ -17,9 +17,7 @@ import {
   faMediumM, faPaypal, faPatreon, faPinterest, faQq, faQuora, faReddit, faStackOverflow,
   faTelegramPlane, faTiktok, faTumblr, faTwitter, faYoutube, faWeibo, faWeixin, faZhihu,
 } from '@fortawesome/free-brands-svg-icons';
-import faLiberapay from './icons';
-
-console.log(faLiberapay);
+import { faLiberapay, faBilibili } from './icons';
 
 config.searchPseudoElements = true;
 
@@ -43,7 +41,7 @@ library.add(
   faTelegramPlane, faTiktok, faTumblr, faTwitter, faYoutube, faWeibo, faWeixin, faZhihu,
 
   // Custom Icons
-  faLiberapay,
+  faBilibili, faLiberapay,
 );
 
 document.addEventListener('DOMContentLoaded', () => {
