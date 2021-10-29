@@ -82,6 +82,9 @@ other = "Home"
 [language]
 other = "Language"
 
+[liberapay]
+other = "Liberapay"
+
 [load_more]
 other = "Load More"
 

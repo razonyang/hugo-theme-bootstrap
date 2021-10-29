@@ -112,6 +112,7 @@ viewer = true # Image Viewer
   wechat = "images/reward/wechat.png"
   #paypal = "images/reward/paypal.png"
   #patreon = "images/reward/patreon.png"
+  #liberapay = "images/reward/liberapay.png"
 
 #[share]
   #addThis = "" # AddThis pubid.
