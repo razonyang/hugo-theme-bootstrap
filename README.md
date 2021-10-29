@@ -48,6 +48,7 @@ There is also a [list of websites that use this theme](https://github.com/razony
 - [Various Shortcodes](#shortcodes).
 - [Twitter Cards](https://gohugo.io/templates/internal/#configure-twitter-cards) and [Open Graph](https://gohugo.io/templates/internal/#configure-open-graph).
 - [Creative Commons License](https://creativecommons.org/licenses/)
+- Netlify Contact Form
 
 ## Installation
 

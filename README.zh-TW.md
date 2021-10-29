@@ -47,6 +47,7 @@
 - [多樣的短程式碼](#短程式碼)
 - [Twitter Cards](https://gohugo.io/templates/internal/#configure-twitter-cards) 和 [Open Graph](https://gohugo.io/templates/internal/#configure-open-graph)
 - [知識共享許可協議](https://creativecommons.org/licenses/)
+- Netlify 聯繫表單
 
 ## 安裝
 
