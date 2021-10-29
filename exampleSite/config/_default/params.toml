@@ -110,6 +110,8 @@ viewer = true # Image Viewer
 [reward]
   alipay = "images/reward/alipay.png"
   wechat = "images/reward/wechat.png"
+  #paypal = "images/reward/paypal.png"
+  #patreon = "images/reward/patreon.png"
 
 #[share]
   #addThis = "" # AddThis pubid.
