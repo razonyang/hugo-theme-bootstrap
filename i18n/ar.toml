@@ -7,6 +7,9 @@ other = "علي باي"
 [archives]
 other = "الأرشيف"
 
+[button_submit]
+other = "إرسال"
+
 [buy_me_a_coffee]
 other = "اشتري لي كوب قهوة"
 
@@ -49,6 +52,21 @@ other = "أزرق مُخضر"
 [color_yellow]
 other = "أصفر"
 
+[contact_name]
+other = "الاسم"
+
+[contact_email]
+other = "البريد اﻹلكتروني"
+
+[contact_email_help]
+other = "لن نشارك أبدُا بريدك اﻹلكتروني مع أي شخص آخر."
+
+[contact_subject]
+other = "الموضوع"
+
+[contact_message]
+other = "الرسالة"
+
 [copyright]
 other = "حقوق النشر"
 
@@ -64,6 +82,9 @@ other = "الرئيسية"
 [language]
 other = "اللغة"
 
+[liberapay]
+other = "ليبرا باي"
+
 [load_more]
 other = "تحميل المزيد"
 
@@ -75,6 +96,12 @@ other = "الصفحة {{ .PageNumber }}"
 
 [palette]
 other = "لوح الألوان"
+
+[patreon]
+other = "باتريون"
+
+[paypal]
+other = "ياي بال"
 
 [post_count]
 one = "{{ .Count }} منشور"
