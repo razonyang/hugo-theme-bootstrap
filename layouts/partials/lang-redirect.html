@@ -1,0 +1,27 @@
+<script>
+
+if (!localStorage['pcb-visited']) {
+
+  localStorage['pcb-visited'] = true;
+  var userLang = navigator.language || navigator.userLanguage;
+  userLang = userLang.split('-')[0].toLowerCase();
+
+  var siteLang = document.documentElement.lang;
+
+  console.log('siteLang:userLang = ' + siteLang + ':' + userLang);
+
+  var redirectTo = function(fromLang, toLang) {
+    var currentLocation = '' + window.location;
+    var newLocation = currentLocation.replace(fromLang, toLang);
+    console.log('redirecting to: ' + newLocation);
+    window.location.replace(newLocation);
+  }
+
+  if (userLang === 'pt' && siteLang === 'en') {
+    redirectTo('/en/', '/pt/');
+  } else if (userLang === 'en' && siteLang === 'pt') {
+    redirectTo('/pt/', '/en/');
+  }
+}
+
+</script>

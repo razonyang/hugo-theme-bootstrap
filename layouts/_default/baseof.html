@@ -10,6 +10,7 @@
   </head>
   {{- $color := $.Site.Params.color -}}
   <body{{ if in (slice "light" "dark") $color }}{{ printf " class=\"mode-%s\"" $color | safeHTMLAttr }}{{ end }}>
+    {{- partial "lang-redirect.html" . -}}
     {{- partial "noflicker.html" . -}}
     {{- partial "header.html" . -}}
     {{- partial "hooks/main-begin" . -}}
