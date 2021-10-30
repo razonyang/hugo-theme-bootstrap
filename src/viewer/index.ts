@@ -8,22 +8,35 @@ declare global {
 
 class Gallery {
     gallery: Viewer;
-    options: any;
+    
+    excludeClassNames = [
+      'profile-avatar',
+    ];
 
     constructor() {
-        this.options = window.viewerOptions;
-        this.gallery = new Viewer(document.querySelector('main'), this.options);
+        const self = this;
+        const defaultOptions: Viewer.Options = {
+            filter(img: HTMLImageElement) {
+                return self.isImageValid(img);
+            },
+        }
+
+        this.gallery = new Viewer(document.querySelector('main'), Object.assign(defaultOptions, window.viewerOptions));
     }
 
     run() {
         const self = this;
         document.querySelectorAll('img').forEach(function (img) {
-            if (img.parentElement.tagName !== 'A') {
+            if (img.parentElement.tagName !== 'A' && self.isImageValid(img)) {
               img.addEventListener('click', function () {
                 self.gallery.show();
               });
             }
         });
+    }
+
+    isImageValid(img) {
+      return this.excludeClassNames.filter(name => img.classList.contains(name)).length == 0;
     }
 }
 
