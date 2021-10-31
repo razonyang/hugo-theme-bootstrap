@@ -122,5 +122,8 @@ other = "Table Of Contents"
 [tags]
 other = "Tags"
 
+[author]
+other = "Autores"
+
 [wechat]
 other = "WeChat"
