@@ -4,7 +4,6 @@
     <i class="fas fa-fw fa-calendar-alt"></i>{{ .Date | time.Format (default "Jan 2, 2006" $.Site.Params.dateFormat) }}
   </span>
   {{- end -}}
-  {{ time "2020-10-20" }} 
   {{ if gt .Lastmod .Date }}
   <span class="post-date me-2" title="{{ i18n "post_updated_on" }}">
       <i class="fas fa-sync-alt"></i>
