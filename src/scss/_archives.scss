@@ -6,6 +6,7 @@
   }
 
   .post-title {
+    font-family: var(--hbs-font-share-tech);
     color: variable('secondary-text-on-surface');
 
     &:hover {

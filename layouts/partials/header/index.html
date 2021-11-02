@@ -6,10 +6,7 @@
       <i class="fas fa-bars"></i>
     </button>
     {{- $logo := (default "images/logo.webp" .Site.Params.logo) -}}
-    <a class="navbar-brand me-3{{ if .IsHome }} active{{ end }}" href="{{ "" | absLangURL }}">
-      {{- if $logo -}}
-        {{ partial "helpers/image" (dict "filename" $logo "alt" "Logo" "class" "logo" "resources" .Resources) }}
-      {{- end -}}
+    <a class="navbar-brand text-center me-3{{ if .IsHome }} active{{ end }}" href="{{ "" | absLangURL }}">
       {{ with .Site.Params.brand }}{{ . }}{{ else }}{{ $.Site.Title }}{{ end }}
     </a>
     {{ partial "header/settings" . }}
@@ -46,7 +43,6 @@
         {{- end -}}
         {{- end -}}
       </ul>
-
       <form class="mode-switcher-form d-flex align-items-center"><div class="form-check form-switch"><input class="form-check-input" type="checkbox" id="modeSwitcher"></div></form>
 
     </div>
