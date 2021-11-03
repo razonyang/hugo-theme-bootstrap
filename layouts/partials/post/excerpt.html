@@ -5,5 +5,5 @@
 {{- else -}}
   {{- $content = .Summary -}}
 {{- end -}}
-{{- $maxLength := default 320 $.Site.Params.post.excerptMaxLength -}}
-{{- replaceRE "[^>]*#" "" $content 1 | truncate $maxLength -}}
+{{- $maxLength := default 340 $.Site.Params.post.excerptMaxLength -}}
+{{- replaceRE "[^>]*¨" "" $content 1 | truncate $maxLength -}}
