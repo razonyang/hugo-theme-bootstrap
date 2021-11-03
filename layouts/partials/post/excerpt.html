@@ -6,4 +6,4 @@
   {{- $content = .Summary -}}
 {{- end -}}
 {{- $maxLength := default 320 $.Site.Params.post.excerptMaxLength -}}
-{{- $content | truncate $maxLength -}}
+{{- replaceRE "[^>]*#" "" $content 1 | truncate $maxLength -}}
