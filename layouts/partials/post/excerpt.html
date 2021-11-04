@@ -6,4 +6,4 @@
   {{- $content = .Summary -}}
 {{- end -}}
 {{- $maxLength := default 340 $.Site.Params.post.excerptMaxLength -}}
-{{- replaceRE "[^>]*¨" "" $content 1 | truncate $maxLength -}}
+{{- replaceRE "[^>]*===exibe no card daqui pra baixo===" "" $content 1 | truncate $maxLength -}}

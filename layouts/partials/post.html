@@ -6,8 +6,9 @@
         {{- partial "hooks/content-begin" . -}}
         {{- partial "post/share" . -}}
         {{- partial "post/toc" . -}}
+        {{- $postcontent := replace .Content "===exibe no card daqui pra baixo===" "" -}}
         <div class="post-content mb-3">
-          {{- .Content -}}
+          {{- $postcontent | safeHTML -}}
         </div>
         {{- partial "post/reward" . -}}
         {{- partial "hooks/content-end" . -}}
