@@ -17,6 +17,7 @@
 ## 线上预览
 
 - https://hbs.razonyang.com/ - 部署于 Netlify。
+- https://hbs-cn.razonyang.com/ - 部署在位于中国的自助托管服务器。
 
 这还有个[使用这个主题的网站列表](https://github.com/razonyang/hugo-theme-bootstrap/blob/master/USERS.md)。
 
