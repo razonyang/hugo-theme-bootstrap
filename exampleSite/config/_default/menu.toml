@@ -1,15 +1,23 @@
 [[main]]
-  name = "Dropdown"
-  identifier = "dropdown"
+  name = "Repository"
+  identifier = "Repository"
+  pre = '<i class="fab fa-fw fa-github"></i>'
+  url = "https://github.com/razonyang/hugo-theme-bootstrap"
+  weight = 99
+[[main]]
+  name = "Demo Sites"
+  identifier = "demo"
   pre = '<i class="fas fa-fw fa-chevron-circle-down"></i>'
+  weight = 100
 [[main]]
   id = "github"
-  parent = "dropdown"
-  name = "Github"
-  url = "https://github.com/razonyang/hugo-theme-bootstrap"
-  pre = '<i class="fab fa-fw fa-github"></i>'
+  parent = "demo"
+  name = "Netlify"
+  weight = 1
+  url = "https://hbs.razonyang.com"
 [[main]]
-  id = "manual"
-  parent = "dropdown"
-  name = "Manual"
-  url = "en/series/manual"
+  id = "china"
+  parent = "demo"
+  name = "China"
+  weight = 2
+  url = "https://hbs-cn.razonyang.com"
