@@ -1,5 +1,0 @@
-dateFormat = "2006-01-02"
-description = "一个极快、响应式和功能丰富的 Hugo 博客主题"
-keywords = "Hugo, Bootstrap, 博客主题"
-[archive]
-  dateFormat = "01-02"
