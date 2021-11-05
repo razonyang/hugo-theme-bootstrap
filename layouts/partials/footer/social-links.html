@@ -21,7 +21,7 @@
 {{- $discourse := dict "discourse" (dict "url" "%s" "icon" "fab fa-discourse") -}}
 {{- $items := merge $github $gitlab $twitter $facebook $facebookGroup $linkedin $stackoverflow $weibo $zhihu $quora $instagram $discourse $discord $youtube -}}
 {{- $lastfm := dict "lastfm" (dict "url" "https://www.last.fm/user/%s" "title" "Last.fm") -}}
-{{- $bilibili := dict "bilibili" (dict "url" "https://space.bilibili.com/%s" "title" "bilibili" "icon" "fas fa-tv") -}}
+{{- $bilibili := dict "bilibili" (dict "url" "https://space.bilibili.com/%s" "title" "bilibili" "icon" "fab fa-bilibili") -}}
 {{- $tiktok := dict "tiktok" (dict "url" "https://www.tiktok.com/@%s" "title" "TikTok" "icon" "fab fa-tiktok") -}}
 {{- $pinterest := dict "pinterest" (dict "url" "https://www.pinterest.com/%s" "icon" "fab fa-pinterest") -}}
 {{- $items = merge $items $tumblr $reddit $telegram $qq $dockerhub $bitbucket $kaggle $lastfm $bilibili $tiktok $pinterest -}}

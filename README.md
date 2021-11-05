@@ -14,9 +14,10 @@ A fast, responsive and feature-rich blog theme for Hugo.
 
 ![Screenshot in Light Mode](https://raw.githubusercontent.com/razonyang/hugo-theme-bootstrap/master/images/screenshot-light.png)
 
-## Live Preview
+## Demo Sites
 
 - https://hbs.razonyang.com/ - Deploy on Netlify.
+- https://hbs-cn.razonyang.com/ - Self-Hosted server located in China.
 
 There is also a [list of websites that use this theme](https://github.com/razonyang/hugo-theme-bootstrap/blob/master/USERS.md).
 
@@ -48,6 +49,7 @@ There is also a [list of websites that use this theme](https://github.com/razony
 - [Various Shortcodes](#shortcodes).
 - [Twitter Cards](https://gohugo.io/templates/internal/#configure-twitter-cards) and [Open Graph](https://gohugo.io/templates/internal/#configure-open-graph).
 - [Creative Commons License](https://creativecommons.org/licenses/)
+- Netlify Contact Form
 
 ## Installation
 

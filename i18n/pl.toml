@@ -7,6 +7,9 @@ other = "Alipay"
 [archives]
 other = "Archiwum"
 
+[button_submit]
+other = "Wyślij"
+
 [buy_me_a_coffee]
 other = "Kup mi kawę"
 
@@ -49,6 +52,21 @@ other = "Turkusowy"
 [color_yellow]
 other = "Żółty"
 
+[contact_name]
+other = "Imię"
+
+[contact_email]
+other = "E-mail"
+
+[contact_email_help]
+other = "Nigdy nie udostępnimy Twojego adresu e-mail nikomu innemu."
+
+[contact_subject]
+other = "Temat"
+
+[contact_message]
+other = "Wiadomość"
+
 [copyright]
 other = "Prawa autorskie"
 
@@ -64,6 +82,9 @@ other = "Home"
 [language]
 other = "Język"
 
+[liberapay]
+other = "Liberapay"
+
 [load_more]
 other = "Załaduj więcej"
 
@@ -76,9 +97,24 @@ other = "Strona {{ .PageNumber }}"
 [palette]
 other = "Paleta"
 
+[patreon]
+other = "Patronat"
+
+[paypal]
+other = "Paypal"
+
 [post_count]
 one = "{{ .Count }} post"
 other = "{{ .Count }} posty"
+
+[post_created_on]
+other = "utworzony"
+
+[post_reading_time]
+other = "czas czytania"
+
+[post_updated_on]
+other = "aktualizowany w dniu"
 
 [reading_time]
 other = "{{ .ReadingTime }} min."

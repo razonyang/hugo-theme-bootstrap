@@ -7,6 +7,9 @@ other = "Alipay"
 [archives]
 other = "Archives"
 
+[button_submit]
+other = "Submit"
+
 [buy_me_a_coffee]
 other = "Buy me a coffee"
 
@@ -49,6 +52,21 @@ other = "Teal"
 [color_yellow]
 other = "Yellow"
 
+[contact_name]
+other = "Name"
+
+[contact_email]
+other = "Email"
+
+[contact_email_help]
+other = "We'll never share your email with anyone else."
+
+[contact_subject]
+other = "Subject"
+
+[contact_message]
+other = "Message"
+
 [copyright]
 other = "Copyright"
 
@@ -64,6 +82,9 @@ other = "Home"
 [language]
 other = "Language"
 
+[liberapay]
+other = "Liberapay"
+
 [load_more]
 other = "Load More"
 
@@ -75,6 +96,12 @@ other = "Page {{ .PageNumber }}"
 
 [palette]
 other = "Palette"
+
+[patreon]
+other = "Patreon"
+
+[paypal]
+other = "Paypal"
 
 [post_count]
 one = "{{ .Count }} post in total"

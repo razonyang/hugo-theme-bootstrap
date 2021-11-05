@@ -1,13 +1,13 @@
 <div class="post-meta">
   {{- if and (default true (default .Site.Params.postDate .Params.postDate)) -}}
   <span class="post-date" title="{{ i18n "post_created_on" }}">
-    <i class="fas fa-fw fa-calendar-alt"></i>{{ .Date.Format (default "Jan 2, 2006" $.Site.Params.dateFormat) }}
+    <i class="fas fa-fw fa-calendar-alt"></i>{{ .Date | time.Format (default "Jan 2, 2006" $.Site.Params.dateFormat) }}
   </span>
   {{- end -}}
   {{ if gt .Lastmod .Date }}
   <span class="post-date me-2" title="{{ i18n "post_updated_on" }}">
       <i class="fas fa-sync-alt"></i>
-      {{ .Lastmod.Format (default "Jan 2, 2006" $.Site.Params.dateFormat) }}
+      {{ .Lastmod | time.Format (default "Jan 2, 2006" $.Site.Params.dateFormat) }}
     </span>
   {{ end }}
   {{- if and (default true (default .Site.Params.readingTime .Params.readingTime)) -}}

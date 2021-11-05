@@ -8,8 +8,10 @@ RUN apt-get install -y git
 # Build site
 WORKDIR /src
 COPY . /src
+ARG HUGO_BASEURL=/
+ENV HUGO_BASEURL=${HUGO_BASEURL}
 RUN hugo version
-RUN cd /src/exampleSite && hugo --themesDir=../../ --theme=src -b https://hugo-theme-bootstrap.razonyang.com/
+RUN cd /src/exampleSite && hugo --themesDir=../../ --theme=src -b ${HUGO_BASEURL}
 
 # Final stage
 FROM nginx

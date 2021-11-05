@@ -1,0 +1,153 @@
+[about_me]
+other = "عنّي"
+
+[alipay]
+other = "علي باي"
+
+[archives]
+other = "الأرشيف"
+
+[button_submit]
+other = "إرسال"
+
+[buy_me_a_coffee]
+other = "اشتري لي كوب قهوة"
+
+[categories]
+other = "الأقسام"
+
+[color_blue]
+other = "أزرق"
+
+[color_blue_gray]
+other = "أزرق داكن"
+
+[color_brown]
+other = "بني"
+
+[color_cyan]
+other = "سماوي"
+
+[color_green]
+other = "أخضر"
+
+[color_indigo]
+other = "نيلي"
+
+[color_orange]
+other = "برتقالي"
+
+[color_pink]
+other = "وردي"
+
+[color_purple]
+other = "بنفسجي"
+
+[color_red]
+other = "أحمر"
+
+[color_teal]
+other = "أزرق مُخضر"
+
+[color_yellow]
+other = "أصفر"
+
+[contact_name]
+other = "الاسم"
+
+[contact_email]
+other = "البريد اﻹلكتروني"
+
+[contact_email_help]
+other = "لن نشارك أبدُا بريدك اﻹلكتروني مع أي شخص آخر."
+
+[contact_subject]
+other = "الموضوع"
+
+[contact_message]
+other = "الرسالة"
+
+[copyright]
+other = "حقوق النشر"
+
+[featured_posts]
+other = "تدوينات مميزة"
+
+[font_size]
+other = "حجم الخط"
+
+[home]
+other = "الرئيسية"
+
+[language]
+other = "اللغة"
+
+[liberapay]
+other = "ليبرا باي"
+
+[load_more]
+other = "تحميل المزيد"
+
+[mode]
+other = "السمة"
+
+[pagination_title]
+other = "الصفحة {{ .PageNumber }}"
+
+[palette]
+other = "لوح الألوان"
+
+[patreon]
+other = "باتريون"
+
+[paypal]
+other = "ياي بال"
+
+[post_count]
+one = "{{ .Count }} منشور"
+other = "{{ .Count }} منشورات"
+
+[post_created_on]
+other = "نُشرت في"
+
+[post_reading_time]
+other = "وقت القراءة"
+
+[post_updated_on]
+other = "حُدثت في"
+
+[reading_time]
+other = "{{ .ReadingTime }} دقيقة قراءة"
+
+[recent_posts]
+other = "التدوينات الأخيرة"
+
+[related_posts]
+other = "تدوينات ذات صلة"
+
+[search]
+other = "البحث"
+
+[search_missing_keywords]
+other = "من فضلك أدخل كلمات البحث"
+
+[search_no_results]
+other = "لا يوجد نتائج"
+
+[search_stat]
+other = "عُثر على {{ .Total }} نتيجة"
+
+[series]
+other = "السلاسل"
+
+[settings]
+other = "الإعدادات"
+
+[table_of_contents]
+other = "الفِهْرِس"
+
+[tags]
+other = "التسميات"
+
+[wechat]
+other = "وي شات"

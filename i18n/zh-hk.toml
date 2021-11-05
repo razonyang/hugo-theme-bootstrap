@@ -7,6 +7,9 @@ other = "支付寶"
 [archives]
 other = "歸檔"
 
+[button_submit]
+other = "提交"
+
 [buy_me_a_coffee]
 other = "打賞"
 
@@ -48,6 +51,21 @@ other = "藍綠色"
 
 [color_yellow]
 other = "黃色"
+
+[contact_name]
+other = "名稱"
+
+[contact_email]
+other = "郵箱"
+
+[contact_email_help]
+other = "我們不會洩露你的郵箱地址。"
+
+[contact_subject]
+other = "主題"
+
+[contact_message]
+other = "內容"
 
 [copyright]
 other = "版權"
