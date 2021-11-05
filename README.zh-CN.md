@@ -193,6 +193,8 @@ $ hugo new -c content/zh-cn posts/newpost.md
 | `fontSize.extraSmall` | String | `.8rem` | 更小的字体
 | `fontSize.large` | String | `1.1rem` | 大字体
 | `fontSize.extraLarge` | String | `1.2rem` | 更大的字体
+| `socialShare` | Boolean | `true` | 启用/禁用内置的分享按钮
+| `searchBar` | Boolean | `true` | 启用/禁用搜索栏
 | **Archive**
 | `archive` | Object | - | 归档
 | `archive.paginate` | Integer | `100` | 归档分页

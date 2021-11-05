@@ -194,6 +194,8 @@ As the example site shown, the configuration are separated into multiple files, 
 | `fontSize.extraSmall` | String | `.8rem` | Extra small font size.
 | `fontSize.large` | String | `1.1rem` | Large font size.
 | `fontSize.extraLarge` | String | `1.2rem` | Extra large font size.
+| `socialShare` | Boolean | `true` | Turn on/off built-on social share button.
+| `searchBar` | Boolean | `true` | Turn on/off built-on search bar.
 | **Archive**
 | `archive` | Object | - | Archive configuration.
 | `archive.paginate` | Integer | `100` | Archive pagination.
