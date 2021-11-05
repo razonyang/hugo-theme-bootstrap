@@ -1,4 +1,4 @@
-{{- if (default true .Site.Params.search.enabled) -}}
+{{- if (default true .Site.Params.searchBar) -}}
 <form class="search-bar my-1" action="{{ absLangURL "search" }}">
   <div class="input-group input-group-sm">
     <span class="btn btn-search disabled position-absolute left-0"><i class="fas fa-fw fa-search"></i></span>
