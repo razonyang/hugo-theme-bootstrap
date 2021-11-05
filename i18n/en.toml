@@ -116,6 +116,9 @@ other = "reading time"
 [post_updated_on]
 other = "updated on"
 
+[read_more]
+other = "Read More"
+
 [reading_time]
 other = "{{ .ReadingTime }} min read"
 

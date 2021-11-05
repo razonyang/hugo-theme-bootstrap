@@ -25,7 +25,7 @@
           </ul>
           <div class="taxonomy-actions">
             {{- if gt $count $postCount -}}
-            <a class="btn btn-sm btn-outline-primary" href="{{ .Page.Permalink }}">Read More</a>
+            <a class="btn btn-sm btn-outline-primary" href="{{ .Page.Permalink }}">{{ i18n "read_more" }}</a>
             {{- end -}}
           </div>
           {{- end -}}

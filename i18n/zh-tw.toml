@@ -103,6 +103,9 @@ other = "上一篇"
 [post_next]
 other = "下一篇"
 
+[read_more]
+other = "閱讀更多"
+
 [reading_time]
 other = "{{ .ReadingTime }} 分鐘閱讀"
 
