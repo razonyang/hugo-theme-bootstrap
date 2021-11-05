@@ -28,6 +28,7 @@ googleAdsense = ""
 # toc = false # Disable TOC globally.
 # breadcrumb = false # Disable breadcrumb
 # diagram = true
+# socialshare = false # disable social network sharing
 
 # poweredBy = false # Whether to show powered by.
 
@@ -95,6 +96,7 @@ viewer = true # Image Viewer
   #theme = "" 
 
 [search]
+  enabled = true
   paginate = 5 # Pagination. Default to 10.
   # resultContentWordCount = 240 # The maximum word count of result content for displaying.
   # Fuse.js options. See https://fusejs.io/api/options.html.
