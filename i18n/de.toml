@@ -89,6 +89,9 @@ other = "Lesezeit"
 [post_updated_on]
 other = "aktualisiert am"
 
+[read_more]
+other = "mehr lesen"
+
 [reading_time]
 one = "{{ .ReadingTime }} Minute Lesezeit"
 other = "{{ .ReadingTime }} Minuten Lesezeit"

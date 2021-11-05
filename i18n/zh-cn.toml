@@ -97,6 +97,9 @@ other = "配色"
 [post_count]
 other = "总共 {{ .Count }} 篇文章"
 
+[read_more]
+other = "阅读更多"
+
 [reading_time]
 other = "{{ .ReadingTime }} 分钟阅读"
 

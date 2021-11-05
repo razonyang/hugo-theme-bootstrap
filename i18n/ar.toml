@@ -116,6 +116,9 @@ other = "وقت القراءة"
 [post_updated_on]
 other = "حُدثت في"
 
+[read_more]
+other = "Read More"
+
 [reading_time]
 other = "{{ .ReadingTime }} دقيقة قراءة"
 

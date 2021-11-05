@@ -76,6 +76,9 @@ other = "Page {{ .PageNumber }}"
 [palette]
 other = "Palette"
 
+[read_more]
+other = "en savoir plus"
+
 [reading_time]
 other = "{{ .ReadingTime }} min de lecture"
 
