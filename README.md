@@ -396,6 +396,7 @@ Avialable options are listed on [Viewer.js Options](https://github.com/fengyuanc
 | `jsfiddle` | JSFiddle | `{{< jsfiddle "user/id" >}}`
 | `codepen` | CodePen | `{{< codepen "id" >}}`
 | `jsrun` | JSRUN | `{{< jsrun "id" >}}`
+| `gist` | GitHub Gist | `{{< jsrun "id" >}}`
 | `bilibili`| Bilibili Video Player | `{{< bilibili "video ID" >}}`
 | `youku`| Youku Video Player | `{{< youku "video ID" >}}`
 | `iqiyi`| iQiyi Video Player| `{{< iqiyi "vid" "tvid" >}}`
