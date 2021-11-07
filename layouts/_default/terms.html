@@ -6,10 +6,19 @@
       {{- range .Paginator.Pages -}}
       {{- $count := len .Pages -}}
       <div class="taxonomy row card component">
+        {{- $authorName := .Page.Title -}}
+        {{- $authorNameFormated := lower (replace (replaceRE "[^A-Za-z0-9 ]" "" $authorName) " " "-") -}}
+        {{- $authorProfilepictureFilename := (printf "%s%s" $authorNameFormated ".webp") -}}
+        {{- $authorProfilepicturePath := (printf "%s%s" "/stuff/author_profilepicture/" $authorProfilepictureFilename) -}}
         <div class="card-body">
           <h2 class="taxonomy-title card-title">
             <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
           </h2>
+          <div class="post-summary">
+            {{ if (fileExists $authorProfilepicturePath) -}}
+              {{ partial "helpers/image" (dict "filename" (printf "%s%s" ".." $authorProfilepicturePath) "alt" .Title "class" "img-fluid" "resources" .Resources) }}
+            {{- end }}
+          </div>
           <div class="taxonomy-meta">
             <span class="taxonomy-post-count"><i class="fas fa-fw fa-file-alt"></i>{{ i18n "post_count" (dict "Count" $count) }}</span>
           </div>
@@ -29,7 +38,7 @@
             {{- end -}}
           </div>
           {{- end -}}
-        </div>
+          </div>
       </div>
       {{- end -}}
     </div>
