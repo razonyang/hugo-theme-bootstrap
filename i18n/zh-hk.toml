@@ -10,6 +10,9 @@ other = "歸檔"
 [button_submit]
 other = "提交"
 
+[button_reload]
+other = "刷新"
+
 [buy_me_a_coffee]
 other = "打賞"
 

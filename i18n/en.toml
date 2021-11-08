@@ -10,6 +10,9 @@ other = "Archives"
 [button_submit]
 other = "Submit"
 
+[button_reload]
+other = "Reload"
+
 [buy_me_a_coffee]
 other = "Buy me a coffee"
 

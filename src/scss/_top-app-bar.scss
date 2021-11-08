@@ -81,3 +81,15 @@
     order: 4;
   }
 }
+
+.setting {
+  margin-bottom: 1rem;
+
+  &.actions {
+    a {
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
