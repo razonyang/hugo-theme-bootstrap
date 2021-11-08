@@ -16,6 +16,7 @@ import './sidebar-toggler';
 import './popover';
 import './fonts';
 import './form-validator';
+import './top-app-bar';
 
 declare global {
   interface Window {
