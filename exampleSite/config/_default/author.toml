@@ -3,6 +3,9 @@ name = "Razon Yang"
 bio = "Gopher, PHPer, Full Stack Engineer."
 company = "Company"
 location = "Earth"
+# alternatives:
+# location = "<a href='https://www.openstreetmap.org/search?query=Earth'>Earth</a>"
+# location = "<a href='https://www.google.com/maps/search/Earth'>Earth</a>"
 # about = "https://domain.tld" # The external about page. The internal about page will be used if not set.
 
 [params]
