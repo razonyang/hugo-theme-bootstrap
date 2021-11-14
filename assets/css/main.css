@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech&display=swap");
 
 :root {
   --hbs-gray-100: #f8f9fa;
@@ -15,10 +15,10 @@
   --hbs-black-rgb: 0, 0, 0;
   --hbs-body-color-rgb: 33, 37, 41;
   --hbs-body-bg-rgb: 255, 255, 255;
-  --hbs-font-share-tech-mono: 'Share Tech Mono', monospace;
-  --hbs-font-share-tech: 'Share Tech', sans-serif;
-  --hbs-font-sans-serif: 'Roboto', sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --hbs-font-share-tech-mono: "Share Tech Mono", monospace;
+  --hbs-font-share-tech: "Share Tech", sans-serif;
+  --hbs-font-sans-serif: "Roboto", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --hbs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
     "Liberation Mono", "Courier New", monospace;
   --hbs-gradient: linear-gradient(
@@ -30,8 +30,8 @@
   --hbs-body-font-size: 1rem;
   --hbs-body-font-weight: 400;
   --hbs-body-line-height: 1.5;
-  --hbs-body-color: #212529;
-  --hbs-body-bg: #fff;
+  --hbs-body-color: #fff;
+  --hbs-body-bg: #212529;
 }
 *,
 *::before,
@@ -7615,7 +7615,7 @@ fieldset:disabled .btn {
 [data-palette="blue"] {
   --hbs-primary: #177059;
   --hbs-primary-dark: #003c8f;
-  --hbs-primary-light: #4AF0C4;
+  --hbs-primary-light: #4af0c4;
   --hbs-on-primary: #fff;
 }
 [data-palette="blue-gray"] {
@@ -7747,7 +7747,7 @@ fieldset:disabled .btn {
 :root:not([data-palette]) {
   --hbs-primary: #177059;
   --hbs-primary-dark: #003c8f;
-  --hbs-primary-light: #4AF0C4;
+  --hbs-primary-light: #4af0c4;
   --hbs-on-primary: #fff;
 }
 :root:not([data-mode]) {
@@ -8129,6 +8129,57 @@ img {
   height: auto;
   padding-bottom: 0.125rem;
 }
+.all-contributors {
+  width: 100%;
+  padding: 0.1rem;
+  /* display: inline; */
+  /* background-color: #003c8f; */
+}
+.title-contributors {
+  font-family: var(--hbs-font-share-tech);
+}
+.subtitle-contributors {
+  font-family: var(--hbs-font-share-tech);
+  font-size: 1.3rem;
+}
+.profile-contributors {
+  /* border-color: var(--hbs-gray-300); */
+  transition: 0.3s;
+  border-style: solid;
+  border-width: 1px;
+  display: inline-block;
+  margin: 0.5rem;
+  width: 14rem;
+  height: 14rem;
+  border-radius: 5px;
+  color: var(--hbs-body-color);
+  /* background-color: var(--hbs-body-bg); */
+}
+.hr {
+  width: 50%;
+  border: 1px solid var(--hbs-body-color);
+  margin-left: 25% !important;
+  margin-right: 25% !important;
+}
+.img-contributor {
+  margin-top: 1rem;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 5px;
+  /* bottom: 1rem; */
+}
+.name-contributor {
+  margin-top: -0.8rem;
+  border: 2px;
+}
+.profile-contributors:hover {
+  border-style: none;
+  border-width: 0px;
+  background-color: var(--hbs-body-color);
+  color: var(--hbs-body-bg);
+  transition: 0.3s;
+}
+
 @media (max-width: 575.98px) {
   .post-summary img {
     width: 100%;
