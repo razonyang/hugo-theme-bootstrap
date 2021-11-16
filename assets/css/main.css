@@ -8156,10 +8156,10 @@ img {
   /* background-color: var(--hbs-body-bg); */
 }
 .hr {
-  width: 50%;
+  width: 70%;
   border: 1px solid var(--hbs-body-color);
-  margin-left: 25% !important;
-  margin-right: 25% !important;
+  margin-left: 15% !important;
+  margin-right: 15% !important;
 }
 .img-contributor {
   margin-top: 1rem;
@@ -8173,13 +8173,13 @@ img {
   border: 2px;
 }
 .profile-contributors:hover {
-  border-style: none;
-  border-width: 0px;
   background-color: var(--hbs-body-color);
   color: var(--hbs-body-bg);
   transition: 0.3s;
 }
-
+.profile-contributors:hover hr {
+  border: 1px solid var(--hbs-body-bg);
+}
 @media (max-width: 575.98px) {
   .post-summary img {
     width: 100%;
