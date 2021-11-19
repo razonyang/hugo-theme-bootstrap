@@ -4,6 +4,7 @@
 {{- template "_internal/schema.html" . -}}
 {{ template "_internal/opengraph.html" . }}
 {{- template "_internal/twitter_cards.html" . -}}
+{{- partial "head/meta" . -}}
 {{- partial "head/feed" . -}}
 {{- partial "head/site-verification" . -}}
 {{- if eq .Permalink (absLangURL "search/") -}}
