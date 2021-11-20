@@ -1,11 +1,12 @@
 import { library, dom, config } from '@fortawesome/fontawesome-svg-core';
 import {
-  faAdjust, faArrowsAltV, faBars, faBuilding, faCalendarAlt, faCheckCircle, faChevronCircleDown,
-  faChevronCircleUp, faChevronLeft, faChevronRight, faCode, faCoffee, faColumns, faCopy,
-  faCopyright, faEdit, faEllipsisV, faEnvelope, faExclamationTriangle, faExpandAlt, faEyeDropper,
-  faFont, faFileAlt, faFileArchive, faFolder, faInfoCircle, faLanguage, faLink, faList, faListAlt,
-  faMapMarkerAlt, faPalette, faQuestion, faQuestionCircle, faRedoAlt, faRss, faSearch, faShareAlt,
-  faSkullCrossbones, faSpinner, faSyncAlt, faTags, faTimes, faTv, faUndo, faUser,
+  faAdjust, faArrowsAltV, faArrowLeft, faBars, faBuilding, faCalendarAlt, faCheckCircle,
+  faChevronCircleDown, faChevronCircleUp, faChevronLeft, faChevronRight, faCode, faCoffee,
+  faColumns, faCopy, faCopyright, faEdit, faEllipsisV, faEnvelope, faExclamationTriangle,
+  faExpandAlt, faEyeDropper, faFont, faFileAlt, faFileArchive, faFolder, faHome, faInfoCircle,
+  faLanguage, faLink, faList, faListAlt, faMapMarkerAlt, faPalette, faQuestion, faQuestionCircle,
+  faRedoAlt, faRss, faSearch, faShareAlt, faSkullCrossbones, faSpinner, faSyncAlt, faTags,
+  faTimes, faTv, faUndo, faUser,
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faStar,
@@ -17,18 +18,19 @@ import {
   faMediumM, faPaypal, faPatreon, faPinterest, faQq, faQuora, faReddit, faStackOverflow,
   faTelegramPlane, faTiktok, faTumblr, faTwitter, faYoutube, faWeibo, faWeixin, faZhihu,
 } from '@fortawesome/free-brands-svg-icons';
-import { faLiberapay, faBilibili } from './icons';
+import { faLiberapay, faBilibili, faOffline } from './icons';
 
 config.searchPseudoElements = true;
 
 library.add(
   // Solid Icons
-  faAdjust, faArrowsAltV, faBars, faBuilding, faCalendarAlt, faCheckCircle, faChevronCircleDown,
-  faChevronCircleUp, faChevronLeft, faChevronRight, faCode, faCoffee, faColumns, faCopy,
-  faCopyright, faEdit, faEllipsisV, faEnvelope, faExclamationTriangle, faExpandAlt, faEyeDropper,
-  faFont, faFileAlt, faFileArchive, faFolder, faInfoCircle, faLanguage, faLink, faList, faListAlt,
-  faMapMarkerAlt, faPalette, faQuestion, faQuestionCircle, faRedoAlt, faRss, faSearch, faShareAlt,
-  faSkullCrossbones, faSpinner, faSyncAlt, faTags, faTimes, faTv, faUndo, faUser,
+  faAdjust, faArrowsAltV, faArrowLeft, faBars, faBuilding, faCalendarAlt, faCheckCircle,
+  faChevronCircleDown, faChevronCircleUp, faChevronLeft, faChevronRight, faCode, faCoffee,
+  faColumns, faCopy, faCopyright, faEdit, faEllipsisV, faEnvelope, faExclamationTriangle,
+  faExpandAlt, faEyeDropper, faFont, faFileAlt, faFileArchive, faFolder, faHome, faInfoCircle,
+  faLanguage, faLink, faList, faListAlt, faMapMarkerAlt, faPalette, faQuestion, faQuestionCircle,
+  faRedoAlt, faRss, faSearch, faShareAlt, faSkullCrossbones, faSpinner, faSyncAlt, faTags,
+  faTimes, faTv, faUndo, faUser,
 
   // Regular Icons
   faStar,
@@ -41,7 +43,7 @@ library.add(
   faTelegramPlane, faTiktok, faTumblr, faTwitter, faYoutube, faWeibo, faWeixin, faZhihu,
 
   // Custom Icons
-  faBilibili, faLiberapay,
+  faBilibili, faLiberapay, faOffline,
 );
 
 document.addEventListener('DOMContentLoaded', () => {

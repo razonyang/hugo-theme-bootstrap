@@ -79,6 +79,9 @@ other = "精選文章"
 [font_size]
 other = "字體大小"
 
+[go_back]
+other = "返回"
+
 [home]
 other = "主頁"
 
@@ -90,6 +93,12 @@ other = "加載更多"
 
 [mode]
 other = "模式"
+
+[offline_title]
+other = "哎喲！你離線了。"
+
+[offline_info]
+other = "看來你的連接有問題，請檢查你的網絡狀態。"
 
 [pagination_title]
 other = "第 {{ .PageNumber }} 頁"
@@ -135,6 +144,9 @@ other = "目錄"
 
 [tags]
 other = "標籤"
+
+[try_again]
+other = "再試一次"
 
 [wechat]
 other = "微信"

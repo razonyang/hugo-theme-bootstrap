@@ -79,6 +79,9 @@ other = "Featured Posts"
 [font_size]
 other = "Font Size"
 
+[go_back]
+other = "Go back"
+
 [home]
 other = "Home"
 
@@ -93,6 +96,12 @@ other = "Load More"
 
 [mode]
 other = "Mode"
+
+[offline_title]
+other = "Oops! You're offline."
+
+[offline_info]
+other = "It seems there is a problem of your connection. Please check your network status."
 
 [pagination_title]
 other = "Page {{ .PageNumber }}"
@@ -154,6 +163,9 @@ other = "Table Of Contents"
 
 [tags]
 other = "Tags"
+
+[try_again]
+other = "Try again"
 
 [wechat]
 other = "WeChat"

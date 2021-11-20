@@ -79,6 +79,9 @@ other = "精选文章"
 [font_size]
 other = "字体大小"
 
+[go_back]
+other = "返回"
+
 [home]
 other = "主页"
 
@@ -90,6 +93,12 @@ other = "加载更多"
 
 [mode]
 other = "模式"
+
+[offline_title]
+other = "哎哟！你离线了。"
+
+[offline_info]
+other = "看来你的连接有问题，请检查你的网络状态。"
 
 [pagination_title]
 other = "第 {{ .PageNumber }} 页"
@@ -135,6 +144,9 @@ other = "目录"
 
 [tags]
 other = "标签"
+
+[try_again]
+other = "再试一次"
 
 [wechat]
 other = "微信"
