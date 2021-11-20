@@ -1,3 +1,9 @@
+[404_title]
+other = "哎哟！页面未找到。"
+
+[404_info]
+other = "我们似乎找不到你要查找的页面。"
+
 [about_me]
 other = "关于我"
 
