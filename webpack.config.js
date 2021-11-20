@@ -14,6 +14,7 @@ module.exports = {
     'service-worker': ['./src/service-worker/index.ts'],
   },
   mode: 'production',
+  devtool: 'inline-source-map',
   optimization: {
     usedExports: true,
     minimize: true,

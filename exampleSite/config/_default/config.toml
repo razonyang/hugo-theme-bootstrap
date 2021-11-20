@@ -38,9 +38,13 @@ pygmentsUseClasses = true
     name = "manifest"
     baseName = "manifest"
     mediaType = "application/manifest+json"
+  [outputFormats.SERVICE-WORKER]
+    name = "service-worker"
+    baseName = "service-worker"
+    mediaType = "application/json"
 
 [outputs]
-  home = ["HTML", "RSS", "JSON", "MANIFEST"]
+  home = ["HTML", "RSS", "JSON", "MANIFEST", "SERVICE-WORKER"]
 
 [taxonomies]
   category = "categories"
