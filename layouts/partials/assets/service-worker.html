@@ -1,6 +1,6 @@
 {{- $mainScript := resources.Get "js/service-worker.js" }}
 {{- $configScript := resources.Get "js/service-worker.config.js" | resources.ExecuteAsTemplate "service-worker.config.js" . -}}
-{{- $script := slice $configScript $mainScript | resources.Concat "service-worker.js" | resources.Fingerprint -}}
+{{- $script := slice $configScript $mainScript | resources.Concat "service-worker.js" -}}
 <script>
 // Check that service workers are supported
 if ('serviceWorker' in navigator) {
