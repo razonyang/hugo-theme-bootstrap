@@ -7,6 +7,7 @@
 {{- end -}}
 {{- $scripts = $scripts | append $customScript -}}
 {{- $script := $scripts | resources.Concat "js/bundle.js" | resources.Minify | resources.Fingerprint -}}
+{{- $.Scratch.Add "hbs-assets" (slice (dict "url" $script.Permalink "revision" $script.Data.Integrity)) -}}
 <script src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous" defer></script>
 {{- range .Site.Params.customJS -}}
 <script src="{{ absURL . }}" crossorigin="anonymous"></script>

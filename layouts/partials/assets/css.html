@@ -3,6 +3,7 @@
 {{- $highlightStyle := resources.Get "css/highlight.css" -}}
 {{- $customStyle := resources.Get "css/custom.css" -}}
 {{- $style := slice $mainStyle $configStyle $highlightStyle $customStyle | resources.Concat "css/bundle.css" | resources.Minify | resources.Fingerprint -}}
+{{- $.Scratch.Add "hbs-assets" (slice (dict "url" $style.Permalink "revision" $style.Data.Integrity)) -}}
 <link rel="preload" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous" as="style" onload="this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous"></noscript>
 {{- range .Site.Params.customCSS -}}

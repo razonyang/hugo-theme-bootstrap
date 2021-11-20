@@ -10,7 +10,7 @@
 {{- partial "helpers/read-dir" (dict "Path" "/static" "Scratch" $.Scratch) -}}
 
 const pages = JSON.parse('{{ $pages | jsonify }}');
-const assets = JSON.parse('{{ $.Scratch.Get "assets" | jsonify }}');
+const assets = JSON.parse('{{ $.Scratch.Get "hbs-assets" | jsonify }}');
 const multilingual = {{ if eq (len .Sites) 1 }}false{{ else }}true{{ end }};
 const config = {
     multilingual: {{ if eq (len .Sites) 1 }}false{{ else }}true{{ end }},
