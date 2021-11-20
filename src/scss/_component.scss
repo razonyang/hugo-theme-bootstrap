@@ -6,4 +6,5 @@
   @include mdc-mixins.elevation(8);
 
   margin-bottom: var(--#{$variable-prefix}component-gutter-b);
+  padding: 0 .25rem;
 }
