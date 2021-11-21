@@ -2,12 +2,9 @@
 {{- $configScript := resources.Get "js/service-worker.config.js" | resources.ExecuteAsTemplate "service-worker.config.js" . -}}
 {{- $script := slice $configScript $mainScript | resources.Concat "service-worker.js" -}}
 <script>
-// Check that service workers are supported
 if ('serviceWorker' in navigator) {
-  // Use the window load event to keep the page load performant
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('{{ $script.Permalink }}').then(function(reg) {
-      reg.update();
       console.log('Successfully registered service worker', reg);
     }).catch(function(err) {
       console.warn('Error whilst registering service worker', err);
