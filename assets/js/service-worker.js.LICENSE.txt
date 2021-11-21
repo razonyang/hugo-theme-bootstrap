@@ -52,13 +52,35 @@
 
 /*! ./StrategyHandler.js */
 
+/*! ./_private.js */
+
+/*! ./_private/Deferred.js */
+
 /*! ./_private/WorkboxError.js */
 
 /*! ./_private/assert.js */
 
+/*! ./_private/cacheMatchIgnoreParams.js */
+
+/*! ./_private/cacheNames.js */
+
+/*! ./_private/canConstructReadableStream.js */
+
 /*! ./_private/canConstructResponseFromBodyStream.js */
 
+/*! ./_private/dontWaitFor.js */
+
+/*! ./_private/executeQuotaErrorCallbacks.js */
+
+/*! ./_private/getFriendlyURL.js */
+
 /*! ./_private/logger.js */
+
+/*! ./_private/resultingClientExists.js */
+
+/*! ./_private/timeout.js */
+
+/*! ./_private/waitUntil.js */
 
 /*! ./_version.js */
 
@@ -66,7 +88,13 @@
 
 /*! ./addRoute.js */
 
+/*! ./cacheNames.js */
+
 /*! ./cleanupOutdatedCaches.js */
+
+/*! ./clientsClaim.js */
+
+/*! ./copyResponse.js */
 
 /*! ./createHandlerBoundToURL.js */
 
@@ -88,13 +116,23 @@
 
 /*! ./precacheAndRoute.js */
 
+/*! ./registerQuotaErrorCallback.js */
+
 /*! ./registerRoute.js */
 
 /*! ./removeIgnoredSearchParams.js */
 
+/*! ./setCacheNameDetails.js */
+
 /*! ./setCatchHandler.js */
 
 /*! ./setDefaultHandler.js */
+
+/*! ./skipWaiting.js */
+
+/*! ./timeout.js */
+
+/*! ./types.js */
 
 /*! ./utils/PrecacheCacheKeyPlugin.js */
 
@@ -125,6 +163,8 @@
 /*! idb */
 
 /*! workbox-cacheable-response */
+
+/*! workbox-core */
 
 /*! workbox-core/_private/Deferred.js */
 
@@ -166,9 +206,25 @@
 
 /*! workbox-strategies/Strategy.js */
 
+/*!********************************************!*\
+  !*** ./node_modules/workbox-core/index.js ***!
+  \********************************************/
+
+/*!********************************************!*\
+  !*** ./node_modules/workbox-core/types.js ***!
+  \********************************************/
+
 /*!*********************************************!*\
   !*** ./node_modules/idb/build/esm/index.js ***!
   \*********************************************/
+
+/*!*********************************************!*\
+  !*** ./node_modules/workbox-core/index.mjs ***!
+  \*********************************************/
+
+/*!***********************************************!*\
+  !*** ./node_modules/workbox-core/_private.js ***!
+  \***********************************************/
 
 /*!***********************************************!*\
   !*** ./node_modules/workbox-core/_version.js ***!
@@ -190,6 +246,14 @@
   !*** ./node_modules/workbox-routing/index.mjs ***!
   \************************************************/
 
+/*!*************************************************!*\
+  !*** ./node_modules/workbox-core/cacheNames.js ***!
+  \*************************************************/
+
+/*!**************************************************!*\
+  !*** ./node_modules/workbox-core/skipWaiting.js ***!
+  \**************************************************/
+
 /*!**************************************************!*\
   !*** ./node_modules/workbox-expiration/index.js ***!
   \**************************************************/
@@ -205,6 +269,10 @@
 /*!**************************************************!*\
   !*** ./node_modules/workbox-strategies/index.js ***!
   \**************************************************/
+
+/*!***************************************************!*\
+  !*** ./node_modules/workbox-core/clientsClaim.js ***!
+  \***************************************************/
 
 /*!***************************************************!*\
   !*** ./node_modules/workbox-core/copyResponse.js ***!
@@ -319,6 +387,10 @@
   \**********************************************************/
 
 /*!**********************************************************!*\
+  !*** ./node_modules/workbox-core/setCacheNameDetails.js ***!
+  \**********************************************************/
+
+/*!**********************************************************!*\
   !*** ./node_modules/workbox-precaching/PrecacheRoute.js ***!
   \**********************************************************/
 
@@ -418,6 +490,10 @@
   !*** ./node_modules/workbox-precaching/createHandlerBoundToURL.js ***!
   \********************************************************************/
 
+/*!*********************************************************************!*\
+  !*** ./node_modules/workbox-core/_private/resultingClientExists.js ***!
+  \*********************************************************************/
+
 /*!**********************************************************************!*\
   !*** ./node_modules/workbox-cacheable-response/CacheableResponse.js ***!
   \**********************************************************************/
@@ -457,6 +533,10 @@
 /*!*************************************************************************!*\
   !*** ./node_modules/workbox-precaching/utils/PrecacheCacheKeyPlugin.js ***!
   \*************************************************************************/
+
+/*!**************************************************************************!*\
+  !*** ./node_modules/workbox-core/_private/canConstructReadableStream.js ***!
+  \**************************************************************************/
 
 /*!**************************************************************************!*\
   !*** ./node_modules/workbox-core/_private/executeQuotaErrorCallbacks.js ***!

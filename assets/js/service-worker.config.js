@@ -13,6 +13,7 @@ const pages = JSON.parse('{{ $pages | jsonify }}');
 const assets = JSON.parse('{{ $.Scratch.Get "hbs-assets" | jsonify }}');
 const multilingual = {{ if eq (len .Sites) 1 }}false{{ else }}true{{ end }};
 const config = {
+    version: {{ now.Unix }},
     multilingual: {{ if eq (len .Sites) 1 }}false{{ else }}true{{ end }},
     pages: pages,
     assets: assets
