@@ -23,6 +23,7 @@
   @include media-breakpoint-down(sm) {
     img {
       width: 100%;
+      margin-bottom: 0.5rem;
     }
   }
 }
