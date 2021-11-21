@@ -1,6 +1,7 @@
+{{- $defaultRivision := now.Unix  -}}
 {{- $pages := slice -}}
 {{- range $.Site.AllPages -}}
-  {{- $revision := .Scratch.Get "null" -}}
+  {{- $revision := $defaultRivision -}}
   {{- with .File -}}
       {{- $revision = .UniqueID -}}
   {{- end -}}
@@ -8,6 +9,10 @@
 {{- end -}}
 
 {{- partial "helpers/read-dir" (dict "Path" "/static" "Scratch" $.Scratch) -}}
+
+{{- range $.Site.Languages -}}
+  {{- $pages = $pages | append (dict "url" (printf "/%s/%s" .Lang "manifest.json" | absURL) "revision" $defaultRivision)  -}}
+{{- end -}}
 
 const pages = JSON.parse('{{ $pages | jsonify }}');
 const assets = JSON.parse('{{ $.Scratch.Get "hbs-assets" | jsonify }}');
