@@ -262,6 +262,8 @@ As the example site shown, the configuration are separated into multiple files, 
 | `pwa.manifest.icons` | Arrary | - |
 | `pwa.manifest.icons.sizes` | String | - | Icons' sizes, i.e. "96x96"
 | `pwa.manifest.icons.src` | String | - | Icon's URL
+| **Meta Tag**
+| `metaRobots` | String | - | Empty means that turn it off.
 
 > Except the Google webmaster tool, the other webmaster tools cannot work with `hugo --minify`, because they cannot recognize the minified meta tag.
 
@@ -286,6 +288,8 @@ As the example site shown, the configuration are separated into multiple files, 
 | `creativeCommons.nc` | Boolean | `true` | Only noncommercial use of your work is permitted.
 | `creativeCommons.nd` | Boolean | `true` | No derivatives or adaptations of your work are permitted.
 | `creativeCommons.sa` | Boolean | `true` | Adaptations must be shared under the same terms.
+| **Meta Tag**
+| `metaRobots` | String | - | Empty means that turn it off.
 
 ## PWA
 

@@ -261,6 +261,8 @@ $ hugo new -c content/zh-cn posts/newpost.md
 | `pwa.manifest.icons` | Arrary | - |
 | `pwa.manifest.icons.sizes` | String | - | 图标尺寸，如："96x96"
 | `pwa.manifest.icons.src` | String | - | 图标 URL
+| **Meta Tag**
+| `metaRobots` | String | - | 空字符串表示禁用。
 
 > 除了 Google 站长工具外，其他搜索引擎站长工具无法与 `hugo --minify` 同时使用，这是因为它们无法识别优化后的元标签。
 
@@ -285,6 +287,8 @@ $ hugo new -c content/zh-cn posts/newpost.md
 | `creativeCommons.nc` | Boolean | `true` | 非商业
 | `creativeCommons.nd` | Boolean | `true` | 禁止演绎
 | `creativeCommons.sa` | Boolean | `true` | 相同方式共享
+| **Meta Tag**
+| `metaRobots` | String | - | 空字符串表示禁用。
 
 ## PWA
 
