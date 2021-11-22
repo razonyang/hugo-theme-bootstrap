@@ -23,6 +23,7 @@
 
 ## 功能特性
 
+- [PWA](#pwa)
 - 快速：[Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/?url=https://hbs.razonyang.com/en/) 分數在 `90-100` 之間
 - 基於 [Bootstrap 5](https://getbootstrap.com/)
 - 響應式
@@ -248,6 +249,18 @@ $ hugo new -c content/zh-cn posts/newpost.md
 | `post.excerptMaxLength` | Integer | `320` | 
 | **Image Viewer**
 | `viewer` | Boolean | true | 是否開啟圖片瀏覽器
+| **PWA**
+| `pwa` | Object | - | PWA
+| `pwa.manifest` | Object | - | [Web app manifest](#manifest)
+| `pwa.manifest.name` | String | - | 默認為站點標題
+| `pwa.manifest.short_name` | String | - | 站點短名稱
+| `pwa.manifest.display` | String | `standalone` |
+| `pwa.manifest.description` | String | - | 默認為站點描述
+| `pwa.manifest.theme_color` | String | - |
+| `pwa.manifest.background_color` | String | - |
+| `pwa.manifest.icons` | Arrary | - |
+| `pwa.manifest.icons.sizes` | String | - | 圖標尺寸，如："96x96"
+| `pwa.manifest.icons.src` | String | - | 圖標 URL
 
 > 除了 Google 站長工具外，其他搜索引擎站長工具無法與 `hugo --minify` 同時使用，這是因為它們無法識別優化後的元標簽。
 
@@ -272,6 +285,56 @@ $ hugo new -c content/zh-cn posts/newpost.md
 | `creativeCommons.nc` | Boolean | `true` | 非商業
 | `creativeCommons.nd` | Boolean | `true` | 禁止改作 
 | `creativeCommons.sa` | Boolean | `true` | 相同方式分享
+
+## PWA
+
+又稱為 [Progressive web app](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps).
+
+### 特性
+
+- 添加網站到主荧幕
+- 性能：緩存優先、預緩存資源：如圖片、JS、CSS等
+- 離線
+
+### 配置
+
+為了開啟這個功能，你需要設置 `pwa` 參數。
+
+#### Manifest
+
+至於 [web app manifest](https://developer.mozilla.org/en-US/docs/Web/Manifest)，你需要在配置文件添加以下自定義的輸出格式。
+
+```toml
+[mediaTypes]
+  [mediaTypes."application/manifest+json"]
+    suffixes = ["json"]
+  
+[outputFormats]
+  [outputFormats.MANIFEST]
+    name = "manifest"
+    baseName = "manifest"
+    mediaType = "application/manifest+json"
+```
+
+然後在 `home` 追加 `MANIFEST`。
+
+```toml
+[outputs]
+  home = ["HTML", "RSS", "JSON", "MANIFEST"]
+```
+
+> 現在你可以通過 `/manifest.json` 或者 `/{lang}/manifest.json`（多語言模式）訪問清單內容了。
+
+#### Offline
+
+在 `content` 目錄下新增一個名為 `offline/index.md` 的離線頁面.
+
+```toml
++++
+title = 'Offline'
+layout = 'offline'
++++
+```
 
 ## 語法高亮
 
