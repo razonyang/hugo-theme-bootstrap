@@ -6,6 +6,11 @@ $enable-smooth-scroll: false;
 
 $colors: ();
 $theme-colors: ();
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  lg: 992px
+) !default;
 $grid-gutter-width: .75rem;
 $card-spacer-x: 1rem;
 $card-spacer-y: 1rem;
