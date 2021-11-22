@@ -23,6 +23,7 @@ There is also a [list of websites that use this theme](https://github.com/razony
 
 ## Features
 
+- [PWA](#pwa)
 - Fast: [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/?url=https://hbs.razonyang.com/en/)'s score `90-100`.
 - Built on top of [Bootstrap 5](https://getbootstrap.com/).
 - Responsive.
@@ -249,6 +250,18 @@ As the example site shown, the configuration are separated into multiple files, 
 | `post.excerptMaxLength` | Integer | `320` |
 | **Image Viewer**
 | `viewer` | Boolean | true | Turn on/off image viewer.
+| **PWA**
+| `pwa` | Object | - | PWA
+| `pwa.manifest` | Object | - | [Web app manifest](#manifest)
+| `pwa.manifest.name` | String | - | Default to site title
+| `pwa.manifest.short_name` | String | - | Short name of your site.
+| `pwa.manifest.display` | String | `standalone` |
+| `pwa.manifest.description` | String | - | Default to site description.
+| `pwa.manifest.theme_color` | String | - |
+| `pwa.manifest.background_color` | String | - |
+| `pwa.manifest.icons` | Arrary | - |
+| `pwa.manifest.icons.sizes` | String | - | Icons' sizes, i.e. "96x96"
+| `pwa.manifest.icons.src` | String | - | Icon's URL
 
 > Except the Google webmaster tool, the other webmaster tools cannot work with `hugo --minify`, because they cannot recognize the minified meta tag.
 
@@ -273,6 +286,57 @@ As the example site shown, the configuration are separated into multiple files, 
 | `creativeCommons.nc` | Boolean | `true` | Only noncommercial use of your work is permitted.
 | `creativeCommons.nd` | Boolean | `true` | No derivatives or adaptations of your work are permitted.
 | `creativeCommons.sa` | Boolean | `true` | Adaptations must be shared under the same terms.
+
+## PWA
+
+AKA [Progressive web app](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps).
+
+### Features
+
+- Add your site to home screen.
+- Performance: Cache fisrt; Precache assets, such as images, JS and CSS...
+- Offline
+
+### Configuration
+
+For turning this feature on, you'll need to set the `pwa` parameter.
+
+#### Manifest
+
+As for [web app manifest](https://developer.mozilla.org/en-US/docs/Web/Manifest), you should add the following custom output format
+into your configuration file.
+
+```toml
+[mediaTypes]
+  [mediaTypes."application/manifest+json"]
+    suffixes = ["json"]
+  
+[outputFormats]
+  [outputFormats.MANIFEST]
+    name = "manifest"
+    baseName = "manifest"
+    mediaType = "application/manifest+json"
+```
+
+And then append the `MANIFEST` to your `home`'s output.
+
+```toml
+[outputs]
+  home = ["HTML", "RSS", "JSON", "MANIFEST"]
+```
+
+> Now you can access the manifest by `/manifest.json` or `/{lang}/manifest.json`(multilingual mode).
+
+#### Offline
+
+Create an offline page called `offline/index.md` in the `content` directory with the following front matter.
+
+```toml
++++
+title = 'Offline'
+layout = 'offline'
++++
+```
 
 ## Syntax Highlighting
 

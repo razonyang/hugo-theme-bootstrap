@@ -23,6 +23,7 @@
 
 ## 功能特性
 
+- [PWA](#pwa)
 - 快速：[Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/?url=https://hbs.razonyang.com/en/) 分数在 `90-100` 之间
 - 基于 [Bootstrap 5](https://getbootstrap.com/)
 - 响应式
@@ -248,6 +249,18 @@ $ hugo new -c content/zh-cn posts/newpost.md
 | `post.excerptMaxLength` | Integer | `320` | 
 | **Image Viewer**
 | `viewer` | Boolean | true | 是否启用图片浏览器
+| **PWA**
+| `pwa` | Object | - | PWA
+| `pwa.manifest` | Object | - | [Web app manifest](#manifest)
+| `pwa.manifest.name` | String | - | 默认为站点标题
+| `pwa.manifest.short_name` | String | - | 站点短名称
+| `pwa.manifest.display` | String | `standalone` |
+| `pwa.manifest.description` | String | - | 默认为站点描述
+| `pwa.manifest.theme_color` | String | - |
+| `pwa.manifest.background_color` | String | - |
+| `pwa.manifest.icons` | Arrary | - |
+| `pwa.manifest.icons.sizes` | String | - | 图标尺寸，如："96x96"
+| `pwa.manifest.icons.src` | String | - | 图标 URL
 
 > 除了 Google 站长工具外，其他搜索引擎站长工具无法与 `hugo --minify` 同时使用，这是因为它们无法识别优化后的元标签。
 
@@ -272,6 +285,56 @@ $ hugo new -c content/zh-cn posts/newpost.md
 | `creativeCommons.nc` | Boolean | `true` | 非商业
 | `creativeCommons.nd` | Boolean | `true` | 禁止演绎
 | `creativeCommons.sa` | Boolean | `true` | 相同方式共享
+
+## PWA
+
+又称为 [Progressive web app](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps).
+
+### 特性
+
+- 添加站点到主屏幕
+- 性能：缓存优先、预缓存资源：如图片、JS、CSS等
+- 离线
+
+### 配置
+
+为了开启这个功能，你需要设置 `pwa` 参数。
+
+#### Manifest
+
+至于 [web app manifest](https://developer.mozilla.org/en-US/docs/Web/Manifest)，你需要在配置文件添加以下自定义的输出格式。
+
+```toml
+[mediaTypes]
+  [mediaTypes."application/manifest+json"]
+    suffixes = ["json"]
+  
+[outputFormats]
+  [outputFormats.MANIFEST]
+    name = "manifest"
+    baseName = "manifest"
+    mediaType = "application/manifest+json"
+```
+
+然后在 `home` 追加 `MANIFEST`。
+
+```toml
+[outputs]
+  home = ["HTML", "RSS", "JSON", "MANIFEST"]
+```
+
+> 现在你可以通过 `/manifest.json` 或者 `/{lang}/manifest.json`（多语言模式）访问清单内容了。
+
+#### Offline
+
+在 `content` 目录下新增一个名为 `offline/index.md` 的离线页面.
+
+```toml
++++
+title = 'Offline'
+layout = 'offline'
++++
+```
 
 ## 语法高亮
 
