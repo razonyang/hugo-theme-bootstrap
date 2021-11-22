@@ -1,6 +1,7 @@
 {{- $mainScript := resources.Get "js/service-worker.js" }}
 {{- $configScript := resources.Get "js/service-worker.config.js" | resources.ExecuteAsTemplate "service-worker.config.js" . -}}
 {{- $script := slice $configScript $mainScript | resources.Concat "service-worker.js" -}}
+{{- if isset $.Site.Params "pwa" -}}
 <script>
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
@@ -12,3 +13,4 @@ if ('serviceWorker' in navigator) {
   });
 }
 </script>
+{{- end -}}
