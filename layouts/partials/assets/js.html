@@ -2,6 +2,12 @@
 {{- $configScript := resources.Get "js/config.template.js" | resources.ExecuteAsTemplate "config.js" . -}}
 {{- $customScript := resources.Get "js/custom.js" -}}
 {{- $scripts := slice $configScript $mainScript -}}
+{{- if (default true .Site.Params.viewer) -}}
+  {{- $viewerMainScript := resources.Get "js/viewer.js" }}
+  {{- $viewerConfigScript := resources.Get "js/viewer.config.js" | resources.ExecuteAsTemplate "viewer.config.js" . -}}
+  {{- $viewerScript := slice $viewerConfigScript $viewerMainScript | resources.Concat "js/viewer.js" -}}
+  {{- $scripts = $scripts | append $viewerScript -}}
+{{- end -}}
 {{- if $.Site.Params.utterances -}}
   {{- $scripts = $scripts | append (resources.Get "js/utterances.js") -}}
 {{- end -}}
