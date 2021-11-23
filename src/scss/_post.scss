@@ -2,10 +2,18 @@
 .post-meta {
   margin-bottom: 1rem;
   color: variable('secondary-text-on-surface');
+  font-size: .8rem;
   word-break: break-all;
 
-  * {
-    margin-right: 0.5rem;
+  span {
+    &:not(:last-child) {
+      margin-right: .125rem;
+
+      &::after {
+        content: '·';
+        margin-left: .125rem;
+      }
+    }
   }
 }
 
@@ -119,11 +127,15 @@
 }
 
 .post-taxonomy {
+  background-color: variable('background');
+  color: variable('primary-text-on-surface')!important;
   margin: .25rem;
-  opacity: 0.9;
+  padding: .5rem;
+  opacity: .7;
 
   &:hover {
     opacity: 1;
+    color: variable('accent')!important;
     text-decoration: none;
   }
 }
