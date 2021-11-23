@@ -125,14 +125,8 @@ other = "Paypal"
 one = "{{ .Count }} post in total"
 other = "{{ .Count }} posts in total"
 
-[post_created_on]
-other = "created on"
-
-[post_reading_time]
-other = "reading time"
-
-[post_updated_on]
-other = "updated on"
+[post_date]
+other = "created on {{ .createdOn }}{{ with .updatedOn }}, updated on {{ . }}{{ end }}."
 
 [read_more]
 other = "Read More"
