@@ -144,3 +144,6 @@ viewer = true # Image Viewer
     # [[pwa.manifest.icons]]
     #   sizes = "144x144"
     #   src = "/images/icons/icon-144x144.png"
+
+# [contact]
+  # endpoint = "" # Backend endpoint

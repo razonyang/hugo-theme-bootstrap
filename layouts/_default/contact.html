@@ -3,7 +3,8 @@
     {{- partial "breadcrumb" . -}}
     <div class="contact row component card">
         <div class="card-body">
-            <form class="needs-validation" name="contact" method="POST" data-netlify="true" enctype="multipart/form-data" novalidate>
+            <form class="needs-validation" name="contact" method="POST" data-netlify="true" enctype="multipart/form-data" 
+              {{ with $.Site.Params.contact.endpoint }}{{ printf " action=%q" . | safeHTMLAttr }}{{ end }} novalidate>
                 <div class="mb-3">
                   <label for="contactName" class="form-label">{{ "contact_name" | i18n }}</label>
                   <input name="name" class="form-control" id="contactName" required>
