@@ -70,6 +70,9 @@ other = "郵箱"
 [contact_email_help]
 other = "我們不會洩露你的郵箱地址。"
 
+[contact_file]
+other = "文件"
+
 [contact_subject]
 other = "主題"
 

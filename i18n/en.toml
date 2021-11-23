@@ -70,6 +70,9 @@ other = "Email"
 [contact_email_help]
 other = "We'll never share your email with anyone else."
 
+[contact_file]
+other = "File"
+
 [contact_subject]
 other = "Subject"
 
