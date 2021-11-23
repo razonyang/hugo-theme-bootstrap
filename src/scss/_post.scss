@@ -72,9 +72,10 @@
   .post-panel {
     position: absolute;
     text-align: right;
-    right: -1.7rem;
+    right: -1rem;
     top: -0.5rem;
     margin-top: 8px;
+    overflow: hidden;
 
     a {
       color: inherit;
