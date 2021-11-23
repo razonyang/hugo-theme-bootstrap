@@ -529,7 +529,7 @@ layout = "contact"
 
 默認支持 Netlify，至於其他後端，你需要調整 `contact` 參數。
 
-以 [Getform](getform.io) 為例：
+以 [Getform](https://getform.io) 為例：
 
 ```toml
 [contact]

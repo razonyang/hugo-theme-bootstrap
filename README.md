@@ -531,7 +531,7 @@ layout = "contact"
 
 It supports Netlify out of box, as for other backends, you need to tweak the `contact` parameter.
 
-Let's take [Getform](getform.io) as an example:
+Let's take [Getform](https://getform.io) as an example:
 
 ```toml
 [contact]
