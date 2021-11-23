@@ -10,12 +10,12 @@
           <h2 class="taxonomy-title card-title">
             <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
           </h2>
-          <div class="taxonomy-meta">
+          <div class="taxonomy-meta my-2">
             <span class="taxonomy-post-count"><i class="fas fa-fw fa-file-alt"></i>{{ i18n "post_count" (dict "Count" $count) }}</span>
           </div>
           {{- $postCount := default 3 $.Site.Params.taxonomyPostCount -}}
           {{- if $postCount -}}
-          <ul class="taxonomy-posts">
+          <ul class="taxonomy-posts post-list">
             {{- range first $postCount .Pages -}}
             <li class="taxonomy-post">
               <a class="post-title" href="{{ .Permalink }}">{{ .Title }}</a>

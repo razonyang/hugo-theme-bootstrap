@@ -3,7 +3,7 @@
 <section class="recent-posts row card component">
   <div class="card-body">
     <h2 class="card-title">{{ T "recent_posts" }}</h2>
-    <ul>
+    <ul class="post-list">
     {{- range first $count (where site.RegularPages "Type" "in" site.Params.mainSections) -}}
       <li><a href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a></li>
     {{- end -}}
