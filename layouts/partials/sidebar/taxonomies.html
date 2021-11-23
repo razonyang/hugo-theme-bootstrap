@@ -9,7 +9,7 @@
         <h2 class="card-title">
           <a href="{{ absLangURL (urlize $key) }}">{{ T $key }}</a>
         </h2>
-        <div class="pb-2">
+        <div class="py-2">
         {{- range $idx, $taxonomy := . -}}
           {{- if lt $idx $taxonomyCount -}}
           <a href="{{ $taxonomy.Page.Permalink }}" class="badge rounded post-taxonomy" title="{{ $taxonomy.Page.Title }}">
