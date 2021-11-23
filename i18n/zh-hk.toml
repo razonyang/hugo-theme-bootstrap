@@ -115,6 +115,9 @@ other = "配色"
 [post_count]
 other = "總共 {{ .Count }} 篇文章"
 
+[post_date]
+other = "創建於 {{ .createdOn }}{{ with .updatedOn }}，更新於 {{ . }}{{ end }}。"
+
 [read_more]
 other = "閱讀更多"
 

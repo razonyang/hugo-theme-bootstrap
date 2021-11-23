@@ -107,14 +107,8 @@ other = "ياي بال"
 one = "{{ .Count }} منشور"
 other = "{{ .Count }} منشورات"
 
-[post_created_on]
-other = "نُشرت في"
-
-[post_reading_time]
-other = "وقت القراءة"
-
-[post_updated_on]
-other = "حُدثت في"
+[post_date]
+other = "created on {{ .createdOn }}{{ with .updatedOn }}, updated on {{ . }}{{ end }}."
 
 [read_more]
 other = "Read More"
