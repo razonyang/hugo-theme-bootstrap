@@ -28,3 +28,8 @@ HUGO_ENABLEGITINFO = "true"
     X-Content-Type-Options = "nosniff"
     X-Frame-Options = "deny"
     X-XSS-Protection = "1; mode=block"
+
+[[redirects]]
+  from = "/:lang/*"
+  to = "/:lang/404.html"
+  status = 404
