@@ -5,7 +5,7 @@
   <section class="featured-posts row card component">
     <div class="card-body">
       <h2 class="card-title">{{ T "featured_posts" }}</h2>
-      <ul>
+      <ul class="post-list">
       {{- range . -}}
         <li><a href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a></li>
       {{- end -}}
