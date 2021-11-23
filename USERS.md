@@ -5,5 +5,6 @@
 - [Sudip Ghimire](https://sudipg.com.np)
 - [Cups of Code](https://cupsOfCode.com)
 - [JO's USB](https://josusb.com/)
+- [SimpleAnecdote](https://simpleanecdote.com)
 
 > List your blog or website by creating a PR.
