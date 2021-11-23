@@ -50,7 +50,7 @@ There is also a [list of websites that use this theme](https://github.com/razony
 - [Various Shortcodes](#shortcodes).
 - [Twitter Cards](https://gohugo.io/templates/internal/#configure-twitter-cards) and [Open Graph](https://gohugo.io/templates/internal/#configure-open-graph).
 - [Creative Commons License](https://creativecommons.org/licenses/)
-- Netlify Contact Form
+- [Contact Form](#contact-form)
 
 ## Installation
 
@@ -264,6 +264,9 @@ As the example site shown, the configuration are separated into multiple files, 
 | `pwa.manifest.icons.src` | String | - | Icon's URL
 | **Meta Tag**
 | `metaRobots` | String | - | Empty means that turn it off.
+| **Contact Form**
+| `contact` | Object | - |
+| `contact.endpoint` | String | - | Endpoint
 
 > Except the Google webmaster tool, the other webmaster tools cannot work with `hugo --minify`, because they cannot recognize the minified meta tag.
 
@@ -512,6 +515,28 @@ github = "githubusername"
 | `discourse` | Forum URL |
 | `tiktok` | TikTok Username |
 | `pinterest` | Pinterest Username |
+
+## Contact Form
+
+Create a contact page called `contact/index.md` in the `content` directory.
+
+```toml
++++
+title = "Contact Us"
+layout = "contact"
++++
+```
+
+### Configuration
+
+It supports Netlify out of box, as for other backends, you need to tweak the `contact` parameter.
+
+Let's take [Getform](getform.io) as an example:
+
+```toml
+[contact]
+  endpoint = "{{GETFORM_ENDPOINT}}"
+```
 
 ## Contribute
 

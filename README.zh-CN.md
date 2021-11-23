@@ -49,7 +49,7 @@
 - [多样的短代码](#短代码)
 - [Twitter Cards](https://gohugo.io/templates/internal/#configure-twitter-cards) 和 [Open Graph](https://gohugo.io/templates/internal/#configure-open-graph)
 - [知识许可共享协议](https://creativecommons.org/licenses/)
-- Netlify 联系表单
+- [联系表单](#联系表单)
 
 ## 安装
 
@@ -263,6 +263,9 @@ $ hugo new -c content/zh-cn posts/newpost.md
 | `pwa.manifest.icons.src` | String | - | 图标 URL
 | **Meta Tag**
 | `metaRobots` | String | - | 空字符串表示禁用。
+| **Contact Form**
+| `contact` | Object | - |
+| `contact.endpoint` | String | - | Endpoint
 
 > 除了 Google 站长工具外，其他搜索引擎站长工具无法与 `hugo --minify` 同时使用，这是因为它们无法识别优化后的元标签。
 
@@ -511,6 +514,27 @@ github = "githubusername"
 | `tiktok` | TikTok 用户名 |
 | `pinterest` | Pinterest 用户名 |
 
+## 联系表单
+
+在 `content` 目录下新增一个名为 `contact/index.md` 的页面。
+
+```toml
++++
+title = "Contact Us"
+layout = "contact"
++++
+```
+
+### 配置
+
+默认支持 Netlify，至于其他后端，你需要调整 `contact` 参数。
+
+以 [Getform](getform.io) 为例：
+
+```toml
+[contact]
+  endpoint = "{{GETFORM_ENDPOINT}}"
+```
 
 ## 贡献
 
