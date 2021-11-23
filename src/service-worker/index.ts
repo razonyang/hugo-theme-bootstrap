@@ -3,7 +3,7 @@ import { registerRoute, setCatchHandler } from 'workbox-routing';
 import { CacheFirst, StaleWhileRevalidate } from 'workbox-strategies';
 import { CacheableResponsePlugin } from 'workbox-cacheable-response';
 import { ExpirationPlugin } from 'workbox-expiration';
-import { precacheAndRoute, matchPrecache } from 'workbox-precaching';
+import { precacheAndRoute, matchPrecache, cleanupOutdatedCaches } from 'workbox-precaching';
 
 declare var self: ServiceWorkerGlobalScope;
 declare var config: any;
@@ -13,6 +13,8 @@ clientsClaim();
 self.addEventListener('install', function(event) {
   self.skipWaiting();
 });
+
+cleanupOutdatedCaches();
 
 setCatchHandler(async ({ request }) => {
   if (request.destination === 'document') {
