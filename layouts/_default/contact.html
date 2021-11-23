@@ -3,7 +3,7 @@
     {{- partial "breadcrumb" . -}}
     <div class="contact row component card">
         <div class="card-body">
-            <form class="needs-validation" name="contact" method="POST" data-netlify="true" novalidate>
+            <form class="needs-validation" name="contact" method="POST" data-netlify="true" enctype="multipart/form-data" novalidate>
                 <div class="mb-3">
                   <label for="contactName" class="form-label">{{ "contact_name" | i18n }}</label>
                   <input name="name" class="form-control" id="contactName" required>
@@ -23,7 +23,7 @@
                 </div>
                 <div class="mb-3">
                   <label for="file" class="form-label">{{ "contact_file" | i18n }}</label>
-                  <input class="form-control" type="file" id="file">
+                  <input class="form-control" type="file" id="file" name="file">
                 </div>
                 <button type="submit" class="btn btn-outline-primary">{{ "button_submit" | i18n }}</button>
               </form>
