@@ -465,7 +465,7 @@ window.viewerOptions = {
 | `jsfiddle` | JSFiddle | `{{< jsfiddle "user/id" >}}`
 | `codepen` | CodePen | `{{< codepen "id" >}}`
 | `jsrun` | JSRUN | `{{< jsrun "id" >}}`
-| `gist` | GitHub Gist | `{{< gist "id" >}}`
+| `gist` | GitHub Gist | `{{< gist user id >}}`
 | `bilibili`| 嗶哩嗶哩 | `{{< bilibili "video ID" >}}`
 | `youku`| 優酷 | `{{< youku "video ID" >}}`
 | `iqiyi`| 愛奇藝 | `{{< iqiyi "vid" "tvid" >}}`
