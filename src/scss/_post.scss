@@ -75,7 +75,6 @@
 .post-panel-wrapper {
   position: sticky;
   top: 84px;
-  z-index: 1;
 
   .post-panel {
     position: absolute;
@@ -83,7 +82,6 @@
     right: -1rem;
     top: -0.5rem;
     margin-top: 8px;
-    overflow: hidden;
 
     a {
       color: inherit;
@@ -96,7 +94,7 @@
 
     .action {
       margin-top: 0.25rem;
-      padding: .125rem .5rem .25rem;
+      padding: .125rem .125rem .25rem;
 
       &:not(:last-child) {
         border-bottom: 1px #{$gray-500} dashed;
