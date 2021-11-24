@@ -109,13 +109,13 @@ $ git commit -m 'Upgrade the theme'
 ## 快速開始
 
 ```shell
-$ hugo new -c content/en posts/newpost.md
+$ hugo new content/en/posts/newpost.md
 ```
 
 上述命令創建了一篇英文文章，同樣的，我們也可以創建一篇簡體中文的文章：
 
 ```shell
-$ hugo new -c content/zh-cn posts/newpost.md
+$ hugo new content/zh-cn/posts/newpost.md
 ```
 
 > 請注意：創建的文章一般處於草稿狀態，本地預覽時，`hugo server` 需要加上 `-D` 參數才能顯示草稿文章。文章發佈時，需要將 `draft` 改為 `false`，或者直接删除 `draft`。
