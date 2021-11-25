@@ -1,12 +1,10 @@
 [en]
   languageName = "English"
   weight = 1
-  contentDir = "content/en"
 
 [fr]
   languageName = "Français"
   weight = 2
-  contentDir = "content/fr"
   [fr.params]
     dateFormat = "02-01-2006"
     description = "Un thème de blog extrêmement rapide, réactif et riche en fonctionnalités pour Hugo"
@@ -15,7 +13,6 @@
 [zh-cn]
   languageName = "简体中文"
   weight = 4
-  contentDir = "content/zh-cn"
   [zh-cn.params]
     dateFormat = "2006-01-02"
     description = "一个快速、响应式和功能丰富的 Hugo 博客主题"
@@ -26,7 +23,6 @@
 [zh-tw]
   languageName = "繁體中文"
   weight = 3
-  contentDir = "content/zh-tw"
   [zh-tw.params]
     dateFormat = "2006-01-02"
     description = "一個快速、響應式和功能豐富的 Hugo 博客主題"
