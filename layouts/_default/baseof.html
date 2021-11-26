@@ -12,7 +12,9 @@
   </head>
   <body>
     {{- $bootstrapScript := resources.Get "js/bootstrap.template.js" | resources.ExecuteAsTemplate "js/bootstrap.js" . | resources.Minify | resources.Fingerprint -}}
-    <script src="{{ $bootstrapScript.Permalink }}" integrity="{{ $bootstrapScript.Data.Integrity }}" crossorigin="anonymous"></script>
+    <script>
+      {{- $bootstrapScript.Content | safeJS -}}
+    </script>
     {{- partial "header.html" . -}}
     {{- partial "hooks/main-begin" . -}}
     <main role="main" class="container{{ if default false .Site.Params.fullWidth }}-fluid{{ end }}">
