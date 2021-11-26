@@ -109,14 +109,16 @@ $ git commit -m 'Upgrade the theme'
 
 ## Getting Started
 
+> Assume that the default language is `en`.
+
 ```shell
-$ hugo new content/en/posts/newpost.md
+$ hugo new posts/new-post/index.md
 ```
 
 The command above create a new post written in English. Similarly, we can create a post written in Simplified Chinese:
 
 ```shell
-$ hugo new content/zh-cn/posts/newpost.md
+$ hugo new posts/new-post/index.zh-cn.md
 ```
 
 > Please remind that, the created posts are generally in draft state. You'll need the `-D` parameter to the command `hugo server` for previewing. When publishing posts, you need to change the `draft` to `false`, or delete `draft` directly.
@@ -588,7 +590,11 @@ $ npm run lint
 
 ### How to remove the unwanted language?
 
-- Delete the relative language items from `languages.toml`.
-- Delete the configuration files those filenames contains language code, such as `config.zh-cn.toml`, `params.zh-cn.toml`.
-- Change the value of `defaultContentLanguage` and `defaultContentLanguageInSubdir` of `config.toml`.
-- Delete the relative posts or directories in `content`, such as `rm -r content/zh-cn`.
+Let's take `zh-cn` as an example.
+
+```shell
+find . -name "*.zh-cn.*" -type f -delete
+```
+
+Firstly, we delete any files relative to `zh-cn`, and then remove the `[zh-cn]` block from the `languages.toml`.
+
