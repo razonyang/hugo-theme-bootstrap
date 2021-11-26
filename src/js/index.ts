@@ -18,7 +18,6 @@ import './fonts';
 import './form-validator';
 import './top-app-bar';
 import './loading-bar';
-import './image-loader';
 
 declare global {
   interface Window {
