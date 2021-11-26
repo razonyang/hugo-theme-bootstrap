@@ -109,13 +109,13 @@ $ git commit -m 'Upgrade the theme'
 ## 快速开始
 
 ```shell
-$ hugo new content/en/posts/newpost.md
+$ hugo new posts/new-post/index.md
 ```
 
 上述命令创建了一篇英文文章，同样的，我们也可以创建一篇简体中文的文章：
 
 ```shell
-$ hugo new content/zh-cn/posts/newpost.md
+$ hugo new posts/new-post/index.zh-cn.md
 ```
 
 > 请注意：创建的文章一般处于草稿状态，本地预览时，`hugo server` 需要加上 `-D` 参数才能显示草稿文章。文章发布时，需要将 `draft` 改为 `false`，或者直接删除 `draft`。
@@ -584,7 +584,10 @@ $ npm run lint
 
 ### 如何删除不需要的语言？
 
-- 删除 `languages.toml` 中不需要的语言。
-- 删除文件名带有语言代号的配置文件，比如 `config.zh-cn.toml`、`params.zh-cn.toml`。
-- 修改 `config.toml` 中 `defaultContentLanguage` 和 `defaultContentLanguageInSubdir` 的值。
-- 删除 `content` 中相关的文章或目录，比如 `rm -r content/zh-cn`。
+以 `zh-cn` 为例。
+
+```shell
+find . -name "*.zh-cn.*" -type f -delete
+```
+
+首先我们删除任何和 `zh-cn` 有关的文件，然后删除 `languages.toml` 中的 `[zh-cn]`。
