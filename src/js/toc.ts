@@ -25,6 +25,4 @@ class TOC {
   }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  (new TOC(document.querySelector('#offcanvasTOC'))).run();
-});
+(new TOC(document.querySelector('#offcanvasTOC'))).run();

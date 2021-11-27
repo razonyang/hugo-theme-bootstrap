@@ -46,6 +46,4 @@ class Scroller {
   }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  (new Scroller()).run();
-});
+(new Scroller()).run();

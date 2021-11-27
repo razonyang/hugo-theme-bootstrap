@@ -6,6 +6,4 @@ class TopAppBar {
     }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    TopAppBar.run();
-});
+TopAppBar.run();

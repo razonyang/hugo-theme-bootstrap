@@ -7,6 +7,4 @@ class PopOver {
   }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  PopOver.run();
-});
+PopOver.run();
