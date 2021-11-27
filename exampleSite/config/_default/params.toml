@@ -54,7 +54,7 @@ customCSS = [
 customJS = [
 ]
 
-# tocWordCount = 280 # TOC is displayed only if the post's word count exceeds this value.
+tocWordCount = 120 # TOC is displayed only if the post's word count exceeds this value.
 
 titleCase = true # Capitalized title.
 
