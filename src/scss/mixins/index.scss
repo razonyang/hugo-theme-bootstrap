@@ -1,4 +1,10 @@
+@use '@material/elevation/mixins' as mdc-mixins;
+
 @mixin fontAwesome($content) {
   font-family: 'Font Awesome 5 Free';
   content: '#{$content}';
+}
+
+@mixin elevation($z) {
+  @include mdc-mixins.elevation($z);
 }

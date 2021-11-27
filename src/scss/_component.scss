@@ -1,9 +1,7 @@
-@use '@material/elevation/mixins' as mdc-mixins;
-
 .component {
   @extend .surface;
 
-  @include mdc-mixins.elevation(8);
+  @include elevation(2);
 
   margin-bottom: var(--#{$variable-prefix}component-gutter-b);
   padding: 0 .25rem;

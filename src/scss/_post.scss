@@ -1,4 +1,3 @@
-
 .post-meta {
   margin-bottom: .5rem;
   color: variable('secondary-text-on-surface');
@@ -130,6 +129,8 @@
   margin: .25rem;
   padding: .5rem;
   opacity: .7;
+
+  @include elevation(2);
 
   &:hover {
     opacity: 1;

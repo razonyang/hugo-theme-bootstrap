@@ -1,3 +1,7 @@
+.btn {
+  @include elevation(2);
+}
+
 .btn-primary {
   color: variable('on-primary');
   background-color: variable('accent');
