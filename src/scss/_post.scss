@@ -171,9 +171,20 @@
 
 .post-list {
   margin: .25rem 0;
+  color: var(--hbs-secondary-text-on-surface);
+  list-style: none;
+  padding-left: 0.25rem;
   
   li {
     padding: .25rem 0;
+
+    a {
+      color: variable('secondary-text-on-surface');
+
+      &:hover {
+        color: variable('accent');
+      }
+    }
   }
 }
 
