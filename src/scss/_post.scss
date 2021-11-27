@@ -67,6 +67,8 @@
     top: -0.5rem;
     margin-top: 8px;
 
+    @include elevation(6);
+
     a {
       color: inherit;
 
