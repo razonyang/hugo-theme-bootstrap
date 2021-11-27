@@ -1,8 +1,10 @@
 {{- $count := default 5 .Site.Params.recentPostCount -}}
 {{- if $count -}}
 <section class="recent-posts row card component">
-  <div class="card-body">
+  <div class="card-header">
     <h2 class="card-title">{{ T "recent_posts" }}</h2>
+  </div>
+  <div class="card-body">
     <ul class="post-list">
     {{- range first $count (where site.RegularPages "Type" "in" site.Params.mainSections) -}}
       <li><a href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a></li>

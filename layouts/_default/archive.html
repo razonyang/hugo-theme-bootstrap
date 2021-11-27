@@ -15,8 +15,10 @@
     {{ printf "</ul></div></div>" | safeHTML }}
     {{- end -}}
     <div class="archive card row component">
-      <div class="card-body">
+      <div class="card-header">
         <h3 class="archive-title card-title">{{ $currentYear }}</h3>
+      </div>
+      <div class="card-body">
         <ul class="archive-posts post-list">
         {{- end -}}
           <li>

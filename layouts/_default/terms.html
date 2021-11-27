@@ -6,10 +6,12 @@
       {{- range .Paginator.Pages -}}
       {{- $count := len .Pages -}}
       <div class="taxonomy row card component">
-        <div class="card-body">
+        <div class="card-header">
           <h2 class="taxonomy-title card-title">
             <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
           </h2>
+        </div>
+        <div class="card-body">
           <div class="taxonomy-meta my-2">
             <span class="taxonomy-post-count"><i class="fas fa-fw fa-file-alt"></i>{{ i18n "post_count" (dict "Count" $count) }}</span>
           </div>
@@ -23,13 +25,13 @@
             </li>
             {{- end -}}
           </ul>
-          <div class="taxonomy-actions">
-            {{- if gt $count $postCount -}}
-            <a class="btn btn-sm btn-outline-primary" href="{{ .Page.Permalink }}">{{ i18n "read_more" }}</a>
-            {{- end -}}
-          </div>
           {{- end -}}
         </div>
+        {{- if gt $count $postCount -}}
+        <div class="card-footer">
+          <a class="btn btn-sm btn-outline-primary" href="{{ .Page.Permalink }}">{{ i18n "read_more" }}</a>
+        </div>
+        {{- end -}}
       </div>
       {{- end -}}
     </div>

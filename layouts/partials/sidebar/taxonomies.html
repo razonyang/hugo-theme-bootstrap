@@ -5,10 +5,12 @@
   {{- if $taxonomyCount -}}
     {{- with $value.ByCount -}}
     <section class="taxonomies row card component">
-      <div class="card-body">
+      <div class="card-header">
         <h2 class="card-title">
           <a href="{{ absLangURL (urlize $key) }}">{{ T $key }}</a>
         </h2>
+      </div>
+      <div class="card-body">
         <div class="py-2">
         {{- range $idx, $taxonomy := . -}}
           {{- if lt $idx $taxonomyCount -}}
