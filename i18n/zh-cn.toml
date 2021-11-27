@@ -61,6 +61,9 @@ other = "蓝绿色"
 [color_yellow]
 other = "黄色"
 
+[comments]
+other = "评论"
+
 [contact_name]
 other = "名称"
 
