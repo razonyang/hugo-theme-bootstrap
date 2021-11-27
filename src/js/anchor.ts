@@ -23,6 +23,4 @@ class AnchorLink {
   }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  (new AnchorLink(document.body.querySelectorAll('.post-content'))).run();
-});
+(new AnchorLink(document.body.querySelectorAll('.post-content'))).run();

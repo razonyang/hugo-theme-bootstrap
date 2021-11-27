@@ -13,6 +13,4 @@ class LoadingBar {
     }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  (new LoadingBar()).run();
-});
+(new LoadingBar()).run();

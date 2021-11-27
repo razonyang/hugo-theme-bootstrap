@@ -16,6 +16,4 @@ class FormValidator {
     }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    (new FormValidator()).run();
-});
+(new FormValidator()).run();

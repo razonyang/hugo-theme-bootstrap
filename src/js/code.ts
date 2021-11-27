@@ -9,6 +9,4 @@ class Code {
   }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  Code.run();
-});
+Code.run();

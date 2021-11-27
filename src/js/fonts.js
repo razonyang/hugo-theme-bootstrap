@@ -46,6 +46,4 @@ library.add(
   faBilibili, faLiberapay, faOffline,
 );
 
-document.addEventListener('DOMContentLoaded', () => {
-  dom.watch();
-});
+dom.watch();

@@ -59,6 +59,4 @@ class PaletteSwitcher {
   }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  (new PaletteSwitcher()).run();
-});
+(new PaletteSwitcher()).run();
