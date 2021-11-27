@@ -61,6 +61,9 @@ other = "Teal"
 [color_yellow]
 other = "Yellow"
 
+[comments]
+other = "Comments"
+
 [contact_name]
 other = "Name"
 
