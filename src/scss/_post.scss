@@ -59,6 +59,7 @@
 .post-panel-wrapper {
   position: sticky;
   top: 84px;
+  z-index: 1100;
 
   .post-panel {
     position: absolute;
