@@ -9,8 +9,8 @@ categories = [
   "Assets"
 ]
 tags = [
-  "customCSS",
-  "customJS"
+  "CSS",
+  "JS"
 ]
 series = [
   "Docs"
