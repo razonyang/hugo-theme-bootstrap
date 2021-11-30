@@ -9,8 +9,8 @@ categories = [
   "资源"
 ]
 tags = [
-  "customCSS",
-  "customJS"
+  "CSS",
+  "JS"
 ]
 series = [
   "文档"

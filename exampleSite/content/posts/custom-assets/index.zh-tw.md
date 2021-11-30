@@ -9,8 +9,8 @@ categories = [
   "資源"
 ]
 tags = [
-  "customCSS",
-  "customJS"
+  "CSS",
+  "JS"
 ]
 series = [
   "檔案"
