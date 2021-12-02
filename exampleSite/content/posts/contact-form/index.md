@@ -18,7 +18,7 @@ series = [
 images = []
 +++
 
-We can put our email address on social links so that readers can contact us. Unfortunately, emails will be more or less treated as spam and even filtered.
+We can put our email address on [social links]({{< ref "/posts/social-links" >}}) so that readers can contact us. Unfortunately, emails will be more or less treated as spam and even filtered.
 Therefore, we bring a feature called contact form. 
 
 <!--more-->
