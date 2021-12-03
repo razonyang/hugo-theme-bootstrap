@@ -8,7 +8,16 @@
   {{- range .Paginator.Pages -}}
     <article class="row card post component">
       <div class="card-header">
-        <h2 class="card-title post-title"><a href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a></h2>
+        <h2 class="card-title post-title">
+          {{- if and (default true $.Site.Params.pinned) .Params.pinned -}}
+            {{- with .File.UniqueID -}}
+              {{- if eq . ($.Scratch.Get "pinnedPost") -}}
+              <i class="fas fa-fw fa-thumbtack"></i>
+              {{- end -}}
+            {{- end -}}
+          {{- end -}}
+          <a href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a>
+        </h2>
       </div>
       <div class="card-body">
         {{ if .Params.Images }}

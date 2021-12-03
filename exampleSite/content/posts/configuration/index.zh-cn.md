@@ -127,6 +127,7 @@ images = []
 | **Meta Tag**
 | `metaRobots` | String | - | 空字符串表示禁用。
 | `contact` | Object | - | [联系表单]({{< ref "posts/contact-form" >}})
+| `pinnedPost` | Boolean | `true` | 开启/禁用文章置顶。
 
 > 除了 Google 站长工具外，其他搜索引擎站长工具无法与 `hugo --minify` 同时使用，这是因为它们无法识别优化后的元标签。
 
@@ -156,3 +157,4 @@ images = []
 | `creativeCommons.sa` | Boolean | `true` | 相同方式共享
 | **Meta Tag**
 | `metaRobots` | String | - | 空字符串表示禁用。
+| `pinned` | Boolean | `false` | 置顶文章。

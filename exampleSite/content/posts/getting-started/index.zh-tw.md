@@ -5,6 +5,7 @@ featured = true
 comment = true
 toc = true
 reward = true
+pinned = true
 categories = [
   ""
 ]
