@@ -17,6 +17,12 @@ A fast, responsive and feature-rich blog theme for Hugo.
 
 There is also a [list of websites that use this theme](https://github.com/razonyang/hugo-theme-bootstrap/blob/master/USERS.md).
 
+## Docs
+
+- [English](https://hbs.razonyang.com/en/posts/getting-started)
+- [简体中文](https://hbs.razonyang.com/zh-cn/posts/getting-started)
+- [繁體中文](https://hbs.razonyang.com/zh-tw/posts/getting-started)
+
 ## Features
 
 - [Flexible and Configurable](https://hbs.razonyang.com/posts/configuration).
