@@ -125,6 +125,7 @@ See also [All Configuration Settings](https://gohugo.io/getting-started/configur
 | **Meta Tag**
 | `metaRobots` | String | - | Empty means that turn it off.
 | `contact` | Object | - | [Contact Form]({{< ref "posts/contact-form" >}})
+| `pinnedPost` | Boolean | `true` | Turn on/off pinned posts.
 
 > Except the Google webmaster tool, the other webmaster tools cannot work with `hugo --minify`, because they cannot recognize the minified meta tag.
 
@@ -153,4 +154,4 @@ See also [All Configuration Settings](https://gohugo.io/getting-started/configur
 | `creativeCommons.sa` | Boolean | `true` | Adaptations must be shared under the same terms.
 | **Meta Tag**
 | `metaRobots` | String | - | Empty means that turn it off.
-
+| `pinned` | Boolean | `false` | Pinning posts.

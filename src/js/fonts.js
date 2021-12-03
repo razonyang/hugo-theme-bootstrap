@@ -5,7 +5,7 @@ import {
   faColumns, faCopy, faCopyright, faEdit, faEllipsisV, faEnvelope, faExclamationTriangle,
   faExpandAlt, faEyeDropper, faFont, faFileAlt, faFileArchive, faFolder, faHome, faInfoCircle,
   faLanguage, faLink, faList, faListAlt, faMapMarkerAlt, faPalette, faQuestion, faQuestionCircle,
-  faRedoAlt, faRss, faSearch, faShareAlt, faSkullCrossbones, faSpinner, faTags,
+  faRedoAlt, faRss, faSearch, faShareAlt, faSkullCrossbones, faSpinner, faTags, faThumbtack,
   faTimes, faTv, faUndo, faUser,
 } from '@fortawesome/free-solid-svg-icons';
 import {
@@ -29,7 +29,7 @@ library.add(
   faColumns, faCopy, faCopyright, faEdit, faEllipsisV, faEnvelope, faExclamationTriangle,
   faExpandAlt, faEyeDropper, faFont, faFileAlt, faFileArchive, faFolder, faHome, faInfoCircle,
   faLanguage, faLink, faList, faListAlt, faMapMarkerAlt, faPalette, faQuestion, faQuestionCircle,
-  faRedoAlt, faRss, faSearch, faShareAlt, faSkullCrossbones, faSpinner, faTags,
+  faRedoAlt, faRss, faSearch, faShareAlt, faSkullCrossbones, faSpinner, faTags, faThumbtack,
   faTimes, faTv, faUndo, faUser,
 
   // Regular Icons
