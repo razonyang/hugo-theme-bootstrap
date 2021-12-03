@@ -7,15 +7,15 @@
   <div class="posts mb-4">
   {{- range .Paginator.Pages -}}
     <article class="row card post component">
+      {{- if and (default true $.Site.Params.pinned) .Params.pinned -}}
+        {{- with .File.UniqueID -}}
+          {{- if eq . ($.Scratch.Get "pinnedPost") -}}
+          <span class="position-absolute start-0 top-0 text-primary"><i class="fas fa-thumbtack" data-fa-transform="rotate-45"></i></span>
+          {{- end -}}
+        {{- end -}}
+      {{- end -}}
       <div class="card-header">
         <h2 class="card-title post-title">
-          {{- if and (default true $.Site.Params.pinned) .Params.pinned -}}
-            {{- with .File.UniqueID -}}
-              {{- if eq . ($.Scratch.Get "pinnedPost") -}}
-              <i class="fas fa-fw fa-thumbtack"></i>
-              {{- end -}}
-            {{- end -}}
-          {{- end -}}
           <a href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a>
         </h2>
       </div>

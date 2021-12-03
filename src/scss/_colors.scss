@@ -9,3 +9,7 @@ $white-disabled: rgba(225, 225, 225, 0.5);
 .bg-primary {
     background-color: variable('primary')!important;
 }
+
+.text-primary {
+    color: variable('primary')!important;
+}
