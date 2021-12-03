@@ -35,6 +35,15 @@ layout = "contact"
 
 一旦創建，連結將出現在簡介小部件中。
 
+## 參數
+
+| 名稱 | 類型 | 默認值 | 說明
+|---|:-:|:-:|---
+| `contact` | Object | - | 
+| `contact.endpoint` | String | - | 請參閱 [後端](#後端)。
+| `contact.file` | Boolean | `false` | 開啟/禁用文件上傳。
+| `contact.fileField` | String | - | 文件字段名稱。
+
 ## 後端
 
 其被設計成可以相容大部分後端。 現時，[Netlify form](https://docs.netlify.com/forms/setup) 和 [Getform](https://getform.io/) 已驗證可用。
