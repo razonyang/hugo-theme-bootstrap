@@ -6,10 +6,6 @@ A fast, responsive and feature-rich blog theme for Hugo.
 
 ![Screenshot](https://raw.githubusercontent.com/razonyang/hugo-theme-bootstrap/master/images/screenshot.png)
 
-**Light Mode**
-
-![Screenshot in Light Mode](https://raw.githubusercontent.com/razonyang/hugo-theme-bootstrap/master/images/screenshot-light.png)
-
 ## Demo Sites
 
 - https://hbs.razonyang.com/ - Deploy on Netlify.
