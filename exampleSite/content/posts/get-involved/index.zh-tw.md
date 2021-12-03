@@ -1,5 +1,5 @@
 +++
-title = "Soci參與我們"
+title = "參與我們"
 date = 2021-11-27T19:54:29+08:00
 comment = true
 toc = true
@@ -12,6 +12,9 @@ series = [
   "檔案"
 ]
 images = []
+[menu.main]
+  parent = "support"
+  weight = 5
 +++
 
 我們很樂意傾聽你的意見和反饋，也歡迎你參與進來。

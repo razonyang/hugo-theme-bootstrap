@@ -87,3 +87,8 @@ $ hugo new posts/new-post/index.zh-cn.md
 ```
 
 > 請注意：創建的文章一般處於草稿狀態，本地預覽時，`hugo server` 需要指定 `-D` 參數才能預覽草稿文章。文章發佈時，需要將 `draft` 改為 `false`，或者直接移除 `draft` 參數。
+
+## 下一步
+
+- [調整配置]({{< ref "/posts/configuration" >}})
+- [觀感]({{< ref "/posts/look-and-feel" >}})

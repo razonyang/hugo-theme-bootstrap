@@ -12,7 +12,7 @@ tags = [
   "HTML",
 ]
 series = [
-  "User Manual"
+  "Docs"
 ]
 aliases = ["migrate-from-jekyl"]
 images = [

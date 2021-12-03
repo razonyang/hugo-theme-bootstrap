@@ -12,6 +12,9 @@ series = [
   "Docs"
 ]
 images = []
+[menu.main]
+  parent = "support"
+  weight = 5
 +++
 
 We are happy to listen to your opinions and feedback, and welcome you to get involved.

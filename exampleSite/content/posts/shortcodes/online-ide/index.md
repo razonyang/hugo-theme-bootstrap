@@ -12,7 +12,7 @@ tags = [
   "JSRun"
 ]
 series = [
-  "Manual"
+  "Docs"
 ]
 images = []
 +++
