@@ -36,6 +36,15 @@ layout = "contact"
 
 Once created, the link will appear in the profile widget.
 
+## Parameters
+
+| Name | Type | Default | Description
+|---|:-:|:-:|---
+| `contact` | Object | - | 
+| `contact.endpoint` | String | - | See also [Backends](#backends).
+| `contact.file` | Boolean | `false` | Enable/Disable file upload.
+| `contact.fileField` | String | - | The name of file field.
+
 ## Backends
 
 It is designed to be compatible with most backends. At present, [Netlify form](https://docs.netlify.com/forms/setup) and [Getform](https://getform.io/) have been verified to be available.
