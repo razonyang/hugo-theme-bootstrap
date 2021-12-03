@@ -87,3 +87,8 @@ $ hugo new posts/new-post/index.zh-cn.md
 
 > Please remind that, the created posts are generally in draft state. You'll need to specify the `-D` parameter of the command `hugo server` for previewing.
 > Similarly, you need to change the `draft` to `false` or remove `draft` parameter if you want to publish the article.
+
+## What's Next
+
+- [Tweak Configuration]({{< ref "/posts/configuration" >}})
+- [Look and Feel]({{< ref "/posts/look-and-feel" >}})

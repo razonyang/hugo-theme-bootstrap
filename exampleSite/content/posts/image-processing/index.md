@@ -13,7 +13,7 @@ tags = [
   "Image"
 ]
 series = [
-  "Manual"
+  "Docs"
 ]
 images = [
   "images/center.png"

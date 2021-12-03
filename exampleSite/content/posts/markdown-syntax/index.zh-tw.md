@@ -1,6 +1,6 @@
 +++
 author = "Hugo Authors"
-title = "Markdown Syntax Guide"
+title = "Markdown 語法指南"
 date = "2020-11-09"
 description = "Sample article showcasing basic Markdown syntax and formatting for HTML elements."
 featured = true
@@ -12,7 +12,7 @@ tags = [
   "HTML",
 ]
 series = [
-  "Manual"
+  "檔案"
 ]
 aliases = ["migrate-from-jekyl"]
 images = [

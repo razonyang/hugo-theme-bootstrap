@@ -9,7 +9,7 @@ defaultContentLanguageInSubdir = true # If you use only one language comment thi
 #disableLanguages = ["fr", "zh-cn" ,"zh-tw"] # For disable one or more language
 
 # Pagination
-paginate = 5
+paginate = 10
 # paginatePath = "page"
 
 # Disqus

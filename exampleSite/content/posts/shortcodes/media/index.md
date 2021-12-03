@@ -14,7 +14,7 @@ tags = [
   "Netease Music"
 ]
 series = [
-  "Manual"
+  "Docs"
 ]
 images = [
 ]
