@@ -49,6 +49,7 @@ taxonomyPaginate = 5 # Default to 10.
 taxonomyPostCount = 20 # The number of posts of taxonomy. Turn off by setting it to false.
 
 # pinnedPost = false # Turn on/off pinned posts.
+pinnedPostCount = 3 # The number of pinned posts.
 
 # Custom CSS and JS
 customCSS = [
