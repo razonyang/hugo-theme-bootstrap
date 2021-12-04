@@ -4,10 +4,10 @@
 {{- if .IsHome -}}
   {{- $sections := default (slice "posts") .Site.Params.mainSections -}}
   {{- $allPosts := where .Site.RegularPages "Type" "in" $sections -}}
-  {{- $pinnedPosts := first 1 (where $allPosts ".Params.pinned" true) -}}
-  {{- with (index $pinnedPosts 0) -}}
+  {{- $pinnedPosts := first (default 1 $.Site.Params.pinnedPostCount) (where $allPosts ".Params.pinned" true) -}}
+  {{- range $pinnedPosts -}}
     {{- with .File.UniqueID -}}
-      {{- $.Scratch.Set "pinnedPost" . -}}
+      {{- $.Scratch.Add "pinnedPosts" (slice .) -}}
     {{- end -}}
   {{- end -}}
   {{- $paginator = .Paginate (union $pinnedPosts $allPosts) -}}
