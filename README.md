@@ -21,18 +21,18 @@ There is also a [list of websites that use this theme](https://github.com/razony
 
 ## Features
 
-- [Flexible and Configurable](https://hbs.razonyang.com/posts/configuration).
+- [Flexible and Configurable](https://hbs.razonyang.com/en/posts/configuration).
 - Fast and Good User Experience: [Google PageSpeed Insights](https://pagespeed.web.dev/report?url=https://hbs.razonyang.com/en/)'s score is over 95.
 - Built on top of custom [Bootstrap 5](https://getbootstrap.com/).
 - Responsive.
-- [PWA](#pwa), AKA progressive web apps.
+- [PWA](https://hbs.razonyang.com/en/posts/pwa), AKA progressive web apps.
 - Various Palettes: `blue`, `blue-gray`, `brown`, `cyan`, `green`, `indigo`, `orange`, `pink`, `purple`, `red`, `teal`, `yellow`.
 - Light/Dark Mode.
 - Font Size Switcher.
 - Multilingual(I18N).
 - [Search](https://hbs.razonyang.com/en/posts/search).
 - Breadcrumb.
-- [Archive](https://hbs.razonyang.com/en/posts/archive).
+- [Archive](https://hbs.razonyang.com/en/posts/archives).
 - [Image Viewer](https://hbs.razonyang.com/en/posts/image-viewer).
 - [Image Processing](https://hbs.razonyang.com/en/posts/image-processing): resize and align images.
 - Resources Lazy Loading: `image` and `iframe`.
@@ -42,7 +42,7 @@ There is also a [list of websites that use this theme](https://github.com/razony
 - [Comments](https://hbs.razonyang.com/en/posts/widgets/comments): Disqus and Utterances can be used out of box, you can also integrate with other comments services.
 - [Custom Assets](https://hbs.razonyang.com/en/posts/custom-assets): custom CSS and JS.
 - [Hooks](https://hbs.razonyang.com/en/posts/hooks): provides ability to add custom code on page.
-- [Social Links](https://hbs.razonyang.com/en/posts/social-links).
+- [Social Links](https://hbs.razonyang.com/en/posts/widgets/social-links).
 - [Various Shortcodes](https://hbs.razonyang.com/en/posts/shortcodes).
 - [Twitter Cards](https://gohugo.io/templates/internal/#configure-twitter-cards) and [Open Graph](https://gohugo.io/templates/internal/#configure-open-graph).
 - [Creative Commons License](https://creativecommons.org/licenses/).
