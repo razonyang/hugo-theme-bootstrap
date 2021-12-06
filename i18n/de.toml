@@ -49,6 +49,9 @@ other = "Teal"
 [color_yellow]
 other = "Gelb"
 
+[comments]
+other = "Kommentare"
+
 [copyright]
 other = "Copyright"
 
@@ -81,7 +84,7 @@ one = "{{ .Count }} Beitrag insgesamt"
 other = "{{ .Count }} Beiträge insgesamt"
 
 [post_date]
-other = "erstellt auf {{ .createdOn }}{{ with .updatedOn }}, aktualisiert auf {{ . }}{{ end }}."
+other = "erstellt am {{ .createdOn }}{{ with .updatedOn }}, aktualisiert am {{ . }}{{ end }}."
 
 [read_more]
 other = "mehr lesen"
