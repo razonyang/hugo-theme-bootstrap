@@ -41,8 +41,6 @@
   flex-direction: row;
 
   .profile-avatar {
-    border-radius: 0 !important;
-
     @include media-breakpoint-down(sm) {
       width: 100%;
       height: 100%;
