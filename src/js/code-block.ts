@@ -1,3 +1,5 @@
+import GlobalSnackbar from "./snackbar";
+
 class CodeBlock {
   wrapper: HTMLElement;
 
@@ -77,6 +79,7 @@ class CodeBlock {
         ln.remove();
       });
       navigator.clipboard.writeText(cloneCode.innerText);
+      GlobalSnackbar.show('Copied');
       btn.classList.add('active');
     });
     this.panel.appendChild(btn);
