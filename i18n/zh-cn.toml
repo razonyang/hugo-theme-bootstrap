@@ -13,11 +13,14 @@ other = "支付宝"
 [archives]
 other = "归档"
 
-[button_submit]
-other = "提交"
+[button_copy_url]
+other = "复制链接"
 
 [button_reload]
 other = "刷新"
+
+[button_submit]
+other = "提交"
 
 [buy_me_a_coffee]
 other = "打赏"
