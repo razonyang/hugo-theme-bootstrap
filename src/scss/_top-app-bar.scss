@@ -84,7 +84,19 @@
   margin-bottom: 1rem;
 
   &.actions {
-    a {
+    .action {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0.25rem 0.5rem;
+
+      .action-icon {
+        padding: 0.75rem;
+        background-color: var(--hbs-background);
+        color: var(--hbs-primary-text-on-background);
+        margin-bottom: 0.25rem;
+      }
+
       &:hover {
         text-decoration: none;
       }

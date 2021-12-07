@@ -13,11 +13,14 @@ other = "Alipay"
 [archives]
 other = "Archives"
 
-[button_submit]
-other = "Submit"
+[button_copy_url]
+other = "Copy URL"
 
 [button_reload]
 other = "Reload"
+
+[button_submit]
+other = "Submit"
 
 [buy_me_a_coffee]
 other = "Buy me a coffee"

@@ -1,0 +1,21 @@
+.snackbar {
+  opacity: 0;
+  position: fixed;
+  bottom: 20%;
+  z-index: 1100;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  transition: opacity 1s ease-in-out;
+}
+
+.snackbar.show {
+  opacity: 1;
+}
+
+.snackbar-body {
+  color: var(--hbs-background);
+  background-color: var(--hbs-primary-text-on-background);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+}
