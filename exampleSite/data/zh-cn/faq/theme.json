@@ -1,0 +1,14 @@
+{
+    "title": "主题",
+    "weight": 1,
+    "questions": [
+        {
+            "question": "FAQ 页面支持 Markdown 格式吗？",
+            "answer": "当然，你可以输入任意有效的 Markdown 格式，比如 `代码`, *斜体*, **粗体** 等。\n#### 表格\n| Foo |\n|:---|\n| Bar |\n#### 列表\n- One\n- Two\n"
+        },
+        {
+            "question": "如何添加图标？",
+            "answer": "请参阅 [图标](/zh-cn/posts/look-and-feel#icons)。"
+        }
+    ]
+}
