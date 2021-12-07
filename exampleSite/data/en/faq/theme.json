@@ -1,0 +1,14 @@
+{
+    "title": "Theme",
+    "weight": 1,
+    "questions": [
+        {
+            "question": "Does FAQ page support Markdown syntax?",
+            "answer": "Sure. You can type any valid Markdown syntax, such as `code`, *italic*, **bold text** etc.\n#### Table\n| Foo |\n|:---|\n| Bar |\n#### List\n- One\n- Two\n"
+        },
+        {
+            "question": "How to add more icons?",
+            "answer": "See also [Look and Feel](/en/posts/look-and-feel#icons)."
+        }
+    ]
+}
