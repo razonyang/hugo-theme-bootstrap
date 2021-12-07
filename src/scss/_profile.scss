@@ -23,7 +23,8 @@
   .profile-about,
   .profile-location,
   .profile-contact {
-    display: inline;
+    align-items: center;
+    display: inline-flex;
     margin-right: 0.5rem;
   }
 
