@@ -9,6 +9,14 @@
         {
             "question": "如何添加圖標？",
             "answer": "請參閱 [圖標](/zh-tw/posts/look-and-feel#icons)。"
+        },
+        {
+            "question": "如何刪除語言？",
+            "answer": "我們以 `zh-cn` 為例。\n- 從 `config/_default/languages.toml` 刪除語言。\n- 通過 `find . -type f -name \"*.zh-cn.*\" -delete` 刪除配置和內容。"
+        },
+        {
+            "question": "如何添加新語言？",
+            "answer": "- 在 `config/_default/languages.toml` 添加新語言。\n- [書寫文章](/zh-tw/posts/getting-started/#書寫文章)。"
         }
     ]
 }
