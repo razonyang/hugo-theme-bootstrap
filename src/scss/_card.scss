@@ -1,0 +1,9 @@
+.card {
+    .card-header {
+        border-bottom: 1px solid rgba(variable('primary-text-on-surface-rgb'), .125);
+    }
+
+    .card-title {
+        margin: .5rem 0;
+    }
+}

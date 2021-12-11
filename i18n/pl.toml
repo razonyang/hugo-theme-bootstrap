@@ -107,14 +107,11 @@ other = "Paypal"
 one = "{{ .Count }} post"
 other = "{{ .Count }} posty"
 
-[post_created_on]
-other = "utworzony"
+[post_date]
+other = "created on {{ .createdOn }}{{ with .updatedOn }}, updated on {{ . }}{{ end }}."
 
-[post_reading_time]
-other = "czas czytania"
-
-[post_updated_on]
-other = "aktualizowany w dniu"
+[read_more]
+other = "Czytaj dalej"
 
 [reading_time]
 other = "{{ .ReadingTime }} min."

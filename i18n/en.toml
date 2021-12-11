@@ -1,3 +1,9 @@
+[404_title]
+other = "Oops! Page not found."
+
+[404_info]
+other = "We can't seems to find the page you're looking for."
+
 [about_me]
 other = "About Me"
 
@@ -6,6 +12,12 @@ other = "Alipay"
 
 [archives]
 other = "Archives"
+
+[button_copy_url]
+other = "Copy URL"
+
+[button_reload]
+other = "Reload"
 
 [button_submit]
 other = "Submit"
@@ -52,6 +64,9 @@ other = "Teal"
 [color_yellow]
 other = "Yellow"
 
+[comments]
+other = "Comments"
+
 [contact_name]
 other = "Name"
 
@@ -60,6 +75,9 @@ other = "Email"
 
 [contact_email_help]
 other = "We'll never share your email with anyone else."
+
+[contact_file]
+other = "File"
 
 [contact_subject]
 other = "Subject"
@@ -76,6 +94,9 @@ other = "Featured Posts"
 [font_size]
 other = "Font Size"
 
+[go_back]
+other = "Go back"
+
 [home]
 other = "Home"
 
@@ -90,6 +111,12 @@ other = "Load More"
 
 [mode]
 other = "Mode"
+
+[offline_title]
+other = "Oops! You're offline."
+
+[offline_info]
+other = "It seems there is a problem of your connection. Please check your network status."
 
 [pagination_title]
 other = "Page {{ .PageNumber }}"
@@ -107,14 +134,11 @@ other = "Paypal"
 one = "{{ .Count }} post in total"
 other = "{{ .Count }} posts in total"
 
-[post_created_on]
-other = "created on"
+[post_date]
+other = "created on {{ .createdOn }}{{ with .updatedOn }}, updated on {{ . }}{{ end }}."
 
-[post_reading_time]
-other = "reading time"
-
-[post_updated_on]
-other = "updated on"
+[read_more]
+other = "Read More"
 
 [reading_time]
 other = "{{ .ReadingTime }} min read"
@@ -151,6 +175,9 @@ other = "Tags"
 
 [author]
 other = "Autores"
+
+[try_again]
+other = "Try again"
 
 [wechat]
 other = "WeChat"

@@ -1,3 +1,9 @@
+[404_title]
+other = "哎喲！頁面未找到。"
+
+[404_info]
+other = "我們似乎找不到你要查找的頁面。"
+
 [about_me]
 other = "關於我"
 
@@ -6,6 +12,12 @@ other = "支付寶"
 
 [archives]
 other = "歸檔"
+
+[button_copy_url]
+other = "複製連結"
+
+[button_reload]
+other = "刷新"
 
 [button_submit]
 other = "提交"
@@ -52,6 +64,9 @@ other = "藍綠色"
 [color_yellow]
 other = "黃色"
 
+[comments]
+other = "評論"
+
 [contact_name]
 other = "名稱"
 
@@ -60,6 +75,9 @@ other = "郵箱"
 
 [contact_email_help]
 other = "我們不會洩露你的郵箱地址。"
+
+[contact_file]
+other = "文件"
 
 [contact_subject]
 other = "主題"
@@ -76,6 +94,9 @@ other = "精選文章"
 [font_size]
 other = "字體大小"
 
+[go_back]
+other = "返回"
+
 [home]
 other = "主頁"
 
@@ -88,6 +109,12 @@ other = "加載更多"
 [mode]
 other = "模式"
 
+[offline_title]
+other = "哎喲！你離線了。"
+
+[offline_info]
+other = "看來你的連接有問題，請檢查你的網絡狀態。"
+
 [pagination_title]
 other = "第 {{ .PageNumber }} 頁"
 
@@ -97,11 +124,11 @@ other = "配色"
 [post_count]
 other = "總共 {{ .Count }} 篇文章"
 
-[post_previous]
-other = "上一篇"
+[post_date]
+other = "創建於 {{ .createdOn }}{{ with .updatedOn }}，更新於 {{ . }}{{ end }}。"
 
-[post_next]
-other = "下一篇"
+[read_more]
+other = "閱讀更多"
 
 [reading_time]
 other = "{{ .ReadingTime }} 分鐘閱讀"
@@ -135,6 +162,9 @@ other = "目錄"
 
 [tags]
 other = "標籤"
+
+[try_again]
+other = "再試一次"
 
 [wechat]
 other = "微信"

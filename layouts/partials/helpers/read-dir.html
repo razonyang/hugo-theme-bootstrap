@@ -1,0 +1,11 @@
+{{- $path := .Path -}}
+{{- $scratch := .Scratch -}}
+{{- range (readDir $path) -}}
+    {{- if .IsDir -}}
+        {{- partial "helpers/read-dir" (dict "Path" (path.Join $path .Name) "Scratch" $scratch) -}}
+    {{- else -}}
+        {{- $url := path.Join $path .Name -}}
+        {{- $file := readFile $url -}}
+        {{- $scratch.Add "hbs-assets" (slice (dict "url" ($url | strings.TrimPrefix "/static") "revision" (md5 $file))) -}}
+    {{- end -}}
+{{- end -}}

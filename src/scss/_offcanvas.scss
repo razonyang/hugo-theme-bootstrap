@@ -1,5 +1,7 @@
 
 .offcanvas {
+  @include elevation(16);
+
   a {
     &:hover,
     &:focus,

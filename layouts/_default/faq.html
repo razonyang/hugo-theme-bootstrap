@@ -1,0 +1,47 @@
+{{- define "content" -}}
+{{- $pageTitle := .Title -}}
+{{- $data := index .Site.Data .Site.Language.Lang -}}
+{{- with $data -}}
+{{- $faq := sort .faq "weight" -}}
+<div class="faq-container col component card">
+    <div class="card-header">
+        <h2>{{ $pageTitle }}</h2>
+    </div>
+    <div class="card-body">
+        <ul class="nav nav-tabs mb-4" role="tablist">
+            {{- range $i, $v := $faq -}}
+            <li class="nav-item" role="presentation">
+                {{- if eq $i 0 -}}
+                <button class="nav-link active" id="tab{{ .title }}" role="tab" type="button" aria-current="page" data-bs-toggle="tab" data-bs-target="#faq-{{ $i }}" aria-controls="{{ .title }}" aria-selected="true">
+                    {{- .title -}}
+                </button>
+                {{- else -}}
+                <button class="nav-link" id="tab{{ .title }}"  role="tab" type="button" data-bs-toggle="tab" data-bs-target="#faq-{{ $i }}" aria-controls="{{ .title }}" aria-selected="false">
+                    {{- .title -}}
+                </button>
+                {{- end -}}
+            </li>
+            {{- end -}}
+        </ul>
+        <div class="tab-content">
+            {{- range $i, $v := $faq -}}
+            <div class="tab-pane fade{{ if eq $i 0}} show active{{ end }}" id="faq-{{ $i }}" role="tabpanel" aria-labelledby="{{ .title }}-tab">
+                {{- $title := .title -}}
+                {{- range $j, $v := .questions }}
+                {{- $id := printf "faq-%d-%d" $i $j -}}
+                <div class="faq mb-4">
+                    <h3 class="faq-question mb-2" data-bs-toggle="collapse" href="#{{ $id }}"  role="button" aria-expanded="false" aria-controls="{{ $id }}">
+                        {{- .question -}}
+                    </h3>
+                    <div class="faq-answer collapse" id="{{ $id }}">
+                        {{- .answer | $.Page.RenderString -}}
+                    </div>
+                </div>
+                {{- end -}}
+            </div>
+            {{- end -}}
+        </div>
+    </div>
+</div>
+{{- end -}}
+{{- end -}}

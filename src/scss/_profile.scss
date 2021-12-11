@@ -1,5 +1,6 @@
 .profile {
   color: variable('secondary-text-on-surface') !important;
+  padding: .5rem 0;
 
   .profile-avatar {
     height: 120px;
@@ -20,10 +21,11 @@
 
   .profile-company,
   .profile-about,
-  .profile-location {
-    display: inline;
+  .profile-location,
+  .profile-contact {
+    align-items: center;
+    display: inline-flex;
     margin-right: 0.5rem;
-    white-space: pre;
   }
 
   a {
@@ -36,14 +38,11 @@
 }
 
 .profile-compact {
-  .profile-avatar {
-    max-width: 100%;
-    border-radius: 0 !important;
-  }
+  flex-direction: row;
 
-  .profile-company,
-  .profile-about,
-  .profile-location {
-    display: block;
+  .profile-meta {
+    @include media-breakpoint-down(sm) {
+      text-align: center;
+    }
   }
 }

@@ -1,0 +1,21 @@
+.loading-bar {
+    animation-duration: 2s;
+    animation-name: loading-bar;
+    animation-iteration-count: infinite;
+    background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet);
+    height: 2px;
+    position: fixed;
+    top: 0;
+    width: 200%;
+    z-index: 1100;
+}
+  
+@keyframes loading-bar {
+    from {
+        left: -100%;
+    }
+
+    to {
+        left: 0;
+    }
+}

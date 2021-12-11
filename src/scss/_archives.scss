@@ -1,10 +1,6 @@
 .archive {
   margin-bottom: 2rem;
 
-  .archive-title {
-    margin: 1rem 0;
-  }
-
   .post-title {
     font-family: var(--hbs-font-share-tech);
     color: variable('secondary-text-on-surface');
@@ -17,9 +13,4 @@
   .post-date {
     color: variable('secondary-text-on-surface');
   }
-}
-
-.archive-posts {
-  list-style: none;
-  padding-left: 0.25rem;
 }

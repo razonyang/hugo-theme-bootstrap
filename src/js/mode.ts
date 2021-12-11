@@ -58,6 +58,4 @@ class ModeSwitcher {
   }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  (new ModeSwitcher(document.querySelector('#modeSwitcher'))).run();
-});
+(new ModeSwitcher(document.querySelector('#modeSwitcher'))).run();

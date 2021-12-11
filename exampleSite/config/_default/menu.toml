@@ -1,23 +1,46 @@
 [[main]]
-  name = "Repository"
-  identifier = "Repository"
-  pre = '<i class="fab fa-fw fa-github"></i>'
-  url = "https://github.com/razonyang/hugo-theme-bootstrap"
-  weight = 99
-[[main]]
-  name = "Demo Sites"
-  identifier = "demo"
+  name = "Support"
+  identifier = "support"
   pre = '<i class="fas fa-fw fa-chevron-circle-down"></i>'
   weight = 100
 [[main]]
-  id = "github"
-  parent = "demo"
-  name = "Netlify"
+  name = "Repository"
+  identifier = "repository"
+  parent = "support"
+  url = "https://github.com/razonyang/hugo-theme-bootstrap"
   weight = 1
+[[main]]
+  name = "Discussions"
+  identifier = "discussions"
+  parent = "support"
+  url = "https://github.com/razonyang/hugo-theme-bootstrap/discussions/new"
+  weight = 2
+[[main]]
+  name = "Features Request"
+  identifier = "feature-request"
+  parent = "support"
+  url = "https://github.com/razonyang/hugo-theme-bootstrap/issues/new?template=feature_request.md"
+  weight = 3
+[[main]]
+  name = "Bug Report"
+  identifier = "bug-report"
+  parent = "support"
+  url = "https://github.com/razonyang/hugo-theme-bootstrap/issues/new?template=bug_report.md"
+  weight = 4
+[[main]]
+  parent = "support"
+  weight = 8
+  [main.params]
+    divider = true
+[[main]]
+  identifier = "demo-netlify"
+  parent = "support"
+  name = "Demo(Netlify)"
+  weight = 9
   url = "https://hbs.razonyang.com"
 [[main]]
-  id = "china"
-  parent = "demo"
-  name = "China"
-  weight = 2
+  identifier = "demo-china"
+  parent = "support"
+  name = "Demo(China)"
+  weight = 10
   url = "https://hbs-cn.razonyang.com"

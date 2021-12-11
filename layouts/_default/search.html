@@ -49,17 +49,19 @@
 </div>
 <script type="text/html" id="templateResult">
   <div class="search-result row card component" id="{{ print "{{id}}" }}">
-    <div class="card-body">
+    <div class="card-header">
       <h2 class="card-title search-result-title">
         <a {{ printf "href={{permalink}}" | safeHTMLAttr }}>{{ print "{{title}}" }}</a>
       </h2>
-      <div class="search-result-taxonomies mb-3">
+    </div>
+    <div class="card-body">
+      <div class="post-meta mb-3">
         <span class="post-date">{{ printf "{{date}}" }}</span>
         {{- $baseURL := absLangURL "" -}}
         {{- $placeholder := "{{#url}}{{.}}{{/url}}" -}}
         {{- range slice "series" "categories" "tags" -}}
         {{ printf "{{#%s}}" . }}
-        <a {{ printf "href=\"%s%s/%s/\"" $baseURL . $placeholder | safeHTMLAttr }} class="badge bg-primary text-white rounded-pill post-taxonomy">{{ printf "{{.}}" }}</a>
+        <a {{ printf "href=\"%s%s/%s/\"" $baseURL . $placeholder | safeHTMLAttr }} class="badge rounded-pill post-taxonomy">{{ printf "{{.}}" }}</a>
         {{ printf "{{/%s}}" . }}
         {{- end -}}
       </div>

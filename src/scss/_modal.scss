@@ -1,7 +1,5 @@
-@use '@material/elevation/mixins' as mdc-mixins;
-
 .modal {
-  @include mdc-mixins.elevation(24);
+  @include elevation(24);
 }
 
 .mode-content {

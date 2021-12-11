@@ -76,6 +76,9 @@ other = "{{ .PageNumber }} - sahifa"
 [palette]
 other = "Palitra"
 
+[read_more]
+other = "Read More"
+
 [reading_time]
 other = "{{ .ReadingTime }} daqiqada o'qiysiz"
 

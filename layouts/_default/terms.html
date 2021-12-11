@@ -1,49 +1,25 @@
-{{ define "content" }}
-<div class="col-lg-8">
-  <div class="container">
-    {{- partial "breadcrumb" . -}}
-    <div class="taxonomys">
-      {{- range .Paginator.Pages -}}
-      {{- $count := len .Pages -}}
-      <div class="taxonomy row card component">
-        {{- $authorName := .Page.Title -}}
-        {{- $authorNameFormated := lower (replace (replaceRE "[^A-Za-z0-9 ]" "" $authorName) " " "-") -}}
-        {{- $authorProfilepictureFilename := (printf "%s%s" $authorNameFormated ".webp") -}}
-        {{- $authorProfilepicturePath := (printf "%s%s" "/stuff/author_profilepicture/" $authorProfilepictureFilename) -}}
-        <div class="card-body">
-          <h2 class="taxonomy-title card-title">
-            <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
-          </h2>
-          <div class="post-summary">
-            {{ if (fileExists $authorProfilepicturePath) -}}
-              {{ partial "helpers/image" (dict "filename" (printf "%s%s" ".." $authorProfilepicturePath) "alt" .Title "class" "img-fluid" "resources" .Resources) }}
-            {{- end }}
-          </div>
-          <div class="taxonomy-meta">
-            <span class="taxonomy-post-count"><i class="fas fa-fw fa-file-alt"></i>{{ i18n "post_count" (dict "Count" $count) }}</span>
-          </div>
-          {{- $postCount := default 3 $.Site.Params.taxonomyPostCount -}}
-          {{- if $postCount -}}
-          <ul class="taxonomy-posts">
-            {{- range first $postCount .Pages -}}
-            <li class="taxonomy-post">
-              <a class="post-title" href="{{ .Permalink }}">{{ .Title }}</a>
-              <span class="float-end post-date">{{ .Date.Format (default "Jan 2" $.Site.Params.archive.dateFormat) }}</span>
-            </li>
-            {{- end -}}
-          </ul>
-          <div class="taxonomy-actions">
-            {{- if gt $count $postCount -}}
-            <a class="btn btn-sm btn-outline-primary" href="{{ .Page.Permalink }}">Read More</a>
-            {{- end -}}
-          </div>
-          {{- end -}}
-          </div>
-      </div>
-      {{- end -}}
-    </div>
-    {{- partial "pagination" . -}}
-  </div>
-</div>
-{{- partial "sidebar" . -}}
-{{ end }}
+{{define "content"}}
+    <div class="col-lg-8"> <div class="container">{{- partial "breadcrumb" . -}}
+    <div class="taxonomys">{{- range .Paginator.Pages -}}
+    {{- $count := len .Pages -}}
+
+    <div class="post row card component">{{- $authorName := .Page.Title -}}
+    {{- $authorNameFormated := lower (replace (replaceRE "[^A-Za-z0-9 ]" "" $authorName) " " "-") -}}
+    {{- $authorProfilepictureFilename := (printf "%s%s" $authorNameFormated ".webp") -}}
+    {{- $authorProfilepicturePath := (printf "%s%s" "/stuff/author_profilepicture/" $authorProfilepictureFilename) -}}
+    <div class="card-header"> <h2 class="card-title post-title"> <a href="{{ .Permalink }}">{{partial "helpers/title" .}}</a> </h2> </div> <div class="card-body"> <div class="post-summary">{{if (fileExists $authorProfilepicturePath) -}}
+        {{partial "helpers/image" (dict "filename" (printf "%s%s" ".." $authorProfilepicturePath) "alt" .Title "class" "img-fluid" "resources" .Resources)}}
+        {{- end}}
+
+
+        <div class="taxonomy-meta"> <span class="taxonomy-post-count"><i class="fas fa-fw fa-file-alt"></i>{{i18n "post_count" (dict "Count" $count)}}</span> </div>{{- $postCount := default 5 $.Site.Params.taxonomyPostCount -}}
+        {{- if $postCount -}}
+        <ul class="list-unstyled">{{- range first $postCount .Pages -}}
+        <li class="taxonomy-post"> <a class="post-title" href="{{ .Permalink }}">{{.Title}}</a> <span class="float-end post-date">{{.Date.Format (default "Jan 2" $.Site.Params.archive.dateFormat)}}</span> </li>{{- end -}}
+        </ul>{{- end -}}
+        </div> </div>{{- if gt $count $postCount -}}
+        <div class="card-footer"> <a class="btn btn-sm btn-outline-primary" href="{{ .Page.Permalink }}">{{i18n "read_more"}}</a> </div>{{- end -}}
+        </div>{{- end -}}
+        </div>{{- partial "pagination" . -}}
+        </div> </div>{{- partial "sidebar" . -}}
+    {{end}}

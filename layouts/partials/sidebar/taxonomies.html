@@ -5,14 +5,16 @@
   {{- if $taxonomyCount -}}
     {{- with $value.ByCount -}}
     <section class="taxonomies row card component">
-      <div class="card-body">
+      <div class="card-header">
         <h2 class="card-title">
           <a href="{{ absLangURL (urlize $key) }}">{{ T $key }}</a>
         </h2>
-        <div>
+      </div>
+      <div class="card-body">
+        <div class="py-2">
         {{- range $idx, $taxonomy := . -}}
           {{- if lt $idx $taxonomyCount -}}
-          <a href="{{ $taxonomy.Page.Permalink }}" class="badge bg-primary text-white rounded post-taxonomy" title="{{ $taxonomy.Page.Title }}">
+          <a href="{{ $taxonomy.Page.Permalink }}" class="badge rounded post-taxonomy" title="{{ $taxonomy.Page.Title }}">
             {{ $taxonomy.Page.Title }}
           </a>
           {{- end -}}

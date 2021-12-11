@@ -7,7 +7,7 @@
 <div class="profile-company"><i class="fas fa-fw fa-building"></i>{{ . }}</div>
 {{- end -}}
 {{- with .location -}}
-<div class="profile-location"><i class="fas fa-fw fa-map-marker-alt"></i>{{ . }}</div>
+<div class="profile-location"><i class="fas fa-fw fa-map-marker-alt"></i>{{ . | safeHTML }}</div>
 {{- end -}}
 {{- if .about -}}
 <div class="profile-about"><a target="_blank" rel="noopener noreferrer" href="{{ .about }}">{{ i18n "about_me" }}</a></div>

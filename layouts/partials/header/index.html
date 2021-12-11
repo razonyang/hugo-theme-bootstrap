@@ -19,18 +19,22 @@
         {{- $active := or (eq $currentPage.Permalink (absURL .URL)) ($currentPage.IsMenuCurrent "main" .) -}}
         {{- if .HasChildren -}}
         <li class="nav-item dropdown">
-          <a class="nav-link{{ if $currentPage.HasMenuCurrent "main" . }} active{{ end }}" id="navbarDropdown-{{ .Identifier }}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link{{ if $currentPage.HasMenuCurrent "main" . }} active{{ end }}" id="navbarDropdown{{ title .Identifier }}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             {{ .Pre }} {{- .Name -}} {{ .Post }}
           </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown-{{ .Identifier }}">
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown{{ title .Identifier }}">
             {{- range .Children -}}
             {{- $childURL := .URL | absURL -}}
+            {{- if .Params.divider -}}
+            <li><hr class="dropdown-divider"></li>
+            {{- else -}}
             <li>
               <a class="dropdown-item{{ if or (eq $currentPage.Permalink (absURL .URL)) ($currentPage.IsMenuCurrent "main" .) }} active{{ end }}"
                 href="{{ $childURL }}"{{ if not (hasPrefix $childURL $baseURL) }} target="_blank" rel="noopener noreferrer"{{ end }}>
                 {{ .Pre }} {{- .Name -}} {{ .Post }}
               </a>
             </li>
+            {{- end -}}
             {{- end -}}
           </ul>
         </li>

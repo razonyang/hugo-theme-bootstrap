@@ -11,8 +11,10 @@ module.exports = {
     mermaid: ['./src/mermaid/index.ts'],
     utterances: ['./src/utterances/index.ts'],
     viewer: ['./src/viewer/index.ts', './src/viewer/index.scss'],
+    'service-worker': ['./src/service-worker/index.ts'],
   },
   mode: 'production',
+  devtool: 'inline-source-map',
   optimization: {
     usedExports: true,
     minimize: true,

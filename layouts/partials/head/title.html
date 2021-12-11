@@ -3,7 +3,17 @@
 {{- $paginator := false -}}
 {{- if .IsHome -}}
   {{- $sections := default (slice "posts") .Site.Params.mainSections -}}
-  {{- $paginator = .Paginate (where .Site.RegularPages "Type" "in" $sections) -}}
+  {{- $allPosts := where .Site.RegularPages "Type" "in" $sections -}}
+  {{- $pinnedPosts := slice -}}
+  {{- if (default true $.Site.Params.pinnedPost) -}}
+  {{- $pinnedPosts = first (default 1 $.Site.Params.pinnedPostCount) (where $allPosts ".Params.pinned" true) -}}
+  {{- range $pinnedPosts -}}
+    {{- with .File.UniqueID -}}
+      {{- $.Scratch.Add "pinnedPosts" (slice .) -}}
+    {{- end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $paginator = .Paginate (union $pinnedPosts $allPosts) -}}
 {{- else if eq .Kind "taxonomy" -}}
   {{- $paginator = .Paginate .Pages (default 10 .Site.Params.taxonomyPaginate) -}}
 {{- else -}}

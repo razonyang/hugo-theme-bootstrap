@@ -1,3 +1,9 @@
+[404_title]
+other = "哎哟！页面未找到。"
+
+[404_info]
+other = "我们似乎找不到你要查找的页面。"
+
 [about_me]
 other = "关于我"
 
@@ -6,6 +12,12 @@ other = "支付宝"
 
 [archives]
 other = "归档"
+
+[button_copy_url]
+other = "复制链接"
+
+[button_reload]
+other = "刷新"
 
 [button_submit]
 other = "提交"
@@ -52,6 +64,9 @@ other = "蓝绿色"
 [color_yellow]
 other = "黄色"
 
+[comments]
+other = "评论"
+
 [contact_name]
 other = "名称"
 
@@ -60,6 +75,9 @@ other = "邮箱"
 
 [contact_email_help]
 other = "我们不会泄露你的邮箱地址。"
+
+[contact_file]
+other = "文件"
 
 [contact_subject]
 other = "主题"
@@ -76,6 +94,9 @@ other = "精选文章"
 [font_size]
 other = "字体大小"
 
+[go_back]
+other = "返回"
+
 [home]
 other = "主页"
 
@@ -88,6 +109,12 @@ other = "加载更多"
 [mode]
 other = "模式"
 
+[offline_title]
+other = "哎哟！你离线了。"
+
+[offline_info]
+other = "看来你的连接有问题，请检查你的网络状态。"
+
 [pagination_title]
 other = "第 {{ .PageNumber }} 页"
 
@@ -96,6 +123,12 @@ other = "配色"
 
 [post_count]
 other = "总共 {{ .Count }} 篇文章"
+
+[post_date]
+other = "创建于 {{ .createdOn }}{{ with .updatedOn }}，更新于 {{ . }}{{ end }}。"
+
+[read_more]
+other = "阅读更多"
 
 [reading_time]
 other = "{{ .ReadingTime }} 分钟阅读"
@@ -129,6 +162,9 @@ other = "目录"
 
 [tags]
 other = "标签"
+
+[try_again]
+other = "再试一次"
 
 [wechat]
 other = "微信"

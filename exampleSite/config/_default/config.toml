@@ -9,7 +9,7 @@ defaultContentLanguageInSubdir = true # If you use only one language comment thi
 #disableLanguages = ["fr", "zh-cn" ,"zh-tw"] # For disable one or more language
 
 # Pagination
-paginate = 5
+paginate = 10
 # paginatePath = "page"
 
 # Disqus
@@ -29,8 +29,18 @@ pygmentsUseClasses = true
 [blackfriday]
   hrefTargetBlank = true
 
+[mediaTypes]
+  [mediaTypes."application/manifest+json"]
+    suffixes = ["json"]
+  
+[outputFormats]
+  [outputFormats.MANIFEST]
+    name = "manifest"
+    baseName = "manifest"
+    mediaType = "application/manifest+json"
+
 [outputs]
-  home = ["HTML", "RSS", "JSON"]
+  home = ["HTML", "RSS", "JSON", "MANIFEST"]
 
 [taxonomies]
   category = "categories"

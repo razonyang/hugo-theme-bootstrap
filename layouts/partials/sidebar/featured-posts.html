@@ -3,11 +3,16 @@
   {{- $featuredPosts := first $count (where (where site.RegularPages "Type" "in" site.Params.mainSections) ".Params.featured" "eq" true) -}}
   {{- with $featuredPosts -}}
   <section class="featured-posts row card component">
-    <div class="card-body">
+    <div class="card-header">
       <h2 class="card-title">{{ T "featured_posts" }}</h2>
-      <ul>
+    </div>
+    <div class="card-body">
+      <ul class="post-list">
       {{- range . -}}
-        <li><a href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a></li>
+        <li>
+          <a href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a>
+          <span class="float-end post-date">{{- partial "helpers/post-date" . -}}</span>
+        </li>
       {{- end -}}
       </ul>
     </div>
