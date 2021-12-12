@@ -98,7 +98,7 @@
   position: relative;
 
   .post-title {
-    font - family : var(-- hbs - font - share - tech);
+    font-family : var(--hbs-font-share-tech);
     margin: .5rem 0;
   }
 
@@ -178,7 +178,7 @@
 
 .post-list {
   margin: .25rem 0;
-  color: var(--hbs-secondary-text-on-surface);
+  color: var(--hbs-primary-text-on-navbar);
   list-style: none;
   padding-left: 0.25rem;
   
