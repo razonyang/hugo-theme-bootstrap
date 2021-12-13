@@ -1,7 +1,7 @@
 {{- range $key, $value := .Site.Taxonomies -}}
   {{- $countParams := dict "categories" "categoryCount" "tags" "tagCount" "series" "seriesCount" -}}
   {{- $param := default "" (index $countParams $key) -}}
-  {{- $taxonomyCount := default 10 ($.Site.Param $param) -}}
+  {{- $taxonomyCount := default 1000 ($.Site.Param $param) -}}
   {{- if $taxonomyCount -}}
     {{- with $value.ByCount -}}
     <section class="taxonomies row card component">
