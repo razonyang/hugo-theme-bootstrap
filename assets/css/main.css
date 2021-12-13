@@ -15,8 +15,8 @@
 	--hbs-black-rgb: 0, 0, 0;
 	--hbs-body-color-rgb: 33, 37, 41;
 	--hbs-body-bg-rgb: 255, 255, 255;
-  --hbs-font-share-tech-mono: "Share Tech Mono", monospace;
-  --hbs-font-share-tech: "Share Tech", sans-serif;
+  	--hbs-font-share-tech-mono: "Share Tech Mono", monospace;
+  	--hbs-font-share-tech: "Share Tech", sans-serif;
 	--hbs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 	--hbs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 	--hbs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
@@ -2817,7 +2817,8 @@ fieldset:disabled .btn {
 	margin-right: 1rem;
 	font-size: 1.60rem;
 	text-decoration: none;
-	white-space: nowrap
+	white-space: nowrap;
+	font-weight: 550
 }
 
 .navbar-nav {
@@ -3246,8 +3247,8 @@ fieldset:disabled .btn {
 }
 
 .card-header {
-	padding: .5rem 1rem;
-	margin-bottom: 0;
+	padding: .4rem 1rem;
+	margin-bottom: 0rem;
 	background-color: transparent;
 	border-bottom: 1px solid rgba(0, 0, 0, .125)
 }
@@ -6089,7 +6090,7 @@ pre code {
 }
 
 .footer {
-  font-family: var(--hbs-font-share-tech);
+  	font-family: var(--hbs-font-share-tech-mono);
 	color: var(--hbs-primary-text-on-background)
 }
 
@@ -6126,7 +6127,8 @@ img {
 }
 
 .navbar {
-  font-family: var(--hbs-font-share-tech);
+	font-size: large;
+  	font-family: var(--hbs-font-share-tech-mono);
 	background-color: var(--hbs-navbar);
 	color: var(--hbs-primary-text-on-navbar)
 }
@@ -6268,7 +6270,8 @@ img {
 }
 
 .post-meta {
-	margin-bottom: 1rem;
+	margin-top: -0.5rem;
+	margin-bottom: .5rem;
 	color: var(--hbs-secondary-text-on-surface);
 	font-size: .8rem;
 	word-break: break-all
@@ -6565,8 +6568,9 @@ img {
 }
 
 .profile .profile-name {
-  font-family: var(--hbs-font-share-tech-mono);
-	font-weight: bold
+	font-size: larger;
+  	font-family: var(--hbs-font-share-tech-mono);
+	font-weight: bolder
 }
 
 .profile .profile-company,
