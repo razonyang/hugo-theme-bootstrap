@@ -14,7 +14,6 @@ import './js/toc';
 import './js/code';
 import './js/sidebar-toggler';
 import './js/popover';
-import './js/fonts';
 import './js/form-validator';
 import './js/top-app-bar';
 import './js/loading-bar';
