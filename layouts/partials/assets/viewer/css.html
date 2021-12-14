@@ -1,0 +1,4 @@
+{{- if (default true .Site.Params.viewer) -}}
+{{- $style := resources.Get "viewer/index.css" | slice | resources.Concat "css/viewer.css" | minify | fingerprint -}}
+<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous">
+{{- end -}}

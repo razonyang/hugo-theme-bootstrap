@@ -1,3 +1,4 @@
+import './less/index.less';
 import * as renderMathInElement from 'katex/dist/contrib/auto-render';
 
 declare global {
