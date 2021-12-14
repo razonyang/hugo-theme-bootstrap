@@ -14,6 +14,7 @@ const PATHS = {
 module.exports = {
   entry: {
     main: './src/main/index.ts',
+    icons: './src/icons/index.js',
     search: './src/search/index.ts',
     katex: './src/katex/index.ts',
     mermaid: './src/mermaid/index.ts',
