@@ -26,18 +26,25 @@
         <div class="tab-content">
             {{- range $i, $v := $faq -}}
             <div class="tab-pane fade{{ if eq $i 0}} show active{{ end }}" id="faq-{{ $i }}" role="tabpanel" aria-labelledby="{{ .title }}-tab">
+                <div class="accordion accordion-flush" id="faq-{{ $i }}">
                 {{- $title := .title -}}
                 {{- range $j, $v := .questions }}
-                {{- $id := printf "faq-%d-%d" $i $j -}}
-                <div class="faq mb-4">
-                    <h3 class="faq-question mb-2" data-bs-toggle="collapse" href="#{{ $id }}"  role="button" aria-expanded="false" aria-controls="{{ $id }}">
-                        {{- .question -}}
-                    </h3>
-                    <div class="faq-answer collapse" id="{{ $id }}">
-                        {{- .answer | $.Page.RenderString -}}
+                    {{- $id := printf "faq-%d-%d" $i $j -}}
+                    <div class="faq accordion-item">
+                        <h2 class="accordion-header faq-question">
+                            <button class="accordion-button{{ if ne 0 $j }} collapsed{{ end }}" type="button" data-bs-toggle="collapse" data-bs-target="#{{ $id }}"
+                              aria-expanded="{{ if eq 0 $j }}true{{ else }}false{{ end }}" aria-controls="{{ $id }}">
+                                {{- .question -}}
+                            </button>
+                        </h2>
+                        <div id="{{ $id }}" class="accordion-collapse collapse{{ if eq 0 $j }} show{{ end }}" aria-labelledby="{{ $id }}" data-bs-parent="#faq-{{ $i }}">
+                            <div class="faq-answer accordion-body">
+                                {{- .answer | $.Page.RenderString -}}
+                            </div>
+                        </div>
                     </div>
-                </div>
                 {{- end -}}
+                </div>
             </div>
             {{- end -}}
         </div>
