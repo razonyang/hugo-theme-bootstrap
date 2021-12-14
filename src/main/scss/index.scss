@@ -1,13 +1,13 @@
 // Base
 @import 'variables';
-@import 'bootstrap';
 @import 'functions';
+@import 'bootstrap';
+/*! purgecss start ignore */
 @import 'colors';
 @import 'palettes';
 @import 'modes';
 @import 'root';
 @import 'reboot';
-@import 'main';
 
 // Components
 @import 'anchor';
@@ -41,3 +41,4 @@
 @import 'loading-bar';
 @import 'snackbar';
 @import 'faq';
+/*! purgecss end ignore */

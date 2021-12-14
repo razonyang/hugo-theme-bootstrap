@@ -1,7 +1,15 @@
 const path = require('path');
+const glob = require('glob-all');
 const ESLintPlugin = require('eslint-webpack-plugin');
 const TerserPlugin = require("terser-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const PurgecssPlugin = require('purgecss-webpack-plugin');
+const PATHS = {
+  assets: path.join(__dirname, 'assets'),
+  layouts: path.join(__dirname, 'layouts'),
+  src: path.join(__dirname, 'src'),
+  static: path.join(__dirname, 'static')
+}
 
 module.exports = {
   entry: {
@@ -27,7 +35,7 @@ module.exports = {
     })],
   },
   output: {
-    path: path.resolve(path.join(__dirname, 'assets')),
+    path: PATHS.assets,
     filename: '[name]/index.js'
   },
   module: {
@@ -77,7 +85,7 @@ module.exports = {
             loader: 'file-loader',
             options: {
               name: '[name].[ext]',
-              outputPath:  path.resolve(path.join(__dirname, 'static', 'fonts')),
+              outputPath:  path.join(PATHS.static, 'fonts'),
               publicPath: '/fonts'
             },
           },
@@ -92,6 +100,10 @@ module.exports = {
     new ESLintPlugin(),
     new MiniCssExtractPlugin({
       filename: '[name]/index.css'
+    }),
+    new PurgecssPlugin({
+      paths: glob.sync([`${PATHS.layouts}/**/*`, `${PATHS.src}/main/js/*`, `${PATHS.src}/search/js/*`],  { nodir: true }),
+      only: ['main']
     }),
   ]
 };

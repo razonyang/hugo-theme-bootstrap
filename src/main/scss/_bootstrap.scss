@@ -6,6 +6,7 @@
 @import 'utilities';
 
 // Layout & components
+/*! purgecss start ignore */
 @import 'bootstrap/scss/root';
 @import 'bootstrap/scss/reboot';
 @import 'bootstrap/scss/type';
@@ -42,6 +43,7 @@ $theme-colors: ();
 // @import 'bootstrap/scss/carousel';
 // @import 'bootstrap/scss/spinners';
 @import 'bootstrap/scss/offcanvas';
+/*! purgecss end ignore */
 
 // Helpers
 @import 'bootstrap/scss/helpers';
