@@ -30,7 +30,7 @@ This article describes how to install, upgrade the theme, and write new articles
 $ hugo new site myblog
 $ cd myblog
 $ git init
-$ git submodule add https://github.com/razonyang/hugo-theme-bootstrap themes/$ hugo-theme-bootstrap
+$ git submodule add https://github.com/razonyang/hugo-theme-bootstrap themes/hugo-theme-bootstrap
 $ cp -a themes/hugo-theme-bootstrap/exampleSite/* .
 $ hugo server
 ```
