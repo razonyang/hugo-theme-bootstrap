@@ -9,7 +9,9 @@ module.exports = {
   optimization: {
     usedExports: true,
     minimize: true,
-    minimizer: [new TerserPlugin()],
+    minimizer: [new TerserPlugin({
+      extractComments: false
+    })],
   },
   output: {
     path: path.resolve(path.join(__dirname, 'assets', 'js')),
