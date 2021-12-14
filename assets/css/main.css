@@ -6402,8 +6402,16 @@ img {
 .post-summary a,
 .post-content a,
 .post-nav a {
-	color: var(--hbs-accent)
+	color: var(--hbs-accent);
+	font-size: 1.02rem;
 }
+.taxonomy-post{
+	width: auto;
+	padding: 0.25em;
+}
+/* .post-date{
+	margin: 2rem;
+} */
 
 .post-panel-wrapper {
 	position: sticky;
