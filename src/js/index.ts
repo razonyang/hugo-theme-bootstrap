@@ -8,7 +8,6 @@ import './mode';
 import './palette';
 import './scroller';
 import './table';
-import './anchor';
 import './font-size';
 import './toc';
 import './code';
