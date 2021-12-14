@@ -5,6 +5,4 @@
 
 // library.add(faGlobe, faClock); // Add icons that you need.
 
-// document.addEventListener('DOMContentLoaded', () => {
-//   dom.watch();
-// });
+// dom.watch();

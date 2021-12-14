@@ -93,7 +93,7 @@ $ hugo gen chromastyles --style=solarized-dark > assets/css/highlight.css
 
 > 本章节包含前端技术，比如 `JavaScript` 和 `npm`。
 
-我们提供一个名为 `assets/js/custom.js` 的文件，以便自定义 JS，因此，你可以按需添加图标。
+我们提供一个名为 `assets/icons/index.js` 的文件，以便自定义图标，因此，你可以按需添加图标。
 我们已为你在示例站点设置好了构建环境。
 
 1. 安装依赖
@@ -102,7 +102,7 @@ $ hugo gen chromastyles --style=solarized-dark > assets/css/highlight.css
 $ npm install
 ```
 
-2. 在 `src/js/index.js` 添加图标：
+2. 在 `src/icons/index.js` 添加图标：
 
 ```js
 import { faGlobe, faClock } from '@fortawesome/free-solid-svg-icons';
@@ -110,7 +110,7 @@ import { faGlobe, faClock } from '@fortawesome/free-solid-svg-icons';
 library.add(faGlobe, faClock);
 ```
 
-3. 重建 `assets/js/custom.js`：
+3. 重建 `assets/js/icons.js`：
 
 ```shell
 $ npm run build

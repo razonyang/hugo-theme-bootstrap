@@ -3,13 +3,19 @@ const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = {
   entry: {
-    custom: './src/js/index.js',
+    custom: './src/custom/index.js',
+    icons: './src/icons/index.js',
   },
   mode: 'production',
   optimization: {
     usedExports: true,
     minimize: true,
     minimizer: [new TerserPlugin({
+      terserOptions: {
+        format: {
+          comments: false,
+        },
+      },
       extractComments: false
     })],
   },
