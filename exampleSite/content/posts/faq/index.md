@@ -16,7 +16,7 @@ series = [
 images = []
 +++
 
-The FAQ page is a collection of frequently asked questions.
+The [FAQ]({{< ref "/faq" >}}) page is a collection of frequently asked questions.
 
 <!--more-->
 

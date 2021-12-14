@@ -3,6 +3,10 @@
     "weight": 1,
     "questions": [
         {
+            "question": "How to set up the FAQ page?",
+            "answer": "See also [FAQ Page](/en/posts/faq)."
+        },
+        {
             "question": "Does FAQ page support Markdown syntax?",
             "answer": "Sure. You can type any valid Markdown syntax, such as `code`, *italic*, **bold text** etc.\n#### Table\n| Foo |\n|:---|\n| Bar |\n#### List\n- One\n- Two\n"
         },
