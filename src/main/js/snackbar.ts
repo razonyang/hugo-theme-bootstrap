@@ -1,8 +1,6 @@
 class Snackbar {
     element: HTMLElement;
 
-    delay: number = 3000;
-
     constructor() {
         const e = document.createElement('div');
         e.className = 'snackbar';
@@ -10,13 +8,13 @@ class Snackbar {
         this.element = e;
     }
 
-    show(body: String) {
+    show(body: String, duration: number = 2000) {
         this.element.innerHTML = '<div class="snackbar-body">' + body + '</div>';
         this.element.classList.add('show');
         const self = this;
         setTimeout(function() {
             self.element.classList.remove('show');
-        }, this.delay);
+        }, duration);
     }
 }
 
