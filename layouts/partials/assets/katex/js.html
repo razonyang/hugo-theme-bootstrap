@@ -1,0 +1,5 @@
+{{- $mainScript := resources.Get "katex/index.js" }}
+{{- $configScript := resources.Get "js/katex.config.js" | resources.ExecuteAsTemplate "katex.config.js" . -}}
+{{- $script := slice $configScript $mainScript | resources.Concat "js/katex.js" | minify | fingerprint -}}
+{{- $.Scratch.Add "hbs-assets" (slice (dict "url" $script.Permalink "revision" ($.Scratch.Get "null"))) -}}
+<script defer src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>

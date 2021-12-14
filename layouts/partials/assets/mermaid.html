@@ -1,7 +1,0 @@
-{{- $mainScript := resources.Get "js/mermaid.js" }}
-{{- $configScript := resources.Get "js/mermaid.config.js" | resources.ExecuteAsTemplate "mermaid.config.js" . -}}
-{{- $script := slice $configScript $mainScript | resources.Concat "js/mermaid.js" | resources.Minify | resources.Fingerprint -}}
-{{- $.Scratch.Add "hbs-assets" (slice (dict "url" $script.Permalink "revision" ($.Scratch.Get "null"))) -}}
-{{- if or .Params.diagram .Site.Params.diagram -}}
-<script defer src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>
-{{- end -}}

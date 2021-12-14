@@ -1,0 +1,6 @@
+{{- if (default true .Site.Params.viewer) -}}
+  {{- $script := resources.Get "viewer/index.js" }}
+  {{- $config := resources.Get "js/viewer.config.js" | resources.ExecuteAsTemplate "viewer.config.js" . -}}
+  {{- $script := slice $script $config | resources.Concat "js/viewer.js" | minify | fingerprint -}}
+  <script src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous" defer></script>
+{{- end -}}

@@ -1,0 +1,27 @@
+{{- if eq .Layout "search" -}}
+{{- $titleKey := dict "name" "title" "weight" 0.8 -}}
+{{- $contentKey := dict "name" "content" "weight" 0.5 -}}
+{{- $tagsKey := dict "name" "tags" "weight" 0.3 -}}
+{{- $categoriesKey := dict "name" "categories" "weight" 0.3 -}}
+{{- $seriesKey := dict "name" "series" "weight" 0.3 -}}
+{{- $keys := slice $titleKey $contentKey $tagsKey $categoriesKey $seriesKey -}}
+{{- $options := dict "ignoreLocation" true "includeMatches" true "includeScore" true "keys" $keys -}}
+{{- $optionWhitelist := slice "ignoreLocation" "isCaseSensitive" "minMatchCharLength" "threshold" "distance" "useExtendedSearch" -}}
+{{- with .Site.Params.search.fuse -}}
+  {{- range $key, $value := . -}}
+    {{- range $optionWhitelist -}}
+      {{- if eq $key (lower .) -}}
+        {{- $options = merge $options (dict . $value) -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+<script>
+  window.searchResultContentWordCount = parseInt('{{ default 240 .Site.Params.search.resultContentWordCount }}');
+  window.searchPaginate = parseInt('{{ default 10 .Site.Params.search.paginate }}');
+  window.fuseOptions = JSON.parse('{{ $options | jsonify | safeHTML }}');
+</script>
+{{- $script := resources.Get "search/index.js" | slice | resources.Concat "js/search.js" | fingerprint -}}
+<script src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>
+{{- end -}}
