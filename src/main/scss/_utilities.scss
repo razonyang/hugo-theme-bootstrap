@@ -75,7 +75,13 @@ $utilities: map-merge(
     // "text-align": null,
     "text-decoration": null,
     "text-transform": null,
-    "white-space": null,
+    "white-space": (
+      property: white-space,
+      class: text,
+      values: (
+        pre-wrap: pre-wrap,
+      )
+    ),
     "word-wrap": null,
     // "color": null,
     "text-opacity": null,

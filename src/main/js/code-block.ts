@@ -128,7 +128,7 @@ class CodeBlock {
     btn.innerHTML = '<i class="fas fa-code"></i>';
     btn.addEventListener('click', () => {
       const { classList } = self.code;
-      const className = 'white-space-pre-wrap';
+      const className = 'text-pre-wrap';
       if (classList.contains(className)) {
         classList.remove(className);
         btn.classList.remove('active');
