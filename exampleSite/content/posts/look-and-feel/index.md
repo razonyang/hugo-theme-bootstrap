@@ -94,7 +94,7 @@ Because of this, you are free to choose other icons.
 
 > This section contains front-end technologies, such as `JavaScript` and `npm`.
 
-We provided a file called `assets/js/custom.js` for customizing JS, therefore, you can add icons as needed.
+We provided a file called `assets/js/icons.js` for customizing icons, therefore, you can add icons as needed.
 We already set up e build environment in the example site for you.
 
 1. Install Dependencies
@@ -103,7 +103,7 @@ We already set up e build environment in the example site for you.
 $ npm install
 ```
 
-2. Add icons into `src/js/index.js`:
+2. Add icons into `src/icons/index.js`:
 
 ```js
 import { faGlobe, faClock } from '@fortawesome/free-solid-svg-icons';
@@ -111,7 +111,7 @@ import { faGlobe, faClock } from '@fortawesome/free-solid-svg-icons';
 library.add(faGlobe, faClock);
 ```
 
-3. Rebuild `assets/js/custom.js`:
+3. Rebuild `assets/js/icons.js`:
 
 ```shell
 $ npm run build

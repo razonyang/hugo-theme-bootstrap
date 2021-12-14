@@ -1,5 +1,5 @@
 {{- $mainScript := resources.Get "icons/index.js" }}
-{{- $customScript := resources.Get "js/icons.custom.js" -}}
+{{- $customScript := resources.Get "js/icons.js" -}}
 {{- $scripts := slice $mainScript $customScript -}}
 {{- $script := $scripts | resources.Concat "js/icons.js" | minify | fingerprint -}}
 {{- $.Scratch.Add "hbs-assets" (slice (dict "url" $script.Permalink "revision" ($.Scratch.Get "null"))) -}}
