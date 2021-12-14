@@ -67,13 +67,6 @@ $ npm run build
 
 > `npm run watch` 會在文件改動時重建資源。
 
-我們也提供了一些變體腳本：
-
-- `build:js`
-- `build:css`
-- `watch:js`
-- `watch:css`
-
 #### 預覽
 
 ```shell

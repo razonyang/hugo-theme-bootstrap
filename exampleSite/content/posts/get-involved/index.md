@@ -67,13 +67,6 @@ $ npm run build
 
 > `npm run watch` will rebuild assets on change.
 
-We also defined some variant scripts:
-
-- `build:js`
-- `build:css`
-- `watch:js`
-- `watch:css`
-
 #### Preview
 
 ```shell
