@@ -3,6 +3,7 @@
 @mixin fontAwesome($content) {
   font-family: 'Font Awesome 5 Free';
   content: '#{$content}';
+  font-weight: 900;
 }
 
 @mixin elevation($z) {

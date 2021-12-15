@@ -14,8 +14,21 @@
     color: variable('primary-text-on-background');
     box-shadow: none!important;
 
+    .faq-question-icon {
+        position: absolute;
+        right: .5rem;
+    }
+
     &:not(.collapsed) {
         background: variable('background');
         color: variable('accent');
+
+        .faq-question-icon {
+            transform: rotate(180deg);
+        }
+    }
+
+    &::after {
+        display: none;
     }
 }
