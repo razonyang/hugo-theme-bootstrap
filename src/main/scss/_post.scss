@@ -86,9 +86,35 @@
     .action {
       margin-top: 0.25rem;
       padding: .125rem .125rem .25rem;
-
+      transition: opacity 1s ease-out;
+      
       &:not(:last-child) {
         border-bottom: 1px #{$gray-500} solid;
+      }
+    }
+      
+    .action-panel-toggler {
+      opacity: 0;
+      display: none;
+      border-bottom: none!important;
+    }
+
+    @include media-breakpoint-down(sm) {
+      .action {
+        opacity: 0;
+        display: none;
+      }
+      
+      .action-panel-toggler {
+        opacity: 1;
+        display: block;
+      }
+
+      &:hover, &:focus {
+        .action {
+          opacity: 1;
+          display: block;
+        }
       }
     }
   }
