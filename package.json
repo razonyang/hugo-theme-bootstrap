@@ -73,7 +73,7 @@
   "scripts": {
     "serve": "hugo server --source=exampleSite --themesDir=../../ --buildDrafts --disableFastRender",
     "build": "webpack",
-    "watch": "watch 'npm run build' src",
+    "watch": "watch 'npm run build' src layouts",
     "lint": "npm-run-all --parallel eslint stylelint",
     "eslint": "eslint ./src --ext .js,.jsx,.ts,.tsx --fix",
     "stylelint": "stylelint ./src/**/*.scss --fix",
