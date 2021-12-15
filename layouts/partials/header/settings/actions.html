@@ -5,4 +5,10 @@
   <a role="button" class="action action-copy-url">
     <span class="action-icon"><i class="fas fa-2x fa-link"></i></span> {{ i18n "button_copy_url" }}
   </a>
+  {{- if (default true .Site.Params.socialShare) -}}
+  <a class="action action-social-share" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSocialShare"
+    aria-controls="offcanvasSocialShare" aria-label="Toggle social share">
+    <span class="action-icon"><i class="fas fa-2x fa-share-alt"></i></span> {{ i18n "button_social_share" }}
+  </a>
+  {{- end -}}
 </section>

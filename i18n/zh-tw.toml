@@ -19,6 +19,9 @@ other = "複製連結"
 [button_reload]
 other = "刷新"
 
+[button_social_share]
+other = "分享"
+
 [button_submit]
 other = "提交"
 
