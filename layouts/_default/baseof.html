@@ -11,7 +11,7 @@
     {{- partial "hooks/head-end" . -}}
   </head>
   <body>
-    {{- $bootstrapScript := resources.Get "js/bootstrap.template.js" | resources.ExecuteAsTemplate "js/bootstrap.js" . | resources.Minify | resources.Fingerprint -}}
+    {{- $bootstrapScript := resources.Get "bootstrap/template.js" | resources.ExecuteAsTemplate "js/bootstrap.js" . | minify -}}
     <script>
       {{- $bootstrapScript.Content | safeJS -}}
     </script>

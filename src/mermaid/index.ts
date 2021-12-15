@@ -1,4 +1,4 @@
-import * as Mermaid from 'mermaid';
+import Mermaid from 'mermaid';
 
 declare global {
   interface Window {

@@ -1,0 +1,13 @@
+{
+  "name": "examplesite",
+  "scripts": {
+    "build": "webpack"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "terser-webpack-plugin": "^5.2.5",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1"
+  }
+}

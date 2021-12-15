@@ -1,0 +1,24 @@
+@import "katex/src/katex.less";
+@font-folder: "/fonts";
+
+.katex-display > .katex {
+  display: inline-block;
+  white-space: nowrap;
+  max-width: 100%;
+  overflow-x: scroll;
+  text-align: initial;
+}
+
+.katex-display {
+  .katex {
+    max-width: 100%;
+
+    .katex-html {
+      max-width: 100%;
+      overflow-x: auto;
+      overflow-y: hidden;
+      padding-left: 2px;
+      padding-right: 2px;
+    }
+  }
+}

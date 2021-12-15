@@ -1,0 +1,30 @@
+$variable-prefix: hbs-;
+
+$form-range-thumb-bg: var(--#{$variable-prefix}accent);
+
+$enable-smooth-scroll: false;
+
+$colors: ();
+$theme-colors: ();
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  lg: 992px
+) !default;
+$grid-gutter-width: .75rem;
+$card-spacer-x: 1rem;
+$card-spacer-y: 1rem;
+$card-cap-bg: transparent;
+
+$enable-shadows: false;
+
+$border-color: var(--hbs-secondary-text-on-surface);
+
+// Heading
+$font-size-base: 1rem;
+$h1-font-size:                $font-size-base * 2;
+$h2-font-size:                $font-size-base * 1.5;
+$h3-font-size:                $font-size-base * 1.375;
+$h4-font-size:                $font-size-base * 1.25;
+$h5-font-size:                $font-size-base * 1.125;
+$h6-font-size:                $font-size-base;

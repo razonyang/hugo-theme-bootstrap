@@ -47,7 +47,7 @@ Once created, the link will appear in the profile widget.
 
 ## Backends
 
-It is designed to be compatible with most backends. At present, [Netlify form](https://docs.netlify.com/forms/setup) and [Getform](https://getform.io/) have been verified to be available.
+It is designed to be compatible with most backends, such as [Netlify form](https://docs.netlify.com/forms/setup), [Getform](https://getform.io/) and [Formspree](https://formspree.io/).
 
 ### Netlify
 

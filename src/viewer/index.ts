@@ -1,3 +1,4 @@
+import './scss/index.scss';
 import Viewer from 'viewerjs';
 
 declare global {

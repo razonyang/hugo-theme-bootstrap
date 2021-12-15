@@ -10,7 +10,7 @@
       {{- if and (default true $.Site.Params.pinned) .Params.pinned -}}
         {{- with .File.UniqueID -}}
           {{- if in ($.Scratch.Get "pinnedPosts") . -}}
-          <span class="position-absolute start-0 top-0 text-primary"><i class="fas fa-thumbtack" data-fa-transform="rotate-45"></i></span>
+          <span class="position-absolute start-0 top-0 text-accent"><i class="fas fa-thumbtack" data-fa-transform="rotate-45"></i></span>
           {{- end -}}
         {{- end -}}
       {{- end -}}

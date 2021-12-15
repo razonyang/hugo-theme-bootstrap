@@ -1,3 +1,9 @@
+[404_title]
+other = "Huch! Seite nicht gefunden."
+
+[404_info]
+other = "Wir haben uns Mühe gegeben und gesucht, aber wir konnten die gesuchte Seite wirklich nicht finden."
+
 [about_me]
 other = "über"
 
@@ -6,6 +12,15 @@ other = "Alipay"
 
 [archives]
 other = "Archiv"
+
+[button_copy_url]
+other = "URL kopieren"
+
+[button_reload]
+other = "neu laden"
+
+[button_submit]
+other = "OK"
 
 [buy_me_a_coffee]
 other = "Buy me a coffee"
@@ -52,6 +67,24 @@ other = "Gelb"
 [comments]
 other = "Kommentare"
 
+[contact_name]
+other = "Name"
+
+[contact_email]
+other = "Email"
+
+[contact_email_help]
+other = "Wir werden Deine Daten niemals weitergeben."
+
+[contact_file]
+other = "Datei"
+
+[contact_subject]
+other = "Betreff"
+
+[contact_message]
+other = "Nachricht"
+
 [copyright]
 other = "Copyright"
 
@@ -61,11 +94,17 @@ other = "im Fokus"
 [font_size]
 other = "Schriftgröße"
 
+[go_back]
+other = "zurück"
+
 [home]
 other = "Blog"
 
 [language]
 other = "Sprache"
+
+[liberapay]
+other = "Liberapay"
 
 [load_more]
 other = "mehr"
@@ -73,11 +112,23 @@ other = "mehr"
 [mode]
 other = "Modus"
 
+[offline_title]
+other = "Du bist vom Internet getrennt."
+
+[offline_info]
+other = "Es scheint ein Problem mit Deiner Internetverbindung zu geben. Bitte überprüfe den Zustand Deines Netzwerkes."
+
 [pagination_title]
 other = "Seite {{ .PageNumber }}"
 
 [palette]
 other = "Palette"
+
+[patreon]
+other = "Patreon"
+
+[paypal]
+other = "Paypal"
 
 [post_count]
 one = "{{ .Count }} Beitrag insgesamt"
@@ -122,6 +173,9 @@ other = "Inhaltsverzeichnis"
 
 [tags]
 other = "Themen"
+
+[try_again]
+other = "nochmals versuchen"
 
 [wechat]
 other = "WeChat"

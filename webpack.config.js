@@ -1,28 +1,43 @@
 const path = require('path');
+const glob = require('glob-all');
 const ESLintPlugin = require('eslint-webpack-plugin');
 const TerserPlugin = require("terser-webpack-plugin");
-const CopyPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const PurgecssPlugin = require('purgecss-webpack-plugin');
+const PATHS = {
+  assets: path.join(__dirname, 'assets'),
+  layouts: path.join(__dirname, 'layouts'),
+  src: path.join(__dirname, 'src'),
+  static: path.join(__dirname, 'static')
+}
 
 module.exports = {
   entry: {
-    main: './src/js/index.ts',
-    search: ['./src/search/index.ts'],
-    katex: ['./src/katex/index.ts', './src/katex/index.scss'],
-    mermaid: ['./src/mermaid/index.ts'],
-    utterances: ['./src/utterances/index.ts'],
-    viewer: ['./src/viewer/index.ts', './src/viewer/index.scss'],
-    'service-worker': ['./src/service-worker/index.ts'],
+    main: './src/main/index.ts',
+    icons: './src/icons/index.js',
+    search: './src/search/index.ts',
+    katex: './src/katex/index.ts',
+    mermaid: './src/mermaid/index.ts',
+    utterances: './src/utterances/index.ts',
+    viewer: './src/viewer/index.ts',
+    'service-worker': './src/service-worker/index.ts',
   },
   mode: 'production',
-  devtool: 'inline-source-map',
   optimization: {
     usedExports: true,
     minimize: true,
-    minimizer: [new TerserPlugin()],
+    minimizer: [new TerserPlugin({
+      terserOptions: {
+        format: {
+          comments: false,
+        },
+      },
+      extractComments: false,
+    })],
   },
   output: {
-    path: path.resolve(path.join(__dirname, 'assets', 'js')),
-    filename: '[name].js'
+    path: PATHS.assets,
+    filename: '[name]/index.js'
   },
   module: {
     rules: [
@@ -34,27 +49,35 @@ module.exports = {
       {
         test: /\.(scss)$/,
         use: [
+          MiniCssExtractPlugin.loader,
           {
-            loader: 'style-loader'
-          },
-          {
-            loader: 'css-loader'
-          },
-          {
-            loader: 'postcss-loader',
+            loader: 'css-loader',
             options: {
-              postcssOptions: {
-                // postcss plugins, can be exported to postcss.config.js
-                plugins: [
-                  'autoprefixer'
-                ]
-              }
+              url: false,
             }
+          },
+          {
+            loader: 'postcss-loader'
           },
           {
             loader: 'sass-loader'
           }
         ]
+      },
+      {
+          test: /\.less$/,
+          use: [
+              MiniCssExtractPlugin.loader,
+              {
+                loader: 'css-loader',
+                options: {
+                  url: false,
+                }
+              },
+              {
+                  loader: 'less-loader',
+              },
+          ],
       },
       {
         test: /\.(ttf|woff2?)$/i,
@@ -63,7 +86,7 @@ module.exports = {
             loader: 'file-loader',
             options: {
               name: '[name].[ext]',
-              outputPath: '../../static/fonts',
+              outputPath:  path.join(PATHS.static, 'fonts'),
               publicPath: '/fonts'
             },
           },
@@ -76,13 +99,12 @@ module.exports = {
   },
   plugins: [
     new ESLintPlugin(),
-    // new CopyPlugin({
-    //   patterns: [
-    //     { 
-    //       from: path.resolve(path.join(__dirname, 'node_modules/@fortawesome/fontawesome-free/webfonts')),
-    //       to: path.resolve(path.join(__dirname, 'static/fonts')),
-    //     },
-    //   ],
-    // }),
+    new MiniCssExtractPlugin({
+      filename: '[name]/index.css'
+    }),
+    new PurgecssPlugin({
+      paths: glob.sync([`${PATHS.layouts}/**/*`, `${PATHS.src}/main/js/*`, `${PATHS.src}/search/js/*`],  { nodir: true }),
+      only: ['main']
+    }),
   ]
 };

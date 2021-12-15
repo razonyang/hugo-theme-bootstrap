@@ -19,6 +19,9 @@ other = "Copy URL"
 [button_reload]
 other = "Reload"
 
+[button_social_share]
+other = "Share"
+
 [button_submit]
 other = "Submit"
 

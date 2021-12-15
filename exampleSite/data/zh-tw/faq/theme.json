@@ -1,0 +1,26 @@
+{
+    "title": "主題",
+    "weight": 1,
+    "questions": [
+        {
+            "question": "如何設置 FAQ 頁面？",
+            "answer": "請參閱 [FAQ 頁面](/zh-tw/posts/faq)。"
+        },
+        {
+            "question": "FAQ 頁面支持 Markdown 格式嗎？",
+            "answer": "當然，你可以輸入任意有效的 Markdown 格式，比如 `代碼`, *斜體*, **粗體** 等。\n#### 表格\n| Foo |\n|:---|\n| Bar |\n#### 列表\n- One\n- Two\n"
+        },
+        {
+            "question": "如何添加圖標？",
+            "answer": "請參閱 [圖標](/zh-tw/posts/look-and-feel#圖標)。"
+        },
+        {
+            "question": "如何刪除語言？",
+            "answer": "我們以 `zh-cn` 為例。\n- 從 `config/_default/languages.toml` 刪除語言。\n- 通過 `find . -type f -name \"*.zh-cn.*\" -delete` 刪除配置和內容。"
+        },
+        {
+            "question": "如何添加新語言？",
+            "answer": "- 在 `config/_default/languages.toml` 添加新語言。\n- [書寫文章](/zh-tw/posts/getting-started/#書寫文章)。"
+        }
+    ]
+}

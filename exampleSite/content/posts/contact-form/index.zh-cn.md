@@ -46,7 +46,7 @@ layout = "contact"
 
 ## 后端
 
-其被设计成可以兼容大部分后端。目前，[Netlify form](https://docs.netlify.com/forms/setup) 和 [Getform](https://getform.io/) 已验证可用。
+其被设计成可以兼容大部分后端，比如：[Netlify form](https://docs.netlify.com/forms/setup)、[Getform](https://getform.io/) 和 [Formspree](https://formspree.io/)。
 
 ### Netlify
 

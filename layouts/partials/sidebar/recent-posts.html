@@ -9,7 +9,6 @@
     {{- range first $count (where site.RegularPages "Type" "in" site.Params.mainSections) -}}
       <li>
         <a href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a>
-        <span class="float-end post-date">{{- partial "helpers/post-date" . -}}</span>
       </li>
     {{- end -}}
     </ul>

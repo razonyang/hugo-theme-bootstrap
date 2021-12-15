@@ -15,9 +15,13 @@ There is also a [list of websites that use this theme](https://github.com/razony
 
 ## Docs
 
-- [English](https://hbs.razonyang.com/en/posts/getting-started)
-- [简体中文](https://hbs.razonyang.com/zh-cn/posts/getting-started)
-- [繁體中文](https://hbs.razonyang.com/zh-tw/posts/getting-started)
+| English | 简体中文 | 繁體中文
+|:---|:---|:---
+| [Getting Started](https://hbs.razonyang.com/en/posts/getting-started) | [快速入门](https://hbs.razonyang.com/zh-cn/posts/getting-started) | [快速入門](https://hbs.razonyang.com/zh-tw/posts/getting-started)
+| [Configuration](https://hbs.razonyang.com/en/posts/configuration) | [配置](https://hbs.razonyang.com/zh-cn/posts/configuration) | [配置](https://hbs.razonyang.com/zh-tw/posts/configuration)
+| [Look and Feel](https://hbs.razonyang.com/en/posts/look-and-feel) | [观感](https://hbs.razonyang.com/zh-cn/posts/look-and-feel) | [觀感](https://hbs.razonyang.com/zh-tw/posts/look-and-feel)
+| [FAQ](https://hbs.razonyang.com/en/faq) | [常见问题](https://hbs.razonyang.com/zh-cn/faq) | [常見問題](https://hbs.razonyang.com/zh-tw/faq)
+| [Get Involved](https://hbs.razonyang.com/en/posts/get-involved) | [参与我们](https://hbs.razonyang.com/zh-cn/posts/get-involved) | [參與我們](https://hbs.razonyang.com/zh-tw/posts/get-involved)
 
 ## Features
 

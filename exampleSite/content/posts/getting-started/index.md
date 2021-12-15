@@ -30,7 +30,7 @@ This article describes how to install, upgrade the theme, and write new articles
 $ hugo new site myblog
 $ cd myblog
 $ git init
-$ git submodule add https://github.com/razonyang/hugo-theme-bootstrap themes/$ hugo-theme-bootstrap
+$ git submodule add https://github.com/razonyang/hugo-theme-bootstrap themes/hugo-theme-bootstrap
 $ cp -a themes/hugo-theme-bootstrap/exampleSite/* .
 $ hugo server
 ```
@@ -88,6 +88,8 @@ $ hugo new posts/new-post/index.zh-cn.md
 
 > Please remind that, the created posts are generally in draft state. You'll need to specify the `-D` parameter of the command `hugo server` for previewing.
 > Similarly, you need to change the `draft` to `false` or remove `draft` parameter if you want to publish the article.
+
+> You can place your posts anywhere, such as `blog`, what you need to do is just append the `blog` to the `mainSections` parameter: `mainSections = ["posts", "blog"]`.
 
 ## What's Next
 

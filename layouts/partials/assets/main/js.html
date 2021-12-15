@@ -1,0 +1,14 @@
+{{- $mainScript := resources.Get "main/index.js" }}
+{{- $configScript := resources.Get "main/config.js" | resources.ExecuteAsTemplate "config.js" . -}}
+{{- $customScript := resources.Get "js/custom.js" -}}
+{{- $scripts := slice $configScript $mainScript -}}
+{{- if $.Site.Params.utterances -}}
+  {{- $scripts = $scripts | append (resources.Get "utterances/index.js") -}}
+{{- end -}}
+{{- $scripts = $scripts | append $customScript -}}
+{{- $script := $scripts | resources.Concat "js/main.js" | minify | fingerprint -}}
+{{- $.Scratch.Add "hbs-assets" (slice (dict "url" $script.Permalink "revision" ($.Scratch.Get "null"))) -}}
+<script src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous" defer></script>
+{{- range .Site.Params.customJS -}}
+<script src="{{ absURL . }}" crossorigin="anonymous"></script>
+{{- end -}}
