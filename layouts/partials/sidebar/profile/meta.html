@@ -4,7 +4,7 @@
 <div class="profile-bio">{{ . }}</div>
 {{- end -}}
 {{- with .company -}}
-<div class="profile-company"><i class="fas fa-fw fa-building"></i>{{ . }}</div>
+<div class="profile-company"><i class="fas fa-fw fa-building"></i>{{ . | safeHTML }}</div>
 {{- end -}}
 {{- with .location -}}
 <div class="profile-location"><i class="fas fa-fw fa-map-marker-alt"></i>{{ . | safeHTML }}</div>
