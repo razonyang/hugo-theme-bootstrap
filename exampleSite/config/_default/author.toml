@@ -10,3 +10,10 @@ location = "Earth"
 
 [params]
   #layout = "compact"
+
+[social]
+  email = "user@domain.tld"
+  facebook = "yourfacebookusername"
+  github = "yourgithubusername"
+  twitter = "yourtwitterusername"
+  linkedin = "yourlinkedinusername"
