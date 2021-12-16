@@ -11,7 +11,7 @@ categories = [
 tags = [
 ]
 series = [
-  "档案"
+  "檔案"
 ]
 images = []
 +++
