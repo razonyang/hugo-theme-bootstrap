@@ -12,7 +12,7 @@ series = [
   "文档"
 ]
 images = []
-[menu.main]
+[menu.footer]
   parent = "support"
   weight = 5
 +++

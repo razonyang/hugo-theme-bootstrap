@@ -12,7 +12,7 @@ series = [
   "檔案"
 ]
 images = []
-[menu.main]
+[menu.footer]
   parent = "support"
   weight = 5
 +++
