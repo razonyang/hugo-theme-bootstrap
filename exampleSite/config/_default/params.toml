@@ -45,7 +45,7 @@ googleAdsense = ""
 # categoryCount = 10 # The number of categories shown in sidebar. Turn off by setting it to false.
 # tagCount = 10 # The number of tags shown in sidebar. Turn off by setting it to false.
 # seriesCount = 20 # The number of series shown in sidebar. Turn off by setting it to false.
-taxonomyPaginate = 5 # Default to 10.
+# taxonomyPaginate = 5 # Default to 10.
 taxonomyPostCount = 20 # The number of posts of taxonomy. Turn off by setting it to false.
 
 # pinnedPost = false # Turn on/off pinned posts.
@@ -72,7 +72,7 @@ viewer = true # Image Viewer
   # excerptMaxLength = 120
 
 [archive]
-  paginate = 8 # Archive pagination. Default to 100.
+  paginate = 20 # Archive pagination. Default to 100.
   # dateFormat = "01-02" # Archive date format. Default to "Jan 2".
 
 [analytics]
