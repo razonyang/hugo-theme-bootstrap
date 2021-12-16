@@ -14,6 +14,9 @@ series = [
   "文档"
 ]
 images = []
+[menu.footer]
+  parent = "features"
+  weight = 3
 +++
 
 Image viewer is an image gallery, it will be shown up when you click a non-linkable image.

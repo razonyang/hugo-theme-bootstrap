@@ -14,6 +14,10 @@ series = [
   "檔案"
 ]
 images = []
+[menu.footer]
+  parent = "features"
+  weight = 7
+  pre = '<i class="fas fa-fw fa-coffee"></i>'
 +++
 
 打賞小部件，又稱buy me a coffee小部件，其通過使用捐贈或小費，為讀者提供了一種支持創作者的筦道。

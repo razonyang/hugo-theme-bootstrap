@@ -15,6 +15,10 @@ series = [
   "檔案"
 ]
 images = []
+[menu.footer]
+  parent = "features"
+  weight = 1
+  pre = '<i class="fas fa-fw fa-search"></i>'
 +++
 
 如果您的網站中有許多文章，讀者可能很難檢索到文章，因此，我們添加了搜索功能。

@@ -16,6 +16,9 @@ series = [
   "檔案"
 ]
 images = []
+[menu.footer]
+  parent = "features"
+  weight = 2
 +++
 
 PWAs([漸進式 web 應用程序](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)) 是使用一些特定的科技和標準模式開發的，允許它們同時利用 web 和本機應用程序功能。

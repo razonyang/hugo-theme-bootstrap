@@ -16,6 +16,9 @@ series = [
   "Docs"
 ]
 images = []
+[menu.footer]
+  parent = "docs"
+  weight = 1
 +++
 
 This article describes how to install, upgrade the theme, and write new articles.

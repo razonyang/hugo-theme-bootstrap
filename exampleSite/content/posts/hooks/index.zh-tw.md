@@ -14,6 +14,9 @@ series = [
   "檔案"
 ]
 images = []
+[menu.footer]
+  parent = "docs"
+  weight = 6
 +++
 
 作為一個靈活的主題，它應該能够自定義程式碼和集成協力廠商服務。因此，我們帶來了一個叫做鉤子的特性。

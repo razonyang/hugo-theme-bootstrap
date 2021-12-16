@@ -16,6 +16,9 @@ series = [
   "Docs"
 ]
 images = []
+[menu.footer]
+  parent = "docs"
+  weight = 6
 +++
 
 As a customizable theme, it provides the ability to customize assets, whether it is customizing CSS and JS or introducing third-party CSS and JS.

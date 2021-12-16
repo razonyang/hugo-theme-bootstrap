@@ -15,6 +15,10 @@ series = [
   "文档"
 ]
 images = []
+[menu.footer]
+  parent = "docs"
+  weight = 7
+  pre = '<i class="fas fa-fw fa-file-archive"></i>'
 +++
 
 归档页面按照年份对文章进行归档。

@@ -1,46 +1,69 @@
 [[main]]
+  name = "Taxonomies"
+  identifier = "taxonomies"
+  weight = 10
+  pre = '<i class="fas fa-fw fa-chevron-circle-down"></i>'
+
+[[main]]
+  parent = "taxonomies"
+  weight = 2
+  [main.params]
+    divider = true
+
+[[footer]]
   name = "Support"
   identifier = "support"
-  pre = '<i class="fas fa-fw fa-chevron-circle-down"></i>'
-  weight = 100
-[[main]]
+  weight = 1
+[[footer]]
   name = "Repository"
   identifier = "repository"
   parent = "support"
   url = "https://github.com/razonyang/hugo-theme-bootstrap"
   weight = 1
-[[main]]
+  pre = '<i class="fab fa-fw fa-github"></i>'
+[[footer]]
   name = "Discussions"
   identifier = "discussions"
   parent = "support"
   url = "https://github.com/razonyang/hugo-theme-bootstrap/discussions/new"
   weight = 2
-[[main]]
+  pre = '<i class="fas fa-fw fa-comments"></i>'
+[[footer]]
   name = "Features Request"
   identifier = "feature-request"
   parent = "support"
   url = "https://github.com/razonyang/hugo-theme-bootstrap/issues/new?template=feature_request.md"
   weight = 3
-[[main]]
+[[footer]]
   name = "Bug Report"
   identifier = "bug-report"
   parent = "support"
   url = "https://github.com/razonyang/hugo-theme-bootstrap/issues/new?template=bug_report.md"
   weight = 4
-[[main]]
-  parent = "support"
-  weight = 8
-  [main.params]
-    divider = true
-[[main]]
+
+[[footer]]
+  name = "Docs"
+  identifier = "docs"
+  weight = 2
+
+[[footer]]
+  name = "Features"
+  identifier = "features"
+  weight = 3
+
+[[footer]]
+  identifier = "demo"
+  name = "Demo"
+  weight = 4
+[[footer]]
   identifier = "demo-netlify"
-  parent = "support"
-  name = "Demo(Netlify)"
-  weight = 9
+  parent = "demo"
+  name = "Netlify"
+  weight = 1
   url = "https://hbs.razonyang.com"
-[[main]]
+[[footer]]
   identifier = "demo-china"
-  parent = "support"
-  name = "Demo(China)"
-  weight = 10
+  parent = "demo"
+  name = "China"
+  weight = 2
   url = "https://hbs-cn.razonyang.com"

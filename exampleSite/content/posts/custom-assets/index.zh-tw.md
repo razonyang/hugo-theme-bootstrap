@@ -16,6 +16,9 @@ series = [
   "檔案"
 ]
 images = []
+[menu.footer]
+  parent = "docs"
+  weight = 6
 +++
 
 作為一個可定制的主題，其提供了定制資源的能力，無論是定制 CSS 和 JS，還是引入第三方 CSS 和 JS。
