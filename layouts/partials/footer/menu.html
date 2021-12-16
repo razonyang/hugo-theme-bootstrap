@@ -1,0 +1,29 @@
+
+{{- if .Site.Menus.footer -}}
+<ul class="nav justify-content-between footer-memu mb-3">
+  {{- range .Site.Menus.footer -}}
+  <li class="nav-item">
+    {{- if .HasChildren -}}
+    <ul class="nav flex-column align-items-start">
+      <li class="nav-item">
+        <a class="nav-link fw-bold"{{ with .URL }} href="{{ . }}"{{ end }}{{ if not .Page }} target="_blank" rel="noopener noreferrer"{{ end }}>{{ partial "helpers/menu-name" . }}</a>
+      </li>
+      {{- range .Children -}}
+        {{- if .Params.divider -}}
+        <li><hr class="dropdown-divider"></li>
+        {{- else -}}
+        <li class="nav-item">
+            <a class="nav-link"{{ with .URL }} href="{{ . }}"{{ end }}{{ if not .Page }} target="_blank" rel="noopener noreferrer"{{ end }}>{{ partial "helpers/menu-name" . }}</a>
+        </li>
+        {{- end -}}
+      {{- end -}}
+    </ul>
+    {{- else -}}
+    <li class="nav-item">
+      <a class="nav-link"{{ with .URL }} href="{{ . }}"{{ end }}{{ if not .Page }} target="_blank" rel="noopener noreferrer"{{ end }}>{{ partial "helpers/menu-name" . }}</a>
+    </li>
+    {{- end -}}
+  </li>
+  {{- end -}}
+</ul>
+{{- end -}}
