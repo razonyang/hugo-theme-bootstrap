@@ -7,13 +7,16 @@ draft = true
 comment = true
 toc = true
 reward = true
+pinned = false
 categories = [
   ""
 ]
 tags = [
   ""
 ]
-series = []
+series = [
+  ""
+]
 images = []
 +++
 
