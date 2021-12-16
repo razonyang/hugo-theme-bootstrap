@@ -4,8 +4,13 @@
   .powered-by a {
     color: variable('accent');
   }
+}
 
-  .social-link {
-    padding: 0.5rem;
+.social-link {
+  padding: 0.5rem;
+  color: variable('secondary-text-on-surface') !important;
+
+  &:hover {
+    color: variable('accent')!important;
   }
 }

@@ -19,4 +19,7 @@
 {{- with $.GetPage "contact" -}}
 <div class="profile-contact"><i class="fas fa-fw fa-question-circle"></i><a href="{{ .Permalink }}">{{ .Title }}</a></div>
 {{- end -}}
+{{- with .social -}}
+{{- partial "helpers/social-links" . -}}
+{{- end -}}
 {{- end -}}
