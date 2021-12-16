@@ -24,6 +24,20 @@ This article lists all supported platforms and how to use them.
 
 ## Usage
 
+There are two place you can put social links to, one is the [Author Widget]({{< ref "/posts/widgets/author" >}}), the other is the footer.
+
+### Author Widget
+
+Set up social links by editing a file `config/_default/author.toml` with the following content:
+
+```toml
+[social]
+  email = "user@domain.tld"
+  github = "githubusername"
+```
+
+### Footer
+
 Set up social links by creating a file `config/_default/social.toml` with the following content:
 
 ```toml

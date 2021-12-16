@@ -36,3 +36,4 @@ images = []
 | `author.about` | String | - | “关于我”的外部页面，如果未设置，则使用内部的“关于我”的页面。
 | `author.params` | Object | - |
 | `author.params.layout` | String | - | 可选值：`compact`。
+| `author.social` | Object | - | [社交链接]({{< ref "/posts/widgets/social-links" >}})。

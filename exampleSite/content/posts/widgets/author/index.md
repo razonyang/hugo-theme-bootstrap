@@ -36,3 +36,4 @@ You can turn it off by removing the `author` configuration.
 | `author.about` | String | - | The external about page. The internal about page will be used if not set.
 | `author.params` | Object | - |
 | `author.params.layout` | String | - | Optional values: `compact`.
+| `author.social` | Object | - | [Social Links]({{< ref "/posts/widgets/social-links" >}}).

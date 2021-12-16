@@ -24,6 +24,20 @@ images = []
 
 ## 使用方法
 
+一共有两处地方可以放置社交链接，一个是[作者小部件]({{< ref "/posts/widgets/author" >}})，另一个是页脚。
+
+### 作者小部件
+
+编辑 `config/_default/author.toml` 文件，并填写以下配置：
+
+```toml
+[social]
+  email = "user@domain.tld"
+  github = "githubusername"
+```
+
+### 页脚
+
 创建 `config/_default/social.toml` 文件，并填写以下配置：
 
 ```toml
