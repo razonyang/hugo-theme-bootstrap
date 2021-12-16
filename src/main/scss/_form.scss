@@ -1,6 +1,13 @@
 .form-control {
+  color: variable('primary-text-on-background');
+  background: variable('background');
+  border-color: variable('background');
+
   &:focus {
     box-shadow: 0 0 0 0.125rem variable('accent');
+    border-color: variable('accent');
+    color: variable('primary-text-on-background');
+    background: variable('background');
   }
 }
 
