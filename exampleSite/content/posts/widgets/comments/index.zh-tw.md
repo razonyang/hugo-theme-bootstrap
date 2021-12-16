@@ -17,6 +17,10 @@ series = [
   "檔案"
 ]
 images = []
+[menu.footer]
+  parent = "features"
+  weight = 7
+  pre = '<i class="fas fa-fw fa-comments"></i>'
 +++
 
 [Disqus](https://disqus.com/) 和 [Utterances](https://utteranc.es/) 評論小部件都是開箱即用的。本文將展示如何配置它們，甚至自定義你自己的評論小部件。

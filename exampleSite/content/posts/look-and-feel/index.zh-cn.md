@@ -19,6 +19,10 @@ series = [
   "文档"
 ]
 images = []
+[menu.footer]
+  parent = "docs"
+  weight = 3
+  pre = '<i class="fas fa-fw fa-palette"></i>'
 +++
 
 默认情况下，使用此主题的站点具有默认字体、颜色和总体外观。但是，默认方案不可能满足所有人的要求，但是不要担心，你可以轻松地覆盖主题默认值，例如调色板颜色、字体、语法高亮。

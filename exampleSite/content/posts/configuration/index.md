@@ -15,6 +15,9 @@ series = [
   "Docs"
 ]
 images = []
+[menu.footer]
+  parent = "docs"
+  weight = 2
 +++
 
 As the example site shown, we use [Configuration Directory](https://gohugo.io/getting-started/configuration/#configuration-directory) to maintain easier organization and environment specific settings, it is especially useful on multilingual sites.

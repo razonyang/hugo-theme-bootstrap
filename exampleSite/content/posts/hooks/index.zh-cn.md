@@ -14,6 +14,9 @@ series = [
   "文档"
 ]
 images = []
+[menu.footer]
+  parent = "docs"
+  weight = 6
 +++
 
 作为一个灵活的主题，它应该能够自定义代码和集成第三方服务。因此，我们带来了一个叫做钩子的特性。

@@ -17,6 +17,9 @@ series = [
   "檔案"
 ]
 images = []
+[menu.footer]
+  parent = "docs"
+  weight = 1
 +++
 
 本文將介紹如何安裝、升級本主題，以及書寫新的文章。
