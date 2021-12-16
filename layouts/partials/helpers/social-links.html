@@ -25,7 +25,7 @@
 {{- $tiktok := dict "tiktok" (dict "url" "https://www.tiktok.com/@%s" "title" "TikTok" "icon" "fab fa-tiktok") -}}
 {{- $pinterest := dict "pinterest" (dict "url" "https://www.pinterest.com/%s" "icon" "fab fa-pinterest") -}}
 {{- $items = merge $items $tumblr $reddit $telegram $qq $dockerhub $bitbucket $kaggle $lastfm $bilibili $tiktok $pinterest -}}
-<nav class="social-links nav my-2 justify-content-center">
+<nav class="social-links nav mb-2 justify-content-center">
 {{- range $key, $user := . -}}
   {{- if eq $key "email" -}}
     <a class="nav-link social-link" href="mailto:{{ $user }}" title="{{ title $key }}">
