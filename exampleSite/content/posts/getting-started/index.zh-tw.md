@@ -97,4 +97,5 @@ $ hugo new posts/new-post/index.zh-cn.md
 ## 下一步
 
 - [調整配置]({{< ref "/posts/configuration" >}})
+- [菜單]({{< ref "/posts/menu" >}})
 - [觀感]({{< ref "/posts/look-and-feel" >}})

@@ -94,7 +94,8 @@ $ hugo new posts/new-post/index.zh-cn.md
 
 > You can place your posts anywhere, such as `blog`, what you need to do is just append the `blog` to the `mainSections` parameter: `mainSections = ["posts", "blog"]`.
 
-## What's Next
+## Up Next
 
 - [Tweak Configuration]({{< ref "/posts/configuration" >}})
+- [Menu]({{< ref "/posts/menu" >}})
 - [Look and Feel]({{< ref "/posts/look-and-feel" >}})
