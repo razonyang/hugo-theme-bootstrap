@@ -1,7 +1,8 @@
 name = "Razon Yang"
 # avatar = "images/profile.png" # Avatar image. Default to "images/profile.webp".
 bio = "Gopher, PHPer, Full Stack Engineer."
-company = "Company"
+company = 'Company'
+# company = '<a href="https://example.com" target="_blank" rel="noopener noreferrer">Company</a>'
 location = "Earth"
 # alternatives:
 # location = "<a href='https://www.openstreetmap.org/search?query=Earth'>Earth</a>"
