@@ -36,6 +36,9 @@ There is also a [list of websites that use this theme](https://github.com/razony
 - Font Size Switcher.
 - Multilingual(I18N).
 - [Search](https://hbs.razonyang.com/en/posts/search).
+- Pinning Posts.
+- Footer Menu.
+- Code Block Panel: copy code, line number, line wrap and expand.
 - Breadcrumb.
 - [Archive](https://hbs.razonyang.com/en/posts/archives).
 - [Image Viewer](https://hbs.razonyang.com/en/posts/image-viewer).
@@ -52,5 +55,3 @@ There is also a [list of websites that use this theme](https://github.com/razony
 - [Twitter Cards](https://gohugo.io/templates/internal/#configure-twitter-cards) and [Open Graph](https://gohugo.io/templates/internal/#configure-open-graph).
 - [Creative Commons License](https://creativecommons.org/licenses/).
 - [Contact Form](https://hbs.razonyang.com/en/posts/contact-form).
-- Pinning Posts.
-- Footer Menu.
