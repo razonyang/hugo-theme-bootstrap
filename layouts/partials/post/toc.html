@@ -3,15 +3,8 @@
 {{- $toc := .TableOfContents -}}
 {{- $valid := and $toc (and (ne $toc "<nav id=\"TableOfContents\"></nav>") (gt .WordCount $wordCount)) -}}
 {{- if and $enable $valid -}}
-<div class="offcanvas offcanvas-end surface h-100" tabindex="-1" id="offcanvasTOC" aria-labelledby="offcanvasTOCLabel">
-  <div class="offcanvas-header">
-    <h2 class="offcanvas-title" id="offcanvasTOCLabel">{{ i18n "table_of_contents" }}</h5>
-      <button type="button" class="btn btn-sm btn-outline-primary" data-bs-dismiss="offcanvas" aria-label="Close">
-        <i class="fas fa-times"></i>
-      </button>
-  </div>
-  <div class="offcanvas-body">
-    {{ $toc }}
-  </div>
+<div class="post-toc mb-4" id="postTOC">
+  <h2 class="mb-4">{{ i18n "table_of_contents" }}</h2>
+  {{ $toc }}
 </div>
 {{- end -}}
