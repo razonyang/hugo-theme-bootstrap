@@ -31,9 +31,7 @@
 {{- range $icons -}}
   {{- $iconsHTML = printf `%s<i class="fab fa-fw fa-2x fa-creative-commons%s"></i>` $iconsHTML .  -}}
 {{- end -}}
-<div class="post-copyright" id="post-copyright">
-  <a class="d-flex align-items-center flex-column" target="_blank" rel="license noopener noreferrer" href="{{ printf "%s.%s" $link (default "en" (index $langs .Lang)) }}">
-    <span>{{ $iconsHTML | safeHTML }}</span>
-    {{ $linkTitle }}
-  </a>
-</div>
+<a class="d-flex align-items-center flex-column" target="_blank" rel="license noopener noreferrer" href="{{ printf "%s.%s" $link (default "en" (index $langs .Lang)) }}">
+  <span>{{ $iconsHTML | safeHTML }}</span>
+  {{ $linkTitle }}
+</a>

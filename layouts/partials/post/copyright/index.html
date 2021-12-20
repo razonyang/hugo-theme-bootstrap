@@ -1,4 +1,8 @@
-{{- if isset .Site.Params "creativecommons" -}}
-{{ partial "post/copyright/cc" . }}
-{{ partial "post/copyright/custom" . }}
-{{- end -}}
+
+<div class="post-copyright mb-4" id="post-copyright">
+    <h2 class="mb-4">{{ i18n "copyright" }}</h2>
+    {{- if isset .Site.Params "creativecommons" -}}
+    {{ partial "post/copyright/cc" . }}
+    {{- end -}}
+    {{ partial "post/copyright/custom" . }}
+</div>
