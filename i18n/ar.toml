@@ -1,3 +1,9 @@
+[404_title]
+other = "الصفحة غير موجودة."
+
+[404_info]
+other = "تعذر الوصول إلى الصفحة المطلوبة."
+
 [about_me]
 other = "عنّي"
 
@@ -6,6 +12,15 @@ other = "علي باي"
 
 [archives]
 other = "الأرشيف"
+
+[button_copy_url]
+other = "نسخ الرابط"
+
+[button_reload]
+other = "تحديث"
+
+[button_social_share]
+other = "مشاركة"
 
 [button_submit]
 other = "إرسال"
@@ -52,6 +67,9 @@ other = "أزرق مُخضر"
 [color_yellow]
 other = "أصفر"
 
+[comments]
+other = "التعليقات"
+
 [contact_name]
 other = "الاسم"
 
@@ -60,6 +78,9 @@ other = "البريد اﻹلكتروني"
 
 [contact_email_help]
 other = "لن نشارك أبدُا بريدك اﻹلكتروني مع أي شخص آخر."
+
+[contact_file]
+other = "الملف"
 
 [contact_subject]
 other = "الموضوع"
@@ -76,6 +97,9 @@ other = "تدوينات مميزة"
 [font_size]
 other = "حجم الخط"
 
+[go_back]
+other = "الرجوع للخلف"
+
 [home]
 other = "الرئيسية"
 
@@ -90,6 +114,12 @@ other = "تحميل المزيد"
 
 [mode]
 other = "السمة"
+
+[offline_title]
+other = "يبدو أنك غير متصل."
+
+[offline_info]
+other = "يبدو أن هناك مشكلة في اتصالك بالإنترنت. من فضلك تأكد من حالة الشبكة لديك."
 
 [pagination_title]
 other = "الصفحة {{ .PageNumber }}"
@@ -145,6 +175,9 @@ other = "الفِهْرِس"
 
 [tags]
 other = "التسميات"
+
+[try_again]
+other = "إعادة المحاولة"
 
 [wechat]
 other = "وي شات"
