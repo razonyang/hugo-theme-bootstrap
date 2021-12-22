@@ -6287,7 +6287,12 @@ img {
 }
 
 .post-meta .post-taxonomy {
-	padding: .25rem
+	padding: .25rem;
+}
+
+.post-meta .post-taxonomies {
+	padding: .25rem;
+	font-size: .8rem
 }
 
 .post-summary {
