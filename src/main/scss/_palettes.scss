@@ -106,11 +106,15 @@ $palettes: (
 }
 
 .palette {
-  height: 20px;
-  width: 32px;
-  margin: 0.25rem 0 0.25rem 0.25rem;
+  height: 1.5rem;
+  min-width: 1.5rem;
+  margin: 0.25rem 0;
   background: variable('primary') !important;
   color: variable('on-primary') !important;
+
+  &:not(:last-child) {
+    margin-right: .25rem;
+  }
 }
 
 #palettePicker {
