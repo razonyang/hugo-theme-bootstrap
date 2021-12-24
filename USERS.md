@@ -6,5 +6,6 @@
 - [Cups of Code](https://cupsOfCode.com)
 - [JO's USB](https://josusb.com/)
 - [SimpleAnecdote](https://simpleanecdote.com)
+- [yshalsager](https://yshalsager.com/en/)
 
 > List your blog or website by creating a PR.
