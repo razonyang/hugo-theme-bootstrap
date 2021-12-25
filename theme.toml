@@ -1,26 +1,26 @@
-name = "Bootstrap Blog Theme"
+name = "Cypherpunks Brasil"
 license = "MIT"
-licenselink = "https://github.com/razonyang/hugo-theme-bootstrap/blob/master/LICENSE"
-description = "An extreme fast, responsive and feature-rich blog theme for Hugo"
-homepage = "https://github.com/razonyang/hugo-theme-bootstrap"
-demosite = "https://hbs.razonyang.com"
+licenselink = "https://creativecommons.org/publicdomain/zero/1.0/deed.pt_BR"
+description = "Cypherpunks Brasil é um projeto dedicado a tradução de textos históricos e compartilhamento de conteúdo relacionado a criptoanarquismo, cypherpunk, criptologia, agorismo, sistemas descentralizados, hardware, moedas digitais, anarquismo, sobrevivencialismo e mais."
+homepage = "https://cypherpunks.com.br/"
 tags = [
-  "bootstrap",
-  "personal",
-  "blog",
-  "responsive",
-  "light",
-  "dark",
-  "multilingual"
+  "cypherpunks",
+  "cypherpunk",
+  "criptoanarquia",
+  "criptoanarquismo",
+  "criptografia",
+  "segurança",
+  "anarquismo",
+  "agorismo",
+  "cryptography",
+  "cypherpunks brasil"
 ]
 features = [
-  "hooks",
-  "i18n",
-  "comments",
-  "breadcrumb",
-  "search"
+  "blog",
+  "informações",
+  "comments"
 ]
 min_version = "0.75.0"
 [author]
-  name = "Razon Yang"
-  homepage = "https://razonyang.com"
+  name = "Cypherpunks Brasil"
+  homepage = "https://github.com/cypherpunksbr"
