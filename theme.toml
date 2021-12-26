@@ -1,7 +1,7 @@
 name = "Cypherpunks Brasil"
 license = "MIT"
 licenselink = "https://creativecommons.org/publicdomain/zero/1.0/deed.pt_BR"
-description = "Cypherpunks Brasil é um projeto dedicado a tradução de textos históricos e compartilhamento de conteúdo relacionado a criptoanarquismo, cypherpunk, criptologia e mais."
+description = "Cypherpunks Brasil é um projeto dedicado a tradução de textos históricos e compartilhamento de conteúdo relacionado a criptoanarquismo, cypherpunk, criptologia, agorismo, sistemas descentralizados, hardware, moedas digitais, anarquismo, sobrevivencialismo e mais."
 homepage = "https://cypherpunks.com.br/"
 tags = [
   "cypherpunks",
