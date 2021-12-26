@@ -13,3 +13,11 @@ $white-disabled: rgba(225, 225, 225, 0.5);
 .text-primary {
     color: variable('primary')!important;
 }
+
+.bg-accent {
+    background-color: variable('accent')!important;
+}
+
+.text-accent {
+    color: variable('accent')!important;
+}

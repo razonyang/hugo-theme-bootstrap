@@ -1,4 +1,5 @@
 {{- range $key, $value := .Site.Taxonomies -}}
+  {{- $countPosts := default false $.Site.Params.countTaxonomyPosts -}}
   {{- $countParams := dict "categories" "categoryCount" "tags" "tagCount" "series" "seriesCount" -}}
   {{- $param := default "" (index $countParams $key) -}}
   {{- $taxonomyCount := default 10 ($.Site.Param $param) -}}
@@ -16,6 +17,9 @@
           {{- if lt $idx $taxonomyCount -}}
           <a href="{{ $taxonomy.Page.Permalink }}" class="badge rounded post-taxonomy" title="{{ $taxonomy.Page.Title }}">
             {{ $taxonomy.Page.Title }}
+            {{- if $countPosts -}}
+              <span class="badge badge-sm rounded-pill text-white bg-accent ms-1">{{ $taxonomy.Count }}</span>
+            {{- end -}}
           </a>
           {{- end -}}
         {{- end -}}
