@@ -79,7 +79,8 @@ images = []
 | `tagCount` | Integer/Boolean | `10` | 标签数，`false` 则隐藏。
 | `seriesCount` | Integer/Boolean | `10` | 专栏数，`false` 则隐藏。
 | `taxonomyPaginate` | Integer | `10` |
-| `taxonomyPostCount` | Integer | `3` | 分类的文章数，`false` 则隐藏。
+| `taxonomyPostCount` | Integer | `3` | 分类的列表文章数，`false` 则隐藏。
+| `countTaxonomyPosts` | Boolean | `false` | 显示分类的文章总数。
 | `fullWidth` | Boolean | `false` | 是否全宽
 | `fixedHeader` | Boolean | `true` | 是否固定头部
 | `reward` | Object | - | [打赏小部件]({{< ref "/posts/widgets/reward" >}})，又称 Buy Me a Coffee 小部件。

@@ -79,7 +79,8 @@ See also [All Configuration Settings](https://gohugo.io/getting-started/configur
 | `tagCount` | Integer/Boolean | `10` | The number of tags shown in sidebar. Turn off by setting it to `false`.
 | `seriesCount` | Integer | `10` | The number of series shown in sidebar.
 | `taxonomyPaginate` | Integer | `10` |
-| `taxonomyPostCount` | Integer | `3` | The number of posts of taxonomy. Turn off by setting it to false.
+| `taxonomyPostCount` | Integer | `3` | The number of taxonomy's posts. Turn off by setting it to false.
+| `countTaxonomyPosts` | Boolean | `false` | Count posts of taxonomy.
 | `fullWidth` | Boolean | `false` | Full width.
 | `fixedHeader` | Boolean | `true` | Turn on/off fixed header.
 | `reward` | Object | - | [Reward Widget]({{< ref "/posts/widgets/reward" >}}), AKA Buy Me a Coffee Widget.
