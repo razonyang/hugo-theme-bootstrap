@@ -3,21 +3,23 @@
 }
 
 .btn-primary {
-  color: variable('on-primary');
-  background-color: variable('accent');
-  border-color: variable('accent');
+  color: variable('on-primary')!important;
+  background-color: variable('accent')!important;
+  border-color: variable('accent')!important;
 
   &:hover,
-  &:focus {
-    background-color: variable('accent-dark');
-    border-color: variable('accent-dark');
+  &:focus,
+  &.active,
+  &:active {
+    background-color: variable('accent-dark')!important;
+    border-color: variable('accent-dark')!important;
   }
 }
 
 .btn-outline-primary {
-  background-color: variable('on-primary');
-  border-color: variable('primary');
-  color: variable('primary');
+  background-color: variable('on-primary')!important;
+  border-color: variable('primary')!important;
+  color: variable('primary')!important;
 
   &:hover,
   &:focus,
