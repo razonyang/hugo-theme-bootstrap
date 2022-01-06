@@ -8,5 +8,6 @@
 - [SimpleAnecdote](https://simpleanecdote.com)
 - [yshalsager](https://yshalsager.com/en/)
 - [Benji Vesterby Tech Blog](https://benjiv.com)
+- [\[bronski.net\]](https://bronski.net/)
 
 > List your blog or website by creating a PR.
