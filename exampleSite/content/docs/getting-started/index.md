@@ -31,6 +31,8 @@ This article describes how to install, upgrade the theme, and write new articles
 
 ## Installation
 
+> Required Hugo `0.75.0` or above.
+
 ### Create a New Site from Scratch
 
 ```shell
