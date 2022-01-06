@@ -1,8 +1,8 @@
 [404_title]
-other = "Oops! Page not found."
+other = " ☠ Pagina não encontrada ☠ "
 
 [404_info]
-other = "We can't seems to find the page you're looking for."
+other = "Procure pela caixa de busca ou percorrendo o site. Qualquer coisa reporte no nosso Github ou em nossas redes sociais."
 
 [about_me]
 other = "About Me"
@@ -95,10 +95,10 @@ other = "Featured Posts"
 other = "Font Size"
 
 [go_back]
-other = "Go back"
+other = "Voltar"
 
 [home]
-other = "Home"
+other = "Início"
 
 [language]
 other = "Language"

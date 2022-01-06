@@ -2347,8 +2347,9 @@ fieldset:disabled .btn {
 }
 
 .btn-sm {
-	padding: .25rem .5rem;
-	font-size: 0.875rem;
+	padding: .60rem .50rem;
+	font-size: 1.0rem;
+	margin: 1.0rem;
 	border-radius: .2rem
 }
 
