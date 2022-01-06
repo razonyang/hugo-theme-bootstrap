@@ -6,4 +6,5 @@
   {{- $content = .Summary -}}
 {{- end -}}
 {{- $maxLength := default 320 $.Site.Params.post.excerptMaxLength -}}
-{{- $content | truncate $maxLength -}}
+{{- $readMore := printf "...<a class=\"btn btn-sm btn-primary ms-2\" href=\"%s\">%s</a>" .Permalink (i18n "read_more") | safeHTML -}}
+{{- $content | truncate $maxLength $readMore -}}
