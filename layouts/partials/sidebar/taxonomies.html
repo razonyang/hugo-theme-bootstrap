@@ -5,7 +5,7 @@
   {{- $taxonomyCount := default 10 ($.Site.Param $param) -}}
   {{- if $taxonomyCount -}}
     {{- with $value.ByCount -}}
-    <section class="taxonomies row card component">
+    <section class="{{ $key }}-taxonomies row card component">
       <div class="card-header">
         <h2 class="card-title">
           <a href="{{ absLangURL (urlize $key) }}">{{ T $key }}</a>
