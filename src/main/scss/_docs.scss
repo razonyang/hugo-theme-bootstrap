@@ -1,0 +1,41 @@
+.btn-toggle {
+    &[aria-expanded="true"] {
+        .btn-toggle-icon {
+            transform: rotate(90deg);
+        }
+    }
+}
+
+.docs-catalog {
+    .container {
+        @include media-breakpoint-up(lg) {
+            position: sticky;
+            top: 84px;
+
+            .card-body {
+                height: calc(100vh - 84px);
+                overflow-y: scroll;
+            }
+        }
+    }
+}
+
+.catalog-collapse {
+    @include media-breakpoint-up(lg) {
+      display: flex!important;
+    }
+}
+
+.docs-sidebar {
+    .container {
+        @include media-breakpoint-up(lg) {
+            position: sticky;
+            top: 84px;
+
+            .card-body {
+                height: calc(100vh - 84px);
+                overflow-y: scroll;
+            }
+        }
+    }
+}

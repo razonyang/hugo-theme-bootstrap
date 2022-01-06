@@ -1,0 +1,43 @@
+<aside class="docs-catalog col-lg-2">
+  <div class="container">
+    <div class="row card component">
+      <div class="card-body">
+        <button class="d-lg-none btn btn-primary-outline w-100" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCatalog" aria-expanded="false" aria-controls="collapseCatalog">Catalog</button>
+        <div class="collapse catalog-collapse mt-2 mt-lg-0" id="collapseCatalog">
+          {{ template "walk-catalog" (dict "section" .FirstSection "page" .) }}
+        </div>
+      </div>
+    </div>
+  </div>
+</aside>
+
+{{- define "walk-catalog" -}}
+{{- $section := .section -}}
+{{- $page := .page -}}
+<ul class="list-unstyled mb-2">
+    {{- range $section.Pages -}}
+        {{- if .IsSection -}}
+        {{- $sectionId := replace .Name " " "" | title | printf "catalog%s" -}}
+        {{- $active := false -}}
+        {{- if hasPrefix $page.Permalink .Permalink -}}
+          {{- $active = true -}}
+        {{- end -}}
+        <li class="mb-2">
+          <a class="btn-toggle collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#{{ $sectionId }}" aria-expanded="{{ if $active }}true{{ else }}false{{ end }}" aria-controls="{{ $sectionId }}">
+            <i class="btn-toggle-icon fas fa-arrow-left" data-fa-transform="rotate-180"></i>
+            {{ .Name }}
+          </a>
+          <div class="mt-2 collapse{{ if $active }} show{{ end }}" id="{{ $sectionId }}">
+            <ul class="btn-toggle-nav list-unstyled fw-normal small ms-3">
+              {{ template "walk-catalog" (dict "section" . "page" $page) }}
+            </ul>
+          </div>
+        </li>
+        {{- else -}}
+        <li class="mb-2{{ if eq .Permalink $page.Permalink }} text-accent{{ end }}">
+          <a href="{{ .Permalink }}">{{ .Title }}</a>
+        </li>
+        {{- end -}}
+    {{- end -}}
+</ul>
+{{- end -}}
