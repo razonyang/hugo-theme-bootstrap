@@ -2,9 +2,10 @@
   <div class="container">
     <div class="row component card">
       <div class="card-body">
+        {{ partial "hooks/docs/sidebar-begin" . }}
         {{ partial "post/toc" . }}
+        {{ partial "hooks/docs/sidebar-end" . }}
       </div>
     </div>
   </div>
 </aside>
-  
