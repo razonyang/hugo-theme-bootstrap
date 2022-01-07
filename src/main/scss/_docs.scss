@@ -7,7 +7,15 @@
 }
 
 .docs-catalog {
-    .container {
+    @include media-breakpoint-down(sm) {
+        position: fixed;
+        top: 54px;
+        margin: 0;
+        padding: 0;
+        z-index: 100;
+    }
+
+    .card {
         @include media-breakpoint-up(lg) {
             position: sticky;
             top: 84px;

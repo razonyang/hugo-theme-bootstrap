@@ -1,11 +1,8 @@
-<aside class="docs-catalog col-lg-2">
+<aside class="docs-catalog col-lg-2 collapse catalog-collapse">
   <div class="container">
     <div class="row card component">
       <div class="card-body">
-        <button class="d-lg-none btn btn-primary-outline w-100" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCatalog" aria-expanded="false" aria-controls="collapseCatalog">Catalog</button>
-        <div class="collapse catalog-collapse mt-2 mt-lg-0" id="collapseCatalog">
-          {{ template "walk-catalog" (dict "section" .FirstSection "page" .) }}
-        </div>
+        {{ template "walk-catalog" (dict "section" .FirstSection "page" .) }}
       </div>
     </div>
   </div>
