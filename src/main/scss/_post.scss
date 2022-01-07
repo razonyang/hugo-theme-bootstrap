@@ -17,6 +17,7 @@
 
   .post-taxonomy {
     padding: .25rem;
+    padding-left: .5rem;
   }
 }
 
@@ -146,6 +147,8 @@
   margin: .25rem;
   padding: .5rem;
   opacity: .6;
+  clip-path: polygon(100% 0, 100% 100%, 1rem 100%, 0 50%, 1rem 0);
+  padding-left: 1rem;
 
   @include elevation(2);
 
