@@ -20,9 +20,9 @@
           {{- $active = true -}}
         {{- end -}}
         <li class="mb-2">
-          <a class="btn-toggle collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#{{ $sectionId }}" aria-expanded="{{ if $active }}true{{ else }}false{{ end }}" aria-controls="{{ $sectionId }}">
-            <i class="btn-toggle-icon fas fa-arrow-left" data-fa-transform="rotate-180"></i>
+          <a class="btn-toggle collapsed d-flex align-items-center bg-accent text-white px-2 py-1" role="button" data-bs-toggle="collapse" data-bs-target="#{{ $sectionId }}" aria-expanded="{{ if $active }}true{{ else }}false{{ end }}" aria-controls="{{ $sectionId }}">
             {{ .Name }}
+            <i class="btn-toggle-icon fas fa-arrow-left ms-auto" data-fa-transform="rotate-180"></i>
           </a>
           <div class="mt-2 collapse{{ if $active }} show{{ end }}" id="{{ $sectionId }}">
             <ul class="btn-toggle-nav list-unstyled fw-normal small ms-3">
