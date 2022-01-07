@@ -35,16 +35,6 @@
     }
 }
 
-.docs-sidebar {
-    .container {
-        @include media-breakpoint-up(lg) {
-            position: sticky;
-            top: 84px;
-
-            .card-body {
-                height: calc(100vh - 84px);
-                overflow-y: scroll;
-            }
-        }
-    }
+.docs-toc {
+    top: 84px;
 }
