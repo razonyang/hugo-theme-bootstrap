@@ -1,4 +1,16 @@
 @import 'bootstrap/scss/utilities';
+$utilities: map-merge(
+  $utilities,
+  (
+    "white-space": (
+      property: white-space,
+      class: text,
+      values: (
+        pre-wrap: pre-wrap,
+      )
+    ),
+  )
+);
 /*
 $utilities: map-merge(
   $utilities,
