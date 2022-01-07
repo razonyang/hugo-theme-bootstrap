@@ -1,11 +1,7 @@
-<aside class="sidebar docs-sidebar col-lg-3">
+<aside class="sidebar d-flex docs-sidebar col-lg-3">
   <div class="container">
-    <div class="row component card">
-      <div class="card-body">
-        {{ partial "hooks/docs/sidebar-begin" . }}
-        {{ partial "post/toc" . }}
-        {{ partial "hooks/docs/sidebar-end" . }}
-      </div>
-    </div>
+    {{ partial "hooks/docs/sidebar-begin" . }}
+    {{ partial "docs/toc" . }}
+    {{ partial "hooks/docs/sidebar-end" . }}
   </div>
 </aside>
