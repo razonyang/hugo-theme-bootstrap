@@ -6,7 +6,7 @@
   {{- $scripts = $scripts | append (resources.Get "utterances/index.js") -}}
 {{- end -}}
 {{- $scripts = $scripts | append $customScript -}}
-{{- $script := $scripts | resources.Concat "js/main.js" | minify | fingerprint -}}
+{{- $script := $scripts | resources.Concat "js/main.js" | fingerprint -}}
 {{- $.Scratch.Add "hbs-assets" (slice (dict "url" $script.Permalink "revision" ($.Scratch.Get "null"))) -}}
 <script src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous" defer></script>
 {{- range .Site.Params.customJS -}}
