@@ -138,10 +138,10 @@ one = "{{ .Count }} منشور"
 other = "{{ .Count }} منشورات"
 
 [post_date]
-other = "created on {{ .createdOn }}{{ with .updatedOn }}, updated on {{ . }}{{ end }}."
+other = "أنشئت في {{ .createdOn }}{{ with .updatedOn }}, وحٌدثت في {{ . }}{{ end }}."
 
 [read_more]
-other = "Read More"
+other = "اقرأ المزيد"
 
 [reading_time]
 other = "{{ .ReadingTime }} دقيقة قراءة"
