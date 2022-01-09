@@ -1,9 +1,4 @@
-{{- $order := default (slice "series" "categories" "tags") $.Site.Params.taxonomicOrder -}}
-{{- range $key, $value := $.Site.Taxonomies -}}
-  {{- if not (in $order $key) -}}
-    {{- $order = $order | append $key -}}
-  {{- end -}}
-{{- end -}}
+{{- $order := default (slice "series" "categories" "tags") $.Site.Params.sidebarTaxonomies -}}
 {{- range $expected := $order -}}
 {{- range $key, $value := $.Site.Taxonomies -}}
   {{- if eq $key $expected -}}

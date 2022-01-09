@@ -85,7 +85,7 @@ aliases = [
 | `taxonomyPaginate` | Integer | `10` |
 | `taxonomyPostCount` | Integer | `3` | 分類的列表文章數，`false` 則隱藏。
 | `countTaxonomyPosts` | Boolean | `false` | 是否顯示分類的文章總數。
-| `taxonomicOrder` | Array | `["series", "categories", "tags"]` | 側邊欄的分類順序。
+| `sidebarTaxonomies` | Array | `["series", "categories", "tags"]` | 側邊欄的分類。
 | `fullWidth` | Boolean | `false` | 是否全寬
 | `fixedHeader` | Boolean | `true` | 是否固定頭部
 | `reward` | Object | - | [打賞小部件]({{< ref "/docs/widgets/reward" >}})，又稱 Buy Me a Coffee 小部件。
