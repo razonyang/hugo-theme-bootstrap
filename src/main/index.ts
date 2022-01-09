@@ -1,5 +1,5 @@
 import './scss/index.scss';
-import 'bootstrap/js/dist/collapse';
+import './js/collapse';
 import 'bootstrap/js/dist/dropdown';
 import 'bootstrap/js/dist/offcanvas';
 // import 'bootstrap/js/dist/popover';

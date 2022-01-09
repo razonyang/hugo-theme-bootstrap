@@ -10,10 +10,21 @@
     @include media-breakpoint-down(sm) {
         position: fixed;
         top: 54px;
-        z-index: 100;
+        z-index: 1000;
         height: 100%;
-        padding-bottom: 1.5rem;
-        overflow-y: scroll;
+        padding-bottom: 54px;
+        width: 75vw;
+        transition: all .2s linear!important;
+        
+        @include elevation(16);
+
+        .container, .card, .card-body {
+            height: 100%;
+        }
+
+        .card-body {
+            overflow-y: scroll;
+        }
     }
 
     .card {
@@ -33,6 +44,14 @@
     @include media-breakpoint-up(lg) {
       display: flex!important;
     }
+}
+
+.catalog-toggle {
+    z-index: 999;
+    border: none;
+    width: 1rem;
+    background: var(--#{$variable-prefix}background);
+    color: var(--#{$variable-prefix}on-background);
 }
 
 .docs-toc {
