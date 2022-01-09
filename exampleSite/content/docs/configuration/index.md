@@ -85,6 +85,7 @@ See also [All Configuration Settings](https://gohugo.io/getting-started/configur
 | `taxonomyPaginate` | Integer | `10` |
 | `taxonomyPostCount` | Integer | `3` | The number of taxonomy's posts. Turn off by setting it to false.
 | `countTaxonomyPosts` | Boolean | `false` | Count posts of taxonomy.
+| `taxonomicOrder` | Array | `["series", "categories", "tags"]` | The order of taxonomies on the sidebar.
 | `fullWidth` | Boolean | `false` | Full width.
 | `fixedHeader` | Boolean | `true` | Turn on/off fixed header.
 | `reward` | Object | - | [Reward Widget]({{< ref "/docs/widgets/reward" >}}), AKA Buy Me a Coffee Widget.
