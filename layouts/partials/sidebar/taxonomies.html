@@ -1,4 +1,12 @@
-{{- range $key, $value := .Site.Taxonomies -}}
+{{- $order := default (slice "series" "categories" "tags") $.Site.Params.taxonomicOrder -}}
+{{- range $key, $value := $.Site.Taxonomies -}}
+  {{- if not (in $order $key) -}}
+    {{- $order = $order | append $key -}}
+  {{- end -}}
+{{- end -}}
+{{- range $expected := $order -}}
+{{- range $key, $value := $.Site.Taxonomies -}}
+  {{- if eq $key $expected -}}
   {{- $countPosts := default false $.Site.Params.countTaxonomyPosts -}}
   {{- $countParams := dict "categories" "categoryCount" "tags" "tagCount" "series" "seriesCount" -}}
   {{- $param := default "" (index $countParams $key) -}}
@@ -28,4 +36,6 @@
     </section>
     {{- end -}}
   {{- end -}}
+  {{- end -}}
+{{- end -}}
 {{- end -}}

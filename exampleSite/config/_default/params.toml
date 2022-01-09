@@ -49,6 +49,8 @@ googleAdsense = ""
 taxonomyPostCount = 20 # The number of taxonomy's posts. Turn off by setting it to false.
 countTaxonomyPosts = true # Count posts of taxonomy.
 
+# taxonomicOrder = ["categories", "tags", "series"] # The order of taxonomies on the sidebar.
+
 # pinnedPost = false # Turn on/off pinned posts.
 pinnedPostCount = 3 # The number of pinned posts.
 
