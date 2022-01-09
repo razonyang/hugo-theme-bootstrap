@@ -6,7 +6,7 @@
       <i class="fas fa-bars"></i>
     </button>
     {{- $logo := (default "images/logo.webp" .Site.Params.logo) -}}
-    <a class="navbar-brand flex-grow-1 flex-lg-grow-0 me-3{{ if .IsHome }} active{{ end }}" href="{{ "" | absLangURL }}">
+    <a class="navbar-brand flex-grow-1 flex-lg-grow-0 text-center text-lg-start mx-auto me-lg-3{{ if .IsHome }} active{{ end }}" href="{{ "" | absLangURL }}">
       {{- if $logo -}}
         {{ partial "helpers/image" (dict "filename" $logo "alt" "Logo" "class" "logo" "resources" .Resources) }}
       {{- end -}}
