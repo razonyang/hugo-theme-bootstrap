@@ -10,11 +10,11 @@
     @include media-breakpoint-down(sm) {
         position: fixed;
         top: 54px;
-        z-index: 1000;
+        z-index: 999;
         height: 100%;
         padding-bottom: 54px;
-        width: 75vw;
-        transition: all .2s linear!important;
+        width: calc(100vw - 2rem);
+        transition: width .2s linear!important;
         
         @include elevation(16);
 
@@ -47,11 +47,25 @@
 }
 
 .catalog-toggle {
-    z-index: 999;
+    z-index: 1000;
     border: none;
     width: 1rem;
     background: var(--#{$variable-prefix}background);
     color: var(--#{$variable-prefix}on-background);
+    left: 0;
+    
+    &[aria-expanded="true"] {
+        left: calc(100vw - 2rem);
+        padding: 0 .5rem!important;
+        width: 2rem;
+        background: var(--#{$variable-prefix}accent);
+        color: var(--#{$variable-prefix}on-primary);
+        transition: left .35s linear;
+
+        .catalog-toggle-icon {
+            transform: rotate(180deg);
+        }
+    }
 }
 
 .docs-toc {

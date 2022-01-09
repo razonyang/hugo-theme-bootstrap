@@ -8,14 +8,10 @@ class Collapse {
                 toggle: false
             });
             ele.addEventListener('shown.bs.collapse', function () {
-                ele.focus();
                 self.onShow();
             });
             ele.addEventListener('hidden.bs.collapse', function () {
                 self.onHide();
-            });
-            ele.addEventListener('focusout', function() {
-                instance.hide();
             });
         });
     }
