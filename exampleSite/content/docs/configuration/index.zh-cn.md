@@ -15,7 +15,7 @@ series = [
   "文档"
 ]
 images = []
-weight = 2
+weight = 990
 aliases = [
   "/zh-cn/posts/configuration"
 ]

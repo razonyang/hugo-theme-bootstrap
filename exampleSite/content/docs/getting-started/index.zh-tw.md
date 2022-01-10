@@ -17,7 +17,7 @@ series = [
   "檔案"
 ]
 images = []
-weight = 1
+weight = 1000
 aliases = [
   "/zh-tw/posts/getting-started"
 ]

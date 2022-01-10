@@ -16,7 +16,7 @@ series = [
   "Docs"
 ]
 images = []
-weight = 1
+weight = 1000
 aliases = [
   "/en/posts/getting-started"
 ]

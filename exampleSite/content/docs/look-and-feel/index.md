@@ -19,7 +19,7 @@ series = [
   "Docs"
 ]
 images = []
-weight = 3
+weight = 980
 aliases = [
   "/en/posts/look-and-feel"
 ]
