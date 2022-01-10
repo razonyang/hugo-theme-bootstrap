@@ -7,8 +7,14 @@ class Collapse {
             const instance = BSCollapse.getOrCreateInstance(ele, {
                 toggle: false
             });
+            ele.addEventListener('focusout', function () {
+                setTimeout(function() {
+                    instance.hide();
+                }, 200);
+            });
             ele.addEventListener('shown.bs.collapse', function () {
                 self.onShow();
+                ele.focus();
             });
             ele.addEventListener('hidden.bs.collapse', function () {
                 self.onHide();
