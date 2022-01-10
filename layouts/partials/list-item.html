@@ -9,7 +9,7 @@
   {{- end -}}
   <div class="card-header">
     <h2 class="card-title post-title">
-      <a href="{{ .Permalink }}">{{ partial "helpers/title" .Page }}</a>
+      <a href="{{ .Page.Permalink }}">{{ partial "helpers/title" .Page }}</a>
     </h2>
   </div>
   <div class="card-body">
