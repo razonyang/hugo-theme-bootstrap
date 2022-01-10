@@ -1,4 +1,10 @@
 {{- $count := default 5 .Site.Params.recentPostCount -}}
+{{- $sections := slice -}}
+{{- if .IsHome -}}
+  {{- $sections = .Site.Params.mainSections -}}
+{{- else -}}
+  {{- $sections = slice .Type -}}
+{{- end -}}
 {{- if $count -}}
 <section class="recent-posts row card component">
   <div class="card-header">
@@ -6,7 +12,7 @@
   </div>
   <div class="card-body">
     <ul class="post-list">
-    {{- range first $count (where site.RegularPages "Type" "in" site.Params.mainSections) -}}
+    {{- range first $count (where site.RegularPages "Type" "in" $sections) -}}
       <li>
         <a href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a>
       </li>
