@@ -15,7 +15,8 @@
 {{- $section := .section -}}
 {{- $page := .page -}}
 <ul class="list-unstyled mb-2">
-    {{- range $section.Pages -}}
+    {{- range ($section.Pages.GroupBy "Weight" "desc") -}}
+      {{- range sort .Pages "Title" -}}
         {{- if .IsSection -}}
         {{- $sectionId := replace .Name " " "" | title | printf "catalog%s" -}}
         {{- $active := false -}}
@@ -38,6 +39,7 @@
           <a href="{{ .Permalink }}">{{ .Title }}</a>
         </li>
         {{- end -}}
+      {{- end -}}
     {{- end -}}
 </ul>
 {{- end -}}
