@@ -6,7 +6,7 @@
   {{- partial "hooks/list-begin" . -}}
   <div class="posts mb-4">
   {{- range .Paginator.Pages -}}
-    {{- partial "list-item" . }}
+    {{- partial "list-item" (dict "Page" . "PinnedPosts" ($.Scratch.Get "pinnedPosts")) }}
   {{- end -}}
   </div>
   {{- partial "hooks/list-end" . -}}
