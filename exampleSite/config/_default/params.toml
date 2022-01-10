@@ -1,4 +1,4 @@
-# mainSections = ["post", "posts"] # Default to ["posts"].
+mainSections = ["posts", "docs"] # Default to ["posts"].
 
 # titleSeparator = "|" # Title separator. Default to "-".
 
