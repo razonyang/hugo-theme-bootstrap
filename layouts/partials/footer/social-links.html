@@ -31,7 +31,7 @@
     <a class="nav-link social-link" href="mailto:{{ $user }}" title="{{ title $key }}">
       <i class="fas fa-fw fa-2x fa-envelope"></i>
     </a>
-  {{- else if eq $key "medium" -}}
+    {{- else if eq $key "medium" -}}
     {{- $url := urls.Parse $user -}}
     {{- if eq $url.Host "" -}}
       {{- $url = printf "https://medium.com/@%s" $user | urls.Parse -}}
@@ -39,11 +39,18 @@
       <a class="nav-link social-link" target="_blank" href="{{ $url.String }}" title="Medium" rel="noopener noreferrer">
         <i class="fab fa-fw fa-2x fa-medium-m"></i>
       </a>
-  {{- else -}}
-    {{- with index $items $key -}}
-      <a class="nav-link social-link" target="_blank" href="{{ printf .url $user }}" title="{{ default (title $key) .title }}" rel="noopener noreferrer">
-        <i class="fa-fw fa-2x {{ default ( printf "fab fa-%s" $key ) .icon }}"></i>
-      </a>
+    {{- else if eq $key "odysee" -}}
+    {{- $url := urls.Parse $user -}}
+    {{- if eq $url.Host "" -}}
+      {{- $url = printf "https://odysee.com/@%s" $user | urls.Parse -}}
+    {{- end -}}
+      <a class="nav-link social-link" target="_blank" href="{{ $url.String }}" title="Odysee" rel="noopener noreferrer">
+        <img src="/stuff/odysee.png" alt="Avatar" class="fa-fw fa-2x pseudo-icon">
+        {{- else -}}
+      {{- with index $items $key -}}
+        <a class="nav-link social-link" target="_blank" href="{{ printf .url $user }}" title="{{ default (title $key) .title }}" rel="noopener noreferrer">
+          <i class="fa-fw fa-2x {{ default ( printf "fab fa-%s" $key ) .icon }}"></i>
+        </a>
     {{- end -}}
   {{- end -}}
 {{- end -}}

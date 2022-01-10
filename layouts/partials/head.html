@@ -1,6 +1,8 @@
 {{- partial "head/favicons" . -}}
 <meta name="keywords" content="{{ if .IsPage }}{{ delimit .Keywords ", " }}{{ else }}{{ $.Site.Params.keywords }}{{ end }}" />
-<meta name="description" content="{{ if .IsPage }}{{ .Description }}{{ else }}{{ $.Site.Params.description }}{{ end }}" />
+<meta name="description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Description}}{{end}}" />
+<meta property="og:image" content="https://cypherpunks.com.br/images/logo-120x120.webp" />
+
 {{- template "_internal/schema.html" . -}}
 {{ template "_internal/opengraph.html" . }}
 {{- template "_internal/twitter_cards.html" . -}}
