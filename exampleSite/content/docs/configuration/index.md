@@ -15,7 +15,7 @@ series = [
   "Docs"
 ]
 images = []
-weight = 2
+weight = 990
 aliases = [
   "/en/posts/configuration"
 ]

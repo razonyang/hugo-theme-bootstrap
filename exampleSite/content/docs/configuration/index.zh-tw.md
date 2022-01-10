@@ -15,7 +15,7 @@ series = [
   "檔案"
 ]
 images = []
-weight = 2
+weight = 990
 aliases = [
   "/zh-tw/posts/configuration"
 ]
