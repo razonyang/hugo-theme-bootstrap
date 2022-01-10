@@ -40,6 +40,14 @@
     }
 }
 
+.catalog-section {
+    a {
+        &:hover {
+            color: inherit;
+        }
+    }
+}
+
 .catalog-collapse {
     @include media-breakpoint-up(lg) {
       display: flex!important;
@@ -66,6 +74,8 @@
             transform: rotate(180deg);
         }
     }
+
+
 }
 
 .docs-toc {
