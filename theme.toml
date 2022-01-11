@@ -12,7 +12,10 @@ tags = [
   "light",
   "dark",
   "dark mode",
-  "multilingual"
+  "multilingual",
+  "archive",
+  "docs",
+  "documentation"
 ]
 features = [
   "hooks",
