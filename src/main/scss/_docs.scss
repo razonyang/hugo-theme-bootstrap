@@ -7,7 +7,7 @@
 }
 
 .docs-catalog {
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(lg) {
         position: fixed;
         top: 54px;
         z-index: 1000;
