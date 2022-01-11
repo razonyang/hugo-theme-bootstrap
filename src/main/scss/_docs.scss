@@ -48,6 +48,18 @@
     }
 }
 
+.docs-sidebar {
+    @include media-breakpoint-up(lg) {
+        top: 84px;
+        height: calc(100vh - 84px);
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar-track {
+            background: transparent;
+        }
+    }
+}
+
 .catalog-collapse {
     @include media-breakpoint-up(lg) {
       display: flex!important;
@@ -61,8 +73,4 @@
     background: var(--#{$variable-prefix}background);
     color: var(--#{$variable-prefix}on-background);
     left: 0;
-}
-
-.docs-toc {
-    top: 84px;
 }
