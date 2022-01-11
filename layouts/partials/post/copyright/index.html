@@ -1,8 +1,12 @@
 
-<div class="post-copyright mb-3" id="post-copyright">
-    <h2 class="mb-4">{{ i18n "copyright" }}</h2>
-    {{- if isset .Site.Params "creativecommons" -}}
-    {{ partial "post/copyright/cc" . }}
-    {{- end -}}
-    {{ partial "post/copyright/custom" . }}
+<div class="post-copyright mb-3 row card component" id="post-copyright">
+    <div class="card-header">
+        <h2 class="card-title">{{ i18n "copyright" }}</h2>
+    </div>
+    <div class="card-body">
+        {{- if isset .Site.Params "creativecommons" -}}
+        {{ partial "post/copyright/cc" . }}
+        {{- end -}}
+        {{ partial "post/copyright/custom" . }}
+    </div>
 </div>
