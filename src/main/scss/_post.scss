@@ -189,10 +189,9 @@
 }
 
 #TableOfContents {
-  ul li {
-    margin-top: 0.4rem;
-    margin-bottom: 0.4rem;
+  color: var(--hbs-secondary-text-on-surface);
 
+  ul li {
     a {
       color: inherit;
       font-weight: 400;
