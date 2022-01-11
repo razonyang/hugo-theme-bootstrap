@@ -1,7 +1,3 @@
 {{- if .IsPage -}}
-<section class="docs-toc row component card">
-    <div class="card-body">
-        {{ partial "post/toc" . }}
-    </div>
-</section>
+{{ partial "post/toc" . }}
 {{- end -}}
