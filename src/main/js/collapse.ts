@@ -23,7 +23,9 @@ class Collapse {
     }
 
     onShow() {
-        document.body.classList.add('overflow-hidden');
+        if (window.innerWidth < 992) {
+            document.body.classList.add('overflow-hidden');
+        }
     }
 
     onHide() {
