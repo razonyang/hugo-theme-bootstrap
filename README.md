@@ -32,7 +32,7 @@ There is also a [list of websites that use this theme](https://github.com/razony
 - Responsive.
 - [PWA](https://hbs.razonyang.com/en/posts/pwa), AKA progressive web apps.
 - Various Palettes: `blue`, `blue-gray`, `brown`, `cyan`, `green`, `indigo`, `orange`, `pink`, `purple`, `red`, `teal`, `yellow`.
-- A [Docs Layout](https://hbs.razonyang.com/en/docs/docs-layout) for publishing project documentation, notes, digital gardens, zettelkastens etc.
+- A [Docs Layout](https://hbs.razonyang.com/en/docs/layouts/docs) for publishing project documentation, notes, digital gardens, zettelkastens etc.
 - Light/Dark Mode.
 - Font Size Switcher.
 - Multilingual(I18N).
