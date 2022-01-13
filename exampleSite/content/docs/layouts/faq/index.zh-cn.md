@@ -1,5 +1,5 @@
 +++
-title = "FAQ 頁面"
+title = "FAQ 页面"
 date = 2021-12-07T21:46:43+08:00
 featured = false
 comment = true
@@ -11,21 +11,22 @@ categories = [
 tags = [
 ]
 series = [
-  "檔案"
+  "文档"
 ]
 images = []
 aliases = [
-  "/zh-tw/posts/faq"
+  "/zh-cn/posts/faq",
+  "/zh-cn/docs/faq"
 ]
 +++
 
-[FAQ]({{< ref "/faq" >}}) 頁面是一個常見問題的集合。
+[FAQ]({{< ref "/faq" >}}) 页面是一个常见问题的集合。
 
 <!--more-->
 
-## 前置條件
+## 前置条件
 
-我們需要在 `content` 目錄下創建一個名為 `faq/index.md` 的頁面。
+我们需要在 `content` 目录下创建一个名为 `faq/index.md` 的页面。
 
 ```toml
 +++
@@ -34,9 +35,9 @@ layout = "faq"
 +++
 ```
 
-## 數據
+## 数据
 
-數據存放在 `data` 目錄，其目錄結構如下：
+数据存放在 `data` 目录，其目录结构如下：
 
 ```text
 data
@@ -50,7 +51,7 @@ data
       bar.json
 ```
 
-如你所看到的，我們按照語言對問題進行歸類。每個文件代表一組問題，它們有著以下相同的格式：
+如你所看到的，我们按照语言对问题进行归类。每个文件代表一组问题，它们有着以下相同的格式：
 
 ```json
 {
@@ -65,4 +66,4 @@ data
 }
 ```
 
-- `weight` 參數用於將組按升序排序。
+- `weight` 参数用于将组按升序排序。

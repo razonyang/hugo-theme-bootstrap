@@ -17,7 +17,8 @@ series = [
 ]
 images = []
 aliases = [
-  "/zh-tw/posts/contact-form"
+  "/zh-tw/posts/contact-form",
+  "/zh-tw/docs/contact-form"
 ]
 [menu.footer]
   parent = "features"

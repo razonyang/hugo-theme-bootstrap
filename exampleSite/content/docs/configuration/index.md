@@ -98,8 +98,8 @@ See also [All Configuration Settings](https://gohugo.io/getting-started/configur
 | `fontSize.extraLarge` | String | `1.2rem` | Extra large font size.
 | `socialShare` | Boolean | `true` | Turn on/off built-on social share button.
 | `searchBar` | Boolean | `true` | Turn on/off built-on search bar.
-| `archive` | Object | - | [Archive]({{< ref "/docs/archives" >}}).
-| `search` | Object | - | [Search]({{< ref "/docs/search" >}}).
+| `archive` | Object | - | [Archive]({{< ref "/docs/layouts/archives" >}}).
+| `search` | Object | - | [Search]({{< ref "/docs/layouts/search" >}}).
 | **Webmaster Site Verification** 
 | `siteVerification` | Object | - |
 | `siteVerification.google` | String | - | Google
@@ -134,7 +134,7 @@ See also [All Configuration Settings](https://gohugo.io/getting-started/configur
 | `pwa` | Object | - | [Progressive Web Apps]({{< ref "/docs/pwa" >}})
 | **Meta Tag**
 | `metaRobots` | String | - | Empty means that turn it off.
-| `contact` | Object | - | [Contact Form]({{< ref "docs/contact-form" >}})
+| `contact` | Object | - | [Contact Form]({{< ref "docs/layouts/contact-form" >}})
 | `pinnedPost` | Boolean | `true` | Turn on/off pinned posts.
 | `pinnedPostCount` | Integer | `1` | The number of pinned posts.
 

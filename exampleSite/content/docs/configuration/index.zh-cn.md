@@ -99,8 +99,8 @@ aliases = [
 | `socialShare` | Boolean | `true` | 启用/禁用内置的分享按钮
 | `searchBar` | Boolean | `true` | 启用/禁用搜索栏
 | **Archive**
-| `archive` | Object | - | [归档]({{< ref "/docs/search" >}})。
-| `search` | Object | - | [搜索]({{< ref "/docs/search" >}})。
+| `archive` | Object | - | [归档]({{< ref "/docs/layouts/archives" >}})。
+| `search` | Object | - | [搜索]({{< ref "/docs/layouts/search" >}})。
 | **Webmaster Site Verification** 
 | `siteVerification` | Object | - |
 | `siteVerification.google` | String | - | Google
@@ -136,7 +136,7 @@ aliases = [
 | `pwa` | Object | - | [渐进式 web 应用]({{< ref "/docs/pwa" >}})
 | **Meta Tag**
 | `metaRobots` | String | - | 空字符串表示禁用。
-| `contact` | Object | - | [联系表单]({{< ref "docs/contact-form" >}})
+| `contact` | Object | - | [联系表单]({{< ref "docs/layouts/contact-form" >}})
 | `pinnedPost` | Boolean | `true` | 开启/禁用文章置顶。
 | `pinnedPostCount` | Integer | `1` | 置顶的文章数量。
 

@@ -16,7 +16,8 @@ series = [
 ]
 images = []
 aliases = [
-  "/zh-tw/posts/archives"
+  "/zh-tw/posts/archives",
+  "/zh-tw/docs/archives"
 ]
 [menu.footer]
   parent = "docs"

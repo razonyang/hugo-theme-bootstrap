@@ -1,5 +1,5 @@
 +++
-title = "FAQ Page"
+title = "FAQ 頁面"
 date = 2021-12-07T21:46:43+08:00
 featured = false
 comment = true
@@ -11,21 +11,22 @@ categories = [
 tags = [
 ]
 series = [
-  "Docs"
+  "檔案"
 ]
 images = []
 aliases = [
-  "/en/posts/faq"
+  "/zh-tw/posts/faq",
+  "/zh-tw/docs/faq"
 ]
 +++
 
-The [FAQ]({{< ref "/faq" >}}) page is a collection of frequently asked questions.
+[FAQ]({{< ref "/faq" >}}) 頁面是一個常見問題的集合。
 
 <!--more-->
 
-## Prerequisites
+## 前置條件
 
-We need to create a page called `faq/index.md` in the `content` directory.
+我們需要在 `content` 目錄下創建一個名為 `faq/index.md` 的頁面。
 
 ```toml
 +++
@@ -34,9 +35,9 @@ layout = "faq"
 +++
 ```
 
-## Data
+## 數據
 
-The data are stored in `data` directory, the directory structure is as follows:
+數據存放在 `data` 目錄，其目錄結構如下：
 
 ```text
 data
@@ -50,7 +51,7 @@ data
       bar.json
 ```
 
-As you can see, we classify the questions according to their language. And each file represents a group of questions, that has the same format as follows:
+如你所看到的，我們按照語言對問題進行歸類。每個文件代表一組問題，它們有著以下相同的格式：
 
 ```json
 {
@@ -65,4 +66,4 @@ As you can see, we classify the questions according to their language. And each 
 }
 ```
 
-- The `weight` parameter is used for sorting group in ascending order.
+- `weight` 參數用於將組按升序排序。
