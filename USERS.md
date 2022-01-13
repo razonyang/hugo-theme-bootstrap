@@ -1,7 +1,13 @@
 ## This theme is used by the following blogs and websites
 
+> **How to add my site?**
+> - Fork this repository.
+> - Append your site at the end with format `[name](https://yoursite.domain): description`: the `description` is optional.
+> - Commit your changes: `git add USERS.md`, `git commit -m 'chore: update USERS.md'` and `git push origin master`.
+> - And then make a pull request.
+
 - [Razon Yang](https://razonyang.com)
-- [AwesomeJob](https://dikea.github.io/): 优质内推资讯网站
+- [AwesomeJob](https://dikea.github.io/)
 - [Sudip Ghimire](https://sudipg.com.np)
 - [Cups of Code](https://cupsOfCode.com)
 - [JO's USB](https://josusb.com/)
@@ -9,5 +15,3 @@
 - [yshalsager](https://yshalsager.com/en/)
 - [Benji Vesterby Tech Blog](https://benjiv.com)
 - [\[bronski.net\]](https://bronski.net/)
-
-> List your blog or website by creating a PR.
