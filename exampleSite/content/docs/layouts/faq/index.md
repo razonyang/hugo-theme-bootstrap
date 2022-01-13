@@ -1,5 +1,5 @@
 +++
-title = "FAQ Page"
+title = "FAQ Layout"
 date = 2021-12-07T21:46:43+08:00
 featured = false
 comment = true
