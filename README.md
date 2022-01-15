@@ -1,6 +1,6 @@
 # Hugo Bootstrap Theme
 
-A fast, responsive and feature-rich blog theme for Hugo.
+A fast, responsive and feature-rich Hugo theme for personal blog and documentations.
 
 ## Screenshots
 
