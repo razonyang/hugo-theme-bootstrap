@@ -3,13 +3,17 @@
 {{- $height := false -}}
 {{- $pageResource := false -}}
 {{- $link := "" -}}
+{{- $resizable := false -}}
+{{- $unresizable := slice ".svg" -}}
 {{- $url := urls.Parse .filename -}}
 {{- if not $url.Scheme -}}
   {{- $resource := .resources.GetMatch (strings.TrimPrefix "/" $url.Path) -}}
   {{- if $resource -}}
-    {{- $img = $resource -}}
-    {{- $link = $resource.Permalink -}}
-    {{- $pageResource = true -}}
+      {{- $pageResource = $resource -}}
+      {{- $link = $resource.Permalink -}}
+      {{- if not (in $unresizable ($link | path.Ext | lower)) -}}
+        {{- $resizable = true -}}
+      {{- end -}}
   {{- else -}}
     {{- $filename := path.Join "static" $url.Path -}}
     {{- if fileExists $filename -}}
@@ -43,23 +47,22 @@
   {{- $className = printf "%s %s" $className "float-end ms-2" -}}
 {{- end -}}
 
-{{- if and $width $height $pageResource -}}
-  <!-- Resize to actual entered size -->
-  {{- $resize := (printf "%sx%s" (strings.TrimSuffix "px" $width) (strings.TrimSuffix "px" $height)) -}}
-  {{- $img = $img.Resize $resize -}}
-  {{- $link = $img.Permalink | safeURL -}}
-{{- else if and (ne $width false) $pageResource }}
-  <!-- Resize width to entered size, keeping aspect ratio -->
-  {{- $resize := (printf "%sx" (strings.TrimSuffix "px" $width)) -}}
-  {{- $img = $img.Resize $resize -}}
-  {{- $link = $img.Permalink | safeURL -}}
-{{- else if and (ne $height false) $pageResource }}
-  <!-- Resize height to entered size, keeping aspect ratio -->
-  {{- $resize := (printf "x%s" (strings.TrimSuffix "px" $height)) -}}
-  {{- $img = $img.Resize $resize -}}
-  {{- $link = $img.Permalink | safeURL -}}
+{{- if and $pageResource $resizable (or $width $height) -}}
+  {{- $resize := "" -}}
+  {{- if and $width $height -}}
+    <!-- Resize to actual entered size -->
+    {{- $resize = (printf "%sx%s" (strings.TrimSuffix "px" $width) (strings.TrimSuffix "px" $height)) -}}
+  {{- else if $width }}
+    <!-- Resize width to entered size, keeping aspect ratio -->
+    {{- $resize = (printf "%sx" (strings.TrimSuffix "px" $width)) -}}
+  {{- else }}
+    <!-- Resize height to entered size, keeping aspect ratio -->
+    {{- $resize = (printf "x%s" (strings.TrimSuffix "px" $height)) -}}
+  {{- end -}}
+  {{- $img = $pageResource.Resize $resize -}}
+  {{- $link = $img.Permalink -}}
 {{- end -}}
 
 <img class="{{ $className }}" alt="{{ .alt }}" src="{{ $link }}" loading="lazy"
-  {{ with $img }} width="{{ $img.Width }}" height="{{ $img.Height }}"{{ end }}
-  {{ if and (not $pageResource) (or $width $height) }}style="{{ with $width }}width: {{ $width }}{{ end }}{{ with $height }};height: {{ $height }}{{ end }}"{{ end }} />
+  {{ with $img }} width="{{ .Width }}" height="{{ .Height }}"{{ end }}
+  {{ if and (not (and $pageResource $resizable)) (or $width $height) }}style="{{ with $width }}width: {{ . }}; {{ end }}{{ with $height }}height: {{ . }}{{ end }}"{{ end }} />
