@@ -1,4 +1,4 @@
-{{- if isset .Site.Params "creativecommons" -}}
+{{- if and (default true .Site.Params.post.copyright) (default true .Params.copyright) -}}
 <a class="action" href="#post-copyright" role="button" aria-label="Copyright" title="Copyright">
   <i class="fas fa-fw fa-copyright"></i>
 </a>
