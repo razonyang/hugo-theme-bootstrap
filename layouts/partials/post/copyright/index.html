@@ -1,4 +1,4 @@
-
+{{- if and (default true .Site.Params.post.copyright) (default true .Params.copyright) -}}
 <div class="post-copyright mb-3 row card component" id="post-copyright">
     <div class="card-header">
         <h2 class="card-title">{{ i18n "copyright" }}</h2>
@@ -10,3 +10,4 @@
         {{ partial "post/copyright/custom" . }}
     </div>
 </div>
+{{- end -}}

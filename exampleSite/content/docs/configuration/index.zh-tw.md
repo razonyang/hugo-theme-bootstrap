@@ -132,6 +132,7 @@ aliases = [
 | `post` | Object | - | 
 | `post.excerpt` | String | `Summary` | 可選項：`description`
 | `post.excerptMaxLength` | Integer | `320` | 
+| `post.copyright` | Boolean | `true` | 是否在每個帖子上顯示版權部分
 | `viewer` | Boolean | true | [圖片查看器]({{< ref "docs/image-viewer" >}})
 | `pwa` | Object | - | [漸進式 web 應用]({{< ref "/docs/pwa" >}})
 | **Meta Tag**
@@ -160,6 +161,7 @@ aliases = [
 | `breadcrumb` | Boolean | `true` | 是否開啟面包屑導航
 | `readingTime` | Boolean | `true` | 是否顯示閱讀時間
 | `postDate` | Boolean | `true` | 是否顯示發表日期
+| `copyright` | Boolean | `true` | 是否顯示版權部分
 | **Creative Commons License**
 | `creativeCommons` | Object | - |
 | `creativeCommons.by` | Boolean | `true` | 署名
