@@ -131,6 +131,7 @@ See also [All Configuration Settings](https://gohugo.io/getting-started/configur
 | `post.excerpt` | String | `Summary` | Options: `description`
 | `post.excerptMaxLength` | Integer | `320` |
 | `post.copyright` | Boolean | `true` | Whether to display copyright section on each post.
+| `post.plainifyExcerpt` | Boolean | `true` | Format excerpt in HTML if `false`.
 | `viewer` | Boolean | true | [Image Viewer]({{< ref "docs/image-viewer" >}})
 | `pwa` | Object | - | [Progressive Web Apps]({{< ref "/docs/pwa" >}})
 | **Meta Tag**
