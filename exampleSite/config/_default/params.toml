@@ -74,6 +74,7 @@ viewer = true # Image Viewer
   # excerpt = "description"
   # excerptMaxLength = 120
   # copyright = false # Whether to display copyright section on each post.
+  # plainifyExcerpt = false # Format excerpt in HTML if false.
 
 [archive]
   paginate = 20 # Archive pagination. Default to 100.
