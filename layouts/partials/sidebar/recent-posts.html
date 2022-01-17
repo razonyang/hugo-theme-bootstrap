@@ -1,8 +1,6 @@
 {{- $count := default 5 .Site.Params.recentPostCount -}}
-{{- $sections := slice -}}
-{{- if .IsHome -}}
-  {{- $sections = .Site.Params.mainSections -}}
-{{- else -}}
+{{- $sections := .Site.Params.mainSections -}}
+{{- if in (slice "posts" "docs") .Type -}}
   {{- $sections = slice .Type -}}
 {{- end -}}
 {{- if $count -}}
