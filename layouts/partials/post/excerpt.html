@@ -14,7 +14,7 @@
   {{- $maxLength := default 320 $.Site.Params.post.excerptMaxLength -}}
   {{- $ellipsis := "..." -}}
   {{- if default true .Site.Params.post.plainifyExcerpt -}}
-    {{- $content = .Plain | htmlUnescape | truncate $maxLength $ellipsis | printf "<p>%s</p>" -}}
+    {{- $content = .Plain | htmlUnescape | truncate $maxLength $ellipsis | printf "<p>%s</p>" | safeHTML -}}
   {{- else -}}
     {{- $content = .Content | truncate $maxLength $ellipsis -}}
   {{- end -}}
