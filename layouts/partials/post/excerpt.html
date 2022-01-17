@@ -13,7 +13,11 @@
 {{- else -}}
   {{- $readMore = false -}}
   {{- $maxLength := default 320 $.Site.Params.post.excerptMaxLength -}}
-  {{- $content = .Content | truncate $maxLength $readMoreButton -}}
+  {{- if default true .Site.Params.post.plainifyExcerpt -}}
+    {{- $content = .Plain | truncate $maxLength $readMoreButton | printf "<p>%s</p>" | safeHTML -}}
+  {{- else -}}
+    {{- $content = .Content | truncate $maxLength $readMoreButton -}}
+  {{- end -}}
 {{- end -}}
 {{- $content -}}
 {{- if $readMore -}}
