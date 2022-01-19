@@ -48,6 +48,8 @@ In this article, we will introduce all hooks and provide some use cases.
 | `footer-end` | Before the footer end |
 | `post-panel-begin` | At very top of the post panel |
 | `post-panel-end` | Before the post panel end |
+| `docs/sidebar-begin` | At very top of the `docs` sidebar |
+| `docs/sidebar-end` | Before the `docs` sidebar end |
 
 ## Usages
 

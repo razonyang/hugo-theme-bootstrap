@@ -48,6 +48,8 @@ aliases = [
 | `footer-end` | `footer` 下方 |
 | `post-panel-begin` | 文章工具欄上方 |
 | `post-panel-end` | 文章工具欄下方 |
+| `docs/sidebar-begin` | 文檔側邊欄上方 |
+| `docs/sidebar-end` | 文檔側邊欄上方 |
 
 ## 用法
 
