@@ -1,7 +1,8 @@
 {{- $count := default 5 .Site.Params.relatedPostCount -}}
-{{- $relatedPosts := .Site.RegularPages.Related . -}}
+{{- $sections := default (slice "posts") .Site.Params.mainSections -}}
+{{- $relatedPosts := where (.Site.RegularPages.Related .) "Section" "in" $sections -}}
 {{- if and $count $relatedPosts -}}
-  {{- with (.Site.RegularPages.Related . | first $count) -}}
+  {{- with ($relatedPosts | first $count) -}}
   <section class="related-posts row card component">
     <div class="card-header">
       <h2 class="card-title">{{ i18n "related_posts" }}</h2>
