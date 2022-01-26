@@ -1,0 +1,10 @@
+{{ if .Params.images }}
+  <img class="img-fluid" alt="{{ .Title }}" src="{{ index .Params.images 0 | absURL  }}" loading="lazy"/>
+{{- else -}}
+  {{- $images := .Resources.ByType "image" -}}
+  {{- $featured := $images.GetMatch "*feature*" -}}
+  {{- if not $featured }}{{ $featured = $images.GetMatch "{*cover*,*thumbnail*}" }}{{ end -}}
+  {{- with $featured -}}
+  <img class="img-fluid" alt="{{ .Title }}" src="{{ $featured.Permalink  }}" loading="lazy"/>
+  {{- end -}}
+{{- end -}}
