@@ -79,3 +79,4 @@ github = "githubusername"
 | `discourse` | 论坛 URL |
 | `tiktok` | TikTok 用户名 |
 | `pinterest` | Pinterest 用户名 |
+| `mastodon` | Mastodon 用户名 |
