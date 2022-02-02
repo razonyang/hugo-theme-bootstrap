@@ -14,7 +14,7 @@ import {
 import {
   faAlipay, faBitbucket, faCreativeCommons, faCreativeCommonsBy, faCreativeCommonsNc,
   faCreativeCommonsNd, faCreativeCommonsSa, faDiscord, faDiscourse, faDocker, faFacebookF,
-  faFacebookSquare, faGithub, faGitlab, faInstagram, faKaggle, faLastfm, faLinkedinIn,
+  faFacebookSquare, faGithub, faGitlab, faInstagram, faKaggle, faLastfm, faLinkedinIn, faMastodon,
   faMediumM, faPaypal, faPatreon, faPinterest, faQq, faQuora, faReddit, faStackOverflow,
   faTelegramPlane, faTiktok, faTumblr, faTwitter, faYoutube, faWeibo, faWeixin, faZhihu,
 } from '@fortawesome/free-brands-svg-icons';
@@ -38,7 +38,7 @@ library.add(
   // Brands
   faAlipay, faBitbucket, faCreativeCommons, faCreativeCommonsBy, faCreativeCommonsNc,
   faCreativeCommonsNd, faCreativeCommonsSa, faDiscord, faDiscourse, faDocker, faFacebookF,
-  faFacebookSquare, faGithub, faGitlab, faInstagram, faKaggle, faLastfm, faLinkedinIn,
+  faFacebookSquare, faGithub, faGitlab, faInstagram, faKaggle, faLastfm, faLinkedinIn, faMastodon,
   faMediumM, faPaypal, faPatreon, faPinterest, faQq, faQuora, faReddit, faStackOverflow,
   faTelegramPlane, faTiktok, faTumblr, faTwitter, faYoutube, faWeibo, faWeixin, faZhihu,
 
