@@ -24,7 +24,8 @@
 {{- $bilibili := dict "bilibili" (dict "url" "https://space.bilibili.com/%s" "title" "bilibili" "icon" "fab fa-bilibili") -}}
 {{- $tiktok := dict "tiktok" (dict "url" "https://www.tiktok.com/@%s" "title" "TikTok" "icon" "fab fa-tiktok") -}}
 {{- $pinterest := dict "pinterest" (dict "url" "https://www.pinterest.com/%s" "icon" "fab fa-pinterest") -}}
-{{- $items = merge $items $tumblr $reddit $telegram $qq $dockerhub $bitbucket $kaggle $lastfm $bilibili $tiktok $pinterest -}}
+{{- $mastodon := dict "mastodon" (dict "url" "https://mastodon.social/@%s" "icon" "fab fa-mastodon") -}}
+{{- $items = merge $items $tumblr $reddit $telegram $qq $dockerhub $bitbucket $kaggle $lastfm $bilibili $tiktok $pinterest $mastodon -}}
 {{- $size := default "" .size -}}
 <nav class="social-links nav justify-content-center{{ with .class }} {{ . }}{{ end }}">
 {{- range $key, $user := .links -}}
