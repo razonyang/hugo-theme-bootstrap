@@ -7,7 +7,10 @@ class Collapse {
             const instance = BSCollapse.getOrCreateInstance(ele, {
                 toggle: false
             });
-            ele.addEventListener('focusout', function () {
+            ele.addEventListener('focusout', function (e: MouseEvent) {
+                if (ele.contains(<Node>(e.relatedTarget))) {
+                    return;
+                }
                 setTimeout(function() {
                     instance.hide();
                 }, 200);
