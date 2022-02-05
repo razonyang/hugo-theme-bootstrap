@@ -18,7 +18,7 @@
     {{- range ($section.Pages.GroupBy "Weight" "desc") -}}
       {{- range sort .Pages "Title" -}}
         {{- if .IsSection -}}
-        {{- $sectionId := replace .Name " " "" | title | printf "catalog%s" -}}
+        {{- $sectionId := printf "catalog-%s" .File.UniqueID -}}
         {{- $active := false -}}
         {{- if hasPrefix $page.Permalink .Permalink -}}
           {{- $active = true -}}
