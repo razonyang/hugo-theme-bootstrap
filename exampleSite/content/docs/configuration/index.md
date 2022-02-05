@@ -169,3 +169,6 @@ See also [All Configuration Settings](https://gohugo.io/getting-started/configur
 | **Meta Tag**
 | `metaRobots` | String | - | Empty means that turn it off.
 | `pinned` | Boolean | `false` | Pinning posts.
+| `featuredPostCount` | Integer/Boolean | `5` | The number of featured posts shown in sidebar. Turn off by setting it to `false`.
+| `recentPostCount` | Integer/Boolean | `5` | The number of recent posts shown in sidebar. Turn off by setting it to `false`.
+| `relatedPostCount` | Integer/Boolean | `5` | The number of related posts. Turn off by setting it to `false`.
