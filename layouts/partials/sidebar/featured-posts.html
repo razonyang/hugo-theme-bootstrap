@@ -1,4 +1,4 @@
-{{- $count := default 5 .Site.Params.featuredPostCount -}}
+{{- $count := default 5 (default .Params.featuredPostCount .Site.Params.featuredPostCount) -}}
 {{- if $count -}}
   {{- $featuredPosts := first $count (where (where site.RegularPages "Type" "in" site.Params.mainSections) ".Params.featured" "eq" true) -}}
   {{- with $featuredPosts -}}

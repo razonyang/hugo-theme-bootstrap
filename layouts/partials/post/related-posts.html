@@ -1,4 +1,4 @@
-{{- $count := default 5 .Site.Params.relatedPostCount -}}
+{{- $count := default 5 (default .Params.relatedPostCount .Site.Params.relatedPostCount) -}}
 {{- $sections := default (slice "posts") .Site.Params.mainSections -}}
 {{- $relatedPosts := where (.Site.RegularPages.Related .) "Section" "in" $sections -}}
 {{- if and $count $relatedPosts -}}
