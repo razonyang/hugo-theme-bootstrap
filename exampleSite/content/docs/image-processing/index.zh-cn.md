@@ -14,9 +14,6 @@ tags = [
 series = [
   "文档"
 ]
-images = [
-  "images/center.png"
-]
 aliases = [
   "/zh-cn/posts/image-processing"
 ]
@@ -36,26 +33,26 @@ aliases = [
 ### 指定宽度和保留比率
 
 ```markdown
-![Resize](images/sample.png?width=300px)
+![Resize](featured-sample.png?width=300px)
 ```
 
-![Resize](images/sample.png?width=300px)
+![Resize](featured-sample.png?width=300px)
 
 ### 指定高度和保留比率
 
 ```markdown
-![Resize](images/sample.png?height=200px)
+![Resize](featured-sample.png?height=200px)
 ```
 
-![Resize](images/sample.png?height=200px)
+![Resize](featured-sample.png?height=200px)
 
 ### 指定宽度和高度
 
 ```markdown
-![Resize](images/sample.png?width=300px&height=200px)
+![Resize](featured-sample.png?width=300px&height=200px)
 ```
 
-![Resize](images/sample.png?width=300px&height=200px)
+![Resize](featured-sample.png?width=300px&height=200px)
 
 > 它不仅可以用于[页面资源](https://gohugo.io/content-management/page-resources/)，而且也适用于 **static** 图像和外部图像。
 > 但是，除了页面资源外，其他资源的大小都是按内联样式调整的，也就是说，它们的原始大小不会改变。
@@ -68,22 +65,22 @@ aliases = [
 
 添加 `#center` 使图片居中对齐。
 
-举个例子：`![Center](/images/center.png#center)`。
+举个例子：`![Center](/center.png#center)`。
 
-![Center](/images/center.png#center)
+![Center](/center.png#center)
 
 ### 向左浮动
 
-![Float Left](/images/left.png#floatleft)
+![Float Left](/left.png#floatleft)
 
 添加 `#floatleft` 使图片向左浮动。
 
-举个例子：`![Float Left](/images/left.png#floatleft)`。
+举个例子：`![Float Left](/left.png#floatleft)`。
 
 ### 向右浮动
 
-![Float Right](/images/right.png#floatright)
+![Float Right](/right.png#floatright)
 
 同样的，我们也可以添加 `#floatright` 使图片向右浮动。
 
-举个例子：`![Float Right](/images/right.png#floatright)`。
+举个例子：`![Float Right](/right.png#floatright)`。
