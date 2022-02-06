@@ -1,0 +1,184 @@
+[404_title]
+other = "Oops! Página não encontrada."
+
+[404_info]
+other = "Não conseguimos encontrar a página que procura."
+
+[about_me]
+other = "Sobre"
+
+[alipay]
+other = "Alipay"
+
+[archives]
+other = "Arquivos"
+
+[button_copy_url]
+other = "Copiar URL"
+
+[button_reload]
+other = "Actualizar"
+
+[button_social_share]
+other = "Partilhar"
+
+[button_submit]
+other = "Submeter"
+
+[buy_me_a_coffee]
+other = "Pague-me um café"
+
+[categories]
+other = "Categorias"
+
+[color_blue]
+other = "Azul"
+
+[color_blue_gray]
+other = "Azul cinza"
+
+[color_brown]
+other = "Castanho"
+
+[color_cyan]
+other = "Ciano"
+
+[color_green]
+other = "Verde"
+
+[color_indigo]
+other = "Azul escuro"
+
+[color_orange]
+other = "Laranja"
+
+[color_pink]
+other = "Rosa"
+
+[color_purple]
+other = "Roxo"
+
+[color_red]
+other = "Vermelho"
+
+[color_teal]
+other = "Verde-azulado"
+
+[color_yellow]
+other = "Amarelo"
+
+[comments]
+other = "Comentários"
+
+[contact_name]
+other = "Nome"
+
+[contact_email]
+other = "Email"
+
+[contact_email_help]
+other = "O seu email não será partilhado com ninguém."
+
+[contact_file]
+other = "Ficheiro"
+
+[contact_subject]
+other = "Assunto"
+
+[contact_message]
+other = "Mensagem"
+
+[copyright]
+other = "Copyright"
+
+[featured_posts]
+other = "Artigos em destaque"
+
+[font_size]
+other = "Tamanho da fonte"
+
+[go_back]
+other = "Voltar"
+
+[home]
+other = "Início"
+
+[language]
+other = "Língua"
+
+[liberapay]
+other = "Liberapay"
+
+[load_more]
+other = "Carregar mais"
+
+[mode]
+other = "Modo"
+
+[offline_title]
+other = "Oops! Está offline."
+
+[offline_info]
+other = "Parece que há um problema com a sua conexão. Verifique a sua Internet."
+
+[pagination_title]
+other = "Página {{ .PageNumber }}"
+
+[palette]
+other = "Paleta"
+
+[patreon]
+other = "Patreon"
+
+[paypal]
+other = "Paypal"
+
+[post_count]
+one = "{{ .Count }} artigo no total"
+other = "{{ .Count }} artigos no total"
+
+[post_date]
+other = "criado em {{ .createdOn }}{{ with .updatedOn }}, atualizado em {{ . }}{{ end }}."
+
+[read_more]
+other = "Ler mais"
+
+[reading_time]
+other = "{{ .ReadingTime }} tempo de leitura"
+
+[recent_posts]
+other = "Artigos recentes"
+
+[related_posts]
+other = "Artigos relacionados"
+
+[search]
+other = "Procurar"
+
+[search_missing_keywords]
+other = "Insira as palavras-chave"
+
+[search_no_results]
+other = "Sem resultados encontrados"
+
+[search_stat]
+one = "Encontrado {{ .Total }} resultado"
+other = "Encontrados {{ .Total }} resultados"
+
+[series]
+other = "Séries"
+
+[settings]
+other = "Configurações"
+
+[table_of_contents]
+other = "Índice"
+
+[tags]
+other = "Etiquetas"
+
+[try_again]
+other = "Tente de novo"
+
+[wechat]
+other = "WeChat"
