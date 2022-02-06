@@ -17,6 +17,7 @@ import './js/sidebar-toggler';
 import './js/form-validator';
 import './js/top-app-bar';
 import './js/loading-bar';
+import './js/docs-catalog';
 
 declare global {
   interface Window {

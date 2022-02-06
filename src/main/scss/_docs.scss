@@ -27,6 +27,12 @@
         }
     }
 
+    li {
+        &:focus-visible {
+            outline: none;
+        }
+    }
+
     .card {
         @include media-breakpoint-up(lg) {
             position: sticky;

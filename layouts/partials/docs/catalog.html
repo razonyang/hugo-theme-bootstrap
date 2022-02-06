@@ -23,7 +23,7 @@
         {{- if hasPrefix $page.Permalink .Permalink -}}
           {{- $active = true -}}
         {{- end -}}
-        <li class="mb-2">
+        <li class="mb-2{{ if eq .Permalink $page.Permalink }} active{{ end }}" tabindex="-1">
           <div class="catalog-section bg-accent text-white px-2 py-1 d-flex justify-content-between align-items-center">
             <a href="{{ .Permalink }}">{{ .Name }}</a>
             <a class="btn-toggle collapsed ms-1" role="button" data-bs-toggle="collapse"
@@ -38,7 +38,7 @@
           </div>
         </li>
         {{- else -}}
-        <li class="mb-2{{ if eq .Permalink $page.Permalink }} text-accent{{ end }}">
+        <li class="mb-2{{ if eq .Permalink $page.Permalink }} active text-accent{{ end }}" tabindex="-1">
           <a href="{{ .Permalink }}">{{ .Title }}</a>
         </li>
         {{- end -}}
