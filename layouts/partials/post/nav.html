@@ -1,7 +1,7 @@
 {{- if or .Prev .Next -}}
 <div class="post-navs d-flex justify-content-evenly">
-  <div class="post-nav post-prev">
   {{- with .Prev -}}
+  <div class="post-nav post-prev">
     <i class="fas fa-fw fa-chevron-left"></i>
     <a href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a>
   </div>
