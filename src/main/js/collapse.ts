@@ -7,21 +7,24 @@ class Collapse {
             const instance = BSCollapse.getOrCreateInstance(ele, {
                 toggle: false
             });
-            ele.addEventListener('focusout', function (e: MouseEvent) {
-                if (ele.contains(<Node>(e.relatedTarget))) {
-                    return;
-                }
-                setTimeout(function() {
-                    instance.hide();
-                }, 200);
-            });
-            ele.addEventListener('shown.bs.collapse', function () {
-                self.onShow();
-                ele.focus();
-            });
-            ele.addEventListener('hidden.bs.collapse', function () {
-                self.onHide();
-            });
+            const hide = ele.getAttribute('data-bs-hide');
+            if (hide) {
+                ele.addEventListener(hide, function (e: MouseEvent) {
+                    if (ele.contains(<Node>(e.relatedTarget))) {
+                        return;
+                    }
+                    setTimeout(function() {
+                        instance.hide();
+                    }, 200);
+                });
+                ele.addEventListener('shown.bs.collapse', function () {
+                    self.onShow();
+                    ele.focus();
+                });
+                ele.addEventListener('hidden.bs.collapse', function () {
+                    self.onHide();
+                });
+            }
         });
     }
 
