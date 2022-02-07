@@ -1,12 +1,12 @@
-{{- if or .Prev .Next -}}
+{{- if or .PrevInSection .NextInSection -}}
 <div class="post-navs d-flex justify-content-evenly">
-  {{- with .Prev -}}
+  {{- with .PrevInSection -}}
   <div class="post-nav post-prev">
     <i class="fas fa-fw fa-chevron-left"></i>
     <a href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a>
   </div>
   {{- end -}}
-  {{- with .Next -}}
+  {{- with .NextInSection -}}
   <div class="post-nav post-next">
     <a href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a>
     <i class="fas fa-fw fa-chevron-right"></i>
