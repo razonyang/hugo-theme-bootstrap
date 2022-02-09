@@ -5,6 +5,7 @@
   {{- $featured := $images.GetMatch "*feature*" -}}
   {{- if not $featured }}{{ $featured = $images.GetMatch "{*cover*,*thumbnail*}" }}{{ end -}}
   {{- with $featured -}}
-  <img class="img-fluid" alt="{{ .Title }}" src="{{ $featured.Permalink  }}" loading="lazy"/>
+  {{- $img := $featured.Resize "180x" -}}
+  <img class="img-fluid" alt="{{ .Title }}" src="{{ $img.Permalink  }}" loading="lazy" data-src="{{ $featured.Permalink }}" />
   {{- end -}}
 {{- end -}}
