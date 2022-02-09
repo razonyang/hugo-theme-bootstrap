@@ -29,6 +29,13 @@ If applicable, add screenshots to help explain your problem.
 $ hugo version
 ```
 
+**Theme version:**
+
+```shell
+$ cd themes/hugo-theme-bootstrap
+$ git log -n 1 --decorate --pretty=oneline
+```
+
 **Desktop (please complete the following information):**
  - OS: [e.g. iOS]
  - Browser [e.g. chrome, safari]
@@ -42,3 +49,6 @@ $ hugo version
 
 **Additional context**
 Add any other context about the problem here.
+
+- Repository URL(optional):
+- Live Site URL(optional):
