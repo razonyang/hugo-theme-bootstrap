@@ -54,6 +54,8 @@ countTaxonomyPosts = true # Count posts of taxonomy.
 # pinnedPost = false # Turn on/off pinned posts.
 pinnedPostCount = 3 # The number of pinned posts.
 
+showStats = false # sidebar widget showing post count and last update
+
 # Custom CSS and JS
 customCSS = [
 ]
