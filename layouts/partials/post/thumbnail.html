@@ -5,6 +5,11 @@
   {{- $featured := $images.GetMatch "*feature*" -}}
   {{- if not $featured }}{{ $featured = $images.GetMatch "{*cover*,*thumbnail*}" }}{{ end -}}
   {{- with $featured -}}
-  <img class="img-fluid" alt="{{ .Title }}" src="{{ $featured.Permalink  }}" loading="lazy"/>
+  {{- $smallImage := $featured.Resize "x120" -}}
+  {{- $largeImage := $featured.Resize "x180" -}}
+  <picture>
+    <source srcset="{{ $smallImage.Permalink }}" media="(max-width: 576px)">
+    <img class="img-fluid mb-3" alt="{{ .Title }}" src="{{ $largeImage.Permalink  }}" data-src="{{ $featured.Permalink }}" loading="lazy"/>
+  </picture>
   {{- end -}}
 {{- end -}}

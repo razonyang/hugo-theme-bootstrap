@@ -226,17 +226,14 @@
 .posts {
   .post {
     img {
-      float: left;
-      margin-right: 1rem;
-      width: 180px;
-      height: auto;
-      padding-bottom: 0.125rem;
+      width: 100%;
+      max-height: 180px;
+      object-fit: cover;
     }
 
     @include media-breakpoint-down(sm) {
       img {
-        width: 100%;
-        margin-bottom: 0.5rem;
+        max-height: 120px;
       }
     }
   }
