@@ -106,6 +106,9 @@ other = "Blog"
 [language]
 other = "Sprache"
 
+[last_update]
+other = "letzte Änderung"
+
 [liberapay]
 other = "Liberapay"
 
@@ -140,6 +143,9 @@ other = "{{ .Count }} Beiträge insgesamt"
 [post_date]
 other = "erstellt am {{ .createdOn }}{{ with .updatedOn }}, aktualisiert am {{ . }}{{ end }}."
 
+[posts]
+other = "Beiträge"
+
 [read_more]
 other = "mehr lesen"
 
@@ -170,6 +176,9 @@ other = "Serien"
 
 [settings]
 other = "Einstellungen"
+
+[stats]
+other = "Status"
 
 [table_of_contents]
 other = "Inhaltsverzeichnis"
