@@ -1,0 +1,11 @@
+{{- if (default true .Site.Params.showStats) -}}
+  <section class="stats row card component">
+    <div class="card-header">
+      <h2 class="card-title">{{ i18n "string_stats" }}</h2>
+    </div>
+    <div class="card-body">
+      {{ i18n "string_posts" }}: {{ len .Site.RegularPages }}<br />
+      {{ i18n "string_last_update" }}: {{ now.Format $.Site.Params.dateFormat }}
+    </div>
+  </section>
+{{- end -}}
