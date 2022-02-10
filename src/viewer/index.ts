@@ -20,6 +20,9 @@ class Gallery {
             filter(img: HTMLImageElement) {
                 return self.isImageValid(img);
             },
+            url(img: HTMLImageElement) {
+              return img.hasAttribute('data-src') ? img.getAttribute('data-src') : img.src;
+            },
         }
 
         this.gallery = new Viewer(document.querySelector('main'), Object.assign(defaultOptions, window.viewerOptions));
