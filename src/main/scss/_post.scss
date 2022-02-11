@@ -231,6 +231,8 @@
       width: 180px;
       height: auto;
       padding-bottom: 0.125rem;
+      max-height: 180px;
+      object-fit: cover;
     }
 
     @include media-breakpoint-down(sm) {
