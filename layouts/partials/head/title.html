@@ -15,7 +15,7 @@
   {{- end -}}
   {{- $paginator = .Paginate (union $pinnedPosts $allPosts) -}}
 {{- else if eq .Kind "taxonomy" -}}
-  {{- $paginator = .Paginate .Pages (default 10 .Site.Params.taxonomyPaginate) -}}
+  {{- $paginator = .Paginate .Pages.ByTitle (default 10 .Site.Params.taxonomyPaginate) -}}
 {{- else -}}
   {{- $paginator = .Paginate .RegularPagesRecursive -}}
 {{- end -}}
