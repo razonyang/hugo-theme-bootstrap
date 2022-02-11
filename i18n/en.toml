@@ -106,9 +106,6 @@ other = "Home"
 [language]
 other = "Language"
 
-[last_update]
-other = "Last update"
-
 [liberapay]
 other = "Liberapay"
 
@@ -143,9 +140,6 @@ other = "{{ .Count }} posts in total"
 [post_date]
 other = "created on {{ .createdOn }}{{ with .updatedOn }}, updated on {{ . }}{{ end }}."
 
-[posts]
-other = "Posts"
-
 [read_more]
 other = "Read More"
 
@@ -176,7 +170,13 @@ other = "Series"
 [settings]
 other = "Settings"
 
-[stats]
+[stats_last_update]
+other = "Last update"
+
+[stats_posts]
+other = "Posts"
+
+[stats_title]
 other = "Stats"
 
 [table_of_contents]
