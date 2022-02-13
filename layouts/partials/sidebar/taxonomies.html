@@ -16,14 +16,16 @@
       </div>
       <div class="card-body">
         <div class="py-2">
-        {{- range $idx, $taxonomy := . -}}
-          {{- if lt $idx $taxonomyCount -}}
-          <a href="{{ $taxonomy.Page.Permalink }}" class="badge rounded post-taxonomy" title="{{ $taxonomy.Page.Title }}">
-            {{ $taxonomy.Page.Title }}
+        {{- $count := 0 -}}
+        {{- range . -}}
+          {{- if and (lt $count $taxonomyCount) (ne .Name "") -}}
+          <a href="{{ .Page.Permalink }}" class="badge rounded post-taxonomy" title="{{ .Page.Title }}">
+            {{ .Page.Title }}
             {{- if $countPosts -}}
-              <span class="badge badge-sm text-white bg-accent ms-1">{{ $taxonomy.Count }}</span>
+              <span class="badge badge-sm text-white bg-accent ms-1">{{ .Count }}</span>
             {{- end -}}
           </a>
+          {{- $count = add $count 1 }}
           {{- end -}}
         {{- end -}}
         </div>
