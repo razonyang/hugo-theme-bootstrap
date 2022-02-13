@@ -9,13 +9,12 @@ toc = true
 reward = true
 pinned = false
 categories = [
-  ""
+  "Layouts"
 ]
 tags = [
-  ""
 ]
 series = [
-  ""
+  "Docs"
 ]
 images = []
 +++

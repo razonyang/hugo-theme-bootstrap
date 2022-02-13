@@ -6,7 +6,7 @@ comment = true
 toc = true
 reward = true
 categories = [
-  "Comments"
+  "Comments",
   "Widget"
 ]
 tags = [

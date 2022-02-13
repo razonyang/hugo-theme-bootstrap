@@ -10,7 +10,7 @@ categories = [
   "菜单"
 ]
 tags = [
-  "主菜单"
+  "主菜单",
   "页脚菜单"
 ]
 series = [

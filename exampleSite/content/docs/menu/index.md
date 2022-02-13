@@ -10,7 +10,7 @@ categories = [
   "Menu"
 ]
 tags = [
-  "Main Menu"
+  "Main Menu",
   "Footer Menu"
 ]
 series = [

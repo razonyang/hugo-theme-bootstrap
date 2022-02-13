@@ -9,7 +9,7 @@ categories = [
   "PWA"
 ]
 tags = [
-  "Manifest"
+  "Manifest",
   "Offline"
 ]
 series = [

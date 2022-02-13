@@ -10,7 +10,7 @@ categories = [
   "菜單"
 ]
 tags = [
-  "主菜單"
+  "主菜單",
   "頁腳菜單"
 ]
 series = [
