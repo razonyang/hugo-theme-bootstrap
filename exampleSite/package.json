@@ -17,6 +17,7 @@
     "mark.js": "^8.11.1",
     "mermaid": "^8.14.0",
     "mustache": "^4.2.0",
+    "postcss-cli": "^9.1.0",
     "viewerjs": "^1.10.4",
     "workbox-cacheable-response": "^6.4.2",
     "workbox-expiration": "^6.4.2",
