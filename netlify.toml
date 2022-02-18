@@ -2,13 +2,16 @@
 publish = "exampleSite/public"
 command = "cd exampleSite && hugo --minify --themesDir=../../ --theme=repo -b=https://hbs.razonyang.com/"
 
+[build.environment]
+NODE_VERSION = "17.5.0"
+
 [context.production.environment]
 HUGO_VERSION = "0.87.0"
 HUGO_ENV = "production"
 HUGO_ENABLEGITINFO = "true"
 
 [context.develop]
-command = "cd exampleSite && hugo --minify --themesDir=../../ --theme=repo -b=https://develop.hbs.razonyang.com/"
+command = "cd exampleSite && node --version && npm install && hugo --minify --themesDir=../../ --theme=repo -b=https://develop.hbs.razonyang.com/"
 
 [context.develop.environment]
 HUGO_VERSION = "0.87.0"
