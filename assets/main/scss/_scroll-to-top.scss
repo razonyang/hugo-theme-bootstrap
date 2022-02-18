@@ -1,0 +1,12 @@
+.btn-scroll-to-top {
+  bottom: 1.5rem;
+  color: var(--#{$variable-prefix}accent);
+  opacity: 0;
+  transition: opacity 0.5s;
+  position: fixed;
+  right: 1.25rem;
+
+  &.active {
+    opacity: 1;
+  }
+}

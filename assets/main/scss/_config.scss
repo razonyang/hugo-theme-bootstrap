@@ -1,0 +1,9 @@
+// PLEASE DO NOT OVERRIDE THIS FILE.
+$fontSizes: (
+    xs: {{ default ".85rem" .Site.Params.fontSize.extraLarge }},
+    sm: {{ default ".925rem" .Site.Params.fontSize.extraLarge }},
+    lg: {{ default "1.075rem" .Site.Params.fontSize.extraLarge }},
+    xl: {{ default "1.15rem" .Site.Params.fontSize.extraLarge }},
+);
+
+$fixedHeader: {{ if (default true .Site.Params.fixedHeader) }}true{{ else }}false{{ end }};

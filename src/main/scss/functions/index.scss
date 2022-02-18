@@ -1,3 +1,0 @@
-@function variable($name) {
-  @return var(--#{$variable-prefix}#{$name});
-}

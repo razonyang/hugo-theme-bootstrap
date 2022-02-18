@@ -1,0 +1,19 @@
+$card-border-color: rgba(var(--#{$variable-prefix}primary-text-on-surface-rgb), .125);
+
+.card {
+    &:hover {
+        @extend .shadow-sm;
+    }
+
+    .card-header {
+        border-bottom: 1px solid $card-border-color;
+    }
+
+    .card-title {
+        margin: .5rem 0;
+    }
+
+    .card-footer {
+        border-top: 1px solid $card-border-color;
+    }
+}
