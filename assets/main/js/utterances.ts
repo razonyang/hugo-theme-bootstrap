@@ -4,7 +4,7 @@ class Utterances {
     run() {
         const self = this;
         var theme = params.utterances.theme;
-        if (theme == '') {
+        if (!theme) {
             document.addEventListener('hbs:mode', function(e) {
                 self.rerender(self.getTheme(e.detail.mode));
             });
