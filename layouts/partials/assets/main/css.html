@@ -1,4 +1,4 @@
-{{- $options := dict "targetPath" "assets/main/bundle.min.css" "outputStyle" "compressed" "enableSourceMap" true "includePaths" (slice "node_modules") -}}
+{{- $options := dict "targetPath" "assets/main/bundle.min.css" "outputStyle" "compressed" "includePaths" (slice "node_modules") -}}
 {{- $variables := resources.Get "main/scss/_variables.scss" | resources.ExecuteAsTemplate "main/scss/_variables.scss" . -}}
 {{- $config := resources.Get "main/scss/_config.scss" | resources.ExecuteAsTemplate "main/scss/_config.scss" . -}}
 {{- $main := resources.Get "main/scss/index.scss" -}}
