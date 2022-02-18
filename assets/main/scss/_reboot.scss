@@ -1,0 +1,37 @@
+html {
+  position: relative;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: var(--#{$variable-prefix}background);
+  color: var(--#{$variable-prefix}primary-text-on-background);
+}
+
+a {
+  color: inherit;
+  font-weight: 500;
+  text-decoration: none;
+
+  &:hover {
+    color: variable(accent);
+    text-decoration: underline;
+  }
+
+  &.btn {
+    text-decoration: none !important;
+  }
+}
+
+hr {
+  color: var(--#{$variable-prefix}accent);
+}
+
+:target::before {
+  height: if($fixedHeader, 64px, 0);
+  margin-top: if($fixedHeader, -64px, 0);
+}

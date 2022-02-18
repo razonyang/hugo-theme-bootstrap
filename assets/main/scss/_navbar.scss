@@ -1,0 +1,74 @@
+.navbar {
+  background-color: var(--#{$variable-prefix}navbar);
+  color: var(--#{$variable-prefix}primary-text-on-navbar);
+
+  a {
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      color: var(--#{$variable-prefix}accent-text-on-navbar);
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 8px;
+    }
+  }
+
+  .btn {
+    &:hover,
+    &:focus {
+      color: var(--#{$variable-prefix}on-primary);
+    }
+  }
+
+  .btn-back {
+    @extend .navbar-toggler;
+  }
+}
+
+.navbar-toggler {
+  color: inherit;
+  border: none;
+
+  &:focus {
+    box-shadow: none;
+  }
+
+  &:hover {
+    color: var(--#{$variable-prefix}accent-text-on-navbar);
+  }
+}
+
+.logo {
+  height: 26px;
+  width: auto;
+  margin-right: 0.5rem;
+}
+
+$bgNavbarTogglerIcon: url('/images/icons/menu.png');
+
+.navbar-toggler-icon {
+  background-image: $bgNavbarTogglerIcon;
+}
+
+.nav-link {
+  color: inherit;
+
+  &:focus,
+  &:hover {
+    outline: none;
+    color: var(--#{$variable-prefix}accent);
+    text-decoration: none;
+  }
+}
+
+.navbar-brand {
+  color: inherit;
+  text-decoration: none !important;
+}
+
+.navbar-settings, .navbar-social-share {
+  @extend .navbar-toggler;
+
+  display: inline !important;
+}

@@ -1,0 +1,15 @@
+.archive {
+  margin-bottom: 2rem;
+
+  .post-title {
+    color: var(--#{$variable-prefix}secondary-text-on-surface);
+
+    &:hover {
+      color: var(--#{$variable-prefix}accent);
+    }
+  }
+
+  .post-date {
+    color: var(--#{$variable-prefix}secondary-text-on-surface);
+  }
+}

@@ -1,0 +1,55 @@
+.profile {
+  color: var(--#{$variable-prefix}secondary-text-on-surface) !important;
+  padding: .5rem 0 0;
+
+  .profile-avatar {
+    height: 120px;
+    width: 120px;
+  }
+
+  .profile-meta {
+    margin-top: 0.5rem;
+
+    * {
+      &:not(:last-child) {
+        margin-bottom: 0.25rem;
+      }
+    }
+  }
+
+  .profile-name {
+    font-weight: bold;
+  }
+
+  .profile-company,
+  .profile-about,
+  .profile-location,
+  .profile-contact {
+    align-items: center;
+    display: inline-flex;
+    margin-right: 0.5rem;
+    word-break: break-all;
+  }
+
+  a {
+    color: var(--#{$variable-prefix}accent);
+  }
+
+  .svg-inline--fa {
+    vertical-align: middle;
+  }
+}
+
+.profile-compact {
+  flex-direction: row;
+
+  .profile-meta {
+    @include media-breakpoint-down(sm) {
+      text-align: center;
+    }
+  }
+
+  .social-links {
+    justify-content: start!important;
+  }
+}

@@ -1,0 +1,21 @@
+.form-control {
+  color: var(--#{$variable-prefix}primary-text-on-background);
+  background: var(--#{$variable-prefix}background);
+  border-color: var(--#{$variable-prefix}background);
+
+  &:focus {
+    box-shadow: 0 0 0 0.125rem var(--#{$variable-prefix}accent);
+    border-color: var(--#{$variable-prefix}accent);
+    color: var(--#{$variable-prefix}primary-text-on-background);
+    background: var(--#{$variable-prefix}background);
+  }
+}
+
+.form-check-input {
+  &:checked,
+  &:focus {
+    background-color: var(--#{$variable-prefix}accent);
+    border-color: var(--#{$variable-prefix}accent);
+    box-shadow: var(--#{$variable-prefix}accent-light);
+  }
+}

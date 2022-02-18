@@ -22,6 +22,7 @@
   window.searchPaginate = parseInt('{{ default 10 .Site.Params.search.paginate }}');
   window.fuseOptions = JSON.parse('{{ $options | jsonify | safeHTML }}');
 </script>
-{{- $script := resources.Get "search/index.js" | slice | resources.Concat "js/search.js" | fingerprint -}}
+{{- $options := dict "targetPath" "assets/search/bundle.min.js" "minify" true -}}
+{{- $script := resources.Get "search/index.ts" | js.Build $options | fingerprint -}}
 <script src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>
 {{- end -}}
