@@ -17,5 +17,8 @@ module.exports = {
   plugins: [
     autoprefixer,
     purgecss,
+    require('postcss-discard-comments')({
+      removeAll: true,
+    }),
   ]
 }
