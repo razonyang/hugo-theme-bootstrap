@@ -1,8 +1,7 @@
-import 'bootstrap/js/dist/dropdown';
-import 'bootstrap/js/dist/offcanvas';
-// import 'bootstrap/js/dist/popover';
-import 'bootstrap/js/dist/modal';
-import 'bootstrap/js/dist/tab';
+import 'bootstrap/js/src/dropdown';
+import 'bootstrap/js/src/offcanvas';
+import 'bootstrap/js/src/modal';
+import 'bootstrap/js/src/tab';
 
 import App from 'js/app';
 import Collapse from 'js/collapse/collapse';
