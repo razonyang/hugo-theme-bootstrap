@@ -1,4 +1,37 @@
 {
+  "comments": {
+    "dependencies": {
+      "@babel/cli": "hugo-theme-bootstrap",
+      "@babel/core": "hugo-theme-bootstrap",
+      "@babel/preset-env": "hugo-theme-bootstrap",
+      "@babel/preset-typescript": "hugo-theme-bootstrap",
+      "@fortawesome/fontawesome-svg-core": "hugo-theme-bootstrap",
+      "@fortawesome/free-brands-svg-icons": "hugo-theme-bootstrap",
+      "@fortawesome/free-regular-svg-icons": "hugo-theme-bootstrap",
+      "@fortawesome/free-solid-svg-icons": "hugo-theme-bootstrap",
+      "@fullhuman/postcss-purgecss": "hugo-theme-bootstrap",
+      "@popperjs/core": "hugo-theme-bootstrap",
+      "autoprefixer": "hugo-theme-bootstrap",
+      "bootstrap": "hugo-theme-bootstrap",
+      "fuse.js": "hugo-theme-bootstrap",
+      "katex": "hugo-theme-bootstrap",
+      "mark.js": "hugo-theme-bootstrap",
+      "mermaid": "hugo-theme-bootstrap",
+      "mustache": "hugo-theme-bootstrap",
+      "postcss-cli": "hugo-theme-bootstrap",
+      "viewerjs": "hugo-theme-bootstrap",
+      "webpack": "hugo-theme-bootstrap",
+      "workbox-cacheable-response": "hugo-theme-bootstrap",
+      "workbox-expiration": "hugo-theme-bootstrap",
+      "workbox-precaching": "hugo-theme-bootstrap",
+      "workbox-routing": "hugo-theme-bootstrap",
+      "workbox-strategies": "hugo-theme-bootstrap"
+    },
+    "devDependencies": {
+      "copy-webpack-plugin": "hugo-theme-bootstrap",
+      "webpack-cli": "hugo-theme-bootstrap"
+    }
+  },
   "dependencies": {
     "@babel/cli": "^7.17.3",
     "@babel/core": "^7.17.4",
@@ -19,15 +52,17 @@
     "mustache": "^4.2.0",
     "postcss-cli": "^9.1.0",
     "viewerjs": "^1.10.4",
+    "webpack": "^5.69.1",
     "workbox-cacheable-response": "^6.4.2",
     "workbox-expiration": "^6.4.2",
     "workbox-precaching": "^6.4.2",
     "workbox-routing": "^6.4.2",
     "workbox-strategies": "^6.4.2"
   },
-  "devDependencies": {},
-  "name": "hugo-theme-bootstrap-example-site",
-  "scripts": {
-    "serve": "hugo server --themesDir=../../"
-  }
+  "devDependencies": {
+    "copy-webpack-plugin": "^10.2.4",
+    "webpack-cli": "^4.9.1"
+  },
+  "name": "exampleSite",
+  "version": "0.1.0"
 }
