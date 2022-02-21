@@ -12,7 +12,7 @@ class Scroller implements Component {
     btn.setAttribute('role', 'button');
     btn.setAttribute('aria-label', 'Scroll to top');
     btn.className = 'btn-scroll-to-top';
-    btn.innerHTML = '<i class="fas fa-chevron-circle-up fa-2x"></i>';
+    btn.innerHTML = '<i class="fas fa-chevron-circle-down fa-2x" data-fa-transform="rotate-180"></i>';
     window.document.body.append(btn);
     this.btn = btn;
   }

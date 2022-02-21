@@ -1,12 +1,11 @@
 import { library, dom, config } from '@fortawesome/fontawesome-svg-core';
 import {
   faAdjust, faArrowsAltV, faArrowLeft, faBars, faBuilding, faCheckCircle, faChevronCircleDown,
-  faChevronCircleUp, faChevronLeft, faChevronRight, faChevronUp, faCode, faCoffee, faComments,
-  faColumns, faCopy, faCopyright, faEdit, faEllipsisV, faEnvelope, faExclamationTriangle,
-  faExpandAlt, faEyeDropper, faFont, faFileAlt, faFileArchive, faFolder, faHome, faInfoCircle,
-  faLanguage, faLink, faList, faListAlt, faMapMarkerAlt, faPalette, faQuestion, faQuestionCircle,
-  faRedoAlt, faRss, faSearch, faShareAlt, faSkullCrossbones, faSpinner, faTags, faThumbtack,
-  faTimes, faTv, faUndo, faUser,
+  faChevronLeft, faCode, faCoffee, faComments, faColumns, faCopy, faCopyright, faEdit, faEllipsisV,
+  faEnvelope, faExclamationTriangle, faExpandAlt, faEyeDropper, faFont, faFileAlt, faFileArchive,
+  faFolder, faHome, faInfoCircle, faLanguage, faLink, faList, faListAlt, faMapMarkerAlt, faPalette,
+  faQuestion, faQuestionCircle, faRedoAlt, faRss, faSearch, faShareAlt, faSkullCrossbones,
+  faSpinner, faTags, faThumbtack, faTimes, faTv, faUndo, faUser,
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faStar,
@@ -23,12 +22,11 @@ import { faLiberapay, faBilibili, faOffline } from './icons';
 let icons = [
   // Solid Icons
   faAdjust, faArrowsAltV, faArrowLeft, faBars, faBuilding, faCheckCircle, faChevronCircleDown,
-  faChevronCircleUp, faChevronLeft, faChevronRight, faChevronUp, faCode, faCoffee, faComments,
-  faColumns, faCopy, faCopyright, faEdit, faEllipsisV, faEnvelope, faExclamationTriangle,
-  faExpandAlt, faEyeDropper, faFont, faFileAlt, faFileArchive, faFolder, faHome, faInfoCircle,
-  faLanguage, faLink, faList, faListAlt, faMapMarkerAlt, faPalette, faQuestion, faQuestionCircle,
-  faRedoAlt, faRss, faSearch, faShareAlt, faSkullCrossbones, faSpinner, faTags, faThumbtack,
-  faTimes, faTv, faUndo, faUser,
+  faChevronLeft, faCode, faCoffee, faComments, faColumns, faCopy, faCopyright, faEdit, faEllipsisV,
+  faEnvelope, faExclamationTriangle, faExpandAlt, faEyeDropper, faFont, faFileAlt, faFileArchive,
+  faFolder, faHome, faInfoCircle, faLanguage, faLink, faList, faListAlt, faMapMarkerAlt, faPalette,
+  faQuestion, faQuestionCircle, faRedoAlt, faRss, faSearch, faShareAlt, faSkullCrossbones,
+  faSpinner, faTags, faThumbtack, faTimes, faTv, faUndo, faUser,
 
   // Regular Icons
   faStar,

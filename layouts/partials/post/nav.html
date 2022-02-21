@@ -9,7 +9,7 @@
   {{- with .NextInSection -}}
   <div class="post-nav post-next">
     <a href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a>
-    <i class="fas fa-fw fa-chevron-right"></i>
+    <i class="fas fa-fw fa-chevron-left" data-fa-transform="rotate-180"></i>
   </div>
   {{- end -}}
 </div>
