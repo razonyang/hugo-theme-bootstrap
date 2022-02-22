@@ -63,7 +63,7 @@ customCSS = [
 ]
 ```
 
-然後在 `assets/css/custom.css` 覆蓋 `--hbs-body-font-family` 變量：
+然後在 `assets/main/scss/_custom.scss` 覆蓋 `--hbs-body-font-family` 變量：
 
 
 ```CSS

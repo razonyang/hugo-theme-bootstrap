@@ -47,7 +47,7 @@ Let's illustrate with an example.
 }
 ```
 
-After appending the style to `assets/css/custom.css`, the color of `blue` palette will be changed to `darkblue`.
+After appending the style to `assets/main/scss/_custom.scss`, the color of `blue` palette will be changed to `darkblue`.
 
 ## Fonts
 
@@ -65,7 +65,7 @@ customCSS = [
 ]
 ```
 
-And then override the `--hbs-body-font-family` variable in `assets/css/custom.css`:
+And then override the `--hbs-body-font-family` variable in `assets/main/scss/_custom.scss`:
 
 ```CSS
 :root {
