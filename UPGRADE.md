@@ -24,6 +24,7 @@ The following configuration is required:
 
 - Move `assets/js/custom.js` to `assets/main/js/custom.ts`.
 - Move `assets/css/custom.css` to `assets/main/scss/_custom.scss`.
+- Move `assets/css/highlight.css` to `assets/main/scss/_highlight.scss`.
 
 ## Katex
 

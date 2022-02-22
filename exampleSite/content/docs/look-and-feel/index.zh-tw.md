@@ -85,64 +85,24 @@ customCSS = [
 ### 样式
 
 ```shell
-$ hugo gen chromastyles --style=solarized-dark > assets/css/highlight.css
+$ hugo gen chromastyles --style=solarized-dark > assets/main/scss/_highlight.scss
 ```
 
 另外可參閱[所有支持的樣式](https://xyproto.github.io/splash/docs/all.html)。
 
 ## 圖標
 
-為了減少圖標的文件大小，我們使用自定義的 [Font Awesome](https://fontawesome.com/) 圖標集。
-正因如此，你可以自由地選擇其他圖標。
-
-### Font Awesome
-
-#### 自定義構建
-
-> 本章節包含前端技術，比如 `JavaScript` 和 `npm`。
-
-我們提供一個名為 `assets/js/icons.js` 的文件，以便自定義圖標，因此，你可以按需添加圖標。
-我們已為你在示例站點設置好了構建環境。
-
-1. 安裝依賴
-
-```shell
-$ npm install
-```
-
-2. 在 `src/icons/index.js` 添加圖標：
+編輯文件 `assets/icons/custom.js`：
 
 ```js
-import { faGlobe, faClock } from '@fortawesome/free-solid-svg-icons';
+// import { faClock } from '@fortawesome/free-solid-svg-icons';
+// import { faAddressBook } from '@fortawesome/free-regular-svg-icons';
+// import { faAmazon, faGoogle } from '@fortawesome/free-brands-svg-icons';
 
-library.add(faGlobe, faClock);
+const icons = [
+    // faClock,
+    // faAddressBook,
+    // faAmazon, faGoogle,
+];
+export default icons;
 ```
-
-3. 重建 `assets/js/icons.js`：
-
-```shell
-$ npm run build
-```
-
-如果你熟悉前端開發，推薦使用此方法添加圖標。
-
-#### CustomJS
-
-因為本主題使用 JS+SVG 框架以替換圖標為 SVG，所以 `customCSS` 將會無效，你需要使用 `customJS` 替代。
-
-```toml
-customJS = [
-  "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/js/solid.min.js" # Import solid icons.
-  #"https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/js/regular.min.js" # Import regular icons.
-  #"https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/js/brands.min.js" # Import brand icons.
-  #"https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/js/all.min.js" # Import the full icon set.
-]
-```
-
-### 其他
-
-其他圖標可以通過 `customCSS`，`customJS` 或 [鉤子]({{< ref "/docs/hooks" >}}) 導入。
-
-- [Iconify](https://iconify.design/)
-- [Bootstrap Icons](https://icons.getbootstrap.com/)
-- [Material Design Icons](https://materialdesignicons.com/)
