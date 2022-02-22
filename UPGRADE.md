@@ -25,6 +25,33 @@ The following configuration is required:
 - Move `assets/js/custom.js` to `assets/main/js/custom.ts`.
 - Move `assets/css/custom.css` to `assets/main/scss/_custom.scss`.
 
+## Katex
+
+Move `assets/js/katex.config.js` to `assets/katex/js/options.ts`.
+
+```js
+const options = {};
+export default options;
+```
+
+## Mermaid
+
+Move `assets/js/mermaid.config.js` to `assets/mermaid/js/options.ts`.
+
+```js
+const options = {};
+export default options;
+```
+
+## Viewer
+
+Move `assets/js/viewer.config.js` to `assets/viewer/js/options.ts`.
+
+```js
+const options = {};
+export default options;
+```
+
 ## Icons
 
 Add the extra FontAwesome icons in `assets/icons/custom.js`.
