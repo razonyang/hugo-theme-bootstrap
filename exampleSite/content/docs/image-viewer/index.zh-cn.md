@@ -36,13 +36,15 @@ Image Viewer was turned on by default, you can turn it off by setting the parame
 
 ## Options
 
-You can tweak the options by creating `assets/js/viewer.config.js`.
+You can tweak the options by creating `assets/viewer/js/options.ts`.
 
 ```js
-window.viewerOptions = {
+const options = {
     className: "image-viewer",
     // ...
 };
+export default options;
+```
 ```
 
 Avialable options are listed on [Viewer.js Options](https://github.com/fengyuanchen/viewerjs#options).

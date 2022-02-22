@@ -30,7 +30,7 @@ aliases = [
 
 ## 内部资源
 
-你只需要创建和編輯 `assets/css/custom.css` 和 `assets/js/custom.js` 即可。
+你只需要创建和編輯 `assets/main/scss/_variables.scss`，`assets/main/scss/_custom.scss` 和 `assets/main/js/custom.ts` 即可。
 
 > 这些文件会被打包成单个 CSS/JS 文件，以减少 HTTP 的请求次数。
 

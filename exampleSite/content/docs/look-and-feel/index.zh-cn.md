@@ -46,7 +46,7 @@ aliases = [
 }
 ```
 
-在 `assets/css/custom.css` 追加样式后，`blue` 调色板的颜色将会变成 `darkblue`。
+在 `assets/main/scss/_custom.scss` 追加样式后，`blue` 调色板的颜色将会变成 `darkblue`。
 
 ## 字体
 
@@ -64,7 +64,7 @@ customCSS = [
 ]
 ```
 
-然后在 `assets/css/custom.css` 覆盖 `--hbs-body-font-family` 变量：
+然后在 `assets/main/scss/_custom.scss` 覆盖 `--hbs-body-font-family` 变量：
 
 ```CSS
 :root {

@@ -29,9 +29,17 @@ This article describes how to install, upgrade the theme, and write new articles
 
 <!--more-->
 
-## Installation
+To get started with HBS, please make sure you [meet the prerequisites](#prerequisites), then install HBS.
 
-> Required Hugo `0.75.0` or above.
+## Prerequisites
+
+- Git.
+- [Hugo](https://gohugo.io/getting-started/installing/) **extended** version.
+- [npm](https://nodejs.org/en/download/): used for installing CSS and JS dependencies.
+
+> We recommend using the latest version of those tools.
+
+## Installation
 
 ### Create a New Site from Scratch
 

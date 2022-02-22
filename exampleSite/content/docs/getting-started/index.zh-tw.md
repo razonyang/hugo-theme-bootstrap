@@ -30,9 +30,17 @@ aliases = [
 
 <!--more-->
 
-## 安裝
+要開始使用 HBS，請確保您[滿足先决條](#先決條件)，然後安裝 HBS。
 
-> 要求 Hugo `0.75.0` 或者更高版本。
+## 先決條件
+
+- Git.
+- [Hugo](https://gohugo.io/getting-started/installing/) **extended** 版本。
+- [npm](https://nodejs.org/en/download/)：用於安裝 CSS 和 JS 依賴。
+
+> 我們建議使用這些工具的最新版本。
+
+## 安裝
 
 ### 從頭開始創建站點
 

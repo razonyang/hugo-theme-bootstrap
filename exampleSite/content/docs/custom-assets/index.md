@@ -30,7 +30,7 @@ As a customizable theme, it provides the ability to customize assets, whether it
 
 ## Internal Assets
 
-Just create and edit the files `assets/css/custom.css` and `assets/js/custom.js`.
+Just create and edit the files `assets/main/scss/_variables.scss`, `assets/main/scss/_custom.scss` and `assets/main/js/custom.ts`.
 
 > These files will be bundled into one for reducing HTTP requests.
 
