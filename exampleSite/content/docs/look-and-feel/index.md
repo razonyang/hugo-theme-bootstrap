@@ -86,64 +86,24 @@ See also [Configure Highlight](https://gohugo.io/getting-started/configuration-m
 ### Style
 
 ```shell
-$ hugo gen chromastyles --style=solarized-dark > assets/css/highlight.css
+$ hugo gen chromastyles --style=solarized-dark > assets/main/scss/_highlight.scss
 ```
 
 See also [All Supported Styles](https://xyproto.github.io/splash/docs/all.html).
 
 ## Icons
 
-We're using a custom [Font Awesome](https://fontawesome.com/) icon set, in order to reduce the file size of icons.
-Because of this, you are free to choose other icons.
-
-### Font Awesome
-
-#### Custom Build
-
-> This section contains front-end technologies, such as `JavaScript` and `npm`.
-
-We provided a file called `assets/js/icons.js` for customizing icons, therefore, you can add icons as needed.
-We already set up e build environment in the example site for you.
-
-1. Install Dependencies
-
-```shell
-$ npm install
-```
-
-2. Add icons into `src/icons/index.js`:
+Edit the file `assets/icons/custom.js`:
 
 ```js
-import { faGlobe, faClock } from '@fortawesome/free-solid-svg-icons';
+// import { faClock } from '@fortawesome/free-solid-svg-icons';
+// import { faAddressBook } from '@fortawesome/free-regular-svg-icons';
+// import { faAmazon, faGoogle } from '@fortawesome/free-brands-svg-icons';
 
-library.add(faGlobe, faClock);
+const icons = [
+    // faClock,
+    // faAddressBook,
+    // faAmazon, faGoogle,
+];
+export default icons;
 ```
-
-3. Rebuild `assets/js/icons.js`:
-
-```shell
-$ npm run build
-```
-
-It's a recommended way to add icons if you're familiar to front-end development.
-
-#### CustomJS
-
-Since the theme using JS+SVG framework to replace icons to SVG, so the `customCSS` won't work, you need to use `customJS` instead. 
-
-```toml
-customJS = [
-  "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/js/solid.min.js" # Import solid icons.
-  #"https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/js/regular.min.js" # Import regular icons.
-  #"https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/js/brands.min.js" # Import brand icons.
-  #"https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/js/all.min.js" # Import the full icon set.
-]
-```
-
-### Others
-
-The other icons can be imported by `customCSS`, `customJS` or [Hooks]({{< ref "/docs/hooks" >}}).
-
-- [Iconify](https://iconify.design/)
-- [Bootstrap Icons](https://icons.getbootstrap.com/)
-- [Material Design Icons](https://materialdesignicons.com/)

@@ -12,3 +12,4 @@ v0.68.0
 - Remove `assets/js/katex.config.js`, use `assets/katex/js/options.ts` instead.
 - Remove `assets/js/mermaid.config.js`, use `assets/mermaid/js/options.ts` instead.
 - Remove `assets/js/viewer.config.js`, use `assets/viewer/js/options.ts` instead.
+- Remove `assets/css/highlight.css`, use `assets/main/scss/_highlight.scss` instead.
