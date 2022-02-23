@@ -35,7 +35,7 @@
                             <button class="accordion-button{{ if ne 0 $j }} collapsed{{ end }}" type="button" data-bs-toggle="collapse" data-bs-target="#{{ $id }}"
                               aria-expanded="{{ if eq 0 $j }}true{{ else }}false{{ end }}" aria-controls="{{ $id }}">
                                 {{- .question -}}
-                                <span class="faq-question-icon"><i class="fas fa-chevron-up"></i></span>
+                                <span class="faq-question-icon"><i class="fas fa-chevron-left" data-fa-transform="rotate-90"></i></span>
                             </button>
                         </h2>
                         <div id="{{ $id }}" class="accordion-collapse collapse{{ if eq 0 $j }} show{{ end }}" aria-labelledby="{{ $id }}" data-bs-parent="#faq-{{ $i }}">
