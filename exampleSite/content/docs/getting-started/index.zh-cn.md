@@ -49,6 +49,8 @@ $ cd myblog
 $ git init
 $ git submodule add https://github.com/razonyang/hugo-theme-bootstrap themes/hugo-theme-bootstrap
 $ cp -a themes/hugo-theme-bootstrap/exampleSite/* .
+$ hugo mod npm pack
+$ npm install
 $ hugo server
 ```
 
@@ -70,6 +72,8 @@ $ cp -r themes/hugo-theme-bootstrap/exampleSite/content/about/ \
   themes/hugo-theme-bootstrap/exampleSite/content/series/ \
   themes/hugo-theme-bootstrap/exampleSite/content/tags/ \
   ./content
+$ hugo mod npm pack
+$ npm install
 $ hugo server
 ```
 
