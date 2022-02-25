@@ -45,7 +45,7 @@ Some notable points:
 
 This is the sidebar shown in the right column. By default, it contains a Table of Contents widget which shows the ToC of the document in the middle column. 
 
-Additional sidebar widgets from this theme can be added above/below the ToC widget through the use of the hooks in your site's `layouts/partials/hooks/docs/sidebar-begin.html` and `layoutts/partials/hooks/docs/sidebar-end.html`. For example, to add the "Recent posts" and "Featured posts" widgets below the doc, add the following to `layouts/partials/hooks/docs/sidebar-end.html`
+Additional sidebar widgets from this theme can be added above/below the ToC widget through the use of the hooks in your site's `layouts/partials/hooks/docs/sidebar-begin.html` and `layouts/partials/hooks/docs/sidebar-end.html`. For example, to add the "Recent posts" and "Featured posts" widgets below the doc, add the following to `layouts/partials/hooks/docs/sidebar-end.html`
 
 ```
 {{ partial "sidebar/recent-posts" . }}

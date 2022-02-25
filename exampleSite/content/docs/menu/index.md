@@ -92,7 +92,7 @@ We can also configure menu via page front matter.
 [menu.footer]
   parent = "support"
   weight = 6
-  pre = '<i class="fas fa-fw fa-quetion-circle"></i>'
+  pre = '<i class="fas fa-fw fa-question-circle"></i>'
 ```
 
 The code snippet appends the page to the `main` and `footer` menu.

@@ -92,7 +92,7 @@ aliases = [
 [menu.footer]
   parent = "support"
   weight = 6
-  pre = '<i class="fas fa-fw fa-quetion-circle"></i>'
+  pre = '<i class="fas fa-fw fa-question-circle"></i>'
 ```
 
 代码片段将页面追加到 `main` 和 `footer` 菜单。

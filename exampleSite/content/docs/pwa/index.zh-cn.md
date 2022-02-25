@@ -45,7 +45,7 @@ PWAs([渐进式 web 应用程序](https://developer.mozilla.org/en-US/docs/Web/P
 | `pwa.manifest.description` | String | - | 默认为站点描述
 | `pwa.manifest.theme_color` | String | - |
 | `pwa.manifest.background_color` | String | - |
-| `pwa.manifest.icons` | Arrary | - |
+| `pwa.manifest.icons` | Array | - |
 | `pwa.manifest.icons.sizes` | String | - | 图标尺寸，如："96x96"
 | `pwa.manifest.icons.src` | String | - | 图标 URL
 

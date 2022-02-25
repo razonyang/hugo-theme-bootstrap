@@ -6,23 +6,26 @@ command = "cd exampleSite && hugo --minify --themesDir=../../ --theme=repo -b=ht
 NODE_VERSION = "17.5.0"
 
 [context.production.environment]
-HUGO_VERSION = "0.87.0"
+HUGO_VERSION = "0.92.2"
 HUGO_ENV = "production"
 HUGO_ENABLEGITINFO = "true"
+GO_VERSION = "1.17.7"
 
 [context.develop]
 command = "cd exampleSite && node --version && npm install && hugo --minify --themesDir=../../ --theme=repo -b=https://develop.hbs.razonyang.com/"
 
 [context.develop.environment]
-HUGO_VERSION = "0.87.0"
+HUGO_VERSION = "0.92.2"
 HUGO_ENABLEGITINFO = "true"
+GO_VERSION = "1.17.7"
 
 [context.deploy-preview.build]
 command = "cd exampleSite && hugo --minify --themesDir=../../ --theme=repo -b=/"
 
 [context.deploy-preview.environment]
-HUGO_VERSION = "0.87.0"
+HUGO_VERSION = "0.92.2"
 HUGO_ENABLEGITINFO = "true"
+GO_VERSION = "1.17.7"
 
 [[headers]]
   for = "/*"
