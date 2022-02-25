@@ -55,7 +55,7 @@ After appending the style to `assets/main/scss/_custom.scss`, the color of `blue
 
 We don't specify any font, so that `system-ui` will be used in most browsers.
 
-You can use other web fonts easilly, such as [Google Fonts](https://fonts.google.com/). Lets take the Roboto font as an exmaple.
+You can use other web fonts easilly, such as [Google Fonts](https://fonts.google.com/). Lets take the Roboto font as an example.
 
 First of all, we import the font by `customCSS`:
 
