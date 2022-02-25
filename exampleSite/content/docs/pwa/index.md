@@ -45,7 +45,7 @@ Firstly, we need to specify the `pwa` parameter, even it is empty.
 | `pwa.manifest.description` | String | - | Default to site description.
 | `pwa.manifest.theme_color` | String | - |
 | `pwa.manifest.background_color` | String | - |
-| `pwa.manifest.icons` | Arrary | - |
+| `pwa.manifest.icons` | Array | - |
 | `pwa.manifest.icons.sizes` | String | - | Icons' sizes, i.e. "96x96"
 | `pwa.manifest.icons.src` | String | - | Icon's URL
 
