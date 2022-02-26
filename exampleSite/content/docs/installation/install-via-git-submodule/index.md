@@ -1,43 +1,34 @@
 +++
-title = "Getting Started"
+title = "Git Submodule"
 date = 2021-12-04T10:43:39+08:00
-featured = true
+featured = false
 comment = true
 toc = true
 reward = true
-pinned = true
+pinned = false
 categories = [
 ]
 tags = [
   "Installation",
-  "Upgrade"
+  "Upgrade",
+  "Git submodule"
 ]
 series = [
   "Docs"
 ]
 images = []
-weight = 1000
+weight = 2000
 aliases = [
-  "/en/posts/getting-started"
+  "/en/posts/installation/install-via-git-submodule"
 ]
 [menu.footer]
   parent = "docs"
-  weight = 1
+  weight = 2
 +++
 
-This article describes how to install, upgrade the theme, and write new articles.
-
-<!--more-->
-
-To get started with HBS, please make sure you [meet the prerequisites](#prerequisites), then install HBS.
-
-## Prerequisites
-
-- Git.
-- [Hugo](https://gohugo.io/getting-started/installing/) **extended** version.
-- [npm](https://nodejs.org/en/download/): used for installing CSS and JS dependencies.
-
-> We recommend using the latest version of those tools.
+This article refers to the traditional installation method of cloning the theme locally as Git submodule.
+It describes how to install, upgrade the theme, and write new articles.
+While this installation method is still widely used, we recommend to install the theme as [Hugo module]({{< ref "/docs/installation/install-via-hugo-module" >}}).
 
 ## Installation
 
@@ -55,6 +46,12 @@ $ hugo server
 ```
 
 > If you're using Windows, use `xcopy .\themes\hugo-theme-bootstrap\exampleSite /E` instead.
+
+Now, at the top of your `config/_default/config.toml, remove the hash sign at the beginning of the `theme =` line in order to activate your theme:
+
+```toml
+theme = "hugo-theme-bootstrap"   # when adding theme as git submodule
+```
 
 ### Install on an existing site
 
@@ -93,27 +90,9 @@ $ git commit -m 'Upgrade the theme'
 - Replace the `[version]` with the latest version. The version can be listed by `git tag -l | sort -rV`.
 - You can also checkout the `master` branch for getting the latest commit.
 
-## Write Articles
-
-> Suppose the default language is `en`.
-
-```shell
-$ hugo new posts/new-post/index.md
-```
-
-The command above create a new post written in English. Similarly, we can create a post written in Simplified Chinese:
-
-```shell
-$ hugo new posts/new-post/index.zh-cn.md
-```
-
-> Please remind that, the created posts are generally in draft state. You'll need to specify the `-D` parameter of the command `hugo server` for previewing.
-> Similarly, you need to change the `draft` to `false` or remove `draft` parameter if you want to publish the article.
-
-> You can place your posts anywhere, such as `blog`, what you need to do is just append the `blog` to the `mainSections` parameter: `mainSections = ["posts", "blog"]`.
-
 ## Up Next
 
+- [Authoring content]({{< ref "/docs/authoring" >}})
 - [Tweak Configuration]({{< ref "/docs/configuration" >}})
 - [Menu]({{< ref "/docs/menu" >}})
 - [Look and Feel]({{< ref "/docs/look-and-feel" >}})
