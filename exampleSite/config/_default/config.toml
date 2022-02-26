@@ -1,12 +1,13 @@
 baseURL = "https://example.com"
 title = "Hugo Bootstrap"
-theme = "hugo-theme-bootstrap"
+theme = "github.com/razonyang/hugo-theme-bootstrap"  # when pulling in theme as hugo module
+# theme = "hugo-theme-bootstrap"   # when adding theme as git submodule
 copyright = "Copyright © 2016-{year} Razon Yang. All Rights Reserved."
 
 # Multilingual mode
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = true # If you use only one language comment this option
-#disableLanguages = ["fr", "zh-cn" ,"zh-tw"] # For disable one or more language
+#disableLanguages = ["fr", "zh-cn" ,"zh-tw"] # Uncomment in order to disable one or more language
 
 # Pagination
 paginate = 10
@@ -22,7 +23,7 @@ enableRobotsTXT = true
 
 enableEmoji = true
 
-# hasCJKLanguage = true # Turn on it if your content contains Chinese/Japanese/Korean Languages.
+hasCJKLanguage = false # Set to true if your content contains Chinese/Japanese/Korean Languages.
 
 pygmentsUseClasses = true
 

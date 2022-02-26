@@ -1,7 +1,7 @@
 +++
 title = "快速入门"
 date = 2021-12-04T10:43:39+08:00
-featured = true
+featured = false
 comment = true
 toc = true
 reward = true
@@ -10,34 +10,25 @@ categories = [
 ]
 tags = [
   "安装",
-  "升级"
+  "升级",
+  "Git submodule"
 ]
 series = [
   "文档"
 ]
 images = []
-weight = 1000
+weight = 2000
 aliases = [
-  "/zh-cn/posts/getting-started"
+  "/zh-cn/posts/installation/install-via-git-submodule"
 ]
 [menu.footer]
   parent = "docs"
-  weight = 1
+  weight = 2
 +++
 
-本文将介绍如何安装、升级本主题，以及书写新的文章。
-
-<!--more-->
-
-要开始使用 HBS，请确保您[满足先决条](#先决条件)，然后安装HBS。
-
-## 先决条件
-
-- Git.
-- [Hugo](https://gohugo.io/getting-started/installing/) **extended** 版本。
-- [npm](https://nodejs.org/en/download/): 用于安装 CSS 和 JS 依赖。
-
-> 我们建议使用这些工具的最新版本。
+This article refers to the traditional installation method of cloning the theme locally as Git submodule.
+It describes how to install, upgrade the theme, and write new articles.
+While this installation method is still widely used, we recommend to install the theme as [Hugo module]({{< ref "/docs/installation/install-via-hugo-module" >}}).
 
 ## 安装
 
