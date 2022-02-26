@@ -3,10 +3,10 @@ publish = "exampleSite/public"
 command = "cd exampleSite && hugo --minify --themesDir=../../ --theme=repo -b=https://hbs.razonyang.com/"
 
 [build.environment]
-NODE_VERSION = "17.5.0"
+NODE_VERSION = "17.6.0"
 
 [context.production.environment]
-HUGO_VERSION = "0.92.2"
+HUGO_VERSION = "0.93.0"
 HUGO_ENV = "production"
 HUGO_ENABLEGITINFO = "true"
 GO_VERSION = "1.17.7"
@@ -15,7 +15,7 @@ GO_VERSION = "1.17.7"
 command = "cd exampleSite && node --version && npm install && hugo --minify --themesDir=../../ --theme=repo -b=https://develop.hbs.razonyang.com/"
 
 [context.develop.environment]
-HUGO_VERSION = "0.92.2"
+HUGO_VERSION = "0.93.0"
 HUGO_ENABLEGITINFO = "true"
 GO_VERSION = "1.17.7"
 
@@ -23,7 +23,7 @@ GO_VERSION = "1.17.7"
 command = "cd exampleSite && hugo --minify --themesDir=../../ --theme=repo -b=$DEPLOY_PRIME_URL"
 
 [context.deploy-preview.environment]
-HUGO_VERSION = "0.92.2"
+HUGO_VERSION = "0.93.0"
 HUGO_ENABLEGITINFO = "true"
 GO_VERSION = "1.17.7"
 

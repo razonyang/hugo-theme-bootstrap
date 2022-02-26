@@ -26,7 +26,7 @@ The following configuration is required:
 - Move `assets/css/custom.css` to `assets/main/scss/_custom.scss`.
 - Move `assets/css/highlight.css` to `assets/main/scss/_highlight.scss`.
 
-## Katex
+## KaTeX
 
 Move `assets/js/katex.config.js` to `assets/katex/js/options.ts`.
 

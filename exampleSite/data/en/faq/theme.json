@@ -20,7 +20,7 @@
         },
         {
             "question": "How to add new language?",
-            "answer": "- Put your new language into `config/_default/languages.toml`.\n- [Write Articles](/en/posts/getting-started/#write-articles)."
+            "answer": "- Put your new language into `config/_default/languages.toml`.\n- [Write Articles](/en/posts/authoring/."
         }
     ]
 }

@@ -19,26 +19,16 @@ series = [
 images = []
 weight = 1000
 aliases = [
-  "/zh-tw/posts/getting-started"
+  "/zh-tw/posts/installation/install-via-git-submodule"
 ]
 [menu.footer]
   parent = "docs"
   weight = 1
 +++
 
-本文將介紹如何安裝、升級本主題，以及書寫新的文章。
-
-<!--more-->
-
-要開始使用 HBS，請確保您[滿足先决條](#先決條件)，然後安裝 HBS。
-
-## 先決條件
-
-- Git.
-- [Hugo](https://gohugo.io/getting-started/installing/) **extended** 版本。
-- [npm](https://nodejs.org/en/download/)：用於安裝 CSS 和 JS 依賴。
-
-> 我們建議使用這些工具的最新版本。
+This article refers to the traditional installation method of cloning the theme locally as Git submodule.
+It describes how to install, upgrade the theme, and write new articles.
+While this installation method is still widely used, we recommend to install the theme as [Hugo module]({{< ref "/docs/installation/install-via-hugo-module" >}}).
 
 ## 安裝
 
