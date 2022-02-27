@@ -20,7 +20,7 @@ HUGO_ENABLEGITINFO = "true"
 GO_VERSION = "1.17.7"
 
 [context.deploy-preview.build]
-command = "cd exampleSite && hugo --minify --themesDir=../../ --theme=repo"
+command = "cd exampleSite && hugo --minify --themesDir=../../ --theme=repo -b=$DEPLOY_PRIME_URL"
 
 [context.deploy-preview.environment]
 HUGO_VERSION = "0.92.2"
