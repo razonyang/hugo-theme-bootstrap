@@ -15,7 +15,7 @@ HUGO_VERSION = "0.87.0"
 HUGO_ENABLEGITINFO = "true"
 
 [context.deploy-preview.build]
-command = "cd exampleSite && hugo --minify --themesDir=../../ --theme=repo -b=https://deploy-preview-421--hugo-theme-bootstrap.netlify.app/"
+command = "cd exampleSite && hugo --minify --themesDir=../../ --theme=repo -b=/"
 
 [context.deploy-preview.environment]
 HUGO_VERSION = "0.87.0"
