@@ -84,6 +84,6 @@
   },
   "scripts": {
     "build": "webpack",
-    "serve": "hugo server --source=exampleSite --themesDir=../../ --buildDrafts --disableFastRender"
+    "serve": "cd exampleSite && hugo server --themesDir=../../ --buildDrafts --disableFastRender"
   }
 }
