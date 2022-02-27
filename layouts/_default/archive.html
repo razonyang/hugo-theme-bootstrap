@@ -1,6 +1,6 @@
 {{ define "content" }}
 {{- $pages := where .Site.RegularPages "Type" "in" (default (slice "posts") .Site.Params.mainSections) -}}
-{{- $paginator := .Paginate $pages.ByDate.Reverse (default 100 .Site.Params.archive.paginate) -}}
+{{- $paginator := .Paginate $pages.ByDate.Reverse .Site.Params.archive.paginate -}}
 <div class="col-lg-8 archives mb-4">
   <div class="container">
     {{- partial "breadcrumb" . -}}
@@ -41,7 +41,8 @@
 
 {{ define "title" }}
 {{- $pages := where .Site.RegularPages "Type" "in" (default (slice "posts") .Site.Params.mainSections) -}}
-{{- $paginator := .Paginate $pages.ByDate.Reverse (default 100 .Site.Params.archive.paginate) -}}
+{{- printf "size: [%d]" .Site.Params.archive.paginate -}}
+{{- $paginator := .Paginate $pages.ByDate.Reverse 1 -}}
 {{- partial "head/title" . -}}
 {{ end }}
 
