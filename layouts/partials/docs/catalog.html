@@ -39,7 +39,12 @@
         </li>
         {{- else -}}
         <li class="mb-2{{ if eq .Permalink $page.Permalink }} active text-accent{{ end }}" tabindex="-1">
-          <a href="{{ .Permalink }}">{{ .Title }}</a>
+          <a href="{{ .Permalink }}"{{ if .Params.redirect }} target="_blank"{{ end }}>
+            {{- .Title -}}
+            {{- if .Params.redirect -}}
+              <i class="ms-1 fas fa-external-link-alt"></i>
+            {{- end -}}
+          </a>
         </li>
         {{- end -}}
       {{- end -}}
