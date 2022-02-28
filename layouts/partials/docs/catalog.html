@@ -25,7 +25,7 @@
         {{- end -}}
         <li class="mb-2{{ if eq .Permalink $page.Permalink }} active{{ end }}" tabindex="-1">
           <div class="catalog-section bg-accent text-white px-2 py-1 d-flex justify-content-between align-items-center">
-            <a href="{{ .Permalink }}">{{ .Name }}</a>
+            <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
             <a class="btn-toggle collapsed ms-1" role="button" data-bs-toggle="collapse"
               data-bs-target="#{{ $sectionId }}" aria-expanded="{{ if $active }}true{{ else }}false{{ end }}" aria-controls="{{ $sectionId }}">
               <i class="btn-toggle-icon fas fa-arrow-left ms-auto" data-fa-transform="rotate-180"></i>
@@ -40,7 +40,7 @@
         {{- else -}}
         <li class="mb-2{{ if eq .Permalink $page.Permalink }} active text-accent{{ end }}" tabindex="-1">
           <a href="{{ .Permalink }}"{{ if .Params.redirect }} target="_blank"{{ end }}>
-            {{- .Title -}}
+            {{- .LinkTitle -}}
             {{- if .Params.redirect -}}
               <i class="ms-1 fas fa-external-link-alt"></i>
             {{- end -}}
