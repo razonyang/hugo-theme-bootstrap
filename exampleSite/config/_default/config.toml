@@ -23,7 +23,7 @@ enableRobotsTXT = true
 
 enableEmoji = true
 
-hasCJKLanguage = false # Set to true if your content contains Chinese/Japanese/Korean Languages.
+# hasCJKLanguage = true # Uncomment it if your content contains Chinese/Japanese/Korean Languages.
 
 pygmentsUseClasses = true
 
