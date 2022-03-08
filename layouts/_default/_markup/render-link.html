@@ -1,6 +1,10 @@
-{{- $target := .Destination | safeURL -}}
+{{- $dest := .Destination -}}
+{{- if hasPrefix $dest "#" -}}
+  {{- $dest = printf "%s%s" .Page.Permalink $dest -}}
+{{- end -}}
+{{- $target := $dest | safeURL -}}
 {{- $destHost := (urls.Parse .Destination).Host -}}
 {{- $external := and (ne $destHost "") (ne $destHost (urls.Parse .Page.Site.BaseURL).Host) -}}
-<a href="{{ .Destination | safeURL }}"{{ with .Title}} title="{{ . }}"{{ end }}{{ if $external }} target="_blank" rel="noopener noreferrer"{{ end }}>
+<a href="{{ $dest | safeURL }}"{{ with .Title}} title="{{ . }}"{{ end }}{{ if $external }} target="_blank" rel="noopener noreferrer"{{ end }}>
   {{- .Text | safeHTML -}}
 </a>
