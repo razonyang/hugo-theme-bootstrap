@@ -5,7 +5,6 @@ featured = true
 comment = true
 toc = true
 reward = true
-pinned = true
 categories = [
 ]
 tags = [
@@ -17,13 +16,7 @@ series = [
   "Docs"
 ]
 images = []
-weight = 1000
-aliases = [
-  "/en/posts/installation/hugo-module"
-]
-[menu.footer]
-  parent = "docs"
-  weight = 3
+weight = 90
 +++
 
 This article refers to the modern, up-to-date installation method of installing the theme locally as Hugo module.
@@ -185,10 +178,3 @@ $ hugo mod get -u github.com/razonyang/hugo-theme-bootstrap@v0.67.1
 ```shell
 $ hugo mod get -u github.com/razonyang/hugo-theme-bootstrap@de4a40f
 ```
-
-## Up Next
-
-- [Authoring content]({{< ref "/docs/authoring" >}})
-- [Tweak Configuration]({{< ref "/docs/configuration" >}})
-- [Menu]({{< ref "/docs/menu" >}})
-- [Look and Feel]({{< ref "/docs/look-and-feel" >}})

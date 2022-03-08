@@ -20,6 +20,7 @@ images = []
 aliases = [
   "/en/posts/menu"
 ]
+weight = 970
 +++
 
 We predefined two types of menus: `main` and `footer`, represents the top app bar menus and the footer menus, respectively.
