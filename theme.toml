@@ -24,7 +24,7 @@ features = [
   "breadcrumb",
   "search"
 ]
-min_version = "0.75.0"
+min_version = "0.84.0"
 [author]
   name = "Razon Yang"
   homepage = "https://razonyang.com"
