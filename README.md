@@ -2,6 +2,10 @@
 
 A fast, responsive and feature-rich Hugo theme for personal blog and documentations.
 
+## NOTE
+
+Since `v0.68.0`, HBS uses Hugo Pipes to generate CSS and JS assets, there are a lot of breaking changes, please check out the [CHANGELOG](CHANGELOG.md) and [UPGRADE.md](UPGRADE.md) for details.
+
 ## Screenshots
 
 ![Screenshot](https://raw.githubusercontent.com/razonyang/hugo-theme-bootstrap/master/images/screenshot.png)
@@ -26,6 +30,7 @@ There is also a [list of websites that use this theme](https://github.com/razony
 
 ## Features
 
+- [Hugo Pipes](https://gohugo.io/hugo-pipes/): used to generate CSS and JS assets.
 - [Flexible and Configurable](https://hbs.razonyang.com/en/posts/configuration).
 - Fast and Good User Experience: [Google PageSpeed Insights](https://pagespeed.web.dev/report?url=https://hbs.razonyang.com/en/)'s score is over 95.
 - Built on top of custom [Bootstrap 5](https://getbootstrap.com/).
