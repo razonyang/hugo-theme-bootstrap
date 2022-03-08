@@ -5,7 +5,6 @@ featured = true
 comment = true
 toc = true
 reward = true
-pinned = true
 categories = [
   ""
 ]
@@ -17,18 +16,12 @@ series = [
   "檔案"
 ]
 images = []
-weight = 1000
-aliases = [
-  "/zh-tw/posts/installation/install-via-git-submodule"
-]
-[menu.footer]
-  parent = "docs"
-  weight = 1
+weight = 100
 +++
 
 This article refers to the traditional installation method of cloning the theme locally as Git submodule.
 It describes how to install, upgrade the theme, and write new articles.
-While this installation method is still widely used, we recommend to install the theme as [Hugo module]({{< ref "/docs/installation/install-via-hugo-module" >}}).
+While this installation method is still widely used, we recommend to install the theme as [Hugo module]({{< ref "/docs/installation/hugo-module" >}}).
 
 ## 安裝
 
@@ -101,9 +94,3 @@ $ hugo new posts/new-post/index.zh-cn.md
 > 請注意：創建的文章一般處於草稿狀態，本地預覽時，`hugo server` 需要指定 `-D` 參數才能預覽草稿文章。文章發佈時，需要將 `draft` 改為 `false`，或者直接移除 `draft` 參數。
 
 > 你可以將文章放在任何地方，比如 `blog`，只需要將 `blog` 附加到 `mainSections` 參數：`mainSections = ["posts", "blog"]`。
-
-## 下一步
-
-- [調整配置]({{< ref "/docs/configuration" >}})
-- [菜單]({{< ref "/docs/menu" >}})
-- [觀感]({{< ref "/docs/look-and-feel" >}})

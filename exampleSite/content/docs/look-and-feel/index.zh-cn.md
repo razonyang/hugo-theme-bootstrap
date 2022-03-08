@@ -19,7 +19,7 @@ series = [
   "文档"
 ]
 images = []
-weight = 980
+weight = 960
 aliases = [
   "/zh-cn/posts/look-and-feel"
 ]

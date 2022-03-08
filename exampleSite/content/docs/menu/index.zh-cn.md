@@ -20,6 +20,7 @@ images = []
 aliases = [
   "/zh-cn/posts/menu"
 ]
+weight = 970
 +++
 
 我们预定义了两种类型的菜单：`main` 和 `footer`，分别表示顶部的应用程序栏菜单和页脚菜单。
