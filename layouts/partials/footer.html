@@ -1,5 +1,5 @@
 <footer class="footer mt-auto py-3 text-center container{{ if default false .Site.Params.fullWidth }}-fluid{{ end }}">
   {{- partial "hooks/footer-begin" . -}}
-  {{- partial "footer/main" . -}}
+  {{- partialCached "footer/main" . -}}
   {{- partial "hooks/footer-end" . -}}
 </footer>
