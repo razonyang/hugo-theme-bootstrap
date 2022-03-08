@@ -28,6 +28,12 @@
           {{- $count = add $count 1 }}
           {{- end -}}
         {{- end -}}
+        {{- if gt (len $value) $taxonomyCount -}}
+        <a href="{{ absLangURL (urlize $key) }}" class="badge rounded post-taxonomy" title="ALL">
+          ALL
+          <span class="badge badge-sm text-white bg-accent ms-1">{{ len $value }}</span>
+        </a>
+        {{- end -}}
         </div>
       </div>
     </section>
