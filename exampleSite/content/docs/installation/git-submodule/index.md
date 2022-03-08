@@ -1,11 +1,11 @@
 +++
-title = "Git Submodule"
+title = "Install via Git Submodule"
+linkTitle = "Git Submodule"
 date = 2021-12-04T10:43:39+08:00
 featured = false
 comment = true
 toc = true
 reward = true
-pinned = false
 categories = [
 ]
 tags = [
@@ -17,18 +17,12 @@ series = [
   "Docs"
 ]
 images = []
-weight = 2000
-aliases = [
-  "/en/posts/installation/install-via-git-submodule"
-]
-[menu.footer]
-  parent = "docs"
-  weight = 2
+weight = 100
 +++
 
 This article refers to the traditional installation method of cloning the theme locally as Git submodule.
 It describes how to install, upgrade the theme, and write new articles.
-While this installation method is still widely used, we recommend to install the theme as [Hugo module]({{< ref "/docs/installation/install-via-hugo-module" >}}).
+While this installation method is still widely used, we recommend to install the theme as [Hugo module]({{< ref "/docs/installation/hugo-module" >}}).
 
 ## Installation
 
@@ -89,10 +83,3 @@ $ git commit -m 'Upgrade the theme'
 
 - Replace the `[version]` with the latest version. The version can be listed by `git tag -l | sort -rV`.
 - You can also checkout the `master` branch for getting the latest commit.
-
-## Up Next
-
-- [Authoring content]({{< ref "/docs/authoring" >}})
-- [Tweak Configuration]({{< ref "/docs/configuration" >}})
-- [Menu]({{< ref "/docs/menu" >}})
-- [Look and Feel]({{< ref "/docs/look-and-feel" >}})

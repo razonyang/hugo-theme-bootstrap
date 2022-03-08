@@ -1,5 +1,6 @@
 +++
-title = "Adding content"
+title = "添加内容"
+linkTitle = "内容"
 date = 2021-12-04T10:43:39+08:00
 featured = true
 comment = true
@@ -16,10 +17,7 @@ series = [
   "Docs"
 ]
 images = []
-weight = 1500
-aliases = [
-  "/en/posts/authoring"
-]
+weight = 970
 [menu.footer]
   parent = "docs"
   weight = 5
