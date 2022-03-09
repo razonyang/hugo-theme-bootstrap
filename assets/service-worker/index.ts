@@ -18,18 +18,16 @@ cleanupOutdatedCaches();
 
 setCatchHandler(async ({ request }) => {
   if (request.destination === 'document') {
-    if (config.multilingual) {
-      var lang = '';
-      const url = new URL(request.url);
-      const paths = url.pathname.split('/');
-      if (paths.length > 1) {
-        lang = '/' + paths[1] + '/';
-      }
-  
-      return matchPrecache(lang + 'offline/');
-    } else {
-      return matchPrecache('/offline/');
+    var lang = '';
+    var url = new URL(request.url);
+    const paths = url.pathname.split('/');
+    if (paths.length > 1) {
+      lang = paths[1];
     }
+    if (config.langs.includes(lang)) {
+      return matchPrecache('/' + lang + '/offline/');
+    }
+    return matchPrecache('/offline/');
   }
 
   return Response.error();

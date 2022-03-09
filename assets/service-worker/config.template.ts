@@ -1,29 +1,28 @@
 {{- $defaultRivision := now.Unix  -}}
+{{- $langs := slice -}}
 {{- $pages := slice -}}
-{{- range $.Site.AllPages -}}
-  {{- $revision := $defaultRivision -}}
-  {{- with .File -}}
-      {{- $revision = .UniqueID -}}
-  {{- end -}}
-  {{- $pages = $pages | append (dict "url" .Permalink "revision" $revision) -}}
-{{- end -}}
 
 {{- partial "helpers/read-dir" (dict "Path" "/static" "Scratch" $.Scratch) -}}
 
-{{ if eq (len .Sites) 1 }}
-  {{- $pages = $pages | append (dict "url" (printf "/%s" "manifest.json" | absURL) "revision" $defaultRivision)  -}}
-{{ else }}
-{{- range $.Site.Languages -}}
-  {{- $pages = $pages | append (dict "url" (printf "/%s/%s" .Lang "manifest.json" | absURL) "revision" $defaultRivision)  -}}
+{{- $paths := slice "manifest.json" -}}
+{{- $layouts := slice "offline" -}}
+{{- range $site := $.Sites -}}
+  {{- $langs = $langs | append $site.LanguagePrefix -}}
+  {{ range where $site.Pages "Layout" "in" $layouts }}
+    {{- $pages = $pages | append (dict "url" .Permalink "revision" $defaultRivision) -}}
+  {{- end -}}
+  {{ range $path := $paths }}
+    {{- $pages = $pages | append (dict "url" ( printf "%s/%s" $site.LanguagePrefix $path | absURL) "revision" $defaultRivision) -}}
+  {{- end -}}
 {{- end -}}
-{{ end }}
 
+const langs = JSON.parse('{{ $langs | jsonify }}');
 const pages = JSON.parse('{{ $pages | jsonify }}');
 const assets = JSON.parse('{{ $.Scratch.Get "hbs-assets" | jsonify }}');
 const multilingual = {{ if eq (len .Sites) 1 }}false{{ else }}true{{ end }};
 const config = {
     version: {{ now.Unix }},
-    multilingual: {{ if eq (len .Sites) 1 }}false{{ else }}true{{ end }},
+    langs: langs,
     pages: pages,
     assets: assets
 };
