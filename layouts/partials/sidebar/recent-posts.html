@@ -1,4 +1,4 @@
-{{- $count := default 5 (default .Params.recentPostCount .Site.Params.recentPostCount) -}}
+{{- $count := default .Params.recentPostCount .Site.Params.recentPostCount -}}
 {{- $sections := .Site.Params.mainSections -}}
 {{- if in (slice "posts" "docs") .Type -}}
   {{- $sections = slice .Type -}}

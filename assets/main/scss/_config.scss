@@ -6,4 +6,4 @@ $fontSizes: (
     xl: {{ default "1.15rem" .Site.Params.fontSize.extraLarge }},
 );
 
-$fixedHeader: {{ if (default true .Site.Params.fixedHeader) }}true{{ else }}false{{ end }};
+$fixedHeader: {{ if .Site.Params.fixedHeader }}true{{ else }}false{{ end }};

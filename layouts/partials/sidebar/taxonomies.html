@@ -1,8 +1,6 @@
-{{- $order := default (slice "series" "categories" "tags") $.Site.Params.sidebarTaxonomies -}}
-{{- range $expected := $order -}}
+{{- range $expected := $.Site.Params.sidebarTaxonomies -}}
 {{- range $key, $value := $.Site.Taxonomies -}}
   {{- if eq $key $expected -}}
-  {{- $countPosts := default false $.Site.Params.countTaxonomyPosts -}}
   {{- $countParams := dict "categories" "categoryCount" "tags" "tagCount" "series" "seriesCount" -}}
   {{- $param := default "" (index $countParams $key) -}}
   {{- $taxonomyCount := default 10 ($.Site.Param $param) -}}
@@ -21,7 +19,7 @@
           {{- if and (lt $count $taxonomyCount) (ne .Name "") -}}
           <a href="{{ .Page.Permalink }}" class="badge rounded post-taxonomy" title="{{ .Page.Title }}">
             {{ .Page.Title }}
-            {{- if $countPosts -}}
+            {{- if $.Site.Params.countTaxonomyPosts -}}
               <span class="badge badge-sm text-white bg-accent ms-1">{{ .Count }}</span>
             {{- end -}}
           </a>
