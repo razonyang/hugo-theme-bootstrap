@@ -59,6 +59,7 @@ aliases = [
 | `mainSections` | Array | `["posts"]` | 主要的 sections
 | `titleCase` | Boolean | `false` | 标题首字母是否大写
 | `titleSeparator` | String | `-` | 标题分隔符
+| `backgroundImage` | Array | `[]` | 背景图，如：`['/images/bg.png']`, `['/images/bg-light.png', '/images/bg-dark.png']`。
 | `comment` | Boolean | `true` | 是否开启评论
 | `toc` | Boolean | `true` | 是否开启目录
 | `tocWordCount` | Integer | `280` | 仅当文章的字数超过此值时，才会显示目录。
