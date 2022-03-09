@@ -1,5 +1,6 @@
 +++
-title = "快速入门"
+title = "通过 Git Submodule 安装"
+linkTitle = "Git Submodule"
 date = 2021-12-04T10:43:39+08:00
 featured = false
 comment = true
