@@ -59,6 +59,7 @@ See also [All Configuration Settings](https://gohugo.io/getting-started/configur
 | `mainSections` | Array | `["posts"]` | Main sections
 | `titleCase` | Boolean | `false` | Capitalized title or not
 | `titleSeparator` | String | `-` | Title separator
+| `backgroundImage` | Array | `[]` | Background image, such as `['/images/bg.png']`, `['/images/bg-light.png', '/images/bg-dark.png']`.
 | `comment` | Boolean | `true` | Whether to enable comments
 | `toc` | Boolean | `true` | Whether to enable TOC
 | `tocWordCount` | Integer | `280` | TOC is displayed only if the post's word count is greater than this value.
