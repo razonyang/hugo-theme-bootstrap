@@ -1,9 +1,8 @@
-{{- $titleCase := default false $.Site.Params.titleCase -}}
 {{- $.Scratch.Add "index" slice -}}
 {{- range .Site.RegularPages -}}
-    {{- $date := .Date.Format (default "Jan 2, 2006" $.Site.Params.dateFormat) -}}
+    {{- $date := .Date.Format $.Site.Params.dateFormat -}}
     {{- $title := .Title }}
-    {{- if $titleCase -}}
+    {{- if $.Site.Params.titleCase -}}
         {{- $title = title $title -}}
     {{- end -}}
     {{- $img := "" -}}

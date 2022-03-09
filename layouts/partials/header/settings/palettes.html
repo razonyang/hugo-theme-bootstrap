@@ -1,6 +1,4 @@
-{{- if not (and (isset .Site.Params "palettes") (not .Site.Params.palettes)) -}}
-{{- $palettes := slice "blue" "blue gray" "brown" "cyan" "green" "indigo" "orange" "pink" "purple" "red" "teal" "yellow" -}}
-{{- $palettes := default $palettes .Site.Params.Palettes -}}
+{{- if .Site.Params.palettes -}}
 <div class="setting palettes">
   <form class="row">
     <div class="col-auto">
@@ -13,7 +11,7 @@
     </div>
   </form>
   <div class="mt-2 d-flex justify-content-between visually-hidden" id="palettePicker">
-    {{- range $palettes -}}
+    {{- range .Site.Params.Palettes -}}
     {{- $key := replace . " " "-" -}}
     {{- $title := replace . " " "_" | printf "color_%s" | T -}}
       <button type="button" id="palette-{{ $key }}" aria-label="{{ $title }}"

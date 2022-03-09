@@ -1,4 +1,4 @@
-{{- if (default true .Site.Params.viewer) -}}
+{{- if .Site.Params.viewer -}}
     {{- $options := dict "targetPath" "assets/viewer/bundle.min.css" "outputStyle" "compressed" "includePaths" (slice "node_modules") -}}
     {{- $style := resources.Get "viewer/scss/index.scss" | toCSS $options | fingerprint -}}
     <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous">

@@ -2,11 +2,10 @@
 {{- $pageNumber := "" -}}
 {{- $paginator := false -}}
 {{- if .IsHome -}}
-  {{- $sections := default (slice "posts") .Site.Params.mainSections -}}
-  {{- $allPosts := where .Site.RegularPages "Type" "in" $sections -}}
+  {{- $allPosts := where .Site.RegularPages "Type" "in" .Site.Params.mainSections -}}
   {{- $pinnedPosts := slice -}}
-  {{- if (default true $.Site.Params.pinnedPost) -}}
-  {{- $pinnedPosts = first (default 1 $.Site.Params.pinnedPostCount) (where $allPosts ".Params.pinned" true) -}}
+  {{- if $.Site.Params.pinnedPost -}}
+  {{- $pinnedPosts = first $.Site.Params.pinnedPostCount (where $allPosts ".Params.pinned" true) -}}
   {{- range $pinnedPosts -}}
     {{- with .File.UniqueID -}}
       {{- $.Scratch.Add "pinnedPosts" (slice .) -}}
@@ -15,7 +14,7 @@
   {{- end -}}
   {{- $paginator = .Paginate (union $pinnedPosts $allPosts) -}}
 {{- else if eq .Kind "taxonomy" -}}
-  {{- $paginator = .Paginate .Pages.ByTitle (default 10 .Site.Params.taxonomyPaginate) -}}
+  {{- $paginator = .Paginate .Pages.ByTitle .Site.Params.taxonomyPaginate -}}
 {{- else -}}
   {{- $paginator = .Paginate .RegularPagesRecursive -}}
 {{- end -}}
@@ -31,5 +30,5 @@
 {{- if not .IsHome -}}
   {{- $titles = $titles | append .Site.Title -}}
 {{- end -}}
-{{- $separator := printf " %s " (default "-" .Site.Params.titleSeparator) -}}
+{{- $separator := printf " %s " .Site.Params.titleSeparator -}}
 {{- delimit $titles $separator -}}

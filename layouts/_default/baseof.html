@@ -17,7 +17,7 @@
     </script>
     {{- partial "header.html" . -}}
     {{- partial "hooks/main-begin" . -}}
-    <main class="container{{ if default false .Site.Params.fullWidth }}-fluid{{ end }}">
+    <main class="container{{ if .Site.Params.fullWidth }}-fluid{{ end }}">
       <div class="row content">
         {{- block "content" . -}}{{- end -}}
       </div>

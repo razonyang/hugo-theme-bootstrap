@@ -1,7 +1,6 @@
 {{- $enable := and (default true .Params.toc) (default true .Site.Params.toc) -}}
-{{- $wordCount := default 280 .Site.Params.tocWordCount -}}
 {{- $toc := .TableOfContents -}}
-{{- $valid := and $toc (and (ne $toc "<nav id=\"TableOfContents\"></nav>") (gt .WordCount $wordCount)) -}}
+{{- $valid := and $toc (and (ne $toc "<nav id=\"TableOfContents\"></nav>") (gt .WordCount .Site.Params.tocWordCount)) -}}
 {{- if and $enable $valid -}}
 <div class="post-toc row mb-4 card component" id="postTOC">
   <div class="card-header">
