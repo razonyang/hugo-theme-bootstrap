@@ -1,7 +1,7 @@
-{{- $options := dict "targetPath" "js/katex.min.js" "minify" true -}}
+{{- $options := dict "targetPath" "service-worker.min.js" "minify" true -}}
 {{- $index := resources.Get "service-worker/index.ts" }}
 {{- $config := resources.Get "service-worker/config.template.ts" | resources.ExecuteAsTemplate "service-worker/config.ts" . -}}
-{{- $script := slice $config $index | resources.Concat "service-worker.ts" | js.Build $options -}}
+{{- $script := slice $config $index | resources.Concat "service-worker/bundle.ts" | js.Build $options -}}
 {{- if isset $.Site.Params "pwa" -}}
 <script>
 if ('serviceWorker' in navigator) {
