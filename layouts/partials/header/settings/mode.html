@@ -1,5 +1,5 @@
 {{- if not (in (slice "light" "dark") $.Site.Params.color) -}}
-<section class="setting">
+<div class="setting">
   <form class="row">
     <div class="col-auto">
       <label><i class="fas fa-fw fa-adjust"></i> {{ i18n "mode" }}</label>
@@ -10,5 +10,5 @@
       </div>
     </div>
   </form>
-</section>
+</div>
 {{- end -}}

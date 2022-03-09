@@ -1,7 +1,7 @@
 {{- if not (and (isset .Site.Params "palettes") (not .Site.Params.palettes)) -}}
 {{- $palettes := slice "blue" "blue gray" "brown" "cyan" "green" "indigo" "orange" "pink" "purple" "red" "teal" "yellow" -}}
 {{- $palettes := default $palettes .Site.Params.Palettes -}}
-<section class="setting palettes">
+<div class="setting palettes">
   <form class="row">
     <div class="col-auto">
       <label><i class="fas fa-fw fa-palette"></i> {{ i18n "palette" }}</label>
@@ -21,5 +21,5 @@
       </button>
     {{- end -}}
   </div>
-</section>
+</div>
 {{- end -}}
