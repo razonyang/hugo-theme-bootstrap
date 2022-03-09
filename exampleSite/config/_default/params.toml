@@ -66,6 +66,8 @@ titleCase = true # Capitalized title.
 
 viewer = true # Image Viewer
 
+# backgroundImage = ['/images/bg-light.png', '/images/bg-dark.png']
+
 [codeBlock]
   # maxLines = 8
   lineNos = false # true/false represents that show/hide the line numbers by default.
