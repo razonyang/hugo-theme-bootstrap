@@ -1,9 +1,9 @@
+{{- $maxLength := default 340 $.Site.Params.post.excerptMaxLength -}}
 {{- $key := $.Site.Params.post.excerpt -}}
 {{- $content :=  "" -}}
-{{- if eq $key "description" -}}
+{{- if and (eq $key "description") (gt (len .Description) 0) -}}
   {{- $content = .Description -}}
 {{- else -}}
   {{- $content = .Summary -}}
 {{- end -}}
-{{- $maxLength := default 340 $.Site.Params.post.excerptMaxLength -}}
 {{- replaceRE "[^>]*===exibe no card daqui pra baixo===" "" $content 1 | truncate $maxLength -}}
