@@ -1,9 +1,12 @@
 // PLEASE DO NOT OVERRIDE THIS FILE.
+{{ $params := $.Site.Params }}
 $fontSizes: (
-    xs: {{ default ".85rem" .Site.Params.fontSize.extraLarge }},
-    sm: {{ default ".925rem" .Site.Params.fontSize.extraLarge }},
-    lg: {{ default "1.075rem" .Site.Params.fontSize.extraLarge }},
-    xl: {{ default "1.15rem" .Site.Params.fontSize.extraLarge }},
+    xs: {{ default ".85rem" $params.fontSize.extraLarge }},
+    sm: {{ default ".925rem" $params.fontSize.extraLarge }},
+    lg: {{ default "1.075rem" $params.fontSize.extraLarge }},
+    xl: {{ default "1.15rem" $params.fontSize.extraLarge }},
 );
 
-$fixedHeader: {{ if .Site.Params.fixedHeader }}true{{ else }}false{{ end }};
+$fixedHeader: {{ if $params.fixedHeader }}true{{ else }}false{{ end }};
+$backgroundImageLight: '{{ with $params.backgroundImage }}{{ index . 0 }}{{ end }}';
+$backgroundImageDark: '{{ with $params.backgroundImage }}{{ if gt (len .) 1 }}{{ index . 1 }}{{ else }}{{ index . 0 }}{{ end }}{{ end }}';
