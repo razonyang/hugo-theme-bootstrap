@@ -7,6 +7,7 @@ const purgecss = require('@fullhuman/postcss-purgecss')({
   safelist: [
     'col-lg-10',
     'fs-lg', 'fs-sm', 'fs-xl', 'fs-xs',
+    'show',
     'text-pre-wrap',
   ]
 });
