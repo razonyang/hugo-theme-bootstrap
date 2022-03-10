@@ -93,8 +93,8 @@
 
       .action-icon {
         padding: 0.75rem;
-        background-color: var(--#{$variable-prefix}-background);
-        color: var(--#{$variable-prefix}-primary-text-on-background);
+        background-color: var(--#{$variable-prefix}background);
+        color: var(--#{$variable-prefix}primary-text-on-background);
         margin-bottom: 0.25rem;
       }
 

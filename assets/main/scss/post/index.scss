@@ -189,7 +189,7 @@
 }
 
 #TableOfContents {
-  color: var(--#{$variable-prefix}-secondary-text-on-surface);
+  color: var(--#{$variable-prefix}secondary-text-on-surface);
 
   ul li {
     a {
@@ -205,7 +205,7 @@
 
 .post-list {
   margin: .25rem 0;
-  color: var(--#{$variable-prefix}-secondary-text-on-surface);
+  color: var(--#{$variable-prefix}secondary-text-on-surface);
   list-style: none;
   padding-left: 0.25rem;
   
