@@ -5,12 +5,12 @@
   {{- $allPosts := where .Site.RegularPages "Type" "in" .Site.Params.mainSections -}}
   {{- $pinnedPosts := slice -}}
   {{- if $.Site.Params.pinnedPost -}}
-  {{- $pinnedPosts = first $.Site.Params.pinnedPostCount (where $allPosts ".Params.pinned" true) -}}
+  {{- $pinnedPosts = first $.Site.Params.pinnedPostCount (where $allPosts.ByWeight.Reverse ".Params.pinned" true) -}}
   {{- range $pinnedPosts -}}
     {{- with .File.UniqueID -}}
       {{- $.Scratch.Add "pinnedPosts" (slice .) -}}
     {{- end -}}
-    {{- end -}}
+  {{- end -}}
   {{- end -}}
   {{- $paginator = .Paginate (union $pinnedPosts $allPosts) -}}
 {{- else if eq .Kind "taxonomy" -}}
