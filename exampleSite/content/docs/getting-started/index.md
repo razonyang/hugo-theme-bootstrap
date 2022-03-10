@@ -18,7 +18,7 @@ series = [
 images = []
 weight = 1000
 aliases = [
-  "/en/posts/installation"
+  "/en/posts/getting-started"
 ]
 [menu.footer]
   parent = "docs"
