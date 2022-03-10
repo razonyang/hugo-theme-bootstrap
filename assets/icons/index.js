@@ -1,7 +1,7 @@
 import { library, dom, config } from '@fortawesome/fontawesome-svg-core';
 import {
-  faAdjust, faArrowsAltV, faArrowLeft, faBars, faBuilding, faCheckCircle, faChevronCircleDown,
-  faChevronLeft, faCode, faCoffee, faComments, faColumns, faCopy, faCopyright, faEdit, faEllipsisV,
+  faAdjust, faArrowsAltV, faBars, faBuilding, faCheckCircle, faChevronCircleDown,
+  faCode, faCoffee, faComments, faColumns, faCopy, faCopyright, faEdit, faEllipsisV,
   faEnvelope, faExclamationTriangle, faExpandAlt, faEyeDropper, faFont, faFileAlt, faFileArchive,
   faFolder, faHome, faInfoCircle, faLanguage, faLink, faList, faListAlt, faMapMarkerAlt, faPalette,
   faQuestion, faQuestionCircle, faRedoAlt, faRss, faSearch, faShareAlt, faSkullCrossbones,
@@ -21,8 +21,8 @@ import { faLiberapay, faBilibili, faOffline } from './icons';
 
 let icons = [
   // Solid Icons
-  faAdjust, faArrowsAltV, faArrowLeft, faBars, faBuilding, faCheckCircle, faChevronCircleDown,
-  faChevronLeft, faCode, faCoffee, faComments, faColumns, faCopy, faCopyright, faEdit, faEllipsisV,
+  faAdjust, faArrowsAltV, faBars, faBuilding, faCheckCircle, faChevronCircleDown,
+  faCode, faCoffee, faComments, faColumns, faCopy, faCopyright, faEdit, faEllipsisV,
   faEnvelope, faExclamationTriangle, faExpandAlt, faEyeDropper, faFont, faFileAlt, faFileArchive,
   faFolder, faHome, faInfoCircle, faLanguage, faLink, faList, faListAlt, faMapMarkerAlt, faPalette,
   faQuestion, faQuestionCircle, faRedoAlt, faRss, faSearch, faShareAlt, faSkullCrossbones,
