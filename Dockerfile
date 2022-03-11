@@ -3,7 +3,7 @@ FROM klakegg/hugo:ubuntu as builder
 
 RUN apt-get update -y
 
-RUN curl -fsSL https://deb.nodesource.com/setup_17.x | sudo -E bash -
+RUN curl -fsSL https://deb.nodesource.com/setup_17.x | -E bash -
 RUN apt-get install -y git nodejs
 
 # Build site
