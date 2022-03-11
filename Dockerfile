@@ -1,5 +1,5 @@
 # Build stage
-FROM klakegg/hugo:ubuntu as builder
+FROM klakegg/hugo:ext-ubuntu as builder
 
 RUN apt-get update -y
 
@@ -12,7 +12,10 @@ WORKDIR /src
 COPY . /src
 ARG HUGO_BASEURL=/
 ENV HUGO_BASEURL=${HUGO_BASEURL}
-RUN cd /src/exampleSite && npm install && hugo version && hugo --themesDir=../../ --theme=src -b ${HUGO_BASEURL}
+RUN cd /src/exampleSite
+RUN npm install
+RUN hugo version
+RUN hugo --themesDir=../../ --theme=src -b ${HUGO_BASEURL}
 
 # Final stage
 FROM nginx
