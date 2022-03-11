@@ -3,8 +3,9 @@ FROM klakegg/hugo:ubuntu as builder
 
 RUN apt-get update -y
 
-RUN curl -fsSL https://deb.nodesource.com/setup_17.x | -E bash -
-RUN apt-get install -y git nodejs
+RUN apt-get install -y git curl
+RUN curl -fsSL https://deb.nodesource.com/setup_17.x | bash -
+RUN apt-get install -y nodejs
 
 # Build site
 WORKDIR /src
