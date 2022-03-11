@@ -3,15 +3,15 @@ FROM klakegg/hugo:ubuntu as builder
 
 RUN apt-get update -y
 
-RUN apt-get install -y git
+RUN curl -fsSL https://deb.nodesource.com/setup_17.x | sudo -E bash -
+RUN apt-get install -y git nodejs
 
 # Build site
 WORKDIR /src
 COPY . /src
 ARG HUGO_BASEURL=/
 ENV HUGO_BASEURL=${HUGO_BASEURL}
-RUN hugo version
-RUN cd /src/exampleSite && hugo --themesDir=../../ --theme=src -b ${HUGO_BASEURL}
+RUN cd /src/exampleSite && npm install && hugo version && hugo --themesDir=../../ --theme=src -b ${HUGO_BASEURL}
 
 # Final stage
 FROM nginx
