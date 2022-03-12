@@ -1,13 +1,7 @@
 # Build stage
 FROM klakegg/hugo:ext-ubuntu as builder
 
-RUN apt-get update -y
-
-RUN apt-get install -y git curl
-RUN curl -fsSL https://deb.nodesource.com/setup_17.x | bash -
-RUN apt-get install -y nodejs
-
-# Build site
+## Build site
 WORKDIR /src
 COPY . /src
 ARG HUGO_BASEURL=/
