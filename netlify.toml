@@ -1,6 +1,6 @@
 [build]
 command = "hugo"
-publish = "public"
+publish = "exampleSitepublic"
 
 [build.environment]
 NODE_VERSION = "17.6.0"
