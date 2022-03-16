@@ -98,9 +98,11 @@ $palettes: (
 );
 
 @each $name, $colors in $palettes {
-  [data-palette='#{$name}'] {
-    @each $key, $color in $colors {
-      --hbs-#{$key}: #{$color};
+  @if validatePalette($name) {
+    [data-palette='#{$name}'] {
+      @each $key, $color in $colors {
+        --hbs-#{$key}: #{$color};
+      }
     }
   }
 }
