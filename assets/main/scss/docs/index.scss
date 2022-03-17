@@ -7,6 +7,8 @@
 }
 
 .docs-catalog {
+    word-break: break-all;
+    
     @include media-breakpoint-down(lg) {
         position: fixed;
         top: 54px;
