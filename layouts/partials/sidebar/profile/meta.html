@@ -20,6 +20,6 @@
 <div class="profile-contact"><i class="fas fa-fw fa-question-circle"></i><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></div>
 {{- end -}}
 {{- with .social -}}
-{{- partial "helpers/social-links" (dict "links" . "size" "fa-2x" "OutputFormats" $.OutputFormats "home" ($.GetPage "/")) -}}
+{{- partial "helpers/social-links" (dict "links" . "size" "fa-2x" "OutputFormats" $.OutputFormats "home" ($.GetPage "/") "params" $.Site.Params) -}}
 {{- end -}}
 {{- end -}}
