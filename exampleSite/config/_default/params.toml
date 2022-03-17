@@ -67,6 +67,7 @@ titleCase = true # Capitalized title.
 viewer = true # Image Viewer
 
 # backgroundImage = ['/images/bg-light.png', '/images/bg-dark.png']
+# rss = "home" # link the RSS button to homepage all the times.
 
 [codeBlock]
   # maxLines = 8
