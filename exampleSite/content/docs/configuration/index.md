@@ -140,6 +140,7 @@ See also [All Configuration Settings](https://gohugo.io/getting-started/configur
 | `contact` | Object | - | [Contact Form]({{< ref "docs/layouts/contact-form" >}})
 | `pinnedPost` | Boolean | `true` | Turn on/off pinned posts.
 | `pinnedPostCount` | Integer | `1` | The number of pinned posts.
+| `rss` | String/Boolean | `true` | Display the RSS button on the social links. Turn it off by `false`, link it to homepage all the times by setting it to `home`.
 
 > Except the Google webmaster tool, the other webmaster tools cannot work with `hugo --minify`, because they cannot recognize the minified meta tag.
 
