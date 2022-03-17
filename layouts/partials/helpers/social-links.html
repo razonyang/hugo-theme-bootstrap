@@ -49,9 +49,15 @@
     {{- end -}}
   {{- end -}}
 {{- end -}}
+  {{- $rss := false -}}
   {{- with .OutputFormats.Get "rss" -}}
-    <a class="nav-link social-link" target="_blank" href="{{ .Permalink }}" title="RSS" rel="noopener noreferrer">
-      <i class="fas fa-fw{{ with $size }} {{ . }}{{ end }} fa-rss"></i>
-    </a>
+    {{- $rss = . -}}
+  {{- else -}}
+    {{- $rss = .home.OutputFormats.Get "rss" -}}
+  {{- end -}}
+  {{- with $rss -}}
+  <a class="nav-link social-link" target="_blank" href="{{ .Permalink }}" title="RSS" rel="noopener noreferrer">
+    <i class="fas fa-fw{{ with $size }} {{ . }}{{ end }} fa-rss"></i>
+  </a>
   {{- end -}}
 </nav>
