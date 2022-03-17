@@ -142,6 +142,7 @@ aliases = [
 | `contact` | Object | - | [联系表单]({{< ref "docs/layouts/contact-form" >}})
 | `pinnedPost` | Boolean | `true` | 开启/禁用文章置顶。
 | `pinnedPostCount` | Integer | `1` | 置顶的文章数量。
+| `rss` | String/Boolean | `true` | 在社交链接中显示 RSS 链接。`false` 为不显示，`home` 则总是链接到主页。
 
 > 除了 Google 站长工具外，其他搜索引擎站长工具无法与 `hugo --minify` 同时使用，这是因为它们无法识别优化后的元标签。
 
