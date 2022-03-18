@@ -5,10 +5,14 @@ const purgecss = require('@fullhuman/postcss-purgecss')({
       return els.tags.concat(els.classes, els.ids);
   },
   safelist: [
+    'bottom-0',
     'col-lg-10',
-    'fs-lg', 'fs-sm', 'fs-xl', 'fs-xs',
+    'end-0',
+    'fs-lg', 'fs-sm', 'fs-xl', 'fs-xs', 'fst-italic',
+    'opacity-50',
+    'pb-1', 'pe-3', 'pt-1', 'position-absolute',
     'show',
-    'text-pre-wrap',
+    'text-pre-wrap', 'text-uppercase', 'text-white', 'top-0',
   ]
 });
 

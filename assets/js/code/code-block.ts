@@ -42,6 +42,7 @@ class CodeBlock {
     this.wrapper.appendChild(this.element);
 
     this.appendLang();
+    this.appendTitle();
     this.appendPanel();
   }
 
@@ -49,8 +50,18 @@ class CodeBlock {
     const lang = this.code.getAttribute('data-lang');
     if (lang) {
       const element = document.createElement('div');
-      element.className = 'lang';
+      element.className = 'lang position-absolute top-0 end-0 text-white fst-italic text-uppercase opacity-50 fs-xs pe-3 pt-1';
       element.innerHTML = lang;
+      this.wrapper.appendChild(element);
+    }
+  }
+
+  appendTitle() {
+    const title = this.element.getAttribute('title');
+    if (title) {
+      const element = document.createElement('div');
+      element.className = 'title position-absolute bottom-0 end-0 text-white fst-italic opacity-50 pe-3 pb-1';
+      element.innerHTML = title;
       this.wrapper.appendChild(element);
     }
   }
