@@ -22,8 +22,8 @@ class CodeBlock {
     this.element = element;
     this.pre = element.querySelector('pre');
     this.code = this.pre.querySelector('code');
-    if (params.codeblock.maxline) {
-      this.maxLines = params.codeblock.maxline;
+    if (params.codeblock.maxlines) {
+      this.maxLines = params.codeblock.maxlines;
     }
     if (params.codeblock.linenos) {
       this.lineNos = params.codeblock.linenos;
