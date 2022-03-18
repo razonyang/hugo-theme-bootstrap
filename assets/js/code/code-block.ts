@@ -25,7 +25,7 @@ class CodeBlock {
     if (params.codeblock.maxlines) {
       this.maxLines = params.codeblock.maxlines;
     }
-    if (params.codeblock.linenos) {
+    if (params.codeblock.linenos !== undefined) {
       this.lineNos = params.codeblock.linenos;
     }
   }
