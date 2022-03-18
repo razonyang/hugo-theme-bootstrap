@@ -15,7 +15,7 @@ import {
   faCreativeCommonsNd, faCreativeCommonsSa, faDiscord, faDiscourse, faDocker, faFacebookF,
   faFacebookSquare, faGithub, faGitlab, faInstagram, faKaggle, faLastfm, faLinkedinIn, faMastodon,
   faMediumM, faPaypal, faPatreon, faPinterest, faQq, faQuora, faReddit, faStackOverflow,
-  faTelegramPlane, faTiktok, faTumblr, faTwitter, faYoutube, faWeibo, faWeixin, faZhihu,
+  faTelegramPlane, faTiktok, faTumblr, faTwitter, faXing, faYoutube, faWeibo, faWeixin, faZhihu,
 } from '@fortawesome/free-brands-svg-icons';
 import { faLiberapay, faBilibili, faOffline } from './icons';
 
@@ -36,7 +36,7 @@ let icons = [
   faCreativeCommonsNd, faCreativeCommonsSa, faDiscord, faDiscourse, faDocker, faFacebookF,
   faFacebookSquare, faGithub, faGitlab, faInstagram, faKaggle, faLastfm, faLinkedinIn, faMastodon,
   faMediumM, faPaypal, faPatreon, faPinterest, faQq, faQuora, faReddit, faStackOverflow,
-  faTelegramPlane, faTiktok, faTumblr, faTwitter, faYoutube, faWeibo, faWeixin, faZhihu,
+  faTelegramPlane, faTiktok, faTumblr, faTwitter, faXing, faYoutube, faWeibo, faWeixin, faZhihu,
 
   // Custom Icons
   faBilibili, faLiberapay, faOffline,
