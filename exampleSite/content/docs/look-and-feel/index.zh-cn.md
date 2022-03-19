@@ -33,16 +33,46 @@ aliases = [
 
 <!--more-->
 
+## 背景图片
+
+```toml {title="config/_default/params.toml"}
+# 在亮色和暗色模式下都使用相同的图片
+backgroundImage = ['/images/bg.png']
+
+# 在亮色和暗色模式下使用对应的图片
+backgroundImage = ['/images/bg-light.png', '/images/bg-dark.png']
+```
+
 ## 调色板
+
+HBS 提供了大量的配色：`blue`、`blue-gray`、`brown`、`cyan`、`green`、`indigo`、`orange`、`pink`、`purple`、`red`、`teal`、`yellow`。
+
+### 可用的配色
+
+设置面板的调色板选择器是基于 `palettes` 参数的。
+
+```toml {title="config/_default/params.toml"}
+palettes = ["blue", "blue-gray", "indigo"]
+```
+
+你也可以将 `palettes` 设置为空数组 `[]` 以禁用调色板。
+
+### 默认配色
+
+```toml {title="config/_default/params.toml"}
+palette = "indigo"
+```
+
+> 修改默认配色后，需要清理浏览器缓存。
+
+### 修改配色
 
 主题的调色板系统基于 CSS 变量，因此，我们可以轻松地为每个调色板自定义颜色。
 
-我们以一个例子进行说明。
-
-```CSS
+```scss {title="assets/main/scss/_custom.scss"}
 [data-palette=blue] {
-  --hbs-primary: darkblue;
-  --hbs-on-primary: #fff;
+    --#{$variable-prefix}primary: darkblue;
+    --#{$variable-prefix}on-primary: #fff;
 }
 ```
 
@@ -56,19 +86,12 @@ aliases = [
 
 你也可以轻易地使用其他 web 字体，比如 [Google Fonts](https://fonts.google.com/)。我们以 Roboto 字体为例。
 
-首先，我们通过 `customCSS` 导入字体：
+首先，我们导入字体，然后在 `assets/main/scss/_custom.scss` 覆盖 `body-font-family` 变量：
 
-```
-customCSS = [
-  "https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-]
-```
-
-然后在 `assets/main/scss/_custom.scss` 覆盖 `--hbs-body-font-family` 变量：
-
-```CSS
+```scss {title="assets/main/scss/_custom.scss"}
+@import 'https://fonts.googleapis.com/css2?family=Roboto&display=swap';
 :root {
-  --hbs-body-font-family: 'Roboto', sans-serif;
+    --#{$variable-prefix}body-font-family: 'Roboto', sans-serif;
 }
 ```
 
@@ -92,9 +115,7 @@ $ hugo gen chromastyles --style=solarized-dark > assets/main/scss/_highlight.scs
 
 ## 图标
 
-编辑文件 `assets/icons/custom.js`：
-
-```js
+```js {title="assets/icons/custom.js"}
 // import { faClock } from '@fortawesome/free-solid-svg-icons';
 // import { faAddressBook } from '@fortawesome/free-regular-svg-icons';
 // import { faAmazon, faGoogle } from '@fortawesome/free-brands-svg-icons';

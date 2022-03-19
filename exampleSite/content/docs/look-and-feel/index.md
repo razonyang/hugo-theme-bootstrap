@@ -34,16 +34,46 @@ However, the default scheme cannot satisfy everyone, but don't worry, you can ea
 
 <!--more-->
 
+## Background Image
+
+```toml {title="config/_default/params.toml"}
+# Use the same image on light and dark modes.
+backgroundImage = ['/images/bg.png']
+
+# Use different images on light and dark modes.
+backgroundImage = ['/images/bg-light.png', '/images/bg-dark.png']
+```
+
 ## Palettes
 
-The theme palettes system is based on CSS variable, therefore, we can easily custom the color per palette.
+HBS provides a plenty of palettes: `blue`, `blue-gray`, `brown`, `cyan`, `green`, `indigo`, `orange`, `pink`, `purple`, `red`, `teal`, `yellow`.
 
-Let's illustrate with an example.
+### Available Palettes
 
-```CSS
+The palette picker on the setting panel is based on the `palettes` parameter. 
+
+```toml {title="config/_default/params.toml"}
+palettes = ["blue", "blue-gray", "indigo"]
+```
+
+You can also disable the palette picker by setting the `palettes` parameter to an empty array `[]`.
+
+### Default Palette
+
+```toml {title="config/_default/params.toml"}
+palette = "indigo"
+```
+
+> You'll need to clear the browser cache after modifying the default palette.
+
+### Override Palette Color
+
+The palettes system is based on CSS variable, therefore, we can easily custom the color per palette.
+
+```scss {title="assets/main/scss/_custom.scss"}
 [data-palette=blue] {
-  --hbs-primary: darkblue;
-  --hbs-on-primary: #fff;
+    --#{$variable-prefix}primary: darkblue;
+    --#{$variable-prefix}on-primary: #fff;
 }
 ```
 
@@ -55,21 +85,14 @@ After appending the style to `assets/main/scss/_custom.scss`, the color of `blue
 
 We don't specify any font, so that `system-ui` will be used in most browsers.
 
-You can use other web fonts easilly, such as [Google Fonts](https://fonts.google.com/). Lets take the Roboto font as an example.
+You can use other web fonts easily, such as [Google Fonts](https://fonts.google.com/). Lets take the Roboto font as an example.
 
-First of all, we import the font by `customCSS`:
+First of all, we import the font, and then override the `body-font-family` variable in `assets/main/scss/_custom.scss`:
 
-```
-customCSS = [
-  "https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-]
-```
-
-And then override the `--hbs-body-font-family` variable in `assets/main/scss/_custom.scss`:
-
-```CSS
+```scss {title="assets/main/scss/_custom.scss"}
+@import 'https://fonts.googleapis.com/css2?family=Roboto&display=swap';
 :root {
-  --hbs-body-font-family: 'Roboto', sans-serif;
+    --#{$variable-prefix}body-font-family: 'Roboto', sans-serif;
 }
 ```
 
@@ -93,9 +116,7 @@ See also [All Supported Styles](https://xyproto.github.io/splash/docs/all.html).
 
 ## Icons
 
-Edit the file `assets/icons/custom.js`:
-
-```js
+```js {title="assets/icons/custom.js"}
 // import { faClock } from '@fortawesome/free-solid-svg-icons';
 // import { faAddressBook } from '@fortawesome/free-regular-svg-icons';
 // import { faAmazon, faGoogle } from '@fortawesome/free-brands-svg-icons';

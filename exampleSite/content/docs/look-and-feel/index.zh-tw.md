@@ -33,19 +33,50 @@ aliases = [
 
 <!--more-->
 
+## 背景圖片
+
+```toml {title="config/_default/params.toml"}
+# 在亮色和暗色模式下都使用相同的圖片
+backgroundImage = ['/images/bg.png']
+
+# 在亮色和暗色模式下使用對應的圖片
+backgroundImage = ['/images/bg-light.png', '/images/bg-dark.png']
+```
+
 ## 調色板
+
+HBS 提供了大量的配色：`blue`、`blue-gray`、`brown`、`cyan`、`green`、`indigo`、`orange`、`pink`、`purple`、`red`、`teal`、`yellow`。
+
+### 可用的配色
+
+設置面板的調色板選擇器是基於 `palettes` 參數的。
+
+```toml {title="config/_default/params.toml"}
+palettes = ["blue", "blue-gray", "indigo"]
+```
+
+你也可以將 `palettes` 設置為空數組 `[]` 以禁用調色板。
+
+### 默認配色
+
+```toml {title="config/_default/params.toml"}
+palette = "indigo"
+```
+
+> 修改默認配色後，需要清理瀏覽器緩存。
+
+### 修改配色
 
 主題的調色板系統基於 CSS 變量，因此，我們可以輕松地為每個調色板自定義顏色。
 
-我們以一個例子進行說明。
-
-```CSS
+```scss {title="assets/main/scss/_custom.scss"}
 [data-palette=blue] {
-  --hbs-primary: darkblue;
-  --hbs-on-primary: #fff;
+    --#{$variable-prefix}primary: darkblue;
+    --#{$variable-prefix}on-primary: #fff;
 }
 ```
 
+在 `assets/main/scss/_custom.scss` 追加樣式後，`blue` 調色板的顏色將會變成 `darkblue`。
 
 ## 字體
 
@@ -55,20 +86,12 @@ aliases = [
 
 你也可以輕易地使用其他 web 字體，比如 [Google Fonts](https://fonts.google.com/)。我們以 Roboto 字體為例。
 
-首先，我們通過 `customCSS` 導入字體：
+首先，我們導入字體，然後在 `assets/main/scss/_custom.scss` 覆蓋 `body-font-family` 變量：
 
-```
-customCSS = [
-  "https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-]
-```
-
-然後在 `assets/main/scss/_custom.scss` 覆蓋 `--hbs-body-font-family` 變量：
-
-
-```CSS
+```scss {title="assets/main/scss/_custom.scss"}
+@import 'https://fonts.googleapis.com/css2?family=Roboto&display=swap';
 :root {
-  --hbs-body-font-family: 'Roboto', sans-serif;
+    --#{$variable-prefix}body-font-family: 'Roboto', sans-serif;
 }
 ```
 
@@ -92,9 +115,7 @@ $ hugo gen chromastyles --style=solarized-dark > assets/main/scss/_highlight.scs
 
 ## 圖標
 
-編輯文件 `assets/icons/custom.js`：
-
-```js
+```js {title="assets/icons/custom.js"}
 // import { faClock } from '@fortawesome/free-solid-svg-icons';
 // import { faAddressBook } from '@fortawesome/free-regular-svg-icons';
 // import { faAmazon, faGoogle } from '@fortawesome/free-brands-svg-icons';
