@@ -77,6 +77,28 @@ $ hugo new posts/new-post/index.zh-cn.md
 
 > 请注意：创建的文章一般处于草稿状态，本地预览时，`hugo server` 需要指定 `-D` 参数才能预览草稿文章。文章发布时，需要将 `draft` 改为 `false`，或者直接移除 `draft` 参数。
 
+## Summary Selection Order
+
+1. If `post.excerpt = "description"` and `description` is not empty, then it'll be used.
+1. Manual splitting via <code>&lt;!--more--&gt;</code>.
+1. If `summary` on front matter isn't empty, then `summary` will be selected.
+1. The text of content will be cut off by `post.excerptMaxLength` and formatted in plain text or HTML when `post.plainifyExcerpt = ture`.
+
+```toml {title="config/_default/params.toml"}
+[post]
+  # excerpt = "description"
+  # excerptMaxLength = 120
+  # copyright = false # Whether to display copyright section on each post.
+  # plainifyExcerpt = false # Format excerpt in HTML if false.
+```
+
+## Thumbnail Selection Order
+
+1. The `images` on front matter are preferred.
+1. Page images resources that match the filename's patterns: `*feature*`, `*cover*` and `*thumbnail*`. Such as `posts/my-page/feature.png`.
+
+> The page images resources will be resized to several smaller versions to suit the users devices for saving the bandwidth.
+
 ## 文章置顶
 
 你可以通过在 front matter 设置 `pinned` 为 `true` 以置顶文章。

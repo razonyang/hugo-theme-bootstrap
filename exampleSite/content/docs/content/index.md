@@ -79,6 +79,28 @@ $ hugo new posts/new-post/index.zh-cn.md
 > Please remind that, the created posts are generally in draft state. You'll need to specify the `-D` parameter of the command `hugo server` for previewing.
 > Similarly, you need to change the `draft` to `false` or remove `draft` parameter if you want to publish the article.
 
+## Summary Selection Order
+
+1. If `post.excerpt = "description"` and `description` is not empty, then it'll be used.
+1. Manual splitting via <code>&lt;!--more--&gt;</code>.
+1. If `summary` on front matter isn't empty, then `summary` will be selected.
+1. The text of content will be cut off by `post.excerptMaxLength` and formatted in plain text or HTML when `post.plainifyExcerpt = ture`.
+
+```toml {title="config/_default/params.toml"}
+[post]
+  # excerpt = "description"
+  # excerptMaxLength = 120
+  # copyright = false # Whether to display copyright section on each post.
+  # plainifyExcerpt = false # Format excerpt in HTML if false.
+```
+
+## Thumbnail Selection Order
+
+1. The `images` on front matter are preferred.
+1. Page images resources that match the filename's patterns: `*feature*`, `*cover*` and `*thumbnail*`. Such as `posts/my-page/feature.png`.
+
+> The page images resources will be resized to several smaller versions to suit the users devices for saving the bandwidth.
+
 ## Pinning Posts
 
 You can pin posts on the home page by setting `pinned` to `true` on the front matter.
@@ -92,8 +114,6 @@ weight = 100
 ```
 
 > If there is multiple pinned posts, they are sorted by `weight` in descending order.
-
-### Site Parameters
 
 ```toml {title="config/_default/params.toml"}
 pinnedPost = false # Disable pinned posts globally.
