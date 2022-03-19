@@ -1,6 +1,8 @@
 HBS CHANGELOG
 =============
 
+**The CHANGELOG are included in [Releases](https://github.com/razonyang/hugo-theme-bootstrap/releases) now.**
+
 v0.68.0
 -------
 
