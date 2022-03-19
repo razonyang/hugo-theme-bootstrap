@@ -80,7 +80,7 @@ Tables aren't part of the core Markdown spec, but Hugo supports supports them ou
 
 ### Code block with backticks
 
-```html
+```html {title="public/index.html"}
 <!doctype html>
 <html lang="en">
 <head>
