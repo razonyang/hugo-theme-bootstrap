@@ -8,7 +8,9 @@ comment = true
 toc = true
 reward = true
 pinned = false
-categories = []
+categories = [
+  "Troubleshooting"
+]
 tags = []
 series = []
 images = []
