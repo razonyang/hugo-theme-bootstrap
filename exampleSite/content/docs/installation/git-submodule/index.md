@@ -77,7 +77,8 @@ $ cd themes/hugo-theme-bootstrap
 $ git fetch
 $ git checkout [version]
 $ cd ../../
-$ git add themes/hugo-theme-bootstrap
+$ hugo mod npm pack
+$ git add themes/hugo-theme-bootstrap package.json
 $ git commit -m 'Upgrade the theme'
 ```
 

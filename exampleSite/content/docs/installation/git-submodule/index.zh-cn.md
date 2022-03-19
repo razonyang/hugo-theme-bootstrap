@@ -71,27 +71,10 @@ $ cd themes/hugo-theme-bootstrap
 $ git fetch
 $ git checkout [version]
 $ cd ../../
-$ git add themes/hugo-theme-bootstrap
+$ hugo mod npm pack
+$ git add themes/hugo-theme-bootstrap package.json
 $ git commit -m 'Upgrade the theme'
 ```
 
 - 将 `[version]` 替换为最新的版本。所有版本可以通过命令 `git tag -l | sort -rV` 列出。
 - 你也可以直接使用 `master` 分支以获取最新的修改。
-
-## 书写文章
-
-> 假设默认语言为 `en`。
-
-```shell
-$ hugo new posts/new-post/index.md
-```
-
-上述命令创建了一篇英文文章，同样的，我们也可以创建一篇简体中文的文章：
-
-```shell
-$ hugo new posts/new-post/index.zh-cn.md
-```
-
-> 请注意：创建的文章一般处于草稿状态，本地预览时，`hugo server` 需要指定 `-D` 参数才能预览草稿文章。文章发布时，需要将 `draft` 改为 `false`，或者直接移除 `draft` 参数。
-
-> 你可以将文章放在任何地方，比如 `blog`，只需要将 `blog` 附加到 `mainSections` 参数：`mainSections = ["posts", "blog"]`。

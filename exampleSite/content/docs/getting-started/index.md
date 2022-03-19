@@ -53,7 +53,6 @@ Since `0.68.0`, HBS requires the following configurations are be set.
 - [Git Submodule]({{< ref "/docs/installation/git-submodule" >}}).
 - [Hugo Module]({{< ref "/docs/installation/hugo-module" >}}).
 
-
 ## Up Next
 
 - [Tweak Configuration]({{< ref "/docs/configuration" >}})
