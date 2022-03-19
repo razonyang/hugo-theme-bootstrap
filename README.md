@@ -32,6 +32,7 @@ There is also a [list of websites that use this theme](https://github.com/razony
 | [Menu](https://hbs.razonyang.com/en/docs/menu) | [菜单](https://hbs.razonyang.com/zh-cn/docs/menu) | [菜單](https://hbs.razonyang.com/zh-tw/posts/menu)
 | [Look and Feel](https://hbs.razonyang.com/en/docs/look-and-feel) | [观感](https://hbs.razonyang.com/zh-cn/docs/look-and-feel) | [觀感](https://hbs.razonyang.com/zh-tw/docs/look-and-feel)
 | [FAQ](https://hbs.razonyang.com/en/faq) | [常见问题](https://hbs.razonyang.com/zh-cn/faq) | [常見問題](https://hbs.razonyang.com/zh-tw/faq)
+| [Troubleshooting](https://hbs.razonyang.com/en/docs/troubleshooting) | [问题排查](https://hbs.razonyang.com/zh-cn/docs/troubleshooting) | [問題排查](https://hbs.razonyang.com/zh-tw/docs/troubleshooting)
 | [Get Involved](https://hbs.razonyang.com/en/docs/get-involved) | [参与我们](https://hbs.razonyang.com/zh-cn/docs/get-involved) | [參與我們](https://hbs.razonyang.com/zh-tw/docs/get-involved)
 
 ## Features
