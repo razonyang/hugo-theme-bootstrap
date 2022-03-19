@@ -1,3 +1,4 @@
 {{- with .Site.Author -}}
-{{- partial "helpers/image" (dict "filename" (default "images/profile.webp" .avatar) "class" "profile-avatar rounded-circle" "alt" .name "resources" $.Resources) -}}
+{{- $attributes := printf "data-viewer-invisible" | safeHTMLAttr -}}
+{{- partial "helpers/image" (dict "filename" (default "images/profile.webp" .avatar) "class" "profile-avatar rounded-circle" "alt" .name "resources" $.Resources "attributes" $attributes) -}}
 {{- end -}}
