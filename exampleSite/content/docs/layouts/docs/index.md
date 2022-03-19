@@ -18,9 +18,14 @@ series = [
 ]
 images = []
 +++
+
 In this post we explore the `docs` layout that can be used to publish project documentation, a Personal Knowledge Base (PKM), a [Digital Garden](https://maggieappleton.com/garden-history), a [Second Brain](https://fortelabs.co/blog/basboverview/), a [Zettelkasten](https://zenkit.com/en/blog/a-beginners-guide-to-the-zettelkasten-method/), your notes, and more.
+
 <!--more-->
-Since v0.63.0, the Hugo Bootstrap Theme supports a new section layout named as the `docs` layout. The `docs` layout is a three-column layout consisting of a "catalog" sidebar in the left column, the main document content in the middle column, and a Table of Contents as well as other configurable widgets in the right column. See the image below for a representative example of the `docs` layout. For a more comprehensive example, look at `content/en/docs` of the `exampleSite` included with this theme.
+
+> If you're going to use `docs` layout on other sections(`notes`), please take a look at [Content]({{< ref "/docs/content" >}}) page.
+
+Since `v0.63.0`, the Hugo Bootstrap Theme supports a new section layout named as the `docs` layout. The `docs` layout is a three-column layout consisting of a "catalog" sidebar in the left column, the main document content in the middle column, and a Table of Contents as well as other configurable widgets in the right column. See the image below for a representative example of the `docs` layout. For a more comprehensive example, look at `content/en/docs` of the `exampleSite` included with this theme.
 
 ![Docs 3 column layout](docs-3col-rs.png)
 
