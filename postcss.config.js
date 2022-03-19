@@ -10,7 +10,7 @@ const purgecss = require('@fullhuman/postcss-purgecss')({
     'end-0',
     'fs-lg', 'fs-sm', 'fs-xl', 'fs-xs', 'fst-italic',
     'opacity-50',
-    'pb-1', 'pe-3', 'pt-1', 'position-absolute',
+    'pe-3', 'pt-1', 'position-absolute',
     'show',
     'text-pre-wrap', 'text-uppercase', 'text-white', 'top-0',
   ]
