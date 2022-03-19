@@ -23,6 +23,44 @@ weight = 970
   weight = 5
 +++
 
+## Main Sections
+
+`mainSections` 參數用於過濾頁面，默認為 `["posts", "docs"]`。
+
+```toml {title="config/_default/params.toml"}
+mainSections = ["blog", "posts", "docs", "notes"]
+```
+
+## 內容類型
+
+你可能想在其他 Section 中使用 `docs` 布局，比如 `/notes`。這可以通過在 front matter 中設置 `type = "docs"` 實現。 
+
+## 文章原型
+
+我們也可以為 `notes` 創建一個原型，讓 Hugo 處理 `type`。
+
+```shell
+$ cp themes/hugo-theme-bootstrap/archetypes/default.md archetypes/notes.md
+```
+
+然後在 `archetypes/notes.md` 中添加 `type = "docs"`。現在 `hugo new notes/blah-blah-blah` 將會復製 `archetypes/notes.md` 的內容到新的文章。
+
+同樣地，你也可以為 `posts`、`docs` 等自定義原型。
+
+## Sections 模板
+
+你可能還想在 `notes` 中使用和 `docs` 一樣的列表布局。
+
+```html {title="layouts/notes/list.html"}
+{{ define "content" }}
+{{- partial "docs/catalog" . -}}
+<div class="col-lg-7 ms-auto">
+  {{ partial "docs/list" . }}
+</div>
+{{- partial "docs/sidebar" . -}}
+{{ end }}
+```
+
 ## 書寫文章
 
 > 假設默認語言為 `en`。
@@ -39,7 +77,26 @@ $ hugo new posts/new-post/index.zh-tw.md
 
 > 請注意：創建的文章一般處於草稿狀態，本地預覽時，`hugo server` 需要指定 `-D` 參數才能預覽草稿文章。文章發佈時，需要將 `draft` 改為 `false`，或者直接移除 `draft` 參數。
 
-> 你可以將文章放在任何地方，比如 `blog`，只需要將 `blog` 附加到 `mainSections` 參數：`mainSections = ["posts", "blog"]`。
+## 文章置頂
+
+你可以通過在 front matter 設置 `pinned` 為 `true` 以置頂文章。
+
+```markdown
++++
+title = "Pinned Post"
+pinned = true
+weight = 100
++++
+```
+
+> 如果有多個置頂文章，那麽將按照 `weight` 進行降序排序。
+
+### 站點配置
+
+```toml {title="config/_default/params.toml"}
+pinnedPost = false # 關閉文章置頂功能
+pinnedPostCount = 2 # 首頁顯示的置頂文章的數目
+```
 
 ## 下一步
 
