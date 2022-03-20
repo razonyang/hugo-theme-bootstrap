@@ -78,6 +78,13 @@ rm config.toml
 $ rm -rf /tmp/hugo-theme-bootstrap
 ```
 
+At the top of your `config/_default/config.toml`, switch the uncommented theme:
+
+```toml
+# theme = "hugo-theme-bootstrap" # install via git submodule
+theme = "github.com/razonyang/hugo-theme-bootstrap" # install via hugo module
+```
+
 #### Step 5: Pull in dependencies via npm
 
 - Use **n**ode **p**ackage **m**anager [`npm`](https://nodejs.org/en/download/) to pull in dependencies for this theme:
@@ -138,6 +145,13 @@ $ cp -r /tmp/hugo-theme-bootstrap/exampleSite/content/about/ \
 
 ```shell
 $ rm -rf /tmp/hugo-theme-bootstrap/
+```
+
+At the top of your `config/_default/config.toml`, switch the uncommented theme:
+
+```toml
+# theme = "hugo-theme-bootstrap" # install via git submodule
+theme = "github.com/razonyang/hugo-theme-bootstrap" # install via hugo module
 ```
 
 #### Step 4: Pull in dependencies via npm
