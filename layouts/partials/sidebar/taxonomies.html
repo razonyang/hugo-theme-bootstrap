@@ -27,8 +27,8 @@
           {{- end -}}
         {{- end -}}
         {{- if gt (len $value) $taxonomyCount -}}
-        <a href="{{ absLangURL (urlize $key) }}" class="badge rounded post-taxonomy" title="ALL">
-          ALL
+        <a href="{{ absLangURL (urlize $key) }}" class="badge rounded post-taxonomy" title='{{ i18n "all" | upper }}'>
+          {{ i18n "all" | upper }}
           <span class="badge badge-sm text-white bg-accent ms-1">{{ len $value }}</span>
         </a>
         {{- end -}}
