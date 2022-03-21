@@ -10,6 +10,9 @@ other = "关于我"
 [alipay]
 other = "支付宝"
 
+[all]
+other = "全部"
+
 [archives]
 other = "归档"
 
