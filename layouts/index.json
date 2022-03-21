@@ -7,12 +7,13 @@
     {{- end -}}
     {{- $img := "" -}}
     {{- if .Params.Images -}}
-      {{- $imgFile := index .Params.Images 0 -}}
-      {{- $resource := .Resources.GetMatch (strings.TrimPrefix "/" $imgFile) -}}
-      {{- if $resource -}}
-        {{- $img = $resource.Permalink -}}
-      {{- else -}}
-        {{- $img = $imgFile | absURL -}}
+      {{- $img = index .Params.Images 0 | absURL -}}
+    {{- else -}}
+      {{- $images := .Resources.ByType "image" -}}
+      {{- $featured := $images.GetMatch "*feature*" -}}
+      {{- if not $featured }}{{ $featured = $images.GetMatch "{*cover*,*thumbnail*}" }}{{ end -}}
+      {{- with $featured -}}
+        {{- $img = $featured.Permalink -}}
       {{- end -}}
     {{- end -}}
     {{- $item := (dict "title" $title "tags" .Params.tags "categories" .Params.categories "series" .Params.series "content" .Plain "permalink" .Permalink "date" $date "img" $img) -}}
