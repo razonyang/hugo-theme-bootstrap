@@ -163,7 +163,7 @@ export class Search {
   }
 
   static normalizeTaxonomy(text, render) {
-    return render(text).toLowerCase().replace(' ', '-');
+    return render(text).toLowerCase().replaceAll(' ', '-');
   }
 
   poplateResults() {
