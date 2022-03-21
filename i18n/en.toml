@@ -7,11 +7,11 @@ other = "We can't seems to find the page you're looking for."
 [about_me]
 other = "About Me"
 
-[all]
-other = "All"
-
 [alipay]
 other = "Alipay"
+
+[all]
+other = "All"
 
 [archives]
 other = "Archives"
