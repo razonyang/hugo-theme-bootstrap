@@ -3,7 +3,7 @@ class Snackbar {
 
     constructor() {
         const e = document.createElement('div');
-        e.className = 'snackbar';
+        e.className = 'snackbar opacity-0 position-fixed w-100 d-flex justify-content-center';
         document.body.appendChild(e);
         this.element = e;
     }

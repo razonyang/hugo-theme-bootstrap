@@ -5,7 +5,7 @@ class LoadingBar implements Component {
 
     run() {
         this.bar = document.createElement('div');
-        this.bar.className = 'loading-bar';
+        this.bar.className = 'loading-bar position-fixed top-0';
         this.bar.hidden = true;
         document.body.appendChild(this.bar);
         const self = this;
