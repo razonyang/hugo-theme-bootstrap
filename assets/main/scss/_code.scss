@@ -1,14 +1,9 @@
 .highlight-wrapper {
-  position: relative;
   margin: 1.5rem auto 1rem;
 
   .panel {
-    position: absolute;
     top: -1.5rem;
-    right: 0;
     padding: 0 0.5rem;
-    margin-bottom: 0;
-    opacity: 0;
     transition: opacity 0.5s;
 
     .action {
@@ -27,7 +22,7 @@
 
   &:hover {
     .panel {
-      opacity: 1;
+      opacity: 1!important;
     }
   }
 }

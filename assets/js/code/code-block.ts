@@ -37,7 +37,7 @@ class CodeBlock {
   wrap() {
     const parent = this.element.parentNode;
     this.wrapper = document.createElement('div');
-    this.wrapper.className = 'highlight-wrapper';
+    this.wrapper.className = 'highlight-wrapper position-relative';
     parent.replaceChild(this.wrapper, this.element);
     this.wrapper.appendChild(this.element);
 
@@ -68,7 +68,7 @@ class CodeBlock {
 
   appendPanel() {
     this.panel = document.createElement('div');
-    this.panel.className = 'chroma panel';
+    this.panel.className = 'chroma panel position-absolute mb-0 end-0 opacity-0';
     this.calculateMaxHeight();
     this.appendCopyButton();
     this.appendLineNumberButton();

@@ -62,12 +62,10 @@
 }
 
 .post-panel-wrapper {
-  position: sticky;
   top: 84px;
   z-index: 1;
 
   .post-panel {
-    position: absolute;
     text-align: right;
     right: -1rem;
     top: -0.5rem;

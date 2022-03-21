@@ -1,6 +1,4 @@
 html {
-  position: relative;
-  
   @if $backgroundImageLight != '' {
     background: url($backgroundImageLight) no-repeat center center fixed;
     background-size: cover;
