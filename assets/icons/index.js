@@ -3,7 +3,7 @@ import {
   faAdjust, faArrowsAltV, faBars, faBuilding, faCheckCircle, faChevronCircleDown,
   faCode, faCoffee, faComments, faColumns, faCopy, faCopyright, faEdit, faEllipsisV,
   faEnvelope, faExclamationTriangle, faExpandAlt, faEyeDropper, faFont, faFileAlt, faFileArchive,
-  faFolder, faHome, faInfoCircle, faLanguage, faLink, faList, faListAlt, faMapMarkerAlt, faPalette,
+  faFolder, faHistory, faHome, faInfoCircle, faLanguage, faLink, faList, faListAlt, faMapMarkerAlt, faPalette,
   faQuestion, faQuestionCircle, faRedoAlt, faRss, faSearch, faShareAlt, faSkullCrossbones,
   faSpinner, faTags, faThumbtack, faTimes, faTv, faUndo, faUser, faExternalLinkAlt,
 } from '@fortawesome/free-solid-svg-icons';
@@ -24,7 +24,7 @@ let icons = [
   faAdjust, faArrowsAltV, faBars, faBuilding, faCheckCircle, faChevronCircleDown,
   faCode, faCoffee, faComments, faColumns, faCopy, faCopyright, faEdit, faEllipsisV,
   faEnvelope, faExclamationTriangle, faExpandAlt, faEyeDropper, faFont, faFileAlt, faFileArchive,
-  faFolder, faHome, faInfoCircle, faLanguage, faLink, faList, faListAlt, faMapMarkerAlt, faPalette,
+  faFolder, faHistory, faHome, faInfoCircle, faLanguage, faLink, faList, faListAlt, faMapMarkerAlt, faPalette,
   faQuestion, faQuestionCircle, faRedoAlt, faRss, faSearch, faShareAlt, faSkullCrossbones,
   faSpinner, faTags, faThumbtack, faTimes, faTv, faUndo, faUser, faExternalLinkAlt,
 
