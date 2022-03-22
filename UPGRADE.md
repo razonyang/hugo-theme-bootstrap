@@ -77,3 +77,13 @@ $ hugo mod npm pack
 $ npm install
 $ hugo
 ```
+
+Upgrading from v0.65.1
+----------------------
+
+## Thumbnails
+
+The page's `images` parameter no longer accepts page resources, that is, the `images` only accepts external images and `/static` images. If you're going to use the page resources as the thumbnails, the steps as follows:
+
+1. Move the thumbnail's page resources from subfolder to page's folder, and then rename it with the patterns: *feature*, *cover* and *thumbnail*. Such as `/posts/my-page/images/my-thumbnail.png` to `/posts/my-page/featured.png`.
+1. Remove the `images` parameter.
