@@ -145,6 +145,15 @@ other = "最近文章"
 [related_posts]
 other = "相關文章"
 
+[repo_action_edit]
+other = "編輯當前頁"
+
+[repo_action_view]
+other = "查看源代碼"
+
+[repo_title]
+other = "倉庫"
+
 [search]
 other = "搜索"
 
