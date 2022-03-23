@@ -12,22 +12,22 @@
         <ul class="list-unstyled">
             {{- if $.File -}}
             {{- $filePath := printf "%s%s/content/%s" $branch $subPath $.File.Path -}}
-            <li>
+            <li class="mb-1">
                 <a href="{{ printf "%s/blob/%s" $url $filePath }}" target="_blank" rel="noopener noreferrer">
                     <i class="fas fa-fw fa-file-archive"></i> {{ i18n "repo_action_view" }}
                 </a>
             </li>
-            <li>
+            <li class="mb-1">
                 <a href="{{ printf "%s/edit/%s" $url $filePath  }}" target="_blank" rel="noopener noreferrer">
                     <i class="fas fa-fw fa-edit"></i> {{ i18n "repo_action_edit" }}
                 </a>
             </li>
             {{- end -}}
             {{- with $.GitInfo -}}
-            <li>
+            <li class="mb-1">
                 <i class="fas fa-fw fa-code"></i> <a href="{{ printf "%s/commit/%s" $url .Hash }}" target="_blank" rel="noopener noreferrer">{{ .AbbreviatedHash }}</a>
             </li>
-            <li>
+            <li class="mb-1">
                 <i class="fas fa-fw fa-history"></i> {{ .AuthorDate.Format $dateFormat }}
             </li>
             {{- end -}}
