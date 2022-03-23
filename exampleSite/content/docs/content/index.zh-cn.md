@@ -120,6 +120,16 @@ pinnedPost = false # 关闭文章置顶功能
 pinnedPostCount = 2 # 首页显示的置顶文章的数目
 ```
 
+## Carousel
+
+将文章于 carousel 显示。
+
+```markdown
++++
+carousel = true
++++
+```
+
 ## 下一步
 
 - [调整配置]({{< ref "/docs/configuration" >}})

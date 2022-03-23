@@ -120,6 +120,16 @@ pinnedPost = false # Disable pinned posts globally.
 pinnedPostCount = 2 # The number of pinned posts shown on home page.
 ```
 
+## Carousel
+
+Showing posts on carousel.
+
+```markdown
++++
+carousel = true
++++
+```
+
 ## Up Next
 
 - [Tweak Configuration]({{< ref "/docs/configuration" >}})
