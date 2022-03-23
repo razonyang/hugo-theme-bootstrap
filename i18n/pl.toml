@@ -1,11 +1,29 @@
+[404_title]
+other = "Ups! Nie znaleziono strony."
+
+[404_info]
+other = "Wydaje się, że nie możemy znaleźć strony, której szukasz."
+
 [about_me]
 other = "O mnie"
 
 [alipay]
 other = "Alipay"
 
+[all]
+other = "Wszystkie"
+
 [archives]
 other = "Archiwum"
+
+[button_copy_url]
+other = "Skopiuj adres URL"
+
+[button_reload]
+other = "Przeładuj"
+
+[button_social_share]
+other = "Udostępnij"
 
 [button_submit]
 other = "Wyślij"
@@ -52,6 +70,9 @@ other = "Turkusowy"
 [color_yellow]
 other = "Żółty"
 
+[comments]
+other = "Komentarze"
+
 [contact_name]
 other = "Imię"
 
@@ -60,6 +81,9 @@ other = "E-mail"
 
 [contact_email_help]
 other = "Nigdy nie udostępnimy Twojego adresu e-mail nikomu innemu."
+
+[contact_file]
+other = "Plik"
 
 [contact_subject]
 other = "Temat"
@@ -76,6 +100,9 @@ other = "Polecane posty"
 [font_size]
 other = "Rozmiar czcionki"
 
+[go_back]
+other = "Wróć"
+
 [home]
 other = "Home"
 
@@ -90,6 +117,12 @@ other = "Załaduj więcej"
 
 [mode]
 other = "Tryb"
+
+[offline_title]
+other = "Ups! Jesteś offline."
+
+[offline_info]
+other = "Wygląda na to, że wystąpił problem z połączeniem. Proszę sprawdzić stan sieci."
 
 [pagination_title]
 other = "Strona {{ .PageNumber }}"
@@ -122,6 +155,15 @@ other = "Ostatnie posty"
 [related_posts]
 other = "Powiązane posty"
 
+[repo_action_edit]
+other = "Edytuj tę stronę"
+
+[repo_action_view]
+other = "Wyświetl źródło strony"
+
+[repo_title]
+other = "Repozytorium"
+
 [search]
 other = "Szukaj"
 
@@ -145,6 +187,9 @@ other = "Spis treści"
 
 [tags]
 other = "Tagi"
+
+[try_again]
+other = "Spróbuj ponownie"
 
 [wechat]
 other = "WeChat"
