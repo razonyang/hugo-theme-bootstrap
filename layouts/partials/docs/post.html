@@ -5,6 +5,7 @@
 </div>
 <div class="card-body">
     {{- partial "post/meta" . -}}
+    {{- partial "post/featured-image" . -}}
     {{- partial "hooks/content-begin" . -}}
     <div class="post-content mb-3">
     {{- .Content -}}
