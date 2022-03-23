@@ -4,19 +4,22 @@
 <div class="profile-bio">{{ . }}</div>
 {{- end -}}
 {{- with .company -}}
-<div class="profile-company"><i class="fas fa-fw fa-building"></i>{{ . }}</div>
+<div class="profile-company"><i class="fas fa-fw fa-building"></i>{{ . | safeHTML }}</div>
 {{- end -}}
 {{- with .location -}}
-<div class="profile-location"><i class="fas fa-fw fa-map-marker-alt"></i>{{ . }}</div>
+<div class="profile-location"><i class="fas fa-fw fa-map-marker-alt"></i>{{ . | safeHTML }}</div>
 {{- end -}}
 {{- if .about -}}
 <div class="profile-about"><i class="fas fa-fw fa-user"></i><a target="_blank" rel="noopener noreferrer" href="{{ .about }}">{{ i18n "about_me" }}</a></div>
 {{- else -}}
 {{- with $.GetPage "about" -}}
-<div class="profile-about"><i class="fas fa-fw fa-user"></i><a href="{{ .Permalink }}">{{ .Title }}</a></div>
+<div class="profile-about"><i class="fas fa-fw fa-user"></i><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></div>
 {{- end -}}
 {{- end -}}
 {{- with $.GetPage "contact" -}}
-<div class="profile-contact"><i class="fas fa-fw fa-question-circle"></i><a href="{{ .Permalink }}">{{ .Title }}</a></div>
+<div class="profile-contact"><i class="fas fa-fw fa-question-circle"></i><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></div>
+{{- end -}}
+{{- with .social -}}
+{{- partial "helpers/social-links" (dict "links" . "size" "fa-2x" "OutputFormats" $.OutputFormats "home" ($.GetPage "/") "params" $.Site.Params) -}}
 {{- end -}}
 {{- end -}}

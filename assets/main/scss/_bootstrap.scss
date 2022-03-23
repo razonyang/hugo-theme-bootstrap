@@ -1,0 +1,80 @@
+$variable-prefix: hbs-;
+
+$form-range-thumb-bg: var(--#{$variable-prefix}accent) !default;
+
+$enable-smooth-scroll: true !default;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  lg: 992px
+) !default;
+$grid-gutter-width: .75rem !default;
+$card-spacer-x: 1rem !default;
+$card-spacer-y: 1rem !default;
+$card-cap-bg: transparent !default;
+
+$enable-shadows: false !default;
+
+$border-color: var(--#{$variable-prefix}secondary-text-on-surface) !default;
+
+// Heading
+$font-size-base:              1rem !default;
+$h1-font-size:                $font-size-base * 2 !default;
+$h2-font-size:                $font-size-base * 1.5 !default;
+$h3-font-size:                $font-size-base * 1.375 !default;
+$h4-font-size:                $font-size-base * 1.25 !default;
+$h5-font-size:                $font-size-base * 1.125 !default;
+$h6-font-size:                $font-size-base !default;
+
+// Shadows
+$box-shadow:                  0 .5rem 1rem rgba(var(--#{$variable-prefix}shadow-rgb), .15);
+$box-shadow-sm:               0 .125rem .25rem rgba(var(--#{$variable-prefix}shadow-rgb), .075);
+$box-shadow-lg:               0 1rem 3rem rgba(var(--#{$variable-prefix}shadow-rgb), .175);
+$box-shadow-inset:            inset 0 1px 2px rgba(var(--#{$variable-prefix}shadow-rgb), .075);
+
+@import 'bootstrap/scss/bootstrap';
+// Configuration
+@import 'functions';
+@import 'bootstrap/scss/variables';
+@import 'mixins';
+@import 'bootstrap/scss/utilities';
+
+// Layout & components
+@import 'bootstrap/scss/root';
+@import 'bootstrap/scss/reboot';
+@import 'bootstrap/scss/type';
+@import 'bootstrap/scss/images';
+@import 'bootstrap/scss/containers';
+@import 'bootstrap/scss/grid';
+@import 'bootstrap/scss/tables';
+@import 'bootstrap/scss/forms';
+@import 'bootstrap/scss/buttons';
+@import 'bootstrap/scss/transitions';
+@import 'bootstrap/scss/dropdown';
+@import 'bootstrap/scss/button-group';
+@import 'bootstrap/scss/nav';
+@import 'bootstrap/scss/navbar';
+@import 'bootstrap/scss/card';
+@import 'bootstrap/scss/accordion';
+@import 'bootstrap/scss/breadcrumb';
+@import 'bootstrap/scss/pagination';
+@import 'bootstrap/scss/badge';
+@import 'bootstrap/scss/alert';
+@import 'bootstrap/scss/progress';
+@import 'bootstrap/scss/list-group';
+@import 'bootstrap/scss/close';
+@import 'bootstrap/scss/toasts';
+@import 'bootstrap/scss/modal';
+@import 'bootstrap/scss/tooltip';
+@import 'bootstrap/scss/popover';
+@import 'bootstrap/scss/carousel';
+@import 'bootstrap/scss/spinners';
+@import 'bootstrap/scss/offcanvas';
+@import 'bootstrap/scss/placeholders';
+
+// Helpers
+@import 'bootstrap/scss/helpers';
+
+// Utilities
+@import 'utilities';

@@ -1,0 +1,68 @@
+{
+  "comments": {
+    "dependencies": {
+      "@babel/cli": "hugo-theme-bootstrap",
+      "@babel/core": "hugo-theme-bootstrap",
+      "@babel/preset-env": "hugo-theme-bootstrap",
+      "@babel/preset-typescript": "hugo-theme-bootstrap",
+      "@fortawesome/fontawesome-svg-core": "hugo-theme-bootstrap",
+      "@fortawesome/free-brands-svg-icons": "hugo-theme-bootstrap",
+      "@fortawesome/free-regular-svg-icons": "hugo-theme-bootstrap",
+      "@fortawesome/free-solid-svg-icons": "hugo-theme-bootstrap",
+      "@fullhuman/postcss-purgecss": "hugo-theme-bootstrap",
+      "@popperjs/core": "hugo-theme-bootstrap",
+      "autoprefixer": "hugo-theme-bootstrap",
+      "bootstrap": "hugo-theme-bootstrap",
+      "fuse.js": "hugo-theme-bootstrap",
+      "katex": "hugo-theme-bootstrap",
+      "mark.js": "hugo-theme-bootstrap",
+      "mermaid": "hugo-theme-bootstrap",
+      "mustache": "hugo-theme-bootstrap",
+      "postcss-cli": "hugo-theme-bootstrap",
+      "viewerjs": "hugo-theme-bootstrap",
+      "webpack": "hugo-theme-bootstrap",
+      "workbox-cacheable-response": "hugo-theme-bootstrap",
+      "workbox-expiration": "hugo-theme-bootstrap",
+      "workbox-precaching": "hugo-theme-bootstrap",
+      "workbox-routing": "hugo-theme-bootstrap",
+      "workbox-strategies": "hugo-theme-bootstrap"
+    },
+    "devDependencies": {
+      "copy-webpack-plugin": "hugo-theme-bootstrap",
+      "webpack-cli": "hugo-theme-bootstrap"
+    }
+  },
+  "dependencies": {
+    "@babel/cli": "^7.17.3",
+    "@babel/core": "^7.17.4",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-typescript": "^7.16.7",
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-brands-svg-icons": "^5.15.4",
+    "@fortawesome/free-regular-svg-icons": "^5.15.4",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fullhuman/postcss-purgecss": "^4.1.3",
+    "@popperjs/core": "^2.11.2",
+    "autoprefixer": "^10.4.2",
+    "bootstrap": "^5.1.3",
+    "fuse.js": "^6.5.3",
+    "katex": "^0.15.2",
+    "mark.js": "^8.11.1",
+    "mermaid": "^8.14.0",
+    "mustache": "^4.2.0",
+    "postcss-cli": "^9.1.0",
+    "viewerjs": "^1.10.4",
+    "webpack": "^5.69.1",
+    "workbox-cacheable-response": "^6.4.2",
+    "workbox-expiration": "^6.4.2",
+    "workbox-precaching": "^6.4.2",
+    "workbox-routing": "^6.4.2",
+    "workbox-strategies": "^6.4.2"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^10.2.4",
+    "webpack-cli": "^4.9.1"
+  },
+  "name": "exampleSite",
+  "version": "0.1.0"
+}

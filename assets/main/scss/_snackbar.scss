@@ -1,0 +1,16 @@
+.snackbar {
+  bottom: 20%;
+  z-index: 1100;
+  transition: opacity 1s ease-in-out;
+}
+
+.snackbar.show {
+  opacity: 1!important;
+}
+
+.snackbar-body {
+  color: var(--#{$variable-prefix}background);
+  background-color: var(--#{$variable-prefix}primary-text-on-background);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+}

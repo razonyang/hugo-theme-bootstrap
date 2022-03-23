@@ -1,0 +1,16 @@
+::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--#{$variable-prefix}secondary-text-on-surface);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--#{$variable-prefix}surface);
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--#{$variable-prefix}primary-text-on-surface);
+}

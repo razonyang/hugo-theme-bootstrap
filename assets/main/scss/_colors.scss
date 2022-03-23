@@ -1,0 +1,31 @@
+$dark-primary: rgba(0, 0, 0, 0.87);
+$dark-secondary: rgba(0, 0, 0, 0.54);
+$dark-disabled: rgba(0, 0, 0, 0.38);
+
+$white-primary: rgb(225, 225, 225);
+$white-secondary: rgba(225, 225, 225, 0.7);
+$white-disabled: rgba(225, 225, 225, 0.5);
+
+.bg-primary {
+    background-color: var(--#{$variable-prefix}primary)!important;
+}
+
+.text-primary {
+    color: var(--#{$variable-prefix}primary)!important;
+}
+
+.bg-accent {
+    background-color: var(--#{$variable-prefix}accent)!important;
+}
+
+.text-accent {
+    color: var(--#{$variable-prefix}accent)!important;
+}
+
+.bg-background {
+    background-color: var(--#{$variable-prefix}background)!important;
+}
+
+.text-on-background {
+    color: var(--#{$variable-prefix}primary-text-on-background)!important;
+}

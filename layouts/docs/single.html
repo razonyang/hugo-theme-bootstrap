@@ -1,0 +1,10 @@
+{{ define "content" }}
+{{- partial "docs/catalog" . -}}
+<div class="col-lg-7 ms-auto">
+  <div class="container">
+    {{- partial "breadcrumb" . -}}
+    {{- partial "docs/post" . -}}
+  </div>
+</div>
+{{- partial "docs/sidebar" . -}}
+{{ end }}

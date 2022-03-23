@@ -1,2 +1,1 @@
-{{- $enable := default false $.Site.Params.titleCase -}}
-{{ if $enable }}{{ title .Title }}{{ else }}{{ .Title }}{{ end }}
+{{ if $.Site.Params.titleCase }}{{ title .Title }}{{ else }}{{ .Title }}{{ end }}

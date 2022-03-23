@@ -1,0 +1,34 @@
+.btn {
+  @extend .shadow-sm;
+}
+
+.btn-primary {
+  color: var(--#{$variable-prefix}on-primary)!important;
+  background-color: var(--#{$variable-prefix}accent)!important;
+  border-color: var(--#{$variable-prefix}accent)!important;
+
+  &:hover,
+  &:focus,
+  &.active,
+  &:active {
+    background-color: var(--#{$variable-prefix}accent-dark)!important;
+    border-color: var(--#{$variable-prefix}accent-dark)!important;
+  }
+}
+
+.btn-outline-primary {
+  background-color: var(--#{$variable-prefix}on-primary)!important;
+  border-color: var(--#{$variable-prefix}primary)!important;
+  color: var(--#{$variable-prefix}primary)!important;
+
+  &:hover,
+  &:focus,
+  &.active,
+  &:active,
+  &.dropdown-toggle.show {
+    background-color: var(--#{$variable-prefix}primary) !important;
+    border-color: var(--#{$variable-prefix}primary) !important;
+    color: var(--#{$variable-prefix}on-primary) !important;
+    box-shadow: none !important;
+  }
+}

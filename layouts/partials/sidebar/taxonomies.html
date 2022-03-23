@@ -1,25 +1,42 @@
-{{- range $key, $value := .Site.Taxonomies -}}
+{{- range $expected := $.Site.Params.sidebarTaxonomies -}}
+{{- range $key, $value := $.Site.Taxonomies -}}
+  {{- if eq $key $expected -}}
   {{- $countParams := dict "categories" "categoryCount" "tags" "tagCount" "series" "seriesCount" -}}
   {{- $param := default "" (index $countParams $key) -}}
   {{- $taxonomyCount := default 10 ($.Site.Param $param) -}}
   {{- if $taxonomyCount -}}
     {{- with $value.ByCount -}}
-    <section class="taxonomies row card component">
-      <div class="card-body">
+    <section class="{{ $key }}-taxonomies row card component">
+      <div class="card-header">
         <h2 class="card-title">
           <a href="{{ absLangURL (urlize $key) }}">{{ T $key }}</a>
         </h2>
-        <div>
-        {{- range $idx, $taxonomy := . -}}
-          {{- if lt $idx $taxonomyCount -}}
-          <a href="{{ $taxonomy.Page.Permalink }}" class="badge bg-primary text-white rounded post-taxonomy" title="{{ $taxonomy.Page.Title }}">
-            {{ $taxonomy.Page.Title }}
+      </div>
+      <div class="card-body">
+        <div class="py-2">
+        {{- $count := 0 -}}
+        {{- range . -}}
+          {{- if and (lt $count $taxonomyCount) (ne .Name "") -}}
+          <a href="{{ .Page.Permalink }}" class="badge rounded post-taxonomy" title="{{ .Page.Title }}">
+            {{ .Page.Title }}
+            {{- if $.Site.Params.countTaxonomyPosts -}}
+              <span class="badge badge-sm text-white bg-accent ms-1">{{ .Count }}</span>
+            {{- end -}}
           </a>
+          {{- $count = add $count 1 }}
           {{- end -}}
+        {{- end -}}
+        {{- if gt (len $value) $taxonomyCount -}}
+        <a href="{{ absLangURL (urlize $key) }}" class="badge rounded post-taxonomy" title='{{ i18n "all" | upper }}'>
+          {{ i18n "all" | upper }}
+          <span class="badge badge-sm text-white bg-accent ms-1">{{ len $value }}</span>
+        </a>
         {{- end -}}
         </div>
       </div>
     </section>
     {{- end -}}
   {{- end -}}
+  {{- end -}}
+{{- end -}}
 {{- end -}}

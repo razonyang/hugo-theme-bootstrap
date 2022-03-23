@@ -1,0 +1,4 @@
+.surface {
+  background: var(--#{$variable-prefix}surface);
+  color: var(--#{$variable-prefix}primary-text-on-surface);
+}

@@ -1,0 +1,57 @@
+.highlight-wrapper {
+  margin: 1.5rem auto 1rem;
+
+  .panel {
+    top: -1.5rem;
+    padding: 0 0.5rem;
+    transition: opacity 0.5s;
+
+    .action {
+      color: var(--#{$variable-prefix}on-primary);
+
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
+
+      &.active,
+      &:hover {
+        color: var(--#{$variable-prefix}accent);
+      }
+    }
+  }
+
+  &:hover {
+    .panel {
+      opacity: 1!important;
+    }
+  }
+}
+
+code {
+  margin: 0;
+  padding: 0.25rem 0.5rem;
+  color: var(--#{$variable-prefix}primary-text-on-surface);
+  background: var(--#{$variable-prefix}background-light);
+  border-radius: 3px;
+
+  &.no-ln {
+    .ln {
+      display: none;
+    }
+  }
+}
+
+pre {
+  background: var(--#{$variable-prefix}background);
+  border-radius: 0.25rem;
+  color: var(--#{$variable-prefix}on-background);
+  padding: 1rem;
+  position: relative;
+
+  code {
+    padding: 0;
+    background: inherit !important;
+    color: inherit !important;
+    opacity: 1;
+  }
+}

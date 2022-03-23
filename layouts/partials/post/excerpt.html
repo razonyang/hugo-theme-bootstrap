@@ -1,9 +1,28 @@
 {{- $key := $.Site.Params.post.excerpt -}}
+{{- $useDescription := and (eq $key "description") .Description -}}
+{{- $readMoreButton := printf "<div><a class=\"btn btn-sm btn-primary btn-read-more\" href=\"%s\">%s</a></div>" .Permalink (i18n "read_more") | safeHTML -}}
 {{- $content :=  "" -}}
-{{- if eq $key "description" -}}
-  {{- $content = .Description -}}
-{{- else -}}
+{{- $readMore := true -}}
+{{- if $useDescription -}}
+  {{- $content = printf "<p>%s</p>" .Description | safeHTML -}}
+{{- else if strings.Contains .RawContent "<!--more-->" -}}
   {{- $content = .Summary -}}
+  {{- $readMore = .Truncated -}}
+{{- else if .Params.summary -}}
+  {{- $content = printf "<p>%s</p>" .Params.summary | safeHTML -}}
+{{- else -}}
+  {{- $maxLength := default 320 $.Site.Params.post.excerptMaxLength -}}
+  {{- $ellipsis := "..." -}}
+  {{- if default true .Site.Params.post.plainifyExcerpt -}}
+    {{- $content = .Plain | htmlUnescape | truncate $maxLength $ellipsis | printf "<p>%s</p>" | safeHTML -}}
+  {{- else -}}
+    {{- $content = .Content | truncate $maxLength $ellipsis -}}
+  {{- end -}}
+  {{- if not (findRE "\\.{3}" $content) -}}
+    {{- $readMore = false -}}
+  {{- end -}}
 {{- end -}}
-{{- $maxLength := default 320 $.Site.Params.post.excerptMaxLength -}}
-{{- $content | truncate $maxLength -}}
+{{- $content -}}
+{{- if $readMore -}}
+  {{- $readMoreButton -}}
+{{- end -}}

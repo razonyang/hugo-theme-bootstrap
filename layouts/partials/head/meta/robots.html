@@ -1,0 +1,4 @@
+{{- $content := default $.Site.Params.metaRobots .Params.metaRobots -}}
+{{- if and (not (and (isset .Params "metarobots") (not .Params.metaRobots))) $content -}}
+    <meta name="robots" content="{{ $content }}" />
+{{- end -}}

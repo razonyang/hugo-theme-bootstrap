@@ -1,0 +1,37 @@
+{{- $defaultParams := dict "by" true "nc" true "nd" true "sa" true -}}
+{{- $params := merge $defaultParams (default dict .Site.Params.creativeCommons) (default dict .Params.creativeCommons) -}}
+{{- $link := "" }}
+{{- $linkTitle := "" -}}
+{{- $icons := slice "" "" -}}
+{{- if $params.by -}}
+  {{- $linkTitle = "CC BY" -}}
+  {{- $icons = slice "" "-by" -}}
+  {{- if $params.nc -}}
+    {{- $linkTitle = printf "%s-%s" $linkTitle "NC" -}}
+    {{- $icons = $icons | append "-nc" -}}
+  {{- end -}}
+  {{- if $params.nd -}}
+    {{- $linkTitle = printf "%s-%s" $linkTitle "ND" -}}
+    {{- $icons = $icons | append "-nd" -}}
+  {{- else -}}
+    {{- if $params.sa -}}
+      {{- $linkTitle = printf "%s-%s" $linkTitle "SA" -}}
+      {{- $icons = $icons | append "-sa" -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $link = printf "https://creativecommons.org/licenses/%s/4.0/deed" (replace $linkTitle "CC " "" | lower) }}
+  {{- $linkTitle = printf "%s %s" $linkTitle "4.0 " -}}
+{{- else -}}
+  {{- $link = "https://creativecommons.org/publicdomain/zero/1.0/deed" -}}
+  {{- $linkTitle = "CC CC0 1.0 " }}
+  {{- $icons = slice "" "-zero" -}}
+{{- end -}}
+{{- $langs := dict "zh-cn" "zh" "zh-tw" "zh_TW" "zh-hk" "zh_TW" -}}
+{{- $iconsHTML := "" -}}
+{{- range $icons -}}
+  {{- $iconsHTML = printf `%s<i class="fab fa-fw fa-2x fa-creative-commons%s"></i>` $iconsHTML .  -}}
+{{- end -}}
+<a class="d-flex align-items-center flex-column" target="_blank" rel="license noopener noreferrer" href="{{ printf "%s.%s" $link (default "en" (index $langs .Lang)) }}">
+  <span>{{ $iconsHTML | safeHTML }}</span>
+  {{ $linkTitle }}
+</a>

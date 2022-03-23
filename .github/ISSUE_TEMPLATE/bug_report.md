@@ -23,6 +23,19 @@ A clear and concise description of what you expected to happen.
 **Screenshots**
 If applicable, add screenshots to help explain your problem.
 
+**Hugo version:**
+
+```shell
+$ hugo version
+```
+
+**Theme version:**
+
+```shell
+$ cd themes/hugo-theme-bootstrap
+$ git log -n 1 --decorate --pretty=oneline
+```
+
 **Desktop (please complete the following information):**
  - OS: [e.g. iOS]
  - Browser [e.g. chrome, safari]
@@ -36,3 +49,6 @@ If applicable, add screenshots to help explain your problem.
 
 **Additional context**
 Add any other context about the problem here.
+
+- Repository URL(optional):
+- Live Site URL(optional):

@@ -1,0 +1,32 @@
+.pagination {
+  justify-content: center;
+
+  .page-link {
+    background-color: var(--#{$variable-prefix}surface);
+    border-color: var(--#{$variable-prefix}secondary-text-on-surface);
+    color: var(--#{$variable-prefix}secondary-text-on-surface);
+  }
+
+  .page-item {
+    .page-link {
+      border-color: var(--#{$variable-prefix}secondary-text-on-surface);
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+
+    &.active {
+      .page-link {
+        background-color: var(--#{$variable-prefix}primary);
+      }
+    }
+
+    &.disabled {
+      .page-link {
+        color: var(--#{$variable-prefix}disabled-text-on-surface);
+        background-color: var(--#{$variable-prefix}surface);
+      }
+    }
+  }
+}

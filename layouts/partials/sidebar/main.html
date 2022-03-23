@@ -1,4 +1,5 @@
 {{- partial "sidebar/profile" . -}}
-{{- partial "sidebar/featured-posts" . -}}
-{{- partial "sidebar/recent-posts" . -}}
-{{- partial "sidebar/taxonomies" . -}}
+{{- partial "post/toc" . -}}
+{{- partialCached "sidebar/featured-posts" . .Section -}}
+{{- partialCached "sidebar/recent-posts" . .Section -}}
+{{- partialCached "sidebar/taxonomies" . -}}

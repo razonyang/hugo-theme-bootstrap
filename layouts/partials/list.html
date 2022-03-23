@@ -6,18 +6,7 @@
   {{- partial "hooks/list-begin" . -}}
   <div class="posts mb-4">
   {{- range .Paginator.Pages -}}
-    <article class="row card post component">
-      <div class="card-body">
-        <h2 class="card-title post-title"><a href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a></h2>
-        {{- partial "post/meta" . -}}
-        <div class="post-summary">
-          {{ if  .Params.Images }}
-          {{ partial "helpers/image" (dict "filename" (index .Params.Images 0) "alt" .Title "class" "img-fluid" "resources" .Resources) }}
-          {{ end }}
-          {{ partial "post/excerpt" . }}
-        </div>
-      </div>
-    </article>
+    {{- partial "list-item" (dict "Page" . "PinnedPosts" ($.Scratch.Get "pinnedPosts")) }}
   {{- end -}}
   </div>
   {{- partial "hooks/list-end" . -}}

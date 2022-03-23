@@ -1,0 +1,15 @@
+{{ if .Params.images }}
+  <img class="img-fluid" alt="{{ .Title }}" src="{{ index .Params.images 0 | absURL  }}" loading="lazy"/>
+{{- else -}}
+  {{- $images := .Resources.ByType "image" -}}
+  {{- $featured := $images.GetMatch "*feature*" -}}
+  {{- if not $featured }}{{ $featured = $images.GetMatch "{*cover*,*thumbnail*}" }}{{ end -}}
+  {{- with $featured -}}
+  {{- $smallImage := $featured.Resize "180x" -}}
+  {{- $largeImage := $featured.Resize "500x" -}}
+  <picture>
+    <source srcset="{{ $largeImage.Permalink }}" media="(max-width: 576px)">
+    <img class="img-fluid" alt="{{ .Title }}" src="{{ $smallImage.Permalink  }}" data-src="{{ $featured.Permalink }}" loading="lazy"/>
+  </picture>
+  {{- end -}}
+{{- end -}}

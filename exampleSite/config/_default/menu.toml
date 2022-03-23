@@ -1,22 +1,85 @@
 [[main]]
-  name = "Repository"
-  identifier = "Repository"
-  pre = '<i class="fab fa-fw fa-github"></i>'
-  url = "https://github.com/razonyang/hugo-theme-bootstrap"
-  weight = 99
-[[main]]
-  name = "Demo Sites"
-  identifier = "demo"
+  name = "Support"
+  identifier = "support"
+  weight = 40
   pre = '<i class="fas fa-fw fa-chevron-circle-down"></i>'
-  weight = 100
 [[main]]
-  id = "github"
+  name = "Repository"
+  identifier = "repository"
+  parent = "support"
+  url = "https://github.com/razonyang/hugo-theme-bootstrap"
+  weight = 1
+[[main]]
+  name = "Discussions"
+  identifier = "discussions"
+  parent = "support"
+  url = "https://github.com/razonyang/hugo-theme-bootstrap/discussions/new"
+  weight = 2
+[[main]]
+  name = "Features Request"
+  identifier = "feature-request"
+  parent = "support"
+  url = "https://github.com/razonyang/hugo-theme-bootstrap/issues/new?template=feature_request.md"
+  weight = 3
+[[main]]
+  parent = "support"
+  weight = 4
+  [main.params]
+    divider = true
+
+[[footer]]
+  name = "Support"
+  identifier = "support"
+  weight = 1
+[[footer]]
+  name = "Repository"
+  identifier = "repository"
+  parent = "support"
+  url = "https://github.com/razonyang/hugo-theme-bootstrap"
+  weight = 1
+  pre = '<i class="fab fa-fw fa-github"></i>'
+[[footer]]
+  name = "Discussions"
+  identifier = "discussions"
+  parent = "support"
+  url = "https://github.com/razonyang/hugo-theme-bootstrap/discussions/new"
+  weight = 2
+  pre = '<i class="fas fa-fw fa-comments"></i>'
+[[footer]]
+  name = "Features Request"
+  identifier = "feature-request"
+  parent = "support"
+  url = "https://github.com/razonyang/hugo-theme-bootstrap/issues/new?template=feature_request.md"
+  weight = 3
+[[footer]]
+  name = "Bug Report"
+  identifier = "bug-report"
+  parent = "support"
+  url = "https://github.com/razonyang/hugo-theme-bootstrap/issues/new?template=bug_report.md"
+  weight = 4
+
+[[footer]]
+  name = "Docs"
+  identifier = "docs"
+  weight = 2
+
+[[footer]]
+  name = "Features"
+  identifier = "features"
+  weight = 3
+
+[[footer]]
+  identifier = "demo"
+  name = "Demo"
+  weight = 4
+[[footer]]
+  identifier = "demo-netlify"
   parent = "demo"
   name = "Netlify"
   weight = 1
   url = "https://hbs.razonyang.com"
-[[main]]
-  id = "china"
+[[footer]]
+  identifier = "demo-china"
   parent = "demo"
   name = "China"
   weight = 2

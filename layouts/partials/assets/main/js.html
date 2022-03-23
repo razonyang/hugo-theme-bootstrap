@@ -1,0 +1,13 @@
+{{- $params := .Site.Params -}}
+{{- $options := dict "target" "es2015" "targetPath" "assets/main/bundle.min.js" "minify" true "params" $params -}}
+{{- $main := resources.Get "main/js/index.ts" }}
+{{- $scripts := slice $main -}}
+{{- if .Site.Params.utterances -}}
+  {{- $scripts = $scripts | append (resources.Get "main/js/utterances.ts") -}}
+{{- end -}}
+{{- $script := $scripts | resources.Concat "main/js/bundle.ts" | js.Build $options | fingerprint -}}
+{{- $.Scratch.Add "hbs-assets" (slice (dict "url" $script.Permalink "revision" ($.Scratch.Get "null"))) -}}
+<script src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous" defer></script>
+{{- range .Site.Params.customJS -}}
+<script src="{{ absURL . }}" crossorigin="anonymous"></script>
+{{- end -}}

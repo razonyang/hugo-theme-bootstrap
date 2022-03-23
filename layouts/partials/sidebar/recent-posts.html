@@ -1,11 +1,19 @@
-{{- $count := default 5 .Site.Params.recentPostCount -}}
+{{- $count := default .Params.recentPostCount .Site.Params.recentPostCount -}}
+{{- $sections := .Site.Params.mainSections -}}
+{{- if in (slice "posts" "docs") .Type -}}
+  {{- $sections = slice .Type -}}
+{{- end -}}
 {{- if $count -}}
 <section class="recent-posts row card component">
-  <div class="card-body">
+  <div class="card-header">
     <h2 class="card-title">{{ T "recent_posts" }}</h2>
-    <ul>
-    {{- range first $count (where site.RegularPages "Type" "in" site.Params.mainSections) -}}
-      <li><a href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a></li>
+  </div>
+  <div class="card-body">
+    <ul class="post-list">
+    {{- range first $count (where site.RegularPages.ByDate.Reverse "Type" "in" $sections) -}}
+      <li>
+        <a href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a>
+      </li>
     {{- end -}}
     </ul>
   </div>

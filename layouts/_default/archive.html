@@ -1,7 +1,7 @@
 {{ define "content" }}
-{{- $pages := where .Site.RegularPages "Type" "in" (default (slice "posts") .Site.Params.mainSections) -}}
+{{- $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections -}}
 {{- $paginator := .Paginate $pages.ByDate.Reverse (default 100 .Site.Params.archive.paginate) -}}
-<div class="container archives col-12 mb-4">
+<div class="col-lg-8 archives mb-4">
   <div class="container">
     {{- partial "breadcrumb" . -}}
     {{- $count := len $paginator.Pages -}}
@@ -15,9 +15,11 @@
     {{ printf "</ul></div></div>" | safeHTML }}
     {{- end -}}
     <div class="archive card row component">
+      <div class="card-header">
+        <h2 class="archive-title card-title">{{ $currentYear }}</h2>
+      </div>
       <div class="card-body">
-        <h3 class="archive-title card-title">{{ $currentYear }}</h3>
-        <ul class="archive-posts">
+        <ul class="archive-posts post-list">
         {{- end -}}
           <li>
             <a class="post-title" href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a>
@@ -34,10 +36,11 @@
     {{- partial "pagination" . -}}
   </div>
 </div>
+{{- partial "sidebar" . -}}
 {{ end }}
 
 {{ define "title" }}
-{{- $pages := where .Site.RegularPages "Type" "in" (default (slice "posts") .Site.Params.mainSections) -}}
+{{- $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections -}}
 {{- $paginator := .Paginate $pages.ByDate.Reverse (default 100 .Site.Params.archive.paginate) -}}
 {{- partial "head/title" . -}}
 {{ end }}

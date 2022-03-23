@@ -1,0 +1,12 @@
+blockquote {
+  background: var(--bs-light);
+  border-left: 0.5rem solid var(--#{$variable-prefix}accent);
+  color: var(--#{$variable-prefix}primary-text-on-surface);
+  background-color: var(--#{$variable-prefix}surface);
+  padding: 1rem 1.5rem;
+  position: relative;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}

@@ -1,6 +1,6 @@
 {{- with sort .Sections ".Title" "asc" -}}
 <div class="post-sections row component">
-  <ul class="nav nav-pills nav-fill">
+  <ul class="nav nav-pills justify-content-evenly">
     {{- range . -}}
     {{- if gt .Pages.Len 0 -}}
     <li class="nav-item post-section">

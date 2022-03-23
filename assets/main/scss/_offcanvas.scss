@@ -1,0 +1,17 @@
+
+.offcanvas {
+  @extend .shadow-lg;
+
+  a {
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      color: var(--#{$variable-prefix}accent);
+    }
+  }
+
+  .offcanvas-title {
+    margin: 0;
+  }
+}

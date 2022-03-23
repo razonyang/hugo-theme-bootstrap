@@ -1,7 +1,7 @@
-name = "Bootstrap Blog Theme"
+name = "Bootstrap Theme for Personal Blog and Documentations"
 license = "MIT"
 licenselink = "https://github.com/razonyang/hugo-theme-bootstrap/blob/master/LICENSE"
-description = "An extreme fast, responsive and feature-rich blog theme for Hugo"
+description = "A fast, responsive and feature-rich Hugo theme for personal blog and documentations"
 homepage = "https://github.com/razonyang/hugo-theme-bootstrap"
 demosite = "https://hbs.razonyang.com"
 tags = [
@@ -11,7 +11,11 @@ tags = [
   "responsive",
   "light",
   "dark",
-  "multilingual"
+  "dark mode",
+  "multilingual",
+  "archive",
+  "docs",
+  "documentation"
 ]
 features = [
   "hooks",
@@ -20,7 +24,7 @@ features = [
   "breadcrumb",
   "search"
 ]
-min_version = "0.75.0"
+min_version = "0.84.0"
 [author]
   name = "Razon Yang"
   homepage = "https://razonyang.com"

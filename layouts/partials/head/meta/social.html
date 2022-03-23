@@ -1,0 +1,12 @@
+{{- template "_internal/schema.html" . -}}
+{{ template "_internal/opengraph.html" . }}
+{{- template "_internal/twitter_cards.html" . -}}
+
+{{- $images := .Resources.ByType "image" -}}
+{{- $featured := $images.GetMatch "*feature*" -}}
+{{- if not $featured }}{{ $featured = $images.GetMatch "{*cover*,*thumbnail*}" }}{{ end -}}
+{{- if and (not $featured) (not .Params.images) (not .Site.Params.images) -}}
+  {{- $image := default "images/logo.png" .Site.Params.logo -}}
+  <meta property="og:image" content="{{ $image | absURL }}"/>
+  <meta name="twitter:image" content="{{ $image | absURL }}"/>
+{{- end -}}

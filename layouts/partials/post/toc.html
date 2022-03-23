@@ -1,16 +1,12 @@
 {{- $enable := and (default true .Params.toc) (default true .Site.Params.toc) -}}
-{{- $wordCount := default 280 .Site.Params.tocWordCount -}}
 {{- $toc := .TableOfContents -}}
-{{- $valid := and $toc (and (ne $toc "<nav id=\"TableOfContents\"></nav>") (gt .WordCount $wordCount)) -}}
+{{- $valid := and $toc (and (ne $toc "<nav id=\"TableOfContents\"></nav>") (gt .WordCount .Site.Params.tocWordCount)) -}}
 {{- if and $enable $valid -}}
-<div class="offcanvas offcanvas-end surface h-100" tabindex="-1" id="offcanvasTOC" aria-labelledby="offcanvasTOCLabel">
-  <div class="offcanvas-header">
-    <h2 class="offcanvas-title" id="offcanvasTOCLabel">{{ i18n "table_of_contents" }}</h5>
-      <button type="button" class="btn btn-sm btn-outline-primary" data-bs-dismiss="offcanvas" aria-label="Close">
-        <i class="fas fa-times"></i>
-      </button>
+<div class="post-toc row mb-4 card component" id="postTOC">
+  <div class="card-header">
+    <h2 class="card-title">{{ i18n "table_of_contents" }}</h2>
   </div>
-  <div class="offcanvas-body">
+  <div class="card-body">
     {{ $toc }}
   </div>
 </div>

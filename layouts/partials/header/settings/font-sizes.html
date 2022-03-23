@@ -1,5 +1,5 @@
 {{ if isset $.Site.Params "fontsize" }}
-<section class="setting">
+<div class="setting">
   <form class="font-size-switcher-form row">
     <div class="col-auto">
       <label for="fontSize" class="form-label"><i class="fas fa-fw fa-font"></i> {{ i18n "font_size" }}</label>
@@ -8,5 +8,5 @@
       <input type="range" class="form-range" min="-2" max="2" id="fontSize">
     </div>
   </form>
-</section>
+</div>
 {{ end }}

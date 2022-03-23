@@ -1,0 +1,22 @@
+<article class="row card post component">
+  {{- if and (default true .Page.Site.Params.pinned) .Page.Params.pinned -}}
+    {{- $pinnedPosts := .PinnedPosts -}}
+    {{- with .Page.File.UniqueID -}}
+      {{- if in $pinnedPosts . -}}
+      <span class="position-absolute start-0 top-0 text-accent"><i class="fas fa-thumbtack" data-fa-transform="rotate-45"></i></span>
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+  <div class="card-header">
+    <h2 class="card-title post-title">
+      <a href="{{ .Page.Permalink }}">{{ partial "helpers/title" .Page }}</a>
+    </h2>
+  </div>
+  <div class="card-body">
+    {{- partial "post/thumbnail" .Page -}}
+    {{- partial "post/meta" .Page -}}
+    <div class="post-summary">
+      {{ partial "post/excerpt" .Page }}
+    </div>
+  </div>
+</article>

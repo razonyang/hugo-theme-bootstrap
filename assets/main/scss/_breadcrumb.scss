@@ -1,0 +1,13 @@
+.breadcrumb {
+  margin-bottom: 0;
+}
+
+.breadcrumb-item {
+  &.active {
+    color: var(--#{$variable-prefix}secondary-text-on-surface);
+  }
+
+  a {
+    color: var(--#{$variable-prefix}accent);
+  }
+}

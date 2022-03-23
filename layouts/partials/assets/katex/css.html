@@ -1,0 +1,3 @@
+{{- $options := dict "targetPath" "assets/katex/bundle.min.css" "outputStyle" "compressed" "includePaths" (slice "node_modules") -}}
+{{- $style := resources.Get "katex/scss/index.scss" | toCSS $options | fingerprint -}}
+<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous">

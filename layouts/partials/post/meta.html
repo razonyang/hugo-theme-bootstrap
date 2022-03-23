@@ -1,23 +1,23 @@
 <div class="post-meta">
-  {{- if and (default true (default .Site.Params.postDate .Params.postDate)) -}}
-  <span class="post-date" title="{{ i18n "post_created_on" }}">
-    <i class="fas fa-fw fa-calendar-alt"></i>{{ .Date | time.Format (default "Jan 2, 2006" $.Site.Params.dateFormat) }}
-  </span>
-  {{- end -}}
+  {{- if default .Site.Params.postDate .Params.postDate -}}
+  {{- $dateParams := dict "createdOn" .Date.Local -}}
   {{ if gt .Lastmod .Date }}
-  <span class="post-date me-2" title="{{ i18n "post_updated_on" }}">
-      <i class="fas fa-sync-alt"></i>
-      {{ .Lastmod | time.Format (default "Jan 2, 2006" $.Site.Params.dateFormat) }}
-    </span>
+    {{- $dateParams = merge $dateParams (dict "updatedOn" .Lastmod.Local) -}}
   {{ end }}
-  {{- if and (default true (default .Site.Params.readingTime .Params.readingTime)) -}}
-  <span class="post-reading-time" title="{{ i18n "post_reading_time" }}">
-    <i class="fas fa-fw fa-coffee"></i>{{ i18n "reading_time" . }}
+  <span class="post-date" title="{{ i18n "post_date" $dateParams }}">
+    {{ .Date | time.Format $.Site.Params.dateFormat }}
   </span>
   {{- end -}}
+  {{- if default .Site.Params.readingTime .Params.readingTime -}}
+  <span class="post-reading-time">
+    {{ i18n "reading_time" . }}
+  </span>
+  {{- end -}}
+  <span class="post-taxonomies">
   {{- range $key, $value := .Site.Taxonomies -}}
     {{- range ($.GetTerms $key) -}}
-    <a href="{{ .Permalink }}" class="badge rounded-pill text-white bg-primary post-taxonomy">{{ .Name }}</a>
+    <a href="{{ .Permalink }}" class="badge post-taxonomy">{{ .Name }}</a>
     {{- end -}}
   {{- end -}}
+  </span>
 </div>

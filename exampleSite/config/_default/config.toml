@@ -1,15 +1,16 @@
 baseURL = "https://example.com"
 title = "Hugo Bootstrap"
-theme = "hugo-theme-bootstrap"
+theme = "hugo-theme-bootstrap" # install via git submodule
+# theme = "github.com/razonyang/hugo-theme-bootstrap" # install via hugo module
 copyright = "Copyright © 2016-{year} Razon Yang. All Rights Reserved."
 
 # Multilingual mode
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = true # If you use only one language comment this option
-#disableLanguages = ["fr", "zh-cn" ,"zh-tw"] # For disable one or more language
+#disableLanguages = ["fr", "zh-cn" ,"zh-tw"] # Uncomment in order to disable one or more language
 
 # Pagination
-paginate = 5
+paginate = 10
 # paginatePath = "page"
 
 # Disqus
@@ -22,17 +23,30 @@ enableRobotsTXT = true
 
 enableEmoji = true
 
-# hasCJKLanguage = true # Turn on it if your content contains Chinese/Japanese/Korean Languages.
+# hasCJKLanguage = true # Uncomment it if your content contains Chinese/Japanese/Korean Languages.
 
 pygmentsUseClasses = true
 
 [blackfriday]
   hrefTargetBlank = true
 
+[mediaTypes]
+  [mediaTypes."application/manifest+json"]
+    suffixes = ["json"]
+  
+[outputFormats]
+  [outputFormats.MANIFEST]
+    name = "manifest"
+    baseName = "manifest"
+    mediaType = "application/manifest+json"
+
 [outputs]
-  home = ["HTML", "RSS", "JSON"]
+  home = ["HTML", "RSS", "JSON", "MANIFEST"]
 
 [taxonomies]
   category = "categories"
   series = "series"
   tag = "tags"
+
+[build]
+  writeStats = true

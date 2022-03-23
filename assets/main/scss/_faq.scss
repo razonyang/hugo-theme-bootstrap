@@ -1,0 +1,33 @@
+.faq {
+    a {
+        color: var(--#{$variable-prefix}accent);
+    }
+}
+
+.faq-answer {
+    background: var(--#{$variable-prefix}surface);
+    color: var(--#{$variable-prefix}primary-text-on-surface);
+}
+
+.accordion-button {
+    background: var(--#{$variable-prefix}background);
+    color: var(--#{$variable-prefix}primary-text-on-background);
+    box-shadow: none!important;
+
+    .faq-question-icon {
+        right: .5rem;
+    }
+
+    &:not(.collapsed) {
+        background: var(--#{$variable-prefix}background);
+        color: var(--#{$variable-prefix}accent);
+
+        .faq-question-icon {
+            transform: rotate(90deg);
+        }
+    }
+
+    &::after {
+        display: none;
+    }
+}

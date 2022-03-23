@@ -1,0 +1,10 @@
+{
+    "title": "Hugo",
+    "weight": 2,
+    "questions": [
+        {
+            "question": "什麼是 Hugo？",
+            "answer": "Hugo 是一款用 Go 編寫的快速而現代的靜態網站生成器，旨在讓網站創建再次充滿樂趣。"
+        }
+    ]
+}

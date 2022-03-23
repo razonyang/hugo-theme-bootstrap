@@ -1,0 +1,7 @@
+.component {
+  @extend .surface;
+
+  border: none;
+  margin-bottom: var(--#{$variable-prefix}component-gutter-b);
+  padding: 0 .25rem;
+}

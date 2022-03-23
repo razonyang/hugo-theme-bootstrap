@@ -1,0 +1,4 @@
+main {
+    margin-bottom: 2rem;
+    margin-top: if($fixedHeader, 84px, 20px);
+}

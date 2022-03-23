@@ -1,4 +1,4 @@
-# mainSections = ["post", "posts"] # Default to ["posts"].
+mainSections = ["posts", "docs"] # Default to ["posts"].
 
 # titleSeparator = "|" # Title separator. Default to "-".
 
@@ -6,11 +6,14 @@ description = "An extreme fast, responsive and feature-rich blog theme for Hugo"
 keywords = "Hugo, Bootstrap, Blog Theme"
 # images = ["site-feature-image.jpg"]
 
+# metaRobots = "noindex, nofollow" # Default value for Meta Tag "robots"
+# metaRobots = "" # disable Meta Tag "robots"
+
 # logo = "images/logo.png" # Logo image. Default to "images/logo.webp".
 # logo = false # Disable Logo
 brand = "BOOTSTRAP"
 
-palette = "blue" # Default palette. Optional.
+palette = "blue" # Default palette. Optional. You'll need to clear the browser cache after modifying this.
 # palettes = ["blue", "blue gray", "brown"] # Available palettes. Default to ALL.
 # palettes = [] # Disable palette switcher.
 
@@ -41,9 +44,15 @@ googleAdsense = ""
 # relatedPostCount = 10 # The number of related posts. Turn off by setting it to false.
 # categoryCount = 10 # The number of categories shown in sidebar. Turn off by setting it to false.
 # tagCount = 10 # The number of tags shown in sidebar. Turn off by setting it to false.
-# seriesCount = 10 # The number of series shown in sidebar. Turn off by setting it to false.
-taxonomyPaginate = 5 # Default to 10.
-# taxonomyPostCount = 5 # The number of posts of taxonomy. Turn off by setting it to false.
+# seriesCount = 20 # The number of series shown in sidebar. Turn off by setting it to false.
+# taxonomyPaginate = 5 # Default to 10.
+taxonomyPostCount = 20 # The number of taxonomy's posts. Turn off by setting it to false.
+countTaxonomyPosts = true # Count posts of taxonomy.
+
+# sidebarTaxonomies = ["categories", "tags", "series"] # The order of taxonomies on the sidebar.
+
+# pinnedPost = false # Turn on/off pinned posts.
+pinnedPostCount = 3 # The number of pinned posts.
 
 # Custom CSS and JS
 customCSS = [
@@ -51,11 +60,14 @@ customCSS = [
 customJS = [
 ]
 
-# tocWordCount = 280 # TOC is displayed only if the post's word count exceeds this value.
+tocWordCount = 1 # TOC is displayed only if the post's word count exceeds this value.
 
 titleCase = true # Capitalized title.
 
 viewer = true # Image Viewer
+
+# backgroundImage = ['/images/bg-light.png', '/images/bg-dark.png']
+# rss = "home" # link the RSS button to homepage all the times.
 
 [codeBlock]
   # maxLines = 8
@@ -64,9 +76,11 @@ viewer = true # Image Viewer
 [post]
   # excerpt = "description"
   # excerptMaxLength = 120
+  # copyright = false # Whether to display copyright section on each post.
+  # plainifyExcerpt = false # Format excerpt in HTML if false.
 
 [archive]
-  paginate = 8 # Archive pagination. Default to 100.
+  paginate = 20 # Archive pagination. Default to 100.
   # dateFormat = "01-02" # Archive date format. Default to "Jan 2".
 
 [analytics]
@@ -124,3 +138,31 @@ viewer = true # Image Viewer
   # small = ".9rem"
   # large = "1.1rem"
   # extraLarge = "1.2rem"
+
+[pwa]
+  [pwa.manifest]
+    # name = "" # Default to site title.
+    short_name = "HBS"
+    # display = "fullscreen" # Default to standalone.
+    # description = "" # Default to site description.
+    # theme_color = ""
+    # background_color = ""
+
+    # Icons
+    # [[pwa.manifest.icons]]
+    #   sizes = "96x96"
+    #   src = "/images/icons/icon-96x96.png"
+    # [[pwa.manifest.icons]]
+    #   sizes = "144x144"
+    #   src = "/images/icons/icon-144x144.png"
+
+[contact]
+  endpoint = "https://getform.io/f/56041c81-9e03-4c24-b9c5-61238854d4cd" # Backend endpoint, remove this line if you're using Netlify.
+  # file = true # Enable file upload
+  # fileField = "image" # The name of file field.
+
+[repo]
+  url = "https://github.com/razonyang/hugo-theme-bootstrap"
+  # branch = "main"
+  subPath = "exampleSite"
+  # dateFormat = "02/01/2006, 15:04:05 PM"

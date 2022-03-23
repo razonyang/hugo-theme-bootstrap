@@ -1,12 +1,12 @@
 {{- $baseURL := $.Site.BaseURL -}}
-<nav class="navbar top-app-bar top-app-bar-expand-lg{{ if (default true $.Site.Params.fixedHeader) }} fixed-top{{ end }}">
-  <div class="container{{ if default false .Site.Params.fullWidth }}-fluid{{ end }}">
+<nav class="navbar top-app-bar top-app-bar-expand-lg{{ if $.Site.Params.fixedHeader }} fixed-top{{ end }}">
+  <div class="container{{ if .Site.Params.fullWidth }}-fluid{{ end }}">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <i class="fas fa-bars"></i>
     </button>
     {{- $logo := (default "images/logo.webp" .Site.Params.logo) -}}
-    <a class="navbar-brand me-3{{ if .IsHome }} active{{ end }}" href="{{ "" | absLangURL }}">
+    <a class="navbar-brand flex-grow-1 flex-lg-grow-0 text-center text-lg-start mx-auto me-lg-3{{ if .IsHome }} active{{ end }}" href="{{ "" | absLangURL }}">
       {{- if $logo -}}
         {{ partial "helpers/image" (dict "filename" $logo "alt" "Logo" "class" "logo" "resources" .Resources) }}
       {{- end -}}
@@ -23,18 +23,22 @@
         {{- $active := or (eq $currentPage.Permalink (absURL .URL)) ($currentPage.IsMenuCurrent "main" .) -}}
         {{- if .HasChildren -}}
         <li class="nav-item dropdown">
-          <a class="nav-link{{ if $currentPage.HasMenuCurrent "main" . }} active{{ end }}" id="navbarDropdown-{{ .Identifier }}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link{{ if $currentPage.HasMenuCurrent "main" . }} active{{ end }}" id="navbarDropdown{{ title .Identifier }}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             {{ .Pre }} {{- .Name -}} {{ .Post }}
           </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown-{{ .Identifier }}">
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown{{ title .Identifier }}">
             {{- range .Children -}}
             {{- $childURL := .URL | absURL -}}
+            {{- if .Params.divider -}}
+            <li><hr class="dropdown-divider"></li>
+            {{- else -}}
             <li>
               <a class="dropdown-item{{ if or (eq $currentPage.Permalink (absURL .URL)) ($currentPage.IsMenuCurrent "main" .) }} active{{ end }}"
                 href="{{ $childURL }}"{{ if not (hasPrefix $childURL $baseURL) }} target="_blank" rel="noopener noreferrer"{{ end }}>
                 {{ .Pre }} {{- .Name -}} {{ .Post }}
               </a>
             </li>
+            {{- end -}}
             {{- end -}}
           </ul>
         </li>

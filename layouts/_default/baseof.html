@@ -1,6 +1,6 @@
 <!doctype html>
 {{- $color := $.Site.Params.color -}}
-<html lang="{{ .Lang }}"
+<html class="position-relative" itemscope itemtype="http://schema.org/WebPage" lang="{{ .Lang }}"{{ with $.Site.Params.palette }} data-palette="{{ replace . " " "-" }}"{{ end }}
   {{ if in (slice "light" "dark") $color }}{{ printf " data-mode=\"%s\"" $color | safeHTMLAttr }}{{ end }}>
   <head>
     <meta charset="utf-8">
@@ -11,11 +11,13 @@
     {{- partial "hooks/head-end" . -}}
   </head>
   <body>
-    {{- $bootstrapScript := resources.Get "js/bootstrap.template.js" | resources.ExecuteAsTemplate "js/bootstrap.js" . | resources.Minify | resources.Fingerprint -}}
-    <script src="{{ $bootstrapScript.Permalink }}" integrity="{{ $bootstrapScript.Data.Integrity }}" crossorigin="anonymous"></script>
+    {{- $bootstrapScript := resources.Get "bootstrap/template.js" | resources.ExecuteAsTemplate "js/bootstrap.js" . | minify -}}
+    <script>
+      {{- $bootstrapScript.Content | safeJS -}}
+    </script>
     {{- partial "header.html" . -}}
     {{- partial "hooks/main-begin" . -}}
-    <main role="main" class="container{{ if default false .Site.Params.fullWidth }}-fluid{{ end }}">
+    <main class="container{{ if .Site.Params.fullWidth }}-fluid{{ end }}">
       <div class="row content">
         {{- block "content" . -}}{{- end -}}
       </div>

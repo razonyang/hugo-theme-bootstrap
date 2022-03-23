@@ -1,0 +1,21 @@
+<div class="container">
+  {{- if not .IsHome -}}
+    {{- partial "breadcrumb" . -}}
+    {{- with .Content -}}
+    <article class="row card post component">
+      <div class="card-body pb-0">
+        {{ . }}
+      </div>
+    </article>
+    {{- end -}}
+    {{- partial "sections" . -}}
+  {{- end -}}
+  {{- partial "hooks/list-begin" . -}}
+  <div class="posts mb-4">
+  {{- range .Paginator.Pages -}}
+    {{- partial "list-item" (dict "Page" . "PinnedPosts" ($.Scratch.Get "pinnedPosts")) }}
+  {{- end -}}
+  </div>
+  {{- partial "hooks/list-end" . -}}
+  {{- partial "pagination" . -}}
+</div>

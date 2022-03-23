@@ -1,0 +1,21 @@
+{{- partial "post/panel" . -}}
+<article class="row card component mb-4 post">
+<div class="card-header ">
+    <h1 class="card-title post-title">{{ partial "helpers/title" . }}</h1>
+</div>
+<div class="card-body">
+    {{- partial "post/meta" . -}}
+    {{- partial "post/featured-image" . -}}
+    {{- partial "hooks/content-begin" . -}}
+    <div class="post-content mb-3">
+    {{- .Content -}}
+    </div>
+    {{- partial "post/reward" . -}}
+    {{- partial "hooks/content-end" . -}}
+</div>
+<div class="card-footer">
+    {{- partial "post/nav" . -}}
+</div>
+</article>
+{{- partial "post/copyright/index" . -}}
+{{- partial "post/comments" . -}}

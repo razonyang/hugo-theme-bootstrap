@@ -1,31 +1,3 @@
-{{ define "head-end" }}
-{{- $titleKey := dict "name" "title" "weight" 0.8 -}}
-{{- $contentKey := dict "name" "content" "weight" 0.5 -}}
-{{- $tagsKey := dict "name" "tags" "weight" 0.3 -}}
-{{- $categoriesKey := dict "name" "categories" "weight" 0.3 -}}
-{{- $seriesKey := dict "name" "series" "weight" 0.3 -}}
-{{- $keys := slice $titleKey $contentKey $tagsKey $categoriesKey $seriesKey -}}
-{{- $options := dict "ignoreLocation" true "includeMatches" true "includeScore" true "keys" $keys -}}
-{{- $optionWhitelist := slice "ignoreLocation" "isCaseSensitive" "minMatchCharLength" "threshold" "distance" "useExtendedSearch" -}}
-{{- with .Site.Params.search.fuse -}}
-  {{- range $key, $value := . -}}
-    {{- range $optionWhitelist -}}
-      {{- if eq $key (lower .) -}}
-        {{- $options = merge $options (dict . $value) -}}
-      {{- end -}}
-    {{- end -}}
-  {{- end -}}
-{{- end -}}
-
-<script>
-  window.searchResultContentWordCount = parseInt('{{ default 240 .Site.Params.search.resultContentWordCount }}');
-  window.searchPaginate = parseInt('{{ default 10 .Site.Params.search.paginate }}');
-  window.fuseOptions = JSON.parse('{{ $options | jsonify | safeHTML }}');
-</script>
-{{- $script := resources.Get "js/search.js" | resources.Fingerprint -}}
-<script src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>
-{{ end }}
-
 {{ define "content" }}
 <div class="search container">
   <div class="container">
@@ -49,17 +21,19 @@
 </div>
 <script type="text/html" id="templateResult">
   <div class="search-result row card component" id="{{ print "{{id}}" }}">
-    <div class="card-body">
+    <div class="card-header">
       <h2 class="card-title search-result-title">
         <a {{ printf "href={{permalink}}" | safeHTMLAttr }}>{{ print "{{title}}" }}</a>
       </h2>
-      <div class="search-result-taxonomies mb-3">
+    </div>
+    <div class="card-body">
+      <div class="post-meta mb-3">
         <span class="post-date">{{ printf "{{date}}" }}</span>
         {{- $baseURL := absLangURL "" -}}
         {{- $placeholder := "{{#url}}{{.}}{{/url}}" -}}
         {{- range slice "series" "categories" "tags" -}}
         {{ printf "{{#%s}}" . }}
-        <a {{ printf "href=\"%s%s/%s/\"" $baseURL . $placeholder | safeHTMLAttr }} class="badge bg-primary text-white rounded-pill post-taxonomy">{{ printf "{{.}}" }}</a>
+        <a {{ printf "href=\"%s%s/%s/\"" $baseURL . $placeholder | safeHTMLAttr }} class="badge post-taxonomy">{{ printf "{{.}}" }}</a>
         {{ printf "{{/%s}}" . }}
         {{- end -}}
       </div>

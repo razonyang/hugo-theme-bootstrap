@@ -1,17 +1,16 @@
 # Build stage
-FROM klakegg/hugo:ubuntu as builder
+FROM klakegg/hugo:ext-ubuntu as builder
 
-RUN apt-get update -y
-
-RUN apt-get install -y git
-
-# Build site
+## Build site
 WORKDIR /src
 COPY . /src
 ARG HUGO_BASEURL=/
 ENV HUGO_BASEURL=${HUGO_BASEURL}
+WORKDIR /src/exampleSite
+RUN npm install
+RUN npm install -g @fullhuman/postcss-purgecss
 RUN hugo version
-RUN cd /src/exampleSite && hugo --themesDir=../../ --theme=src -b ${HUGO_BASEURL}
+RUN hugo --themesDir=../../ --theme=src -b ${HUGO_BASEURL}
 
 # Final stage
 FROM nginx

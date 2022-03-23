@@ -1,0 +1,86 @@
+.btn-toggle {
+    &[aria-expanded="true"] {
+        .btn-toggle-icon {
+            transform: rotate(90deg);
+        }
+    }
+}
+
+.docs-catalog {
+    word-break: break-all;
+    
+    @include media-breakpoint-down(lg) {
+        position: fixed;
+        top: 54px;
+        z-index: 1000;
+        height: 100%;
+        padding-bottom: 54px;
+        width: 60vw;
+        transition: width .2s linear!important;
+        
+        .container, .card, .card-body {
+            height: 100%;
+        }
+
+        .card-body {
+            overflow-y: scroll;
+        }
+    }
+
+    li {
+        &:focus-visible {
+            outline: none;
+        }
+    }
+
+    .card {
+        @include media-breakpoint-up(lg) {
+            position: sticky;
+            top: 84px;
+
+            .card-body {
+                height: calc(100vh - 84px);
+                overflow-y: scroll;
+            }
+        }
+
+        .card-body {
+            padding: .5rem;
+        }
+    }
+}
+
+.catalog-section {
+    a {
+        &:hover {
+            color: inherit;
+        }
+    }
+}
+
+.docs-sidebar {
+    @include media-breakpoint-up(lg) {
+        top: 84px;
+        height: calc(100vh - 84px);
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar-track {
+            background: transparent;
+        }
+    }
+}
+
+.catalog-collapse {
+    @include media-breakpoint-up(lg) {
+      display: flex!important;
+    }
+}
+
+.catalog-toggle {
+    z-index: 999;
+    border: none;
+    width: 1rem;
+    background: var(--#{$variable-prefix}background);
+    color: var(--#{$variable-prefix}on-background);
+    left: 0;
+}

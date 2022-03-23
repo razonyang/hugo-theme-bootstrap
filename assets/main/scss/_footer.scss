@@ -1,0 +1,16 @@
+.footer {
+  color: var(--#{$variable-prefix}secondary-text-on-surface);
+
+  .powered-by a {
+    color: var(--#{$variable-prefix}accent);
+  }
+}
+
+.social-link {
+  padding: 0.25rem;
+  color: var(--#{$variable-prefix}secondary-text-on-surface) !important;
+
+  &:hover {
+    color: var(--#{$variable-prefix}accent)!important;
+  }
+}

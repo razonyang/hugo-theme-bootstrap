@@ -1,15 +1,15 @@
-{{- if or .Prev .Next -}}
-<div class="post-navs d-flex mb-3 justify-content-evenly">
+{{- if or .PrevInSection .NextInSection -}}
+<div class="post-navs d-flex justify-content-evenly">
+  {{- with .PrevInSection -}}
   <div class="post-nav post-prev">
-  {{- with .Prev -}}
-    <i class="fas fa-fw fa-chevron-left"></i>
+    <i class="fas fa-fw fa-chevron-circle-down" data-fa-transform="rotate-90"></i>
     <a href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a>
   </div>
   {{- end -}}
-  {{- with .Next -}}
+  {{- with .NextInSection -}}
   <div class="post-nav post-next">
     <a href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a>
-    <i class="fas fa-fw fa-chevron-right"></i>
+    <i class="fas fa-fw fa-chevron-circle-down" data-fa-transform="rotate-270"></i>
   </div>
   {{- end -}}
 </div>

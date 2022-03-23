@@ -1,14 +1,21 @@
-{{- $count := default 5 .Site.Params.relatedPostCount -}}
-{{- $relatedPosts := .Site.RegularPages.Related . -}}
+{{- $count := default .Params.relatedPostCount .Site.Params.relatedPostCount -}}
+{{- $relatedPosts := where (.Site.RegularPages.Related .) "Section" "in" .Site.Params.mainSections -}}
 {{- if and $count $relatedPosts -}}
-  {{- with (.Site.RegularPages.Related . | first $count) -}}
-  <section class="related-posts-wrapper">
-    <h3>{{ T "related_posts" }}</h3>
-    <ul class="related-posts">
-      {{- range . -}}
-      <li><a href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a></li>
-      {{- end -}}
-    </ul>
+  {{- with ($relatedPosts | first $count) -}}
+  <section class="related-posts row card component">
+    <div class="card-header">
+      <h2 class="card-title">{{ i18n "related_posts" }}</h2>
+    </div>
+    <div class="card-body">
+      <ul class="post-list">
+        {{- range . -}}
+        <li>
+          <a href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a>
+          <span class="float-end post-date">{{- partial "helpers/post-date" . -}}</span>
+        </li>
+        {{- end -}}
+      </ul>
+    </div>
   </section>
   {{- end -}}
 {{- end -}}

@@ -1,0 +1,5 @@
+{{- if .Site.Params.viewer -}}
+  {{- $options := dict "targetPath" "assets/viewer/bundle.min.js" "minify" true -}}
+  {{- $script := resources.Get "viewer/js/index.ts" | js.Build $options | fingerprint -}}
+  <script src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous" defer></script>
+{{- end -}}

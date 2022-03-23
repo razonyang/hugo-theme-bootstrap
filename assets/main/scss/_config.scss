@@ -1,0 +1,26 @@
+// PLEASE DO NOT OVERRIDE THIS FILE.
+{{ $params := $.Site.Params }}
+$fontSizes: (
+    xs: {{ default ".85rem" $params.fontSize.extraSmall }},
+    sm: {{ default ".925rem" $params.fontSize.small }},
+    lg: {{ default "1.075rem" $params.fontSize.large }},
+    xl: {{ default "1.15rem" $params.fontSize.extraLarge }},
+);
+
+$fixedHeader: {{ if $params.fixedHeader }}true{{ else }}false{{ end }};
+$backgroundImageLight: '{{ with $params.backgroundImage }}{{ index . 0 }}{{ end }}';
+$backgroundImageDark: '{{ with $params.backgroundImage }}{{ if gt (len .) 1 }}{{ index . 1 }}{{ else }}{{ index . 0 }}{{ end }}{{ end }}';
+
+// Palettes
+$preferPalette: '{{ default "blue" $params.palette }}';
+$validPalettes: true;
+{{- if isset $params "palette" -}}
+    {{- if eq 0 (len $params.palettes) -}}
+        $validPalettes: false;
+    {{- else -}}
+        $validPalettes: [];
+        {{- range $params.palettes -}}
+            $validPalettes: append($validPalettes, '{{ replace . " " "-" }}');
+        {{- end -}}
+    {{- end -}}
+{{- end -}}
