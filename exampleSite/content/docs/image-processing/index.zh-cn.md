@@ -5,6 +5,7 @@ draft = false
 comment = true
 toc = true
 reward = true
+carousel = true
 categories = [
   "Markdown"
 ]
