@@ -6,6 +6,7 @@ draft = false
 comment = true
 toc = true
 reward = true
+carousel = true
 categories = [
   "Markdown"
 ]
@@ -65,22 +66,22 @@ We can easily align images by adding URL fragments. Such as `#center`, `#floatle
 
 Adding the `#center` fragment for aligning images to the center.
 
-For example: `![Center](/center.png#center)`.
+For example: `![Center](/featured-sample.png#center)`.
 
-![Center](/center.png#center)
+![Center](/featured-sample.png?height=120px#center)
 
 ### Float Left
 
-![Float Left](/left.png#floatleft)
+![Float Left](/featured-sample.png?height=120px#floatleft)
 
 Adding the `#floatleft` fragment for floating images to the left.
 
-For example: `![Float Left](/left.png#floatleft)`.
+For example: `![Float Left](/featured-sample.png#floatleft)`.
 
 ### Float Right
 
-![Float Right](/right.png#floatright)
+![Float Right](/featured-sample.png?height=120px#floatright)
 
 Similarly, we can also float images to the right by adding the `#floatright` fragment.
 
-For example: `![Float Right](/right.png#floatright)`.
+For example: `![Float Right](/featured-sample.png#floatright)`.

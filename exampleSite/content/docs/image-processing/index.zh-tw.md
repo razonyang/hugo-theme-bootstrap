@@ -65,22 +65,22 @@ aliases = [
 
 添加 `#center` 使圖片居中對齊。
 
-舉個例子：`![Center](/center.png#center)`。
+舉個例子：`![Center](/featured-sample.png#center)`。
 
-![Center](/center.png#center)
+![Center](/featured-sample.png?height=120px#center)
 
 ### 向左浮動
 
-![Float Left](/left.png#floatleft)
+![Float Left](/featured-sample.png?height=120px#floatleft)
 
 添加 `#floatleft` 使圖片向左浮動。
 
-舉個例子：`![Float Left](/left.png#floatleft)`。
+舉個例子：`![Float Left](/featured-sample.png#floatleft)`。
 
 ### 向右浮動
 
-![Float Right](/right.png#floatright)
+![Float Right](/featured-sample.png?height=120px#floatright)
 
 同樣的，我們也可以添加 `#floatright` 使圖片向右浮動。
 
-舉個例子：`![Float Right](/right.png#floatright)`。
+舉個例子：`![Float Right](/featured-sample.png#floatright)`。
