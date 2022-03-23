@@ -2,6 +2,7 @@ import 'bootstrap/js/src/dropdown';
 import 'bootstrap/js/src/offcanvas';
 import 'bootstrap/js/src/modal';
 import 'bootstrap/js/src/tab';
+import 'bootstrap/js/src/carousel';
 
 import App from 'js/app';
 import Collapse from 'js/collapse/collapse';
