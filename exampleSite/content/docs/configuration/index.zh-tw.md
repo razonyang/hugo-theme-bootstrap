@@ -165,6 +165,7 @@ aliases = [
 | `readingTime` | Boolean | `true` | 是否顯示閱讀時間
 | `postDate` | Boolean | `true` | 是否顯示發表日期
 | `copyright` | Boolean | `true` | 是否顯示版權部分
+| `carousel` | Boolean | `false` | 是否在 Carousel 顯示
 | **Creative Commons License**
 | `creativeCommons` | Object | - |
 | `creativeCommons.by` | Boolean | `true` | 署名

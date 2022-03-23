@@ -162,6 +162,7 @@ See also [All Configuration Settings](https://gohugo.io/getting-started/configur
 | `readingTime` | Boolean | `true` | Whether to display the reading time.
 | `postDate` | Boolean | `true` | Whether to display the post date in the post meta section.
 | `copyright` | Boolean | `true` | Whether to display copyright section.
+| `carousel` | Boolean | `false` | Show on carousel.
 | **Creative Commons License**
 | `creativeCommons` | Object | - |
 | `creativeCommons.by` | Boolean | `true` | Credit must be given to you, the creator.
