@@ -4,6 +4,7 @@ title = "Markdown Syntax Guide"
 date = "2020-11-09"
 description = "Sample article showcasing basic Markdown syntax and formatting for HTML elements."
 featured = true
+carousel = true
 categories = [
 ]
 tags = [

@@ -67,20 +67,20 @@ aliases = [
 
 举个例子：`![Center](/center.png#center)`。
 
-![Center](/center.png#center)
+![Center](/featured-sample.png?height=120px#center)
 
 ### 向左浮动
 
-![Float Left](/left.png#floatleft)
+![Float Left](/featured-sample.png?height=120px#floatleft)
 
 添加 `#floatleft` 使图片向左浮动。
 
-举个例子：`![Float Left](/left.png#floatleft)`。
+举个例子：`![Float Left](/featured-sample.png#floatleft)`。
 
 ### 向右浮动
 
-![Float Right](/right.png#floatright)
+![Float Right](/featured-sample.png?height=120px#floatright)
 
 同样的，我们也可以添加 `#floatright` 使图片向右浮动。
 
-举个例子：`![Float Right](/right.png#floatright)`。
+举个例子：`![Float Right](/featured-sample.png#floatright)`。
