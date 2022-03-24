@@ -4,7 +4,7 @@
 {{- $pageResource := false -}}
 {{- $link := "" -}}
 {{- $resizable := false -}}
-{{- $unresizable := slice ".svg" -}}
+{{- $unresizable := slice ".svg" ".avif" -}}
 {{- $url := urls.Parse .filename -}}
 {{- if not $url.Scheme -}}
   {{- $resource := .resources.GetMatch (strings.TrimPrefix "/" $url.Path) -}}
@@ -17,8 +17,10 @@
   {{- else -}}
     {{- $filename := path.Join "static" $url.Path -}}
     {{- if fileExists $filename -}}
-      {{- $img = imageConfig $filename -}}
       {{- $link = .filename | absURL }}
+      {{- if not (in $unresizable ($link | path.Ext | lower)) -}}
+        {{- $img = imageConfig $filename -}}
+      {{- end -}}
     {{- else -}}
       {{- warnf "no such image can be found in page resources and the static folder: %s" .filename -}}
     {{- end -}}
