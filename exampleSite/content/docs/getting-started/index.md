@@ -43,10 +43,10 @@ Please make sure you [meet the prerequisites](#prerequisites) prior to installin
 
 Since `0.68.0`, HBS requires the following configurations are be set.
 
-```toml
+{{< code-toggle filename="config" >}}
 [build]
   writeStats = true
-```
+{{</ code-toggle >}}
 
 ## Installation Methods
 
