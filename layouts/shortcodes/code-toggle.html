@@ -1,0 +1,32 @@
+{{/* Inspired by https://github.com/gohugoio/hugoDocs/blob/master/layouts/shortcodes/code-toggle.html */}}
+{{- $filename := default "" (.Get "filename") -}}
+{{- $idSuffix := printf "%s%s" $filename (delimit (shuffle (seq 1 9)) "") -}}
+{{- $langs := slice "toml" "yaml" "json" -}}
+<ul class="nav nav-tabs" role="tablist">
+{{- $i := 0 -}}
+{{- with $filename -}}
+    <li class="nav-item d-flex align-items-center">{{ . }}.</li>
+{{- end -}}
+{{- range $langs -}}
+    {{- $id := printf "%s-%s" . $idSuffix -}}
+    <li class="nav-item" role="presentation">
+        <button class="nav-link{{ if eq $i 0 }} active{{ end }}" id="{{ $id }}-tab" data-bs-toggle="tab" data-bs-target="#{{ $id }}" type="button" role="tab" 
+            aria-controls="home" aria-selected="{{ if eq $i 0 }}true{{ else }}false{{ end }}">
+            {{ . }}
+        </button>
+    </li>
+    {{- $i = add $i 1 -}}
+{{- end -}}
+</ul>
+<div class="tab-content">
+{{- $i := 0 -}}
+{{- range $langs -}}
+    {{- $id := printf "%s-%s" . $idSuffix -}}
+    {{- $code := $.Inner | transform.Unmarshal | transform.Remarshal . -}}
+    {{- $code = replaceRE "\n+" "\n" $code -}}
+    <div class="tab-pane fade{{ if eq $i 0 }} show active{{ end }}" id="{{ $id }}" role="tabpanel" aria-labelledby="{{ $id }}-tab">
+        {{- highlight $code . -}}
+    </div>
+{{- $i = add $i 1 -}}
+{{- end -}}
+</div>
