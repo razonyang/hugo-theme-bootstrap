@@ -1,10 +1,12 @@
-{{ if .Params.images }}
-  <img class="post-featured-img w-100 mb-3" alt="{{ .Title }}" src="{{ index .Params.images 0 | absURL  }}" loading="lazy"/>
-{{- else -}}
-  {{- $images := .Resources.ByType "image" -}}
-  {{- $featured := $images.GetMatch "*feature*" -}}
-  {{- if not $featured }}{{ $featured = $images.GetMatch "{*cover*,*thumbnail*}" }}{{ end -}}
-  {{- with $featured -}}
-  <img class="post-featured-img w-100 mb-3" alt="{{ .Title }}" src="{{ $featured.Permalink }}" loading="lazy"/>
+{{- if default false .Site.Params.post.featuredImage -}}
+  {{- if .Params.images -}}
+    <img class="post-featured-img w-100 mb-3" alt="{{ .Title }}" src="{{ index .Params.images 0 | absURL  }}" loading="lazy"/>
+  {{- else -}}
+    {{- $images := .Resources.ByType "image" -}}
+    {{- $featured := $images.GetMatch "*feature*" -}}
+    {{- if not $featured }}{{ $featured = $images.GetMatch "{*cover*,*thumbnail*}" }}{{ end -}}
+    {{- with $featured -}}
+    <img class="post-featured-img w-100 mb-3" alt="{{ .Title }}" src="{{ $featured.Permalink }}" loading="lazy"/>
+    {{- end -}}
   {{- end -}}
 {{- end -}}

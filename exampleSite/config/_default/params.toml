@@ -78,6 +78,7 @@ viewer = true # Image Viewer
   # excerptMaxLength = 120
   # copyright = false # Whether to display copyright section on each post.
   # plainifyExcerpt = false # Format excerpt in HTML if false.
+  featuredImage = true # Show the featured image above the content.
 
 [archive]
   paginate = 20 # Archive pagination. Default to 100.
