@@ -52,6 +52,7 @@
     "fuse.js": "^6.5.3",
     "katex": "^0.15.2",
     "mark.js": "^8.11.1",
+    "masonry-layout": "^4.2.2",
     "mermaid": "^8.14.0",
     "mustache": "^4.2.0",
     "postcss-cli": "^9.1.0",
