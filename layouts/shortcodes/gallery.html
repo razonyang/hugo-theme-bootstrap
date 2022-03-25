@@ -1,0 +1,10 @@
+{{ $array := split (.Get "images") "," }}
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-4" data-masonry='{"percentPosition": true }'>
+    {{ range $elem_val := $array }}
+    <div class="col mb-4" >
+        <div class="card">
+            <img src="images/{{ $elem_val }}" class="card-img-top"/>
+        </div>
+    </div>
+    {{ end }}
+</div>
