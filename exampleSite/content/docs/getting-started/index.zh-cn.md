@@ -41,10 +41,10 @@ HBS(Hugo Bootstrap) 是一个快速、响应式和功能齐全的 Hugo 主题，
 
 自 `0.68.0`，HBS 要求设置以下配置。
 
-```toml
+{{< code-toggle filename="config" >}}
 [build]
   writeStats = true
-```
+{{</ code-toggle >}}
 
 ## 安装方法
 
