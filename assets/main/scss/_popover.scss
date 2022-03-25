@@ -14,7 +14,7 @@
 
 .bs-popover-start {
   .popover-arrow::after {
-    border-left-color: var(--#{$variable-prefix}background);
+    border-inline-start-color: var(--#{$variable-prefix}background);
   }
 }
 
@@ -27,7 +27,7 @@
 
   &[data-popper-placement^=left] {
     .popover-arrow::after {
-      border-left-color: var(--#{$variable-prefix}background);
+      border-inline-start-color: var(--#{$variable-prefix}background);
     }
   }
 }

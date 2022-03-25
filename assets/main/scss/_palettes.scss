@@ -115,7 +115,7 @@ $palettes: (
   color: var(--#{$variable-prefix}on-primary) !important;
 
   &:not(:last-child) {
-    margin-right: .25rem;
+    margin-inline-end: .25rem;
   }
 }
 

@@ -10,7 +10,7 @@
       color: var(--#{$variable-prefix}on-primary);
 
       &:not(:last-child) {
-        margin-right: 1rem;
+        margin-inline-end: 1rem;
       }
 
       &.active,
@@ -22,7 +22,7 @@
 
   &:hover {
     .panel {
-      opacity: 1!important;
+      opacity: 1 !important;
     }
   }
 }

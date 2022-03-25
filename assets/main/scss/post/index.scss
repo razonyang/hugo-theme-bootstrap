@@ -1,23 +1,23 @@
 .post-meta {
   margin-bottom: 1rem;
   color: var(--#{$variable-prefix}secondary-text-on-surface);
-  font-size: .8rem;
+  font-size: 0.8rem;
   word-break: break-all;
 
   span {
     &:not(:last-child) {
-      margin-right: .125rem;
+      margin-inline-end: 0.125rem;
 
       &::after {
-        content: '·';
-        margin-left: .125rem;
+        content: "·";
+        margin-inline-start: 0.125rem;
       }
     }
   }
 
   .post-taxonomy {
-    padding: .25rem;
-    padding-left: .5rem;
+    padding: 0.25rem;
+    padding-inline-start: 0.5rem;
   }
 }
 
@@ -27,7 +27,7 @@
 
 .related-posts {
   list-style: none;
-  padding-left: 0.25rem;
+  padding-inline-start: 0.25rem;
 
   a {
     color: var(--#{$variable-prefix}accent);
@@ -66,8 +66,8 @@
   z-index: 1;
 
   .post-panel {
-    text-align: right;
-    right: -1rem;
+    text-align: start;
+    inset-inline-end: -1rem;
     top: -0.5rem;
     margin-top: 8px;
 
@@ -84,18 +84,18 @@
 
     .action {
       margin-top: 0.25rem;
-      padding: .125rem .125rem .25rem;
+      padding: 0.125rem 0.125rem 0.25rem;
       transition: opacity 1s ease-out;
-      
+
       &:not(:last-child) {
         border-bottom: 1px #{$gray-500} solid;
       }
     }
-      
+
     .action-panel-toggler {
       opacity: 0;
       display: none;
-      border-bottom: none!important;
+      border-bottom: none !important;
     }
 
     @include media-breakpoint-down(sm) {
@@ -103,13 +103,14 @@
         opacity: 0;
         display: none;
       }
-      
+
       .action-panel-toggler {
         opacity: 1;
         display: block;
       }
 
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         .action {
           opacity: 1;
           display: block;
@@ -123,7 +124,7 @@
   position: relative;
 
   .post-title {
-    margin: .5rem 0;
+    margin: 0.5rem 0;
   }
 
   .post-toc {
@@ -141,18 +142,18 @@
 
 .post-taxonomy {
   background-color: var(--#{$variable-prefix}background);
-  color: var(--#{$variable-prefix}primary-text-on-surface)!important;
-  margin: .25rem;
-  padding: .5rem;
-  opacity: .6;
+  color: var(--#{$variable-prefix}primary-text-on-surface) !important;
+  margin: 0.25rem;
+  padding: 0.5rem;
+  opacity: 0.6;
   clip-path: polygon(100% 0, 100% 100%, 1rem 100%, 0 50%, 1rem 0);
-  padding-left: 1rem;
+  padding-inline-start: 1rem;
 
   @extend .shadow-sm;
 
   &:hover {
     opacity: 1;
-    color: var(--#{$variable-prefix}accent)!important;
+    color: var(--#{$variable-prefix}accent) !important;
     text-decoration: none;
   }
 }
@@ -169,6 +170,7 @@
   margin: 0.25rem;
   display: flex;
   align-items: center;
+  
 }
 
 .post-comments {
@@ -182,7 +184,7 @@
 }
 
 .btn.btn-reward {
-  color: var('on-primary');
+  color: var("on-primary");
   background-color: var(--#{$variable-prefix}accent);
 }
 
@@ -202,13 +204,13 @@
 }
 
 .post-list {
-  margin: .25rem 0;
+  margin: 0.25rem 0;
   color: var(--#{$variable-prefix}secondary-text-on-surface);
   list-style: none;
-  padding-left: 0.25rem;
-  
+  padding-inline-start: 0.25rem;
+
   li {
-    padding: .25rem 0;
+    padding: 0.25rem 0;
     clear: both;
 
     a {
@@ -224,8 +226,8 @@
 .posts {
   .post {
     img {
-      float: left;
-      margin-right: 1rem;
+      float: inline-start;
+      margin-inline-end: 1rem;
       width: 180px;
       height: auto;
       padding-bottom: 0.125rem;
@@ -244,4 +246,9 @@
 
 #postTOC {
   scroll-margin-top: 84px;
+}
+
+[dir="rtl"] .post-nav .fa-chevron-circle-down {
+    transform: scaleX(-1);
+    transform-origin: unset !important;
 }

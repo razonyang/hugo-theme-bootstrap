@@ -41,15 +41,15 @@
 
   + .search-result-taxonomy::before {
     content: '·';
-    margin-right: 0.25rem;
+    margin-inline-end: 0.25rem;
     display: inline-block;
   }
 }
 
 .search-result-content {
   img {
-    float: left;
-    margin-right: 1rem;
+    float: inline-start;
+    margin-inline-end: 1rem;
     max-width: 180px;
   }
 

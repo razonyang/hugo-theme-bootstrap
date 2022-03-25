@@ -12,10 +12,10 @@
 .accordion-button {
     background: var(--#{$variable-prefix}background);
     color: var(--#{$variable-prefix}primary-text-on-background);
-    box-shadow: none!important;
+    box-shadow: none !important;
 
     .faq-question-icon {
-        right: .5rem;
+        inset-inline-end: 0.5rem;
     }
 
     &:not(.collapsed) {

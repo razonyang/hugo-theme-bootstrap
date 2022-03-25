@@ -3,7 +3,7 @@
     background-color: var(--#{$variable-prefix}background);
     border-color: var(--#{$variable-prefix}background);
     color: var(--#{$variable-prefix}secondary-text-on-surface);
-    padding-left: 2rem;
+    padding-inline-start: 2rem;
 
     &:focus {
       color: var(--#{$variable-prefix}primary-text-on-surface);
@@ -47,7 +47,7 @@
 
           .nav-link {
             padding-right: $navbar-nav-link-padding-x;
-            padding-left: $navbar-nav-link-padding-x;
+            padding-inline-start: $navbar-nav-link-padding-x;
           }
         }
 

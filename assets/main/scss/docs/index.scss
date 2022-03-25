@@ -82,5 +82,5 @@
     width: 1rem;
     background: var(--#{$variable-prefix}background);
     color: var(--#{$variable-prefix}on-background);
-    left: 0;
+    inset-inline-start: 0;
 }
