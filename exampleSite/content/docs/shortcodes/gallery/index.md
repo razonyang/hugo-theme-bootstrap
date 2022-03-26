@@ -3,6 +3,7 @@ title = "Gallery Shortcode"
 date = "2022-03-25"
 description = "A detailed description of Gallery shortcode"
 featured = false
+masonry = true
 categories = [
   "Shortcode"
 ]
@@ -14,20 +15,24 @@ series = [
 ]
 images = [
 ]
-aliases = [
-  "/en/posts/shortcodes/gallery"
-]
 +++
 
 This article shows how to use the `gallery` shortcode.
+
 <!--more-->
 
+## Configuration
+
+You'll need to enable `masonry` on `params.toml`(global) or front matter.
+
+{{< code-toggle >}}
+masonry = true
+{{< /code-toggle >}}
+
+## Usage
+
 ```markdown
-{{</* gallery images="images1.jpg,image2.png" */>}}
+{{</* gallery images="images/foo.png,images/bar.png" */>}}
 ```
 
-> The parameter `images` is a concatenated of filename present on the `images` **child folder**.
-
-We use [Masonry](https://getbootstrap.com/docs/5.1/examples/masonry/) with the Bootstrap grid system and cards component
-
-{{< gallery images="image.png,image.png,image.png,image.png,image.png,image.png,image.png" >}}
+{{< gallery images="images/logo.webp,images/logo.webp,images/shortcode.png,images/logo.webp,images/logo.webp" >}}
