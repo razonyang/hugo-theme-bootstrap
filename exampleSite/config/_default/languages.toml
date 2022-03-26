@@ -29,3 +29,11 @@
     keywords = "Hugo, Bootstrap, 博客主題"
     [zh-tw.params.archive]
       dateFormat = "01-02"
+
+[ar]
+  languageName = "العربية"
+  LanguageDirection = 'rtl'
+  weight = 5
+  [ar.params]
+    dateFormat = "02-01-2006"
+    description = "ثيم مدونة مصمم لـ هوجو سريع وغني بالميزات"
