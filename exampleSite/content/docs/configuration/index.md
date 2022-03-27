@@ -136,6 +136,9 @@ See also [All Configuration Settings](https://gohugo.io/getting-started/configur
 | `post.featuredImage` | Boolean | `false` | Show the featured image above the content.
 | `viewer` | Boolean | true | [Image Viewer]({{< ref "docs/image-viewer" >}})
 | `pwa` | Object | - | [Progressive Web Apps]({{< ref "/docs/pwa" >}})
+| **Sidebar**
+| `sidebar` | Object | - |
+| `sidebar.fixed` | Boolean | `false` | Fix default sidebar.
 | **Meta Tag**
 | `metaRobots` | String | - | Empty means that turn it off.
 | `contact` | Object | - | [Contact Form]({{< ref "docs/layouts/contact-form" >}})

@@ -138,6 +138,9 @@ aliases = [
 | `post.featuredImage` | Boolean | `false` | 於內容上方顯示 Featured 圖片。
 | `viewer` | Boolean | true | [圖片查看器]({{< ref "docs/image-viewer" >}})
 | `pwa` | Object | - | [漸進式 web 應用]({{< ref "/docs/pwa" >}})
+| **Sidebar**
+| `sidebar` | Object | - |
+| `sidebar.fixed` | Boolean | `false` | 固定默認側邊欄。
 | **Meta Tag**
 | `metaRobots` | String | - | 空字符串表示禁用。
 | `contact` | Object | - | [聯系表單]({{< ref "docs/layouts/contact-form" >}})
