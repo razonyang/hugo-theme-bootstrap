@@ -82,7 +82,7 @@ $ hugo new posts/new-post/index.zh-tw.md
 1. If `post.excerpt = "description"` and `description` is not empty, then it'll be used.
 1. Manual splitting via <code>&lt;!--more--&gt;</code>.
 1. If `summary` on front matter isn't empty, then `summary` will be selected.
-1. The text of content will be cut off by `post.excerptMaxLength` and formatted in plain text or HTML when `post.plainifyExcerpt = ture`.
+1. The text of content will be cut off by `post.excerptMaxLength` and formatted in plain text or HTML when `post.plainifyExcerpt = true`.
 
 ```toml {title="config/_default/params.toml"}
 [post]
