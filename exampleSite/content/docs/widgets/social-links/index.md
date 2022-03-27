@@ -80,3 +80,7 @@ github = "githubusername"
 | `tiktok` | TikTok Username |
 | `pinterest` | Pinterest Username |
 | `mastodon` | Mastodon Username |
+| `liberapay` | Liberapay Username |
+| `paypal` | Paypal Username |
+| `patreon` | Patreon Username |
+| `tipeee` | Tipeee Username |
