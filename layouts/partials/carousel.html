@@ -48,9 +48,9 @@
   {{- $featured = $images.GetMatch "*feature*" -}}
   {{- if not $featured }}{{ $featured = $images.GetMatch "{*cover*,*thumbnail*}" }}{{ end -}}
   {{- with $featured -}}
-    {{- $smallImage := $featured.Resize "x240" -}}
+    {{- $smallImage := $featured.Resize "x180" -}}
     {{- $smallImageURL = $smallImage.Permalink -}}
-    {{- $largeImage := $featured.Resize "x360" -}}
+    {{- $largeImage := $featured.Resize "x320" -}}
     {{- $largeImageURL = $largeImage.Permalink -}}
   {{- end -}}
 {{- end -}}
