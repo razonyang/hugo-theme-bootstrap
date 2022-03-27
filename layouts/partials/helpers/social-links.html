@@ -26,7 +26,11 @@
 {{- $tiktok := dict "tiktok" (dict "url" "https://www.tiktok.com/@%s" "title" "TikTok" "icon" "fab fa-tiktok") -}}
 {{- $pinterest := dict "pinterest" (dict "url" "https://www.pinterest.com/%s" "icon" "fab fa-pinterest") -}}
 {{- $mastodon := dict "mastodon" (dict "url" "https://mastodon.social/@%s" "icon" "fab fa-mastodon") -}}
-{{- $items = merge $items $tumblr $reddit $telegram $qq $dockerhub $bitbucket $kaggle $lastfm $bilibili $tiktok $pinterest $mastodon -}}
+{{- $liberapay := dict "liberapay" (dict "url" "https://liberapay.com/%s" "icon" "fab fa-liberapay") -}}
+{{- $paypal := dict "paypal" (dict "url" "https://www.paypal.com/paypalme/%s" "icon" "fab fa-paypal") -}}
+{{- $patreon := dict "patreon" (dict "url" "https://www.patreon.com/%s" "icon" "fab fa-patreon") -}}
+{{- $tipeee := dict "tipeee" (dict "url" "https://fr.tipeee.com/%s" "icon" "fab fa-tipeee") -}}
+{{- $items = merge $items $tumblr $reddit $telegram $qq $dockerhub $bitbucket $kaggle $lastfm $bilibili $tiktok $pinterest $mastodon $liberapay $paypal $patreon $tipeee -}}
 {{- $size := default "" .size -}}
 <nav class="social-links nav justify-content-center{{ with .class }} {{ . }}{{ end }}">
 {{- range $key, $user := .links -}}
