@@ -26,9 +26,11 @@ const purgecss = require('@fullhuman/postcss-purgecss')({
 });
 
 const autoprefixer = require('autoprefixer');
+const rtlcss = require('rtlcss');
 
 module.exports = {
   plugins: [
+    rtlcss,
     autoprefixer,
     purgecss,
   ]

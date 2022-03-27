@@ -245,3 +245,10 @@
 #postTOC {
   scroll-margin-top: 84px;
 }
+
+/*!rtl:raw:
+.post-prev-icon, .post-next-icon {
+  transform: scaleX(-1);
+  transform-origin: unset!important;
+}
+*/

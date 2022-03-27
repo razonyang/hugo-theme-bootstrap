@@ -40,6 +40,7 @@ There is also a [list of websites that use this theme](https://github.com/razony
 - [Hugo Pipes](https://gohugo.io/hugo-pipes/): used to generate CSS and JS assets.
 - [Flexible and Configurable](https://hbs.razonyang.com/en/docs/configuration).
 - Fast and Good User Experience: [Google PageSpeed Insights](https://pagespeed.web.dev/report?url=https://hbs.razonyang.com/en/)'s score is over 95.
+- RTL support: [Arabic demo site](https://hbs.razonyang.com/ar/).
 - Built on top of custom [Bootstrap 5](https://getbootstrap.com/).
 - Responsive.
 - [PWA](https://hbs.razonyang.com/en/docs/pwa), AKA progressive web apps.

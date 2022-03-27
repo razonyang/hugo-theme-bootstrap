@@ -21,6 +21,7 @@
     "mermaid": "^8.14.0",
     "mustache": "^4.2.0",
     "postcss-cli": "^9.1.0",
+    "rtlcss": "^3.5.0",
     "viewerjs": "^1.10.4",
     "webpack": "^5.69.1",
     "workbox-cacheable-response": "^6.4.2",
