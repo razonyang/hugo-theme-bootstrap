@@ -73,7 +73,7 @@
 <picture>
   {{- range $alternativeFormats -}}
     {{- $filename := replace $url.Path $ext (printf ".%s" .) -}}
-    {{- if and $static (ne $ext .) (fileExists (path.Join "static" $filename)) -}}
+    {{- if and $static (not (strings.HasSuffix $ext .)) (fileExists (path.Join "static" $filename)) -}}
       <source srcset="{{ $filename | absURL }}" type="image/{{ . }}" />
     {{- end -}}
   {{- end -}}
