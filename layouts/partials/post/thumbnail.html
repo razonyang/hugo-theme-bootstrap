@@ -1,5 +1,16 @@
 {{ if .Params.images }}
-  <img class="img-fluid" alt="{{ .Title }}" src="{{ index .Params.images 0 | absURL  }}" loading="lazy"/>
+  {{- $formats := slice "avif" "webp" "jxl" -}}
+  <picture>
+  {{- $img := index .Params.images 0 -}}
+  {{- $ext := $img | path.Ext }}
+  {{- range $formats -}}
+    {{- $filename := replace $img $ext (printf ".%s" .) -}}
+    {{- if and (not (strings.HasSuffix $ext .)) (fileExists (path.Join "static" $filename)) -}}
+      <source srcset="{{ $filename | absURL }}" type="image/{{ . }}" />
+    {{- end -}}
+  {{- end -}}
+    <img class="img-fluid" alt="{{ .Title }}" src="{{ $img | absURL  }}" loading="lazy"/>
+  </picture>
 {{- else -}}
   {{- $images := .Resources.ByType "image" -}}
   {{- $featured := $images.GetMatch "*feature*" -}}
