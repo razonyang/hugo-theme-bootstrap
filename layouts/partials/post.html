@@ -7,6 +7,9 @@
     {{- partial "post/meta" . -}}
     {{- partial "post/featured-image" . -}}
     {{- partial "hooks/content-begin" . -}}
+    {{- if eq "content" .Site.Params.tocPosition -}}
+      {{- partial "post/toc" . -}}
+    {{- end -}}
     {{- partial "post/share" . -}}
     <div class="post-content mb-3">
       {{- .Content -}}
