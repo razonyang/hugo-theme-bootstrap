@@ -2,11 +2,12 @@
 {{- $toc := .TableOfContents -}}
 {{- $valid := and $toc (and (ne $toc "<nav id=\"TableOfContents\"></nav>") (gt .WordCount .Site.Params.tocWordCount)) -}}
 {{- if and $enable $valid -}}
-<div id="postTOC">
-  <h2 class="mb-3">
-    {{- i18n "table_of_contents" -}}
-    <a class="anchor ms-1" href="#postTOC"><i class="fas fa-link"></i></a>
-  </h2>
-  {{ $toc }}
+<div class="post-toc row mb-4 card component" id="postTOC">
+  <div class="card-header">
+    <h2 class="card-title">{{ i18n "table_of_contents" }}</h2>
+  </div>
+  <div class="card-body">
+    {{ $toc }}
+  </div>
 </div>
 {{- end -}}
