@@ -62,6 +62,7 @@ aliases = [
 | `backgroundImage` | Array | `[]` | 背景圖，如：`['/images/bg.png']`, `['/images/bg-light.png', '/images/bg-dark.png']`。
 | `comment` | Boolean | `true` | 是否開啟評論
 | `toc` | Boolean | `true` | 是否開啟目錄
+| `tocPosition` | String | `sidebar` | 可選值：`sidebar` 和 `content`。
 | `tocWordCount` | Integer | `280` | 僅當文章的字數超過此值時，才會顯示目錄。
 | `breadcrumb` | Boolean | `true` | 是否開啟面包屑導航
 | `dateFormat` | String | `Jan 2, 2006` | 日期格式。 查閱 [Hugo Date and Time Templating Reference](https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference) 以獲取詳細信息。

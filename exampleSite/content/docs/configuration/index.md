@@ -159,6 +159,7 @@ See also [All Configuration Settings](https://gohugo.io/getting-started/configur
 | `keywords` | Array | - | Page keywords.
 | `comment` | Boolean | `true` | Whether to enable comments. It won't work if `comment` has been disabled globally.
 | `toc` | Boolean | `true` | Whether to enable TOC. It won't work if `toc` has been disabled globally.
+| `tocPosition` | String | `sidebar` | Available values: `sidebar` and `content`.
 | `math` | Boolean | `false` | Whether to enable math.
 | `diagram` | Boolean | `false` | Whether to enable diagram.
 | `reward` | Boolean | `true` | Whether to enable reward.
