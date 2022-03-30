@@ -31,6 +31,7 @@ googleAdsense = ""
 # toc = false # Disable TOC globally.
 # tocPosition = "content"
 # breadcrumb = false # Disable breadcrumb
+# breadcrumbDivider = ">" # Breadcrumb divider
 # diagram = true
 # socialShare = false # disable social network sharing
 # searchBar = false # disable search-bar

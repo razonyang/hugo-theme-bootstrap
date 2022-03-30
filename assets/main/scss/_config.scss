@@ -11,6 +11,7 @@ $fixedHeader: {{ if $params.fixedHeader }}true{{ else }}false{{ end }};
 $fixedSidebar: {{ with $params.sidebar.fixed }}{{ . }}{{ else }}false{{ end }};
 $backgroundImageLight: '{{ with $params.backgroundImage }}{{ index . 0 }}{{ end }}';
 $backgroundImageDark: '{{ with $params.backgroundImage }}{{ if gt (len .) 1 }}{{ index . 1 }}{{ else }}{{ index . 0 }}{{ end }}{{ end }}';
+$breadcrumb-divider: quote("{{ with $params.breadcrumbDivider }}{{ . }}{{ else }}/{{ end }}");
 
 // Palettes
 $preferPalette: '{{ default "blue" $params.palette }}';
