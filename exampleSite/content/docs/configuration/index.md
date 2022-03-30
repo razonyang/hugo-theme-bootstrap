@@ -164,6 +164,7 @@ See also [All Configuration Settings](https://gohugo.io/getting-started/configur
 | `diagram` | Boolean | `false` | Whether to enable diagram.
 | `reward` | Boolean | `true` | Whether to enable reward.
 | `breadcrumb` | Boolean | `true` | Whether to enable breadcrumb.
+| `breadcrumbDivider` | String | `/` | Breadcrumb divider.
 | `readingTime` | Boolean | `true` | Whether to display the reading time.
 | `postDate` | Boolean | `true` | Whether to display the post date in the post meta section.
 | `copyright` | Boolean | `true` | Whether to display copyright section.

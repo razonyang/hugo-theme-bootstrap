@@ -65,6 +65,7 @@ aliases = [
 | `tocPosition` | String | `sidebar` | 可选值：`sidebar` 和 `content`。
 | `tocWordCount` | Integer | `280` | 仅当文章的字数超过此值时，才会显示目录。
 | `breadcrumb` | Boolean | `true` | 是否开启面包屑导航
+| `breadcrumbDivider` | String | `/` | 面包屑导航分隔符
 | `dateFormat` | String | `Jan 2, 2006` | 日期格式。 查阅 [Hugo Date and Time Templating Reference](https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference) 以获取详细信息。
 | `poweredBy` | Boolean | `true` | 是否显示技术支持。
 | `readingTime` | Boolean | `true` | 是否显示阅读时间
