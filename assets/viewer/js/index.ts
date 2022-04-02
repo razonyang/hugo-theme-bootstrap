@@ -21,7 +21,7 @@ class Gallery {
     run() {
         const self = this;
         document.querySelectorAll('img').forEach(function (img) {
-            if (img.parentElement.tagName !== 'A' && self.validate(img)) {
+            if (self.validate(img)) {
               img.addEventListener('click', function () {
                 self.gallery.show();
               });
@@ -30,7 +30,13 @@ class Gallery {
     }
 
     validate(img) {
-      return !img.hasAttribute('data-viewer-invisible');
+      if (img.parentElement.tagName === 'A' || img.hasAttribute('data-viewer-invisible')) {
+        return false;
+      }
+      if (img.parentElement.tagName === 'PICTURE') {
+        return this.validate(img.parentElement);
+      }
+      return true;
     }
 }
 
