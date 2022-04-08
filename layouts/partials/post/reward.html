@@ -5,7 +5,7 @@
   <div class="modal-dialog">
     <div class="modal-content surface">
       <div class="modal-header">
-        <h5 class="modal-title" id="rewardModalLabel"><i class="fas fa-fw fa-coffee"></i>{{ i18n "buy_me_a_coffee" }}</h5>
+        <h5 class="modal-title" id="rewardModalLabel"><i class="fas fa-fw fa-coffee me-1"></i>{{ i18n "buy_me_a_coffee" }}</h5>
         <a href="#" data-bs-dismiss="modal" class="btn btn-sm btn-outline-primary" aria-label="Close"><i class="fas fa-times"></i></a>
       </div>
       <div class="modal-body">
@@ -14,7 +14,7 @@
           {{- range $key, $value := $reward -}}
           <li class="nav-item text-nowrap" role="presentation">
             <a class="nav-link{{ if eq $index 0 }} active{{ end }}" id="reward-{{ $key }}-tab" data-bs-toggle="tab" href="#reward-{{ $key }}" role="tab" aria-controls="reward-{{ $key }}" aria-selected="true">
-              <i class="fab fa-fw fa-{{ default $key (index $icons $key) }}"></i>{{ i18n $key }}
+              <i class="fab fa-fw fa-{{ default $key (index $icons $key) }} me-1"></i>{{ i18n $key }}
             </a>
           </li>
           {{- $index = add $index 1 -}}
