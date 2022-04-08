@@ -182,10 +182,12 @@ $ hugo mod get -u github.com/razonyang/hugo-theme-bootstrap
 
 Hugo will automatically pull in the latest theme version.
 
-> If you want to set your module to a certain version inside the `hugo-theme-bootstrap` theme repo, simply specific the name of the tag representing this version (here: `v0.67.1`) when updating your theme:
+> If you want to set your module to a certain `version` inside the `hugo-theme-bootstrap` theme repo, simply specific the name of the tag representing this version  when updating your theme.
+> 
+> Latest version: [![Releases](https://img.shields.io/github/release/razonyang/hugo-theme-bootstrap?style=flat-square)](https://github.com/razonyang/hugo-theme-bootstrap/releases).
 
 ```shell
-$ hugo mod get -u github.com/razonyang/hugo-theme-bootstrap@v0.67.1
+$ hugo mod get -u github.com/razonyang/hugo-theme-bootstrap@version
 ```
 
 > Instead of a version tag, you can also specify a commit hash inside the repo (here: `de4a40f`) when updating your theme:
