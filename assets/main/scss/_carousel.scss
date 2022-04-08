@@ -1,33 +1,12 @@
 .carousel-caption {
     background: rgba(0, 0, 0, .5);
     padding: 1.25rem;
-    text-align: start;
 }
 
 .carousel-indicators {
-    justify-content: start;
-    margin-left: 1.5rem;
-
     [data-bs-target] {
-        height: 4px;
-        width: 20px;
-
-        &.active {
-            width: 40px;
-        }
-    }
-}
-
-.carousel-controls {
-    bottom: 1rem;
-    right: 1.25rem;
-
-    [data-bs-target] {
-        opacity: .5;
-
-        &:hover {
-            opacity: 1;
-        }
+        height: 10px;
+        width: 10px;
     }
 }
 
@@ -42,4 +21,9 @@
             height: 180px;
         }
     }
+}
+
+.carousel-control-prev, .carousel-control-next {
+    align-items: end;
+    bottom: 1.25rem;
 }

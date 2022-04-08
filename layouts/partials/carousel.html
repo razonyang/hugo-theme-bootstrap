@@ -7,7 +7,7 @@
             {{- $i := 0 -}}
             {{- range $pages -}}
                 <button type="button" data-bs-target="#carouselHome" data-bs-slide-to="{{ $i }}" aria-label="{{ .Title }}"
-                {{ if eq $i 0 }}class="rounded active" aria-current="true"{{ else }}class="rounded"{{ end }}></button>
+                {{ if eq $i 0 }}class="rounded-circle active" aria-current="true"{{ else }}class="rounded-circle"{{ end }}></button>
                 {{- $i = add $i 1 -}}
             {{- end -}}
             </div>
@@ -23,16 +23,14 @@
                 {{- $i = add $i 1 -}}
             {{- end -}}
             </div>
-            <div class="carousel-controls position-absolute d-none d-lg-block">
-                <a class="text-white text-decoration-none me-2" role="button" data-bs-target="#carouselHome" data-bs-slide="prev">
-                    <span class="fas fa-chevron-circle-down fa-2x" data-fa-transform="rotate-90" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </a>
-                <a class="text-white text-decoration-none" role="button" data-bs-target="#carouselHome" data-bs-slide="next">
-                    <span class="fas fa-chevron-circle-down fa-2x" data-fa-transform="rotate-270" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </a>
-            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselHome" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselHome" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
     </div>
 </div>
