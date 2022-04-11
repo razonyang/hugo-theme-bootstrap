@@ -134,6 +134,9 @@ See also [All Configuration Settings](https://gohugo.io/getting-started/configur
 | `post.copyright` | Boolean | `true` | Whether to display copyright section on each post.
 | `post.plainifyExcerpt` | Boolean | `true` | Format excerpt in HTML if `false`.
 | `post.featuredImage` | Boolean | `false` | Show the featured image above the content.
+| `post.numberifyHeadings` | Boolean | `false` | Count headings automatically.
+| `post.numberifyHeadingsEndLevel` | Number | `6` | The depth of headings to count.
+| `post.numberifyHeadingsSeparator` | String | - | The separator between of number and headings.
 | `viewer` | Boolean | true | [Image Viewer]({{< ref "docs/image-viewer" >}})
 | `pwa` | Object | - | [Progressive Web Apps]({{< ref "/docs/pwa" >}})
 | **Sidebar**
