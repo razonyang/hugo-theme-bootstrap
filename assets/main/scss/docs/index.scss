@@ -34,6 +34,8 @@
     }
 
     .card {
+        background: var(--#{$variable-prefix}background);
+        color: var(--#{$variable-prefix}primary-text-on-background);
         @include media-breakpoint-up(lg) {
             position: sticky;
             top: 84px;
@@ -46,6 +48,10 @@
 
         .card-body {
             padding: .5rem;
+
+            &::-webkit-scrollbar-track {
+                background: transparent;
+            }
         }
     }
 }

@@ -29,3 +29,11 @@ $white-disabled: rgba(225, 225, 225, 0.5);
 .text-on-background {
     color: var(--#{$variable-prefix}primary-text-on-background)!important;
 }
+
+.bg-surface {
+    background-color: var(--#{$variable-prefix}surface)!important;
+}
+
+.text-on-surface {
+    color: var(--#{$variable-prefix}primary-text-on-surface)!important;
+}

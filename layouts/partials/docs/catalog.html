@@ -3,7 +3,7 @@
 </button>
 <aside class="docs-catalog col-lg-2 collapse collapse-horizontal catalog-collapse" tabindex="-1" data-bs-hide="focusout">
   <div class="container px-0 px-lg-1">
-    <div class="row card component">
+    <div class="row card component px-0">
       <div class="card-body">
         {{ template "walk-catalog" (dict "section" .FirstSection "page" .) }}
       </div>
@@ -24,7 +24,7 @@
           {{- $active = true -}}
         {{- end -}}
         <li class="mb-2{{ if eq .Permalink $page.Permalink }} active{{ end }}" tabindex="-1">
-          <div class="catalog-section py-1 d-flex justify-content-between align-items-center px-2 {{ if $active }}bg-accent text-white{{ else }}bg-background text-on-background{{ end }}">
+          <div class="catalog-section py-1 d-flex justify-content-between align-items-center px-2 {{ if $active }}bg-accent text-white{{ else }}bg-surface text-on-surface{{ end }}">
             <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
             <a class="btn-toggle collapsed ms-1" role="button" data-bs-toggle="collapse"
               data-bs-target="#{{ $sectionId }}" aria-expanded="{{ if $active }}true{{ else }}false{{ end }}" aria-controls="{{ $sectionId }}">
