@@ -54,6 +54,35 @@
   }
 }
 
+@if $numberifyHeadings {
+  .post-content {
+    counter-reset: h2Counter;
+    @for $heading from 2 through $numberifyHeadingsEndLevel {
+      h#{$heading} {
+        @if $heading < $numberifyHeadingsEndLevel {
+          counter-reset: h#{$heading+1}Counter;
+        }
+
+        &::before {
+          display: inline;
+          counter-increment: h#{$heading}Counter;
+          @if $heading == 2 {
+            content: counter(h2Counter) $numberifyHeadingsSeparator;
+          } @else if $heading == 3 {
+            content: counter(h2Counter) '.' counter(h3Counter) $numberifyHeadingsSeparator;
+          } @else if $heading == 4 {
+            content: counter(h2Counter) '.' counter(h3Counter) '.' counter(h4Counter) $numberifyHeadingsSeparator;
+          } @else if $heading == 5 {
+            content: counter(h2Counter) '.' counter(h3Counter) '.' counter(h4Counter) '.' counter(h5Counter) $numberifyHeadingsSeparator;
+          } @else if $heading == 6 {
+            content: counter(h2Counter) '.' counter(h3Counter) '.' counter(h4Counter) '.' counter(h5Counter) '.' counter(h6Counter) $numberifyHeadingsSeparator;
+          }
+        }
+      }
+    }
+  }
+}
+
 .post-meta,
 .post-summary,
 .post-content,

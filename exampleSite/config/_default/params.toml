@@ -84,6 +84,9 @@ viewer = true # Image Viewer
   # copyright = false # Whether to display copyright section on each post.
   # plainifyExcerpt = false # Format excerpt in HTML if false.
   featuredImage = true # Show the featured image above the content.
+  numberifyHeadings = true # Count headings automatically.
+  # numberifyHeadingsEndLevel = 4 # The depth of headings to count. Default to 6.
+  # numberifyHeadingsSeparator = "." # The separator between of number and headings.
 
 [archive]
   paginate = 20 # Archive pagination. Default to 100.
