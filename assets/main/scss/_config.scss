@@ -26,3 +26,7 @@ $validPalettes: true;
         {{- end -}}
     {{- end -}}
 {{- end -}}
+
+$numberifyHeadings: {{ default false $params.post.numberifyHeadings }};
+$numberifyHeadingsSeparator: '{{ default "" $params.post.numberifyHeadingsSeparator }}' + "\0000a0";
+$numberifyHeadingsEndLevel: {{ default 6 $params.post.numberifyHeadingsEndLevel }};
