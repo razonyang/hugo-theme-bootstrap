@@ -23,8 +23,6 @@
   >ol, >ul {
     @if $tocStyleType == none {
         padding-left: 0;
-    } @else {
-        padding-left: 1rem;
     }
   }
 }
