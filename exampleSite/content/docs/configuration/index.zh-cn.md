@@ -141,6 +141,7 @@ aliases = [
 | `post.numberifyHeadings` | Boolean | `false` | 是否自动对标题进行编号。
 | `post.numberifyHeadingsEndLevel` | Number | `6` | 自动编号的深度。
 | `post.numberifyHeadingsSeparator` | String | - | 编号和标题之间的分隔符。
+| `post.tocStyleType` | String | `none` | 目录的 `list-style-type` CSS 属性。
 | `viewer` | Boolean | true | [图片查看器]({{< ref "docs/image-viewer" >}})
 | `pwa` | Object | - | [渐进式 web 应用]({{< ref "/docs/pwa" >}})
 | **Sidebar**

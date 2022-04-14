@@ -137,6 +137,7 @@ See also [All Configuration Settings](https://gohugo.io/getting-started/configur
 | `post.numberifyHeadings` | Boolean | `false` | Count headings automatically.
 | `post.numberifyHeadingsEndLevel` | Number | `6` | The depth of headings to count.
 | `post.numberifyHeadingsSeparator` | String | - | The separator between of number and headings.
+| `post.tocStyleType` | String | `none` | The TOC's CSS `list-style-type` property.
 | `viewer` | Boolean | true | [Image Viewer]({{< ref "docs/image-viewer" >}})
 | `pwa` | Object | - | [Progressive Web Apps]({{< ref "/docs/pwa" >}})
 | **Sidebar**

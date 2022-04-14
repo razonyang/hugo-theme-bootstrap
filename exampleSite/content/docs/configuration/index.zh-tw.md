@@ -141,6 +141,7 @@ aliases = [
 | `post.numberifyHeadings` | Boolean | `false` | 是否自動對標題進行編號。
 | `post.numberifyHeadingsEndLevel` | Number | `6` | 自動編號的深度。
 | `post.numberifyHeadingsSeparator` | String | - | 編號和標題之間的分隔符。
+| `post.tocStyleType` | String | `none` | 目錄的 `list-style-type` CSS 屬性。
 | `viewer` | Boolean | true | [圖片查看器]({{< ref "docs/image-viewer" >}})
 | `pwa` | Object | - | [漸進式 web 應用]({{< ref "/docs/pwa" >}})
 | **Sidebar**
