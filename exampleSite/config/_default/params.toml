@@ -87,6 +87,7 @@ viewer = true # Image Viewer
   numberifyHeadings = true # Count headings automatically.
   # numberifyHeadingsEndLevel = 4 # The depth of headings to count. Default to 6.
   numberifyHeadingsSeparator = "." # The separator between of number and headings.
+  # tocStyleType = "decimal" # The TOC's CSS list-style-type property.
 
 [archive]
   paginate = 20 # Archive pagination. Default to 100.

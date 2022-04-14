@@ -1,0 +1,30 @@
+#TableOfContents {
+  color: var(--#{$variable-prefix}secondary-text-on-surface);
+
+  ol,
+  ul {
+    @if $tocStyleType {
+      list-style-type: #{$tocStyleType};
+    }
+    padding-left: 1rem;
+
+    li {
+      a {
+        color: inherit;
+        font-weight: 400;
+
+        &:hover {
+          color: var(--#{$variable-prefix}accent);
+        }
+      }
+    }
+  }
+
+  >ol, >ul {
+    @if $tocStyleType == none {
+        padding-left: 0;
+    } @else {
+        padding-left: 1rem;
+    }
+  }
+}

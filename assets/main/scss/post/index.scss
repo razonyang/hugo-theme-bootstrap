@@ -1,4 +1,5 @@
 @import 'panel';
+@import 'toc';
 
 .post-meta {
   margin-bottom: 1rem;
@@ -157,21 +158,6 @@
 .btn.btn-reward {
   color: var('on-primary');
   background-color: var(--#{$variable-prefix}accent);
-}
-
-#TableOfContents {
-  color: var(--#{$variable-prefix}secondary-text-on-surface);
-
-  ul li {
-    a {
-      color: inherit;
-      font-weight: 400;
-
-      &:hover {
-        color: var(--#{$variable-prefix}accent);
-      }
-    }
-  }
 }
 
 .post-list {
