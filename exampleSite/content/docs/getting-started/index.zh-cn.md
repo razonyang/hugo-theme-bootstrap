@@ -30,13 +30,6 @@ HBS(Hugo Bootstrap) 是一个快速、响应式和功能齐全的 Hugo 主题，
 
 ## 先决条件
 
-- [Git](https://git-scm.com/downloads)。
-- [Hugo](https://gohugo.io/getting-started/installing/)：**extended** `0.84.0` 版本或以上。
-- [npm](https://nodejs.org/en/download/)：用于安装 CSS 和 JS  依赖。
-- [Go](https://go.dev/dl/): `1.12` 版本或以上，仅当安装为 [Hugo Module]({{< ref "/docs/installation/hugo-module" >}}) 时必须。
-
-> 我们建议使用这些工具的最新版本。
-
 ### Configuration
 
 自 `0.68.0`，HBS 要求设置以下配置。
@@ -45,6 +38,15 @@ HBS(Hugo Bootstrap) 是一个快速、响应式和功能齐全的 Hugo 主题，
 [build]
   writeStats = true
 {{</ code-toggle >}}
+
+### 构建工具
+
+- [Git](https://git-scm.com/downloads)。
+- [Hugo](https://gohugo.io/getting-started/installing/)：**extended** `0.84.0` 版本或以上。
+- [npm](https://nodejs.org/en/download/)：用于安装 CSS 和 JS  依赖。
+- [Go](https://go.dev/dl/): `1.12` 版本或以上，仅当安装为 [Hugo Module]({{< ref "/docs/installation/hugo-module" >}}) 时必须。
+
+> 我们建议使用这些工具的最新版本。
 
 ## 安装方法
 
