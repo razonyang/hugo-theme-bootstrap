@@ -23,22 +23,22 @@
         {{- if hasPrefix $page.Permalink .Permalink -}}
           {{- $active = true -}}
         {{- end -}}
-        <li class="mb-2{{ if eq .Permalink $page.Permalink }} active{{ end }}" tabindex="-1">
-          <div class="catalog-section py-1 d-flex justify-content-between align-items-center px-2 {{ if $active }}bg-accent text-white{{ else }}bg-surface text-on-surface{{ end }}">
+        <li class="mb-2" tabindex="-1">
+          <div class="catalog-section py-1 d-flex justify-content-between align-items-center px-2{{ if $active }} bg-surface{{ end }}">
             <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
             <a class="btn-toggle collapsed ms-1" role="button" data-bs-toggle="collapse"
               data-bs-target="#{{ $sectionId }}" aria-expanded="{{ if $active }}true{{ else }}false{{ end }}" aria-controls="{{ $sectionId }}">
               <i class="btn-toggle-icon fas fa-chevron-circle-down ms-auto" data-fa-transform="rotate-270"></i>
             </a>
           </div>
-          <div class="mt-2 border-start collapse{{ if $active }} show{{ end }}" id="{{ $sectionId }}">
+          <div class="mt-2 collapse{{ if $active }} show{{ end }}" id="{{ $sectionId }}">
             <ul class="btn-toggle-nav list-unstyled fw-normal ms-2">
               {{ template "walk-catalog" (dict "section" . "page" $page) }}
             </ul>
           </div>
         </li>
         {{- else -}}
-        <li class="mb-2{{ if eq .Permalink $page.Permalink }} active text-accent{{ end }}" tabindex="-1">
+        <li class="mb-2 py-1 px-2{{ if eq .Permalink $page.Permalink }} bg-surface{{ end }}" tabindex="-1">
           <a href="{{ .Permalink }}"{{ if .Params.redirect }} target="_blank"{{ end }}>
             {{- .LinkTitle -}}
             {{- if .Params.redirect -}}
