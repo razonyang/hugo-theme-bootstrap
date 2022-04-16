@@ -1,5 +1,14 @@
+
+const stats = './hugo_stats.json';
+const fs = require('fs');
+fs.access(stats, fs.F_OK, (err) => {
+  if (err) {
+    throw new Error('Hugo stats file not found, please turn on the build.writeStats.\n\n# /config/_default/config.toml\n[build]\n  writeStats = true\n')
+  }
+});
+
 const purgecss = require('@fullhuman/postcss-purgecss')({
-  content: [ './hugo_stats.json' ],
+  content: [ stats ],
   defaultExtractor: (content) => {
       let els = JSON.parse(content).htmlElements;
       return els.tags.concat(els.classes, els.ids);
