@@ -2,7 +2,7 @@
 {{- $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections -}}
 {{- $paginator := .Paginate $pages.ByDate.Reverse (default 100 .Site.Params.archive.paginate) -}}
 <div class="col-lg-8 archives mb-4">
-  {{- if $pages -}}
+  {{- if $paginator -}}
   <div class="container">
     {{- partial "breadcrumb" . -}}
     {{- $count := len $paginator.Pages -}}
