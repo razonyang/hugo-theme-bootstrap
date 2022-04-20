@@ -1,6 +1,6 @@
 {{- $baseURL := $.Site.BaseURL -}}
 <nav class="navbar top-app-bar top-app-bar-expand-lg{{ if $.Site.Params.fixedHeader }} fixed-top{{ end }}">
-  <div class="container{{ if .Site.Params.fullWidth }}-fluid{{ end }}">
+  <div class="{{- partial "helpers/fullwidth" (dict "Page" . "Output" "container" "FullWidthOutput" "container-fluid") -}}">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <i class="fas fa-bars"></i>

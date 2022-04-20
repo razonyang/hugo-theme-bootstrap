@@ -1,0 +1,12 @@
+{{- $fullWidth := false -}}
+{{- $section := strings.TrimPrefix (relLangURL "/") .Page.FirstSection.RelPermalink | strings.TrimSuffix "/" -}}
+{{- if eq .Page.Site.Params.fullWidth true -}}
+    {{- $fullWidth = true -}}
+{{- else if isset .Page.Site.Params.fullWidth $section -}}
+    {{- $fullWidth = index .Page.Site.Params.fullWidth $section -}}
+{{- end -}}
+{{- if $fullWidth -}}
+    {{- .FullWidthOutput -}}
+{{- else -}}
+    {{- .Output -}}
+{{- end -}}

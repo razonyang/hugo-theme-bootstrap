@@ -19,7 +19,7 @@
     </script>
     {{- partial "header.html" . -}}
     {{- partial "hooks/main-begin" . -}}
-    <main class="container{{ if .Site.Params.fullWidth }}-fluid{{ end }}">
+    <main class="{{- partial "helpers/fullwidth" (dict "Page" . "Output" "container" "FullWidthOutput" "container-fluid") -}}">
       <div class="row content">
         {{- block "content" . -}}{{- end -}}
       </div>

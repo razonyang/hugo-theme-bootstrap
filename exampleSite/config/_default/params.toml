@@ -176,3 +176,7 @@ viewer = true # Image Viewer
   # branch = "main"
   subPath = "exampleSite"
   # dateFormat = "02/01/2006, 15:04:05 PM"
+
+[fullWidth]
+  post = false
+  docs = true
