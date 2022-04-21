@@ -50,8 +50,9 @@ HBS(Hugo Bootstrap) 是一個快速、響應式和功能齊全的 Hugo 主題，
 
 ## 安裝方法
 
-- [Git Submodule]({{< ref "/docs/installation/git-submodule" >}}).
-- [Hugo Module]({{< ref "/docs/installation/hugo-module" >}}).
+- [Install via Starter Template](https://github.com/razonyang/hugo-theme-bootstrap-skeleton): **Recommended**.
+- [Install via Git Submodule]({{< ref "/docs/installation/git-submodule" >}}).
+- [Install via Hugo Module]({{< ref "/docs/installation/hugo-module" >}}).
 
 ## 下一步
 

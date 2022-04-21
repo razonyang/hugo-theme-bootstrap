@@ -52,8 +52,9 @@ Since `0.68.0`, HBS requires the following configurations are be set.
 
 ## Installation Methods
 
-- [Git Submodule]({{< ref "/docs/installation/git-submodule" >}}).
-- [Hugo Module]({{< ref "/docs/installation/hugo-module" >}}).
+- [Install via Starter Template](https://github.com/razonyang/hugo-theme-bootstrap-skeleton): **Recommended**.
+- [Install via Git Submodule]({{< ref "/docs/installation/git-submodule" >}}).
+- [Install via Hugo Module]({{< ref "/docs/installation/hugo-module" >}}).
 
 ## Up Next
 

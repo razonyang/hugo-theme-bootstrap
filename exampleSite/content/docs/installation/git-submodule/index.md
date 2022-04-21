@@ -17,7 +17,7 @@ series = [
   "Docs"
 ]
 images = []
-weight = 100
+weight = 80
 +++
 
 This article refers to the traditional installation method of cloning the theme locally as Git submodule.
