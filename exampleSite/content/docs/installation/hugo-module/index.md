@@ -23,6 +23,22 @@ weight = 90
 This article refers to the modern, up-to-date installation method of installing the theme locally as Hugo module.
 It describes how to install, upgrade the theme, and write new articles.
 
+## Proxy (optional)
+
+If you're located at China mainland without VPN, the Hugo module download may fail.
+
+There are two proxies for this: [GOPROXY.CN](https://goproxy.cn) and [GOPROXY.IO](https://goproxy.io).
+
+```shell
+$  go env -w GOPROXY=https://goproxy.cn,direct
+```
+
+or
+
+```shell
+$ go env -w GOPROXY=https://goproxy.io,direct
+```
+
 ## Installation
 
 ### Install a new site from scratch
