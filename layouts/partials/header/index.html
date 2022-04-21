@@ -26,7 +26,7 @@
           <a class="nav-link{{ if $currentPage.HasMenuCurrent "main" . }} active{{ end }}" id="navbarDropdown{{ title .Identifier }}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             {{ .Pre }} {{- .Name -}} {{ .Post }}
           </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown{{ title .Identifier }}">
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown{{ title .Identifier }}" data-bs-popper="none">
             {{- range .Children -}}
             {{- $childURL := .URL | absURL -}}
             {{- if .Params.divider -}}

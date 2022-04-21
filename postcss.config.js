@@ -31,7 +31,8 @@ const purgecss = require('@fullhuman/postcss-purgecss')({
     ],
     // deep: [/blue$/],
     greedy: [/carousel-indicators$/]
-  }
+  },
+  dynamicAttributes: ["data-bs-popper"]
 });
 
 const autoprefixer = require('autoprefixer');
