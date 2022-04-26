@@ -50,6 +50,7 @@ googleAdsense = ""
 # taxonomyPaginate = 5 # Default to 10.
 taxonomyPostCount = 20 # The number of taxonomy's posts. Turn off by setting it to false.
 countTaxonomyPosts = true # Count posts of taxonomy.
+# taxonomySortingMethod = "popularity" # Sorting taxonomies by popularity, sort alphabetically by default.
 
 # sidebarTaxonomies = ["categories", "tags", "series"] # The order of taxonomies on the sidebar.
 
