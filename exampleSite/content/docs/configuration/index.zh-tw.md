@@ -86,6 +86,7 @@ aliases = [
 | `tagCount` | Integer/Boolean | `10` | 標簽數，`false` 則隱藏。
 | `seriesCount` | Integer/Boolean | `10` | 專欄數，`false` 則隱藏。
 | `taxonomyPaginate` | Integer | `10` |
+| `taxonomySortingMethod` | String | - | 分類排序方式，默認以字母排序。可選值：`popularity`.
 | `taxonomyPostCount` | Integer | `3` | 分類的列表文章數，`false` 則隱藏。
 | `countTaxonomyPosts` | Boolean | `false` | 是否顯示分類的文章總數。
 | `sidebarTaxonomies` | Array | `["series", "categories", "tags"]` | 側邊欄的分類。

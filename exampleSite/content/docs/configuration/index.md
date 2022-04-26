@@ -85,6 +85,7 @@ See also [All Configuration Settings](https://gohugo.io/getting-started/configur
 | `seriesCount` | Integer | `10` | The number of series shown in sidebar.
 | `taxonomyPaginate` | Integer | `10` |
 | `taxonomyPostCount` | Integer | `3` | The number of taxonomy's posts. Turn off by setting it to false.
+| `taxonomySortingMethod` | String | - | Sorting taxonomies by `popularity`, sort alphabetically by default.
 | `countTaxonomyPosts` | Boolean | `false` | Count posts of taxonomy.
 | `sidebarTaxonomies` | Array | `["series", "categories", "tags"]` | The taxonomies on the sidebar.
 | `fullWidth` | Boolean/Object | `false` | Full width.

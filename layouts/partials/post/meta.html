@@ -14,14 +14,12 @@
   </span>
   {{- end -}}
   <span class="post-taxonomies">
-  {{- $taxonomies := slice -}}
   {{- range $key, $value := .Site.Taxonomies -}}
-    {{- range ($.GetTerms $key) -}}
-      {{- $taxonomies = $taxonomies | append . -}}
+    {{- $taxonomies := ($.GetTerms $key).ByTitle -}}
+    {{- if eq $.Site.Params.taxonomySortingMethod "popularity" -}}{{- $taxonomies = (sort $taxonomies ".Data.Pages" "desc") -}}{{- end -}}
+    {{- range $taxonomies -}}
+      <a href="{{ .Permalink }}" class="badge post-taxonomy">{{ .Name }}</a>
     {{- end -}}
-  {{- end -}}
-  {{- range (sort $taxonomies "Title") -}}
-  <a href="{{ .Permalink }}" class="badge post-taxonomy">{{ .Name }}</a>
   {{- end -}}
   </span>
 </div>

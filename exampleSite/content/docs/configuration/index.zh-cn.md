@@ -87,6 +87,7 @@ aliases = [
 | `seriesCount` | Integer/Boolean | `10` | 专栏数，`false` 则隐藏。
 | `taxonomyPaginate` | Integer | `10` |
 | `taxonomyPostCount` | Integer | `3` | 分类的列表文章数，`false` 则隐藏。
+| `taxonomySortingMethod` | String | - | 分类排序方式，默认以字母排序。可选值：`popularity`。
 | `countTaxonomyPosts` | Boolean | `false` | 显示分类的文章总数。
 | `sidebarTaxonomies` | Array | `["series", "categories", "tags"]` | 侧边栏的分类。
 | `fullWidth` | Boolean/Object | `false` | 是否全宽
