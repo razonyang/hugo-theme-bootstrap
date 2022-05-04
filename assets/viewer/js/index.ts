@@ -20,12 +20,15 @@ class Gallery {
 
     run() {
         const self = this;
-        document.querySelectorAll('img').forEach(function (img) {
-            if (self.validate(img)) {
-              img.addEventListener('click', function () {
-                self.gallery.show();
-              });
+        document.addEventListener('click',function(e: Event) {
+          if(e.target && e.target instanceof HTMLElement && e.target.tagName === 'IMG') {
+            if (self.validate(e.target)) {
+              self.gallery.show();
             }
+          }
+        });
+        document.addEventListener('hbs:viewer:update', function(e) {
+          self.gallery.update();
         });
     }
 

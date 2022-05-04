@@ -237,6 +237,9 @@ export class Search {
       this.showLoadMoreBtn();
     }
     this.page += 1;
+    const event = document.createEvent('HTMLEvents');
+    event.initEvent('hbs:viewer:update');
+    document.dispatchEvent(event);
   }
 
   static formatScore(value) {
