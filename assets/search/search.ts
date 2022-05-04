@@ -215,6 +215,8 @@ export class Search {
         content,
         id,
         img: result.item.img,
+        smallImg: result.item.smallImg,
+        largeImg: result.item.largeImg,
         permalink: result.item.permalink,
         categories: result.item.categories,
         tags: result.item.tags,
