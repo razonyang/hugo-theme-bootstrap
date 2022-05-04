@@ -1,4 +1,4 @@
-<footer class="footer mt-auto py-3 text-center container{{ if .Site.Params.fullWidth }}-fluid{{ end }}">
+<footer class="footer mt-auto py-3 text-center {{ partial "helpers/fullwidth" (dict "Page" . "Output" "container" "FullWidthOutput" "container-fluid") -}}">
   {{- partial "hooks/footer-begin" . -}}
   {{- partial "footer/main" . -}}
   {{- partial "hooks/footer-end" . -}}
