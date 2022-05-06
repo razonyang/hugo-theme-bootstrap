@@ -17,7 +17,7 @@ import {
   faEnvelope,
   faExclamationTriangle,
   faExpandAlt,
-  faExternalLinkAlt,
+  faExternalLinkSquareAlt,
   faEyeDropper,
   faFileAlt,
   faFileArchive,
@@ -47,7 +47,7 @@ import {
   faUndo,
   faUser,
 } from '@fortawesome/free-solid-svg-icons';
-import {faStar,} from '@fortawesome/free-regular-svg-icons';
+import {faStar} from '@fortawesome/free-regular-svg-icons';
 import {
   faAlipay,
   faBitbucket,
@@ -96,7 +96,7 @@ let icons = [
   faEnvelope, faExclamationTriangle, faExpandAlt, faEyeDropper, faFont, faFileAlt, faFileArchive,
   faFolder, faHistory, faHome, faInfoCircle, faLanguage, faLink, faList, faListAlt, faMapMarkerAlt, faPalette,
   faQuestion, faQuestionCircle, faRedoAlt, faRss, faSearch, faShareAlt, faSkullCrossbones,
-  faSpinner, faTags, faThumbtack, faTimes, faTv, faUndo, faUser, faExternalLinkAlt,
+  faSpinner, faTags, faThumbtack, faTimes, faTv, faUndo, faUser, faExternalLinkSquareAlt,
 
   // Regular Icons
   faStar,
