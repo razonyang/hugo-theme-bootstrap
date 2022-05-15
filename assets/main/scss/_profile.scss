@@ -1,5 +1,5 @@
 .profile {
-  color: var(--#{$variable-prefix}secondary-text-on-surface) !important;
+  color: var(--#{$prefix}secondary-text-on-surface) !important;
   padding: .5rem 0 0;
 
   .profile-avatar {
@@ -32,7 +32,7 @@
   }
 
   a {
-    color: var(--#{$variable-prefix}accent);
+    color: var(--#{$prefix}accent);
   }
 
   .svg-inline--fa {

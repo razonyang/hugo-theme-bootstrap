@@ -14,30 +14,30 @@
 .search-form {
   .form-control {
     background-color: transparent;
-    border-color: var(--#{$variable-prefix}accent);
-    color: var(--#{$variable-prefix}secondary-text-on-surface);
+    border-color: var(--#{$prefix}accent);
+    color: var(--#{$prefix}secondary-text-on-surface);
 
     &:focus {
-      color: var(--#{$variable-prefix}primary-text-on-surface);
+      color: var(--#{$prefix}primary-text-on-surface);
     }
   }
 }
 
 .search-stat,
 .search-result-content {
-  color: var(--#{$variable-prefix}secondary-text-on-surface);
+  color: var(--#{$prefix}secondary-text-on-surface);
 }
 
 .btn-search {
   background: transparent !important;
-  color: var(--#{$variable-prefix}accent) !important;
+  color: var(--#{$prefix}accent) !important;
   z-index: 4 !important;
   box-shadow: none !important;
 }
 
 .search-result-taxonomy {
   margin: 0 0.125rem 0.125rem 0;
-  color: var(--#{$variable-prefix}secondary-text-on-surface);
+  color: var(--#{$prefix}secondary-text-on-surface);
 
   + .search-result-taxonomy::before {
     content: '·';

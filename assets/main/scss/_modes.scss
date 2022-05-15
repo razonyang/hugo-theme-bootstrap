@@ -7,11 +7,11 @@ $mode-light: (
   'primary-text-on-surface-rgb': to_rgb($dark-primary),
   'secondary-text-on-surface': $dark-secondary,
   'disabled-text-on-surface': $dark-disabled,
-  'navbar': var(--#{$variable-prefix}primary),
+  'navbar': var(--#{$prefix}primary),
   'primary-text-on-navbar': $white-primary,
   'accent-text-on-navbar': $white-primary,
-  'accent': var(--#{$variable-prefix}primary),
-  'accent-dark': var(--#{$variable-prefix}primary-dark),
+  'accent': var(--#{$prefix}primary),
+  'accent-dark': var(--#{$prefix}primary-dark),
   'shadow-rgb': to_rgb($dark-primary),
 );
 
@@ -24,11 +24,11 @@ $mode-dark: (
   'primary-text-on-surface-rgb': to_rgb($white-primary),
   'secondary-text-on-surface': $white-secondary,
   'disabled-text-on-surface': $white-disabled,
-  'navbar': var(--#{$variable-prefix}surface),
+  'navbar': var(--#{$prefix}surface),
   'primary-text-on-navbar': $white-primary,
-  'accent-text-on-navbar': var(--#{$variable-prefix}primary-light),
-  'accent': var(--#{$variable-prefix}primary-light),
-  'accent-dark': var(--#{$variable-prefix}primary),
+  'accent-text-on-navbar': var(--#{$prefix}primary-light),
+  'accent': var(--#{$prefix}primary-light),
+  'accent-dark': var(--#{$prefix}primary),
   'shadow-rgb': '0, 0, 0',
 );
 

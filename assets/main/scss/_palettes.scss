@@ -111,8 +111,8 @@ $palettes: (
   height: 1.5rem;
   min-width: 1.5rem;
   margin: 0.25rem 0;
-  background: var(--#{$variable-prefix}primary) !important;
-  color: var(--#{$variable-prefix}on-primary) !important;
+  background: var(--#{$prefix}primary) !important;
+  color: var(--#{$prefix}on-primary) !important;
 
   &:not(:last-child) {
     margin-right: .25rem;
@@ -124,5 +124,5 @@ $palettes: (
 }
 
 .text-accent {
-  color: var(--#{$variable-prefix}accent) !important;
+  color: var(--#{$prefix}accent) !important;
 }
