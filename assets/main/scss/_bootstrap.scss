@@ -1,6 +1,6 @@
-$variable-prefix: hbs-;
+$prefix: hbs-;
 
-$form-range-thumb-bg: var(--#{$variable-prefix}accent) !default;
+$form-range-thumb-bg: var(--#{$prefix}accent) !default;
 
 $enable-smooth-scroll: true !default;
 
@@ -16,7 +16,7 @@ $card-cap-bg: transparent !default;
 
 $enable-shadows: false !default;
 
-$border-color: var(--#{$variable-prefix}secondary-text-on-surface) !default;
+$border-color: var(--#{$prefix}secondary-text-on-surface) !default;
 
 // Heading
 $font-size-base:              1rem !default;
@@ -28,10 +28,10 @@ $h5-font-size:                $font-size-base * 1.125 !default;
 $h6-font-size:                $font-size-base !default;
 
 // Shadows
-$box-shadow:                  0 .5rem 1rem rgba(var(--#{$variable-prefix}shadow-rgb), .15);
-$box-shadow-sm:               0 .125rem .25rem rgba(var(--#{$variable-prefix}shadow-rgb), .075);
-$box-shadow-lg:               0 1rem 3rem rgba(var(--#{$variable-prefix}shadow-rgb), .175);
-$box-shadow-inset:            inset 0 1px 2px rgba(var(--#{$variable-prefix}shadow-rgb), .075);
+$box-shadow:                  0 .5rem 1rem rgba(var(--#{$prefix}shadow-rgb), .15);
+$box-shadow-sm:               0 .125rem .25rem rgba(var(--#{$prefix}shadow-rgb), .075);
+$box-shadow-lg:               0 1rem 3rem rgba(var(--#{$prefix}shadow-rgb), .175);
+$box-shadow-inset:            inset 0 1px 2px rgba(var(--#{$prefix}shadow-rgb), .075);
 
 @import 'bootstrap/scss/bootstrap';
 // Configuration

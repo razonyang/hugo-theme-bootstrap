@@ -1,4 +1,4 @@
-$card-border-color: rgba(var(--#{$variable-prefix}primary-text-on-surface-rgb), .125);
+$card-border-color: rgba(var(--#{$prefix}primary-text-on-surface-rgb), .125);
 
 .card {
     .card-header {

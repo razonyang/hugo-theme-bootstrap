@@ -34,8 +34,8 @@
     }
 
     .card {
-        background: var(--#{$variable-prefix}background);
-        color: var(--#{$variable-prefix}primary-text-on-background);
+        background: var(--#{$prefix}background);
+        color: var(--#{$prefix}primary-text-on-background);
         @include media-breakpoint-up(lg) {
             position: sticky;
             top: 84px;
@@ -86,7 +86,7 @@
     z-index: 999;
     border: none;
     width: 1rem;
-    background: var(--#{$variable-prefix}background);
-    color: var(--#{$variable-prefix}on-background);
+    background: var(--#{$prefix}background);
+    color: var(--#{$prefix}on-background);
     left: 0;
 }

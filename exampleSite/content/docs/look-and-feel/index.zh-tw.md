@@ -71,8 +71,8 @@ palette = "indigo"
 
 ```scss {title="assets/main/scss/_custom.scss"}
 [data-palette=blue] {
-    --#{$variable-prefix}primary: darkblue;
-    --#{$variable-prefix}on-primary: #fff;
+    --#{$prefix}primary: darkblue;
+    --#{$prefix}on-primary: #fff;
 }
 ```
 
@@ -91,7 +91,7 @@ palette = "indigo"
 ```scss {title="assets/main/scss/_custom.scss"}
 @import 'https://fonts.googleapis.com/css2?family=Roboto&display=swap';
 :root {
-    --#{$variable-prefix}body-font-family: 'Roboto', sans-serif;
+    --#{$prefix}body-font-family: 'Roboto', sans-serif;
 }
 ```
 

@@ -25,8 +25,8 @@ body {
 }
 
 body {
-  background: var(--#{$variable-prefix}background);
-  color: var(--#{$variable-prefix}primary-text-on-background);
+  background: var(--#{$prefix}background);
+  color: var(--#{$prefix}primary-text-on-background);
 }
 
 a {
@@ -35,7 +35,7 @@ a {
   text-decoration: none;
 
   &:hover {
-    color: var(--#{$variable-prefix}accent);
+    color: var(--#{$prefix}accent);
     text-decoration: underline;
   }
 
@@ -45,5 +45,5 @@ a {
 }
 
 hr {
-  color: var(--#{$variable-prefix}accent);
+  color: var(--#{$prefix}accent);
 }

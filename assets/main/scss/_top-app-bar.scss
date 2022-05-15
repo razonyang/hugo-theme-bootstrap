@@ -1,12 +1,12 @@
 .search-bar {
   .form-control {
-    background-color: var(--#{$variable-prefix}background);
-    border-color: var(--#{$variable-prefix}background);
-    color: var(--#{$variable-prefix}secondary-text-on-surface);
+    background-color: var(--#{$prefix}background);
+    border-color: var(--#{$prefix}background);
+    color: var(--#{$prefix}secondary-text-on-surface);
     padding-left: 2rem;
 
     &:focus {
-      color: var(--#{$variable-prefix}primary-text-on-surface);
+      color: var(--#{$prefix}primary-text-on-surface);
       box-shadow: none;
     }
   }
@@ -93,8 +93,8 @@
 
       .action-icon {
         padding: 0.75rem;
-        background-color: var(--#{$variable-prefix}background);
-        color: var(--#{$variable-prefix}primary-text-on-background);
+        background-color: var(--#{$prefix}background);
+        color: var(--#{$prefix}primary-text-on-background);
         margin-bottom: 0.25rem;
       }
 

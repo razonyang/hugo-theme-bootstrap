@@ -1,5 +1,5 @@
 #TableOfContents {
-  color: var(--#{$variable-prefix}secondary-text-on-surface);
+  color: var(--#{$prefix}secondary-text-on-surface);
 
   ol,
   ul {
@@ -14,7 +14,7 @@
         font-weight: 400;
 
         &:hover {
-          color: var(--#{$variable-prefix}accent);
+          color: var(--#{$prefix}accent);
         }
       }
     }

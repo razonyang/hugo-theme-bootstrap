@@ -7,7 +7,7 @@
     transition: opacity 0.5s;
 
     .action {
-      color: var(--#{$variable-prefix}on-primary);
+      color: var(--#{$prefix}on-primary);
 
       &:not(:last-child) {
         margin-right: 1rem;
@@ -15,7 +15,7 @@
 
       &.active,
       &:hover {
-        color: var(--#{$variable-prefix}accent);
+        color: var(--#{$prefix}accent);
       }
     }
   }
@@ -30,8 +30,8 @@
 code {
   margin: 0;
   padding: 0.25rem 0.5rem;
-  color: var(--#{$variable-prefix}primary-text-on-surface);
-  background: var(--#{$variable-prefix}background-light);
+  color: var(--#{$prefix}primary-text-on-surface);
+  background: var(--#{$prefix}background-light);
   border-radius: 3px;
 
   &.no-ln {
@@ -42,9 +42,9 @@ code {
 }
 
 pre {
-  background: var(--#{$variable-prefix}background);
+  background: var(--#{$prefix}background);
   border-radius: 0.25rem;
-  color: var(--#{$variable-prefix}on-background);
+  color: var(--#{$prefix}on-background);
   padding: 1rem;
   position: relative;
 

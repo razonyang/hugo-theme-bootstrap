@@ -4,10 +4,10 @@
 
 .breadcrumb-item {
   &.active {
-    color: var(--#{$variable-prefix}secondary-text-on-surface);
+    color: var(--#{$prefix}secondary-text-on-surface);
   }
 
   a {
-    color: var(--#{$variable-prefix}accent);
+    color: var(--#{$prefix}accent);
   }
 }

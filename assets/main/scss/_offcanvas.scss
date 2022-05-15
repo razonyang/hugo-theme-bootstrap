@@ -7,7 +7,7 @@
     &:focus,
     &:active,
     &.active {
-      color: var(--#{$variable-prefix}accent);
+      color: var(--#{$prefix}accent);
     }
   }
 
