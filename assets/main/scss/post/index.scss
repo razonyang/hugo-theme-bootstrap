@@ -3,7 +3,7 @@
 
 .post-meta {
   margin-bottom: 1rem;
-  color: var(--#{$variable-prefix}secondary-text-on-surface);
+  color: var(--#{$prefix}secondary-text-on-surface);
   font-size: .8rem;
   word-break: break-all;
 
@@ -25,7 +25,7 @@
 }
 
 .post-summary {
-  color: var(--#{$variable-prefix}secondary-text-on-surface);
+  color: var(--#{$prefix}secondary-text-on-surface);
 }
 
 .related-posts {
@@ -33,7 +33,7 @@
   padding-left: 0.25rem;
 
   a {
-    color: var(--#{$variable-prefix}accent);
+    color: var(--#{$prefix}accent);
   }
 }
 
@@ -89,7 +89,7 @@
 .post-content,
 .post-nav {
   a {
-    color: var(--#{$variable-prefix}accent);
+    color: var(--#{$prefix}accent);
   }
 }
 
@@ -114,8 +114,8 @@
 }
 
 .post-taxonomy {
-  background-color: var(--#{$variable-prefix}background);
-  color: var(--#{$variable-prefix}primary-text-on-surface)!important;
+  background-color: var(--#{$prefix}background);
+  color: var(--#{$prefix}primary-text-on-surface)!important;
   margin: .25rem;
   padding: .5rem;
   opacity: .6;
@@ -126,7 +126,7 @@
 
   &:hover {
     opacity: 1;
-    color: var(--#{$variable-prefix}accent)!important;
+    color: var(--#{$prefix}accent)!important;
     text-decoration: none;
   }
 }
@@ -157,12 +157,12 @@
 
 .btn.btn-reward {
   color: var('on-primary');
-  background-color: var(--#{$variable-prefix}accent);
+  background-color: var(--#{$prefix}accent);
 }
 
 .post-list {
   margin: .25rem 0;
-  color: var(--#{$variable-prefix}secondary-text-on-surface);
+  color: var(--#{$prefix}secondary-text-on-surface);
   list-style: none;
   padding-left: 0.25rem;
   
@@ -171,10 +171,10 @@
     clear: both;
 
     a {
-      color: var(--#{$variable-prefix}secondary-text-on-surface);
+      color: var(--#{$prefix}secondary-text-on-surface);
 
       &:hover {
-        color: var(--#{$variable-prefix}accent);
+        color: var(--#{$prefix}accent);
       }
     }
   }
@@ -203,7 +203,7 @@
 
 .post {
   #TableOfContents {
-    color: var(--#{$variable-prefix}primary-text-on-surface);
+    color: var(--#{$prefix}primary-text-on-surface);
   }
 }
 

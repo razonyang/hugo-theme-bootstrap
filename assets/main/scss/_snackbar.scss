@@ -9,8 +9,8 @@
 }
 
 .snackbar-body {
-  color: var(--#{$variable-prefix}background);
-  background-color: var(--#{$variable-prefix}primary-text-on-background);
+  color: var(--#{$prefix}background);
+  background-color: var(--#{$prefix}primary-text-on-background);
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
 }
