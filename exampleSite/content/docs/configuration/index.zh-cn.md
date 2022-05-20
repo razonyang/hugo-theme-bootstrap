@@ -62,7 +62,7 @@ aliases = [
 | `backgroundImage` | Array | `[]` | 背景图，如：`['/images/bg.png']`, `['/images/bg-light.png', '/images/bg-dark.png']`。
 | `comment` | Boolean | `true` | 是否开启评论
 | `toc` | Boolean | `true` | 是否开启目录
-| `tocPosition` | String | `sidebar` | 可选值：`sidebar` 和 `content`。
+| `tocPosition` | String | `sidebar` | 可选值：`sidebar` 和 `content`，仅作用于 `post` 布局。
 | `tocWordCount` | Integer | `280` | 仅当文章的字数超过此值时，才会显示目录。
 | `breadcrumb` | Boolean | `true` | 是否开启面包屑导航
 | `breadcrumbDivider` | String | `/` | 面包屑导航分隔符

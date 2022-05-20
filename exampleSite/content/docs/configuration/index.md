@@ -63,6 +63,7 @@ See also [All Configuration Settings](https://gohugo.io/getting-started/configur
 | `comment` | Boolean | `true` | Whether to enable comments
 | `toc` | Boolean | `true` | Whether to enable TOC
 | `tocWordCount` | Integer | `280` | TOC is displayed only if the post's word count is greater than this value.
+| `tocPosition` | String | `sidebar` | Available values: `sidebar` and `content`, only the `posts` layout is affected.
 | `breadcrumb` | Boolean | `true` | Whether to enable breadcrumb
 | `dateFormat` | String | `Jan 2, 2006` | Date format. Checkout the [Hugo Date and Time Templating Reference](https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference) for details.
 | `poweredBy` | Boolean | `true` | Whether to show powered by.
@@ -165,7 +166,6 @@ See also [All Configuration Settings](https://gohugo.io/getting-started/configur
 | `keywords` | Array | - | Page keywords.
 | `comment` | Boolean | `true` | Whether to enable comments. It won't work if `comment` has been disabled globally.
 | `toc` | Boolean | `true` | Whether to enable TOC. It won't work if `toc` has been disabled globally.
-| `tocPosition` | String | `sidebar` | Available values: `sidebar` and `content`.
 | `math` | Boolean | `false` | Whether to enable math.
 | `diagram` | Boolean | `false` | Whether to enable diagram.
 | `reward` | Boolean | `true` | Whether to enable reward.
