@@ -31,7 +31,7 @@
               <i class="btn-toggle-icon fas fa-chevron-circle-down ms-auto" data-fa-transform="rotate-270"></i>
             </a>
           </div>
-          <div class="mt-2 collapse{{ if $active }} show{{ end }}" id="{{ $sectionId }}">
+          <div class="catalog-nav mt-2 border-start collapse{{ if $active }} show{{ end }}" id="{{ $sectionId }}">
             <ul class="btn-toggle-nav list-unstyled fw-normal ms-2">
               {{ template "walk-catalog" (dict "section" . "page" $page) }}
             </ul>
