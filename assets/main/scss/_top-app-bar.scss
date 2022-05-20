@@ -1,3 +1,15 @@
+.navbar {
+  --#{$prefix}navbar-hover-color: white;
+  --#{$prefix}navbar-active-color: white;
+}
+
+[data-mode=dark] {
+  .navbar {
+    --#{$prefix}navbar-hover-color: var(--#{$prefix}accent);
+    --#{$prefix}navbar-active-color: var(--#{$prefix}accent);
+  }
+}
+
 .search-bar {
   .form-control {
     background-color: var(--#{$prefix}background);
