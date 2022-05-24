@@ -3,11 +3,14 @@
   <picture>
   {{- $img := index .Params.images 0 -}}
   {{- $ext := $img | path.Ext }}
-  {{- range $formats -}}
-    {{- $filename := replace $img $ext (printf ".%s" .) -}}
-    {{- if and (not (strings.HasSuffix $ext .)) (fileExists (path.Join "static" $filename)) -}}
-      <source srcset="{{ $filename | absURL }}" type="image/{{ . }}" />
-    {{- end -}}
+  {{- $url := urls.Parse $img -}}
+  {{- if not $url.Scheme -}}
+    {{- range $formats -}}
+      {{- $filename := replace $img $ext (printf ".%s" .) -}}
+      {{- if and (not (strings.HasSuffix $ext .)) (fileExists (path.Join "static" $filename)) -}}
+        <source srcset="{{ $filename | absURL }}" type="image/{{ . }}" />
+      {{- end -}}
+      {{- end -}}
   {{- end -}}
     <img class="img-fluid" alt="{{ .Title }}" src="{{ $img | absURL  }}" loading="lazy"/>
   </picture>
