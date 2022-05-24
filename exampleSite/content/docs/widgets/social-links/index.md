@@ -84,3 +84,4 @@ github = "githubusername"
 | `paypal` | Paypal Username |
 | `patreon` | Patreon Username |
 | `tipeee` | Tipeee Username |
+| `rss` | Empty string for disabling the RSS link |

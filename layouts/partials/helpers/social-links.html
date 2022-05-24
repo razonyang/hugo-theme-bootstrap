@@ -54,7 +54,11 @@
     {{- end -}}
   {{- end -}}
 {{- end -}}
-{{- if default true .params.rss -}}
+{{- $rss := true -}}
+{{- if isset .links "rss" -}}
+{{- $rss = ne "" .links.rss -}}
+{{- end -}}
+{{- if and (default true .params.rss) $rss -}}
   {{- $rss := false -}}
   {{- with .home.OutputFormats.Get "rss" -}}
     {{- $rss = . -}}

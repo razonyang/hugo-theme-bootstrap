@@ -31,3 +31,4 @@ liberapay = "yourliberapayaccount"
 paypal="yourpaypalaccount"
 patreon="yourpatreonaccount"
 tipeee="yourtipeeeaccount-fr"
+# rss = "" # Disable RSS link

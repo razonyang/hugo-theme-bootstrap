@@ -17,3 +17,4 @@ location = "Earth"
   facebook = "yourfacebookusername"
   github = "yourgithubusername"
   twitter = "yourtwitterusername"
+  # rss = "" # Disable RSS link
