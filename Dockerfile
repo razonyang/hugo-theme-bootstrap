@@ -8,7 +8,7 @@ ARG HUGO_BASEURL=/
 ENV HUGO_BASEURL=${HUGO_BASEURL}
 WORKDIR /src/exampleSite
 RUN npm install
-RUN npm install -g @fullhuman/postcss-purgecss
+RUN npm install -g @fullhuman/postcss-purgecss rtlcss
 RUN hugo version
 RUN hugo --themesDir=../../ --theme=src -b ${HUGO_BASEURL}
 
