@@ -146,6 +146,7 @@ See also [All Configuration Settings](https://gohugo.io/getting-started/configur
 | **Sidebar**
 | `sidebar` | Object | - |
 | `sidebar.fixed` | Boolean | `false` | Fix default sidebar.
+| `sidebar.archive` | Boolean | `true` | Show the archive widget on the sidebar.
 | **Meta Tag**
 | `metaRobots` | String | - | Empty means that turn it off.
 | `contact` | Object | - | [Contact Form]({{< ref "docs/layouts/contact-form" >}})

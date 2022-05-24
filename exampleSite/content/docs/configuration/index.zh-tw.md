@@ -149,6 +149,7 @@ aliases = [
 | **Sidebar**
 | `sidebar` | Object | - |
 | `sidebar.fixed` | Boolean | `false` | 固定默認側邊欄。
+| `sidebar.archive` | Boolean | `true` | 於側邊欄顯示歸檔掛件。
 | **Meta Tag**
 | `metaRobots` | String | - | 空字符串表示禁用。
 | `contact` | Object | - | [聯系表單]({{< ref "docs/layouts/contact-form" >}})

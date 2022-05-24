@@ -1,0 +1,38 @@
+{{- if default true $.Site.Params.sidebar.archive -}}
+{{- $baseURL := "" -}}
+{{- with where $.Site.Pages "Layout" "archive" -}}
+    {{- $baseURL = (index . 0).Permalink -}}
+{{- end -}}
+<section class="row card component">
+    <div class="card-header">
+      <h2 class="card-title">
+          {{- with $baseURL -}}
+          <a href="{{ . }}">{{ i18n "archives" }}</a>
+          {{- else -}}
+          {{ i18n "archives" }}
+          {{- end -}}
+      </h2>
+    </div>
+    <div class="card-body">
+      <ul class="post-list">
+        {{- $totalCount := 0 -}}
+        {{ range (where $.Site.RegularPages "Type" "in" $.Site.Params.mainSections).GroupByDate "2006" }}
+        <li>
+            {{- $pageNumber := 0 -}}
+            {{- if $baseURL -}}
+            {{- $pageNumber := div $totalCount (default 100 $.Site.Params.archive.paginate) | add 1 -}}
+            {{- if eq $pageNumber 1 -}}
+            <a href="{{ printf "%s#archive-%s" $baseURL .Key }}">{{ .Key }}({{ len .Pages }})</a>
+            {{- else -}}
+            <a href="{{ printf "%spage/%d/#archive-%s" $baseURL $pageNumber .Key }}">{{ .Key }}({{ len .Pages }})</a>
+            {{- end -}}
+            {{- else -}}
+            {{ .Key }}({{ len .Pages }})
+            {{- end -}}
+        </li>
+        {{- $totalCount = add $totalCount (len .Pages) -}}
+        {{ end }}
+      </ul>
+    </div>
+</section>
+{{- end -}}

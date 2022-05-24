@@ -74,6 +74,7 @@ viewer = true # Image Viewer
 
 [sidebar]
   # fixed = true
+  # archive = false
 
 [codeBlock]
   # maxLines = 8
