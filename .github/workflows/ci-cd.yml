@@ -29,6 +29,8 @@ jobs:
         with:
           push: true
           tags: ccr.ccs.tencentyun.com/razonyang/hugo-theme-bootstrap:latest
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
   deploy:
     runs-on: ubuntu-latest
     needs: build
