@@ -9,49 +9,17 @@
 .docs-catalog {
     word-break: break-word;
     
-    @include media-breakpoint-down(lg) {
-        position: fixed;
-        top: 54px;
-        z-index: 1000;
-        height: 100%;
-        padding-bottom: 54px;
-        width: 60vw;
-        transition: width .2s linear!important;
-        
-        .container, .card, .card-body {
-            height: 100%;
-        }
-
-        .card-body {
-            overflow-y: scroll;
-        }
+    @include media-breakpoint-up(lg) {
+        position: sticky;
+        top: 5rem;
+        display: block !important;
+        height: calc(100vh - 6rem);
+        overflow-y: auto;
     }
 
     li {
         &:focus-visible {
             outline: none;
-        }
-    }
-
-    .card {
-        background: var(--#{$prefix}background);
-        color: var(--#{$prefix}primary-text-on-background);
-        @include media-breakpoint-up(lg) {
-            position: sticky;
-            top: 84px;
-
-            .card-body {
-                height: calc(100vh - 84px);
-                overflow-y: scroll;
-            }
-        }
-
-        .card-body {
-            padding: .5rem;
-
-            &::-webkit-scrollbar-track {
-                background: transparent;
-            }
         }
     }
 }
