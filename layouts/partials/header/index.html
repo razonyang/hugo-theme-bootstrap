@@ -1,6 +1,12 @@
 {{- $baseURL := $.Site.BaseURL -}}
 <nav class="navbar top-app-bar top-app-bar-expand-lg{{ if $.Site.Params.fixedHeader }} fixed-top{{ end }}">
   <div class="{{- partial "helpers/fullwidth" (dict "Page" . "Output" "container" "FullWidthOutput" "container-fluid") -}}">
+    {{- if eq .Type "docs" -}}
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDocsCatalog"
+      aria-controls="offcanvasDocsCatalog" aria-expanded="false" aria-label="Toggle docs navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+    {{- end -}}
     {{- $logo := (default "images/logo.webp" .Site.Params.logo) -}}
     <a class="navbar-brand flex-grow-1 flex-lg-grow-0 text-center text-lg-start mx-auto me-lg-3{{ if .IsHome }} active{{ end }}" href="{{ "" | absLangURL }}">
       {{- if $logo -}}
