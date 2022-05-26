@@ -37,6 +37,10 @@
       min-width: auto;
     }
   }
+
+  .social-link {
+    padding: 0 .25rem !important;
+  }
 }
 
 .top-app-bar-expand {
@@ -80,18 +84,6 @@
   }
 }
 
-.navbar-settings {
-  @include media-breakpoint-up(lg) {
-    order: 5;
-  }
-}
-
-.navbar-social-share {
-  @include media-breakpoint-up(lg) {
-    order: 4;
-  }
-}
-
 .setting {
   margin-bottom: 1rem;
 
@@ -114,5 +106,16 @@
         text-decoration: none;
       }
     }
+  }
+}
+
+.top-app-bar {
+  .offcanvas-lg {
+    --#{$prefix}offcanvas-color: white;
+    --#{$prefix}offcanvas-bg: var(--#{$prefix}navbar);
+  }
+
+  .social-link {
+    color: white!important;
   }
 }

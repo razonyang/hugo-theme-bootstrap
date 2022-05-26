@@ -1,10 +1,6 @@
 {{- $baseURL := $.Site.BaseURL -}}
 <nav class="navbar top-app-bar top-app-bar-expand-lg{{ if $.Site.Params.fixedHeader }} fixed-top{{ end }}">
   <div class="{{- partial "helpers/fullwidth" (dict "Page" . "Output" "container" "FullWidthOutput" "container-fluid") -}}">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <i class="fas fa-bars"></i>
-    </button>
     {{- $logo := (default "images/logo.webp" .Site.Params.logo) -}}
     <a class="navbar-brand flex-grow-1 flex-lg-grow-0 text-center text-lg-start mx-auto me-lg-3{{ if .IsHome }} active{{ end }}" href="{{ "" | absLangURL }}">
       {{- if $logo -}}
@@ -12,45 +8,73 @@
       {{- end -}}
       {{ with .Site.Params.brand }}{{ . }}{{ else }}{{ $.Site.Title }}{{ end }}
     </a>
-    {{ partial "header/social-share" . }}
-    {{ partial "header/settings" . }}
-    <div class="collapse navbar-collapse" tabindex="-1" id="navbarSupportedContent" aria-labelledby="navbarSupportedContent">
-      {{ partial "header/search-bar" . }}
-      <ul class="navbar-nav ms-auto">
-        {{- $currentPage := . -}}
-        {{- range .Site.Menus.main -}}
-        {{- $url := .URL | absURL -}}
-        {{- $active := or (eq $currentPage.Permalink (absURL .URL)) ($currentPage.IsMenuCurrent "main" .) -}}
-        {{- if .HasChildren -}}
-        <li class="nav-item dropdown">
-          <a class="nav-link{{ if $currentPage.HasMenuCurrent "main" . }} active{{ end }}" id="navbarDropdown{{ title .Identifier }}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            {{ .Pre }} {{- .Name -}} {{ .Post }}
-          </a>
-          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown{{ title .Identifier }}" data-bs-popper="none">
-            {{- range .Children -}}
-            {{- $childURL := .URL | absURL -}}
-            {{- if .Params.divider -}}
-            <li><hr class="dropdown-divider"></li>
-            {{- else -}}
-            <li>
-              <a class="dropdown-item{{ if or (eq $currentPage.Permalink (absURL .URL)) ($currentPage.IsMenuCurrent "main" .) }} active{{ end }}"
-                href="{{ $childURL }}"{{ if not (hasPrefix $childURL $baseURL) }} target="_blank" rel="noopener noreferrer"{{ end }}>
-                {{ .Pre }} {{- .Name -}} {{ .Post }}
-              </a>
-            </li>
-            {{- end -}}
-            {{- end -}}
-          </ul>
-        </li>
-        {{- else -}}
-        <li class="nav-item">
-          <a class="nav-link{{ if $active }} active{{ end }}" href="{{ $url }}"{{ if not (hasPrefix $url $baseURL) }} target="_blank" rel="noopener noreferrer"{{ end }}>
-            {{ .Pre }} {{- .Name -}} {{ .Post }}
-          </a>
-        </li>
-        {{- end -}}
-        {{- end -}}
-      </ul>
+    <button class="navbar-toggler order-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarMenus"
+      aria-controls="navbarMenus" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-ellipsis-h"></i>
+    </button>
+    <div class="offcanvas-lg offcanvas-end flex-grow-1" tabindex="-1" id="navbarMenus" aria-labelledby="navbarMenusLabel">
+      <div class="offcanvas-header px-4 pb-0">
+        <h5 class="offcanvas-title" id="navbarMenusLabel">{{ $.Site.Title }}</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" data-bs-target="#navbarMenus" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body p-4 pt-0 p-lg-0">
+        <hr class="d-lg-none text-secondary-on-surface">
+        <ul class="navbar-nav flex-row flex-wrap align-items-center me-auto">
+          {{- $currentPage := . -}}
+          {{- range .Site.Menus.main -}}
+          {{- $url := .URL | absURL -}}
+          {{- $active := or (eq $currentPage.Permalink (absURL .URL)) ($currentPage.IsMenuCurrent "main" .) -}}
+          {{- if .HasChildren -}}
+          <li class="nav-item col-6 col-lg-auto dropdown">
+            <a class="nav-link{{ if $currentPage.HasMenuCurrent "main" . }} active{{ end }}" id="navbarDropdown{{ title .Identifier }}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              {{ .Pre }} {{- .Name -}} {{ .Post }}
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown{{ title .Identifier }}" data-bs-popper="none">
+              {{- range .Children -}}
+              {{- $childURL := .URL | absURL -}}
+              {{- if .Params.divider -}}
+              <li><hr class="dropdown-divider"></li>
+              {{- else -}}
+              <li>
+                <a class="dropdown-item{{ if or (eq $currentPage.Permalink (absURL .URL)) ($currentPage.IsMenuCurrent "main" .) }} active{{ end }}"
+                  href="{{ $childURL }}"{{ if not (hasPrefix $childURL $baseURL) }} target="_blank" rel="noopener noreferrer"{{ end }}>
+                  {{ .Pre }} {{- .Name -}} {{ .Post }}
+                </a>
+              </li>
+              {{- end -}}
+              {{- end -}}
+            </ul>
+          </li>
+          {{- else -}}
+          <li class="nav-item col-6 col-lg-auto">
+            <a class="nav-link{{ if $active }} active{{ end }}" href="{{ $url }}"{{ if not (hasPrefix $url $baseURL) }} target="_blank" rel="noopener noreferrer"{{ end }}>
+              {{ .Pre }} {{- .Name -}} {{ .Post }}
+            </a>
+          </li>
+          {{- end -}}
+          {{- end -}}
+        </ul>
+        <hr class="d-lg-none text-secondary-on-surface">
+        {{ partial "header/search-bar" . }}
+        <hr class="d-lg-none text-secondary-on-surface">
+        <ul class="navbar-nav flex-row flex-wrap align-items-center ms-3">
+          {{- partial "header/social-links" . }}
+          <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+            <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+            <hr class="d-lg-none my-2 text-secondary-on-surface">
+          </li>
+          {{- partial "header/languages" . }}
+          <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+            <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+            <hr class="d-lg-none my-2 text-secondary-on-surface">
+          </li>
+          {{- partial "header/actions" . -}}
+          {{- partial "header/font-size" . -}}
+          {{- partial "header/palettes" . -}}
+          {{- partial "header/mode" . -}}
+        </ul>
+      </div>
     </div>
   </div>
+  {{- partial "header/actions-offcanvas" . -}}
 </nav>

@@ -15,17 +15,6 @@ class PaletteSelector implements Component {
     }
     const selected = this.getPalette();
     const self = this;
-    const palettePicker = document.querySelector('#palettePicker');
-    if (!palettePicker) {
-      return;
-    }
-    document.querySelector('#btnPalette').addEventListener('click', () => {
-      if (palettePicker.classList.contains('visually-hidden')) {
-        palettePicker.classList.remove('visually-hidden');
-      } else {
-        palettePicker.classList.add('visually-hidden');
-      }
-    });
     document.querySelectorAll('.palette').forEach((element) => {
       const paletteId = element.getAttribute('id').replace('palette-', '');
       if (paletteId === selected) {
@@ -35,7 +24,6 @@ class PaletteSelector implements Component {
         self.setPalette(paletteId);
         document.querySelector('.palette.active').classList.remove('active');
         element.classList.add('active');
-        palettePicker.classList.add('visually-hidden');
       });
     });
   }

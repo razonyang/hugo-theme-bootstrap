@@ -1,16 +1,12 @@
 import Component from "js/component";
+import { default as params } from '@params';
 
 class ModeToggle implements Component {
   public key: string = 'hbs-mode';
-
-  constructor(public element: HTMLInputElement) {
-  }
+  private mode: string = 'auto';
+  private items;
 
   run() {
-    if (!this.element) {
-      return;
-    }
-
     this.initListeners();
     this.initMode();
   }
@@ -18,43 +14,72 @@ class ModeToggle implements Component {
   initListeners() {
     const instance = this;
 
-    this.element.addEventListener('change', () => {
-      instance.setMode(this.element.checked ? 'dark' : 'light');
+    this.items = document.querySelectorAll('.mode-item');
+    this.items.forEach((ele) => {
+      ele.addEventListener('click', () => {
+        const mode = ele.getAttribute('data-color-mode');
+        instance.active(mode)
+      });
     });
 
     window.matchMedia('(prefers-color-scheme: dark)').addListener((e) => {
-      instance.setMode(e.matches ? 'dark' : 'light');
+      if (this.mode === 'auto') {
+        instance.setMode(e.matches ? 'dark' : 'light');
+      }
     });
   }
 
   initMode() {
-    const mode = this.getMode();
+    // load scheme from localStorage.
+    let mode = localStorage.getItem(this.key);
     if (mode) {
-      this.setMode(mode);
+      this.active(mode);
+    } else if (params.color) {
+      this.active(params.color);
+    } else {
+      this.active('auto');
     }
   }
 
-  getMode(): string {
-    // load scheme from localStorage.
-    let mode = localStorage.getItem(this.key);
-    if (!mode) {
-      // load scheme from query media
-      if (window.getComputedStyle(document.body).getPropertyValue('--mode').toString().trim() === 'dark') {
-        mode = 'dark';
-      }
+  isAuto() :boolean {
+    return this.mode === 'auto';
+  }
+
+  getPreferMode(): string {
+    if (window.getComputedStyle(document.body).getPropertyValue('--mode').toString().trim() === 'dark') {
+      return 'dark';
     }
-    return mode || 'light';
+    return 'light';
+  }
+
+  active(mode: string) {
+    this.mode = mode;
+    this.items.forEach((ele)=>{
+      const classList = ele.querySelector('.dropdown-item').classList;
+      if (ele.getAttribute('data-color-mode') === mode) {
+        classList.add('active');
+      } else {
+        classList.remove('active');
+      }
+    });
+    localStorage.setItem(this.key, mode);
+
+    let icon = document.querySelector('.mode-item[data-color-mode="' + mode + '"] .mode-icon').cloneNode(true) as HTMLElement;
+    icon.setAttribute('id', 'modeIcon');
+    document.querySelector('#modeIcon').replaceWith(icon);
+    this.setMode(mode);
   }
 
   setMode(value: string) {
+    if (value === 'auto') {
+      value = this.getPreferMode();
+    }
     console.debug(`Switch to ${value} mode`);
     document.body.parentElement.setAttribute('data-mode', value);
     let checked: boolean = false;
     if (value === 'dark') {
       checked = true;
     }
-    this.element.checked = checked;
-    localStorage.setItem(this.key, value);
     const event = new CustomEvent('hbs:mode', {'detail': {'mode': value}});
     document.dispatchEvent(event);
   }

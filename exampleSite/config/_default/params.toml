@@ -182,3 +182,8 @@ viewer = true # Image Viewer
 [fullWidth]
   post = false
   docs = true
+
+[topAppBar]
+  [topAppBar.social]
+    github = "razonyang/hugo-theme-bootstrap"
+    # rss = "" # Disable RSS link

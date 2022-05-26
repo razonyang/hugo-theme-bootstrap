@@ -32,24 +32,36 @@
 {{- $tipeee := dict "tipeee" (dict "url" "https://fr.tipeee.com/%s" "icon" "fab fa-tipeee") -}}
 {{- $items = merge $items $tumblr $reddit $telegram $qq $dockerhub $bitbucket $kaggle $lastfm $bilibili $tiktok $pinterest $mastodon $liberapay $paypal $patreon $tipeee -}}
 {{- $size := default "" .size -}}
+{{- $linkClass := default "" .linkClass -}}
+{{- $iconText := default false .iconText -}}
+{{- $iconTextClass := default "" .iconTextClass -}}
 <nav class="social-links nav justify-content-center{{ with .class }} {{ . }}{{ end }}">
 {{- range $key, $user := .links -}}
   {{- if eq $key "email" -}}
-    <a class="nav-link social-link" href="mailto:{{ $user }}" title="{{ title $key }}">
+    <a class="nav-link social-link{{ with $linkClass }} {{ . }}{{ end }}" href="mailto:{{ $user }}" title="{{ title $key }}">
       <i class="fas fa-fw{{ with $size }} {{ . }}{{ end }} fa-envelope"></i>
+      {{- if $iconText -}}
+      <span{{ with $iconTextClass }} class="{{ . }}"{{ end }}>Email</span>
+      {{- end -}}
     </a>
   {{- else if eq $key "medium" -}}
     {{- $url := urls.Parse $user -}}
     {{- if eq $url.Host "" -}}
       {{- $url = printf "https://medium.com/@%s" $user | urls.Parse -}}
     {{- end -}}
-      <a class="nav-link social-link" target="_blank" href="{{ $url.String }}" title="Medium" rel="noopener noreferrer">
+      <a class="nav-link social-link{{ with $linkClass }} {{ . }}{{ end }}" target="_blank" href="{{ $url.String }}" title="Medium" rel="noopener noreferrer">
         <i class="fab fa-fw{{ with $size }} {{ . }}{{ end }} fa-medium-m"></i>
+        {{- if $iconText -}}
+        <span{{ with $iconTextClass }} class="{{ . }}"{{ end }}>Medium</span>
+        {{- end -}}
       </a>
   {{- else -}}
     {{- with index $items $key -}}
-      <a class="nav-link social-link" target="_blank" href="{{ printf .url $user }}" title="{{ default (title $key) .title }}" rel="noopener noreferrer">
+      <a class="nav-link social-link{{ with $linkClass }} {{ . }}{{ end }}" target="_blank" href="{{ printf .url $user }}" title="{{ default (title $key) .title }}" rel="noopener noreferrer">
         <i class="fa-fw{{ with $size }} {{ . }}{{ end }} {{ default ( printf "fab fa-%s" $key ) .icon }}"></i>
+        {{- if $iconText -}}
+        <span{{ with $iconTextClass }} class="{{ . }}"{{ end }}>{{ default (title $key) .title }}</span>
+        {{- end -}}
       </a>
     {{- end -}}
   {{- end -}}
@@ -69,8 +81,11 @@
     {{- end -}}
   {{- end -}}
   {{- with $rss -}}
-  <a class="nav-link social-link" target="_blank" href="{{ .Permalink }}" title="RSS" rel="noopener noreferrer">
+  <a class="nav-link social-link{{ with $linkClass }} {{ . }}{{ end }}" target="_blank" href="{{ .Permalink }}" title="RSS" rel="noopener noreferrer">
     <i class="fas fa-fw{{ with $size }} {{ . }}{{ end }} fa-rss"></i>
+    {{- if $iconText -}}
+    <span{{ with $iconTextClass }} class="{{ . }}"{{ end }}>RSS</span>
+    {{- end -}}
   </a>
   {{- end -}}
 {{- end -}}
