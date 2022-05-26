@@ -100,6 +100,21 @@ other = "精選文章"
 [font_size]
 other = "字體大小"
 
+[font_size_lg]
+other = "大號"
+
+[font_size_md]
+other = "中等"
+
+[font_size_sm]
+other = "小號"
+
+[font_size_xl]
+other = "特大號"
+
+[font_size_xs]
+other = "特小號"
+
 [go_back]
 other = "返回"
 

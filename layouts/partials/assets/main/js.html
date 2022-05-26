@@ -1,5 +1,5 @@
 {{- $params := .Site.Params -}}
-{{- $options := dict "target" "es2015" "targetPath" "assets/main/bundle.min.js" "minify" true "params" $params -}}
+{{- $options := dict "target" "es2015" "targetPath" "assets/main/bundle.min.js" "minify" false "params" $params -}}
 {{- $main := resources.Get "main/js/index.ts" }}
 {{- $scripts := slice $main -}}
 {{- if .Site.Params.utterances -}}

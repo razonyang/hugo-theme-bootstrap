@@ -2,20 +2,14 @@ import Component from "js/component";
 
 class FontSizeSelector implements Component {
   key: string = 'hbs-font-size';
+  items;
 
-  constructor(public input: HTMLInputElement) {
+  constructor() {
+    this.items = document.querySelectorAll('.font-size-item');
   }
 
-  sizes: Map<string, string> = new Map([
-    ['-2', 'xs'],
-    ['-1', 'sm'],
-    ['0', ''],
-    ['1', 'lg'],
-    ['2', 'xl'],
-  ]);
-
   run() {
-    if (!this.input) {
+    if (!this.items) {
       return;
     }
     this.initSize();
@@ -23,17 +17,16 @@ class FontSizeSelector implements Component {
   }
 
   initSize() {
-    const size = this.getSize();
-    if (size) {
-      this.setSize(size);
-    }
+    this.setSize(this.getSize());
   }
 
   initListeners() {
-    this.input.value = this.getSize();
     const self = this;
-    this.input.addEventListener('change', () => {
-      self.setSize(self.input.value);
+    this.items.forEach((ele) => {
+      ele.addEventListener('click', () => {
+        const size = ele.getAttribute('data-size');
+        self.setSize(size);
+      });
     });
   }
 
@@ -43,18 +36,20 @@ class FontSizeSelector implements Component {
       return size;
     }
 
-    return '';
+    return 'md';
   }
 
   setSize(value: string) {
-    const size: string = this.sizes.get(value);
-    document.body.classList.remove(`fs-${this.sizes.get(this.getSize())}`);
-    if (size === '') {
-      localStorage.removeItem(this.key);
-    } else {
-      localStorage.setItem(this.key, value);
-      document.body.classList.add(`fs-${size}`);
-    }
+    document.body.classList.remove('fs-' + this.getSize());
+    document.body.classList.add(`fs-${value}`);
+    localStorage.setItem(this.key, value);
+    this.items.forEach((ele)=>{
+      if (ele.getAttribute('data-size') === value) {
+        ele.classList.add('active');
+      } else {
+        ele.classList.remove('active');
+      }
+    });
   }
 }
 

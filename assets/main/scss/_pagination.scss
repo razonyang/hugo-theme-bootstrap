@@ -19,6 +19,7 @@
     &.active {
       .page-link {
         background-color: var(--#{$prefix}primary);
+        color: var(--#{$prefix}on-primary);
       }
     }
 

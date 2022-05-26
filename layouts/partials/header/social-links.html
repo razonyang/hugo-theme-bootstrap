@@ -1,0 +1,7 @@
+{{- if .Site.Params.topAppBar.social -}}
+<li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+{{- $data := dict "links" .Site.Params.topAppBar.social "OutputFormats" $.OutputFormats "home" (.GetPage "/") "params" .Site.Params "iconText" true "iconTextClass" "d-lg-none" -}}
+{{- $data = merge $data (dict "class" "row" "linkClass" "col-6 col-lg-auto") -}}
+{{- partial "helpers/social-links" $data -}}
+</li>
+{{- end -}}

@@ -1,0 +1,19 @@
+<li class="nav-item dropdown py-1 py-lg-1 col-6 col-lg-auto">
+    <a class="nav-link px-0 px-lg-1" href="#" id="paletteDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="fas fa-fw fa-palette"></i>
+        <span class="d-lg-none">{{ i18n "palette" }}</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end px-2" aria-labelledby="paletteDropdown">
+        <div class="row">
+            {{- range .Site.Params.Palettes -}}
+            {{- $key := replace . " " "-" -}}
+            {{- $title := replace . " " "_" | printf "color_%s" | T -}}
+            <li class="col-3">
+                <a role="button" id="palette-{{ $key }}" aria-label="{{ $title }}"
+                    class="btn btn-sm w-100 palette" data-palette="{{ $key }}">
+                </a>
+            </li>
+            {{- end -}}
+        </div>
+    </ul>
+</li>
