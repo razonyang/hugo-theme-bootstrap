@@ -37,7 +37,8 @@
     }
 
     @include media-breakpoint-down(sm) {
-      right: -1.125rem;
+      background: rgba(255,255,255,.75);
+      right: -.125rem;
       
       .action {
         opacity: 0;
