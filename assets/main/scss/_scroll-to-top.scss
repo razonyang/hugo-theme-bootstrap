@@ -3,6 +3,10 @@
   color: var(--#{$prefix}accent);
   transition: opacity 0.5s;
   right: 1.25rem;
+  
+  @include media-breakpoint-down(sm) {
+    right: .75rem;
+  }
 
   &.active {
     opacity: 1!important;
