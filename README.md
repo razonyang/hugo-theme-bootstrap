@@ -1,7 +1,7 @@
 # Hugo Bootstrap Theme
 
 [![PageSpeed insights](https://img.shields.io/badge/speed-95%2B-success?style=flat-square)](https://pagespeed.web.dev/report?url=https://hbs.razonyang.com/en/)
-[![Hugo version](https://img.shields.io/badge/hugo-0.84.0%2B-important?style=flat-square)](https://github.com/gohugoio/hugo/releases)
+[![Hugo version](https://img.shields.io/badge/hugo-0.97.0%2B-important?style=flat-square)](https://github.com/gohugoio/hugo/releases)
 [![Releases](https://img.shields.io/github/release/razonyang/hugo-theme-bootstrap?style=flat-square)](https://github.com/razonyang/hugo-theme-bootstrap/releases)
 [![GitHub contributors](https://img.shields.io/github/contributors/razonyang/hugo-theme-bootstrap?style=flat-square)](https://github.com/razonyang/hugo-theme-bootstrap/graphs/contributors)
 [![License](https://img.shields.io/github/license/razonyang/hugo-theme-bootstrap?style=flat-square)](https://github.com/razonyang/hugo-theme-bootstrap/blob/master/LICENSE)

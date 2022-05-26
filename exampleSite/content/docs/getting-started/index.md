@@ -44,7 +44,7 @@ Since `0.68.0`, HBS requires the following configurations are be set.
 ### Build Tools
 
 - [Git](https://git-scm.com/downloads).
-- [Hugo](https://gohugo.io/getting-started/installing/): **extended** version `0.84.0` or above.
+- [Hugo](https://gohugo.io/getting-started/installing/): **extended** version `0.97.0` or above.
 - [npm](https://nodejs.org/en/download/): used for installing CSS and JS dependencies.
 - [Go](https://go.dev/dl/): version `1.12` or above, required only when installed as a [Hugo Module]({{< ref "/docs/installation/hugo-module" >}}).
 
