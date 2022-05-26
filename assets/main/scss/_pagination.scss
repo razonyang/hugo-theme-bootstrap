@@ -1,33 +1,34 @@
 .pagination {
   justify-content: center;
+  // --#{$prefix}pagination-padding-x: #{$pagination-padding-x};
+  // --#{$prefix}pagination-padding-y: #{$pagination-padding-y};
+  // @include rfs($pagination-font-size, --#{$prefix}pagination-font-size);
+  --#{$prefix}pagination-color: var(--#{$prefix}primary);
+  // --#{$prefix}pagination-bg: #{$pagination-bg};
+  // --#{$prefix}pagination-border-width: #{$pagination-border-width};
+  --#{$prefix}pagination-border-color: var(--#{$prefix}primary);
+  // --#{$prefix}pagination-border-radius: #{$pagination-border-radius};
+  --#{$prefix}pagination-hover-color: var(--#{$prefix}on-primary);
+  --#{$prefix}pagination-hover-bg: var(--#{$prefix}primary);
+  --#{$prefix}pagination-hover-border-color: var(--#{$prefix}primary);;
+  --#{$prefix}pagination-focus-color: var(--#{$prefix}on-primary);
+  --#{$prefix}pagination-focus-bg: var(--#{$prefix}primary);
+  // --#{$prefix}pagination-focus-box-shadow: #{$pagination-focus-box-shadow};
+  --#{$prefix}pagination-active-color: var(--#{$prefix}on-primary);
+  --#{$prefix}pagination-active-bg: var(--#{$prefix}primary);
+  --#{$prefix}pagination-active-border-color: var(--#{$prefix}primary);
+  // --#{$prefix}pagination-disabled-color: #{$pagination-disabled-color};
+  // --#{$prefix}pagination-disabled-bg: #{$pagination-disabled-bg};
+  // --#{$prefix}pagination-disabled-border-color: #{$pagination-disabled-border-color};
+}
 
-  .page-link {
-    background-color: var(--#{$prefix}surface);
-    border-color: var(--#{$prefix}secondary-text-on-surface);
-    color: var(--#{$prefix}secondary-text-on-surface);
-  }
-
-  .page-item {
-    .page-link {
-      border-color: var(--#{$prefix}secondary-text-on-surface);
-
-      &:focus {
-        box-shadow: none;
-      }
-    }
-
-    &.active {
-      .page-link {
-        background-color: var(--#{$prefix}primary);
-        color: var(--#{$prefix}on-primary);
-      }
-    }
-
-    &.disabled {
-      .page-link {
-        color: var(--#{$prefix}disabled-text-on-surface);
-        background-color: var(--#{$prefix}surface);
-      }
-    }
+@include theme(dark) {
+  .pagination {
+    --#{$prefix}pagination-color: var(--#{$prefix}-on-surface);
+    --#{$prefix}pagination-bg: var(--#{$prefix}surface);
+    --#{$prefix}pagination-border-color: var(--#{$prefix}primary);
+    --#{$prefix}pagination-disabled-color: var(--#{$prefix}on-surface);
+    --#{$prefix}pagination-disabled-bg: var(--#{$prefix}surface);
+    --#{$prefix}pagination-disabled-border-color: var(--#{$prefix}primary);
   }
 }
