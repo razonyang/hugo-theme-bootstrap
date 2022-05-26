@@ -27,7 +27,15 @@ This article lists all supported platforms and how to use them.
 
 ## Usage
 
-There are two place you can put social links to, one is the [Author Widget]({{< ref "/docs/widgets/author" >}}), the other is the footer.
+There are three places you can put social links to: top app bar, [Author Widget]({{< ref "/docs/widgets/author" >}}) and footer.
+
+### Top App Bar
+
+{{< code-toggle filename="params" >}}
+[topAppBar]
+  [topAppBar.social]
+    github = "foobar"
+{{</ code-toggle >}}
 
 ### Author Widget
 

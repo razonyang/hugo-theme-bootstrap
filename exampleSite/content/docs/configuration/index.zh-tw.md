@@ -106,6 +106,9 @@ aliases = [
 | **Archive**
 | `archive` | Object | - | [歸檔]({{< ref "/docs/layouts/archives" >}})。
 | `search` | Object | - | [搜索]({{< ref "/docs/layouts/search" >}})。
+| **頂部應用欄**
+| `topAppBar` | Object | - |
+| `topAppBar.social` | Object | - | [社交鏈接]({{< ref "/docs/widgets/social-links" >}})。
 | **Webmaster Site Verification** 
 | `siteVerification` | Object | - |
 | `siteVerification.google` | String | - | Google

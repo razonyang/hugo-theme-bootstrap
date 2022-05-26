@@ -27,7 +27,15 @@ aliases = [
 
 ## 使用方法
 
-一共有兩處地方可以放置社交鏈接，一個是[作者小部件]({{< ref "/docs/widgets/author" >}})，另一個是頁腳。
+一共有兩處地方可以放置社交鏈接：頂部應用欄、[作者小部件]({{< ref "/docs/widgets/author" >}}) 和頁腳。
+
+### 頂部應用欄
+
+{{< code-toggle filename="params" >}}
+[topAppBar]
+  [topAppBar.social]
+    github = "foobar"
+{{</ code-toggle >}}
 
 ### 作者小部件
 
