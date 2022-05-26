@@ -104,6 +104,9 @@ See also [All Configuration Settings](https://gohugo.io/getting-started/configur
 | `searchBar` | Boolean | `true` | Turn on/off built-on search bar.
 | `archive` | Object | - | [Archive]({{< ref "/docs/layouts/archives" >}}).
 | `search` | Object | - | [Search]({{< ref "/docs/layouts/search" >}}).
+| **Top App Bar**
+| `topAppBar` | Object | - |
+| `topAppBar.social` | Object | - | [Social Links]({{< ref "/docs/widgets/social-links" >}}). 
 | **Webmaster Site Verification** 
 | `siteVerification` | Object | - |
 | `siteVerification.google` | String | - | Google
