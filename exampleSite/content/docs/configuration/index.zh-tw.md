@@ -90,8 +90,8 @@ aliases = [
 | `taxonomyPostCount` | Integer | `3` | 分類的列表文章數，`false` 則隱藏。
 | `countTaxonomyPosts` | Boolean | `false` | 是否顯示分類的文章總數。
 | `sidebarTaxonomies` | Array | `["series", "categories", "tags"]` | 側邊欄的分類。
-| `fullWidth` | Boolean/Object | `false` | 是否全寬
-| `fullWidth.{section}` | Boolean | - | 爲特定的 section 定義全寬，如：`posts`, `docs`。
+| `fullWidth` | Boolean | `false` | 是否全寬
+| `fullWidthInSections` | Object | - | 爲特定的 section 定義全寬，如：`posts`, `docs`。
 | `fixedHeader` | Boolean | `true` | 是否固定頭部
 | `reward` | Object | - | [打賞小部件]({{< ref "/docs/widgets/reward" >}})，又稱 Buy Me a Coffee 小部件。
 | `share` | Object | - | 分享按鈕

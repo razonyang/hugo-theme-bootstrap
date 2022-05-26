@@ -89,8 +89,8 @@ See also [All Configuration Settings](https://gohugo.io/getting-started/configur
 | `taxonomySortingMethod` | String | - | Sorting taxonomies by `popularity`, sort alphabetically by default.
 | `countTaxonomyPosts` | Boolean | `false` | Count posts of taxonomy.
 | `sidebarTaxonomies` | Array | `["series", "categories", "tags"]` | The taxonomies on the sidebar.
-| `fullWidth` | Boolean/Object | `false` | Full width.
-| `fullWidth.{section}` | Boolean | - | Specify the full width for particular sections, such as `posts`, `docs`.
+| `fullWidth` | Boolean | `false` | Full width.
+| `fullWidthInSections` | Object | - | Specify the full width for particular sections, such as `posts`, `docs`.
 | `fixedHeader` | Boolean | `true` | Turn on/off fixed header.
 | `reward` | Object | - | [Reward Widget]({{< ref "/docs/widgets/reward" >}}), AKA Buy Me a Coffee Widget.
 | `share` | Object | - | Share buttons
