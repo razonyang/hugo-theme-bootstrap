@@ -70,3 +70,17 @@ There is also a [list of websites that use this theme](https://github.com/razony
 - [Creative Commons License](https://creativecommons.org/licenses/).
 - [Contact Form](https://hbs.razonyang.com/en/docs/layouts/contact-form).
 - Numberify Headings Automatically.
+
+## Funding
+
+Thank you very much to the following sponsors and backers(sort by funding time).
+
+### Sponsors
+
+- [Netlify](https://netlify.app/): the exmaple site is published on Netlify with [Open Source Plan](https://www.netlify.com/legal/open-source-policy/).
+
+### Backers
+
+- [Dikea](https://github.com/Dikea)
+- [Sagar Behere](https://github.com/sagarbehere)
+- [Norbert Boros](https://github.com/Mecanik)
