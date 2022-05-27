@@ -28,6 +28,7 @@ const purgecss = require('@fullhuman/postcss-purgecss')({
       'show',
       'text-pre-wrap', 'text-uppercase', 'text-white', 'top-0',
       'w-100',
+      'was-validated',
     ],
     // deep: [/blue$/],
     greedy: [/carousel-indicators$/]
