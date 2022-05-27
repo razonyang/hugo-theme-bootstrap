@@ -8,7 +8,7 @@ fs.access(stats, fs.F_OK, (err) => {
 });
 
 const purgecss = require('@fullhuman/postcss-purgecss')({
-  content: [ stats ],
+  content: [ stats, "./extra_stats.json" ],
   defaultExtractor: (content) => {
       let els = JSON.parse(content).htmlElements;
       return els.tags.concat(els.classes, els.ids);
