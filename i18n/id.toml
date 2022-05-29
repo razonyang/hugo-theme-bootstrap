@@ -1,0 +1,198 @@
+[404_title]
+other = "Maaf! Halaman tidak ditemukan."
+
+[404_info]
+other = "Halaman yang Anda cari tidak ditemukan."
+
+[about_me]
+other = "Tentang Saya"
+
+[alipay]
+other = "Alipay"
+
+[all]
+other = "Semua"
+
+[archives]
+other = "Arsip"
+
+[button_copy_url]
+other = "Salin URL"
+
+[button_reload]
+other = "Reload"
+
+[button_social_share]
+other = "Bagikan"
+
+[button_submit]
+other = "Kirim"
+
+[buy_me_a_coffee]
+other = "Belikan saya Kopi"
+
+[categories]
+other = "Kategori"
+
+[color_blue]
+other = "Biru"
+
+[color_blue_gray]
+other = "Biru Abu-Abu"
+
+[color_brown]
+other = "Coklat"
+
+[color_cyan]
+other = "Cyan"
+
+[color_green]
+other = "Hijau"
+
+[color_indigo]
+other = "Biru Tua"
+
+[color_orange]
+other = "Orange"
+
+[color_pink]
+other = "Pink"
+
+[color_purple]
+other = "Ungu"
+
+[color_red]
+other = "Merah"
+
+[color_teal]
+other = "Teal"
+
+[color_yellow]
+other = "Kuning"
+
+[comments]
+other = "Komentar"
+
+[contact_name]
+other = "Nama"
+
+[contact_email]
+other = "Email"
+
+[contact_email_help]
+other = "Kami tidak akan pernah membagikan email Anda kepada orang lain."
+
+[contact_file]
+other = "File"
+
+[contact_subject]
+other = "Subjek"
+
+[contact_message]
+other = "Pesan"
+
+[copyright]
+other = "Hak Cipta"
+
+[featured_posts]
+other = "Postingan Unggulan"
+
+[font_size]
+other = "Ukuran Huruf"
+
+[go_back]
+other = "Kembali"
+
+[home]
+other = "Beranda"
+
+[language]
+other = "Bahasa"
+
+[liberapay]
+other = "Liberapay"
+
+[load_more]
+other = "Muat lebih banyak"
+
+[mode]
+other = "Mode"
+
+[offline_title]
+other = "Maaf! Anda sedang offline."
+
+[offline_info]
+other = "Sepertinya ada masalah dengan koneksi Anda. Silakan periksa status jaringan Anda."
+
+[pagination_title]
+other = "Halaman {{ .PageNumber }}"
+
+[palette]
+other = "Palet"
+
+[patreon]
+other = "Patreon"
+
+[paypal]
+other = "Paypal"
+
+[post_count]
+one = "Total {{ .Count }} posting"
+other = "Total {{ .Count }} postingan"
+
+[post_date]
+other = "Dibuat pada {{ .createdOn }}{{ with .updatedOn }}, Diperbaharui pada {{ . }}{{ end }}."
+
+[read_more]
+other = "Baca lebih banyak"
+
+[reading_time]
+other = "Minimal baca {{ .ReadingTime }}"
+
+[recent_posts]
+other = "Postingan Terbaru"
+
+[related_posts]
+other = "Postingan Terkait"
+
+[repo_action_edit]
+other = "Ubah halaman ini"
+
+[repo_action_view]
+other = "Lihat sumber halaman"
+
+[repo_title]
+other = "Repository"
+
+[search]
+other = "Cari"
+
+[search_missing_keywords]
+other = "Maaf, masukan kata kunci terlebih dahulu"
+
+[search_no_results]
+other = "Hasil tidak ditemukan"
+
+[search_stat]
+other = "Ditemukan {{ .Total }} hasil"
+
+[series]
+other = "Seri"
+
+[settings]
+other = "Pengaturan"
+
+[table_of_contents]
+other = "Konten"
+
+[tags]
+other = "Tags"
+
+[tipeee]
+other = "Tipeee"
+
+[try_again]
+other = "Coba lagi"
+
+[wechat]
+other = "WeChat"
