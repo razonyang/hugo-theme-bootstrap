@@ -8,6 +8,17 @@
 
 A fast, responsive and feature-rich Hugo theme for personal blog and documentations.
 
+## [Add hugo contact form](https://fabform.io/a/hugo-contact-form)
+
+```
+<form action="https://fabform.io/f/{form-id}" method="post">
+ <label for="email">Your Email</label>
+ <input name="email" type="email">
+ <button type="submit">Submit</button> 
+</form>
+```
+
+
 ## NOTE
 
 Since `v0.68.0`, HBS uses Hugo Pipes to generate CSS and JS assets, there are a lot of breaking changes, please check out the [CHANGELOG](CHANGELOG.md) and [UPGRADE.md](UPGRADE.md) for details.
