@@ -20,7 +20,7 @@ other = "Arsip"
 other = "Salin URL"
 
 [button_reload]
-other = "Reload"
+other = "Muat Ulang"
 
 [button_social_share]
 other = "Bagikan"
@@ -53,10 +53,10 @@ other = "Hijau"
 other = "Biru Tua"
 
 [color_orange]
-other = "Orange"
+other = "Oranye"
 
 [color_pink]
-other = "Pink"
+other = "Merah Jambu"
 
 [color_purple]
 other = "Ungu"
