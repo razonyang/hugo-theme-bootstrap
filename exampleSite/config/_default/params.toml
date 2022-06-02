@@ -135,6 +135,11 @@ viewer = true # Image Viewer
     # distance = 100
     # useExtendedSearch = true
 
+#[docsearch]
+#  appId = "R2IYF7ETH7"
+#  apiKey = "599cec31baffa4868cae4e79f180729b"
+#  indexName = "docsearch"
+
 [reward]
   alipay = "images/reward/alipay.png"
   wechat = "images/reward/wechat.png"
