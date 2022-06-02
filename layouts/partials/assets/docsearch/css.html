@@ -1,0 +1,6 @@
+
+{{- with .Site.Params.docsearch }}
+    {{- $options := dict "targetPath" "assets/docsearch/bundle.min.css" "outputStyle" "compressed" "includePaths" (slice "node_modules") -}}
+    {{- $style := resources.Get "docsearch/scss/index.scss" | toCSS $options | fingerprint -}}
+    <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous">
+{{- end -}}
