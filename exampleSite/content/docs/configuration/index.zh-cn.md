@@ -106,6 +106,10 @@ aliases = [
 | **Archive**
 | `archive` | Object | - | [归档]({{< ref "/docs/layouts/archives" >}})。
 | `search` | Object | - | [搜索]({{< ref "/docs/layouts/search" >}})。
+| `docsearch` | Object | - | [DocSearch](https://docsearch.algolia.com/)
+| `docsearch.appId` | String | - |
+| `docsearch.indexName` | String | - |
+| `docsearch.apiKey` | String | - |
 | **顶部应用栏**
 | `topAppBar` | Object | - |
 | `topAppBar.social` | Object | - | [社交链接]({{< ref "/docs/widgets/social-links" >}})。
