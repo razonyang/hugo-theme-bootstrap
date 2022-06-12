@@ -1,31 +1,34 @@
 <div class="offcanvas offcanvas-bottom h-auto" tabindex="-1" id="offcanvasActionsPanel" aria-labelledby="offcanvasActionsPanel">
   <div class="offcanvas-header">
-    <h3 class="offcanvas-title">Actions</h3>
+    <h3 class="offcanvas-title">
+      <i class="fas fa-fw fa-atom me-1"></i>
+      Actions
+    </h3>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="offcanvasActionsPanel" aria-label="Close"></button>
   </div>
-  <div class="offcanvas-body">
+  <div class="offcanvas-body mt-2">
     {{- if (default true .Site.Params.socialShare) -}}
     <div class="social-share mb-4 d-flex overflow-auto">
       <a class="d-flex flex-column align-items-center me-3" rel="noopener noreferrer" aria-label="Twitter Share Button"
       target="_blank" href="https://twitter.com/intent/tweet?title={{ .Title }}&url={{ .Permalink | absURL }}">
-        <i class="fab fa-2x fa-fw fa-twitter"></i> Twitter
+        <i class="fab fa-2x fa-fw fa-twitter mb-2"></i> Twitter
       </a>
       <a class="d-flex flex-column align-items-center me-3" rel="noopener noreferrer" aria-label="Facebook Share Button"
         target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink | absURL }}">
-        <i class="fab fa-2x fa-fw fa-facebook-f"></i> Facebook
+        <i class="fab fa-2x fa-fw fa-facebook-f mb-2"></i> Facebook
       </a>
     </div>
     <hr class="mb-4">
     {{- end -}}
     <div class="actions d-flex overflow-auto">
       <a role="button" class="action action-go-back d-flex flex-column align-items-center me-3" href="javascript: window.history.back();">
-        <span class="action-icon"><i class="fas fa-2x fa-chevron-circle-down" data-fa-transform="rotate-90"></i></span> {{ i18n "go_back" }}
+        <span class="action-icon mb-2"><i class="fas fa-2x fa-chevron-circle-down" data-fa-transform="rotate-90"></i></span> {{ i18n "go_back" }}
       </a>
       <a role="button" class="action action-reload-page d-flex flex-column align-items-center me-3">
-        <span class="action-icon"><i class="fas fa-2x fa-redo-alt"></i></span> {{ i18n "button_reload" }}
+        <span class="action-icon mb-2"><i class="fas fa-2x fa-redo-alt"></i></span> {{ i18n "button_reload" }}
       </a>
       <a role="button" class="action action-copy-url d-flex flex-column align-items-center me-3">
-        <span class="action-icon"><i class="fas fa-2x fa-link"></i></span> {{ i18n "button_copy_url" }}
+        <span class="action-icon mb-2"><i class="fas fa-2x fa-link"></i></span> {{ i18n "button_copy_url" }}
       </a>
     </div>
   </div>
