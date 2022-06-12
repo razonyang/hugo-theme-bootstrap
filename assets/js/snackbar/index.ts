@@ -9,7 +9,7 @@ class Snackbar {
     }
 
     show(body: String, duration: number = 2000) {
-        this.element.innerHTML = '<div class="snackbar-body">' + body + '</div>';
+        this.element.innerHTML = '<div class="snackbar-body text-bg-secondary rounded px-3 py-2">' + body + '</div>';
         this.element.classList.add('show');
         const self = this;
         setTimeout(function() {

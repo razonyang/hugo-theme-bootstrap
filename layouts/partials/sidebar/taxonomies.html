@@ -8,7 +8,7 @@
     {{- with $value.ByCount -}}
     <section class="{{ $key }}-taxonomies row card component">
       <div class="card-header">
-        <h2 class="card-title">
+        <h2 class="card-title my-2 fs-4 text-surface">
           <a href="{{ absLangURL (urlize $key) }}">{{ T $key }}</a>
         </h2>
       </div>
@@ -17,19 +17,19 @@
         {{- $count := 0 -}}
         {{- range . -}}
           {{- if and (lt $count $taxonomyCount) (ne .Name "") -}}
-          <a href="{{ .Page.Permalink }}" class="badge rounded post-taxonomy" title="{{ .Page.Title }}">
+          <a href="{{ .Page.Permalink }}" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="{{ .Page.Title }}">
             {{ .Page.Title }}
             {{- if $.Site.Params.countTaxonomyPosts -}}
-              <span class="badge badge-sm text-white bg-accent ms-1">{{ .Count }}</span>
+              <span class="badge badge-sm text-secondary bg-white ms-1">{{ .Count }}</span>
             {{- end -}}
           </a>
           {{- $count = add $count 1 }}
           {{- end -}}
         {{- end -}}
         {{- if gt (len $value) $taxonomyCount -}}
-        <a href="{{ absLangURL (urlize $key) }}" class="badge rounded post-taxonomy" title='{{ i18n "all" | upper }}'>
+        <a href="{{ absLangURL (urlize $key) }}" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title='{{ i18n "all" | upper }}'>
           {{ i18n "all" | upper }}
-          <span class="badge badge-sm text-white bg-accent ms-1">{{ len $value }}</span>
+          <span class="badge badge-sm text-secondary bg-white ms-1">{{ len $value }}</span>
         </a>
         {{- end -}}
         </div>

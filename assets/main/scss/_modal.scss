@@ -1,8 +1,0 @@
-.modal {
-  @extend .shadow-lg;
-}
-
-.mode-content {
-  background: var(--#{$prefix}surface);
-  color: var(--#{$prefix}primary-text-on-surface);
-}

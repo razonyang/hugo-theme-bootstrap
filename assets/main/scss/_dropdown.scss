@@ -1,16 +1,6 @@
 .dropdown-menu {
-  background-color: var(--#{$prefix}background);
-
-  .dropdown-item {
-    color: var(--#{$prefix}primary-text-on-background) !important;
-
-    &:hover,
-    &:focus,
-    &:active,
-    &.active {
-      color: var(--#{$prefix}on-primary) !important;
-      background-color: var(--#{$prefix}accent) !important;
-      text-decoration: none;
-    }
-  }
+  --#{$prefix}dropdown-link-active-color: var(--#{$prefix}on-primary);
+  --#{$prefix}dropdown-link-active-bg: var(--#{$prefix}primary);
+  --#{$prefix}dropdown-link-hover-color: var(--#{$prefix}on-primary);
+  --#{$prefix}dropdown-link-hover-bg: var(--#{$prefix}primary);
 }

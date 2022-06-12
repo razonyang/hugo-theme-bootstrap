@@ -75,7 +75,7 @@ class ModeToggle implements Component {
       value = this.getPreferMode();
     }
     console.debug(`Switch to ${value} mode`);
-    document.body.parentElement.setAttribute('data-mode', value);
+    document.body.parentElement.setAttribute('data-theme', value);
     let checked: boolean = false;
     if (value === 'dark') {
       checked = true;

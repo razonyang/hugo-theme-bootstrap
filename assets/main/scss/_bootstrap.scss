@@ -1,41 +1,13 @@
-$prefix: hbs-;
-
-$form-range-thumb-bg: var(--#{$prefix}accent) !default;
-
-$enable-smooth-scroll: true !default;
-
-$grid-gutter-width: .75rem !default;
-$card-spacer-x: 1rem !default;
-$card-spacer-y: 1rem !default;
-$card-cap-bg: transparent !default;
-
-$enable-shadows: false !default;
-
-$border-color: var(--#{$prefix}secondary-text-on-surface) !default;
-
-// Heading
-$font-size-base:              1rem !default;
-$h1-font-size:                $font-size-base * 2 !default;
-$h2-font-size:                $font-size-base * 1.5 !default;
-$h3-font-size:                $font-size-base * 1.375 !default;
-$h4-font-size:                $font-size-base * 1.25 !default;
-$h5-font-size:                $font-size-base * 1.125 !default;
-$h6-font-size:                $font-size-base !default;
-
-// Shadows
-$box-shadow:                  0 .5rem 1rem rgba(var(--#{$prefix}shadow-rgb), .15);
-$box-shadow-sm:               0 .125rem .25rem rgba(var(--#{$prefix}shadow-rgb), .075);
-$box-shadow-lg:               0 1rem 3rem rgba(var(--#{$prefix}shadow-rgb), .175);
-$box-shadow-inset:            inset 0 1px 2px rgba(var(--#{$prefix}shadow-rgb), .075);
-
-@import 'bootstrap/scss/bootstrap';
 // Configuration
 @import 'functions';
 @import 'variables';
+@import 'variables-theme';
+@import 'variables-theme-dark';
 @import 'bootstrap/scss/variables';
 @import "bootstrap/scss/maps";
 @import 'mixins';
 @import 'bootstrap/scss/utilities';
+@import 'palettes';
 
 // Layout & components
 @import 'bootstrap/scss/root';
@@ -72,6 +44,5 @@ $box-shadow-inset:            inset 0 1px 2px rgba(var(--#{$prefix}shadow-rgb), 
 
 // Helpers
 @import 'bootstrap/scss/helpers';
-
 // Utilities
 @import 'utilities';

@@ -24,16 +24,17 @@ const purgecss = require('@fullhuman/postcss-purgecss')({
       'justify-content-center',
       'mb-0',
       'opacity-0', 'opacity-50',
-      'pe-3', 'pt-1', 'position-absolute', 'position-fixed', 'position-relative', 'position-sticky',
+      'p-1', 'pe-3', 'pt-0', 'pt-1', 'px-3', 'py-2', 'position-absolute', 'position-fixed', 'position-relative', 'position-sticky',
+      'rounded', 'rounded-top',
       'show',
-      'text-pre-wrap', 'text-uppercase', 'text-white', 'top-0',
+      'text-pre-wrap', 'text-uppercase', 'text-white', 'top-0', 'text-bg-secondary',
       'w-100',
       'was-validated',
     ],
     // deep: [/blue$/],
     greedy: [/carousel-indicators$/]
   },
-  dynamicAttributes: ["data-bs-popper"]
+  dynamicAttributes: ['data-bs-popper', 'data-theme', 'data-palette']
 });
 
 const autoprefixer = require('autoprefixer');

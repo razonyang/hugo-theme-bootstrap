@@ -54,7 +54,7 @@ You may also want to use the same list layout of `docs` on `notes`.
 
 ```html {title="layouts/notes/list.html"}
 {{ define "content" }}
-{{- partial "docs/catalog" . -}}
+{{- partial "docs/nav" . -}}
 <div class="col-lg-7 ms-auto">
   {{ partial "docs/list" . }}
 </div>

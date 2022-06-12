@@ -1,9 +1,10 @@
-<div class="offcanvas offcanvas-bottom surface h-auto" tabindex="-1" id="offcanvasActions" aria-labelledby="offcanvasActions">
+<div class="offcanvas offcanvas-bottom h-50" tabindex="-1" id="offcanvasActionsPanel" aria-labelledby="offcanvasActionsPanel">
   <div class="offcanvas-header">
     <h3 class="offcanvas-title">Actions</h3>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="offcanvasActions" aria-label="Close"></button>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="offcanvasActionsPanel" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
+    {{- if (default true .Site.Params.socialShare) -}}
     <div class="social-share mb-4 d-flex overflow-auto">
       <a class="d-flex flex-column align-items-center me-3" rel="noopener noreferrer" aria-label="Twitter Share Button"
       target="_blank" href="https://twitter.com/intent/tweet?title={{ .Title }}&url={{ .Permalink | absURL }}">
@@ -15,6 +16,7 @@
       </a>
     </div>
     <hr class="mb-4">
+    {{- end -}}
     <div class="actions d-flex overflow-auto">
       <a role="button" class="action action-go-back d-flex flex-column align-items-center me-3" href="javascript: window.history.back();">
         <span class="action-icon"><i class="fas fa-2x fa-chevron-circle-down" data-fa-transform="rotate-90"></i></span> {{ i18n "go_back" }}
@@ -25,12 +27,6 @@
       <a role="button" class="action action-copy-url d-flex flex-column align-items-center me-3">
         <span class="action-icon"><i class="fas fa-2x fa-link"></i></span> {{ i18n "button_copy_url" }}
       </a>
-      {{- if (default true .Site.Params.socialShare) -}}
-      <a class="action action-social-share d-flex flex-column align-items-center me-3" role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSocialShare"
-        aria-controls="offcanvasSocialShare" aria-label="Toggle social share">
-        <span class="action-icon"><i class="fas fa-2x fa-share-alt"></i></span> {{ i18n "button_social_share" }}
-      </a>
-      {{- end -}}
     </div>
   </div>
 </div>

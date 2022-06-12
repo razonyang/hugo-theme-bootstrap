@@ -21,7 +21,7 @@ aliases = [
 [menu.footer]
   parent = "features"
   weight = 7
-  pre = '<i class="fas fa-fw fa-coffee"></i>'
+  pre = '<i class="fas fa-fw fa-coffee me-1"></i>'
 +++
 
 The reward widget, AKA buy me a coffee widget, gives the readers a way to support a creator through the use of donations or tips.

@@ -57,7 +57,7 @@ Let's take `main` menu as an example:
   name = "FooBar"
   identifier = "foobar"
   weight = 1
-  pre = '<i class="fas fa-fw fa-chevron-circle-down"></i>'
+  pre = '<i class="fas fa-fw fa-chevron-circle-down me-1"></i>'
 [[main]]
   name = "Foo"
   identifier = "foo"
@@ -93,7 +93,7 @@ We can also configure menu via page front matter.
 [menu.footer]
   parent = "support"
   weight = 6
-  pre = '<i class="fas fa-fw fa-question-circle"></i>'
+  pre = '<i class="fas fa-fw fa-question-circle me-1"></i>'
 ```
 
 The code snippet appends the page to the `main` and `footer` menu.

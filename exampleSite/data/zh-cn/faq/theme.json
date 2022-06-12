@@ -20,7 +20,7 @@
         },
         {
             "question": "如何添加新语言？",
-            "answer": "- 在 `config/_default/languages.toml` 添加新语言。\n- [书写文章](/zh-cn/posts/authoring/#书写文章)。"
+            "answer": "- 在 `config/_default/languages.toml` 添加新语言。\n- [书写文章](/zh-cn/docs/content)。"
         }
     ]
 }

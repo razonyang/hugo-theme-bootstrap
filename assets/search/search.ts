@@ -23,7 +23,7 @@ export class Search {
 
   public highlightOptions = {
     element: 'span',
-    className: 'text-accent',
+    className: 'text-primary',
   };
 
   public tmplMissingKeywords: string;
@@ -129,12 +129,23 @@ export class Search {
     this.loadMore.classList.remove('d-none');
   }
 
-  search(query: string) {
+  hideLoadingSpinner() {
+    if (!this.loadingSpinner.classList.contains('d-none')) {
+      this.loadingSpinner.classList.add('d-none');
+    }
+  }
+
+  showLoadingSpinner() {
     this.loadingSpinner.classList.remove('d-none');
+  }
+
+ search(query: string) {
+    this.showLoadingSpinner();
     this.resultsElement.innerHTML = ''; // Clear previous results.
     if (query === '') {
       this.stat.innerHTML = this.tmplMissingKeywords;
       this.hideLoadMoreBtn();
+      this.hideLoadingSpinner();
       return;
     }
     this.page = 1;
@@ -142,7 +153,7 @@ export class Search {
     const results = this.fuse.search(query);
     console.debug({ results });
     this.results = results;
-    this.loadingSpinner.classList.add('d-none');
+    this.hideLoadingSpinner();
     if (this.results.length > this.paginate) {
       this.showLoadMoreBtn();
     } else {

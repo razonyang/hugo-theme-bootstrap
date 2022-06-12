@@ -6,7 +6,7 @@
     }
 }
 
-.docs-catalog {
+.docs-nav {
     word-break: break-word;
     
     @include media-breakpoint-up(lg) {
@@ -24,14 +24,6 @@
     }
 }
 
-.catalog-section {
-    a {
-        &:hover {
-            color: inherit;
-        }
-    }
-}
-
 .docs-sidebar {
     @include media-breakpoint-up(lg) {
         top: 84px;
@@ -42,19 +34,4 @@
             background: transparent;
         }
     }
-}
-
-.catalog-collapse {
-    @include media-breakpoint-up(lg) {
-      display: flex!important;
-    }
-}
-
-.catalog-toggle {
-    z-index: 999;
-    border: none;
-    width: 1rem;
-    background: var(--#{$prefix}background);
-    color: var(--#{$prefix}on-background);
-    left: 0;
 }

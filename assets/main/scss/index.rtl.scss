@@ -2,12 +2,12 @@
 @import 'bootstrap';
 /*! purgecss start ignore */
 @import 'colors';
-@import 'palettes';
-@import 'modes';
 @import 'root';
 @import 'reboot';
+@import 'themes'; 
 
 // Components
+@import 'actions-panel';
 @import 'anchor';
 @import 'archives';
 @import 'blockquote';
@@ -16,7 +16,6 @@
 @import 'card';
 @import 'component';
 @import 'code';
-@import 'close-button';
 @import 'dropdown';
 @import 'footer';
 @import 'form';
@@ -24,6 +23,7 @@
 @import 'image';
 @import 'main';
 @import 'modal';
+@import 'nav';
 @import 'navbar';
 @import 'offcanvas';
 @import 'pagination';
@@ -38,6 +38,7 @@
 @import 'surface';
 @import 'table';
 @import 'taxonomy';
+@import 'themes';
 @import 'top-app-bar';
 @import 'loading-bar';
 @import 'snackbar';

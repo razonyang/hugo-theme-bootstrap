@@ -1,0 +1,8 @@
+.btn-actions-panel {
+    bottom: 5rem;
+    right: 1.25rem;
+    
+    @include media-breakpoint-down(sm) {
+      right: .75rem;
+    }
+}

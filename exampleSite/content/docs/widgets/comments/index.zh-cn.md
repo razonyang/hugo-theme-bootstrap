@@ -23,7 +23,7 @@ aliases = [
 [menu.footer]
   parent = "features"
   weight = 7
-  pre = '<i class="fas fa-fw fa-comments"></i>'
+  pre = '<i class="fas fa-fw fa-comments me-1"></i>'
 +++
 
 [Disqus](https://disqus.com/) 和 [Utterances](https://utteranc.es/) 评论小部件都是开箱即用的。本文将展示如何配置它们，甚至自定义你自己的评论小部件。

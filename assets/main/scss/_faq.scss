@@ -1,33 +1,20 @@
-.faq {
-    a {
-        color: var(--#{$prefix}accent);
+.accordion {
+    --#{$prefix}accordion-active-color: var(--#{$prefix}primary);
+    --#{$prefix}accordion-active-bg: var(--#{$prefix}on-primary);
+}
+
+@include theme(dark) {
+    .accordion-button {
+        &:not([aria-expanded="true"]) {
+            &::after {
+                filter: invert(1) grayscale(100%) brightness(200%);
+            }
+        }
     }
 }
 
 .faq-answer {
-    background: var(--#{$prefix}surface);
-    color: var(--#{$prefix}primary-text-on-surface);
-}
-
-.accordion-button {
-    background: var(--#{$prefix}background);
-    color: var(--#{$prefix}primary-text-on-background);
-    box-shadow: none!important;
-
-    .faq-question-icon {
-        right: .5rem;
-    }
-
-    &:not(.collapsed) {
-        background: var(--#{$prefix}background);
-        color: var(--#{$prefix}accent);
-
-        .faq-question-icon {
-            transform: rotate(90deg);
-        }
-    }
-
-    &::after {
-        display: none;
+    a {
+        text-decoration: underline;
     }
 }

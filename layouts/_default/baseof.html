@@ -1,9 +1,8 @@
 <!doctype html>
-{{- $color := $.Site.Params.color -}}
-<html class="position-relative" itemscope itemtype="http://schema.org/WebPage" lang="{{ .Lang }}"
+{{- $color := default "auto" $.Site.Params.color -}}
+<html class="position-relative" itemscope itemtype="http://schema.org/WebPage" lang="{{ .Lang }}" data-theme="{{ $color }}"
   {{ with $.Site.Language.LanguageDirection }} dir="{{ . }}"{{ end }}
-  {{ with $.Site.Params.palette }} data-palette="{{ replace . " " "-" }}"{{ end }}
-  {{ if in (slice "light" "dark") $color }}{{ printf " data-mode=\"%s\"" $color | safeHTMLAttr }}{{ end }}>
+  {{ with $.Site.Params.palette }} data-palette="{{ replace . " " "-" }}"{{ end }}>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">

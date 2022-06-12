@@ -1,8 +1,10 @@
 {{- if .Site.Params.searchBar -}}
-<form class="search-bar mx-auto my-1" action="{{ absLangURL "search" }}">
+<form class="search-bar mx-auto my-1" action="{{ absLangURL "search" }}" novalidate>
   <div class="input-group input-group-sm align-items-center">
-    <span class="btn btn-search disabled position-absolute left-0 border-0"><i class="fas fa-fw fa-search"></i></span>
-    <input class="py-2 form-control rounded" name="q" type="search" aria-label="Search">
+    <span class="btn btn-search disabled position-absolute left-0 border-0">
+      <i class="fas fa-fw fa-search fa-lg"></i>
+    </span>
+    <input class="py-2 form-control rounded search-input" name="q" type="search" aria-label="Search" required>
   </div>
 </form>
 {{- end -}}

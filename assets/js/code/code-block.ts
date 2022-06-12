@@ -50,7 +50,7 @@ class CodeBlock {
     const lang = this.code.getAttribute('data-lang');
     if (lang) {
       const element = document.createElement('div');
-      element.className = 'lang position-absolute top-0 end-0 text-white fst-italic text-uppercase opacity-50 fs-xs pe-3 pt-1';
+      element.className = 'lang position-absolute top-0 end-0 text-white fst-italic text-uppercase opacity-50 fs-xs pe-3 pt-0';
       element.innerHTML = lang;
       this.wrapper.appendChild(element);
     }
@@ -68,7 +68,7 @@ class CodeBlock {
 
   appendPanel() {
     this.panel = document.createElement('div');
-    this.panel.className = 'chroma panel position-absolute mb-0 end-0 opacity-0';
+    this.panel.className = 'chroma panel position-absolute mb-0 end-0 opacity-0 rounded-top';
     this.calculateMaxHeight();
     this.appendCopyButton();
     this.appendLineNumberButton();

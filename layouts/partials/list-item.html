@@ -3,12 +3,12 @@
     {{- $pinnedPosts := .PinnedPosts -}}
     {{- with .Page.File.UniqueID -}}
       {{- if in $pinnedPosts . -}}
-      <span class="position-absolute start-0 top-0 text-accent"><i class="fas fa-thumbtack" data-fa-transform="rotate-45"></i></span>
+      <span class="position-absolute start-0 top-0 text-primary"><i class="fas fa-thumbtack" data-fa-transform="rotate-45"></i></span>
       {{- end -}}
     {{- end -}}
   {{- end -}}
   <div class="card-header">
-    <h2 class="card-title post-title">
+    <h2 class="card-title post-title my-2 fs-4">
       <a href="{{ .Page.Permalink }}">{{ partial "helpers/title" .Page }}</a>
     </h2>
   </div>

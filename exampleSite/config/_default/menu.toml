@@ -2,7 +2,7 @@
   name = "Support"
   identifier = "support"
   weight = 40
-  pre = '<i class="fas fa-fw fa-chevron-circle-down"></i>'
+  pre = '<i class="fas fa-fw fa-chevron-circle-down me-1"></i>'
 [[main]]
   name = "Repository"
   identifier = "repository"
@@ -37,14 +37,14 @@
   parent = "support"
   url = "https://github.com/razonyang/hugo-theme-bootstrap"
   weight = 1
-  pre = '<i class="fab fa-fw fa-github"></i>'
+  pre = '<i class="fab fa-fw fa-github me-1"></i>'
 [[footer]]
   name = "Discussions"
   identifier = "discussions"
   parent = "support"
   url = "https://github.com/razonyang/hugo-theme-bootstrap/discussions/new"
   weight = 2
-  pre = '<i class="fas fa-fw fa-comments"></i>'
+  pre = '<i class="fas fa-fw fa-comments me-1"></i>'
 [[footer]]
   name = "Features Request"
   identifier = "feature-request"
