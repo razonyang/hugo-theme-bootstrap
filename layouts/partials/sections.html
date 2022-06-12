@@ -1,13 +1,18 @@
 {{- with sort .Sections ".Title" "asc" -}}
-<div class="post-sections row component">
-  <ul class="nav nav-pills justify-content-evenly">
-    {{- range . -}}
-    {{- if gt .Pages.Len 0 -}}
-    <li class="nav-item post-section">
-      <a class="nav-link" href="{{ .Permalink }}">{{- .Title -}}</a>
-    </li>
-    {{- end -}}
-    {{- end -}}
-  </ul>
+<div class="post-sections row card component">
+  <div class="card-header">
+    <h2 class="card-title fs-4 text-surface my-2">Sections</h2>
+  </div>
+  <div class="card-body">
+    <ul class="nav nav-pills justify-content-between">
+      {{- range . -}}
+        {{- if gt .Pages.Len 0 -}}
+        <li class="nav-item post-section mb-2">
+          <a class="btn btn-sm btn-secondary" href="{{ .Permalink }}">{{- .Title -}}</a>
+        </li>
+        {{- end -}}
+      {{- end -}}
+    </ul>
+  </div>
 </div>
 {{- end -}}
