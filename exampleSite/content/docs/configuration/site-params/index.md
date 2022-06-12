@@ -1,12 +1,11 @@
 +++
-title = "Configuration"
-linkTitleIcon = '<i class="fas fa-cog fa-fw"></i>'
+title = "Site Parameters"
 date = 2021-11-27T19:53:24+08:00
 featured = true
 comment = true
 toc = true
 reward = true
-pinned = true
+pinned = false
 categories = [
   "Configuration"
 ]
@@ -17,42 +16,11 @@ series = [
 ]
 images = []
 weight = 980
-aliases = [
-  "/en/posts/configuration"
-]
-[menu.footer]
-  parent = "docs"
-  weight = 2
 +++
 
-As the example site shown, we use [Configuration Directory](https://gohugo.io/getting-started/configuration/#configuration-directory) to maintain easier organization and environment specific settings, it is especially useful on multilingual sites.
+The site parameters are located in `config/_default/params.toml` by default.
 
 <!--more-->
-
-## Site Configuration
-
-> The site configuration is located in `config/_default/config.toml` by default.
-
-| Name | Type | Default | Description
-|---|:-:|:-:|---
-| `title` | String | - | Site title.
-| `baseURL` | String | - | Site base URL.
-| `copyright` | String | - | Site copyright. The `{year}` placeholder will be replaced with this year.
-| `defaultContentLanguage` | String | `en` |
-| `defaultContentLanguageInSubdir` | Boolean | `false` |
-| `paginate` | Integer | `10` |
-| `paginatePath` | String | `page` |
-| `enableRobotsTXT` | Boolean | `true` |
-| `disqusShortname` | String | - | [Disqus]({{< ref "/docs/widgets/comments#disqus" >}}) shortname.
-| `googleAnalytics` | String | - | Google Analytics.
-| `social` | Object | - | [Social Links]({{< ref "/docs/widgets/social-links" >}}).
-| `author` | Object | - | [Author Widget]({{< ref "/docs/widgets/author" >}}).
-
-See also [All Configuration Settings](https://gohugo.io/getting-started/configuration/#all-configuration-settings).
-
-## Site Parameters
-
-> The site parameters are located in `config/_default/params.toml` by default.
 
 | Name | Type | Default | Description
 |---|:-:|:-:|---
@@ -163,36 +131,3 @@ See also [All Configuration Settings](https://gohugo.io/getting-started/configur
 | `rss` | String/Boolean | `true` | Display the RSS button on the social links. Turn it off by `false`, link it to homepage all the times by setting it to `home`.
 
 > Except the Google webmaster tool, the other webmaster tools cannot work with `hugo --minify`, because they cannot recognize the minified meta tag.
-
-## Page Parameters
-
-> Page parameters are located in page's [Front Matter](https://gohugo.io/content-management/front-matter/).
-
-| Name | Type  | Default | Description
-|---|:-:|:-:|---
-| **Page** 
-| `description` | String | - | Page description.
-| `keywords` | Array | - | Page keywords.
-| `comment` | Boolean | `true` | Whether to enable comments. It won't work if `comment` has been disabled globally.
-| `toc` | Boolean | `true` | Whether to enable TOC. It won't work if `toc` has been disabled globally.
-| `math` | Boolean | `false` | Whether to enable math.
-| `diagram` | Boolean | `false` | Whether to enable diagram.
-| `reward` | Boolean | `true` | Whether to enable reward.
-| `breadcrumb` | Boolean | `true` | Whether to enable breadcrumb.
-| `breadcrumbDivider` | String | `/` | Breadcrumb divider.
-| `readingTime` | Boolean | `true` | Whether to display the reading time.
-| `postDate` | Boolean | `true` | Whether to display the post date in the post meta section.
-| `copyright` | Boolean | `true` | Whether to display copyright section.
-| `carousel` | Boolean | `false` | Show on carousel.
-| **Creative Commons License**
-| `creativeCommons` | Object | - |
-| `creativeCommons.by` | Boolean | `true` | Credit must be given to you, the creator.
-| `creativeCommons.nc` | Boolean | `true` | Only noncommercial use of your work is permitted.
-| `creativeCommons.nd` | Boolean | `true` | No derivatives or adaptations of your work are permitted.
-| `creativeCommons.sa` | Boolean | `true` | Adaptations must be shared under the same terms.
-| **Meta Tag**
-| `metaRobots` | String | - | Empty means that turn it off.
-| `pinned` | Boolean | `false` | Pinning posts.
-| `featuredPostCount` | Integer/Boolean | `5` | The number of featured posts shown in sidebar. Turn off by setting it to `false`.
-| `recentPostCount` | Integer/Boolean | `5` | The number of recent posts shown in sidebar. Turn off by setting it to `false`.
-| `relatedPostCount` | Integer/Boolean | `5` | The number of related posts. Turn off by setting it to `false`.
