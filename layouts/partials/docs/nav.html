@@ -26,8 +26,8 @@
         <li class="mb-2" tabindex="-1">
           <div class="py-1 d-flex justify-content-between align-items-center ps-2{{ if $active }} text-primary{{ end }}">
             <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
-            <a class="btn-toggle collapsed ms-1" role="button" data-bs-toggle="collapse"
-              data-bs-target="#{{ $sectionId }}" aria-expanded="{{ if $active }}true{{ else }}false{{ end }}" aria-controls="{{ $sectionId }}">
+            <a class="btn-toggle ms-1{{ if and (not $active) (not $expand) }} collapsed{{ end }}" role="button" data-bs-toggle="collapse"
+              data-bs-target="#{{ $sectionId }}" aria-expanded="{{ if or $active $expand }}true{{ else }}false{{ end }}" aria-controls="{{ $sectionId }}">
               <i class="btn-toggle-icon fas fa-chevron-circle-down ms-auto" data-fa-transform="rotate-270"></i>
             </a>
           </div>
