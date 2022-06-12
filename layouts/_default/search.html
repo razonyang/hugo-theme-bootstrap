@@ -39,7 +39,7 @@
         {{ printf "{{#%s}}" . }}
         <span>
           <a {{ printf "href=\"%s%s/%s/\"" $baseURL . $placeholder | safeHTMLAttr }}
-            class="btn btn-sm btn-secondary p-0 pe-1 post-taxonomy opacity-75">{{ printf "{{.}}" }}</a>
+            class="btn btn-sm btn-secondary py-0 pe-1 post-taxonomy opacity-75">{{ printf "{{.}}" }}</a>
         </span>
         {{ printf "{{/%s}}" . }}
         {{- end -}}
