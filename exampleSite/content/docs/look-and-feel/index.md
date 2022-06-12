@@ -26,7 +26,7 @@ aliases = [
 [menu.footer]
   parent = "docs"
   weight = 3
-  pre = '<i class="fas fa-fw fa-palette"></i>'
+  pre = '<i class="fas fa-fw fa-palette me-1"></i>'
 +++
 
 By default, a site using this theme has the default fonts, colors, and general look and feel.

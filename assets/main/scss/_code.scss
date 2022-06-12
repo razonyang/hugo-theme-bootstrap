@@ -2,20 +2,19 @@
   margin: 1.5rem auto 1rem;
 
   .panel {
-    top: -1.5rem;
+    top: -1.35rem;
     padding: 0 0.5rem;
     transition: opacity 0.5s;
 
     .action {
-      color: var(--#{$prefix}on-primary);
+      color: rgba(244, 255, 255, .75);
+
+      &:hover, &.active {
+        color: white;
+      }
 
       &:not(:last-child) {
         margin-right: 1rem;
-      }
-
-      &.active,
-      &:hover {
-        color: var(--#{$prefix}accent);
       }
     }
   }
@@ -30,8 +29,8 @@
 code {
   margin: 0;
   padding: 0.25rem 0.5rem;
-  color: var(--#{$prefix}primary-text-on-surface);
-  background: var(--#{$prefix}background-light);
+  color: var(--#{$prefix}secondary-color);
+  background: var(--#{$prefix}secondary-bg);
   border-radius: 3px;
 
   &.no-ln {
@@ -42,9 +41,9 @@ code {
 }
 
 pre {
-  background: var(--#{$prefix}background);
+  background: var(--#{$prefix}body-bg);
   border-radius: 0.25rem;
-  color: var(--#{$prefix}on-background);
+  color: var(--#{$prefix}body-color);
   padding: 1rem;
   position: relative;
 
@@ -54,11 +53,4 @@ pre {
     color: inherit !important;
     opacity: 1;
   }
-}
-
-pre,
-code,
-kbd,
-samp {
-  unicode-bidi: #{"/*!rtl:isolate*/"}bidi-override
 }

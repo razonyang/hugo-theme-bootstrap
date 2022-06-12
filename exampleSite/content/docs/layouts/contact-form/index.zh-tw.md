@@ -23,7 +23,7 @@ aliases = [
 [menu.footer]
   parent = "features"
   weight = 6
-  pre = '<i class="fas fa-fw fa-question-circle"></i>'
+  pre = '<i class="fas fa-fw fa-question-circle me-1"></i>'
 +++
 
 我們可以將郵寄地址放在 [社交連結]({{< ref "/docs/widgets/social-links" >}})上，以便讀者聯繫我們。 但不幸的是，郵件或多或少會被當成垃圾郵件，甚至被過濾。 因此我們帶來了一個聯系表單的功能。

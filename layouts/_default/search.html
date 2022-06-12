@@ -4,12 +4,16 @@
     <div class="row">
       <form id="searchForm" class="search-form mb-3 p-0">
         <div class="input-group input-group-lg align-items-center">
-          <span class="btn btn-search disabled position-absolute left-0 border-0" type="submit" aria-label="submit"><i class="fas fa-fw fa-search"></i></span>
+          <span class="btn btn-search disabled position-absolute left-0 border-0" type="submit" aria-label="submit">
+            <i class="fas fa-fw fa-search text-primary"></i>
+          </span>
           <input class="form-control rounded ps-5" name="q" type="search" aria-label="Search">
         </div>
       </form>
       <div class="search-stat mb-3 p-0">
-        <i id="loadingSpinner" class="fas fa-fw fa-spin fa-spinner"></i>
+        <div id="loadingSpinner" class="spinner-border text-primary" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
         <span id="searchStat"></span>
       </div>
     </div>
@@ -22,7 +26,7 @@
 <script type="text/html" id="templateResult">
   <div class="search-result row card component" id="{{ print "{{id}}" }}">
     <div class="card-header">
-      <h2 class="card-title search-result-title">
+      <h2 class="card-title search-result-title fs-4 my-2 text-surface">
         <a {{ printf "href={{permalink}}" | safeHTMLAttr }}>{{ print "{{title}}" }}</a>
       </h2>
     </div>
@@ -33,7 +37,10 @@
         {{- $placeholder := "{{#url}}{{.}}{{/url}}" -}}
         {{- range slice "series" "categories" "tags" -}}
         {{ printf "{{#%s}}" . }}
-        <a {{ printf "href=\"%s%s/%s/\"" $baseURL . $placeholder | safeHTMLAttr }} class="badge post-taxonomy">{{ printf "{{.}}" }}</a>
+        <span>
+          <a {{ printf "href=\"%s%s/%s/\"" $baseURL . $placeholder | safeHTMLAttr }}
+            class="btn btn-sm btn-secondary p-0 pe-1 post-taxonomy opacity-75">{{ printf "{{.}}" }}</a>
+        </span>
         {{ printf "{{/%s}}" . }}
         {{- end -}}
       </div>
@@ -63,6 +70,6 @@
   {{ i18n "search_no_results" }}
 </script>
 <script type="text/html" id="templateStat">
-  {{ i18n "search_stat" (dict "Total" "<span class=\"text-accent\">{{total}}</span>") | safeHTML }}
+  {{ i18n "search_stat" (dict "Total" "<span class=\"text-primary\">{{total}}</span>") | safeHTML }}
 </script>
 {{ end }}

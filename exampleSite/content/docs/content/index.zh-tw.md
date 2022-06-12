@@ -53,7 +53,7 @@ $ cp themes/hugo-theme-bootstrap/archetypes/default.md archetypes/notes.md
 
 ```html {title="layouts/notes/list.html"}
 {{ define "content" }}
-{{- partial "docs/catalog" . -}}
+{{- partial "docs/nav" . -}}
 <div class="col-lg-7 ms-auto">
   {{ partial "docs/list" . }}
 </div>

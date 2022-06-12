@@ -1,14 +1,14 @@
 {{- $baseURL := $.Site.BaseURL -}}
-<nav class="navbar top-app-bar top-app-bar-expand-lg{{ if $.Site.Params.fixedHeader }} fixed-top{{ end }}">
+<nav class="top-app-bar shadow bg-primary text-white navbar navbar-expand-lg{{ if $.Site.Params.fixedHeader }} fixed-top{{ end }}">
   <div class="{{- partial "helpers/fullwidth" (dict "Page" . "Output" "container" "FullWidthOutput" "container-fluid") -}}">
     {{- if eq .Type "docs" -}}
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDocsCatalog"
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDocsNav"
       aria-controls="offcanvasDocsCatalog" aria-expanded="false" aria-label="Toggle docs navigation">
       <i class="fas fa-bars"></i>
     </button>
     {{- end -}}
     {{- $logo := (default "images/logo.webp" .Site.Params.logo) -}}
-    <a class="navbar-brand flex-grow-1 flex-lg-grow-0 text-center text-lg-start mx-auto me-lg-3{{ if .IsHome }} active{{ end }}" href="{{ "" | absLangURL }}">
+    <a class="navbar-brand flex-grow-1 flex-lg-grow-0 text-lg-start ms-1 ms-lg-0 mx-auto me-lg-3{{ if .IsHome }} active{{ end }}" href="{{ "" | absLangURL }}">
       {{- if $logo -}}
         {{ partial "helpers/image" (dict "filename" $logo "alt" "Logo" "class" "logo" "resources" .Resources) }}
       {{- end -}}
@@ -18,13 +18,13 @@
       aria-controls="navbarMenus" aria-expanded="false" aria-label="Toggle navigation">
       <i class="fas fa-ellipsis-h"></i>
     </button>
-    <div class="offcanvas-lg offcanvas-end flex-grow-1" tabindex="-1" id="navbarMenus" aria-labelledby="navbarMenusLabel">
+    <div class="offcanvas-lg offcanvas-end flex-grow-1 bg-primary text-white" tabindex="-1" id="navbarMenus" aria-labelledby="navbarMenusLabel">
       <div class="offcanvas-header px-4 pb-0">
         <h5 class="offcanvas-title" id="navbarMenusLabel">{{ $.Site.Title }}</h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" data-bs-target="#navbarMenus" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body p-4 pt-0 p-lg-0">
-        <hr class="d-lg-none text-secondary-on-surface">
+        <hr class="d-lg-none">
         <ul class="navbar-nav flex-row flex-wrap align-items-center me-auto">
           {{- $currentPage := . -}}
           {{- range .Site.Menus.main -}}
@@ -32,7 +32,7 @@
           {{- $active := or (eq $currentPage.Permalink (absURL .URL)) ($currentPage.IsMenuCurrent "main" .) -}}
           {{- if .HasChildren -}}
           <li class="nav-item col-6 col-lg-auto dropdown">
-            <a class="nav-link{{ if $currentPage.HasMenuCurrent "main" . }} active{{ end }}" id="navbarDropdown{{ title .Identifier }}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a href="#" class="nav-link{{ if $currentPage.HasMenuCurrent "main" . }} active{{ end }}" id="navbarDropdown{{ title .Identifier }}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               {{ .Pre }} {{- .Name -}} {{ .Post }}
             </a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown{{ title .Identifier }}" data-bs-popper="none">
@@ -60,21 +60,20 @@
           {{- end -}}
           {{- end -}}
         </ul>
-        <hr class="d-lg-none text-secondary-on-surface">
+        <hr class="d-lg-none">
         {{ partial "header/search-bar" . }}
-        <hr class="d-lg-none text-secondary-on-surface">
-        <ul class="navbar-nav flex-row flex-wrap align-items-center ms-3">
+        <hr class="d-lg-none">
+        <ul class="navbar-nav flex-row flex-wrap align-items-center ms-md-auto">
           {{- partial "header/social-links" . }}
           <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
             <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
-            <hr class="d-lg-none my-2 text-secondary-on-surface">
+            <hr class="d-lg-none my-2">
           </li>
           {{- partial "header/languages" . }}
-          <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+          <li class="nav-item py-1 col-12 col-lg-auto">
             <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
-            <hr class="d-lg-none my-2 text-secondary-on-surface">
+            <hr class="d-lg-none my-2">
           </li>
-          {{- partial "header/actions" . -}}
           {{- partial "header/font-size" . -}}
           {{- partial "header/palettes" . -}}
           {{- partial "header/mode" . -}}
@@ -82,5 +81,4 @@
       </div>
     </div>
   </div>
-  {{- partial "header/actions-offcanvas" . -}}
 </nav>

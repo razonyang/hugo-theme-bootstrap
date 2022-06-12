@@ -1,6 +1,7 @@
 breadcrumb = true
 dateFormat = "Jan 2, 2006"
 countTaxonomyPosts = false
+color = "auto"
 customCSS = []
 customJS = []
 diagram = false

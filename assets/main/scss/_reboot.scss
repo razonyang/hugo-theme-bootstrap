@@ -9,7 +9,7 @@ html {
   }
   
   @if $backgroundImageDark != '' {
-    &[data-mode=dark] {
+    &[data-theme=dark] {
       background-image: url($backgroundImageDark); 
     }
   }
@@ -24,26 +24,6 @@ body {
   height: 100%;
 }
 
-body {
-  background: var(--#{$prefix}background);
-  color: var(--#{$prefix}primary-text-on-background);
-}
-
 a {
-  color: inherit;
-  font-weight: 500;
   text-decoration: none;
-
-  &:hover {
-    color: var(--#{$prefix}accent);
-    text-decoration: underline;
-  }
-
-  &.btn {
-    text-decoration: none !important;
-  }
-}
-
-hr {
-  color: var(--#{$prefix}accent);
 }

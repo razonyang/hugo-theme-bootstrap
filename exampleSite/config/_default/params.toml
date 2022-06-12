@@ -13,8 +13,8 @@ keywords = "Hugo, Bootstrap, Blog Theme"
 # logo = false # Disable Logo
 brand = "BOOTSTRAP"
 
-palette = "blue" # Default palette. Optional. You'll need to clear the browser cache after modifying this.
-# palettes = ["blue", "blue gray", "brown"] # Available palettes. Default to ALL.
+palette = "purple" # Default palette. Optional. You'll need to clear the browser cache after modifying this.
+# palettes = ["blue", "blue gray", "purple"] # Available palettes. Default to ALL.
 # palettes = [] # Disable palette switcher.
 
 # color = "dark" # light, dark or dynamic. Default to dynamic.
@@ -191,3 +191,7 @@ viewer = true # Image Viewer
   [topAppBar.social]
     github = "razonyang/hugo-theme-bootstrap"
     # rss = "" # Disable RSS link
+
+[docs]
+  [docs.nav]
+    expand = true

@@ -7,10 +7,3 @@
 .snackbar.show {
   opacity: 1!important;
 }
-
-.snackbar-body {
-  color: var(--#{$prefix}background);
-  background-color: var(--#{$prefix}primary-text-on-background);
-  border-radius: 0.5rem;
-  padding: 0.5rem 1rem;
-}

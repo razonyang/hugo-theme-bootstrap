@@ -1,15 +1,3 @@
-$card-border-color: rgba(var(--#{$prefix}primary-text-on-surface-rgb), .125);
-
 .card {
-    .card-header {
-        border-bottom: 1px solid $card-border-color;
-    }
-
-    .card-title {
-        margin: .5rem 0;
-    }
-
-    .card-footer {
-        border-top: 1px solid $card-border-color;
-    }
+    --#{$prefix}card-cap-bg: transparent;
 }

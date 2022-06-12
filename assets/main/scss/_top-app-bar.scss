@@ -1,121 +1,40 @@
-.navbar {
-  --#{$prefix}navbar-hover-color: white;
-  --#{$prefix}navbar-active-color: white;
-}
-
-[data-mode=dark] {
-  .navbar {
-    --#{$prefix}navbar-hover-color: var(--#{$prefix}accent);
-    --#{$prefix}navbar-active-color: var(--#{$prefix}accent);
-  }
-}
-
-.search-bar {
-  .form-control {
-    background-color: var(--#{$prefix}background);
-    border-color: var(--#{$prefix}background);
-    color: var(--#{$prefix}secondary-text-on-surface);
-    padding-left: 2rem;
-
-    &:focus {
-      color: var(--#{$prefix}primary-text-on-surface);
-      box-shadow: none;
-    }
-  }
-
-  .btn-search {
-    background-color: transparent !important;
-    box-shadow: none;
-  }
-}
-
 .top-app-bar {
-  @extend .shadow-sm;
+    background-color: var(--#{$prefix}primary);
+    color: var(--#{$prefix}on-primary);
 
-  .actions {
-    .dropdown-menu {
-      min-width: auto;
+    --#{$prefix}navbar-color: var(--#{$prefix}on-primary-secondary);
+    --#{$prefix}navbar-hover-color: var(--#{$prefix}on-primary);
+    --#{$prefix}navbar-active-color: var(--#{$prefix}on-primary);
+    --#{$prefix}navbar-disabled-color: var(--#{$prefix}on-primary-disabled);
+    --#{$prefix}navbar-brand-color: var(--#{$prefix}on-primary-secondary);
+    --#{$prefix}navbar-brand-hover-color: var(--#{$prefix}on-primary);
+    --#{$prefix}form-control-bg: var(--#{$prefix}primary-secondary);
+
+    .logo {
+        height: 26px;
+        width: auto;
+        margin-right: 0.5rem;
     }
-  }
 
-  .social-link {
-    padding: 0 .25rem !important;
-  }
-}
-
-.top-app-bar-expand {
-  @each $breakpoint in map-keys($grid-breakpoints) {
-    $next: breakpoint-next($breakpoint, $grid-breakpoints);
-    $infix: breakpoint-infix($next, $grid-breakpoints);
-
-    // stylelint-disable-next-line scss/selector-no-union-class-name
-    &#{$infix} {
-      @include media-breakpoint-up($next) {
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-
-        .navbar-nav {
-          flex-direction: row;
-
-          .dropdown-menu {
-            position: absolute;
-          }
-
-          .nav-link {
-            padding-right: $navbar-nav-link-padding-x;
-            padding-left: $navbar-nav-link-padding-x;
-          }
-        }
-
-        .navbar-nav-scroll {
-          overflow: visible;
-        }
-
-        .navbar-collapse {
-          display: flex !important; // stylelint-disable-line declaration-no-important
-          flex-basis: auto;
-        }
-
-        .navbar-toggler {
-          display: none;
-        }
-      }
+    .form-control {
+        color: var(--#{$prefix}on-primary);
     }
-  }
-}
 
-.setting {
-  margin-bottom: 1rem;
-
-  &.actions {
-    .action {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 0.25rem 0.5rem;
-      text-align: center;
-
-      .action-icon {
-        padding: 0.75rem;
-        background-color: var(--#{$prefix}background);
-        color: var(--#{$prefix}primary-text-on-background);
-        margin-bottom: 0.25rem;
-      }
-
-      &:hover {
-        text-decoration: none;
-      }
+    a {
+        &:hover {
+            text-decoration: none;
+        }
     }
-  }
-}
 
-.top-app-bar {
-  .offcanvas-lg {
-    --#{$prefix}offcanvas-color: white;
-    --#{$prefix}offcanvas-bg: var(--#{$prefix}navbar);
-  }
+    .nav {
+        --#{$prefix}nav-link-color: var(--#{$prefix}on-primary-secondary);
+        --#{$prefix}nav-link-hover-color: var(--#{$prefix}on-primary);
+        --#{$prefix}nav-link-active-color: var(--#{$prefix}on-primary);
+    }
 
-  .social-link {
-    color: white!important;
-  }
+    .search-bar {
+        .search-input {
+            padding-left: 2.25rem;
+        }
+    }
 }

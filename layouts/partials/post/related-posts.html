@@ -4,10 +4,10 @@
   {{- with ($relatedPosts | first $count) -}}
   <section class="related-posts row card component">
     <div class="card-header">
-      <h2 class="card-title">{{ i18n "related_posts" }}</h2>
+      <h2 class="card-title fs-4 my-2">{{ i18n "related_posts" }}</h2>
     </div>
     <div class="card-body">
-      <ul class="post-list">
+      <ul class="post-list list-unstyled">
         {{- range . -}}
         <li>
           <a href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a>

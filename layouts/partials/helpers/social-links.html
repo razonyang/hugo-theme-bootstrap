@@ -34,7 +34,7 @@
 {{- $size := default "" .size -}}
 {{- $linkClass := default "" .linkClass -}}
 {{- $iconText := default false .iconText -}}
-{{- $iconTextClass := default "" .iconTextClass -}}
+{{- $iconTextClass := default "ms-1" .iconTextClass -}}
 <nav class="social-links nav justify-content-center{{ with .class }} {{ . }}{{ end }}">
 {{- range $key, $user := .links -}}
   {{- if eq $key "email" -}}

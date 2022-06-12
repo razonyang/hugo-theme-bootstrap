@@ -57,7 +57,7 @@ weight = 970
   name = "FooBar"
   identifier = "foobar"
   weight = 1
-  pre = '<i class="fas fa-fw fa-chevron-circle-down"></i>'
+  pre = '<i class="fas fa-fw fa-chevron-circle-down me-1"></i>'
 [[main]]
   name = "Foo"
   identifier = "foo"
@@ -93,7 +93,7 @@ weight = 970
 [menu.footer]
   parent = "support"
   weight = 6
-  pre = '<i class="fas fa-fw fa-question-circle"></i>'
+  pre = '<i class="fas fa-fw fa-question-circle me-1"></i>'
 ```
 
 代码片段将页面追加到 `main` 和 `footer` 菜单。

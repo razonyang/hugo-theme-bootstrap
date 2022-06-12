@@ -11,14 +11,6 @@
 
     @extend .shadow;
 
-    a {
-      color: inherit;
-
-      &:hover,
-      &.active {
-        color: var(--#{$prefix}accent);
-      }
-    }
 
     .action {
       margin-top: 0.25rem;

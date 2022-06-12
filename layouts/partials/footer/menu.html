@@ -6,7 +6,7 @@
     {{- if .HasChildren -}}
     <ul class="nav flex-column align-items-start">
       <li class="nav-item">
-      {{- template "footer-menu-item" (dict "item" . "class" "nav-link fw-bold") -}}
+      {{- template "footer-menu-item" (dict "item" . "class" "nav-link fw-bold fs-lg") -}}
       </li>
       {{- range .Children -}}
         {{- if .Params.divider -}}

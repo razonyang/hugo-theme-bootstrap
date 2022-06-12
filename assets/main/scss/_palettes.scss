@@ -1,86 +1,16 @@
-$palette-blue: (
-  'primary': #1565c0,
-  'primary-dark': #003c8f,
-  'primary-light': #5e92f3,
-  'on-primary': #fff,
-);
-
-$palette-blue-gray: (
-  'primary': #37474f,
-  'primary-dark': #102027,
-  'primary-light': #62727b,
-  'on-primary': #fff,
-);
-
-$palette-brown: (
-  'primary': #5d4037,
-  'primary-dark': #321911,
-  'primary-light': #8b6b61,
-  'on-primary': #fff,
-);
-
-$palette-cyan: (
-  'primary': #00838f,
-  'primary-dark': #005662,
-  'primary-light': #4fb3bf,
-  'on-primary': #fff,
-);
-
-$palette-green: (
-  'primary': #2e7d32,
-  'primary-dark': #005005,
-  'primary-light': #60ad5e,
-  'on-primary': #fff,
-);
-
-$palette-indigo: (
-  'primary': #303f9f,
-  'primary-dark': #001970,
-  'primary-light': #666ad1,
-  'on-primary': #fff,
-);
-
-$palette-orange: (
-  'primary': #bb4d00,
-  'primary-dark': #b53d00,
-  'primary-light': #ffad42,
-  'on-primary': #fff,
-);
-
-$palette-pink: (
-  'primary': #c2185b,
-  'primary-dark': #8c0032,
-  'primary-light': #fa5788,
-  'on-primary': #fff,
-);
-
-$palette-purple: (
-  'primary': #7b1fa2,
-  'primary-dark': #4a0072,
-  'primary-light': #ae52d4,
-  'on-primary': #fff,
-);
-
-$palette-red: (
-  'primary': #d32f2f,
-  'primary-dark': #9a0007,
-  'primary-light': #ff6659,
-  'on-primary': #fff,
-);
-
-$palette-teal: (
-  'primary': #00796b,
-  'primary-dark': #004c40,
-  'primary-light': #48a999,
-  'on-primary': #fff,
-);
-
-$palette-yellow: (
-  'primary': #bc5100,
-  'primary-dark': #833900,
-  'primary-light': #ffb04c,
-  'on-primary': #fff,
-);
+/*! purgecss start ignore */
+$palette-blue: $blue-600 !default;
+$palette-blue-gray: #37474f !default;
+$palette-brown: #5d4037 !default;
+$palette-cyan: $cyan-700 !default;
+$palette-green: $green !default;
+$palette-indigo: $indigo !default;
+$palette-orange: $orange-700 !default;
+$palette-pink: $pink !default;
+$palette-purple: $purple !default;
+$palette-red: $red !default;
+$palette-teal: $teal-700 !default;
+$palette-yellow: $yellow-800 !default;
 
 $palettes: (
   'blue': $palette-blue,
@@ -97,11 +27,37 @@ $palettes: (
   'yellow': $palette-yellow,
 );
 
-@each $name, $colors in $palettes {
+$theme-colors: map-remove($theme-colors, 'primary');
+$theme-colors: map-merge($theme-colors, $palettes);
+
+$palette-classes: 'btn', 'btn-outline';
+
+@each $name, $color in $palettes {
   @if validatePalette($name) {
+    $on-primary: color-contrast($color);
+    $primary-secondary: shade-color($color, 20%);
+    $on-primary-secondary: if($on-primary == $color-contrast-light, shade-color($on-primary, 20%), tint-color($on-primary, 20%));
+    $on-primary-disabled: if($on-primary == $color-contrast-light, shade-color($on-primary, 40%), tint-color($on-primary, 40%));
     [data-palette='#{$name}'] {
-      @each $key, $color in $colors {
-        --hbs-#{$key}: #{$color};
+      --#{$prefix}primary: #{$color};
+      --#{$prefix}primary-rgb: #{to-rgb($color)} !important;
+      --#{$prefix}primary-secondary: #{$primary-secondary};
+      --#{$prefix}primary-secondary-rgb: #{to-rgb($primary-secondary)};
+      --#{$prefix}on-primary: #{$on-primary};
+      --#{$prefix}on-primary-rgb: #{to-rgb($on-primary)};
+      --#{$prefix}on-primary-secondary: #{$on-primary-secondary};
+      --#{$prefix}on-primary-secondary-rgb: #{to-rgb($on-primary-secondary)};
+      --#{$prefix}on-primary-disabled: #{$on-primary-disabled};
+      --#{$prefix}on-primary-disabled-rgb: #{to-rgb($on-primary-disabled)};
+      --#{$prefix}accent-bg: #{$color} !important;
+      --#{$prefix}accent-color: #{$on-primary} !important;
+      --#{$prefix}accent-border: #{$color} !important;
+
+      // Override the primary components.
+      @each $class in $palette-classes {
+        .#{$class}-primary {
+          @extend .#{$class}-#{$name};
+        }
       }
     }
   }
@@ -109,20 +65,6 @@ $palettes: (
 
 .palette {
   height: 1.5rem;
-  min-width: 1.5rem;
-  margin: 0.25rem 0;
-  background: var(--#{$prefix}primary) !important;
-  color: var(--#{$prefix}on-primary) !important;
-
-  &:not(:last-child) {
-    margin-right: .25rem;
-  }
+  width: 1.5rem;
 }
-
-#palettePicker {
-  overflow-y: scroll;
-}
-
-.text-accent {
-  color: var(--#{$prefix}accent) !important;
-}
+/*! purgecss end ignore */

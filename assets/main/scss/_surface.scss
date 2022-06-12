@@ -1,4 +1,21 @@
 .surface {
-  background: var(--#{$prefix}surface);
-  color: var(--#{$prefix}primary-text-on-surface);
+  background: var(--#{$prefix}surface-bg) !important;
+  color: var(--#{$prefix}surface-color-secondary) !important;
 }
+
+.bg-surface {
+  color: var(--#{$prefix}surface-bg) !important;
+}
+
+.text-surface {
+  color: var(--#{$prefix}surface-color) !important;
+}
+
+.text-surface-secondary {
+  color: var(--#{$prefix}surface-color-secondary) !important;
+}
+
+.text-surface-disabled {
+  color: var(--#{$prefix}surface-color-disabled) !important;
+}
+

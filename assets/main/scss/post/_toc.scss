@@ -1,5 +1,5 @@
 #TableOfContents {
-  color: var(--#{$prefix}secondary-text-on-surface);
+  @extend .surface;
 
   ol,
   ul {
@@ -8,21 +8,15 @@
     }
     padding-left: 1rem;
 
-    li {
-      a {
-        color: inherit;
-        font-weight: 400;
-
-        &:hover {
-          color: var(--#{$prefix}accent);
-        }
-      }
-    }
   }
 
   >ol, >ul {
     @if $tocStyleType == none {
         padding-left: 0;
     }
+  }
+
+  ul, li {
+    margin-bottom: .25rem;
   }
 }

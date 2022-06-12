@@ -1,0 +1,4 @@
+.nav-tabs {
+  --#{$prefix}nav-tabs-link-active-bg: var(--#{$prefix}primary);
+  --#{$prefix}nav-tabs-link-active-color: var(--#{$prefix}on-primary);
+}

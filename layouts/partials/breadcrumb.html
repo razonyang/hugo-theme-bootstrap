@@ -1,7 +1,7 @@
 {{- if and .Site.Params.breadcrumb (default true .Params.breadcrumb) -}}
 <nav class="row card component" aria-label="breadcrumb">
   <div class="card-body pb-0">
-    <ol class="breadcrumb ">
+    <ol class="breadcrumb">
       {{- template "breadcrumbnav" (dict "p1" . "p2" . "titleCase" $.Site.Params.titleCase) -}}
     </ol>
   </div>
@@ -16,7 +16,7 @@
 {{- if eq .p1 .p2 -}}
 <li class="breadcrumb-item active">{{ if .titleCase }}{{ title .p1.Title }}{{ else }}{{ .p1.Title }}{{ end }}</li>
 {{- else -}}
-<li class="breadcrumb-item"><a href="{{ .p1.Permalink }}">{{ if .p1.IsHome }}{{ i18n "home" }}{{ else }}{{ .p1.Title }}{{ end }}</a></li>
+<li class="breadcrumb-item text-surface"><a href="{{ .p1.Permalink }}">{{ if .p1.IsHome }}{{ i18n "home" }}{{ else }}{{ .p1.Title }}{{ end }}</a></li>
 {{- end -}}
 {{- end -}}
 

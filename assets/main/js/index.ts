@@ -1,12 +1,9 @@
-import 'bootstrap/js/src/dropdown';
-import 'bootstrap/js/src/offcanvas';
-import 'bootstrap/js/src/modal';
-import 'bootstrap/js/src/tab';
-import 'bootstrap/js/src/carousel';
+import 'bootstrap/dist/js/bootstrap.bundle';
 
 import App from 'js/app';
 import Collapse from 'js/collapse/collapse';
 import TopAppBar from 'js/top-app-bar';
+import ActionsPanel from 'js/actions-panel';
 import ModeToggle from 'js/mode';
 import PaletteSelector from 'js/palettes';
 import LoadingBar from 'js/loading-bar';
@@ -24,6 +21,7 @@ const app = new App();
 app.attach(
     new Collapse(),
     new TopAppBar(),
+    new ActionsPanel(),
     new ModeToggle(),
     new PaletteSelector(),
     new Scroller(),

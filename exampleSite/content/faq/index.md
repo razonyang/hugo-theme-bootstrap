@@ -8,5 +8,5 @@ layout = "faq"
 [menu.footer]
   parent = "support"
   weight = 6
-  pre = '<i class="fas fa-fw fa-question-circle"></i>'
+  pre = '<i class="fas fa-fw fa-question-circle me-1"></i>'
 +++
