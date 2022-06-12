@@ -1,5 +1,6 @@
 +++
 title = "配置"
+linkTitleIcon = '<i class="fas fa-cog fa-fw"></i>'
 date = 2021-11-27T19:53:24+08:00
 featured = true
 comment = true

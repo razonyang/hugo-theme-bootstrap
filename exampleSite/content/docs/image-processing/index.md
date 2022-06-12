@@ -1,5 +1,6 @@
 +++
 title = "Image Processing"
+linkTitleIcon = '<i class="fas fa-image fa-fw"></i>'
 description = "Guide to resize and align images"
 date = 2021-08-15T14:19:06+08:00
 draft = false

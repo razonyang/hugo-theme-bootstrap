@@ -1,5 +1,6 @@
 +++
 title = "Image Viewer"
+linkTitleIcon = '<i class="fas fa-images fa-fw"></i>'
 date = 2021-12-03T20:46:50+08:00
 featured = false
 comment = true
