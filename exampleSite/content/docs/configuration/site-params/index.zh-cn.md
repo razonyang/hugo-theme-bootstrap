@@ -1,12 +1,11 @@
 +++
-title = "配置"
-linkTitleIcon = '<i class="fas fa-cog fa-fw"></i>'
+title = "站点参数"
 date = 2021-11-27T19:53:24+08:00
 featured = true
 comment = true
 toc = true
 reward = true
-pinned = true
+pinned = false
 categories = [
   "配置"
 ]
@@ -17,42 +16,11 @@ series = [
 ]
 images = []
 weight = 980
-aliases = [
-  "/zh-cn/posts/configuration"
-]
-[menu.footer]
-  parent = "docs"
-  weight = 2
 +++
 
-如示例站点所示，我们使用 [Configuration Directory](https://gohugo.io/getting-started/configuration/#configuration-目录) 为了维护更简单的组织和特定于环境的设置，它在多语言站点上特别有用。
+站点参数文件默认为 `config/_default/params.toml`。
 
 <!--more-->
-
-## 站点配置
-
-> 站点配置文件默认为 `config/_default/config.toml`。
-
-| 名称 | 类型 | 默认值 | 说明
-|---|:-:|:-:|---
-| `title` | String | - | 站点标题
-| `baseURL` | String | - | 站点 URL
-| `copyright` | String | - | 站点版权。`{year}` 占位符会被替换为当前年份。
-| `defaultContentLanguage` | String | `en` |
-| `defaultContentLanguageInSubdir` | Boolean | `false` |
-| `paginate` | Integer | `10` |
-| `paginatePath` | String | `page` |
-| `enableRobotsTXT` | Boolean | `true` |
-| `disqusShortname` | String | - | [Disqus]({{< ref "/docs/widgets/comments#disqus" >}}) shortname。
-| `googleAnalytics` | String | - | Google Analytics.
-| `social` | Object | - | [社交链接]({{< ref "/docs/widgets/social-links" >}})。
-| `author` | Object | - | [作者小部件]({{< ref "/docs/widgets/author" >}})。
-
-请参阅 [All Configuration Settings](https://gohugo.io/getting-started/configuration/#all-configuration-settings)。
-
-## 站点参数
-
-> 站点参数文件默认为 `config/_default/params.toml`。
 
 | 名称 | 类型 | 默认值 | 说明
 |---|:-:|:-:|---
@@ -166,36 +134,3 @@ aliases = [
 | `rss` | String/Boolean | `true` | 在社交链接中显示 RSS 链接。`false` 为不显示，`home` 则总是链接到主页。
 
 > 除了 Google 站长工具外，其他搜索引擎站长工具无法与 `hugo --minify` 同时使用，这是因为它们无法识别优化后的元标签。
-
-## 页面参数
-
-> 页面参数位于 [Front Matter](https://gohugo.io/content-management/front-matter/)。
-
-
-| 名称 | 类型  | 默认值 | 说明
-|---|:-:|:-:|---
-| **Page** 
-| `description` | String | - | 页面描述
-| `keywords` | Array | - | 页面关键词
-| `comment` | Boolean | `true` | 是否开启评论，如果评论已被全局关闭，该参数无效
-| `toc` | Boolean | `true` | 是否开启目录，如果目录已被全局关闭，该参数无效
-| `math` | Boolean | `false` | 是否开启 `math`
-| `diagram` | Boolean | `false` | 是否开启 `diagram`
-| `reward` | Boolean | `true` | 是否开启打赏
-| `breadcrumb` | Boolean | `true` | 是否开启面包屑导航
-| `readingTime` | Boolean | `true` | 是否显示阅读时间
-| `postDate` | Boolean | `true` | 是否显示发表日期
-| `copyright` | Boolean | `true` | 是否显示版权部分
-| `carousel` | Boolean | `false` | 是否在 Carousel 显示
-| **Creative Commons License**
-| `creativeCommons` | Object | - |
-| `creativeCommons.by` | Boolean | `true` | 署名
-| `creativeCommons.nc` | Boolean | `true` | 非商业
-| `creativeCommons.nd` | Boolean | `true` | 禁止演绎
-| `creativeCommons.sa` | Boolean | `true` | 相同方式共享
-| **Meta Tag**
-| `metaRobots` | String | - | 空字符串表示禁用。
-| `pinned` | Boolean | `false` | 置顶文章。
-| `featuredPostCount` | Integer/Boolean | `5` | 精选文章数，`false` 则隐藏。
-| `recentPostCount` | Integer/Boolean | `5` | 最近文章数，`false` 则隐藏。
-| `relatedPostCount` | Integer/Boolean | `5` | 相关文章数，`false` 则隐藏。
