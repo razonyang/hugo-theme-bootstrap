@@ -134,7 +134,7 @@ other = "Load More"
 other = "Mode"
 
 [noscript_info]
-other = "Your browser does not support JavaScript"
+other = "Your browser does not support JavaScript."
 
 [offline_title]
 other = "Oops! You're offline."

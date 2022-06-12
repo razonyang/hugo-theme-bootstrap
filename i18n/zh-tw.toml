@@ -131,7 +131,7 @@ other = "加載更多"
 other = "模式"
 
 [noscript_info]
-other = "你的瀏覽器不支持 JavaScript"
+other = "你的瀏覽器不支持 JavaScript。"
 
 [offline_title]
 other = "哎喲！你離線了。"
