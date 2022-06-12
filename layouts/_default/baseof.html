@@ -20,6 +20,7 @@
     {{- partial "hooks/main-begin" . -}}
     <main class="{{- partial "helpers/fullwidth" (dict "Page" . "Output" "container" "FullWidthOutput" "container-fluid") -}}">
       <div class="row content">
+        {{- partialCached "noscript" . .Language.Lang -}}
         {{- block "content" . -}}{{- end -}}
       </div>
     </main>
