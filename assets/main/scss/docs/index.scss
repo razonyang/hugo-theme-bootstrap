@@ -28,7 +28,7 @@
     @include media-breakpoint-up(lg) {
         top: 84px;
         height: calc(100vh - 84px);
-        overflow-y: scroll;
+        overflow-y: auto;
 
         &::-webkit-scrollbar-track {
             background: transparent;
