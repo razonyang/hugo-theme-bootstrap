@@ -81,4 +81,4 @@ mkdir -p layouts/partials/post/comments
 echo "MY COMMENTS WIDGET" > layouts/partials/post/comments/custom.html
 ```
 
-In the meantime, you may need to introduce third-party assets, which can be solved by [customizing assets]({{< ref "/docs/custom-assets" >}}) or [Hooks]({{< ref "/docs/hooks" >}}) easily.
+In the meantime, you may need to introduce third-party assets, which can be solved by [customizing assets]({{< ref "/docs/advanced/custom-assets" >}}) or [Hooks]({{< ref "/docs/advanced/hooks" >}}) easily.

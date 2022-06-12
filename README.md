@@ -62,8 +62,8 @@ There is also a [list of websites that use this theme](https://github.com/razony
 - [Reward Widget](https://hbs.razonyang.com/en/docs/widgets/reward), AKA Buy Me a Coffee: any platform that supports QR code is supported.
 - Table of Contents.
 - [Comments](https://hbs.razonyang.com/en/docs/widgets/comments): Disqus and Utterances can be used out of box, you can also integrate with other comments services.
-- [Custom Assets](https://hbs.razonyang.com/en/docs/custom-assets): custom CSS and JS.
-- [Hooks](https://hbs.razonyang.com/en/docs/hooks): provides ability to add custom code on page.
+- [Custom Assets](https://hbs.razonyang.com/en/docs/advanced/custom-assets): custom CSS and JS.
+- [Hooks](https://hbs.razonyang.com/en/docs/advanced/hooks): provides ability to add custom code on page.
 - [Social Links](https://hbs.razonyang.com/en/docs/widgets/social-links).
 - [Various Shortcodes](https://hbs.razonyang.com/en/docs/shortcodes).
 - [Twitter Cards](https://gohugo.io/templates/internal/#configure-twitter-cards) and [Open Graph](https://gohugo.io/templates/internal/#configure-open-graph).
