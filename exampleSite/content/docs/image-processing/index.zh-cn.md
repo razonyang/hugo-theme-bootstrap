@@ -1,5 +1,6 @@
 +++
 title = "图像处理"
+linkTitleIcon = '<i class="fas fa-image fa-fw"></i>'
 date = 2021-08-15T14:19:06+08:00
 draft = false
 comment = true
