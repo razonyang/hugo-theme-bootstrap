@@ -130,6 +130,9 @@ other = "加载更多"
 [mode]
 other = "模式"
 
+[noscript_info]
+other = "你的浏览器不支持 JavaScript"
+
 [offline_title]
 other = "哎哟！你离线了。"
 
