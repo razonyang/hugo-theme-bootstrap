@@ -18,11 +18,11 @@ class Scroller implements Component {
   }
 
   show() {
-    this.btn.classList.add('active');
+    this.btn.classList.add('opacity-100');
   }
 
   hide() {
-    this.btn.classList.remove('active');
+    this.btn.classList.remove('opacity-100');
   }
 
   run() {

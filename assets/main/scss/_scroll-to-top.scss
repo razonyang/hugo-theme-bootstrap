@@ -6,8 +6,4 @@
   @include media-breakpoint-down(sm) {
     right: .75rem;
   }
-
-  &.active {
-    opacity: 1!important;
-  }
 }
