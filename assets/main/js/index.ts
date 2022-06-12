@@ -1,7 +1,6 @@
 import 'bootstrap/dist/js/bootstrap.bundle';
 
 import App from 'js/app';
-import Collapse from 'js/collapse/collapse';
 import TopAppBar from 'js/top-app-bar';
 import ActionsPanel from 'js/actions-panel';
 import ModeToggle from 'js/mode';
@@ -19,7 +18,6 @@ import components from './components';
 
 const app = new App();
 app.attach(
-    new Collapse(),
     new TopAppBar(),
     new ActionsPanel(),
     new ModeToggle(),
