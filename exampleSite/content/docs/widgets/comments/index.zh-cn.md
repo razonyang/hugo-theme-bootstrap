@@ -80,4 +80,4 @@ mkdir -p layouts/partials/post/comments
 echo "MY COMMENTS WIDGET" > layouts/partials/post/comments/custom.html
 ```
 
-期间，你很可能需要引入第三方资源，不过这可以通过 [自定义资源]({{< ref "/docs/custom-assets" >}}) 或 [钩子]({{< ref "/docs/hooks" >}}) 轻松解决。
+期间，你很可能需要引入第三方资源，不过这可以通过 [自定义资源]({{< ref "/docs/advanced/custom-assets" >}}) 或 [钩子]({{< ref "/docs/advanced/hooks" >}}) 轻松解决。

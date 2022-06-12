@@ -125,8 +125,8 @@ See also [All Configuration Settings](https://gohugo.io/getting-started/configur
 | `analytics` | Object | - | Analytics configuration.
 | `analytics.baidu` | String | - | Baidu Analytics.
 | `googleAdsense` | String | - | Google Adsense.
-| `customCSS` | Array | - | See also [custom assets]({{< ref "/docs/custom-assets#external-assets" >}}).
-| `customJS` | Array | - | See also [custom assets]({{< ref "/docs/custom-assets#external-assets" >}}).
+| `customCSS` | Array | - | See also [custom assets]({{< ref "/docs/advanced/custom-assets#external-assets" >}}).
+| `customJS` | Array | - | See also [custom assets]({{< ref "/docs/advanced/custom-assets#external-assets" >}}).
 | `utterances` | Object | - | [Utterances]({{< ref "/docs/widgets/comments#utterances" >}}) configuration.
 | **Creative Commons License**
 | `creativeCommons` | Object | - |

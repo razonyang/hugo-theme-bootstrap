@@ -15,7 +15,8 @@ series = [
 ]
 images = []
 aliases = [
-  "/en/posts/hooks"
+  "/en/posts/hooks",
+  "/en/docs/hooks"
 ]
 [menu.footer]
   parent = "docs"
