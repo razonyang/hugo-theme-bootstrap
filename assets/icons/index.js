@@ -6,6 +6,7 @@ import {
   faBars,
   faBuilding,
   faCheckCircle,
+  faChevronDown,
   faChevronCircleDown,
   faCode,
   faCoffee,
@@ -96,7 +97,7 @@ import {default as customIcons} from './custom';
 
 let icons = [
   // Solid Icons
-  faAdjust, faArrowsAltV, faAtom, faBars, faBuilding, faCheckCircle, faChevronCircleDown,
+  faAdjust, faArrowsAltV, faAtom, faBars, faBuilding, faCheckCircle, faChevronDown, faChevronCircleDown,
   faCode, faCoffee, faCog, faComments, faColumns, faCopy, faCopyright, faEdit, faEllipsisH,
   faEnvelope, faExclamationTriangle, faExpandAlt, faEyeDropper, faFont, faFileAlt, faFileArchive,
   faFolder, faHistory, faHome, faInfoCircle, faLanguage, faLink, faList, faListAlt, faMapMarkerAlt, faPalette,
