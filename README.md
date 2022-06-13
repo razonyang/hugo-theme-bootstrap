@@ -35,41 +35,6 @@ There is also a [list of websites that use this theme](https://github.com/razony
 | [Troubleshooting](https://hbs.razonyang.com/en/docs/troubleshooting) | [问题排查](https://hbs.razonyang.com/zh-cn/docs/troubleshooting) | [問題排查](https://hbs.razonyang.com/zh-tw/docs/troubleshooting)
 | [Get Involved](https://hbs.razonyang.com/en/docs/get-involved) | [参与我们](https://hbs.razonyang.com/zh-cn/docs/get-involved) | [參與我們](https://hbs.razonyang.com/zh-tw/docs/get-involved)
 
-## Features
-
-- [Hugo Pipes](https://gohugo.io/hugo-pipes/): used to generate CSS and JS assets.
-- [Flexible and Configurable](https://hbs.razonyang.com/en/docs/configuration).
-- Fast and Good User Experience: [Google PageSpeed Insights](https://pagespeed.web.dev/report?url=https://hbs.razonyang.com/en/)'s score is over 95.
-- RTL support: [Arabic demo site](https://hbs.razonyang.com/ar/).
-- Built on top of custom [Bootstrap 5](https://getbootstrap.com/).
-- Responsive.
-- [PWA](https://hbs.razonyang.com/en/docs/pwa), AKA progressive web apps.
-- Various Palettes: `blue`, `blue-gray`, `brown`, `cyan`, `green`, `indigo`, `orange`, `pink`, `purple`, `red`, `teal`, `yellow`.
-- A [Docs Layout](https://hbs.razonyang.com/en/docs/layouts/docs) for publishing project documentation, notes, digital gardens, zettelkastens etc.
-- Light/Dark Mode.
-- Font Size Switcher.
-- Multilingual(I18N).
-- [Search](https://hbs.razonyang.com/en/docs/search).
-- Pinning Posts.
-- Footer Menu.
-- Code Block Panel: copy code, line number, line wrap and expand.
-- Breadcrumb.
-- [Archive](https://hbs.razonyang.com/en/docs/archives).
-- [Image Viewer](https://hbs.razonyang.com/en/docs/image-viewer).
-- [Image Processing](https://hbs.razonyang.com/en/docs/image-processing): resize and align images.
-- Resources Lazy Loading: `image` and `iframe`.
-- [Syntax Highlighting](https://hbs.razonyang.com/en/docs/look-and-feel#syntax-highlighting).
-- [Reward Widget](https://hbs.razonyang.com/en/docs/widgets/reward), AKA Buy Me a Coffee: any platform that supports QR code is supported.
-- Table of Contents.
-- [Comments](https://hbs.razonyang.com/en/docs/widgets/comments): Disqus and Utterances can be used out of box, you can also integrate with other comments services.
-- [Custom Assets](https://hbs.razonyang.com/en/docs/advanced/custom-assets): custom CSS and JS.
-- [Hooks](https://hbs.razonyang.com/en/docs/advanced/hooks): provides ability to add custom code on page.
-- [Social Links](https://hbs.razonyang.com/en/docs/widgets/social-links).
-- [Various Shortcodes](https://hbs.razonyang.com/en/docs/shortcodes).
-- [Twitter Cards](https://gohugo.io/templates/internal/#configure-twitter-cards) and [Open Graph](https://gohugo.io/templates/internal/#configure-open-graph).
-- [Creative Commons License](https://creativecommons.org/licenses/).
-- [Contact Form](https://hbs.razonyang.com/en/docs/layouts/contact-form).
-- Numberify Headings Automatically.
 
 ## Funding
 
