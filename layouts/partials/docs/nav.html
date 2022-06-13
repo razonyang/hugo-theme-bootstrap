@@ -28,7 +28,7 @@
             <a class="docs-nav-link" href="{{ .Permalink }}">{{- template "nav-title" . -}}</a>
             <a class="btn-toggle ms-1{{ if and (not $active) (not $expand) }} collapsed{{ end }}" role="button" data-bs-toggle="collapse"
               data-bs-target="#{{ $sectionId }}" aria-expanded="{{ if or $active $expand }}true{{ else }}false{{ end }}" aria-controls="{{ $sectionId }}">
-              <i class="btn-toggle-icon fas fa-chevron-circle-down ms-auto" data-fa-transform="rotate-270"></i>
+              <i class="btn-toggle-icon fas fa-chevron-down ms-auto" data-fa-transform="rotate-270"></i>
             </a>
           </div>
           <div class=" mt-2 border-start collapse {{ if or $active $expand}} show{{ end }}{{ if $active }} border-primary{{ end }}" id="{{ $sectionId }}">
