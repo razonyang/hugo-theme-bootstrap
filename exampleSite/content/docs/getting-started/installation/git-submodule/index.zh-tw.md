@@ -1,20 +1,20 @@
 +++
-title = "Install via Git Submodule"
+title = "通過 Git Submodule 安裝"
 linkTitle = "Git Submodule"
 date = 2021-12-04T10:43:39+08:00
-featured = false
+featured = true
 comment = true
 toc = true
 reward = true
 categories = [
+  ""
 ]
 tags = [
-  "Installation",
-  "Upgrade",
-  "Git submodule"
+  "安裝",
+  "升級"
 ]
 series = [
-  "Docs"
+  "檔案"
 ]
 images = []
 weight = 80
@@ -22,11 +22,11 @@ weight = 80
 
 This article refers to the traditional installation method of cloning the theme locally as Git submodule.
 It describes how to install, upgrade the theme, and write new articles.
-While this installation method is still widely used, we recommend to install the theme as [Hugo module]({{< ref "/docs/installation/hugo-module" >}}).
+While this installation method is still widely used, we recommend to install the theme as [Hugo module]({{< ref "/docs/getting-started/installation/hugo-module" >}}).
 
-## Installation
+## 安裝
 
-### Create a New Site from Scratch
+### 從頭開始創建站點
 
 ```shell
 $ hugo new site myblog
@@ -39,15 +39,9 @@ $ npm install
 $ hugo server
 ```
 
-> If you're using Windows, use `xcopy .\themes\hugo-theme-bootstrap\exampleSite /E` instead.
+> 如果你使用的是 Windows，請改用 `xcopy .\themes\hugo-theme-bootstrap\exampleSite /E`。
 
-Now, at the top of your `config/_default/config.toml, remove the hash sign at the beginning of the `theme =` line in order to activate your theme:
-
-```toml
-theme = "hugo-theme-bootstrap"   # when adding theme as git submodule
-```
-
-### Install on an existing site
+### 安裝到已有站點
 
 ```shell
 $ cd myblog
@@ -68,9 +62,9 @@ $ npm install
 $ hugo server
 ```
 
-> If you're making a fresh clone, you will be need to update your submodule via `git submodule update --init --recursive` or clone with submodule `git clone --recursive <repo>`.
+> 如果你重新尅隆倉庫，你將需要通過 `git submodule update --init --recursive` 更新 submodule，或者 `git clone --recursive <repo>`。
 
-## Upgrade
+## 升級
 
 ```shell
 $ cd themes/hugo-theme-bootstrap
@@ -82,5 +76,5 @@ $ git add themes/hugo-theme-bootstrap package.json
 $ git commit -m 'Upgrade the theme'
 ```
 
-- Replace the `[version]` with the latest version. The version can be listed by `git tag -l | sort -rV`.
-- You can also checkout the `master` branch for getting the latest commit.
+- 將 `[version]` 替換為最新的版本。所有版本可以通過 `git tag -l | sort -rV` 列出。
+- 你也可以直接使用 `master` 分支以獲取最新的提交。
