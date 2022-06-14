@@ -24,6 +24,10 @@
     }
 }
 
+.docs-nav-title-icon {
+    margin-left: -1.5rem;
+}
+
 .docs-sidebar {
     @include media-breakpoint-up(lg) {
         top: 84px;
