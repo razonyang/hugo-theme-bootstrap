@@ -5,7 +5,7 @@
   {{- $allPosts := where .Site.RegularPages "Type" "in" .Site.Params.mainSections -}}
   {{- $pinnedPosts := slice -}}
   {{- if $.Site.Params.pinnedPost -}}
-  {{- $pinnedPosts = first $.Site.Params.pinnedPostCount (where $allPosts.ByWeight.Reverse ".Params.pinned" true) -}}
+  {{- $pinnedPosts = first $.Site.Params.pinnedPostCount ((where $allPosts ".Params.pinned" true).ByParam "pinnedWeight") -}}
   {{- range $pinnedPosts -}}
     {{- with .File.UniqueID -}}
       {{- $.Scratch.Add "pinnedPosts" (slice .) -}}
