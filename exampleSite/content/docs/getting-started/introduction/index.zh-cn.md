@@ -47,6 +47,7 @@ Hugo Bootstap Theme(HBS) 是一个快速、响应式、多用途和功能丰富�
 - Pinning Posts.
 - Footer Menu.
 - Code Block Panel: copy code, line number, line wrap and expand.
+- [Code Toggle]({{< ref "/docs/shortcodes/code-toggle" >}})
 - Breadcrumb.
 - [Archive]({{< ref "/docs/layouts/archives" >}}).
 - [Image Viewer]({{< ref "/docs/image-viewer" >}}).
