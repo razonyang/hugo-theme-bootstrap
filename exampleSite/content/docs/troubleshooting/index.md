@@ -77,7 +77,7 @@ Error: Error building site: JSBUILD: failed to transform "search/index.ts" (appl
 
 It is due to the lack of CSS and JS dependencies:
 
-```shell
+```bash
 $ hugo mod npm pack
 $ npm install
 $ hugo server

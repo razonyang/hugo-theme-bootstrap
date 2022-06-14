@@ -29,13 +29,13 @@ If you're located at China mainland without VPN, the Hugo module download may fa
 
 There are two proxies for this: [GOPROXY.CN](https://goproxy.cn) and [GOPROXY.IO](https://goproxy.io).
 
-```shell
+```bash
 $  go env -w GOPROXY=https://goproxy.cn,direct
 ```
 
 or
 
-```shell
+```bash
 $ go env -w GOPROXY=https://goproxy.io,direct
 ```
 
@@ -47,20 +47,20 @@ $ go env -w GOPROXY=https://goproxy.io,direct
 
 - Create and enter new site:
 
-```shell
+```bash
 $ hugo new site my-new-blog
 $ cd my-new-blog
 ```
 
 #### Step 2: Turn your new site into a Hugo module:
 
-```shell
+```bash
 $ hugo mod init github.com/me/my-new-blog
 ```
 
 #### Step 3: Declare `hugo-theme-bootstrap` module as a site dependency:
 
-```shell
+```bash
 $ hugo mod get github.com/razonyang/hugo-theme-bootstrap
 ```
 
@@ -68,7 +68,7 @@ $ hugo mod get github.com/razonyang/hugo-theme-bootstrap
 
 - Clone the `hugo-theme-bootstrap` repo into a temporary directory:
 
-```shell
+```bash
 $ git clone https://github.com/razonyang/hugo-theme-bootstrap /tmp/hugo-theme-bootstrap
 ```
 
@@ -76,7 +76,7 @@ $ git clone https://github.com/razonyang/hugo-theme-bootstrap /tmp/hugo-theme-bo
 
 - Copy example site content:
 
-```shell
+```bash
 $ cp -a /tmp/hugo-theme-bootstrap/exampleSite/* .
 ```
 
@@ -84,13 +84,13 @@ $ cp -a /tmp/hugo-theme-bootstrap/exampleSite/* .
 
 - Remove your file `config.toml`
 
-```shell
+```bash
 rm config.toml
 ```
 
 - Delete the repo from your temporary directory again:
 
-```shell
+```bash
 $ rm -rf /tmp/hugo-theme-bootstrap
 ```
 
@@ -105,7 +105,7 @@ theme = "github.com/razonyang/hugo-theme-bootstrap" # install via hugo module
 
 - Use **n**ode **p**ackage **m**anager [`npm`](https://nodejs.org/en/download/) to pull in dependencies for this theme:
 
-```shell
+```bash
 $ hugo mod npm pack
 $ npm install
 ```
@@ -114,7 +114,7 @@ $ npm install
 
 - Start hugo's built-in webserver to [preview](http://localhost:1313/) your website:
 
-```shell
+```bash
 $ hugo server
 ```
 
@@ -122,14 +122,14 @@ $ hugo server
 
 #### Step 1: Turn your existing site into a Hugo module:
 
-```shell
+```bash
 $ cd my-blog
 $ hugo mod init github.com/me/my-blog
 ```
 
 #### Step 2: Declare `hugo-theme-bootstrap` module as a site dependency:
 
-```shell
+```bash
 $ hugo mod get github.com/razonyang/hugo-theme-bootstrap
 ```
 
@@ -137,13 +137,13 @@ $ hugo mod get github.com/razonyang/hugo-theme-bootstrap
 
 - Clone the `hugo-theme-bootstrap` repo into a temporary directory:
 
-```shell
+```bash
 $ git clone https://github.com/razonyang/hugo-theme-bootstrap /tmp/
 ```
 
 - Copy example site configuration and content into your site:
 
-```shell
+```bash
 $ mkdir config
 $ cp -a /tmp/hugo-theme-bootstrap/exampleSite/config/* ./config
 $ cp -r /tmp/hugo-theme-bootstrap/exampleSite/content/about/ \
@@ -159,7 +159,7 @@ $ cp -r /tmp/hugo-theme-bootstrap/exampleSite/content/about/ \
 
 - Delete the repo from your temporary directory again:
 
-```shell
+```bash
 $ rm -rf /tmp/hugo-theme-bootstrap/
 ```
 
@@ -174,7 +174,7 @@ theme = "github.com/razonyang/hugo-theme-bootstrap" # install via hugo module
 
 - Use **n**ode **p**ackage **m**anager [`npm`](https://nodejs.org/en/download/) to pull in dependencies for this theme:
 
-```shell
+```bash
 $ hugo mod npm pack
 $ npm install
 ```
@@ -183,7 +183,7 @@ $ npm install
 
 - Start hugo's built-in webserver to [preview](http://localhost:1313/) your website:
 
-```shell
+```bash
 $ hugo server
 ```
 
@@ -191,7 +191,7 @@ $ hugo server
 
 - Invoke hugo’s module `get` subcommand with the update flag:
 
-```shell
+```bash
 $ cd my-blog
 $ hugo mod get -u github.com/razonyang/hugo-theme-bootstrap
 ```
@@ -202,12 +202,12 @@ Hugo will automatically pull in the latest theme version.
 > 
 > Latest version: [![Releases](https://img.shields.io/github/release/razonyang/hugo-theme-bootstrap?style=flat-square)](https://github.com/razonyang/hugo-theme-bootstrap/releases).
 
-```shell
+```bash
 $ hugo mod get -u github.com/razonyang/hugo-theme-bootstrap@version
 ```
 
 > Instead of a version tag, you can also specify a commit hash inside the repo (here: `de4a40f`) when updating your theme:
 
-```shell
+```bash
 $ hugo mod get -u github.com/razonyang/hugo-theme-bootstrap@de4a40f
 ```

@@ -110,7 +110,7 @@ See also [Configure Highlight](https://gohugo.io/getting-started/configuration-m
 
 ### Style
 
-```shell
+```bash
 $ hugo gen chromastyles --style=solarized-dark > assets/main/scss/_highlight.scss
 ```
 

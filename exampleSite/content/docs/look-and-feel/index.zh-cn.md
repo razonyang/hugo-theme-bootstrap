@@ -109,7 +109,7 @@ palette = "indigo"
 
 ### 样式
 
-```shell
+```bash
 $ hugo gen chromastyles --style=solarized-dark > assets/main/scss/_highlight.scss
 ```
 

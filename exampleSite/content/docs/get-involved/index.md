@@ -61,13 +61,13 @@ The theme relies on `npm` and `webpack` for building assets: JS, CSS, fonts etc.
 
 #### Install dependencies
 
-```shell
+```bash
 $ npm install
 ```
 
 #### Rebuild assets
 
-```shell
+```bash
 $ npm run build
 ```
 
@@ -75,6 +75,6 @@ $ npm run build
 
 #### Preview
 
-```shell
+```bash
 $ npm run serve
 ```

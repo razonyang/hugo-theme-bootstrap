@@ -75,7 +75,7 @@ disqusShortname = "yourdiscussshortname"
 
 > 在創建自己的評論小部件之前，需要禁用其他評論小部件。
 
-```shell
+```bash
 mkdir -p layouts/partials/post/comments
 echo "MY COMMENTS WIDGET" > layouts/partials/post/comments/custom.html
 ```
