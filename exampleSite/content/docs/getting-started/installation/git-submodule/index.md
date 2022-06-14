@@ -28,7 +28,7 @@ While this installation method is still widely used, we recommend to install the
 
 ### Create a New Site from Scratch
 
-```shell
+```bash
 $ hugo new site myblog
 $ cd myblog
 $ git init
@@ -49,7 +49,7 @@ theme = "hugo-theme-bootstrap"   # when adding theme as git submodule
 
 ### Install on an existing site
 
-```shell
+```bash
 $ cd myblog
 $ git submodule add https://github.com/razonyang/hugo-theme-bootstrap themes/hugo-theme-bootstrap
 $ mkdir config
@@ -72,7 +72,7 @@ $ hugo server
 
 ## Upgrade
 
-```shell
+```bash
 $ cd themes/hugo-theme-bootstrap
 $ git fetch
 $ git checkout [version]

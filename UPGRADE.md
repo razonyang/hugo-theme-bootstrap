@@ -72,7 +72,7 @@ export default icons;
 
 ## Build and Deploy
 
-```shell
+```bash
 $ hugo mod npm pack
 $ npm install
 $ hugo

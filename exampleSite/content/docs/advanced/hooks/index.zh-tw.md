@@ -58,7 +58,7 @@ aliases = [
 
 以 `sidebar-begin` 為例：
 
-```shell
+```bash
 echo '<section class="row card component text-center"><div class="card-body">SIDEBAR BEGIN</div></section>' \
   > layouts/partials/hooks/sidebar-begin.html
 ```

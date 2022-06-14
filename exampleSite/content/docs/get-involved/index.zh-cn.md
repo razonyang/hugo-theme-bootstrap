@@ -61,13 +61,13 @@ aliases = [
 
 #### 安装依赖
 
-```shell
+```bash
 $ npm install
 ```
 
 #### 重建资源
 
-```shell
+```bash
 $ npm run build
 ```
 
@@ -75,6 +75,6 @@ $ npm run build
 
 #### 预览
 
-```shell
+```bash
 $ npm run serve
 ```

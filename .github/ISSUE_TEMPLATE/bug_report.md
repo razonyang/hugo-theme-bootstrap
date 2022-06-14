@@ -25,13 +25,13 @@ If applicable, add screenshots to help explain your problem.
 
 **Hugo version:**
 
-```shell
+```bash
 $ hugo version
 ```
 
 **Theme version:**
 
-```shell
+```bash
 $ cd themes/hugo-theme-bootstrap
 $ git log -n 1 --decorate --pretty=oneline
 ```

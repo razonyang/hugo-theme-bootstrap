@@ -41,7 +41,7 @@ It's easy to do that by setting `type = "docs"` on the front matter.
 
 We can also create a archetype for `notes`, let's Hugo take care of the `type`.
 
-```shell
+```bash
 $ cp themes/hugo-theme-bootstrap/archetypes/default.md archetypes/notes.md
 ```
 
@@ -67,13 +67,13 @@ You may also want to use the same list layout of `docs` on `notes`.
 
 > Suppose the default language is `en`.
 
-```shell
+```bash
 $ hugo new posts/new-post/index.md
 ```
 
 The command above create a new post written in English. Similarly, we can create a post written in Simplified Chinese:
 
-```shell
+```bash
 $ hugo new posts/new-post/index.zh-cn.md
 ```
 

@@ -58,7 +58,7 @@ It's easy to use a hook, what you need to do is that create an HTML file with th
 
 Let's take `sidebar-begin` as an example:
 
-```shell
+```bash
 echo '<section class="row card component text-center"><div class="card-body">SIDEBAR BEGIN</div></section>' \
   > layouts/partials/hooks/sidebar-begin.html
 ```

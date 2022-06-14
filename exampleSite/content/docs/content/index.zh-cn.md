@@ -40,7 +40,7 @@ mainSections = ["blog", "posts", "docs", "notes"]
 
 我们也可以为 `notes` 创建一个原型，让 Hugo 处理 `type`。
 
-```shell
+```bash
 $ cp themes/hugo-theme-bootstrap/archetypes/default.md archetypes/notes.md
 ```
 
@@ -66,13 +66,13 @@ $ cp themes/hugo-theme-bootstrap/archetypes/default.md archetypes/notes.md
 
 > 假设默认语言为 `en`。
 
-```shell
+```bash
 $ hugo new posts/new-post/index.md
 ```
 
 上述命令创建了一篇英文文章，同样的，我们也可以创建一篇简体中文的文章：
 
-```shell
+```bash
 $ hugo new posts/new-post/index.zh-cn.md
 ```
 

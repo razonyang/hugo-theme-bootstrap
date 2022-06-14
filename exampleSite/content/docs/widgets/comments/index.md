@@ -76,7 +76,7 @@ We don't intend to support all comments widgets, but don't worry, you can custom
 
 > You will need to disable the others before creating your own comments widget.
 
-```shell
+```bash
 mkdir -p layouts/partials/post/comments
 echo "MY COMMENTS WIDGET" > layouts/partials/post/comments/custom.html
 ```
