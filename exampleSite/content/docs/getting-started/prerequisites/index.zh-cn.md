@@ -17,6 +17,8 @@ images = []
 weight = 90
 +++
 
+在安装主题前，请确保你满足先决条件。
+
 <!--more-->
 
 ## Configuration
