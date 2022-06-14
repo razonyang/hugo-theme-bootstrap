@@ -10,9 +10,9 @@ toc = true
 reward = true
 pinned = false
 carousel = false
-categories = []
-tags = []
-series = []
+categories = ["Shortcode"]
+tags = ["JSON", "YAML", "TOML"]
+series = ["文檔"]
 images = []
 +++
 
