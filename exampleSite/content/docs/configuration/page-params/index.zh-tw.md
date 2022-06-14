@@ -46,6 +46,7 @@ weight = 970
 | **Meta Tag**
 | `metaRobots` | String | - | 空字符串表示禁用。
 | `pinned` | Boolean | `false` | 置頂文章。
+| `pinnedWeight` | Number | - | 權重越低，優先順序越高。
 | `featuredPostCount` | Integer/Boolean | `5` | 精選文章數，`false` 則隱藏。
 | `recentPostCount` | Integer/Boolean | `5` | 最近文章數，`false` 則隱藏。
 | `relatedPostCount` | Integer/Boolean | `5` | 相關文章數，`false` 則隱藏。
