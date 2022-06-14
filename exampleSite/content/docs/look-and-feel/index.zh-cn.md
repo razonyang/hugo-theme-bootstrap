@@ -7,6 +7,7 @@ comment = true
 toc = true
 reward = true
 pinned = true
+pinnedWeight = 3
 categories = [
 ]
 tags = [
