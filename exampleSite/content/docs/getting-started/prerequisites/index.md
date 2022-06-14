@@ -17,7 +17,7 @@ images = []
 weight = 90
 +++
 
-Summary.
+Please make sure you meet the prerequisites prior to installing the theme.
 
 <!--more-->
 
