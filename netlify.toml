@@ -31,3 +31,9 @@ command = "cd exampleSite && npm install && hugo --minify --themesDir=../../ --t
   from = "/:lang/*"
   to = "/:lang/404.html"
   status = 404
+
+[[redirects]]
+  from = "/*"
+  to = "/en/404.html" # Replace the "en" to your default language code.
+  # to = "/404.html" # Use it when a monolingual site or "defaultContentLanguageInSubdir" is disabled.
+  status = 404
