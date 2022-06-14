@@ -14,6 +14,10 @@
         height: 26px;
         width: auto;
         margin-right: 0.5rem;
+
+        &:hover {
+            transform: rotate(-5deg) scale(1.1);
+        }
     }
 
     .form-control {
