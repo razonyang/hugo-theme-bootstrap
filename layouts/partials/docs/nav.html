@@ -24,21 +24,21 @@
           {{- $active = true -}}
         {{- end -}}
         <li class="mb-2" tabindex="-1">
-          <div class="py-1 d-flex justify-content-between align-items-center ps-2{{ if $active }} text-primary{{ end }}">
+          <div class="py-1 d-flex justify-content-between align-items-center ms-3{{ if $active }} text-primary{{ end }}">
             <a class="docs-nav-link" href="{{ .Permalink }}">{{- template "nav-title" . -}}</a>
             <a class="btn-toggle ms-1{{ if and (not $active) (not $expand) }} collapsed{{ end }}" role="button" data-bs-toggle="collapse"
               data-bs-target="#{{ $sectionId }}" aria-expanded="{{ if or $active $expand }}true{{ else }}false{{ end }}" aria-controls="{{ $sectionId }}">
               <i class="btn-toggle-icon fas fa-chevron-down ms-auto" data-fa-transform="rotate-270"></i>
             </a>
           </div>
-          <div class=" mt-2 border-start collapse {{ if or $active $expand}} show{{ end }}{{ if $active }} border-primary{{ end }}" id="{{ $sectionId }}">
+          <div class="docs-nav-subnavs border-start mt-2 collapse {{ if or $active $expand}} show{{ end }}{{ if $active }} border-primary{{ end }}" id="{{ $sectionId }}">
             <ul class="btn-toggle-nav list-unstyled fw-normal ms-2 small">
               {{ template "walk-nav" (dict "section" . "page" $page) }}
             </ul>
           </div>
         </li>
         {{- else -}}
-        <li class="mb-2 py-1 ps-2{{ if eq .Permalink $page.Permalink }} text-primary{{ end }}" tabindex="-1">
+        <li class="mb-2 py-1 ms-3{{ if eq .Permalink $page.Permalink }} text-primary{{ end }}" tabindex="-1">
           <a class="docs-nav-link" href="{{ .Permalink }}"{{ if .Params.redirect }} target="_blank"{{ end }}>
             {{- template "nav-title" . -}}
             {{- if .Params.redirect -}}
