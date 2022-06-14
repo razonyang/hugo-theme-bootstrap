@@ -5,7 +5,7 @@
 <ul class="nav nav-tabs" role="tablist">
 {{- $i := 0 -}}
 {{- with $filename -}}
-    <li class="nav-item d-flex align-items-center">{{ . }}.</li>
+    <li class="nav-item d-flex align-items-center text-primary me-1">{{ . }}.</li>
 {{- end -}}
 {{- range $langs -}}
     {{- $id := printf "%s-%s" . $idSuffix -}}
