@@ -2,6 +2,8 @@
     background-color: var(--#{$prefix}primary);
     color: var(--#{$prefix}on-primary);
 
+    --#{$prefix}link-color: var(--#{$prefix}on-primary-secondary);
+    --#{$prefix}link-hover-color: var(--#{$prefix}on-primary);
     --#{$prefix}navbar-color: var(--#{$prefix}on-primary-secondary);
     --#{$prefix}navbar-hover-color: var(--#{$prefix}on-primary);
     --#{$prefix}navbar-active-color: var(--#{$prefix}on-primary);
