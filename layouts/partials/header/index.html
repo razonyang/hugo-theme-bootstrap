@@ -31,8 +31,9 @@
           {{- $url := .URL | absURL -}}
           {{- $active := or (eq $currentPage.Permalink (absURL .URL)) ($currentPage.IsMenuCurrent "main" .) -}}
           {{- if .HasChildren -}}
-          <li class="nav-item col-6 col-lg-auto dropdown">
-            <a href="#" class="nav-link{{ if $currentPage.HasMenuCurrent "main" . }} active{{ end }}" id="navbarDropdown{{ title .Identifier }}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <li class="nav-item col-6 col-lg-auto dropdown px-2 py-1">
+            <a class="dropdown-toggle" href="#" class="nav-link{{ if $currentPage.HasMenuCurrent "main" . }} active{{ end }}"
+              id="navbarDropdown{{ title .Identifier }}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               {{ .Pre }} {{- .Name -}} {{ .Post }}
             </a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown{{ title .Identifier }}" data-bs-popper="none">
@@ -52,7 +53,7 @@
             </ul>
           </li>
           {{- else -}}
-          <li class="nav-item col-6 col-lg-auto">
+          <li class="nav-item col-6 col-lg-auto px-2 py-1">
             <a class="nav-link{{ if $active }} active{{ end }}" href="{{ $url }}"{{ if not (hasPrefix $url $baseURL) }} target="_blank" rel="noopener noreferrer"{{ end }}>
               {{ .Pre }} {{- .Name -}} {{ .Post }}
             </a>
