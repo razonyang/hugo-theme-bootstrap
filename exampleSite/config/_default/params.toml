@@ -136,9 +136,9 @@ viewer = true # Image Viewer
     # useExtendedSearch = true
 
 #[docsearch]
-#  appId = "R2IYF7ETH7"
-#  apiKey = "599cec31baffa4868cae4e79f180729b"
-#  indexName = "docsearch"
+#  appId = "QJSHIZ7V63"
+#  apiKey = "f6bc4e6e0d647a2f50de600762a1bc0f"
+#  indexName = "razonyang"
 
 [reward]
   alipay = "images/reward/alipay.png"
