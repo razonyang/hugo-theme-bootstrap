@@ -17,7 +17,7 @@ tags = [
   "圖標"
 ]
 series = [
-  "檔案"
+  "文檔"
 ]
 images = []
 weight = 960

@@ -14,7 +14,7 @@ tags = [
   "升級"
 ]
 series = [
-  "檔案"
+  "文檔"
 ]
 images = []
 weight = 80

@@ -13,7 +13,7 @@ tags = [
   "Getform"
 ]
 series = [
-  "檔案"
+  "文檔"
 ]
 images = []
 aliases = [

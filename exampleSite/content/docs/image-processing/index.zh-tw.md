@@ -14,7 +14,7 @@ tags = [
   "圖像"
 ]
 series = [
-  "檔案"
+  "文檔"
 ]
 aliases = [
   "/zh-tw/posts/image-processing"
