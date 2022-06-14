@@ -4,12 +4,12 @@
   {{ if gt .Lastmod .Date }}
     {{- $dateParams = merge $dateParams (dict "updatedOn" .Lastmod.Local) -}}
   {{ end }}
-  <span class="post-date me-1" title="{{ i18n "post_date" $dateParams }}">
+  <span class="post-date me-1 mb-1" title="{{ i18n "post_date" $dateParams }}">
     {{ .Date | time.Format $.Site.Params.dateFormat }}
   </span>
   {{- end -}}
   {{- if default .Site.Params.readingTime .Params.readingTime -}}
-  <span class="post-reading-time me-1">
+  <span class="post-reading-time me-1 mb-1">
     {{ i18n "reading_time" . }}
   </span>
   {{- end -}}
@@ -18,7 +18,7 @@
     {{- if eq $.Site.Params.taxonomySortingMethod "popularity" -}}{{- $taxonomies = (sort $taxonomies ".Data.Pages" "desc") -}}{{- end -}}
     {{- range $taxonomies -}}
     <span>
-      <a href="{{ .Permalink }}" class="btn btn-sm btn-secondary py-0 pe-1 post-taxonomy opacity-75">{{ .Name | title }}</a>
+      <a href="{{ .Permalink }}" class="btn btn-sm btn-secondary mb-1 py-0 pe-1 post-taxonomy opacity-75">{{ .Name | title }}</a>
     </span>
     {{- end -}}
   {{- end -}}
