@@ -1,4 +1,9 @@
 [[main]]
+  identifier = "blog"
+  name = "Blog"
+  weight = 1
+  pre = '<i class="fas fa-fw fa-chevron-circle-down me-1"></i>'
+[[main]]
   name = "Support"
   identifier = "support"
   weight = 40
@@ -26,6 +31,26 @@
   weight = 4
   [main.params]
     divider = true
+[[main]]
+  identifier = "versions"
+  name = "Versions"
+  pre = '<i class="fas fa-fw fa-chevron-circle-down me-1"></i>'
+  weight = 100
+[[main]]
+  parent = "versions"
+  name = "Latest"
+  url = "https://hbs.razonyang.com/"
+  weight = 1
+[[main]]
+  parent = "versions"
+  name = "Develop"
+  url = "https://develop.hbs.razonyang.com/"
+  weight = 2
+[[main]]
+  parent = "versions"
+  name = "v0.80"
+  url = "https://v0-80.hbs.razonyang.com/"
+  weight = 100
 
 [[footer]]
   name = "Support"
