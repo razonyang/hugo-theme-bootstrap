@@ -15,7 +15,7 @@ tags = [
   "頁腳菜單"
 ]
 series = [
-  "檔案"
+  "文檔"
 ]
 images = []
 aliases = [
