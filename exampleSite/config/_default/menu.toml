@@ -27,6 +27,8 @@
 [[main]]
   parent = "support"
   weight = 4
+  [main.params]
+    divider = true
 [[main]]
   identifier = "versions"
   name = "Versions"
