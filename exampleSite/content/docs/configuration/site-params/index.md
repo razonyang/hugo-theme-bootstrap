@@ -73,12 +73,13 @@ The site parameters are located in `config/_default/params.toml` by default.
 | `searchBar` | Boolean | `true` | Turn on/off built-on search bar.
 | `archive` | Object | - | [Archive]({{< ref "/docs/layouts/archives" >}}).
 | `search` | Object | - | [Search]({{< ref "/docs/layouts/search" >}}).
-| `docsearch` | Object | - | [DocSearch](https://docsearch.algolia.com/)
+| `docsearch` | Object | - | [DocSearch](https://docsearch.algolia.com/) 
 | `docsearch.container` | String | `.search-bar` |
 | `docsearch.appId` | String | - |
 | `docsearch.indexName` | String | - |
 | `docsearch.apiKey` | String | - |
 | `docsearch.debug` | Boolean | `false` |
+| `docsearch.*` | Boolean/String/Number | - | https://docsearch.algolia.com/docs/api/
 | **Top App Bar**
 | `topAppBar` | Object | - |
 | `topAppBar.social` | Object | - | [Social Links]({{< ref "/docs/widgets/social-links" >}}). 
