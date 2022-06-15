@@ -55,6 +55,7 @@
     "masonry-layout": "^4.2.2",
     "mermaid": "^8.14.0",
     "mustache": "^4.2.0",
+    "onchange": "^7.1.0",
     "postcss-cli": "^9.1.0",
     "rtlcss": "^3.5.0",
     "viewerjs": "^1.10.4",
@@ -85,7 +86,7 @@
     "url": "git+https://github.com/razonyang/hugo-theme-bootstrap.git"
   },
   "scripts": {
-    "build": "webpack",
-    "serve": "cd exampleSite && hugo server --themesDir=../../ --buildDrafts --disableFastRender"
+    "watch": "onchange -i -k '**/*.html' -- npm run dev",
+    "dev": "cd exampleSite && hugo server --themesDir=../../ --buildDrafts --disableFastRender --gc"
   }
 }

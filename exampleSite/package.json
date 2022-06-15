@@ -1,38 +1,39 @@
 {
   "comments": {
     "dependencies": {
-      "@babel/cli": "hugo-theme-bootstrap",
-      "@babel/core": "hugo-theme-bootstrap",
-      "@babel/preset-env": "hugo-theme-bootstrap",
-      "@babel/preset-typescript": "hugo-theme-bootstrap",
-      "@docsearch/js": "hugo-theme-bootstrap",
-      "@fortawesome/fontawesome-svg-core": "hugo-theme-bootstrap",
-      "@fortawesome/free-brands-svg-icons": "hugo-theme-bootstrap",
-      "@fortawesome/free-regular-svg-icons": "hugo-theme-bootstrap",
-      "@fortawesome/free-solid-svg-icons": "hugo-theme-bootstrap",
-      "@fullhuman/postcss-purgecss": "hugo-theme-bootstrap",
-      "@popperjs/core": "hugo-theme-bootstrap",
-      "autoprefixer": "hugo-theme-bootstrap",
-      "bootstrap": "hugo-theme-bootstrap",
-      "fuse.js": "hugo-theme-bootstrap",
-      "katex": "hugo-theme-bootstrap",
-      "mark.js": "hugo-theme-bootstrap",
-      "masonry-layout": "hugo-theme-bootstrap",
-      "mermaid": "hugo-theme-bootstrap",
-      "mustache": "hugo-theme-bootstrap",
-      "postcss-cli": "hugo-theme-bootstrap",
-      "rtlcss": "hugo-theme-bootstrap",
-      "viewerjs": "hugo-theme-bootstrap",
-      "webpack": "hugo-theme-bootstrap",
-      "workbox-cacheable-response": "hugo-theme-bootstrap",
-      "workbox-expiration": "hugo-theme-bootstrap",
-      "workbox-precaching": "hugo-theme-bootstrap",
-      "workbox-routing": "hugo-theme-bootstrap",
-      "workbox-strategies": "hugo-theme-bootstrap"
+      "@babel/cli": "project",
+      "@babel/core": "project",
+      "@babel/preset-env": "project",
+      "@babel/preset-typescript": "project",
+      "@docsearch/js": "project",
+      "@fortawesome/fontawesome-svg-core": "project",
+      "@fortawesome/free-brands-svg-icons": "project",
+      "@fortawesome/free-regular-svg-icons": "project",
+      "@fortawesome/free-solid-svg-icons": "project",
+      "@fullhuman/postcss-purgecss": "project",
+      "@popperjs/core": "project",
+      "autoprefixer": "project",
+      "bootstrap": "project",
+      "fuse.js": "project",
+      "katex": "project",
+      "mark.js": "project",
+      "masonry-layout": "project",
+      "mermaid": "project",
+      "mustache": "project",
+      "onchange": "hugo-theme-bootstrap",
+      "postcss-cli": "project",
+      "rtlcss": "project",
+      "viewerjs": "project",
+      "webpack": "project",
+      "workbox-cacheable-response": "project",
+      "workbox-expiration": "project",
+      "workbox-precaching": "project",
+      "workbox-routing": "project",
+      "workbox-strategies": "project"
     },
     "devDependencies": {
-      "copy-webpack-plugin": "hugo-theme-bootstrap",
-      "webpack-cli": "hugo-theme-bootstrap"
+      "copy-webpack-plugin": "project",
+      "webpack-cli": "project"
     }
   },
   "dependencies": {
@@ -55,6 +56,7 @@
     "masonry-layout": "^4.2.2",
     "mermaid": "^8.14.0",
     "mustache": "^4.2.0",
+    "onchange": "^7.1.0",
     "postcss-cli": "^9.1.0",
     "rtlcss": "^3.5.0",
     "viewerjs": "^1.10.4",
@@ -70,5 +72,9 @@
     "webpack-cli": "^4.9.1"
   },
   "name": "exampleSite",
-  "version": "0.1.0"
+  "version": "0.1.0",
+  "scripts": {
+    "watch": "onchange -i -k '**/*.html' -- npm run dev",
+    "dev": "hugo server --themesDir=../../ --buildDrafts --disableFastRender --gc"
+  }
 }
