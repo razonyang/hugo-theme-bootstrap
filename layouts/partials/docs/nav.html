@@ -4,8 +4,10 @@
       <h5 class="offcanvas-title" id="offcanvasDocsNavLabel">Browse docs</h5>
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#offcanvasDocsNav"></button>
     </div>
-    <div class="offcanvas-body pt-2">
+    <div class="offcanvas-body pt-2 flex-column">
+      {{- partial "hooks/docs/nav-begin" . -}}
       {{ template "walk-nav" (dict "section" .FirstSection "page" .) }}
+      {{- partial "hooks/docs/nav-end" . -}}
     </div>
   </div>
 </aside>
