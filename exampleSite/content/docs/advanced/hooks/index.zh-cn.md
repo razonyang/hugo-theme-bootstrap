@@ -51,6 +51,8 @@ aliases = [
 | `post-panel-end` | 文章工具栏下方 |
 | `docs/sidebar-begin` | 文档侧边栏上方 |
 | `docs/sidebar-end` | 文档侧边栏下方 |
+| `docs/nav-begin` | 文档导航上方 |
+| `docs/nav-end` | 文档导航下方 |
 
 ## 用法
 

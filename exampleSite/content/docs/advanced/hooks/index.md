@@ -51,6 +51,8 @@ In this article, we will introduce all hooks and provide some use cases.
 | `post-panel-end` | Before the post panel end |
 | `docs/sidebar-begin` | At very top of the `docs` sidebar |
 | `docs/sidebar-end` | Before the `docs` sidebar end |
+| `docs/nav-begin` | At very top of the navigation |
+| `docs/nav-end` | Before the navigation end |
 
 ## Usages
 
