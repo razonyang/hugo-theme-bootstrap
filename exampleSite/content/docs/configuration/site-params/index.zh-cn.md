@@ -81,6 +81,7 @@ weight = 980
 | `docsearch.indexName` | String | - |
 | `docsearch.apiKey` | String | - |
 | `docsearch.debug` | Boolean | `false` |
+| `docsearch.*` | Boolean/String/Number | - | https://docsearch.algolia.com/docs/api/
 | **顶部应用栏**
 | `topAppBar` | Object | - |
 | `topAppBar.social` | Object | - | [社交链接]({{< ref "/docs/widgets/social-links" >}})。
