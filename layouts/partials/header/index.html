@@ -43,7 +43,7 @@
               <li><hr class="dropdown-divider"></li>
               {{- else -}}
               <li>
-                <a class="dropdown-item{{ if or (eq $currentPage.Permalink (absURL .URL)) ($currentPage.IsMenuCurrent "main" .) }} active{{ end }}"
+                <a class="dropdown-item text-wrap{{ if or (eq $currentPage.Permalink (absURL .URL)) ($currentPage.IsMenuCurrent "main" .) }} active{{ end }}"
                   href="{{ $childURL }}"{{ if not (hasPrefix $childURL $baseURL) }} target="_blank" rel="noopener noreferrer"{{ end }}>
                   {{ .Pre }} {{- .Name -}} {{ .Post }}
                 </a>
