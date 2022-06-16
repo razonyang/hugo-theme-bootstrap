@@ -31,19 +31,22 @@ aliases = [
 
 ## 前置條件
 
-We need to create a page called `archives/_index.md` in the `content` directory.
+歸檔頁面不會自動創建，因此我們需要先創建一些 Sections：
 
-```toml
-+++
-title = "歸檔"
-layout = "archive"
-+++
+```bash
+$ tree content/archives
+├── 2021
+│   ├── _index.md
+├── 2022
+│   ├── _index.md
+├── _index.md
 ```
+
+這些文件只需包含一個 `title` 屬性即可。
 
 ## 網站參數
 
 | 名稱 | 類型 | 預設值 | 描述
 |---|:-:|:-:|---
 | `archive` | Object | - | Archive.
-| `archive.paginate` | Integer | `100` | Archive pagination.
 | `archive.dateFormat` | Integer | `Jan 2` | Archive date format.
