@@ -31,19 +31,22 @@ The archive page is a collection of posts grouped by year.
 
 ## Prerequisites
 
-We need to create a page called `archives/_index.md` in the `content` directory.
+The pages aren't not created automatically, we need to create archives sections first:
 
-```toml
-+++
-title = "Archives"
-layout = "archive"
-+++
+```bash
+$ tree content/archives
+├── 2021
+│   ├── _index.md
+├── 2022
+│   ├── _index.md
+├── _index.md
 ```
+
+The content of those files just contain a `title` parameter.
 
 ## Site Parameters
 
 | Name | Type | Default | Description
 |---|:-:|:-:|---
 | `archive` | Object | - | Archive.
-| `archive.paginate` | Integer | `100` | Archive pagination.
 | `archive.dateFormat` | Integer | `Jan 2` | Archive date format.

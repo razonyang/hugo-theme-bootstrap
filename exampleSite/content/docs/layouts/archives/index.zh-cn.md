@@ -31,19 +31,22 @@ aliases = [
 
 ## 前置条件
 
-我們需要在 `content` 目錄下創建一個名為 `archives/_ index.md` 的檔案。
+归档页面不会自动创建，因此我们需要先创建一些 Sections：
 
-```toml
-+++
-title = "归档"
-layout = "archive"
-+++
+```bash
+$ tree content/archives
+├── 2021
+│   ├── _index.md
+├── 2022
+│   ├── _index.md
+├── _index.md
 ```
+
+这些文件的内容只需包含 `title` 参数即可。
 
 ## Site Parameters
 
 | 名称 | 类型 | 默认值 | 描述
 |---|:-:|:-:|---
 | `archive` | Object | - | Archive.
-| `archive.paginate` | Integer | `100` | Archive pagination.
 | `archive.dateFormat` | Integer | `Jan 2` | Archive date format.
