@@ -1,0 +1,18 @@
+{{ define "content" }}
+{{- $path := replace .Permalink (absLangURL "/archives/") "" -}}
+{{- $date := split $path "/" -}}
+{{- $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections -}}
+<div class="col-lg-8 mb-4">
+  <div class="container">
+    {{- partial "breadcrumb" . -}}
+    <div class="archives border-5 border-start ps-3">
+      {{- if index $date 0 -}}
+        {{- partial "archives/year" (dict "page" . "pages" $pages "year" (index $date 0)) -}}
+      {{- else -}}
+        {{- partial "archives/list" (dict "page" . "pages" $pages) -}}
+      {{- end -}}
+    </div>
+  </div>
+</div>
+{{- partial "sidebar" . -}}
+{{ end }}
