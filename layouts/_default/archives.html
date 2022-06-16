@@ -1,7 +1,9 @@
 {{ define "content" }}
-{{- $baseURL := absURL "/archives" -}}
+{{- $basePath := strings.TrimSuffix "/" (default "/archives" .Site.Params.archive.basePath) -}}
+{{- $basePath = printf "/%s/" (strings.TrimPrefix "/" $basePath)  -}}
+{{- $baseURL := absURL $basePath -}}
 {{- if gt (len $.Site.Home.AllTranslations) 1 -}}
-  {{- $baseURL = absLangURL "/archives/" -}}
+  {{- $baseURL = absLangURL (printf "%s/" $basePath) -}}
 {{- end -}}
 {{- $path := replace .Permalink $baseURL "" -}}
 {{- $date := split $path "/" -}}
@@ -13,7 +15,7 @@
       {{- if index $date 0 -}}
         {{- partial "archives/year" (dict "page" . "pages" $pages "year" (index $date 0)) -}}
       {{- else -}}
-        {{- partial "archives/list" (dict "page" . "pages" $pages) -}}
+        {{- partial "archives/list" (dict "page" . "pages" $pages "basePath" $basePath) -}}
       {{- end -}}
     </div>
   </div>

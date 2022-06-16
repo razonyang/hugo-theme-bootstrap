@@ -1,5 +1,7 @@
 {{- if default true $.Site.Params.sidebar.archive -}}
-{{- $archivePage := $.GetPage "/archives" -}}
+{{- $basePath := strings.TrimSuffix "/" (default "/archives" .Site.Params.archive.basePath) -}}
+{{- $basePath = printf "/%s/" (strings.TrimPrefix "/" $basePath)  -}}
+{{- $archivePage := $.GetPage $basePath -}}
 <section class="row card component">
     <div class="card-header">
       <h2 class="card-title my-2 fs-4 text-surface">
@@ -12,7 +14,7 @@
     </div>
     <div class="card-body">
       {{ range (where $.Site.RegularPages "Type" "in" $.Site.Params.mainSections).GroupByDate "2006" }}
-        {{- $yearPage := $.GetPage (printf "/archives/%s" .Key) -}}
+        {{- $yearPage := $.GetPage (printf "%s%s" $basePath .Key) -}}
         <a href="{{ with $yearPage }}{{ .Permalink }}{{ end }}" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="{{ .Key }}">
           {{ .Key }} <span class="badge badge-sm text-secondary bg-white ms-1">{{ len .Pages}}</span>
         </a>

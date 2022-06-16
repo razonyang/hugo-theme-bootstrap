@@ -92,6 +92,7 @@ viewer = true # Image Viewer
   # tocStyleType = "decimal" # The TOC's CSS list-style-type property.
 
 [archive]
+  # basePath = "/archiv" # The base path of archive pages.
   # dateFormat = "01-02" # Archive date format. Default to "Jan 2".
 
 [analytics]

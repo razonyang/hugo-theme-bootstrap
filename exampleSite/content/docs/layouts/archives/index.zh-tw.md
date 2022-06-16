@@ -50,3 +50,4 @@ $ tree content/archives
 |---|:-:|:-:|---
 | `archive` | Object | - | Archive.
 | `archive.dateFormat` | Integer | `Jan 2` | Archive date format.
+| `archive.basePath` | String | `/archives` |
