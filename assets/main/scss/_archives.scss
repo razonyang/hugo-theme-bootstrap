@@ -1,0 +1,15 @@
+.archive {
+    &::before {
+        background: var(--#{$prefix}primary);
+        height: 1rem;
+        width: 1rem;
+        border-radius: 50%;
+        content: "";
+        margin-left: -1.5rem;
+        top: 0.25rem;
+    }
+
+    .archive-meta {
+        font-size: .875rem;
+    }
+}

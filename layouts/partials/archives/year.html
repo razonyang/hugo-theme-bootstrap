@@ -1,0 +1,25 @@
+{{- $pages := .pages -}}
+{{- $fromDate := printf "%s-01-01 00:00:00" .year | time.AsTime -}}
+{{- $toDate := $fromDate.AddDate 1 0 0 -}}
+{{- $pages = where $pages ".Date" ">=" $fromDate }}
+{{- $pages = where $pages ".Date" "<" $toDate }}
+{{- range $pages.GroupByDate "01" -}}
+<div class="archive card row component border-1">
+    <div class="card-header">
+        <h2 class="card-title fs-4 text-surface">{{ (time (printf "2006-%s-01" .Key)).Format "January" }}</h2>
+    </div>
+    <div class="card-body">
+        <div class="archive-meta mb-2">
+        <span><i class="fas fa-fw fa-file-alt me-1"></i>{{ i18n "post_count" (dict "Count" (len .Pages)) }}</span>
+        </div>
+        <ul class="archive-posts post-list list-unstyled ms-1">
+            {{- range .Pages -}}
+            <li class="mb-2">
+                <a class="post-title" href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a>
+                <span class="float-end post-date">{{ .Date.Format (default "Jan 2" $.Site.Params.archive.dateFormat) }}</span>
+            </li>
+            {{- end -}}
+        </ul>
+    </div>
+</div>
+{{- end -}}
