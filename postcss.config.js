@@ -17,6 +17,7 @@ const purgecss = require('@fullhuman/postcss-purgecss')({
     standard: [
       'active',
       'bottom-0',
+      'btn-primary', 'btn-outline-primary',
       'col-lg-10',
       'd-flex',
       'end-0',

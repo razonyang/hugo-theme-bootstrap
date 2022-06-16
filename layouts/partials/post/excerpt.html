@@ -1,6 +1,6 @@
 {{- $key := $.Site.Params.post.excerpt -}}
 {{- $useDescription := and (eq $key "description") .Description -}}
-{{- $readMoreButton := printf "<div><a class=\"btn btn-sm btn-primary btn-read-more\" href=\"%s\">%s</a></div>" .Permalink (i18n "read_more") | safeHTML -}}
+{{- $readMoreButton := printf "<div><a class=\"btn btn-sm btn-outline-primary btn-read-more\" href=\"%s\">%s</a></div>" .Permalink (i18n "read_more") | safeHTML -}}
 {{- $content :=  "" -}}
 {{- $readMore := true -}}
 {{- if $useDescription -}}
