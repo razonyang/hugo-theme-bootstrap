@@ -1,6 +1,5 @@
 +++
 title = "归档"
-layout = "archive"
 [menu.main]
   parent = "blog"
   weight = 10
