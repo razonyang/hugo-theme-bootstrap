@@ -37,10 +37,8 @@
         {{- $placeholder := "{{#url}}{{.}}{{/url}}" -}}
         {{- range slice "series" "categories" "tags" -}}
         {{ printf "{{#%s}}" . }}
-        <span>
-          <a {{ printf "href=\"%s%s/%s/\"" $baseURL . $placeholder | safeHTMLAttr }}
-            class="btn btn-sm btn-secondary py-0 pe-1 post-taxonomy">{{ printf "{{.}}" }}</a>
-        </span>
+        <a {{ printf "href=\"%s%s/%s/\"" $baseURL . $placeholder | safeHTMLAttr }}
+          class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy">{{ printf "{{.}}" }}</a>
         {{ printf "{{/%s}}" . }}
         {{- end -}}
       </div>
