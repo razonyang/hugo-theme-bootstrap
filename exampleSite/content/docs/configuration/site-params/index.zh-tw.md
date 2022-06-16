@@ -135,5 +135,7 @@ weight = 980
 | `pinnedPost` | Boolean | `true` | 開啟/禁用文章置頂。
 | `pinnedPostCount` | Integer | `1` | 置頂的文章數量。
 | `rss` | String/Boolean | `true` | 在社交鏈接中顯示 RSS 鏈接。`false` 為不顯示，`home` 則總是鏈接到主頁。
+| `actionsPanel` | Object | - |
+| `actionsPanel.disabled` | Boolean | `false` | 禁用 actions panel。
 
 > 除了 Google 站長工具外，其他搜索引擎站長工具無法與 `hugo --minify` 同時使用，這是因為它們無法識別優化後的元標簽。
