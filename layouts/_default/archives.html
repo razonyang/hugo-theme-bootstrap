@@ -1,5 +1,9 @@
 {{ define "content" }}
-{{- $path := replace .Permalink (absLangURL "/archives/") "" -}}
+{{- $baseURL := absURL "/archives" -}}
+{{- if gt (len $.Site.Home.AllTranslations) 1 -}}
+  {{- $baseURL = absLangURL "/archives/" -}}
+{{- end -}}
+{{- $path := replace .Permalink $baseURL "" -}}
 {{- $date := split $path "/" -}}
 {{- $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections -}}
 <div class="col-lg-8 mb-4">
