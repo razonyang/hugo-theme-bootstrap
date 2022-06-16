@@ -17,9 +17,7 @@
     {{- $taxonomies := ($.GetTerms $key).ByTitle -}}
     {{- if eq $.Site.Params.taxonomySortingMethod "popularity" -}}{{- $taxonomies = (sort $taxonomies ".Data.Pages" "desc") -}}{{- end -}}
     {{- range $taxonomies -}}
-    <span>
-      <a href="{{ .Permalink }}" class="btn btn-sm btn-secondary mb-1 py-0 pe-1 post-taxonomy">{{ .Name | title }}</a>
-    </span>
+    <a href="{{ .Permalink }}" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy">{{ .Name | title }}</a>
     {{- end -}}
   {{- end -}}
 </div>
