@@ -18,7 +18,7 @@
     {{- if eq $.Site.Params.taxonomySortingMethod "popularity" -}}{{- $taxonomies = (sort $taxonomies ".Data.Pages" "desc") -}}{{- end -}}
     {{- range $taxonomies -}}
     <span>
-      <a href="{{ .Permalink }}" class="btn btn-sm btn-secondary mb-1 py-0 pe-1 post-taxonomy opacity-75">{{ .Name | title }}</a>
+      <a href="{{ .Permalink }}" class="btn btn-sm btn-secondary mb-1 py-0 pe-1 post-taxonomy">{{ .Name | title }}</a>
     </span>
     {{- end -}}
   {{- end -}}
