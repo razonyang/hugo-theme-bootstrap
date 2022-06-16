@@ -1,36 +1,21 @@
 {{- if default true $.Site.Params.sidebar.archive -}}
-{{- $baseURL := "" -}}
-{{- with where $.Site.Pages "Layout" "archive" -}}
-    {{- $baseURL = (index . 0).Permalink -}}
-{{- end -}}
+{{- $archivePage := $.GetPage "/archives" -}}
 <section class="row card component">
     <div class="card-header">
       <h2 class="card-title my-2 fs-4 text-surface">
-          {{- with $baseURL -}}
-          <a href="{{ . }}">{{ i18n "archives" }}</a>
+          {{- with $archivePage -}}
+          <a href="{{ .Permalink }}">{{ i18n "archives" }}</a>
           {{- else -}}
           {{ i18n "archives" }}
           {{- end -}}
       </h2>
     </div>
     <div class="card-body">
-      {{- $totalCount := 0 -}}
       {{ range (where $.Site.RegularPages "Type" "in" $.Site.Params.mainSections).GroupByDate "2006" }}
-        {{- $pageNumber := 0 -}}
-        {{- $url := "" -}}
-        {{- if $baseURL -}}
-        {{- $pageNumber := div $totalCount (default 100 $.Site.Params.archive.paginate) | add 1 -}}
-          {{- if eq $pageNumber 1 -}}
-            {{- $url = printf "%s#archive-%s" $baseURL .Key -}}
-          {{- else -}}
-            {{- $url = printf "%spage/%d/#archive-%s" $baseURL $pageNumber .Key -}}
-          {{- end -}}
-        {{- end -}}
-
-        <a href="{{ $url }}" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="{{ .Key }}">
+        {{- $yearPage := $.GetPage (printf "/archives/%s" .Key) -}}
+        <a href="{{ with $yearPage }}{{ .Permalink }}{{ end }}" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="{{ .Key }}">
           {{ .Key }} <span class="badge badge-sm text-secondary bg-white ms-1">{{ len .Pages}}</span>
         </a>
-        {{- $totalCount = add $totalCount (len .Pages) -}}
       {{ end }}
     </div>
 </section>

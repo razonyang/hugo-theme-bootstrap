@@ -1,0 +1,33 @@
+{{- $page := .page -}}
+{{- range .pages.GroupByDate "2006" -}}
+{{- $yearPage := $page.GetPage (printf "/archives/%s" .Key) -}}
+<div class="archive card row component border-1">
+    <div class="card-header">
+        <h2 class="card-title fs-4 text-surface">
+        {{- with $yearPage -}}
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+        {{- else -}}
+            {{- .Key -}}
+        {{- end -}}
+        </h2>
+    </div>
+    <div class="card-body">
+        <div class="archive-meta mb-2">
+            <span><i class="fas fa-fw fa-file-alt me-1"></i>{{ i18n "post_count" (dict "Count" (len .Pages)) }}</span>
+        </div>
+        <ul class="archive-posts post-list list-unstyled ms-1">
+            {{- range first 5 .Pages -}}
+            <li class="mb-2">
+                <a class="post-title" href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a>
+                <span class="float-end post-date">{{ .Date.Format (default "Jan 2" $.Site.Params.archive.dateFormat) }}</span>
+            </li>
+            {{- end -}}
+            {{- if and (gt (len .Pages) 5) $yearPage -}}
+            <li class="mb-2">
+                <a class="post-title" href="{{ $yearPage.Permalink }}">...</a>
+            </li>
+            {{- end -}}
+        </ul>
+    </div>
+</div>
+{{- end -}}
