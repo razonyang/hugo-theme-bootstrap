@@ -1,0 +1,8 @@
+{{- $basePath := strings.TrimSuffix "/" (default "/archives" .Site.Params.archive.basePath) -}}
+{{- $basePath = printf "/%s/" (strings.TrimPrefix "/" $basePath)  -}}
+{{ range (where $.Site.RegularPages "Type" "in" $.Site.Params.mainSections).GroupByDate "2006" }}
+    {{- $yearPage := $.GetPage (printf "%s%s" $basePath .Key) -}}
+    <a href="{{ with $yearPage }}{{ .Permalink }}{{ end }}" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="{{ .Key }}">
+    {{ .Key }} <span class="badge badge-sm text-secondary bg-white ms-1">{{ len .Pages}}</span>
+    </a>
+{{ end }}

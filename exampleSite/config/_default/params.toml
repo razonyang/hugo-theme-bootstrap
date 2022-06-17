@@ -74,7 +74,11 @@ viewer = true # Image Viewer
 
 [sidebar]
   # fixed = true
-  # archive = false
+  # archives = true # Enable archives widget
+  # taxonomiesToggle = false # Disable taxonomy toggle
+  # categories = true # Enable categories widget
+  # tags = true # Enable tags widget
+  # series = true # Enable series widget
 
 [codeBlock]
   # maxLines = 8
