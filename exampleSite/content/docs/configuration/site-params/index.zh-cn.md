@@ -128,7 +128,11 @@ weight = 980
 | **Sidebar**
 | `sidebar` | Object | - |
 | `sidebar.fixed` | Boolean | `false` | 固定默认侧边栏。
-| `sidebar.archive` | Boolean | `true` | 于侧边栏显示归档挂件。
+| `sidebar.taxonomiesToggle` | Boolean | `true` | Show the taxonomies toggle widget on the sidebar.
+| `sidebar.series` | Boolean | `false` | Show the series widget on the sidebar.
+| `sidebar.categories` | Boolean | `false` | Show the categories widget on the sidebar.
+| `sidebar.tags` | Boolean | `false` | Show the tags widget on the sidebar.
+| `sidebar.archives` | Boolean | `false` | Show the archive widget on the sidebar.
 | **Meta Tag**
 | `metaRobots` | String | - | 空字符串表示禁用。
 | `contact` | Object | - | [联系表单]({{< ref "docs/layouts/contact-form" >}})
