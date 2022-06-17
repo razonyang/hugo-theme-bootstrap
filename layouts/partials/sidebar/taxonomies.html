@@ -1,6 +1,7 @@
 {{- range $expected := $.Site.Params.sidebarTaxonomies -}}
 {{- range $key, $value := $.Site.Taxonomies -}}
-  {{- if eq $key $expected -}}
+  {{- $enable := default false (index $.Site.Params.sidebar $key) -}}
+  {{- if and $enable (eq $key $expected) -}}
   {{- $countParams := dict "categories" "categoryCount" "tags" "tagCount" "series" "seriesCount" -}}
   {{- $param := default "" (index $countParams $key) -}}
   {{- $taxonomyCount := default 10 ($.Site.Param $param) -}}
