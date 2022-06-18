@@ -52,6 +52,8 @@ Once created, the link will appear in the profile widget.
 | `contact.endpoint` | String | - | See also [Backends](#backends).
 | `contact.file` | Boolean | `false` | Enable/Disable file upload.
 | `contact.fileField` | String | - | The name of file field.
+| `contact.reCaptcha` | Object | - | [Google reCAPTCHA](https://www.google.com/recaptcha/)
+| `contact.reCaptcha.siteKey` | String | - |
 
 ## Backends
 
@@ -73,3 +75,10 @@ Let's take [Getform](https://getform.io) as an example:
 [contact]
   endpoint = "YOUR_ENDPOINT"
 ```
+
+## reCAPTCHA
+
+In addition to set the `contact.reCaptcha.siteKey` parameter, you need to perform additional steps according to the backend:
+
+- [Netlify](https://docs.netlify.com/forms/spam-filters/#custom-recaptcha-2)
+- [GetForm](https://docs.getform.io/features/spam-filtering/recaptcha-v2/#step-4-setup-secret-key)
