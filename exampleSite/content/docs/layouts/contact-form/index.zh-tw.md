@@ -51,6 +51,8 @@ layout = "contact"
 | `contact.endpoint` | String | - | 請參閱 [後端](#後端)。
 | `contact.file` | Boolean | `false` | 開啟/禁用文件上傳。
 | `contact.fileField` | String | - | 文件字段名稱。
+| `contact.reCaptcha` | Object | - | [Google reCAPTCHA](https://www.google.com/recaptcha/)
+| `contact.reCaptcha.siteKey` | String | - |
 
 ## 後端
 
@@ -72,3 +74,10 @@ layout = "contact"
 [contact]
   endpoint = "YOUR_ENDPOINT"
 ```
+
+## reCAPTCHA
+
+除了需要設定 `contact.reCaptcha.siteKey` 參數外，你還需要根據後端進行額外的操作：
+
+- [Netlify](https://docs.netlify.com/forms/spam-filters/#custom-recaptcha-2)
+- [GetForm](https://docs.getform.io/features/spam-filtering/recaptcha-v2/#step-4-setup-secret-key)
