@@ -1,0 +1,7 @@
+{{- if $.Site.Params.contact.file -}}
+{{- $fileField := default "file" $.Site.Params.contact.fileField -}}
+<div class="mb-3">
+    <label for="file" class="form-label">{{ "contact_file" | i18n }}</label>
+    <input class="form-control" type="file" id="{{ $fileField }}" name="{{ $fileField }}">
+</div>
+{{- end -}}
