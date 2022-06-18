@@ -53,6 +53,8 @@ aliases = [
 | `docs/sidebar-end` | 文档侧边栏下方 |
 | `docs/nav-begin` | 文档导航上方 |
 | `docs/nav-end` | 文档导航下方 |
+| `contact/form-field-begin` | 表单字段上方 |
+| `contact/form-field-end` | 表单字段下方 |
 
 ## 用法
 

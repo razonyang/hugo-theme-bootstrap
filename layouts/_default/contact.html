@@ -8,6 +8,7 @@
       <div class="card-body">
             <form class="needs-validation" name="contact" method="POST" enctype="multipart/form-data" 
               {{ with $.Site.Params.contact.endpoint }}{{ printf "action=%q" . | safeHTMLAttr }}{{ else }}data-netlify="true"{{ end }} novalidate>
+                {{- partial "hooks/contact/form-field-begin" . -}}
                 <div class="mb-3">
                   <label for="contactName" class="form-label">{{ "contact_name" | i18n }}</label>
                   <input name="name" class="form-control" id="contactName" required>
@@ -32,6 +33,7 @@
                   <input class="form-control" type="file" id="{{ $fileField }}" name="{{ $fileField }}">
                 </div>
                 {{- end -}}
+                {{- partial "hooks/contact/form-field-end" . -}}
                 <button type="submit" class="btn btn-outline-primary">{{ "button_submit" | i18n }}</button>
               </form>
         </div>
