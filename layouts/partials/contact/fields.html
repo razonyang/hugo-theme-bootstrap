@@ -1,0 +1,17 @@
+<div class="mb-3">
+    <label for="contactName" class="form-label">{{ "contact_name" | i18n }}</label>
+    <input name="name" class="form-control" id="contactName" required>
+</div>
+<div class="mb-3">
+    <label for="contactEmail" class="form-label">{{ "contact_email" | i18n }}</label>
+    <input type="email" name="email" class="form-control" id="contactEmail" aria-describedby="emailHelp" required>
+    <div id="emailHelp" class="form-text">{{ "contact_email_help" | i18n }}</div>
+</div>
+<div class="mb-3">
+    <label for="contactSubject" class="form-label">{{ "contact_subject" | i18n }}</label>
+    <input class="form-control" name="subject" id="contactSubject" required>
+</div>
+<div class="mb-3">
+    <label for="contactMessage" class="form-label">{{ "contact_message" | i18n }}</label>
+    <textarea class="form-control" name="message" id="contactMessage" required></textarea>
+</div>
