@@ -6,36 +6,11 @@
         <h1 class="card-title">{{ .Title }}</h1>
       </div>
       <div class="card-body">
-            <form class="needs-validation" name="contact" method="POST" enctype="multipart/form-data" 
-              {{ with $.Site.Params.contact.endpoint }}{{ printf "action=%q" . | safeHTMLAttr }}{{ else }}data-netlify="true"{{ end }} novalidate>
-                {{- partial "hooks/contact/form-field-begin" . -}}
-                <div class="mb-3">
-                  <label for="contactName" class="form-label">{{ "contact_name" | i18n }}</label>
-                  <input name="name" class="form-control" id="contactName" required>
-                </div>
-                <div class="mb-3">
-                  <label for="contactEmail" class="form-label">{{ "contact_email" | i18n }}</label>
-                  <input type="email" name="email" class="form-control" id="contactEmail" aria-describedby="emailHelp" required>
-                  <div id="emailHelp" class="form-text">{{ "contact_email_help" | i18n }}</div>
-                </div>
-                <div class="mb-3">
-                  <label for="contactSubject" class="form-label">{{ "contact_subject" | i18n }}</label>
-                  <input class="form-control" name="subject" id="contactSubject" required>
-                </div>
-                <div class="mb-3">
-                  <label for="contactMessage" class="form-label">{{ "contact_message" | i18n }}</label>
-                  <textarea class="form-control" name="message" id="contactMessage" required></textarea>
-                </div>
-                {{- if $.Site.Params.contact.file -}}
-                {{- $fileField := default "file" $.Site.Params.contact.fileField -}}
-                <div class="mb-3">
-                  <label for="file" class="form-label">{{ "contact_file" | i18n }}</label>
-                  <input class="form-control" type="file" id="{{ $fileField }}" name="{{ $fileField }}">
-                </div>
-                {{- end -}}
-                {{- partial "hooks/contact/form-field-end" . -}}
-                <button type="submit" class="btn btn-outline-primary">{{ "button_submit" | i18n }}</button>
-              </form>
+        {{- if $.Site.Params.contact.endpoint -}}
+          {{- partial "contact/form" . -}}
+        {{- else -}}
+          {{- partial "contact/form-netlify" . -}}
+        {{- end -}}
         </div>
     </div>
 </div>
