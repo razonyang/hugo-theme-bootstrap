@@ -23,7 +23,7 @@
                 </div>
                 <div class="mb-3">
                   <label for="contactMessage" class="form-label">{{ "contact_message" | i18n }}</label>
-                  <textarea class="form-control" name="message" id="contactMessage"></textarea>
+                  <textarea class="form-control" name="message" id="contactMessage" required></textarea>
                 </div>
                 {{- if $.Site.Params.contact.file -}}
                 {{- $fileField := default "file" $.Site.Params.contact.fileField -}}
