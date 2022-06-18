@@ -103,7 +103,7 @@ export class Search {
     if (this.input.value === '') {
       this.input.value = Search.getKeywordFromURL();
     }
-    this.searchBarInput.value = this.input.value;
+    this.updateSearchbar(this.input.value);
     document.querySelector('.search-bar input');
     const instance = this;
     this.form.addEventListener('submit', (event) => {
@@ -113,8 +113,14 @@ export class Search {
 
   handleSubmit(event) {
     this.search(this.input.value);
-    this.searchBarInput.value = this.input.value;
+    this.updateSearchbar(this.input.value);
     event.preventDefault();
+  }
+
+  updateSearchbar(value) {
+    if (this.searchBarInput) {
+      this.searchBarInput.value = value;
+    }
   }
 
   static getKeywordFromURL() {
