@@ -1,11 +1,12 @@
 import Component from "js/component";
+import { default as LocalStorage } from 'js/local-storage';
 
 class SidebarToggle implements Component {
   main: HTMLElement;
 
   sidebar: HTMLElement;
 
-  key: string = 'hbs-sidebar-toggler';
+  key: string = 'sidebar-toggle';
 
   constructor(public button: HTMLElement) {
   }
@@ -22,7 +23,7 @@ class SidebarToggle implements Component {
       self.toggle();
     });
 
-    const val = localStorage.getItem(this.key);
+    const val = LocalStorage.getItem(this.key);
     if (val === 'hide' && this.isShown()) {
       this.hide();
     }
@@ -75,14 +76,14 @@ class SidebarToggle implements Component {
     this.main.classList.replace('col-lg-' + this.getMainWidth(), 'col-lg-' + this.getFullWidth());
     this.sidebar.classList.add('d-none');
     this.button.classList.add('active');
-    localStorage.setItem(this.key, 'hide');
+    LocalStorage.setItem(this.key, 'hide');
   }
 
   show() {
     this.main.classList.replace('col-lg-' + this.getFullWidth(), 'col-lg-' + this.getMainWidth());
     this.sidebar.classList.remove('d-none');
     this.button.classList.remove('active');
-    localStorage.removeItem(this.key);
+    LocalStorage.removeItem(this.key);
   }
 }
 
