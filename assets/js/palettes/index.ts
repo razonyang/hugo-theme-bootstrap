@@ -1,10 +1,11 @@
 import Component from "js/component";
+import { default as LocalStorage } from 'js/local-storage';
 
 class PaletteSelector implements Component {
   key: string;
 
   run() {
-    this.key = 'hbs-palette';
+    this.key = 'palette';
     this.initPalette();
   }
 
@@ -29,7 +30,7 @@ class PaletteSelector implements Component {
   }
 
   getPalette(): string {
-    const palette = localStorage.getItem(this.key);
+    const palette = LocalStorage.getItem(this.key);
     if (palette) {
       return palette;
     }
@@ -45,7 +46,7 @@ class PaletteSelector implements Component {
   setPalette(palette: string) {
     console.debug(`switch to palette: ${palette}`);
     document.body.parentElement.setAttribute('data-palette', palette);
-    localStorage.setItem(this.key, palette);
+    LocalStorage.setItem(this.key, palette);
   }
 }
 

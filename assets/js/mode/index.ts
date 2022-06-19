@@ -1,8 +1,9 @@
 import Component from "js/component";
 import { default as params } from '@params';
+import { default as LocalStorage } from 'js/local-storage';
 
 class ModeToggle implements Component {
-  public key: string = 'hbs-mode';
+  public key: string = 'mode';
   private mode: string = 'auto';
   private items;
 
@@ -31,7 +32,7 @@ class ModeToggle implements Component {
 
   initMode() {
     // load scheme from localStorage.
-    let mode = localStorage.getItem(this.key);
+    let mode = LocalStorage.getItem(this.key);
     if (mode) {
       this.active(mode);
     } else if (params.color) {
@@ -62,7 +63,7 @@ class ModeToggle implements Component {
         classList.remove('active');
       }
     });
-    localStorage.setItem(this.key, mode);
+    LocalStorage.setItem(this.key, mode);
 
     let icon = document.querySelector('.mode-item[data-color-mode="' + mode + '"] .mode-icon').cloneNode(true) as HTMLElement;
     icon.setAttribute('id', 'modeIcon');
