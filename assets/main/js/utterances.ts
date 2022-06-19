@@ -1,4 +1,5 @@
 import * as params from '@params';
+import { default as LocalStorage } from 'js/local-storage';
 
 class Utterances {
     run() {
@@ -9,7 +10,7 @@ class Utterances {
                 self.rerender(self.getTheme(e.detail.mode));
             });
             setTimeout(function() {
-                self.rerender('github-' + localStorage.getItem('hbs-mode'));
+                self.rerender('github-' + LocalStorage.getItem('mode'));
             }, 2000);
         }
     }
