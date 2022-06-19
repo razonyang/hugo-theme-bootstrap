@@ -1,6 +1,6 @@
 {{ define "content" }}
 {{- $basePath := strings.TrimSuffix "/" (default "/archives" .Site.Params.archive.basePath) -}}
-{{- $basePath = printf "/%s/" (strings.TrimPrefix "/" $basePath)  -}}
+{{- $basePath = printf "%s/" (strings.TrimPrefix "/" $basePath)  -}}
 {{- $baseURL := absURL $basePath -}}
 {{- if gt (len $.Site.Home.AllTranslations) 1 -}}
   {{- $baseURL = absLangURL (printf "%s/" $basePath) -}}
