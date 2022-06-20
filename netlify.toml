@@ -1,17 +1,20 @@
 [build]
 publish = "exampleSite/public"
-command = "cd exampleSite && npm install && hugo --minify --themesDir=../../ --theme=repo"
 
 [build.environment]
 NODE_VERSION = "17.6.0"
 HUGO_VERSION = "0.93.0"
 HUGO_ENABLEGITINFO = "true"
 GO_VERSION = "1.17.7"
-HUGO_BASEURL = "https://hbs.razonyang.com/v1.0/"
+
+[context.production]
+command = "cd exampleSite && npm install && hugo --minify --themesDir=../../ --theme=repo -b=https://hbs.razonyang.com/v1.0/"
+
+[context.production.environment]
 HUGO_ENV = "production"
 
-[context.deploy-preview.environment]
-HUGO_BASEURL = $DEPLOY_PRIME_URL
+[context.deploy-preview]
+command = "cd exampleSite && npm install && hugo --minify --themesDir=../../ --theme=repo -b=$DEPLOY_PRIME_URL"
 
 [[headers]]
   for = "/*"
