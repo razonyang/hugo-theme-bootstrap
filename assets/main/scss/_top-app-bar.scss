@@ -39,6 +39,10 @@
     }
 
     .search-bar {
+        @include media-breakpoint-up(lg) {
+            width: 180px;
+        }
+
         .search-input {
             padding-left: 2.25rem;
         }
