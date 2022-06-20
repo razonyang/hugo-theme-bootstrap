@@ -11,9 +11,9 @@ reward = true
 pinned = true
 pinnedWeight = 1
 carousel = false
-categories = []
-tags = []
-series = []
+categories = ["Introduction"]
+tags = ["Features"]
+series = ["Docs"]
 images = []
 weight = 100
 +++

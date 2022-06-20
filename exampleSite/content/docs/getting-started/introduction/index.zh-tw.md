@@ -11,9 +11,9 @@ reward = true
 pinned = true
 pinnedWeight = 1
 carousel = false
-categories = []
-tags = []
-series = []
+categories = ["簡介"]
+tags = ["功能特性"]
+series = ["文檔"]
 images = []
 weight = 100
 +++
