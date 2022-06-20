@@ -206,4 +206,4 @@ viewer = true # Image Viewer
 
 [docs]
   [docs.nav]
-    expand = true
+    # expand = true # Expand docs navigations.
