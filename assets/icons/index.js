@@ -2,7 +2,6 @@ import {config, dom, library} from '@fortawesome/fontawesome-svg-core';
 import {
   faAdjust,
   faArrowsAltV,
-  faAtom,
   faBars,
   faBuilding,
   faCheckCircle,
@@ -47,6 +46,7 @@ import {
   faSpinner,
   faSun,
   faTags,
+  faThLarge,
   faThumbtack,
   faTimes,
   faTv,
@@ -97,12 +97,12 @@ import {default as customIcons} from './custom';
 
 let icons = [
   // Solid Icons
-  faAdjust, faArrowsAltV, faAtom, faBars, faBuilding, faCheckCircle, faChevronDown, faChevronCircleDown,
+  faAdjust, faArrowsAltV, faBars, faBuilding, faCheckCircle, faChevronDown, faChevronCircleDown,
   faCode, faCoffee, faCog, faComments, faColumns, faCopy, faCopyright, faEdit, faEllipsisH,
   faEnvelope, faExclamationTriangle, faExpandAlt, faEyeDropper, faFont, faFileAlt, faFileArchive,
   faFolder, faHistory, faHome, faInfoCircle, faLanguage, faLink, faList, faListAlt, faMapMarkerAlt, faPalette,
   faQuestion, faQuestionCircle, faRedoAlt, faRss, faSearch, faShareAlt, faSkullCrossbones, faGlobe,
-  faSpinner, faTags, faThumbtack, faTimes, faTv, faUndo, faUser, faExternalLinkSquareAlt, faSun, faMoon,
+  faSpinner, faTags, faThLarge, faThumbtack, faTimes, faTv, faUndo, faUser, faExternalLinkSquareAlt, faSun, faMoon,
 
   // Regular Icons
   faStar,

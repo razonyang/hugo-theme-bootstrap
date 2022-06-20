@@ -1,27 +1,27 @@
 <div class="offcanvas offcanvas-bottom h-auto" tabindex="-1" id="offcanvasActionsPanel"
-  aria-labelledby="offcanvasActionsPanel">
+  aria-labelledby="offcanvasActionsPanelLabel">
   <div class="offcanvas-header">
-    <h3 class="offcanvas-title">
-      <i class="fas fa-fw fa-atom me-1"></i>
+    <h5 class="offcanvas-title fs-4" id="offcanvasActionsPanelLabel">
+      <i class="fas fa-fw fa-th-large me-1"></i>
       Actions
-    </h3>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="offcanvasActionsPanel" aria-label="Close"></button>
+    </h5>
+    <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas" data-bs-target="offcanvasActionsPanel" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body mt-2">
     {{- if (default true .Site.Params.socialShare) -}}
     <div class="social-share mb-4 d-flex overflow-auto">
-      <a class="d-flex flex-column align-items-center me-3" rel="noopener noreferrer" aria-label="Twitter Share Button"
+      <a class="btn-social-share d-flex flex-column align-items-center me-3" rel="noopener noreferrer" aria-label="Twitter Share Button"
       target="_blank" href="https://twitter.com/intent/tweet?title={{ .Title }}&url={{ .Permalink | absURL }}">
         <i class="fab fa-2x fa-fw fa-twitter mb-2"></i> Twitter
       </a>
-      <a class="d-flex flex-column align-items-center me-3" rel="noopener noreferrer" aria-label="Facebook Share Button"
+      <a class="btn-social-share d-flex flex-column align-items-center me-3" rel="noopener noreferrer" aria-label="Facebook Share Button"
         target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink | absURL }}">
         <i class="fab fa-2x fa-fw fa-facebook-f mb-2"></i> Facebook
       </a>
     </div>
     <hr class="mb-4">
     {{- end -}}
-    <div class="actions d-flex overflow-auto">
+    <div class="actions d-flex overflow-auto align-items-center">
       <a role="button" class="action action-go-back d-flex flex-column align-items-center me-3" href="javascript: window.history.back();">
         <span class="action-icon mb-2"><i class="fas fa-2x fa-chevron-circle-down" data-fa-transform="rotate-90"></i></span> {{ i18n "go_back" }}
       </a>
