@@ -4,10 +4,6 @@ import Snackbar from "js/snackbar";
 class ActionsPanel implements Component {
   private btn: HTMLElement;
 
-  public x: number = 0;
-
-  public y: number = 0;
-
   constructor() {
   }
 
