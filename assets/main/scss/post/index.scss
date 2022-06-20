@@ -47,24 +47,6 @@
   }
 }
 
-// .post-meta,
-// .post-content {
-//   h1,
-//   .h1,
-//   h2,
-//   .h2,
-//   h3,
-//   .h3,
-//   h4,
-//   .h4,
-//   h5,
-//   .h5,
-//   h6,
-//   .h6 {
-//     margin: 2rem 0 1.5rem;
-//   }
-// }
-
 @if $numberifyHeadings {
   .post-content {
     counter-reset: h2Counter;
@@ -94,57 +76,6 @@
   }
 }
 
-// .post-meta,
-// .post-summary,
-// .post-content,
-// .post-nav {
-//   a {
-//     color: var(--#{$prefix}accent);
-//   }
-// }
-
-// .post {
-//   position: relative;
-
-//   .post-title {
-//     margin: .5rem 0;
-//   }
-
-//   .post-toc {
-//     z-index: 1;
-
-//     ul {
-//       margin-bottom: 0;
-//     }
-
-//     &.position-sticky {
-//       top: 84px;
-//     }
-//   }
-// }
-
-// .post-taxonomy {
-//   background-color: var(--#{$prefix}background);
-//   color: var(--#{$prefix}primary-text-on-surface)!important;
-//   margin: .25rem;
-//   padding: .5rem;
-//   opacity: .6;
-//   clip-path: polygon(100% 0, 100% 100%, 1rem 100%, 0 50%, 1rem 0);
-//   padding-left: 1rem;
-
-//   @extend .shadow-sm;
-
-//   &:hover {
-//     opacity: 1;
-//     color: var(--#{$prefix}accent)!important;
-//     text-decoration: none;
-//   }
-// }
-
-// #offcanvasTOC {
-//   margin-bottom: 0;
-// }
-
 .post-navs {
   flex-wrap: wrap;
 }
@@ -160,35 +91,6 @@
     max-width: 100%;
   }
 }
-
-// .post-reward-content {
-//   text-align: center;
-// }
-
-// .btn.btn-reward {
-//   color: var('on-primary');
-//   background-color: var(--#{$prefix}accent);
-// }
-
-// .post-list {
-//   margin: .25rem 0;
-//   color: var(--#{$prefix}secondary-text-on-surface);
-//   list-style: none;
-//   padding-left: 0.25rem;
-  
-//   li {
-//     padding: .25rem 0;
-//     clear: both;
-
-//     a {
-//       color: var(--#{$prefix}secondary-text-on-surface);
-
-//       &:hover {
-//         color: var(--#{$prefix}accent);
-//       }
-//     }
-//   }
-// }
 
 .posts {
   .post {
@@ -210,16 +112,3 @@
     }
   }
 }
-
-// .post {
-//   #TableOfContents {
-//     color: var(--#{$prefix}primary-text-on-surface);
-//   }
-// }
-
-// /*!rtl:raw:
-// .post-prev-icon, .post-next-icon {
-//   transform: scaleX(-1);
-//   transform-origin: unset!important;
-// }
-// */
