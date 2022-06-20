@@ -30,23 +30,18 @@
   [main.params]
     divider = true
 [[main]]
-  identifier = "versions"
-  name = "Versions"
+  identifier = "docs"
+  name = "Docs"
   weight = 99
 [[main]]
-  parent = "versions"
-  name = "Latest"
-  url = "https://hbs.razonyang.com/"
+  parent = "docs"
+  name = "Latest(v1.x)"
+  url = "https://hbs.razonyang.com/v1.x/"
   weight = 1
 [[main]]
-  parent = "versions"
-  name = "Develop"
-  url = "https://develop.hbs.razonyang.com/"
-  weight = 2
-[[main]]
-  parent = "versions"
-  name = "v0.80"
-  url = "https://v0-80.hbs.razonyang.com/"
+  parent = "docs"
+  name = "v0.x"
+  url = "https://hbs.razonyang.com/v0.x/"
   weight = 100
 [[main]]
   identifier = "donate"
