@@ -1,3 +1,5 @@
+{{- $disabled := default false .Site.Params.actionsPanel.disabled }}
+{{- if not $disabled -}}
 <div class="offcanvas offcanvas-bottom h-auto" tabindex="-1" id="offcanvasActionsPanel"
   aria-labelledby="offcanvasActionsPanelLabel">
   <div class="offcanvas-header">
@@ -34,3 +36,4 @@
     </div>
   </div>
 </div>
+{{- end -}}
