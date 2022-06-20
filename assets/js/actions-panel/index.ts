@@ -1,6 +1,5 @@
 import Component from "js/component";
 import Snackbar from "js/snackbar";
-import { default as params } from '@params';
 
 class ActionsPanel implements Component {
   private btn: HTMLElement;
@@ -10,11 +9,6 @@ class ActionsPanel implements Component {
   public y: number = 0;
 
   constructor() {
-  }
-
-  isDisabeld(): boolean {
-    let options = params.actionspanel ? params.actionspanel : {};
-    return options.disabled === true
   }
 
   createButton() {
@@ -30,7 +24,7 @@ class ActionsPanel implements Component {
   }
 
   run() {
-    if (this.isDisabeld()) {
+    if (!document.querySelector('#offcanvasActionsPanel')) {
       return;
     }
     
