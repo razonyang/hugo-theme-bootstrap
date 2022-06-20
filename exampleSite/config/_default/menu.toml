@@ -35,13 +35,13 @@
   weight = 99
 [[main]]
   parent = "docs"
-  name = "Latest(v1.x)"
-  url = "https://hbs.razonyang.com/v1.x/"
+  name = "Latest(v1)"
+  url = "https://hbs.razonyang.com/v1/"
   weight = 1
 [[main]]
   parent = "docs"
-  name = "v0.x"
-  url = "https://hbs.razonyang.com/v0.x/"
+  name = "v0"
+  url = "https://hbs.razonyang.com/v0/"
   weight = 100
 [[main]]
   identifier = "donate"
