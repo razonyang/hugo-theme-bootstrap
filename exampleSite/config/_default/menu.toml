@@ -1,6 +1,6 @@
 [[main]]
   identifier = "home"
-  name = "Home"
+  pre = '<i class="fas fa-home"></i>'
   weight = 1
   url = "https://hbs.razonyang.com/"
 [[main]]
