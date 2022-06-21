@@ -4,6 +4,9 @@ class PathLocalStorage {
     private prefix: string = 'hbs:';
 
     constructor(public baseURL: string){
+        if (baseURL.substring(0, 2) === '//') {
+            baseURL = 'http:' + baseURL;
+        }
         let url = new URL(baseURL);
         let pathname = url.pathname.replace(/^(\/+)/, '').replace(/(\/+)$/, '')
         if (pathname !== '') {
