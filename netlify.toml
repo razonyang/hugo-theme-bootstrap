@@ -13,8 +13,8 @@ command = "cd exampleSite && npm install && hugo --minify --themesDir=../../ --t
 [context.production.environment]
 HUGO_ENV = "production"
 
-[context."v0.80"]
-command = "cd exampleSite && npm install && hugo --minify --themesDir=../../ --theme=repo -b=https://v0-80.hbs.razonyang.com/"
+[context.v0]
+command = "cd exampleSite && npm install && hugo --minify --themesDir=../../ --theme=repo -b=https://hbs.razonyang.com/v0/"
 
 [context.deploy-preview]
 command = "cd exampleSite && npm install && hugo --minify --themesDir=../../ --theme=repo -b=$DEPLOY_PRIME_URL"
