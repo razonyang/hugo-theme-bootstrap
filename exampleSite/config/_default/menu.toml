@@ -1,4 +1,26 @@
 [[main]]
+  identifier = 'home'
+  weight = 1
+  pre = '<i class="fas fa-home"></i>'
+  url = 'https://hbs.razonyang.com/'
+[[main]]
+  identifier = 'blog'
+  weight = 2
+  name = 'Blog'
+  url = 'https://hbs.razonyang.com/blog/'
+[[main]]
+  identifier = 'docs'
+  weight = 3
+  name = 'Docs'
+[[main]]
+  parent = 'docs'
+  name = 'Latest(v1)'
+  url = 'https://hbs.razonyang.com/v1/'
+[[main]]
+  parent = 'docs'
+  name = 'v0'
+  url = 'https://hbs.razonyang.com/v0/'
+[[main]]
   name = "Support"
   identifier = "support"
   weight = 40

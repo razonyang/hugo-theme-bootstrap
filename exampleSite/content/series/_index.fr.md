@@ -1,6 +1,6 @@
 +++
 title = "Séries"
 [menu.main]
-  weight = 1
+  weight = 3
   pre = '<i class="fas fa-fw fa-columns"></i>'
 +++
