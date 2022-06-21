@@ -11,7 +11,7 @@
 <div class="col-lg-8 mb-4">
   <div class="container">
     {{- partial "breadcrumb" . -}}
-    <div class="archives border-5 border-start ps-3">
+    <div class="archives border-1 border-start ps-3 ms-2">
       {{- if index $date 0 -}}
         {{- partial "archives/year" (dict "page" . "pages" $pages "year" (index $date 0)) -}}
       {{- else -}}

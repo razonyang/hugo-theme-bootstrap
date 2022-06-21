@@ -2,7 +2,7 @@
 {{- $basePath := .basePath -}}
 {{- range .pages.GroupByDate "2006" -}}
 {{- $yearPage := $page.GetPage (printf "%s%s/" $basePath .Key) -}}
-<div class="archive card row component border-1">
+<div class="archive card row component border-1" data-date="{{ .Key }}">
     <div class="card-header">
         <h2 class="card-title fs-4 text-surface">
         {{- with $yearPage -}}
