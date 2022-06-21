@@ -34,6 +34,10 @@
   .svg-inline--fa {
     vertical-align: middle;
   }
+
+  .social-links {
+    --#{$prefix}nav-link-padding-x: .5rem;
+  }
 }
 
 .profile-compact {
