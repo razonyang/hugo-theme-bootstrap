@@ -1,7 +1,13 @@
 [[main]]
+  identifier = "home"
+  name = "Home"
+  weight = 1
+  url = "https://hbs.razonyang.com/"
+[[main]]
   identifier = "blog"
   name = "Blog"
-  weight = 1
+  weight = 2
+  url = "https://hbs.razonyang.com/blog/"
 [[main]]
   name = "Support"
   identifier = "support"
@@ -32,7 +38,7 @@
 [[main]]
   identifier = "docs"
   name = "Docs"
-  weight = 99
+  weight = 100
 [[main]]
   parent = "docs"
   name = "Latest(v1)"
@@ -46,7 +52,7 @@
 [[main]]
   identifier = "donate"
   name = "Donate"
-  weight = 100
+  weight = 99
 [[main]]
   parent = "donate"
   name = "Open Collective"
