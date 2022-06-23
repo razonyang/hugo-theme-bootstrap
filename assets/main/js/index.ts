@@ -15,7 +15,6 @@ import SidebarToggle from 'js/sidebar-toggle';
 import FontSizeSelector from 'js/font-size-selector';
 import Code from 'js/code';
 import TableWrapper from 'js/table-wrapper';
-import TOC from 'js/toc';
 import Docs from 'js/docs';
 import FormValidator from 'js/form-validator';
 import components from './components';
@@ -32,7 +31,6 @@ app.attach(
     new FontSizeSelector(document.getElementById('fontSize') as HTMLInputElement),
     new Code(),
     new TableWrapper(document.querySelectorAll('table')),
-    new TOC(document.querySelector('#offcanvasTOC')),
     new Docs(),
     new FormValidator(),
     ...components
