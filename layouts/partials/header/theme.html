@@ -9,9 +9,9 @@
         {{- range slice "light" "dark" "auto" -}}
         {{- $item := index $modes . -}}
         <li class="mode-item{{ if eq $mode . }} active{{ end }}" data-color-mode="{{ . }}" data-icon="{{ $item.icon }}">
-        <a class="dropdown-item" href="#">
-            <i class="mode-icon fas fa-fw fa-{{ $item.icon }}"></i> {{ . | title }}
-        </a>
+            <button class="dropdown-item">
+                <i class="mode-icon fas fa-fw fa-{{ $item.icon }}"></i> {{ . | title }}
+            </button>
         </li>
         {{- end -}}
     </ul>

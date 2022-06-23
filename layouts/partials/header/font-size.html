@@ -7,9 +7,9 @@
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="fontSizeDropdown">
         {{- range slice "xs" "sm" "md" "lg" "xl" -}}
         <li>
-            <a href="#" class="font-size-item dropdown-item{{ if eq . "md" }} active{{ end }}" data-size="{{ . }}">
+            <button class="font-size-item dropdown-item{{ if eq . "md" }} active{{ end }}" data-size="{{ . }}">
                 {{ printf "font_size_%s" . | i18n }}
-            </a>
+            </button>
         </li>
         {{- end -}}
     </ul>
