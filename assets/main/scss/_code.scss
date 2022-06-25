@@ -47,6 +47,14 @@ pre {
   padding: 1rem;
   position: relative;
 
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--#{$prefix}secondary);
+  }
+
   code {
     padding: 0;
     background: inherit !important;
