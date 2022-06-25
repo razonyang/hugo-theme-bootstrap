@@ -23,7 +23,7 @@
         <div class="tab-content" id="rewardTabContent">
           {{- $index = 0 -}}
           {{- range $key, $value := $reward -}}
-          <div class="tab-pane fade post-reward-content show{{ if eq $index 0 }} active{{ end }}" id="reward-{{ $key }}" role="tabpanel" aria-labelledby="reward-{{ $key }}-tab">
+          <div class="tab-pane fade post-reward-content text-center show{{ if eq $index 0 }} active{{ end }}" id="reward-{{ $key }}" role="tabpanel" aria-labelledby="reward-{{ $key }}-tab">
             <img class="img-fluid post-reward-img" src="{{ absURL $value }}" loading="lazy" data-viewer-invisible />
           </div>
           {{- $index = add $index 1 -}}
