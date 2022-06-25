@@ -75,7 +75,6 @@ The palettes system is based on CSS variable, therefore, we can easily custom th
 ```scss {title="assets/main/scss/_custom.scss"}
 [data-palette=blue] {
     --#{$prefix}primary: darkblue;
-    --#{$prefix}on-primary: #fff;
 }
 ```
 
@@ -118,6 +117,12 @@ See also [All Supported Styles](https://xyproto.github.io/splash/docs/all.html).
 
 ## Icons
 
+HBS uses a custom [FontAwesome v5](https://fontawesome.com/v5/search) icon set that contains only the icons used by the theme to reduce the icon file size.
+
+### Add Icons
+
+Considering the need for user-defined icons, HBS provides a custom icon feature, just create `assets/icons/custom.js` file in the site root and import the desired icons.
+
 ```js {title="assets/icons/custom.js"}
 // import { faClock } from '@fortawesome/free-solid-svg-icons';
 // import { faAddressBook } from '@fortawesome/free-regular-svg-icons';
@@ -130,3 +135,39 @@ const icons = [
 ];
 export default icons;
 ```
+
+> To make this work, you need to uncomment, that is, remove the prefix `//`.
+
+Literally, `@fortawesome/free-solid-svg-icons`, `@fortawesome/free-regular-svg-icons` and `@fortawesome/free-brands-svg-icons` represent Solid, Regular and Brand icons respectively.
+
+### JS Variables
+
+JS variables are named using `camelCase`, and their corresponding class names are lowercase and separated from each other by a horizontal line.
+
+| Class | JS Variable |
+|---|---|
+| `fa-clock` | `faClock` |
+| `fa-address-book` | `faAddressBook` |
+| `fa-amazon` | `faAmazon` |
+| `fa-google` | `faGoogle` |
+
+### Usage
+
+Depending on the type of icon, their class prefixs are ​​also different, the corresponding relationship is as follows:
+
+| Kind | Class Prefix
+|---|---|
+| Solid | `fas`
+| Regular | `far`
+| Brand | `fab`
+
+Takes the previously imported icons as an example:
+
+| HTML |
+|---|
+| `<i class="fas fa-clock"></i>` |
+| `<i class="far fa-address-book"></i>` |
+| `<i class="fab fa-amazon"></i>` |
+| `<i class="fab fa-google"></i>` |
+
+> If the icon is not displayed properly, please check that the prefix is ​​correct.

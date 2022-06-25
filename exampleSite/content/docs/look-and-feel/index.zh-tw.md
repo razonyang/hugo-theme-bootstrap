@@ -74,7 +74,6 @@ palette = "indigo"
 ```scss {title="assets/main/scss/_custom.scss"}
 [data-palette=blue] {
     --#{$prefix}primary: darkblue;
-    --#{$prefix}on-primary: #fff;
 }
 ```
 
@@ -117,6 +116,12 @@ $ hugo gen chromastyles --style=solarized-dark > assets/main/scss/_highlight.scs
 
 ## 圖標
 
+HBS 使用自定義的 [FontAwesome v5](https://fontawesome.com/v5/search) 圖標集，其只包含主題使用到的圖標，以減少圖標文件的大小。
+
+### 新增圖標
+
+考慮到用戶自定義圖標的需求，HBS 提供了一個自定義圖標的功能，只需要在站點根目錄創建 `assets/icons/custom.js` 文件，並導入需要的圖標即可。
+
 ```js {title="assets/icons/custom.js"}
 // import { faClock } from '@fortawesome/free-solid-svg-icons';
 // import { faAddressBook } from '@fortawesome/free-regular-svg-icons';
@@ -129,3 +134,39 @@ const icons = [
 ];
 export default icons;
 ```
+
+> 要使其生效，你需要取消註釋，也就是刪除前置的 `//` 註釋符。
+
+按字面意思，`@fortawesome/free-solid-svg-icons`、`@fortawesome/free-regular-svg-icons` 和 `@fortawesome/free-brands-svg-icons` 分別表示 Solid、Regular 和 Brand 圖標。
+
+### JS 變量
+
+JS 變量使用駝峰式命名，其對應的 class 名稱則是小寫的，且以中橫線將多個單詞分割開來。
+
+| Class | JS 變量 |
+|---|---|
+| `fa-clock` | `faClock` |
+| `fa-address-book` | `faAddressBook` |
+| `fa-amazon` | `faAmazon` |
+| `fa-google` | `faGoogle` |
+
+### 使用方法
+
+根據圖標類型不同，其 class 前綴也不相同，對應關系如下：
+
+| Kind | Class 前綴
+|---|---|
+| Solid | `fas`
+| Regular | `far`
+| Brand | `fab`
+
+以先前導入的圖標為例：
+
+| HTML |
+|---|
+| `<i class="fas fa-clock"></i>` |
+| `<i class="far fa-address-book"></i>` |
+| `<i class="fab fa-amazon"></i>` |
+| `<i class="fab fa-google"></i>` |
+
+> 如果圖標未正常顯示，請檢查前綴是否正確。
