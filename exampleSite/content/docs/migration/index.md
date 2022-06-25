@@ -1,5 +1,5 @@
 +++
-title = "Migrating to v1.0"
+title = "Migrating to v1"
 linkTitle = "Migration"
 date = 2022-06-20T17:46:31+08:00
 # description = "" # Used by description meta tag, summary will be used instead if not set or empty.
@@ -16,7 +16,7 @@ series = ["Docs"]
 images = []
 +++
 
-Track and review changes to the theme source files and documentation to help you migrate from `v0.*` to `v1.0`.
+Track and review changes to the theme source files and documentation to help you migrate from `v0.*` to `v1`.
 
 <!--more-->
 
