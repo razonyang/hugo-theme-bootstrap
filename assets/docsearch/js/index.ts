@@ -23,7 +23,7 @@ for (const name in params) {
   }
 }
 
-Object.assign(options, defaultOptions, customOptions)
+options = Object.assign(defaultOptions, options, customOptions)
 
 console.debug('DocSearch options:', options);
 
