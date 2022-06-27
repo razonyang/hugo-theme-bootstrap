@@ -45,12 +45,13 @@
   {{- $height = $params.height -}}
 {{- end -}}
 {{- $className := default "img-fluid" .class -}}
+{{- $posClassName := "" -}}
 {{- if eq $url.Fragment "center" -}}
-  {{- $className = printf "%s %s" $className "mx-auto d-block" -}}
+  {{- $posClassName = "mx-auto d-block" -}}
 {{- else if eq $url.Fragment "floatleft" -}}
-  {{- $className = printf "%s %s" $className "float-start me-2" -}}
+  {{- $posClassName = "float-start me-2" -}}
 {{- else if eq $url.Fragment "floatright" -}}
-  {{- $className = printf "%s %s" $className "float-end ms-2" -}}
+  {{- $posClassName = "float-end ms-2" -}}
 {{- end -}}
 
 {{- if and $pageResource $resizable (or $width $height) -}}
@@ -70,6 +71,13 @@
 {{- end -}}
 
 {{- $alternativeFormats := slice "avif" "webp" "jxl" -}}
+
+{{- $caption := and (default false .page.Site.Params.post.imageTitleAsCaption) .title }}
+
+{{- if $caption -}}
+{{- $className = printf "%s figure-img" $className -}}
+<figure class="figure{{ with $posClassName }} {{ . }}{{ end }}">
+{{- end -}}
 <picture>
   {{- range $alternativeFormats -}}
     {{- $filename := replace $url.Path $ext (printf ".%s" .) -}}
@@ -77,8 +85,12 @@
       <source srcset="{{ $filename | absURL }}" type="image/{{ . }}" />
     {{- end -}}
   {{- end -}}
-  <img class="{{ $className }}" alt="{{ .alt }}" src="{{ $link }}" loading="lazy"{{ with .attributes }} {{ . }}{{ end }}
+  <img class="{{ $className }}{{ if not $caption }} {{ $posClassName }}{{ end }}" alt="{{ .alt }}" src="{{ $link }}" loading="lazy"{{ with .attributes }} {{ . }}{{ end }}
     {{ with .title }} title="{{ . }}"{{ end }}
     {{ with $img }} width="{{ .Width }}" height="{{ .Height }}"{{ end }}
     {{ if and (not (and $pageResource $resizable)) (or $width $height) }}style="{{ with $width }}width: {{ . }}; {{ end }}{{ with $height }}height: {{ . }}{{ end }}"{{ end }} />
 </picture>
+{{- if $caption -}}
+<figcaption class="figure-caption">{{ .title }}</figcaption>
+</figure>
+{{- end -}}

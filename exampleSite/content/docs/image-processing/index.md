@@ -12,7 +12,8 @@ categories = [
   "Markdown"
 ]
 tags = [
-  "Image"
+  "Image",
+  "Caption"
 ]
 series = [
   "Docs"
@@ -86,3 +87,18 @@ For example: `![Float Left](/featured-sample.png#floatleft)`.
 Similarly, we can also float images to the right by adding the `#floatright` fragment.
 
 For example: `![Float Right](/featured-sample.png#floatright)`.
+
+## Caption
+
+HBS allows using image title as caption, this feature is disabled by default, you need to enable the `post.imageTitleAsCaption` parameter:
+
+{{< code-toggle filename="params" >}}
+post:
+  imageTitleAsCaption: true
+{{</ code-toggle >}}
+
+```markdown
+![Image Caption](/featured-sample.png "Use Image Title as Caption")
+```
+
+![Image Caption](/featured-sample.png "Use Image Title as Caption")

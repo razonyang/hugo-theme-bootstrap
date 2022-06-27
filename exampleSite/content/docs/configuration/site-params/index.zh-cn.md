@@ -123,6 +123,7 @@ weight = 980
 | `post.numberifyHeadingsEndLevel` | Number | `6` | 自动编号的深度。
 | `post.numberifyHeadingsSeparator` | String | - | 编号和标题之间的分隔符。
 | `post.tocStyleType` | String | `none` | 目录的 `list-style-type` CSS 属性。
+| `post.imageTitleAsCaption` | Boolean | `false` | 将图片标题作为 caption。
 | `viewer` | Boolean | true | [图片查看器]({{< ref "docs/image-viewer" >}})
 | `pwa` | Object | - | [渐进式 web 应用]({{< ref "/docs/pwa" >}})
 | **Sidebar**
