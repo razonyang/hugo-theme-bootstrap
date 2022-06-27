@@ -1,1 +1,16 @@
 @import '@docsearch/css/dist/style';
+
+.DocSearch-Container {
+    z-index: 1070;
+
+    @media (max-width: 750px) {
+        position: fixed;
+    }
+}
+
+.DocSearch-Button {
+  @media (max-width: 991.98px) {
+    margin: 0;
+    width: 100%;
+  }
+}
