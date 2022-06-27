@@ -144,8 +144,8 @@ viewer = true # Image Viewer
 #  # https://docsearch.algolia.com/docs/api
 #  # container = ".search-bar" # replace it if necessary, default to '.search-bar'.
 #  appId = "QJSHIZ7V63"
-#  apiKey = "f6bc4e6e0d647a2f50de600762a1bc0f"
-#  indexName = "razonyang"
+#  apiKey = "ddd1e0eb4b5bc657e3a1acbcb55fa06a"
+#  indexName = "hbs_all"
 #  # debug = true
 
 [reward]
