@@ -94,6 +94,7 @@ viewer = true # Image Viewer
   # numberifyHeadingsEndLevel = 4 # The depth of headings to count. Default to 6.
   numberifyHeadingsSeparator = "." # The separator between of number and headings.
   # tocStyleType = "decimal" # The TOC's CSS list-style-type property.
+  imageTitleAsCaption = true
 
 [archive]
   # basePath = "/archiv" # The base path of archive pages.

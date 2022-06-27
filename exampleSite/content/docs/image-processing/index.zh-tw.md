@@ -11,7 +11,8 @@ categories = [
   "Markdown"
 ]
 tags = [
-  "圖像"
+  "圖像",
+  "Caption"
 ]
 series = [
   "文檔"
@@ -86,3 +87,18 @@ aliases = [
 同樣的，我們也可以添加 `#floatright` 使圖片向右浮動。
 
 舉個例子：`![Float Right](/featured-sample.png#floatright)`。
+
+## Caption
+
+HBS 允許使用圖片標題作為 caption，但這個功能默認是關閉的，你需要啟用 `post.imageTitleAsCaption` 參數：
+
+{{< code-toggle filename="params" >}}
+post:
+  imageTitleAsCaption: true
+{{</ code-toggle >}}
+
+```markdown
+![Image Caption](/featured-sample.png "Use Image Title as Caption")
+```
+
+![Image Caption](/featured-sample.png "Use Image Title as Caption")

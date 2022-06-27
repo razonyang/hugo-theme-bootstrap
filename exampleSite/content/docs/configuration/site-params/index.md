@@ -120,6 +120,7 @@ The site parameters are located in `config/_default/params.toml` by default.
 | `post.numberifyHeadingsEndLevel` | Number | `6` | The depth of headings to count.
 | `post.numberifyHeadingsSeparator` | String | - | The separator between of number and headings.
 | `post.tocStyleType` | String | `none` | The TOC's CSS `list-style-type` property.
+| `post.imageTitleAsCaption` | Boolean | `false` | Use image title as caption.
 | `viewer` | Boolean | true | [Image Viewer]({{< ref "docs/image-viewer" >}})
 | `pwa` | Object | - | [Progressive Web Apps]({{< ref "/docs/pwa" >}})
 | **Sidebar**
