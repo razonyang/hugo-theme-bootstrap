@@ -1,5 +1,19 @@
 @import '@docsearch/css/dist/style';
 
+// Configuration
+@import '../../main/scss/functions';
+@import '../../main/scss/variables';
+@import '../../main/scss/variables-theme';
+@import '../../main/scss/variables-theme-dark';
+@import 'bootstrap/scss/variables';
+@import "bootstrap/scss/maps";
+@import '../../main/scss/mixins';
+@import 'bootstrap/scss/utilities';
+
+:root {
+  --docsearch-primary-color: var(--#{$prefix}primary);
+}
+
 .DocSearch-Container {
     z-index: 1070;
 
