@@ -100,6 +100,21 @@ other = "تدوينات مميزة"
 [font_size]
 other = "حجم الخط"
 
+[font_size_lg]
+other = "كبير"
+
+[font_size_md]
+other = "متوسط"
+
+[font_size_sm]
+other = "صغير"
+
+[font_size_xl]
+other = "كبير جدا"
+
+[font_size_xs]
+other = "صغير جدا"
+
 [go_back]
 other = "الرجوع للخلف"
 
@@ -117,6 +132,9 @@ other = "تحميل المزيد"
 
 [mode]
 other = "السمة"
+
+[noscript_info]
+other = "المتصفح الذي تستخدمه لا يدعم جافاسكريبت."
 
 [offline_title]
 other = "يبدو أنك غير متصل."
@@ -187,6 +205,9 @@ other = "الفِهْرِس"
 
 [tags]
 other = "التسميات"
+
+[tipeee]
+other = "تيبي"
 
 [try_again]
 other = "إعادة المحاولة"
