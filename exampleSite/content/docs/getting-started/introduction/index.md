@@ -44,7 +44,8 @@ Hugo Bootstap Theme(HBS) is a fast, responsive, multipurpose and feature-rich Hu
 - Light/Dark Mode.
 - Font Size Switcher.
 - Multilingual(I18N).
-- [Search]({{< ref "/docs/layouts/search" >}}).
+- [Local Search]({{< ref "/docs/layouts/search" >}}).
+- DocSearch.
 - Pinning Posts.
 - Footer Menu.
 - Code Block Panel: copy code, line number, line wrap and expand.
