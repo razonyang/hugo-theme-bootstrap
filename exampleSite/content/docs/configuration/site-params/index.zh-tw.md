@@ -124,6 +124,7 @@ weight = 980
 | `post.numberifyHeadingsSeparator` | String | - | 編號和標題之間的分隔符。
 | `post.tocStyleType` | String | `none` | 目錄的 `list-style-type` CSS 屬性。
 | `post.imageTitleAsCaption` | Boolean | `false` | 将图片标题作为 caption。
+| `post.panel` | Boolean | `true` | 是否顯示 post panel。
 | `viewer` | Boolean | true | [圖片查看器]({{< ref "docs/image-viewer" >}})
 | `pwa` | Object | - | [漸進式 web 應用]({{< ref "/docs/pwa" >}})
 | **Sidebar**

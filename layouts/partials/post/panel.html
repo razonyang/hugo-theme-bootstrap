@@ -1,3 +1,4 @@
+{{- if default true .Site.Params.post.panel -}}
 <div class="post-panel-wrapper position-sticky">
   <div class="d-flex flex-column component rounded post-panel position-absolute border">
     {{ partial "hooks/post-panel-begin" . }}
@@ -13,3 +14,4 @@
     {{ partial "hooks/post-panel-end" . }}
   </div>
 </div>
+{{- end -}}

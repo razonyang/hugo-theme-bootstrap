@@ -95,6 +95,7 @@ viewer = true # Image Viewer
   numberifyHeadingsSeparator = "." # The separator between of number and headings.
   # tocStyleType = "decimal" # The TOC's CSS list-style-type property.
   imageTitleAsCaption = true
+  # panel = false # Disable the post panel.
 
 [archive]
   # basePath = "/archiv" # The base path of archive pages.
