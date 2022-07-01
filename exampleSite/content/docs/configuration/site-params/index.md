@@ -82,7 +82,8 @@ The site parameters are located in `config/_default/params.toml` by default.
 | `docsearch.*` | Boolean/String/Number | - | https://docsearch.algolia.com/docs/api/
 | **Top App Bar**
 | `topAppBar` | Object | - |
-| `topAppBar.social` | Object | - | [Social Links]({{< ref "/docs/widgets/social-links" >}}). 
+| `topAppBar.social` | Object | - | [Social Links]({{< ref "/docs/widgets/social-links" >}}).
+| `topAppBar.colorToggle` | Boolean | `true` | Turn on/off the color/mode toggle.
 | **Webmaster Site Verification** 
 | `siteVerification` | Object | - |
 | `siteVerification.google` | String | - | Google

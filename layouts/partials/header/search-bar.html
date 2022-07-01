@@ -1,5 +1,6 @@
 {{- if .Site.Params.searchBar -}}
-<form class="search-bar mx-auto my-1" action="{{ absLangURL "search" }}" novalidate>
+<hr class="d-lg-none">
+<form class="search-bar ms-auto my-1" action="{{ absLangURL "search" }}" novalidate>
   <div class="input-group input-group-sm align-items-center">
     <span class="btn btn-search disabled position-absolute left-0 border-0">
       <i class="fas fa-fw fa-search fa-lg"></i>
@@ -7,5 +8,4 @@
     <input class="py-2 form-control rounded search-input" name="q" type="search" aria-label="Search" required>
   </div>
 </form>
-<hr class="d-lg-none">
 {{- end -}}

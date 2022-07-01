@@ -1,3 +1,4 @@
+{{- if default true .Site.Params.topAppBar.colorToggle -}}
 <li class="nav-item dropdown py-2 py-lg-1 col-6 col-lg-auto">
     {{- $modes := dict "light" (dict "icon" "sun") "dark" (dict "icon" "moon") "auto" (dict "icon" "adjust") -}}
     {{- $mode := default "auto" $.Site.Params.color -}}
@@ -16,3 +17,4 @@
         {{- end -}}
     </ul>
 </li>
+{{- end -}}

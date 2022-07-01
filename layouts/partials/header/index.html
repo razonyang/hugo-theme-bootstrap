@@ -61,8 +61,9 @@
           {{- end -}}
           {{- end -}}
         </ul>
-        <hr class="d-lg-none">
         {{ partial "header/search-bar" . }}
+        {{- if or (default true .Site.Params.topAppBar.colorToggle) (isset $.Site.Params "fontsize") ( gt (len $.Site.Home.AllTranslations) 1) (.Site.Params.Palettes) (.Site.Params.topAppBar.social) -}}
+        <hr class="d-lg-none">
         <ul class="navbar-nav flex-row flex-wrap align-items-center ms-md-auto">
           {{- partial "header/social-links" . }}
           {{- partial "header/languages" . }}
@@ -70,6 +71,7 @@
           {{- partial "header/palettes" . -}}
           {{- partial "header/theme" . -}}
         </ul>
+        {{- end -}}
       </div>
     </div>
   </div>

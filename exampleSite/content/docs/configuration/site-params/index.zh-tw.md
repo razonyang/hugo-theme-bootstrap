@@ -85,6 +85,7 @@ weight = 980
 | **頂部應用欄**
 | `topAppBar` | Object | - |
 | `topAppBar.social` | Object | - | [社交鏈接]({{< ref "/docs/widgets/social-links" >}})。
+| `topAppBar.colorToggle` | Boolean | `true` | 開啟或禁用顏色/模式開關。
 | **Webmaster Site Verification** 
 | `siteVerification` | Object | - |
 | `siteVerification.google` | String | - | Google
