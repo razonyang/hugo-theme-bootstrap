@@ -31,16 +31,13 @@ aliases = [
 
 ## 前置條件
 
-首先，我們需要在設定檔的 `home` 輸出格式中追加 `JSON`。
+你只需要在 `content` 目錄下創建一個名為 `search/_ index.md` 的頁面。
 
 ```toml
-[outputs]
-  home = ["HTML", "RSS", "JSON"]
++++
+title = "Search"
++++
 ```
-
-> 此步驟生成一個索引檔案 `index.json`，以便 JavaScript 可以檢索內容。
-
-然後，在 `content` 目錄下創建一個名為 `search/_ index.md` 的頁面。
 
 ## 網站參數
 
