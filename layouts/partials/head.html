@@ -4,7 +4,7 @@
 {{- partial "head/meta" . -}}
 {{- partial "head/feed" . -}}
 {{- partial "head/site-verification" . -}}
-{{- if eq .Permalink (absLangURL "search/") -}}
-<meta data-name="search-index" content="{{ absLangURL "index.json" }}">
+{{- if or (eq .Permalink (absURL "search/")) (eq .Permalink (absLangURL "search/")) -}}
+<meta data-name="search-index" content="{{ if gt (len $.Site.Home.AllTranslations) 1 }}{{ absLangURL "/index.json" }}{{ else }}{{ absURL "/index.json" }}{{ end }}">
 {{- end -}}
 {{- partial "head/assets" . -}}
