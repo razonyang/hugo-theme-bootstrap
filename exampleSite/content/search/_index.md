@@ -1,4 +1,3 @@
 +++
 title = "Search"
-layout = "search"
 +++
