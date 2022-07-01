@@ -7,6 +7,7 @@ declare global {
     fuseOptions: any;
     searchResultContentWordCount: number;
     searchPaginate: number;
+    searchIndex: string;
   }
 }
 
@@ -93,7 +94,7 @@ export class Search {
       }
     };
     xhr.responseType = 'json';
-    xhr.open('GET', document.head.querySelector('meta[data-name="search-index"]').getAttribute('content'), true);
+    xhr.open('GET', window.searchIndex, true);
     xhr.send(null);
   }
 

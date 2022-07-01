@@ -1,0 +1,28 @@
+{{- $.Scratch.Add "index" slice -}}
+{{- range .Site.RegularPages -}}
+    {{- $date := .Date.Format $.Site.Params.dateFormat -}}
+    {{- $title := .Title }}
+    {{- if $.Site.Params.titleCase -}}
+        {{- $title = title $title -}}
+    {{- end -}}
+    {{- $img := "" -}}
+    {{- $smallImg := "" -}}
+    {{- $largeImg := "" -}}
+    {{- if .Params.Images -}}
+      {{- $img = index .Params.Images 0 | absURL -}}
+    {{- else -}}
+      {{- $images := .Resources.ByType "image" -}}
+      {{- $featured := $images.GetMatch "*feature*" -}}
+      {{- if not $featured }}{{ $featured = $images.GetMatch "{*cover*,*thumbnail*}" }}{{ end -}}
+      {{- with $featured -}}
+        {{- $smallImage := $featured.Resize "180x" -}}
+        {{- $smallImg = $smallImage.Permalink -}}
+        {{- $largeImage := $featured.Resize "500x" -}}
+        {{- $largeImg = $largeImage.Permalink -}}
+        {{- $img = $featured.Permalink -}}
+      {{- end -}}
+    {{- end -}}
+    {{- $item := (dict "title" $title "tags" .Params.tags "categories" .Params.categories "series" .Params.series "content" .Plain "permalink" .Permalink "date" $date "img" $img "smallImg" $smallImg "largeImg" $largeImg) -}}
+    {{- $.Scratch.Add "index" $item -}}
+{{- end -}}
+{{- $.Scratch.Get "index" | uniq | jsonify -}}
