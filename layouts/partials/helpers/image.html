@@ -8,6 +8,7 @@
 {{- $url := urls.Parse .filename -}}
 {{- $static := false -}}
 {{- $ext := "" -}}
+{{- $lazyLoading := default true .lazyLoading -}}
 {{- if not $url.Scheme -}}
   {{- $ext = $url.Path | path.Ext | lower -}}
   {{- $resource := .resources.GetMatch (strings.TrimPrefix "/" $url.Path) -}}
@@ -85,7 +86,9 @@
       <source srcset="{{ $filename | absURL }}" type="image/{{ . }}" />
     {{- end -}}
   {{- end -}}
-  <img class="{{ $className }}{{ if not $caption }} {{ $posClassName }}{{ end }}" alt="{{ .alt }}" src="{{ $link }}" loading="lazy"{{ with .attributes }} {{ . }}{{ end }}
+  <img class="{{ $className }}{{ if not $caption }} {{ $posClassName }}{{ end }}" alt="{{ .alt }}" src="{{ $link }}"
+    {{ with $lazyLoading }} loading="lazy"{{ end }}
+    {{ with .attributes }} {{ . }}{{ end }}
     {{ with .title }} title="{{ . }}"{{ end }}
     {{ with $img }} width="{{ .Width }}" height="{{ .Height }}"{{ end }}
     {{ if and (not (and $pageResource $resizable)) (or $width $height) }}style="{{ with $width }}width: {{ . }}; {{ end }}{{ with $height }}height: {{ . }}{{ end }}"{{ end }} />
