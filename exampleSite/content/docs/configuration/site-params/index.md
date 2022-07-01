@@ -122,6 +122,7 @@ The site parameters are located in `config/_default/params.toml` by default.
 | `post.tocStyleType` | String | `none` | The TOC's CSS `list-style-type` property.
 | `post.imageTitleAsCaption` | Boolean | `false` | Use image title as caption.
 | `post.panel` | Boolean | `true` | Turn on/off the post panel.
+| `post.nav` | Boolean | `true` | Turn on/off the navigations.
 | `viewer` | Boolean | true | [Image Viewer]({{< ref "docs/image-viewer" >}})
 | `pwa` | Object | - | [Progressive Web Apps]({{< ref "/docs/pwa" >}})
 | **Sidebar**

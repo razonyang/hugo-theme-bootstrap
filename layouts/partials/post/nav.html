@@ -1,4 +1,4 @@
-{{- if or .PrevInSection .NextInSection -}}
+{{- if and (default true .Site.Params.post.nav) (default true .Params.nav) (or .PrevInSection .NextInSection) -}}
 <div class="post-navs d-flex justify-content-evenly">
   {{- with .PrevInSection -}}
   <div class="post-nav post-prev">

@@ -96,6 +96,7 @@ viewer = true # Image Viewer
   # tocStyleType = "decimal" # The TOC's CSS list-style-type property.
   imageTitleAsCaption = true
   # panel = false # Disable the post panel.
+  # nav = false # Disable post navigations.
 
 [archive]
   # basePath = "/archiv" # The base path of archive pages.
