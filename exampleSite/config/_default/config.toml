@@ -41,7 +41,7 @@ pygmentsUseClasses = true
     mediaType = "application/manifest+json"
 
 [outputs]
-  home = ["HTML", "RSS", "JSON", "MANIFEST"]
+  home = ["HTML", "RSS", "MANIFEST"]
 
 [taxonomies]
   category = "categories"
