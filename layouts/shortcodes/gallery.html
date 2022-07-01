@@ -1,8 +1,8 @@
-<div class="row row-cols-1 row-cols-sm-2 row-cols-md-4" data-masonry='{"percentPosition": true }'>
+<div class="gallery row row-cols-1 row-cols-sm-2 row-cols-md-4" data-masonry='{"percentPosition": true }'>
     {{ range (split (.Get "images") ",") }}
-    <div class="col mb-4" >
+    <div class="col mb-4">
         <div class="card">
-            {{ partial "helpers/image" (dict "filename" . "class" "card-img-top" "resources" $.Page.Resources "lazyLoading" false) }}
+            {{ partial "helpers/image" (dict "filename" . "class" "gallery-img card-img-top" "resources" $.Page.Resources "lazyLoading" false) }}
         </div>
     </div>
     {{ end }}
