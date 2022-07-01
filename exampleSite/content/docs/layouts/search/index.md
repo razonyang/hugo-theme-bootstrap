@@ -31,21 +31,11 @@ It may be difficult for readers to retrieve an article in the case if there are 
 
 ## Prerequisites
 
-First of all, we need to append `JSON` to the `home` outputs in the configuration file.
-
-```toml
-[outputs]
-  home = ["HTML", "RSS", "JSON"]
-```
-
-> This step generates an index file `index.json`, in order to retrieve content by JavaScript.
-
-Secondary, create a page called `search/_index.md` in the `content` directory.
+All you need to do is create a page called `search/_index.md` in the `content` directory.
 
 ```toml
 +++
 title = "Search"
-layout = "search"
 +++
 ```
 
