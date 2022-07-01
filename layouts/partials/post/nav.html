@@ -1,16 +1,18 @@
 {{- if and (default true .Site.Params.post.nav) (default true .Params.nav) (or .PrevInSection .NextInSection) -}}
-<div class="post-navs d-flex justify-content-evenly">
-  {{- with .PrevInSection -}}
-  <div class="post-nav post-prev">
-    <i class="fas fa-fw fa-chevron-down post-prev-icon me-1" data-fa-transform="rotate-90"></i>
-    <a href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a>
+<div class="card-footer">
+  <div class="post-navs d-flex justify-content-evenly">
+    {{- with .PrevInSection -}}
+    <div class="post-nav post-prev">
+      <i class="fas fa-fw fa-chevron-down post-prev-icon me-1" data-fa-transform="rotate-90"></i>
+      <a href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a>
+    </div>
+    {{- end -}}
+    {{- with .NextInSection -}}
+    <div class="post-nav post-next">
+      <a href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a>
+      <i class="fas fa-fw fa-chevron-down post-next-icon ms-1" data-fa-transform="rotate-270"></i>
+    </div>
+    {{- end -}}
   </div>
-  {{- end -}}
-  {{- with .NextInSection -}}
-  <div class="post-nav post-next">
-    <a href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a>
-    <i class="fas fa-fw fa-chevron-down post-next-icon ms-1" data-fa-transform="rotate-270"></i>
-  </div>
-  {{- end -}}
 </div>
 {{- end -}}
