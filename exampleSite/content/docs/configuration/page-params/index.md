@@ -38,6 +38,7 @@ Page parameters are located in page's [Front Matter](https://gohugo.io/content-m
 | `postDate` | Boolean | `true` | Whether to display the post date in the post meta section.
 | `copyright` | Boolean | `true` | Whether to display copyright section.
 | `carousel` | Boolean | `false` | Show on carousel.
+| `nav` | Boolean | `true` | Turn on/off the navigations.
 | **Creative Commons License**
 | `creativeCommons` | Object | - |
 | `creativeCommons.by` | Boolean | `true` | Credit must be given to you, the creator.

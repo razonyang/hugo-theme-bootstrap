@@ -37,6 +37,7 @@ weight = 970
 | `postDate` | Boolean | `true` | 是否顯示發表日期
 | `copyright` | Boolean | `true` | 是否顯示版權部分
 | `carousel` | Boolean | `false` | 是否在 Carousel 顯示
+| `nav` | Boolean | `true` | 是否顯示上一篇和下一篇
 | **Creative Commons License**
 | `creativeCommons` | Object | - |
 | `creativeCommons.by` | Boolean | `true` | 署名
