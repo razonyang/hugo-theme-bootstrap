@@ -51,28 +51,7 @@ Firstly, we need to specify the `pwa` parameter, even it is empty.
 
 ## Manifest
 
-Secondary, we add a custom output format called `MANIFEST` in the configuration file, in order to make our site installable.
-
-```toml
-[mediaTypes]
-  [mediaTypes."application/manifest+json"]
-    suffixes = ["json"]
-  
-[outputFormats]
-  [outputFormats.MANIFEST]
-    name = "manifest"
-    baseName = "manifest"
-    mediaType = "application/manifest+json"
-```
-
-And then append the `MANIFEST` to your `home`'s output.
-
-```toml
-[outputs]
-  home = ["HTML", "RSS", "JSON", "MANIFEST"]
-```
-
-> Hugo will generate the `manifest.json` in the site root.
+The `manifest.json` will be generated automatically.
 
 ## Offline
 

@@ -50,28 +50,7 @@ PWAs([漸進式 web 應用程序](https://developer.mozilla.org/en-US/docs/Web/P
 
 ## Manifest
 
-接著，我們在設定檔中添加一個名為 `MANIFEST` 的自定義輸出格式，以便讓我們的網站可安裝。
-
-```toml
-[mediaTypes]
-  [mediaTypes."application/manifest+json"]
-    suffixes = ["json"]
-  
-[outputFormats]
-  [outputFormats.MANIFEST]
-    name = "manifest"
-    baseName = "manifest"
-    mediaType = "application/manifest+json"
-```
-
-然後在 `home` 輸出追加 `MANIFEST`。
-
-```toml
-[outputs]
-  home = ["HTML", "RSS", "JSON", "MANIFEST"]
-```
-
-> Hugo 會在網站根目錄生成 `manifest.json`。
+主題會自動生成 `manifest.json`。
 
 ## 離線
 

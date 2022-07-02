@@ -51,28 +51,7 @@ PWAs([渐进式 web 应用程序](https://developer.mozilla.org/en-US/docs/Web/P
 
 ## Manifest
 
-接着，我们在配置文件中添加一个名为 `MANIFEST` 的自定义输出格式，以便让我们的站点可安装。
-
-```toml
-[mediaTypes]
-  [mediaTypes."application/manifest+json"]
-    suffixes = ["json"]
-  
-[outputFormats]
-  [outputFormats.MANIFEST]
-    name = "manifest"
-    baseName = "manifest"
-    mediaType = "application/manifest+json"
-```
-
-然后在 `home` 输出追加 `MANIFEST`。
-
-```toml
-[outputs]
-  home = ["HTML", "RSS", "JSON", "MANIFEST"]
-```
-
-> Hugo 会在站点根目录生成 `manifest.json`。
+主题会自动生成 `manifest.json`。
 
 ## 离线
 
