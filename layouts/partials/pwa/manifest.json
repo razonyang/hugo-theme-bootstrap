@@ -1,0 +1,11 @@
+{{- $params := dict "lang" $.Language.Lang "name" $.Site.Title "description" $.Site.Params.description "start_url" "/" "scope" "/" "display" "standalone" -}}
+{{- $icons := slice -}}
+{{- $iconSizes := slice "48x48" "72x72" "96x96" "144x144" "168x168" "192x192" "256x256" "512x512" -}}
+{{- range $iconSizes -}}
+    {{- $icons = $icons | append (dict "src" (printf "/images/icons/icon-%s.png" . | absURL) "sizes" .) -}}
+{{- end -}}
+{{- $params = merge $params (dict "icons" $icons) -}}
+{{- with $.Site.Params.pwa.manifest -}}
+    {{- $params = merge $params . -}}
+{{- end -}}
+{{- $params | jsonify -}}

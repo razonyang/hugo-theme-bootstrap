@@ -1,8 +1,8 @@
+{{- if isset $.Site.Params "pwa" -}}
 {{- $options := dict "targetPath" "service-worker.min.js" "minify" true -}}
 {{- $index := resources.Get "service-worker/index.ts" }}
 {{- $config := resources.Get "service-worker/config.template.ts" | resources.ExecuteAsTemplate "service-worker/config.ts" . -}}
 {{- $script := slice $config $index | resources.Concat "service-worker/bundle.ts" | js.Build $options -}}
-{{- if isset $.Site.Params "pwa" -}}
 <script>
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
