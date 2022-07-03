@@ -7,7 +7,12 @@ class PathLocalStorage {
         if (baseURL.substring(0, 2) === '//') {
             baseURL = 'http:' + baseURL;
         }
-        let url = new URL(baseURL);
+        let url: URL;
+        try {
+            url = new URL(baseURL);
+        } catch (e) {
+            url = new URL(baseURL, location.protocol + '//' + location.host);
+        }
         let pathname = url.pathname.replace(/^(\/+)/, '').replace(/(\/+)$/, '')
         if (pathname !== '') {
             this.prefix +=  pathname.replace('/', '-') + ':'
