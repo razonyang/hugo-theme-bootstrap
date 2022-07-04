@@ -4,15 +4,30 @@
   {{- $img := index .Params.images 0 -}}
   {{- $ext := $img | path.Ext }}
   {{- $url := urls.Parse $img -}}
+  {{- $width := false -}}
+  {{- $height := false }}
+  {{- $validExts := slice ".svg" ".avif" -}}
   {{- if not $url.Scheme -}}
     {{- range $formats -}}
       {{- $filename := replace $img $ext (printf ".%s" .) -}}
       {{- if and (not (strings.HasSuffix $ext .)) (fileExists (path.Join "static" $filename)) -}}
         <source srcset="{{ $filename | absURL }}" type="image/{{ . }}" />
       {{- end -}}
+    {{- end -}}
+    {{- $filename := path.Join "static" $url.Path -}}
+    {{- if fileExists $filename -}}
+      {{- if not (in $validExts $ext) -}}
+        {{- $config := imageConfig $filename -}}
+        {{- $width = $config.Width -}}
+        {{- $height = $config.Height -}}
       {{- end -}}
+    {{- else -}}
+      {{- warnf "no such image can be found in page resources and the static folder: %s" .filename -}}
+    {{- end -}}
   {{- end -}}
-    <img class="img-fluid" alt="{{ .Title }}" src="{{ $img | absURL  }}" loading="lazy"/>
+    <img class="img-fluid" alt="{{ .Title }}" src="{{ $img | absURL  }}" loading="lazy"
+    {{ with $width }} width="{{ . }}"{{ end }}
+    {{ with $height}} height="{{ . }}"{{ end }}/>
   </picture>
 {{- else -}}
   {{- $images := .Resources.ByType "image" -}}
@@ -22,8 +37,8 @@
   {{- $smallImage := $featured.Resize "180x" -}}
   {{- $largeImage := $featured.Resize "500x" -}}
   <picture>
-    <source srcset="{{ $largeImage.Permalink }}" media="(max-width: 576px)">
-    <img class="img-fluid" alt="{{ .Title }}" src="{{ $smallImage.Permalink  }}" data-src="{{ $featured.Permalink }}" loading="lazy"/>
+    <source srcset="{{ $largeImage.Permalink }}" media="(max-width: 576px)" height="{{ $largeImage.Height }}" width="{{ $largeImage.Width }}">
+    <img class="img-fluid" height="{{ $smallImage.Height }}" width="{{ $smallImage.Width }}" alt="{{ .Title }}" src="{{ $smallImage.Permalink  }}" data-src="{{ $featured.Permalink }}" loading="lazy"/>
   </picture>
   {{- end -}}
 {{- end -}}
