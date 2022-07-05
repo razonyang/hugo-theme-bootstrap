@@ -22,7 +22,7 @@
         {{- $height = $config.Height -}}
       {{- end -}}
     {{- else -}}
-      {{- warnf "no such image can be found in page resources and the static folder: %s" .filename -}}
+      {{- warnf "no such image can be found in page resources and the static folder: %s" $filename -}}
     {{- end -}}
   {{- end -}}
     <img class="img-fluid" alt="{{ .Title }}" src="{{ $img | absURL  }}" loading="lazy"
