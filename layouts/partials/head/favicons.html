@@ -1,4 +1,5 @@
-{{- $config := slice (dict "size" "16x16") (dict "size" "32x32") (dict "size" "48x48") (dict "size" "180x180" "rel" "apple-touch-icon") }}
+{{- $config := slice (dict "size" "16x16") (dict "size" "32x32") (dict "size" "180x180" "rel" "apple-touch-icon") }}
+{{- $config = $config | append (dict "size" "150x150") (dict "size" "192x192") -}}
 {{- $favicon := resources.Get "static/favicon.png" }}
 {{- range $config }}
   {{- $filename := printf "icon-%s.png" .size }}
