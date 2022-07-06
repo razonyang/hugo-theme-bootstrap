@@ -10,16 +10,27 @@ class Utterances {
                 self.rerender(self.getTheme(e.detail.mode));
             });
             setTimeout(function() {
-                self.rerender('github-' + LocalStorage.getItem('mode'));
+                self.rerender(self.getTheme(LocalStorage.getItem('mode')));
             }, 2000);
         }
     }
 
+    getPreferMode(): string {
+      if (window.getComputedStyle(document.body).getPropertyValue('--mode').toString().trim() === 'dark') {
+        return 'dark';
+      }
+      return 'light';
+    }
+
     getTheme(mode) {
+        if (mode === 'auto') {
+             mode = this.getPreferMode();
+        }
         return mode === 'dark' ? 'github-dark' : 'github-light';
     }
 
     rerender(theme) {
+        console.log(theme);
         const msg = {
             type: 'set-theme',
             theme: theme
