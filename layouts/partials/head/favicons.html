@@ -1,5 +1,21 @@
-<link rel="apple-touch-icon" href="{{ absURL "images/icons/icon-180x180.png" }}" sizes="180x180">
-<link rel="icon" href="{{ absURL "images/icons/icon-32x32.png" }}" sizes="32x32" type="image/png">
-<link rel="icon" href="{{ absURL "images/icons/icon-16x16.png" }}" sizes="16x16" type="image/png">
-<link rel="icon" href="{{ absURL "images/icons/favicon.ico" }}">
-<link rel="manifest" href="{{ absLangURL "manifest.json" }}">
+{{- $config := slice (dict "size" "16x16") (dict "size" "32x32") (dict "size" "48x48") (dict "size" "180x180" "rel" "apple-touch-icon") }}
+{{- $favicon := resources.Get "static/favicon.png" }}
+{{- range $config }}
+  {{- $filename := printf "icon-%s.png" .size }}
+  {{- $rel := default "icon" .rel -}}
+  {{- $filepath := path.Join "static" "images" "icons" $filename }}
+  {{- if fileExists $filepath }}
+    {{- $file := readFile $filepath }}
+    <link rel="{{ $rel }}" href="{{ printf "images/icons/%s" $filename | absURL }}?version={{ $file | md5 }}" sizes="{{ .size }}">
+  {{- else }}
+    {{- $img := $favicon.Resize .size }}
+    <link rel="{{ $rel }}" href="{{ $img.Permalink }}" sizes="{{ .size }}" type="{{ $img.MediaType }}">
+  {{- end }}
+{{- end -}}
+
+{{- $fallbackIcon := "images/icons/favicon.ico" }}
+{{- $fallbackIconPath := path.Join "static" $fallbackIcon }}
+{{- if fileExists $fallbackIconPath }}
+  {{- $fallbackIconFile := readFile $fallbackIconPath -}}
+  <link rel="icon" href="{{ absURL $fallbackIcon }}?version={{ $fallbackIconFile | md5 }}">
+{{- end -}}
