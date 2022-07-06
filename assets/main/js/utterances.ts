@@ -30,7 +30,6 @@ class Utterances {
     }
 
     rerender(theme) {
-        console.log(theme);
         const msg = {
             type: 'set-theme',
             theme: theme
