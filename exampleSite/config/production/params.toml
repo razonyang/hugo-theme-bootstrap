@@ -2,5 +2,5 @@ metaRobots = "index, follow" # Default value for Meta Tag "robots"
 
 [docsearch]
   appId = "QJSHIZ7V63"
-  apiKey = "ddd1e0eb4b5bc657e3a1acbcb55fa06a"
-  indexName = "hbs_v1"
+  apiKey = "664dc009c2ff1891823c07720e5f79ed"
+  indexName = "razonyang_hbs_v1"
