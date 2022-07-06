@@ -194,6 +194,9 @@ other = "لا يوجد نتائج"
 [search_stat]
 other = "عُثر على {{ .Total }} نتيجة"
 
+[sections]
+other = "الأقسام"
+
 [series]
 other = "السلاسل"
 

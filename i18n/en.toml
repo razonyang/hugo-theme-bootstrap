@@ -194,6 +194,9 @@ other = "No results found"
 [search_stat]
 other = "Found {{ .Total }} results"
 
+[sections]
+other = "Sections"
+
 [series]
 other = "Series"
 
