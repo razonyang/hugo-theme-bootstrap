@@ -18,7 +18,11 @@
 
     img {
         width: 100%;
-        height: 420px;
+        height: 450px;
+
+        @include media-breakpoint-down(lg) {
+            height: 270px;
+        }
 
         @include media-breakpoint-down(sm) {
             height: 180px;

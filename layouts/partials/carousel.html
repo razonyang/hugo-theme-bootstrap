@@ -41,26 +41,32 @@
 
 {{- define "carousel-thumbnail" -}}
 {{- $smallImageURL := "/images/none.png" -}}
+{{- $mediumImageURL := "/images/none.png" -}}
 {{- $largeImageURL := "/images/none.png" -}}
 {{- $featured := false -}}
 {{- $lazyLoading := .lazyLoading -}}
 {{ if .page.Params.images }}
     {{ $smallImageURL = index .page.Params.images 0 | absURL }}
+    {{ $mediumImageURL = $smallImageURL }}
     {{ $largeImageURL = $smallImageURL }}
 {{- else -}}
   {{- $images := .page.Resources.ByType "image" -}}
   {{- $featured = $images.GetMatch "*feature*" -}}
   {{- if not $featured }}{{ $featured = $images.GetMatch "{*cover*,*thumbnail*}" }}{{ end -}}
   {{- with $featured -}}
-    {{- $smallImage := $featured.Resize "x180" -}}
+    {{- $ratio := div $featured.Width $featured.Height }}
+    {{- $smallImage := $featured.Crop "320x180 smart" -}}
     {{- $smallImageURL = $smallImage.Permalink -}}
-    {{- $largeImage := $featured.Resize "x420" -}}
+    {{- $mediumImage := $featured.Crop "480x270 smart" -}}
+    {{- $mediumImageURL = $mediumImage.Permalink -}}
+    {{- $largeImage := $featured.Crop "800x450 smart" -}}
     {{- $largeImageURL = $largeImage.Permalink -}}
   {{- end -}}
 {{- end -}}
 <picture>
-  <source srcset="{{ $smallImageURL }}" media="(max-width: 576px)">
-  <img class="d-block w-100" alt="{{ .Title }}" src="{{ $largeImageURL }}"{{ if $lazyLoading }} loading="lazy"{{ end }}
-    {{ with $featured }} data-src="{{ .Permalink }}"{{ end }}/>
+    <source srcset="{{ $smallImageURL }}" media="(max-width: 576px)">
+    <source srcset="{{ $mediumImageURL }}" media="(max-width: 991.98px)">
+    <img class="d-block w-100" alt="{{ .Title }}" src="{{ $largeImageURL }}"{{ if $lazyLoading }} loading="lazy"{{ end }}
+        {{ with $featured }} data-src="{{ .Permalink }}"{{ end }}/>
 </picture>
 {{- end -}}
