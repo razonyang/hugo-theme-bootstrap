@@ -19,8 +19,6 @@
 {{- if fileExists $fallbackIconPath }}
   {{- $fallbackIconFile := readFile $fallbackIconPath -}}
   <link rel="icon" href="{{ absURL $fallbackIcon }}?version={{ $fallbackIconFile | md5 }}">
-{{- else }}
-  <link rel="icon" href="{{ $favicon.Permalink }}">
 {{- end -}}
 {{- $maskIcon := resources.Get "safari-pinned-tab.svg" }}
 <link rel="mask-icon" href="{{ $maskIcon.Permalink }}" color="#6f42c1">
