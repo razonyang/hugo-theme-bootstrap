@@ -119,7 +119,7 @@ post:
 ![Image Caption](/featured-sample.png "Use Image Title as Caption")
 ```
 
-![Image Caption](/featured-sample.png "Use Image Title as Caption")
+![Image Caption](/featured-sample.png?fit=300x200 "Use Image Title as Caption")
 
 ## Crop Images
 
