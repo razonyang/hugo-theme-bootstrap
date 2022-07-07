@@ -47,12 +47,19 @@
 {{- end -}}
 {{- $className := default "img-fluid" .class -}}
 {{- $posClassName := "" -}}
+{{- $clearfix := false -}}
 {{- if eq $url.Fragment "center" -}}
   {{- $posClassName = "mx-auto d-block" -}}
 {{- else if eq $url.Fragment "floatleft" -}}
   {{- $posClassName = "float-start me-2" -}}
+  {{- $clearfix = true -}}
 {{- else if eq $url.Fragment "floatright" -}}
   {{- $posClassName = "float-end ms-2" -}}
+  {{- $clearfix = true -}}
+{{- end -}}
+
+{{- if and $pageResource $resizable $img }}
+{{ $img  = $img.Filter (images.Overlay $img 50 50 )}}
 {{- end -}}
 
 {{- if and $pageResource $resizable (or $width $height) -}}
@@ -75,6 +82,9 @@
 
 {{- $caption := and (default false .page.Site.Params.post.imageTitleAsCaption) .title }}
 
+{{- if $clearfix }}
+<div class="clearfix">
+{{- end }}
 {{- if $caption -}}
 {{- $className = printf "%s figure-img" $className -}}
 <figure class="figure{{ with $posClassName }} {{ . }}{{ end }}">
@@ -96,4 +106,7 @@
 {{- if $caption -}}
 <figcaption class="figure-caption">{{ .title }}</figcaption>
 </figure>
+{{- end }}
+{{- if $clearfix }}
+</div>
 {{- end -}}
