@@ -36,6 +36,10 @@ However, the default scheme cannot satisfy everyone, but don't worry, you can ea
 
 <!--more-->
 
+## Favicons
+
+HBS generates icons in multiple sizes base on the file `assets/favicon.png`.
+
 ## Background Image
 
 ```toml {title="config/_default/params.toml"}
