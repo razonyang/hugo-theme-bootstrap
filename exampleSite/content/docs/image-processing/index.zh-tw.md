@@ -153,9 +153,9 @@ Crop and resize an image to match the given dimensions. You must provide both wi
 
 | Examples | | |
 |:-:|:-:|:-:|
-| ![Fill Image](/sample2.jpg?fill=200x200,TopLeft "fill=200x200,TopLeft") | ![Fill Image](/sample2.jpg?fill=200x200,Top "fill=200x200,Top") | ![Fill Image](/sample2.jpg?fill=200x200,TopRight "fill=200x200,TopRight") |
-| ![Fill Image](/sample2.jpg?fill=200x200,Left "fill=200x200,Left") | ![Fill Image](/sample2.jpg?fill=200x200,Center "fill=200x200,Center") | ![Fill Image](/sample2.jpg?fill=200x200,Right "fill=200x200,Right") |
-| ![Fill Image](/sample2.jpg?fill=200x200,BottomLeft "fill=200x200,BottomLeft") | ![Fill Image](/sample2.jpg?fill=200x200,Bottom "fill=200x200,Bottom") | ![Fill Image](/sample2.jpg?fill=200x200,BottomRight "fill=200x200,BottomRight") |
+| ![Fill Image](/featured-sample.png?fill=150x200,TopLeft "fill=150x200,TopLeft") | ![Fill Image](/featured-sample.png?fill=150x200,Top "fill=150x200,Top") | ![Fill Image](/featured-sample.png?fill=150x200,TopRight "fill=150x200,TopRight") |
+| ![Fill Image](/featured-sample.png?fill=150x200,Left "fill=150x200,Left") | ![Fill Image](/featured-sample.png?fill=150x200,Center "fill=150x200,Center") | ![Fill Image](/featured-sample.png?fill=150x200,Right "fill=150x200,Right") |
+| ![Fill Image](/featured-sample.png?fill=150x200,BottomLeft "fill=150x200,BottomLeft") | ![Fill Image](/featured-sample.png?fill=150x200,Bottom "fill=150x200,Bottom") | ![Fill Image](/featured-sample.png?fill=150x200,BottomRight "fill=150x200,BottomRight") |
 
 ## Fit Images
 
