@@ -1,7 +1,7 @@
 {{- $params := dict "lang" $.Language.Lang "name" $.Site.Title "description" $.Site.Params.description "start_url" "/" "scope" "/" "display" "standalone" -}}
 {{- $favicon := resources.Get "static/favicon.png" }}
 {{- $icons := slice -}}
-{{- $iconSizes := slice "48x48" "72x72" "96x96" "128x128" "144x144" "152x152" "192x192" "256x256" "512x512" -}}
+{{- $iconSizes := slice "48x48" "72x72" "96x96" "144x144" "192x192" "256x256" "512x512" -}}
 {{- range $iconSizes -}}
     {{- $filename := printf "images/icons/icon-%s.png" . -}}
     {{- if fileExists (path.Join "static" $filename) -}}
