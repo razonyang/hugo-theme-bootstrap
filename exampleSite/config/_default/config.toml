@@ -27,6 +27,8 @@ enableEmoji = true
 
 pygmentsUseClasses = true
 
+timeout = "120s"
+
 [blackfriday]
   hrefTargetBlank = true
 
