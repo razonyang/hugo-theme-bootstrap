@@ -1,6 +1,6 @@
 {{- $config := slice (dict "size" "16x16") (dict "size" "32x32") (dict "size" "180x180" "rel" "apple-touch-icon") }}
 {{- $config = $config | append (dict "size" "150x150") (dict "size" "192x192") -}}
-{{- $favicon := resources.Get "static/favicon.png" }}
+{{- $favicon := resources.Get "favicon.png" }}
 {{- range $config }}
   {{- $filename := printf "icon-%s.png" .size }}
   {{- $rel := default "icon" .rel -}}
@@ -19,6 +19,8 @@
 {{- if fileExists $fallbackIconPath }}
   {{- $fallbackIconFile := readFile $fallbackIconPath -}}
   <link rel="icon" href="{{ absURL $fallbackIcon }}?version={{ $fallbackIconFile | md5 }}">
+{{- else }}
+  <link rel="icon" href="{{ $favicon.Permalink }}">
 {{- end -}}
-{{- $maskIcon := resources.Get "static/safari-pinned-tab.svg" }}
+{{- $maskIcon := resources.Get "safari-pinned-tab.svg" }}
 <link rel="mask-icon" href="{{ $maskIcon.Permalink }}" color="#6f42c1">
