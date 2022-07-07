@@ -13,13 +13,18 @@
           {{- end -}}
         {{- end -}}
       {{- end -}}
-      <img class="post-featured-img w-100 mb-3" alt="{{ .Title }}" src="{{ $img | absURL  }}" loading="lazy"/>
+      <img class="post-featured-img w-100 mb-3" alt="{{ .Title }}" src="{{ $img | absURL  }}"/>
     </picture>
   {{- else -}}
     {{- $images := .Resources.ByType "image" -}}
     {{- $featured := $images.GetMatch "*feature*" -}}
     {{- with $featured -}}
-    <img class="post-featured-img w-100 mb-3" alt="{{ .Title }}" src="{{ $featured.Permalink }}" loading="lazy"/>
+    <picture>
+      {{- $smallImg := $featured.Resize "x270" -}}
+      {{- $largeImg := $featured.Resize "x480" -}}
+      <source srcset="{{ $smallImg.Permalink }}" type="{{ $smallImg.MediaType }}" media="(max-width: 576px)" width="{{ $smallImg.Width }}" height="{{ $smallImg.Height }}">
+      <img class="post-featured-img w-100 mb-3" alt="{{ .Title }}" src="{{ $largeImg.Permalink }}" width="{{ $largeImg.Width }}" height="{{ $largeImg.Height }}" data-src="{{ $featured.Permalink }}"/>
+    </picture>
     {{- end -}}
   {{- end -}}
 {{- end -}}
