@@ -35,6 +35,10 @@ aliases = [
 
 <!--more-->
 
+## Favicons
+
+HBS 会根据 `assets/favicon.png` 自动生成不同尺寸的图标文件。
+
 ## 背景图片
 
 ```toml {title="config/_default/params.toml"}
