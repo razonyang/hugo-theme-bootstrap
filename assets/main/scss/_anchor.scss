@@ -1,4 +1,4 @@
-:target::before {
+:target:not(sup)::before {
   content: '';
   display: block;
 }
