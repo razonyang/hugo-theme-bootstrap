@@ -33,17 +33,12 @@
 {{- else -}}
   {{- $link = .filename -}}
 {{- end -}}
-{{- $params := dict -}}
-{{- $query := split $url.RawQuery "&" -}}
-{{- range $item := $query -}}
-  {{- $pair := split $item "=" -}}
-  {{- $params = merge $params (dict (index $pair 0) (index $pair 1)) -}}
-{{- end -}}
+{{- $params := $url.Query -}}
 {{- if index $params "width" -}}
-  {{- $width = $params.width -}}
+  {{- $width = index $params.width 0 -}}
 {{- end -}}
 {{- if index $params "height" -}}
-  {{- $height = $params.height -}}
+  {{- $height = index $params.height 0 -}}
 {{- end -}}
 {{- $className := default "img-fluid" .class -}}
 {{- $posClassName := "" -}}
@@ -62,19 +57,61 @@
 {{ $img  = $img.Filter (images.Overlay $img 50 50 )}}
 {{- end -}}
 
-{{- if and $pageResource $resizable (or $width $height) -}}
-  {{- $resize := "" -}}
-  {{- if and $width $height -}}
-    <!-- Resize to actual entered size -->
-    {{- $resize = (printf "%sx%s" (strings.TrimSuffix "px" $width) (strings.TrimSuffix "px" $height)) -}}
-  {{- else if $width }}
-    <!-- Resize width to entered size, keeping aspect ratio -->
-    {{- $resize = (printf "%sx" (strings.TrimSuffix "px" $width)) -}}
-  {{- else }}
-    <!-- Resize height to entered size, keeping aspect ratio -->
-    {{- $resize = (printf "x%s" (strings.TrimSuffix "px" $height)) -}}
-  {{- end -}}
-  {{- $img = $pageResource.Resize $resize -}}
+{{- if and $pageResource $resizable -}}
+  {{- $img = $pageResource -}}
+  {{- if or $width $height }}
+    {{- $resize := "" -}}
+    {{- if and $width $height -}}
+      <!-- Resize to actual entered size -->
+      {{- $resize = (printf "%sx%s" (strings.TrimSuffix "px" $width) (strings.TrimSuffix "px" $height)) -}}
+    {{- else if $width }}
+      <!-- Resize width to entered size, keeping aspect ratio -->
+      {{- $resize = (printf "%sx" (strings.TrimSuffix "px" $width)) -}}
+    {{- else }}
+      <!-- Resize height to entered size, keeping aspect ratio -->
+      {{- $resize = (printf "x%s" (strings.TrimSuffix "px" $height)) -}}
+    {{- end -}}
+    {{- $img = $img.Resize $resize -}}
+  {{- end }}
+  {{- with $params.crop }}
+    {{- $opts := delimit (split (index . 0) ",") " " | string -}}
+    {{- $img = $img.Crop $opts }}
+  {{- end }}
+  {{- with $params.fill }}
+    {{- $opts := delimit (split (index . 0) ",") " " | string -}}
+    {{- $img = $img.Fill $opts }}
+  {{- end }}
+  {{- with $params.fit }}{{ $img = $img.Fit (index . 0) }}{{ end }}
+  {{- $filters := slice }}
+  {{- with $params.brightness }}{{ $filters = $filters | append (images.Brightness (index . 0)) }}{{ end }}
+  {{- with $params.gaussianBlur }}{{ $filters = $filters | append (images.GaussianBlur (index . 0)) }}{{ end }}
+  {{- with $params.pixelate }}{{ $filters = $filters | append (images.Pixelate (index . 0)) }}{{ end }}
+  {{- with $params.contrast }}{{ $filters = $filters | append (images.Contrast (index . 0)) }}{{ end }}
+  {{- with $params.gamma }}{{ $filters = $filters | append (images.Gamma (index . 0)) }}{{ end }}
+  {{- with $params.grayscale }}{{ $filters = $filters | append images.Grayscale }}{{ end }}
+  {{- with $params.hue }}{{ $filters = $filters | append (images.Hue (index . 0)) }}{{ end }}
+  {{- with $params.invert }}{{ $filters = $filters | append images.Invert }}{{ end }}
+  {{- with $params.saturation }}{{ $filters = $filters | append (images.Saturation (index . 0)) }}{{ end }}
+  {{- with $params.sepia }}{{ $filters = $filters | append (images.Sepia (index . 0)) }}{{ end }}
+  {{- with $params.sigmoid }}
+    {{- $balance := split (index . 0) "," -}}
+    {{- $filters = $filters | append (images.Sigmoid (index $balance 0) (index $balance 1)) }}
+  {{- end }}
+  {{- with $params.unsharpMask }}
+    {{- $balance := split (index . 0) "," -}}
+    {{- $filters = $filters | append (images.UnsharpMask (index $balance 0) (index $balance 1) (index $balance 2)) }}
+  {{- end }}
+  {{- with $params.colorBalance }}
+    {{- $balance := split (index . 0) "," -}}
+    {{- $filters = $filters | append (images.ColorBalance (index $balance 0) (index $balance 1) (index $balance 2)) }}
+  {{- end }}
+  {{- with $params.colorize }}
+    {{- $balance := split (index . 0) "," -}}
+    {{- $filters = $filters | append (images.Colorize (index $balance 0) (index $balance 1) (index $balance 2)) }}
+  {{- end }}
+  {{- with $filters }}
+    {{- $img = $img | images.Filter $filters }}
+  {{- end }}
   {{- $link = $img.Permalink -}}
 {{- end -}}
 
