@@ -2,7 +2,8 @@
 {{- if eq .Site.Language.LanguageDirection "rtl" }}
   {{- $dir = ".rtl" }}
 {{- end }}
-{{- $outputStyle := "expanded" }}
+{{- /* Unable to use expanded style, to be fixed. */}}
+{{- $outputStyle := "compressed" }}
 {{- if hugo.IsProduction }}{{ $outputStyle = "compressed" }}{{ end }}
 {{- $options := dict "targetPath" (printf "assets/main/bundle%s.min.css" $dir) "outputStyle" $outputStyle "includePaths" (slice "node_modules") }}
 {{- $config := resources.Get "main/scss/_config.scss" | resources.ExecuteAsTemplate "main/scss/_config.scss" . }}
