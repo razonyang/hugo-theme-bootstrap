@@ -1,10 +1,7 @@
 {{- if .Site.Params.searchBar -}}
-{{- $url := absURL "/search" -}}
-{{- if gt (len $.Site.Home.AllTranslations) 1 -}}
-  {{- $url = absLangURL "/search" -}}
-{{- end -}}
+{{- $page := .Site.GetPage "/search" }}
 <hr class="d-lg-none">
-<form class="search-bar ms-auto my-1" action="{{ $url }}" novalidate>
+<form class="search-bar ms-auto my-1" action="{{ with $page }}{{ .Permalink }}{{ end }}" novalidate>
   <div class="input-group input-group-sm align-items-center">
     <span class="btn btn-search disabled position-absolute left-0 border-0">
       <i class="fas fa-fw fa-search fa-lg"></i>
