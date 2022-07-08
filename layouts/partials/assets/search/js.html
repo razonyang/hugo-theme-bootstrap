@@ -30,7 +30,7 @@
   window.searchIndex = '{{ $index.Permalink }}';
 </script>
 {{- $options := dict "targetPath" "assets/search/bundle.min.js" "minify" true -}}
-{{- $script := resources.Get "search/index.ts" | js.Build $options | fingerprint "md5" -}}
+{{- $script := resources.Get "search/index.ts" | js.Build $options |fingerprint -}}
 <script src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>
 
 {{- end -}}

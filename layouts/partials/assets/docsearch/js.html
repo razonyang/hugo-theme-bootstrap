@@ -1,7 +1,7 @@
 {{- with .Site.Params.docsearch }}
     {{- $params := .Site.Params -}}
     {{- $options := dict "targetPath" "assets/docsearch/bundle.min.js" "minify" true "params" . -}}
-    {{- $script := resources.Get "docsearch/js/index.ts" | js.Build $options | fingerprint "md5" -}}
+    {{- $script := resources.Get "docsearch/js/index.ts" | js.Build $options |fingerprint -}}
     {{- $.Scratch.Add "hbs-assets" (slice (dict "url" $script.Permalink "revision" ($.Scratch.Get "null"))) -}}
     <script src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous" defer></script>
 {{- end -}}
