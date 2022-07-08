@@ -1,6 +1,7 @@
 [[main]]
   identifier = "home"
   pre = '<i class="fas fa-home"></i>'
+  post = '<span class="d-lg-none ms-1">Home</span>'
   weight = 1
   url = "https://hbs.razonyang.com/"
 [[main]]
