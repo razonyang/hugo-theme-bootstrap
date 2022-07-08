@@ -16,7 +16,7 @@
             {{- range $pages }}
                 <a class="carousel-item{{ if eq $i 0 }} active{{ end }}" href="{{ .Permalink }}">
                     {{- template "carousel-thumbnail" (dict "page" . "lazyLoading" (ne $i 0)) }}
-                    <div class="carousel-caption ps-3 text-center text-lg-start bottom-0 start-0 end-0 mb-2">
+                    <div class="carousel-caption ps-3 text-center text-lg-start start-0 end-0 mb-2">
                         <h5>{{ .Title }}</h5>
                         <div class="d-none d-lg-flex">{{ .Summary }}</div>
                     </div>
