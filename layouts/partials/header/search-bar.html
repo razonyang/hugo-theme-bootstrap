@@ -1,4 +1,4 @@
-{{- if .Site.Params.searchBar -}}
+{{- if .Site.Params.searchBar }}
 {{- $page := .Site.GetPage "/search" }}
 <hr class="d-lg-none">
 <form class="search-bar ms-auto my-1" action="{{ with $page }}{{ .Permalink }}{{ end }}" novalidate>

@@ -1,28 +1,28 @@
-{{- $pages := first 3 (where $.Site.Pages "Params.carousel" true) -}}
-{{- if and .IsHome $pages (eq .Paginator.PageNumber 1) -}}
+{{- $pages := first 3 (where $.Site.Pages "Params.carousel" true) }}
+{{- if and .IsHome $pages (eq .Paginator.PageNumber 1) }}
 <div class="container p-0 mb-4">
     <div class="row p-0 m-0">
         <div id="carouselHome" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators justify-content-sm-center justify-content-lg-start mb-0 mx-auto ps-0 ps-lg-3">
-            {{- $i := 0 -}}
-            {{- range $pages -}}
+            {{- $i := 0 }}
+            {{- range $pages }}
                 <button type="button" data-bs-target="#carouselHome" data-bs-slide-to="{{ $i }}" aria-label="{{ .Title }}"
-                {{ if eq $i 0 }}class="rounded-circle active" aria-current="true"{{ else }}class="rounded-circle"{{ end }}></button>
-                {{- $i = add $i 1 -}}
-            {{- end -}}
+                {{- if eq $i 0 }}class="rounded-circle active" aria-current="true"{{ else }}class="rounded-circle"{{ end }}></button>
+                {{- $i = add $i 1 }}
+            {{- end }}
             </div>
             <div class="carousel-inner">
-            {{- $i := 0 -}}
-            {{- range $pages -}}
+            {{- $i := 0 }}
+            {{- range $pages }}
                 <a class="carousel-item{{ if eq $i 0 }} active{{ end }}" href="{{ .Permalink }}">
-                    {{- template "carousel-thumbnail" (dict "page" . "lazyLoading" (ne $i 0)) -}}
+                    {{- template "carousel-thumbnail" (dict "page" . "lazyLoading" (ne $i 0)) }}
                     <div class="carousel-caption ps-3 text-center text-lg-start bottom-0 start-0 end-0 mb-2">
                         <h5>{{ .Title }}</h5>
                         <div class="d-none d-lg-flex">{{ .Summary }}</div>
                     </div>
                 </a>
-                {{- $i = add $i 1 -}}
-            {{- end -}}
+                {{- $i = add $i 1 }}
+            {{- end }}
             </div>
             <div class="carousel-controls position-absolute d-none d-lg-block">
                 <button class="btn btn-sm btn-outline-secondary p-1" type="button" data-bs-target="#carouselHome" data-bs-slide="prev">
@@ -37,32 +37,32 @@
         </div>
     </div>
 </div>
-{{- end -}}
+{{- end }}
 
-{{- define "carousel-thumbnail" -}}
-{{- $smallImageURL := "/images/none.png" -}}
-{{- $mediumImageURL := "/images/none.png" -}}
-{{- $largeImageURL := "/images/none.png" -}}
-{{- $featured := false -}}
-{{- $lazyLoading := .lazyLoading -}}
+{{- define "carousel-thumbnail" }}
+{{- $smallImageURL := "/images/none.png" }}
+{{- $mediumImageURL := "/images/none.png" }}
+{{- $largeImageURL := "/images/none.png" }}
+{{- $featured := false }}
+{{- $lazyLoading := .lazyLoading }}
 {{ if .page.Params.images }}
     {{ $smallImageURL = index .page.Params.images 0 | absURL }}
     {{ $mediumImageURL = $smallImageURL }}
     {{ $largeImageURL = $smallImageURL }}
-{{- else -}}
-  {{- $images := .page.Resources.ByType "image" -}}
-  {{- $featured = $images.GetMatch "*feature*" -}}
-  {{- if not $featured }}{{ $featured = $images.GetMatch "{*cover*,*thumbnail*}" }}{{ end -}}
-  {{- with $featured -}}
+{{- else }}
+  {{- $images := .page.Resources.ByType "image" }}
+  {{- $featured = $images.GetMatch "*feature*" }}
+  {{- if not $featured }}{{ $featured = $images.GetMatch "{*cover*,*thumbnail*}" }}{{ end }}
+  {{- with $featured }}
     {{- $ratio := div $featured.Width $featured.Height }}
-    {{- $smallImage := $featured.Crop "320x180 smart" -}}
-    {{- $smallImageURL = $smallImage.Permalink -}}
-    {{- $mediumImage := $featured.Crop "480x270 smart" -}}
-    {{- $mediumImageURL = $mediumImage.Permalink -}}
-    {{- $largeImage := $featured.Crop "800x450 smart" -}}
-    {{- $largeImageURL = $largeImage.Permalink -}}
-  {{- end -}}
-{{- end -}}
+    {{- $smallImage := $featured.Crop "320x180 smart" }}
+    {{- $smallImageURL = $smallImage.Permalink }}
+    {{- $mediumImage := $featured.Crop "480x270 smart" }}
+    {{- $mediumImageURL = $mediumImage.Permalink }}
+    {{- $largeImage := $featured.Crop "800x450 smart" }}
+    {{- $largeImageURL = $largeImage.Permalink }}
+  {{- end }}
+{{- end }}
 <picture>
     <source srcset="{{ $smallImageURL }}" media="(max-width: 576px)">
     <source srcset="{{ $mediumImageURL }}" media="(max-width: 991.98px)">

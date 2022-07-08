@@ -1,18 +1,18 @@
-{{- $baseURL := $.Site.BaseURL -}}
+{{- $baseURL := $.Site.BaseURL }}
 <nav class="top-app-bar shadow bg-primary text-white navbar navbar-expand-lg{{ if $.Site.Params.fixedHeader }} fixed-top{{ end }}">
   <div class="{{- partial "helpers/fullwidth" (dict "Page" . "Output" "container" "FullWidthOutput" "container-fluid") -}}">
-    {{- if eq .Type "docs" -}}
+    {{- if eq .Type "docs" }}
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDocsNav"
       aria-controls="offcanvasDocsCatalog" aria-expanded="false" aria-label="Toggle docs navigation">
       <i class="fas fa-bars"></i>
     </button>
-    {{- end -}}
-    {{- $logo := (default "images/logo.webp" .Site.Params.logo) -}}
+    {{- end }}
+    {{- $logo := (default "images/logo.webp" .Site.Params.logo) }}
     <a class="navbar-brand flex-grow-1 flex-lg-grow-0 text-lg-start{{ if eq .Type "docs" }} text-center{{ end }} ms-2 ms-lg-0 mx-auto me-lg-3{{ if .IsHome }} active{{ end }}" href="{{ "" | absLangURL }}">
-      {{- if $logo -}}
+      {{- if $logo }}
         {{ partial "helpers/image" (dict "filename" $logo "alt" "Logo" "class" "logo" "resources" .Resources) }}
-      {{- end -}}
-      {{ with .Site.Params.brand }}{{ . }}{{ else }}{{ $.Site.Title }}{{ end }}
+      {{- end }}
+      {{- with .Site.Params.brand }}{{ . }}{{ else }}{{ $.Site.Title }}{{ end }}
     </a>
     <button class="navbar-toggler order-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarMenus"
       aria-controls="navbarMenus" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,30 +26,30 @@
       <div class="offcanvas-body p-4 pt-0 p-lg-0">
         <hr class="d-lg-none">
         <ul class="navbar-nav flex-row flex-wrap align-items-center me-auto">
-          {{- $currentPage := . -}}
-          {{- range .Site.Menus.main -}}
-          {{- $url := .URL | absURL -}}
-          {{- $active := or (eq $currentPage.Permalink (absURL .URL)) ($currentPage.IsMenuCurrent "main" .) -}}
-          {{- if .HasChildren -}}
+          {{- $currentPage := . }}
+          {{- range .Site.Menus.main }}
+          {{- $url := .URL | absURL }}
+          {{- $active := or (eq $currentPage.Permalink (absURL .URL)) ($currentPage.IsMenuCurrent "main" .) }}
+          {{- if .HasChildren }}
           <li class="nav-item col-6 col-lg-auto dropdown py-2 px-0 px-lg-2">
             <a class="dropdown-toggle" href="#" class="nav-link{{ if $currentPage.HasMenuCurrent "main" . }} active{{ end }}"
               id="navbarDropdown{{ title .Identifier }}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               {{ .Pre }} {{- .Name -}} {{ .Post }}
             </a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown{{ title .Identifier }}" data-bs-popper="none">
-              {{- range .Children -}}
-              {{- $childURL := .URL | absURL -}}
-              {{- if .Params.divider -}}
+              {{- range .Children }}
+              {{- $childURL := .URL | absURL }}
+              {{- if .Params.divider }}
               <li><hr class="dropdown-divider"></li>
-              {{- else -}}
+              {{- else }}
               <li>
                 <a class="dropdown-item text-wrap{{ if or (eq $currentPage.Permalink (absURL .URL)) ($currentPage.IsMenuCurrent "main" .) }} active{{ end }}"
                   href="{{ $childURL }}"{{ if not (hasPrefix $childURL $baseURL) }} target="_blank" rel="noopener noreferrer"{{ end }}>
                   {{ .Pre }} {{- .Name -}} {{ .Post }}
                 </a>
               </li>
-              {{- end -}}
-              {{- end -}}
+              {{- end }}
+              {{- end }}
             </ul>
           </li>
           {{- else -}}
@@ -58,8 +58,8 @@
               {{ .Pre }} {{- .Name -}} {{ .Post }}
             </a>
           </li>
-          {{- end -}}
-          {{- end -}}
+          {{- end }}
+          {{- end }}
         </ul>
         {{ partial "header/search-bar" . }}
         {{- if or (default true .Site.Params.topAppBar.colorToggle) (isset $.Site.Params "fontsize") ( gt (len $.Site.Home.AllTranslations) 1) (.Site.Params.Palettes) (.Site.Params.topAppBar.social) -}}
@@ -67,11 +67,11 @@
         <ul class="navbar-nav flex-row flex-wrap align-items-center ms-md-auto">
           {{- partial "header/social-links" . }}
           {{- partial "header/languages" . }}
-          {{- partial "header/font-size" . -}}
-          {{- partial "header/palettes" . -}}
-          {{- partial "header/theme" . -}}
+          {{- partial "header/font-size" . }}
+          {{- partial "header/palettes" . }}
+          {{- partial "header/theme" . }}
         </ul>
-        {{- end -}}
+        {{- end }}
       </div>
     </div>
   </div>

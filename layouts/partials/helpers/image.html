@@ -134,11 +134,11 @@
     {{- end -}}
   {{- end -}}
   <img class="{{ $className }}{{ if not $caption }} {{ $posClassName }}{{ end }}" alt="{{ .alt }}" src="{{ $link }}"
-    {{ with $lazyLoading }} loading="lazy"{{ end }}
-    {{ with .attributes }} {{ . }}{{ end }}
-    {{ with .title }} title="{{ . }}"{{ end }}
-    {{ with $img }} width="{{ .Width }}" height="{{ .Height }}"{{ end }}
-    {{ if and (not (and $pageResource $resizable)) (or $width $height) }}style="{{ with $width }}width: {{ . }}; {{ end }}{{ with $height }}height: {{ . }}{{ end }}"{{ end }} />
+    {{- with $lazyLoading }} loading="lazy"{{ end }}
+    {{- with .attributes }} {{ . }}{{ end }}
+    {{- with .title }} title="{{ . }}"{{ end }}
+    {{- with $img }} width="{{ .Width }}" height="{{ .Height }}"{{ end }}
+    {{- if and (not (and $pageResource $resizable)) (or $width $height) }}style="{{ with $width }}width: {{ . }}; {{ end }}{{ with $height }}height: {{ . }}{{ end }}"{{ end }} />
 </picture>
 {{- if $caption -}}
 <figcaption class="figure-caption">{{ .title }}</figcaption>

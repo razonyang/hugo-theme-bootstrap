@@ -1,24 +1,24 @@
-{{- if .IsHome -}}
-  {{- $params := .Site.Params -}}
-  {{- with $params.siteVerification.google -}}
+{{- if .IsHome }}
+  {{- $params := .Site.Params }}
+  {{- with $params.siteVerification.google }}
   <meta name="google-site-verification" content="{{ . }}" />
-  {{- end -}}
-  {{- with $params.siteVerification.bing -}}
+  {{- end }}
+  {{- with $params.siteVerification.bing }}
   <meta name="msvalidate.01" content="{{ . }}" />
-  {{- end -}}
-  {{- with $params.siteVerification.baidu -}}
+  {{- end }}
+  {{- with $params.siteVerification.baidu }}
   <meta name="baidu-site-verification" content="{{ . }}" />
-  {{- end -}}
-  {{- with $params.siteVerification.baiduUnion -}}
+  {{- end }}
+  {{- with $params.siteVerification.baiduUnion }}
   <meta name="baidu_union_verify" content="{{ . }}">
-  {{- end -}}
-  {{- with $params.siteVerification.so -}}
+  {{- end }}
+  {{- with $params.siteVerification.so }}
   <meta name="360-site-verification" content="{{ . }}">
-  {{- end -}}
-  {{- with $params.siteVerification.sogou -}}
+  {{- end }}
+  {{- with $params.siteVerification.sogou }}
   <meta name="sogou_site_verification" content="{{ . }}">
-  {{- end -}}
-  {{- with $params.siteVerification.shenma -}}
+  {{- end }}
+  {{- with $params.siteVerification.shenma }}
   <meta name="shenma-site-verification" content="{{ . }}">
-  {{- end -}}
+  {{- end }}
 {{- end -}}

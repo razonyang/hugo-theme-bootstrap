@@ -1,20 +1,20 @@
-{{- $count := default .Params.featuredPostCount .Site.Params.featuredPostCount -}}
-{{- if $count -}}
-  {{- $featuredPosts := first $count (where (where site.RegularPages "Type" "in" site.Params.mainSections) ".Params.featured" "eq" true) -}}
-  {{- with $featuredPosts -}}
+{{- $count := default .Params.featuredPostCount .Site.Params.featuredPostCount }}
+{{- if $count }}
+  {{- $featuredPosts := first $count (where (where site.RegularPages "Type" "in" site.Params.mainSections) ".Params.featured" "eq" true) }}
+  {{- with $featuredPosts }}
   <section class="featured-posts row card component">
     <div class="card-header">
       <h2 class="card-title my-2 fs-4 text-surface">{{ T "featured_posts" }}</h2>
     </div>
     <div class="card-body">
       <ul class="post-list list-unstyled ms-1">
-      {{- range . -}}
+      {{- range . }}
         <li class="mb-2">
           <a href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a>
         </li>
-      {{- end -}}
+      {{- end }}
       </ul>
     </div>
   </section>
-  {{- end -}}
-{{- end -}}
+  {{- end }}
+{{- end }}

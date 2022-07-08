@@ -1,11 +1,11 @@
-{{- if gt (len $.Site.Home.AllTranslations) 1 -}}
+{{- if gt (len $.Site.Home.AllTranslations) 1 }}
 <li class="nav-item dropdown py-1 py-lg-1 col-6 col-lg-auto">
     <a class="nav-link px-0 px-lg-1" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
         <i class="fas fa-fw fa-globe"></i>
         <span class="d-lg-none">{{ i18n "language" }}</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
-        {{- range $.Site.Home.AllTranslations -}}
+        {{- range $.Site.Home.AllTranslations }}
         <li>
         <a class="dropdown-item{{ if eq $.Lang .Language.Lang }} active{{ end }}" href="{{ .Permalink }}">
             {{ .Language.LanguageName }}

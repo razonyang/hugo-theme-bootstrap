@@ -1,9 +1,9 @@
 {{- $config := slice (dict "size" "16x16") (dict "size" "32x32") (dict "size" "180x180" "rel" "apple-touch-icon") }}
-{{- $config = $config | append (dict "size" "150x150") (dict "size" "192x192") -}}
+{{- $config = $config | append (dict "size" "150x150") (dict "size" "192x192") }}
 {{- $favicon := resources.Get "favicon.png" }}
 {{- range $config }}
   {{- $filename := printf "icon-%s.png" .size }}
-  {{- $rel := default "icon" .rel -}}
+  {{- $rel := default "icon" .rel }}
   {{- $filepath := path.Join "static" "images" "icons" $filename }}
   {{- if fileExists $filepath }}
     {{- $file := readFile $filepath }}
@@ -14,11 +14,11 @@
   {{- end }}
 {{- end -}}
 
+{{- $maskIcon := resources.Get "safari-pinned-tab.svg" }}
+<link rel="mask-icon" href="{{ $maskIcon.Permalink }}" color="#6f42c1">
 {{- $fallbackIcon := "images/icons/favicon.ico" }}
 {{- $fallbackIconPath := path.Join "static" $fallbackIcon }}
 {{- if fileExists $fallbackIconPath }}
   {{- $fallbackIconFile := readFile $fallbackIconPath -}}
   <link rel="icon" href="{{ absURL $fallbackIcon }}?version={{ $fallbackIconFile | md5 }}">
 {{- end -}}
-{{- $maskIcon := resources.Get "safari-pinned-tab.svg" }}
-<link rel="mask-icon" href="{{ $maskIcon.Permalink }}" color="#6f42c1">

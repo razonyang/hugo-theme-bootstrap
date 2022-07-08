@@ -1,8 +1,8 @@
 <!doctype html>
-{{- $color := default "auto" $.Site.Params.color -}}
+{{- $color := default "auto" $.Site.Params.color }}
 <html class="position-relative" itemscope itemtype="http://schema.org/WebPage" lang="{{ .Lang }}" data-theme="{{ $color }}"
-  {{ with $.Site.Language.LanguageDirection }} dir="{{ . }}"{{ end }}
-  {{ with $.Site.Params.palette }} data-palette="{{ replace . " " "-" }}"{{ end }}>
+  {{- with $.Site.Language.LanguageDirection }} dir="{{ . }}"{{ end }}
+  {{- with $.Site.Params.palette }} data-palette="{{ replace . " " "-" }}"{{ end }}>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,20 +12,20 @@
     {{- partial "hooks/head-end" . -}}
   </head>
   <body>
-    {{- $bootstrapScript := resources.Get "bootstrap/template.js" | resources.ExecuteAsTemplate "js/bootstrap.js" . | minify -}}
+    {{- $bootstrapScript := resources.Get "bootstrap/template.js" | resources.ExecuteAsTemplate "js/bootstrap.js" . | minify }}
     <script>
-      {{- $bootstrapScript.Content | safeJS -}}
+      {{ $bootstrapScript.Content | safeJS }}
     </script>
-    {{- partial "header.html" . -}}
-    {{- partial "hooks/main-begin" . -}}
+    {{- partial "header.html" . }}
+    {{- partial "hooks/main-begin" . }}
     <main class="{{- partial "helpers/fullwidth" (dict "Page" . "Output" "container" "FullWidthOutput" "container-fluid") -}}">
       <div class="row content">
-        {{- partialCached "noscript" . .Language.Lang -}}
-        {{- block "content" . -}}{{- end -}}
+        {{- partialCached "noscript" . .Language.Lang }}
+        {{- block "content" . }}{{ end }}
       </div>
     </main>
-    {{- partial "hooks/main-end" . -}}
-    {{- partial "footer.html" . -}}
-    {{- partial "body-end" . -}}
+    {{- partial "hooks/main-end" . }}
+    {{- partial "footer.html" . }}
+    {{- partial "body-end" . }}
   </body>
 </html>

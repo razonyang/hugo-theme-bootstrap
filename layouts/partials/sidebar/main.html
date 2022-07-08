@@ -1,9 +1,9 @@
-{{- partial "sidebar/profile" . -}}
-{{- partialCached "sidebar/taxonomies-toggle" . -}}
-{{- if ne "content" .Site.Params.tocPosition -}}
-{{- partial "sidebar/toc" . -}}
-{{- end -}}
-{{- partialCached "sidebar/featured-posts" . .Section -}}
-{{- partialCached "sidebar/recent-posts" . .Section -}}
-{{- partialCached "sidebar/taxonomies" . -}}
-{{- partialCached "sidebar/archive" . -}}
+{{- partial "sidebar/profile" . }}
+{{- partialCached "sidebar/taxonomies-toggle" . }}
+{{- if ne "content" .Site.Params.tocPosition }}
+{{- partial "sidebar/toc" . }}
+{{- end }}
+{{- partialCached "sidebar/featured-posts" . .Section }}
+{{- partialCached "sidebar/recent-posts" . .Section }}
+{{- partialCached "sidebar/taxonomies" . }}
+{{- partialCached "sidebar/archive" . }}

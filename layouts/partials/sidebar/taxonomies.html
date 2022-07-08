@@ -1,15 +1,15 @@
-{{- range $expected := $.Site.Params.sidebarTaxonomies -}}
-{{- range $key, $value := $.Site.Taxonomies -}}
-  {{- $enable := false -}}
-  {{- with $.Site.Params.sidebar -}}
-    {{- $enable = default false (index . $key) -}}
-  {{- end -}}
-  {{- if and $enable (eq $key $expected) -}}
-  {{- $countParams := dict "categories" "categoryCount" "tags" "tagCount" "series" "seriesCount" -}}
-  {{- $param := default "" (index $countParams $key) -}}
-  {{- $taxonomyCount := default 10 ($.Site.Param $param) -}}
-  {{- if $taxonomyCount -}}
-    {{- with $value.ByCount -}}
+{{- range $expected := $.Site.Params.sidebarTaxonomies }}
+{{- range $key, $value := $.Site.Taxonomies }}
+  {{- $enable := false }}
+  {{- with $.Site.Params.sidebar }}
+    {{- $enable = default false (index . $key) }}
+  {{- end }}
+  {{- if and $enable (eq $key $expected) }}
+  {{- $countParams := dict "categories" "categoryCount" "tags" "tagCount" "series" "seriesCount" }}
+  {{- $param := default "" (index $countParams $key) }}
+  {{- $taxonomyCount := default 10 ($.Site.Param $param) }}
+  {{- if $taxonomyCount }}
+    {{- with $value.ByCount }}
     <section class="{{ $key }}-taxonomies row card component">
       <div class="card-header">
         <h2 class="card-title my-2 fs-4 text-surface">
@@ -18,29 +18,29 @@
       </div>
       <div class="card-body">
         <div class="py-2">
-        {{- $count := 0 -}}
-        {{- range . -}}
-          {{- if and (lt $count $taxonomyCount) (ne .Name "") -}}
+        {{- $count := 0 }}
+        {{- range . }}
+          {{- if and (lt $count $taxonomyCount) (ne .Name "") }}
           <a href="{{ .Page.Permalink }}" class="btn btn-sm btn-secondary post-taxonomy post-{{ $key | singularize }} me-2 mb-2" title="{{ .Page.Title }}">
             {{ .Page.Title }}
-            {{- if $.Site.Params.countTaxonomyPosts -}}
+            {{- if $.Site.Params.countTaxonomyPosts }}
               <span class="badge badge-sm text-secondary bg-white ms-1">{{ .Count }}</span>
-            {{- end -}}
+            {{- end }}
           </a>
           {{- $count = add $count 1 }}
-          {{- end -}}
-        {{- end -}}
-        {{- if gt (len $value) $taxonomyCount -}}
+          {{- end }}
+        {{- end }}
+        {{- if gt (len $value) $taxonomyCount }}
         <a href="{{ absLangURL (urlize $key) }}" class="btn btn-sm btn-secondary post-taxonomy post-{{ $key | singularize }} me-2 mb-2" title='{{ i18n "all" | upper }}'>
           {{ i18n "all" | upper }}
           <span class="badge badge-sm text-secondary bg-white ms-1">{{ len $value }}</span>
         </a>
-        {{- end -}}
+        {{- end }}
         </div>
       </div>
     </section>
-    {{- end -}}
-  {{- end -}}
-  {{- end -}}
-{{- end -}}
-{{- end -}}
+    {{- end }}
+  {{- end }}
+  {{- end }}
+{{- end }}
+{{- end }}

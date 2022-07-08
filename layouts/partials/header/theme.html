@@ -1,20 +1,20 @@
-{{- if default true .Site.Params.topAppBar.colorToggle -}}
+{{- if default true .Site.Params.topAppBar.colorToggle }}
 <li class="nav-item dropdown py-2 py-lg-1 col-6 col-lg-auto">
-    {{- $modes := dict "light" (dict "icon" "sun") "dark" (dict "icon" "moon") "auto" (dict "icon" "adjust") -}}
-    {{- $mode := default "auto" $.Site.Params.color -}}
+    {{- $modes := dict "light" (dict "icon" "sun") "dark" (dict "icon" "moon") "auto" (dict "icon" "adjust") }}
+    {{- $mode := default "auto" $.Site.Params.color }}
     <a class="nav-link px-0 px-lg-1" href="#" id="modeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
         <i class="mode-icon fas fa-fw fa-{{ (index $modes $mode ).icon }}" id="modeIcon"></i>
         <span class="d-lg-none">{{ i18n "mode" }}</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="modeDropdown">
-        {{- range slice "light" "dark" "auto" -}}
-        {{- $item := index $modes . -}}
+        {{- range slice "light" "dark" "auto" }}
+        {{- $item := index $modes . }}
         <li class="mode-item{{ if eq $mode . }} active{{ end }}" data-color-mode="{{ . }}" data-icon="{{ $item.icon }}">
             <button class="dropdown-item">
                 <i class="mode-icon fas fa-fw fa-{{ $item.icon }}"></i> {{ . | title }}
             </button>
         </li>
-        {{- end -}}
+        {{- end }}
     </ul>
 </li>
 {{- end -}}
