@@ -50,33 +50,6 @@
   name = "v0"
   url = "https://hbs.razonyang.com/v0/"
   weight = 100
-[[main]]
-  identifier = "donate"
-  name = "Donate"
-  weight = 99
-[[main]]
-  parent = "donate"
-  name = "Open Collective"
-  url = "https://opencollective.com/hbs"
-  weight = 1
-[[main]]
-  parent = "donate"
-  name = "Paypal"
-  url = "https://paypal.me/razonyang"
-  pre = '<i class="fab fa-fw fa-paypal me-1"></i>'
-  weight = 2
-[[main]]
-  parent = "donate"
-  name = "Alipay"
-  url = "https://raw.githubusercontent.com/razonyang/blog/main/static/images/reward/alipay.webp"
-  pre = '<i class="fab fa-fw fa-alipay me-1"></i>'
-  weight = 3
-[[main]]
-  parent = "donate"
-  name = "WeChat"
-  url = "https://raw.githubusercontent.com/razonyang/blog/main/static/images/reward/wechat.webp"
-  pre = '<i class="fab fa-fw fa-weixin me-1"></i>'
-  weight = 4
 
 [[footer]]
   name = "Support"
