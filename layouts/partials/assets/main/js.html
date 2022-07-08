@@ -1,6 +1,6 @@
 {{- $params := .Site.Params -}}
 {{- $params = merge $params (dict "baseURL" .Site.BaseURL) -}}
-{{- $options := dict "target" "es2015" "targetPath" "assets/main/bundle.min.js" "minify" true "params" $params -}}
+{{- $options := dict "target" "es2015" "targetPath" "assets/main/bundle.min.js" "minify" hugo.IsProduction "params" $params -}}
 {{- $main := resources.Get "main/js/index.ts" }}
 {{- $scripts := slice $main -}}
 {{- if .Site.Params.utterances -}}

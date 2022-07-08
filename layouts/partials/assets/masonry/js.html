@@ -1,5 +1,5 @@
 {{- if or .Site.Params.masonry .Params.masonry -}}
-{{- $options := dict "target" "es2015" "targetPath" "assets/masonry/bundle.min.js" "minify" true -}}
+{{- $options := dict "target" "es2015" "targetPath" "assets/masonry/bundle.min.js" "minify" hugo.IsProduction -}}
 {{- $main := resources.Get "masonry/index.ts" }}
 {{- $script := $main | js.Build $options |fingerprint -}}
 {{- $.Scratch.Add "hbs-assets" (slice (dict "url" $script.Permalink "revision" ($.Scratch.Get "null"))) -}}

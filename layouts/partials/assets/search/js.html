@@ -29,7 +29,7 @@
   window.fuseOptions = JSON.parse('{{ $options | jsonify | safeHTML }}');
   window.searchIndex = '{{ $index.Permalink }}';
 </script>
-{{- $options := dict "targetPath" "assets/search/bundle.min.js" "minify" true -}}
+{{- $options := dict "targetPath" "assets/search/bundle.min.js" "minify" hugo.IsProduction -}}
 {{- $script := resources.Get "search/index.ts" | js.Build $options |fingerprint -}}
 <script src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>
 

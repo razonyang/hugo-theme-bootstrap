@@ -12,7 +12,8 @@
     {{- partial "hooks/head-end" . -}}
   </head>
   <body>
-    {{- $bootstrapScript := resources.Get "bootstrap/template.js" | resources.ExecuteAsTemplate "js/bootstrap.js" . | minify }}
+    {{- $bootstrapScript := resources.Get "bootstrap/template.js" | resources.ExecuteAsTemplate "js/bootstrap.js" . }}
+    {{- if hugo.IsProduction }}{{ $bootstrapScript = $bootstrapScript | minify }}{{ end }}
     <script>
       {{ $bootstrapScript.Content | safeJS }}
     </script>

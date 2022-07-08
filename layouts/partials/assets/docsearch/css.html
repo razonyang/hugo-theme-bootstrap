@@ -1,6 +1,8 @@
 
 {{- with .Site.Params.docsearch }}
-    {{- $options := dict "targetPath" "assets/docsearch/bundle.min.css" "outputStyle" "compressed" "includePaths" (slice "node_modules") }}
+    {{- $outputStyle := "expanded" }}
+    {{- if hugo.IsProduction }}{{ $outputStyle = "compressed" }}{{ end }}
+    {{- $options := dict "targetPath" "assets/docsearch/bundle.min.css" "outputStyle" $outputStyle "includePaths" (slice "node_modules") }}
     {{- $config := resources.Get "main/scss/_config.scss" | resources.ExecuteAsTemplate "docsearch/scss/_config.scss" . }}
     {{- $main := resources.Get "docsearch/scss/index.scss" }}
     {{- $style := slice $config $main | resources.Concat "docsearch/scss/main.scss"  | toCSS $options |fingerprint }}
