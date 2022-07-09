@@ -30,14 +30,17 @@ If you're located at China mainland without VPN, the Hugo module download may fa
 There are two proxies for this: [GOPROXY.CN](https://goproxy.cn) and [GOPROXY.IO](https://goproxy.io).
 
 ```bash
-$  go env -w GOPROXY=https://goproxy.cn,direct
+$ export HUGO_MODULE_PROXY=https://goproxy.cn
 ```
 
-or
+You can also set the `module.proxy` instead of using env var.
 
-```bash
-$ go env -w GOPROXY=https://goproxy.io,direct
-```
+{{< code-toggle filename="config" >}}
+module:
+  proxy: https://goproxy.cn
+{{</ code-toggle >}}
+
+> Please note that, Hugo doesn't respect the `GOPROXY` env var, please use `HUGO_MODULE_PROXY` instead.
 
 ## Installation
 
