@@ -30,7 +30,8 @@
 {{- $paypal := dict "paypal" (dict "url" "https://www.paypal.com/paypalme/%s" "icon" "fab fa-paypal") }}
 {{- $patreon := dict "patreon" (dict "url" "https://www.patreon.com/%s" "icon" "fab fa-patreon") }}
 {{- $tipeee := dict "tipeee" (dict "url" "https://fr.tipeee.com/%s" "icon" "fab fa-tipeee") }}
-{{- $items = merge $items $tumblr $reddit $telegram $qq $dockerhub $bitbucket $kaggle $lastfm $bilibili $tiktok $pinterest $mastodon $liberapay $paypal $patreon $tipeee }}
+{{- $website := dict "website" (dict "url" "%s" "icon" "fas fa-link") }}
+{{- $items = merge $items $tumblr $reddit $telegram $qq $dockerhub $bitbucket $kaggle $lastfm $bilibili $tiktok $pinterest $mastodon $liberapay $paypal $patreon $tipeee $website }}
 {{- $size := default "" .size }}
 {{- $linkClass := default "" .linkClass }}
 {{- $iconText := default false .iconText }}
