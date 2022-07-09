@@ -19,6 +19,9 @@ series = [
 ]
 images = []
 weight = 970
+authors = [
+  "RazonYang"
+]
 [menu.footer]
   parent = "docs"
   weight = 5
@@ -130,6 +133,46 @@ Showing posts on carousel.
 carousel = true
 +++
 ```
+
+## Authors
+
+HBS supports the authors taxonomy. Firstly, you'll need to enable it by setting the following configuration.
+
+{{< code-toggle filename="config" >}}
+[taxonomies]
+  author = "authors"
+{{</ code-toggle >}}
+
+And then define the `authors` on your posts.
+
+```toml
++++
+authors = [
+  "Foo",
+  "Bar"
+]
++++
+```
+
+Now, the authors will be present on the post meta and sidebar taxonomies.
+
+Finally, we may need to introduce the author in more detail. Take the `Foo` as an example, just create a page with the following content and save it as `/content/authors/foo/index.md`.
+
+```yaml
+---
+title: Razon Yang
+description: Gopher, PHPer, Full Stack Engineer.
+social:
+  github: razonyang
+  twitter: razonyang
+---
+```
+
+- `title`: The author display name.
+- `description`: The introduction.
+- `social`: [Social links]({{< ref "/docs/widgets/social-links" >}}).
+
+The author image should be placed at the same folder with pattern `avatar*`, such as `/content/authors/foo/avatar.png`.
 
 ## Up Next
 
