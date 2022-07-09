@@ -79,6 +79,7 @@ viewer = true # Image Viewer
   # categories = true # Enable categories widget
   # tags = true # Enable tags widget
   # series = true # Enable series widget
+  # authors = true # Enable authors widget
 
 [codeBlock]
   # maxLines = 8

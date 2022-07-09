@@ -134,6 +134,7 @@ The site parameters are located in `config/_default/params.toml` by default.
 | `sidebar.categories` | Boolean | `false` | Show the categories widget on the sidebar.
 | `sidebar.tags` | Boolean | `false` | Show the tags widget on the sidebar.
 | `sidebar.archives` | Boolean | `false` | Show the archive widget on the sidebar.
+| `sidebar.authors` | Boolean | `false` | Show the authors widget on the sidebar.
 | **Meta Tag**
 | `metaRobots` | String | - | Empty means that turn it off.
 | `contact` | Object | - | [Contact Form]({{< ref "docs/layouts/contact-form" >}})
