@@ -93,3 +93,4 @@ github = "githubusername"
 | `patreon` | Patreon 使用者名稱 |
 | `tipeee` | Tipeee 使用者名稱 |
 | `rss` | 空字符串以禁用 RSS 链接 |
+| `website` | 網站 URL |
