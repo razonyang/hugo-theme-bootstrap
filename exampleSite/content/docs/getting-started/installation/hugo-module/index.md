@@ -33,14 +33,14 @@ There are two proxies for this: [GOPROXY.CN](https://goproxy.cn) and [GOPROXY.IO
 $ export HUGO_MODULE_PROXY=https://goproxy.cn
 ```
 
+> Please note that, Hugo doesn't respect the `GOPROXY` env var, please use `HUGO_MODULE_PROXY` instead.
+
 You can also set the `module.proxy` instead of using env var.
 
 {{< code-toggle filename="config" >}}
 module:
   proxy: https://goproxy.cn
 {{</ code-toggle >}}
-
-> Please note that, Hugo doesn't respect the `GOPROXY` env var, please use `HUGO_MODULE_PROXY` instead.
 
 ## Installation
 
