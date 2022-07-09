@@ -35,10 +35,19 @@
         <span class="post-date">{{ printf "{{date}}" }}</span>
         {{- $baseURL := absLangURL "" -}}
         {{- $placeholder := "{{#url}}{{.}}{{/url}}" -}}
-        {{- range slice "series" "categories" "tags" -}}
-        {{ printf "{{#%s}}" . }}
+        {{- range slice "authors" "series" "categories" "tags" -}}
+        {{- printf "{{#%s}}" . }}
         <a {{ printf "href=\"%s%s/%s/\"" $baseURL . $placeholder | safeHTMLAttr }}
-          class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy">{{ printf "{{.}}" }}</a>
+          class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy">
+          {{- if eq . "authors" }}
+            <i class="fas fa-fw fa-user"></i>
+          {{- else if eq . "series" }}
+            <i class="fas fa-fw fa-columns"></i>
+          {{- else if eq . "categories" }}
+            <i class="fas fa-fw fa-folder"></i>
+          {{- end }}
+          {{- printf "{{.}}" }}
+        </a>
         {{ printf "{{/%s}}" . }}
         {{- end -}}
       </div>

@@ -22,7 +22,7 @@
         {{- $img = $featured.Permalink -}}
       {{- end -}}
     {{- end -}}
-    {{- $item := (dict "title" $title "tags" .Params.tags "categories" .Params.categories "series" .Params.series "content" .Plain "permalink" .Permalink "date" $date "img" $img "smallImg" $smallImg "largeImg" $largeImg) -}}
+    {{- $item := (dict "title" $title "authors" .Params.authors "tags" .Params.tags "categories" .Params.categories "series" .Params.series "content" .Plain "permalink" .Permalink "date" $date "img" $img "smallImg" $smallImg "largeImg" $largeImg) -}}
     {{- $.Scratch.Add "index" $item -}}
 {{- end -}}
 {{- $.Scratch.Get "index" | uniq | jsonify -}}
