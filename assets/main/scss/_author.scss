@@ -1,0 +1,6 @@
+.author {
+    .social-links {
+        justify-content: start!important;
+        margin-left: calc(var(--#{$prefix}nav-link-padding-x) * -1);
+    }
+}

@@ -17,7 +17,16 @@
     {{- $taxonomies := ($.GetTerms $key).ByTitle }}
     {{- if eq $.Site.Params.taxonomySortingMethod "popularity" }}{{ $taxonomies = (sort $taxonomies ".Data.Pages" "desc") }}{{ end }}
     {{- range $taxonomies }}
-    <a href="{{ .Permalink }}" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-{{ $key | singularize }}">{{ .Name | title }}</a>
+    <a href="{{ .Permalink }}" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-{{ $key | singularize }}">
+      {{- if eq $key "series" }}
+      <i class="fas fa-fw fa-columns"></i>
+      {{- else if eq $key "categories" }}
+      <i class="fas fa-fw fa-folder"></i>
+      {{- else if eq $key "authors" }}
+      <i class="fas fa-fw fa-user"></i>
+      {{- end }}
+      {{ .Name | title }}
+    </a>
     {{- end }}
   {{- end }}
 </div>

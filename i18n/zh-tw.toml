@@ -16,6 +16,9 @@ other = "全部"
 [archives]
 other = "歸檔"
 
+[authors]
+other = "作者"
+
 [button_copy_url]
 other = "複製連結"
 

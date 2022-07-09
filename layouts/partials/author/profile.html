@@ -1,0 +1,30 @@
+{{- if eq .Kind "term" }}
+    {{- if eq .Data.Plural "authors" }}
+    <div class="row card author component">
+        <div class="card-body">
+            <div class="d-flex">
+                <div class="flex-shrink-0 d-flex align-items-center">
+                    {{- with .Resources.GetMatch "avatar*" }}
+                        {{- $img := .Resize "150x150" }}
+                        <picture>
+                            <img class="img-fluid author-img mb-3" width="{{ $img.Width }}" height="{{ $img.Height }}" alt="author avatar" src="{{ $img.Permalink }}" title="{{ .Title }}" />
+                        </picture>
+                    {{- end }}
+                </div>
+                <div class="flex-grow-1 ms-4">
+                    <h1 class="author-name mb-2">{{ .Title }}</h1>
+                    {{- with .Description }}
+                    <div class="author-description mb-2">{{ . }}</div>
+                    {{- end }}
+                    {{- with .Params.social }}
+                        {{- partial "helpers/social-links" (dict "links" . "size" "fa-2x" "class" "mb-1" "OutputFormats" $.OutputFormats "home" ($.GetPage "/") "params" $.Site.Params) -}}
+                    {{- end }}
+                    <div class="author-meta">
+                        <span class="author-post-count"><i class="fas fa-fw fa-file-alt me-1"></i>{{ i18n "post_count" (dict "Count" (len .Data.Pages)) }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{- end }}
+{{- end -}}

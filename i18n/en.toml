@@ -16,6 +16,9 @@ other = "All"
 [archives]
 other = "Archives"
 
+[authors]
+other = "Authors"
+
 [button_copy_url]
 other = "Copy URL"
 
