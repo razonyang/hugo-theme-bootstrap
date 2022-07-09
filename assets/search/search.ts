@@ -237,6 +237,7 @@ export class Search {
         largeImg: result.item.largeImg,
         permalink: result.item.permalink,
         categories: result.item.categories,
+        authors: result.item.authors,
         tags: result.item.tags,
         series: result.item.series,
         score: Search.formatScore(result.score),
