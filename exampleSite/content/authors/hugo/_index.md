@@ -4,4 +4,5 @@ description: Hugo is one of the most popular open-source static site generators.
 social:
   github: gohugoio
   twitter: GoHugoIO
+  website: https://gohugo.io/
 ---
