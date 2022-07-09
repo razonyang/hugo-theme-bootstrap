@@ -23,7 +23,7 @@ weight = 90
 This article refers to the modern, up-to-date installation method of installing the theme locally as Hugo module.
 It describes how to install, upgrade the theme, and write new articles.
 
-## Proxy (optional)
+## Proxy (Optional)
 
 If you're located at China mainland without VPN, the Hugo module download may fail.
 
@@ -42,138 +42,54 @@ module:
   proxy: https://goproxy.cn
 {{</ code-toggle >}}
 
-## Installation
+## Install a new site from scratch
 
-### Install a new site from scratch
+Please use the [starter template](https://github.com/razonyang/hugo-theme-bootstrap-skeleton) for your new site.
 
-#### Step 1: Create skeleton site
+## Install on an existing site
 
-- Create and enter new site:
-
-```bash
-$ hugo new site my-new-blog
-$ cd my-new-blog
-```
-
-#### Step 2: Turn your new site into a Hugo module:
-
-```bash
-$ hugo mod init github.com/me/my-new-blog
-```
-
-#### Step 3: Declare `hugo-theme-bootstrap` module as a site dependency:
-
-```bash
-$ hugo mod get github.com/razonyang/hugo-theme-bootstrap
-```
-
-#### Step 4 (optional): Copy example site content into your site
-
-- Clone the `hugo-theme-bootstrap` repo into a temporary directory:
-
-```bash
-$ git clone https://github.com/razonyang/hugo-theme-bootstrap /tmp/hugo-theme-bootstrap
-```
-
-> If you're using Windows, use `git clone https://github.com/razonyang/hugo-theme-bootstrap %temp%\hugo-theme-bootstrap` instead.
-
-- Copy example site content:
-
-```bash
-$ cp -a /tmp/hugo-theme-bootstrap/exampleSite/* .
-```
-
-> If you're using Windows, use `xcopy %TEMP%\hugo-theme-bootstrap\exampleSite /E` instead.
-
-- Remove your file `config.toml`
-
-```bash
-rm config.toml
-```
-
-- Delete the repo from your temporary directory again:
-
-```bash
-$ rm -rf /tmp/hugo-theme-bootstrap
-```
-
-At the top of your `config/_default/config.toml`, switch the uncommented theme:
-
-```toml
-# theme = "hugo-theme-bootstrap" # install via git submodule
-theme = "github.com/razonyang/hugo-theme-bootstrap" # install via hugo module
-```
-
-#### Step 5: Pull in dependencies via npm
-
-- Use **n**ode **p**ackage **m**anager [`npm`](https://nodejs.org/en/download/) to pull in dependencies for this theme:
-
-```bash
-$ hugo mod npm pack
-$ npm install
-```
-
-#### Step 6: Preview your site
-
-- Start hugo's built-in webserver to [preview](http://localhost:1313/) your website:
-
-```bash
-$ hugo server
-```
-
-### Install on an existing site
-
-#### Step 1: Turn your existing site into a Hugo module:
+### Turn your existing site into a Hugo module
 
 ```bash
 $ cd my-blog
 $ hugo mod init github.com/me/my-blog
 ```
 
-#### Step 2: Declare `hugo-theme-bootstrap` module as a site dependency:
+### Declare `hugo-theme-bootstrap` module as a site dependency
 
 ```bash
-$ hugo mod get github.com/razonyang/hugo-theme-bootstrap
+$ hugo mod get github.com/razonyang/hugo-theme-bootstrap@[version]
 ```
 
-#### Step 3 (optional): Copy example site content into your site
+The `[version]` can be one of [Releases](https://github.com/razonyang/hugo-theme-bootstrap/releases), branches or even commits.
 
-- Clone the `hugo-theme-bootstrap` repo into a temporary directory:
+> Replace `[version]` with `master` for getting latest changes.
+
+### Copy example site content into your site (Optional)
+
+- Clone the `hugo-theme-bootstrap-skeleton` repo into a temporary directory:
 
 ```bash
-$ git clone https://github.com/razonyang/hugo-theme-bootstrap /tmp/
+$ git clone https://github.com/razonyang/hugo-theme-bootstrap-skeleton /tmp/hbs-skeleton
 ```
 
 - Copy example site configuration and content into your site:
 
 ```bash
 $ mkdir config
-$ cp -a /tmp/hugo-theme-bootstrap/exampleSite/config/* ./config
-$ cp -r /tmp/hugo-theme-bootstrap/exampleSite/content/about/ \
-  /tmp/hugo-theme-bootstrap/exampleSite/content/archives/ \
-  /tmp/hugo-theme-bootstrap/exampleSite/content/categories/ \
-  /tmp/hugo-theme-bootstrap/exampleSite/content/contact/ \
-  /tmp/hugo-theme-bootstrap/exampleSite/content/offline/ \
-  /tmp/hugo-theme-bootstrap/exampleSite/content/search/ \
-  /tmp/hugo-theme-bootstrap/exampleSite/content/series/ \
-  /tmp/hugo-theme-bootstrap/exampleSite/content/tags/ \
-  ./content
+$ cp -a /tmp/hbs-skeleton/config/* ./config
+$ cp -r /tmp/hbs-skeleton/content/* ./content
+$ cp -r /tmp/hbs-skeleton/archetypes/* ./archetypes
+$ cp -r /tmp/hbs-skeleton/static/* ./static
 ```
 
 - Delete the repo from your temporary directory again:
 
 ```bash
-$ rm -rf /tmp/hugo-theme-bootstrap/
+$ rm -rf /tmp/hbs-skeleton/
 ```
 
-At the top of your `config/_default/config.toml`, switch the uncommented theme:
-
-```toml
-# theme = "hugo-theme-bootstrap" # install via git submodule
-theme = "github.com/razonyang/hugo-theme-bootstrap" # install via hugo module
-```
-
-#### Step 4: Pull in dependencies via npm
+### Pull in dependencies via npm
 
 - Use **n**ode **p**ackage **m**anager [`npm`](https://nodejs.org/en/download/) to pull in dependencies for this theme:
 
@@ -182,35 +98,10 @@ $ hugo mod npm pack
 $ npm install
 ```
 
-#### Step 5: Preview your site
+### Preview your site
 
 - Start hugo's built-in webserver to [preview](http://localhost:1313/) your website:
 
 ```bash
 $ hugo server
-```
-
-## Theme Upgrade
-
-- Invoke hugo’s module `get` subcommand with the update flag:
-
-```bash
-$ cd my-blog
-$ hugo mod get -u github.com/razonyang/hugo-theme-bootstrap
-```
-
-Hugo will automatically pull in the latest theme version.
-
-> If you want to set your module to a certain `version` inside the `hugo-theme-bootstrap` theme repo, simply specific the name of the tag representing this version  when updating your theme.
-> 
-> Latest version: [![Releases](https://img.shields.io/github/release/razonyang/hugo-theme-bootstrap?style=flat-square)](https://github.com/razonyang/hugo-theme-bootstrap/releases).
-
-```bash
-$ hugo mod get -u github.com/razonyang/hugo-theme-bootstrap@version
-```
-
-> Instead of a version tag, you can also specify a commit hash inside the repo (here: `de4a40f`) when updating your theme:
-
-```bash
-$ hugo mod get -u github.com/razonyang/hugo-theme-bootstrap@de4a40f
 ```

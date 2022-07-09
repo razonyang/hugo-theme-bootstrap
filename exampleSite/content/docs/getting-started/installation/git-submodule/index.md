@@ -24,16 +24,14 @@ This article refers to the traditional installation method of cloning the theme 
 It describes how to install, upgrade the theme, and write new articles.
 While this installation method is still widely used, we recommend to install the theme as [Hugo module]({{< ref "/docs/getting-started/installation/hugo-module" >}}).
 
-## Installation
-
-### Create a New Site from Scratch
+## Create a New Site from Scratch
 
 ```bash
-$ hugo new site myblog
+$ git clone https://github.com/razonyang/hugo-theme-bootstrap-skeleton myblog
 $ cd myblog
-$ git init
 $ git submodule add https://github.com/razonyang/hugo-theme-bootstrap themes/hugo-theme-bootstrap
-$ cp -a themes/hugo-theme-bootstrap/exampleSite/* .
+$ sed -i "s/theme:.*/theme: hugo-theme-bootstrap/g" config/_default/config.yaml
+$ rm go.mod go.sum
 $ hugo mod npm pack
 $ npm install
 $ hugo server
@@ -41,46 +39,24 @@ $ hugo server
 
 > If you're using Windows, use `xcopy .\themes\hugo-theme-bootstrap\exampleSite /E` instead.
 
-Now, at the top of your `config/_default/config.toml, remove the hash sign at the beginning of the `theme =` line in order to activate your theme:
+> `sed` replaces the `theme: github.com/razonyang/hugo-theme-bootstrap` with `theme: hugo-theme-bootstrap`.
 
-```toml
-theme = "hugo-theme-bootstrap"   # when adding theme as git submodule
-```
 
-### Install on an existing site
+## Install on an existing site
 
 ```bash
 $ cd myblog
 $ git submodule add https://github.com/razonyang/hugo-theme-bootstrap themes/hugo-theme-bootstrap
+$ git clone https://github.com/razonyang/hugo-theme-bootstrap-skeleton /tmp/hbs-skeleton
 $ mkdir config
-$ cp -a themes/hugo-theme-bootstrap/exampleSite/config/* ./config
-$ cp -r themes/hugo-theme-bootstrap/exampleSite/content/about/ \
-  themes/hugo-theme-bootstrap/exampleSite/content/archives/ \
-  themes/hugo-theme-bootstrap/exampleSite/content/categories/ \
-  themes/hugo-theme-bootstrap/exampleSite/content/contact/ \
-  themes/hugo-theme-bootstrap/exampleSite/content/offline/ \
-  themes/hugo-theme-bootstrap/exampleSite/content/search/ \
-  themes/hugo-theme-bootstrap/exampleSite/content/series/ \
-  themes/hugo-theme-bootstrap/exampleSite/content/tags/ \
-  ./content
+$ cp -a /tmp/hbs-skeleton/config/* ./config
+$ cp -r /tmp/hbs-skeleton/content/* ./content
+$ cp -r /tmp/hbs-skeleton/archetypes/* ./archetypes
+$ cp -r /tmp/hbs-skeleton/static/* ./static
+$ sed -i "s/theme:.*/theme: hugo-theme-bootstrap/g" config/_default/config.yaml
 $ hugo mod npm pack
 $ npm install
 $ hugo server
 ```
 
 > If you're making a fresh clone, you will be need to update your submodule via `git submodule update --init --recursive` or clone with submodule `git clone --recursive <repo>`.
-
-## Upgrade
-
-```bash
-$ cd themes/hugo-theme-bootstrap
-$ git fetch
-$ git checkout [version]
-$ cd ../../
-$ hugo mod npm pack
-$ git add themes/hugo-theme-bootstrap package.json
-$ git commit -m 'Upgrade the theme'
-```
-
-- Replace the `[version]` with the latest version. The version can be listed by `git tag -l | sort -rV`.
-- You can also checkout the `master` branch for getting the latest commit.
