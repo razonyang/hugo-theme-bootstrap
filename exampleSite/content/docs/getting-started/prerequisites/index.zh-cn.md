@@ -11,10 +11,11 @@ reward = true
 pinned = false
 carousel = false
 categories = []
-tags = []
-series = []
+tags = ["先决条件"]
+series = ["文档"]
 images = []
 weight = 90
+authors = ["RazonYang"]
 +++
 
 在安装主题前，请确保你满足先决条件。
@@ -26,8 +27,7 @@ weight = 90
 自 `0.68.0`，HBS 要求设置以下配置。
 
 {{< code-toggle filename="config" >}}
-[build]
-  writeStats = true
+{{% config/build-write-stat %}}
 {{</ code-toggle >}}
 
 ## 构建工具

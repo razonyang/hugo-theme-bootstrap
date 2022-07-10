@@ -11,10 +11,11 @@ reward = true
 pinned = false
 carousel = false
 categories = []
-tags = []
-series = []
+tags = ["Prerequisites"]
+series = ["Docs"]
 images = []
 weight = 90
+authors = ["RazonYang"]
 +++
 
 Please make sure you meet the prerequisites prior to installing the theme.
@@ -26,8 +27,7 @@ Please make sure you meet the prerequisites prior to installing the theme.
 Since `0.68.0`, HBS requires the following configurations are be set.
 
 {{< code-toggle filename="config" >}}
-[build]
-  writeStats = true
+{{% config/build-write-stat %}}
 {{</ code-toggle >}}
 
 ## Build Tools
