@@ -1,4 +1,4 @@
-{{- if or .Site.Params.masonry .Params.masonry -}}
+{{- if or .Site.Params.masonry (.HasShortcode "gallery") -}}
 {{- $options := dict "target" "es2015" "targetPath" "assets/masonry/bundle.min.js" "minify" hugo.IsProduction -}}
 {{- $main := resources.Get "masonry/index.ts" }}
 {{- $script := $main | js.Build $options |fingerprint -}}
