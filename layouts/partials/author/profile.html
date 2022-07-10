@@ -3,15 +3,16 @@
     <div class="row card author component">
         <div class="card-body">
             <div class="d-flex">
+                {{- $avatar := .Resources.GetMatch "avatar*" -}}
+                {{- with $avatar}}
                 <div class="flex-shrink-0 d-flex align-items-center">
-                    {{- with .Resources.GetMatch "avatar*" }}
-                        {{- $img := .Resize "150x150" }}
-                        <picture>
-                            <img class="img-fluid author-img mb-3" width="{{ $img.Width }}" height="{{ $img.Height }}" alt="author avatar" src="{{ $img.Permalink }}" title="{{ .Title }}" />
-                        </picture>
-                    {{- end }}
+                    {{- $img := .Resize "150x150" }}
+                    <picture>
+                        <img class="img-fluid author-img mb-3" width="{{ $img.Width }}" height="{{ $img.Height }}" alt="author avatar" src="{{ $img.Permalink }}" title="{{ .Title }}" />
+                    </picture>
                 </div>
-                <div class="flex-grow-1 ms-4">
+                {{- end }}
+                <div class="flex-grow-1{{ if $avatar }} ms-4{{ end }}">
                     <h1 class="author-name mb-2 text-surface">{{ .Title }}</h1>
                     {{- with .Description }}
                     <div class="author-description mb-2">{{ . }}</div>
