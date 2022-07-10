@@ -1,5 +1,6 @@
 .author {
     .social-links {
+        --#{$prefix}nav-link-padding-x: .5rem;
         justify-content: start!important;
         margin-left: calc(var(--#{$prefix}nav-link-padding-x) * -1);
     }
