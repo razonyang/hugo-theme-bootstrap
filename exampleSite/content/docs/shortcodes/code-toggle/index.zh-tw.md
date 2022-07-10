@@ -14,6 +14,7 @@ categories = ["Shortcode"]
 tags = ["JSON", "YAML", "TOML"]
 series = ["文檔"]
 images = []
+authors = ["RazonYang"]
 +++
 
 The `code-toggle` shortcode generates code blocks of various formats according to the configuration code of any supported format.

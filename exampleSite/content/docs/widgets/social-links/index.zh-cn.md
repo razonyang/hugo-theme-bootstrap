@@ -17,6 +17,7 @@ images = []
 aliases = [
   "/zh-cn/posts/widgets/social-links"
 ]
+authors = ["RazonYang"]
 +++
 
 社交链接 `social` 参数是一组平台映射到用户标识的键值对。

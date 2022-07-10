@@ -16,6 +16,7 @@ tags = ["功能特性"]
 series = ["文檔"]
 images = []
 weight = 100
+authors = ["RazonYang"]
 +++
 
 Hugo Bootstap Theme(HBS) 是壹個快速、響應式、多用途和功能豐富的 Hugo 主題。其通常用於博客和文檔站點。

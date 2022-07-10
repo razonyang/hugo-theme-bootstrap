@@ -16,6 +16,7 @@ series = [
 ]
 images = []
 weight = 1000
+authors = ["RazonYang"]
 +++
 
 如示例站点所示，我们使用 [Configuration Directory](https://gohugo.io/getting-started/configuration/#configuration-目录) 为了维护更简单的组织和特定于环境的设置，它在多语言站点上特别有用。

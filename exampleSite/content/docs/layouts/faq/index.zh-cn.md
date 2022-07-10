@@ -18,6 +18,7 @@ aliases = [
   "/zh-cn/posts/faq",
   "/zh-cn/docs/faq"
 ]
+authors = ["RazonYang"]
 +++
 
 [FAQ]({{< ref "/faq" >}}) 页面是一个常见问题的集合。

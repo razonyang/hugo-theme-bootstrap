@@ -17,6 +17,7 @@ images = []
 aliases = [
   "/zh-cn/posts/widgets/reward"
 ]
+authors = ["RazonYang"]
 [menu.footer]
   parent = "features"
   weight = 7

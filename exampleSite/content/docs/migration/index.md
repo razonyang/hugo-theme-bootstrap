@@ -14,6 +14,7 @@ categories = ["Migration"]
 tags = []
 series = ["Docs"]
 images = []
+authors = ["RazonYang"]
 +++
 
 Track and review changes to the theme source files and documentation to help you migrate from `v0.*` to `v1`.

@@ -25,6 +25,7 @@ weight = 960
 aliases = [
   "/zh-cn/posts/look-and-feel"
 ]
+authors = ["RazonYang"]
 [menu.footer]
   parent = "docs"
   weight = 3

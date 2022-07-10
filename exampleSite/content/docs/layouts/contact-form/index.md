@@ -20,6 +20,7 @@ aliases = [
   "/en/posts/contact-form",
   "/en/docs/contact-form"
 ]
+authors = ["RazonYang"]
 [menu.footer]
   parent = "features"
   weight = 6

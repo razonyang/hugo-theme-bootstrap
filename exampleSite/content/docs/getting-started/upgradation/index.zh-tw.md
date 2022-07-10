@@ -14,6 +14,7 @@ categories = []
 tags = []
 series = ["文檔"]
 images = []
+authors = ["RazonYang"]
 +++
 
 本文將介紹如何正確地升級主題版本。

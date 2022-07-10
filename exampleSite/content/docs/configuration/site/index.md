@@ -16,6 +16,7 @@ series = [
 ]
 images = []
 weight = 990
+authors = ["RazonYang"]
 +++
 
 The site configuration is located in `config/_default/config.toml` by default.

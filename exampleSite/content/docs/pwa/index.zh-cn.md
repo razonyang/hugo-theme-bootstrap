@@ -20,6 +20,7 @@ images = []
 aliases = [
   "/zh-cn/posts/pwa"
 ]
+authors = ["RazonYang"]
 [menu.footer]
   parent = "features"
   weight = 2

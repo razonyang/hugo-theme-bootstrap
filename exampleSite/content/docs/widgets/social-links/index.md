@@ -17,6 +17,7 @@ images = []
 aliases = [
   "/en/posts/widgets/social-links"
 ]
+authors = ["RazonYang"]
 +++
 
 The `social` parameter is a set of key value pairs of social links that mapping from platform to their user identifier.

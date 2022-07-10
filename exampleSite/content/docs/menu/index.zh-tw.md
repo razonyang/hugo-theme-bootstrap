@@ -22,6 +22,7 @@ aliases = [
   "/zh-tw/posts/menu"
 ]
 weight = 970
+authors = ["RazonYang"]
 +++
 
 我們預定義了兩種類型的菜單：`main` 和 `footer`，分別表示頂部的應用程序欄菜單和頁腳菜單。

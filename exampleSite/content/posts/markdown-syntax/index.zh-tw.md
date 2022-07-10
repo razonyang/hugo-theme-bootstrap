@@ -18,6 +18,7 @@ aliases = ["migrate-from-jekyl"]
 images = [
   "images/markdown.png"
 ]
+authors = ["Hugo"]
 # toc = false
 [menu.footer]
   parent = "docs"

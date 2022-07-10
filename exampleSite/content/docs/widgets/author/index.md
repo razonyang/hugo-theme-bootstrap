@@ -17,6 +17,7 @@ images = []
 aliases = [
   "/en/posts/widgets/author"
 ]
+authors = ["RazonYang"]
 +++
 
 The author widget is located in the sidebar, in order to introduce yourself briefly.

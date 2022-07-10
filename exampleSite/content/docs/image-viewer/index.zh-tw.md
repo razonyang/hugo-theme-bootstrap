@@ -18,6 +18,7 @@ images = []
 aliases = [
   "/zh-tw/posts/image-viewer"
 ]
+authors = ["RazonYang"]
 [menu.footer]
   parent = "features"
   weight = 3

@@ -20,6 +20,7 @@ images = []
 aliases = [
   "/zh-tw/posts/widgets/comments"
 ]
+authors = ["RazonYang"]
 [menu.footer]
   parent = "features"
   weight = 7

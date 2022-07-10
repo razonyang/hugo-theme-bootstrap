@@ -22,6 +22,7 @@ aliases = [
   "/en/posts/menu"
 ]
 weight = 970
+authors = ["RazonYang"]
 +++
 
 We predefined two types of menus: `main` and `footer`, represents the top app bar menus and the footer menus, respectively.

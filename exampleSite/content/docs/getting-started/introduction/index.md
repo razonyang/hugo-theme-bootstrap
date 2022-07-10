@@ -16,9 +16,7 @@ tags = ["Features"]
 series = ["Docs"]
 images = []
 weight = 100
-authors = [
-    "RazonYang"
-]
+authors = ["RazonYang"]
 +++
 
 Hugo Bootstap Theme(HBS) is a fast, responsive, multipurpose and feature-rich Hugo theme. It is used for blog and document sites typically.

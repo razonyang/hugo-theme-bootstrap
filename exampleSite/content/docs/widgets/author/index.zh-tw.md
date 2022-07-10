@@ -17,6 +17,7 @@ images = []
 aliases = [
   "/zh-tw/posts/widgets/author"
 ]
+authors = ["RazonYang"]
 +++
 
 作者小部件位於側邊欄，用於簡要地自我介紹。

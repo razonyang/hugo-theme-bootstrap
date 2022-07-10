@@ -14,6 +14,7 @@ categories = ["Shortcode"]
 tags = ["JSON", "YAML", "TOML"]
 series = ["文档"]
 images = []
+authors = ["RazonYang"]
 +++
 
 `code-toggle` shortcode 根據任意支持的配寘程式碼，生成多種格式等效的程式碼塊。

@@ -14,7 +14,7 @@ tags = [
   "Prerequisites"
 ]
 series = [
-  "Docs"
+  "文檔"
 ]
 images = []
 weight = 1000

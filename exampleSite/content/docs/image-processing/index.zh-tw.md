@@ -38,6 +38,7 @@ series = [
 aliases = [
   "/zh-tw/posts/image-processing"
 ]
+authors = ["RazonYang"]
 [menu.footer]
   parent = "features"
   weight = 2

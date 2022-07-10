@@ -14,9 +14,10 @@ categories = [
 tags = [
 ]
 series = [
-  "Docs"
+  "文檔"
 ]
 images = []
+authors = ["Andreas Deininger", "RazonYang"]
 +++
 
 In this post we explore the `docs` layout that can be used to publish project documentation, a Personal Knowledge Base (PKM), a [Digital Garden](https://maggieappleton.com/garden-history), a [Second Brain](https://fortelabs.co/blog/basboverview/), a [Zettelkasten](https://zenkit.com/en/blog/a-beginners-guide-to-the-zettelkasten-method/), your notes, and more.

@@ -16,6 +16,7 @@ series = [
 ]
 images = []
 weight = 980
+authors = ["RazonYang"]
 +++
 
 站点参数文件默认为 `config/_default/params.toml`。

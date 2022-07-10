@@ -20,6 +20,7 @@ images = []
 aliases = [
   "/en/posts/widgets/comments"
 ]
+authors = ["RazonYang"]
 [menu.footer]
   parent = "features"
   weight = 7

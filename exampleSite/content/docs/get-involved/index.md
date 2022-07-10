@@ -15,6 +15,7 @@ images = []
 aliases = [
   "/en/posts/get-involved"
 ]
+authors = ["RazonYang"]
 [menu.main]
   parent = "support"
   weight = 5

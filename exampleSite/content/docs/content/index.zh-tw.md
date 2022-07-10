@@ -15,10 +15,11 @@ tags = [
   "Articles"
 ]
 series = [
-  "Docs"
+  "文檔"
 ]
 images = []
 weight = 970
+authors = ["RazonYang"]
 [menu.footer]
   parent = "docs"
   weight = 5

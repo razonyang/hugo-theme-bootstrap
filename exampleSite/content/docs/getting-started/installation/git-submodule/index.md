@@ -18,6 +18,7 @@ series = [
 ]
 images = []
 weight = 80
+authors = ["RazonYang"]
 +++
 
 This article refers to the traditional installation method of cloning the theme locally as Git submodule.

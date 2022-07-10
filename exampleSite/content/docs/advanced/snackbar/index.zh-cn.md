@@ -14,6 +14,7 @@ categories = []
 tags = ["Snackbar", "HTML", "JavaScript"]
 series = ["文档"]
 images = []
+authors = ["RazonYang"]
 +++
 
 相信使用过代码块复制按钮的用户，对 Snackbar 并不陌生，其告知用户应用程序执行的结果。本文将举例说明如何使用 Snackbar，以满足用户对自定义交互的需要。

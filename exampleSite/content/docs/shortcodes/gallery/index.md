@@ -14,6 +14,7 @@ series = [
 ]
 images = [
 ]
+authors = ["RazonYang"]
 +++
 
 This article shows how to use the `gallery` shortcode.

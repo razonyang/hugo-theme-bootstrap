@@ -14,6 +14,7 @@ categories = []
 tags = []
 series = ["Docs"]
 images = []
+authors = ["RazonYang"]
 +++
 
 This article explains how to upgrade the theme correctly.

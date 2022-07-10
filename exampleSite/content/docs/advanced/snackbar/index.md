@@ -14,6 +14,7 @@ categories = []
 tags = ["Snackbar", "HTML", "JavaScript"]
 series = ["Documentation"]
 images = []
+authors = ["RazonYang"]
 +++
 
 Users who have used the block copy button are no stranger to the Snackbar, which informs the user of the results of the application's execution. This article will give an example of how to use Snackbar to meet the user's need for custom interaction.

@@ -19,6 +19,7 @@ aliases = [
   "/en/posts/search",
   "/en/docs/search"
 ]
+authors = ["RazonYang"]
 [menu.footer]
   parent = "features"
   weight = 1

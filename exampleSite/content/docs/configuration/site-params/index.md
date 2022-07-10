@@ -16,6 +16,7 @@ series = [
 ]
 images = []
 weight = 980
+authors = ["RazonYang"]
 +++
 
 The site parameters are located in `config/_default/params.toml` by default.

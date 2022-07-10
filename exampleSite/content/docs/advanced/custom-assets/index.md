@@ -20,6 +20,7 @@ aliases = [
   "/en/posts/custom-assets",
   "/en/docs/custom-assets"
 ]
+authors = ["RazonYang"]
 [menu.footer]
   parent = "docs"
   weight = 6

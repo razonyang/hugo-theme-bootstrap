@@ -14,6 +14,7 @@ categories = []
 tags = ["Snackbar", "HTML", "JavaScript"]
 series = ["文檔"]
 images = []
+authors = ["RazonYang"]
 +++
 
 相信使用過代碼塊復製按鈕的用戶，對 Snackbar 並不陌生，其告知用戶應用程序執行的結果。本文將舉例說明如何使用 Snackbar，以滿足用戶對自定義交互的需要。

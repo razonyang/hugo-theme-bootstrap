@@ -14,10 +14,11 @@ tags = [
   "Hugo module"
 ]
 series = [
-  "Docs"
+  "文档"
 ]
 images = []
 weight = 90
+authors = ["RazonYang"]
 +++
 
 This article refers to the modern, up-to-date installation method of installing the theme locally as Hugo module.

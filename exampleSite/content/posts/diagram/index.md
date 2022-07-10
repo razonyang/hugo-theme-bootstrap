@@ -17,6 +17,7 @@ tags = [
 series = [
   "Docs"
 ]
+authors = ["RazonYang"]
 +++
 
 This article offers a sample of basic diagram usage that can be used in Hugo content files.
