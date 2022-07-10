@@ -6,4 +6,6 @@ social:
   twitter: razonyang
   email: razonyang@gmail.com
   website: https://razonyang.com/
+  patreon: razonyang
+  paypal: razonyang
 ---
