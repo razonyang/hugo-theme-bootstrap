@@ -207,6 +207,8 @@ viewer = true # Image Viewer
   # colorToggle = false # Disable the color toggle
   [topAppBar.social]
     github = "razonyang/hugo-theme-bootstrap"
+    patreon = "razonyang"
+    paypal = "razonyang"
     # rss = "" # Disable RSS link
 
 [docs]

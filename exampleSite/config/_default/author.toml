@@ -15,6 +15,8 @@ location = "Earth"
 [social]
   email = "user@domain.tld"
   facebook = "yourfacebookusername"
-  github = "yourgithubusername"
+  github = "razonyang/hugo-theme-bootstrap"
   twitter = "yourtwitterusername"
+  patreon = "razonyang"
+  paypal = "razonyang"
   # rss = "" # Disable RSS link
