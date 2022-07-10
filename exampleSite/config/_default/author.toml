@@ -13,8 +13,7 @@ location = "Earth"
   #layout = "compact"
 
 [social]
-  email = "user@domain.tld"
-  facebook = "yourfacebookusername"
+  email = "razonyang@gmail.com"
   github = "razonyang/hugo-theme-bootstrap"
   twitter = "yourtwitterusername"
   patreon = "razonyang"
