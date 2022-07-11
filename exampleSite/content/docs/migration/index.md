@@ -46,3 +46,7 @@ Track and review changes to the theme source files and documentation to help you
 
 - Deprecated `$variable-prefix`, please use `$prefix` instead.
 - Use Bootstrap built-in CSS variables instead of theme-defined CSS variables.
+
+### Docs
+
+- BREAKING CHANGE: use the `navWeight` instead of `weight` for sorting pages on docs nav.
