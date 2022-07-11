@@ -17,8 +17,9 @@
 {{- $page := .page -}}
 <ul class="list-unstyled mb-2 w-100{{ if eq $section $page.FirstSection }} pe-3{{ end }}">
 {{- $expand := default false .page.Site.Params.docs.nav.expand -}}
-    {{- range ($section.Pages.GroupBy "Weight" "desc") -}}
-      {{- range sort .Pages "Title" -}}
+    {{- $pages := sort (where $section.Pages "Params.navWeight" ">" 0) "Params.navWeight" "desc" -}}
+    {{- $pages = union $pages (sort $section.Pages "Title") -}}
+    {{- range $pages -}}
         {{- if .IsSection -}}
         {{- $sectionId := printf "nav-%s" .File.UniqueID -}}
         {{- $active := false -}}
@@ -49,7 +50,6 @@
           </a>
         </li>
         {{- end -}}
-      {{- end -}}
     {{- end -}}
 </ul>
 {{- end -}}
