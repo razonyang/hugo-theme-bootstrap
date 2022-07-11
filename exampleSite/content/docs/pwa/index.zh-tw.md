@@ -1,5 +1,6 @@
 +++
 title = "漸進式 web 應用程序"
+linkTitleIcon = '<i class="fas fa-th-large fa-fw"></i>'
 date = 2021-12-03T19:39:01+08:00
 featured = false
 comment = true
