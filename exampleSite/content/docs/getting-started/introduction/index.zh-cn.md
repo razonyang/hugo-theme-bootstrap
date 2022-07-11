@@ -15,7 +15,7 @@ categories = ["简介"]
 tags = ["功能特性"]
 series = ["文档"]
 images = []
-weight = 100
+navWeight = 100
 authors = ["RazonYang"]
 +++
 

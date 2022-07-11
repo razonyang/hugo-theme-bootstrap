@@ -17,7 +17,7 @@ series = [
   "文档"
 ]
 images = []
-weight = 1000
+navWeight = 1000
 aliases = [
   "/zh-cn/posts/getting-started"
 ]

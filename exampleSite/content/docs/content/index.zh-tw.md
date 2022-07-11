@@ -18,7 +18,7 @@ series = [
   "文檔"
 ]
 images = []
-weight = 970
+navWeight = 970
 authors = ["RazonYang"]
 [menu.footer]
   parent = "docs"

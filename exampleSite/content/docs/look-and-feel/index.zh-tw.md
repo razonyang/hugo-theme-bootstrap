@@ -21,7 +21,7 @@ series = [
   "文檔"
 ]
 images = []
-weight = 960
+navWeight = 960
 aliases = [
   "/zh-tw/posts/look-and-feel"
 ]

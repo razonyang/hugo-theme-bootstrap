@@ -14,7 +14,7 @@ categories = []
 tags = ["先决条件"]
 series = ["文档"]
 images = []
-weight = 90
+navWeight = 90
 authors = ["RazonYang"]
 +++
 

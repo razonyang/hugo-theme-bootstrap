@@ -15,7 +15,7 @@ series = [
   "Docs"
 ]
 images = []
-weight = 1000
+navWeight = 1000
 authors = ["RazonYang"]
 +++
 

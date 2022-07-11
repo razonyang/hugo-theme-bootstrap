@@ -21,7 +21,7 @@ images = []
 aliases = [
   "/zh-cn/posts/menu"
 ]
-weight = 970
+navWeight = 970
 authors = ["RazonYang"]
 +++
 

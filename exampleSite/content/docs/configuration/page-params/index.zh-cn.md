@@ -15,7 +15,7 @@ series = [
   "文档"
 ]
 images = []
-weight = 970
+navWeight = 970
 authors = ["RazonYang"]
 +++
 

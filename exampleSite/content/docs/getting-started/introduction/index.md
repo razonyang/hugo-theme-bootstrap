@@ -15,7 +15,7 @@ categories = ["Introduction"]
 tags = ["Features"]
 series = ["Docs"]
 images = []
-weight = 100
+navWeight = 100
 authors = ["RazonYang"]
 +++
 

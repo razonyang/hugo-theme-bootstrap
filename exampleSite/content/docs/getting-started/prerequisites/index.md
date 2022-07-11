@@ -14,7 +14,7 @@ categories = []
 tags = ["Prerequisites"]
 series = ["Docs"]
 images = []
-weight = 90
+navWeight = 90
 authors = ["RazonYang"]
 +++
 
