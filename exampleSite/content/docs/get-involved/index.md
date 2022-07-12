@@ -17,6 +17,7 @@ aliases = [
   "/en/posts/get-involved"
 ]
 authors = ["RazonYang"]
+navWeight = 1
 [menu.main]
   parent = "support"
   weight = 5
@@ -57,23 +58,16 @@ For example:
 
 ### Develop
 
-The theme relies on `npm` and `webpack` for building assets: JS, CSS, fonts etc.
+The theme relies on `npm` and Hugo Pipes for building assets: JS, CSS, fonts etc.
 
-> The source code were placed in `src` directory.
+> The source code were placed in `assets` directory.
 
 #### Install dependencies
 
 ```bash
+$ cd exampleSite
 $ npm install
 ```
-
-#### Rebuild assets
-
-```bash
-$ npm run build
-```
-
-> `npm run watch` will rebuild assets on change.
 
 #### Preview
 

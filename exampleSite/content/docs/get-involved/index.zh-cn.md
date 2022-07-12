@@ -16,6 +16,7 @@ images = []
 aliases = [
   "/zh-cn/posts/get-involved"
 ]
+navWeight = 1
 authors = ["RazonYang"]
 [menu.main]
   parent = "support"
@@ -57,23 +58,16 @@ authors = ["RazonYang"]
 
 ### 开发
 
-本主题依赖 `npm` 和 `webpack`，用于生成资源文件：JS、CSS、字体等。
+本主题依赖 `npm` 和 Hugo Pipes，用于生成资源文件：JS、CSS、字体等。
 
-> 其源码放在 `src` 目录。
+> 其源码放在 `assets` 目录。
 
 #### 安装依赖
 
 ```bash
+$ cd exampleSite
 $ npm install
 ```
-
-#### 重建资源
-
-```bash
-$ npm run build
-```
-
-> `npm run watch` 会在文件改动时重建资源。
 
 #### 预览
 
