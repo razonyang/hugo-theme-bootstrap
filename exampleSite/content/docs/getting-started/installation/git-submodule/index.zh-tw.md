@@ -53,6 +53,7 @@ $ cp -a /tmp/hbs-skeleton/config/* ./config
 $ cp -r /tmp/hbs-skeleton/content/* ./content
 $ cp -r /tmp/hbs-skeleton/archetypes/* ./archetypes
 $ cp -r /tmp/hbs-skeleton/static/* ./static
+$ cp -r /tmp/hbs-skeleton/assets/* ./assets
 $ sed -i "s/theme:.*/theme: hugo-theme-bootstrap/g" config/_default/config.yaml
 $ hugo mod npm pack
 $ npm install

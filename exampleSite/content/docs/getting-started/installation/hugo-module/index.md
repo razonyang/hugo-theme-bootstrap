@@ -82,6 +82,7 @@ $ cp -a /tmp/hbs-skeleton/config/* ./config
 $ cp -r /tmp/hbs-skeleton/content/* ./content
 $ cp -r /tmp/hbs-skeleton/archetypes/* ./archetypes
 $ cp -r /tmp/hbs-skeleton/static/* ./static
+$ cp -r /tmp/hbs-skeleton/assets/* ./assets
 ```
 
 - Delete the repo from your temporary directory again:
