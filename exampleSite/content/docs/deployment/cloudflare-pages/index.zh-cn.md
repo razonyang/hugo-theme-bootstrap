@@ -1,6 +1,6 @@
 +++
 # type = "docs"
-title = "Deploy on Cloudflare Pages"
+title = "部署于 Cloudflare Pages"
 linkTitle = "Cloudflare Pages"
 date = 2022-07-12T20:06:24+08:00
 # description = "" # Used by description meta tag, summary will be used instead if not set or empty.
