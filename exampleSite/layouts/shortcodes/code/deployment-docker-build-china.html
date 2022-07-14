@@ -1,0 +1,5 @@
+$ docker build -t mysite \
+  --build-arg HUGO_BASEURL=https://example.com \
+  --build-arg HUGO_MODULE_PROXY=https://goproxy.cn \
+  --build-arg NPM_CONFIG_REGISTRY=https://registry.npmmirror.com \
+  .

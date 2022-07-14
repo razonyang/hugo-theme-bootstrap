@@ -1,0 +1,21 @@
+server {
+    listen       80;
+    listen  [::]:80;
+    server_name  localhost;
+    
+    root   /app;
+
+    location / {
+        index  index.html index.htm;
+    }
+
+    location ~* ^/([^/]+) {
+        index  index.html index.htm;
+        error_page 404 = @error;
+    }
+
+    error_page 404 /404.html;
+    location @error {
+        try_files /$1/404.html /404.html =404;
+    }
+}
