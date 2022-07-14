@@ -1,5 +1,5 @@
 +++
-title = "Docs Layout"
+title = "Docs 布局"
 description = ""
 date = 2022-01-12T10:56:34-08:00
 featured = false
@@ -20,45 +20,71 @@ images = []
 authors = ["Andreas Deininger", "RazonYang"]
 +++
 
-In this post we explore the `docs` layout that can be used to publish project documentation, a Personal Knowledge Base (PKM), a [Digital Garden](https://maggieappleton.com/garden-history), a [Second Brain](https://fortelabs.co/blog/basboverview/), a [Zettelkasten](https://zenkit.com/en/blog/a-beginners-guide-to-the-zettelkasten-method/), your notes, and more.
+在本文中，我们将探讨 `docs` 布局，其可用来编写项目文档，个人笔记等。
 
 <!--more-->
 
 > If you're going to use `docs` layout on other sections(`notes`), please take a look at [Content]({{< ref "/docs/content" >}}) page.
 
-Since `v0.63.0`, the Hugo Bootstrap Theme supports a new section layout named as the `docs` layout. The `docs` layout is a three-column layout consisting of a "catalog" sidebar in the left column, the main document content in the middle column, and a Table of Contents as well as other configurable widgets in the right column. See the image below for a representative example of the `docs` layout. For a more comprehensive example, look at `content/en/docs` of the `exampleSite` included with this theme.
+## 布局
 
-![Docs 3 column layout](docs-3col-rs.png)
+`docs` 布局由三部分组成，由左到右依次为：文档导航栏、文档内容和侧边栏。
 
-By default, this layout will show the contents of the `content/docs` folder of your Hugo site. However, it is also possible to use this layout for the contents of any other folder or page by setting the `type` and `layout` variables appropriately in the frontmatter. See Hugo's [frontmatter variables documentation](https://gohugo.io/content-management/front-matter/#front-matter-variables) for more details.
+## 内容结构
 
-## Left sidebar: Catalog
-
-The catalog sidebar, which is in the left column, shows an automatically generated hierarchy of files/folders in the `docs` section. See the image below for an example of the tree structure of files and folders in `content/docs` (at the left of the image) and the corresponding hierarchy shown in the catalog sidebar (at the right of the image).
-
-![Docs catalog hierarchy](doc-catalog-hierarchy.png)
-
-Some notable points:
-
-- An `_index.md` file needs to be present in each folder, so that the catalog sidebar shows the hierarchy correctly. Missing `_index.md` files may result in a flatter structure in the catalog sidebar i.e. the hierarchy may not be visible.
-- An entry with child pages in the catalog sidebar will typically have two hyperlinks associated with it: The text and the arrows
-	- Clicking on the 🡺 / 🡻 arrows of the item will expand/collapse the downstream hierarchy to show/hide the child entries.
-	- Clicking on the text of the sidebar entry will show the content of the corresponding `_index.md` file followed by a summary list of the child pages under that item, in the middle column.
-- The entries in this sidebar are first sorted by using the `weight` variable in pages` frontmatter in descending order. Subsequently, for pages with the same weight, or if the weight variable is missing, the pages will be sorted alphabetically by title.
-- The sidebar is visible on large screens. For medium and smaller screens, the sidebar is hidden by default but can be revealed through the » floating button that appears to the left when the sidebar is hidden.
-
-## Right sidebar: Widgets
-
-This is the sidebar shown in the right column. By default, it contains a Table of Contents widget which shows the ToC of the document in the middle column. 
-
-Additional sidebar widgets from this theme can be added above/below the ToC widget through the use of the hooks in your site's `layouts/partials/hooks/docs/sidebar-begin.html` and `layouts/partials/hooks/docs/sidebar-end.html`. For example, to add the "Recent posts" and "Featured posts" widgets below the doc, add the following to `layouts/partials/hooks/docs/sidebar-end.html`
-
-```
-{{ partial "sidebar/recent-posts" . }}
-{{ partial "sidebar/featured-posts" . }}
+```bash
+{{% code/layout-docs-structure %}}
 ```
 
-Some notable points:
+![Structure](structure.png#center)
 
-- The contents of the "Recent posts" sidebar widgets in the `docs` layout will be filtered to only show content from the `docs` section.
-- The contents of the right sidebar are "sticky" i.e. they will be shown even as the page scrolls.
+如图所示，本例展示了如何组织一个多层次的文档导航。
+
+- 包含 `_index.md` 将作为一个 Section。
+- 包含 `index.md` 将作为一个页面。
+
+## 文档导航栏
+
+### 标题
+
+一般地，`title` 将作为默认标题显示，但有时候过长的标题而显得画蛇添足，此时我们可以通过设置 `linkTitle` 以修改导航所显示的链接文本。
+
+{{< code-toggle >}}
+title = "Install on Windows"
+linkTitle = "Windows"
+{{< /code-toggle >}}
+
+### 图标
+
+除此之外，我们提供一个名为 `linkTitleIcon` 的参数以设置标题左侧的图标。
+
+{{< code-toggle >}}
+linkTitleIcon = '<i class="fas fa-columns fa-fw"></i>'
+{{< /code-toggle >}}
+
+### 权重于排序
+
+我们根据 `navWeight` 参数对文档进行排序，值越高则优先度越高。而对于没有指定 `navWeight` 的文档，则按照 `title` 进行字母升序排序。
+
+{{< code-toggle >}}
+navWeight = 1000
+{{< /code-toggle >}}
+
+### 外部链接
+
+有时候我们将文章需要链接到外部站点，此时 `redirect` 可以派上用场，其将自动跳转到指定的外部链接。
+
+{{< code-toggle >}}
+redirect = "https://github.com/razonyang/hugo-theme-bootstrap-skeleton"
+{{< /code-toggle >}}
+
+## 侧边栏
+
+### 小部件
+
+侧边栏默认只包含内容目录，但你可以通过[钩子]({{< ref "docs/advanced/hooks" >}})添加小部件。
+
+```html {title="layouts/partials/hooks/docs/sidebar-end.html"}
+{{- partial "docs/repo" . }}
+{{- partial "sidebar/recent-posts" . }}
+```
