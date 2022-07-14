@@ -60,6 +60,10 @@
   a {
     &:not(.btn) {
       color: var(--#{$prefix}primary);
+      
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
