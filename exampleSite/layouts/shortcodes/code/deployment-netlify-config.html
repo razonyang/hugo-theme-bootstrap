@@ -1,0 +1,32 @@
+[build]
+  publish = "public"
+
+[build.environment]
+  NODE_VERSION = "17.6.0"
+  HUGO_VERSION = "0.101.0"
+  HUGO_ENABLEGITINFO = "true"
+  GO_VERSION = "1.17.7"
+
+[context.production]
+  command = "npm install && hugo --minify"
+
+[context.production.environment]
+  HUGO_ENV = "production"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "deny"
+    X-XSS-Protection = "1; mode=block"
+
+[[redirects]]
+  from = "/:lang/*"
+  to = "/:lang/404.html"
+  status = 404
+
+[[redirects]]
+  from = "/*"
+  to = "/en/404.html" # Replace the "en" to your default language code if "defaultContentLanguageInSubdir" is enabled, otherwise use "/404.html" instead.
+  status = 404
