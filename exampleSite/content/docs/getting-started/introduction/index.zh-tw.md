@@ -66,5 +66,5 @@ Hugo Bootstap Theme(HBS) 是壹個快速、響應式、多用途和功能豐富�
 - [Various Shortcodes]({{< ref "/docs/shortcodes" >}}).
 - Twitter Cards and Open Graph.
 - [Creative Commons License](https://creativecommons.org/licenses/).
-- [Contact Form]({{< ref "/docs/layouts/contact-form" >}}).
+- [Contact Form]({{< ref "/docs/layouts/contact" >}}).
 - Numberify Headings Automatically.

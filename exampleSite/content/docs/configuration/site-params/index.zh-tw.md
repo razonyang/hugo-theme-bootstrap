@@ -141,7 +141,7 @@ authors = ["RazonYang"]
 | `sidebar.authors` | Boolean | `false` | Show the authors widget on the sidebar.
 | **Meta Tag**
 | `metaRobots` | String | - | 空字符串表示禁用。
-| `contact` | Object | - | [聯系表單]({{< ref "docs/layouts/contact-form" >}})
+| `contact` | Object | - | [聯系表單]({{< ref "docs/layouts/contact" >}})
 | `pinnedPost` | Boolean | `true` | 開啟/禁用文章置頂。
 | `pinnedPostCount` | Integer | `1` | 置頂的文章數量。
 | `rss` | String/Boolean | `true` | 在社交鏈接中顯示 RSS 鏈接。`false` 為不顯示，`home` 則總是鏈接到主頁。
