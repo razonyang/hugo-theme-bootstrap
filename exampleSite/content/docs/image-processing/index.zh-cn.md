@@ -81,7 +81,7 @@ authors = ["RazonYang"]
 
 ## 对齐图像
 
-我们可以利用 URL 片段轻易地对齐图像，比如：`#center`, `#floatleft` 和 `#floatright` 分别表示居中对齐、向左浮动和向右浮动。
+我们可以利用 URL 片段轻易地对齐图像，比如：`#center`, `#float-start` 和 `#float-end` 分别表示居中对齐、向左浮动和向右浮动。
 
 ### 居中对齐
 
@@ -93,19 +93,19 @@ authors = ["RazonYang"]
 
 ### 向左浮动
 
-![Float Left](/featured-sample.webp?height=120px#floatleft)
+![Float Start](/featured-sample.webp?height=120px#float-start)
 
-添加 `#floatleft` 使图片向左浮动。
+添加 `#float-start` 使图片向左浮动。
 
-举个例子：`![Float Left](/featured-sample.webp#floatleft)`。
+举个例子：`![Float Left](/featured-sample.webp#float-start)`。
 
 ### 向右浮动
 
-![Float Right](/featured-sample.webp?height=120px#floatright)
+![Float End](/featured-sample.webp?height=120px#float-end)
 
-同样的，我们也可以添加 `#floatright` 使图片向右浮动。
+同样的，我们也可以添加 `#float-end` 使图片向右浮动。
 
-举个例子：`![Float Right](/featured-sample.webp#floatright)`。
+举个例子：`![Float Right](/featured-sample.webp#float-end)`。
 
 ## Caption
 

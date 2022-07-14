@@ -81,7 +81,7 @@ authors = ["RazonYang"]
 
 ## 對齊圖像
 
-我們可以利用 URL 片段輕易地對齊圖像，比如：`#center`, `#floatleft` 和 `#floatright` 分別表示居中對齊、向左浮動和向右浮動。
+我們可以利用 URL 片段輕易地對齊圖像，比如：`#center`, `#float-start` 和 `#float-end` 分別表示居中對齊、向左浮動和向右浮動。
 
 ### 居中對齊
 
@@ -93,19 +93,19 @@ authors = ["RazonYang"]
 
 ### 向左浮動
 
-![Float Left](/featured-sample.webp?height=120px#floatleft)
+![Float Start](/featured-sample.webp?height=120px#float-start)
 
-添加 `#floatleft` 使圖片向左浮動。
+添加 `#float-start` 使圖片向左浮動。
 
-舉個例子：`![Float Left](/featured-sample.webp#floatleft)`。
+舉個例子：`![Float Left](/featured-sample.webp#float-start)`。
 
 ### 向右浮動
 
-![Float Right](/featured-sample.webp?height=120px#floatright)
+![Float End](/featured-sample.webp?height=120px#float-end)
 
-同樣的，我們也可以添加 `#floatright` 使圖片向右浮動。
+同樣的，我們也可以添加 `#float-end` 使圖片向右浮動。
 
-舉個例子：`![Float Right](/featured-sample.webp#floatright)`。
+舉個例子：`![Float Right](/featured-sample.webp#float-end)`。
 
 ## Caption
 
