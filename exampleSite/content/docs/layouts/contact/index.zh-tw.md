@@ -18,7 +18,8 @@ series = [
 images = []
 aliases = [
   "/zh-tw/posts/contact-form",
-  "/zh-tw/docs/contact-form"
+  "/zh-tw/docs/contact-form",
+  "/zh-tw/docs/layouts/contact-form"
 ]
 authors = ["RazonYang"]
 [menu.footer]
