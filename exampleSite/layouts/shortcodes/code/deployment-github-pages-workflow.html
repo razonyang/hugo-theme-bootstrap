@@ -1,0 +1,48 @@
+name: GitHub Pages
+on:
+  push:
+    branches:
+      - main
+permissions:
+  contents: write
+jobs:
+  build-and-deploy:
+    concurrency: ci-${{ printf "{{" }} github.ref {{ printf "}}" }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+        with:
+          submodules: true
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ printf "{{" }} runner.os {{ printf "}}" }}-node-${{ printf "{{" }} hashFiles('**/package-lock.json') {{ printf "}}" }}
+          restore-keys: |
+            ${{ printf "{{" }} runner.os {{ printf "}}" }}-node-
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+          extended: true
+
+      - name: Build
+        run: hugo --minify --gc --enableGitInfo
+
+      - name: Deploy 🚀
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ printf "{{" }} secrets.GITHUB_TOKEN {{ printf "}}" }}
+          publish_dir: ./public
