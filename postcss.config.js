@@ -30,6 +30,7 @@ const purgecss = require('@fullhuman/postcss-purgecss')({
       'rounded', 'rounded-top',
       'show',
       'text-pre-wrap', 'text-uppercase', 'text-white', 'top-0', 'text-bg-secondary', 'text-success',
+      'user-select-all',
       'w-100',
       'was-validated',
     ],

@@ -60,7 +60,7 @@ class CodeBlock {
     const title = this.element.getAttribute('title');
     if (title) {
       const element = document.createElement('div');
-      element.className = 'title position-absolute bottom-0 end-0 text-white fst-italic opacity-50 pe-3 fs-xs';
+      element.className = 'title position-absolute bottom-0 end-0 text-white fst-italic opacity-50 pe-3 fs-xs user-select-all';
       element.innerHTML = title;
       this.wrapper.appendChild(element);
     }
