@@ -28,7 +28,7 @@ In this article, we'll explore the `docs` layout, which can be used to write pro
 
 ## Layout
 
-The `docs` layout consists of three sections, from left to right: document navigation bar, document content and sidebar.
+The `docs` layout consists of three sections, from start to end: document navigation bar, document content and sidebar.
 
 ## Content Structure
 
@@ -47,7 +47,7 @@ As shown in the figure, this example shows how to organize a multi-level documen
 
 ### Title
 
-Generally, `title` will be used to display on the navigation bar, but sometimes the title is too long to make things worse. At this time, we can modify the link text displayed in the navigation via `linktitle`.
+Generally, `title` will be used to display on the navigation bar, but sometimes the title is too long to make things worse. At this time, we can modify the link text displayed in the navigation via `linkTitle`.
 
 {{< code-toggle >}}
 title = "Install on Windows"
@@ -56,7 +56,7 @@ linkTitle = "Windows"
 
 ### Icon
 
-In addition, we provide a parameter called `linktitleicon` to set the icon on the left side of the title.
+In addition, we provide a parameter called `linkTitleIcon` to set the icon on the left side of the title.
 
 {{< code-toggle >}}
 linkTitleIcon = '<i class="fas fa-columns fa-fw"></i>'
