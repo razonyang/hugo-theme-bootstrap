@@ -97,7 +97,7 @@ authors = ["RazonYang"]
 
 添加 `#float-start` 使圖片向左浮動。
 
-舉個例子：`![Float Left](/featured-sample.webp#float-start)`。
+舉個例子：`![Float Start](/featured-sample.webp#float-start)`。
 
 ### 向右浮動
 
@@ -105,7 +105,7 @@ authors = ["RazonYang"]
 
 同樣的，我們也可以添加 `#float-end` 使圖片向右浮動。
 
-舉個例子：`![Float Right](/featured-sample.webp#float-end)`。
+舉個例子：`![Float End](/featured-sample.webp#float-end)`。
 
 ## Caption
 

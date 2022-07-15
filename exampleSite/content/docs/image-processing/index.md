@@ -81,7 +81,7 @@ We use the URL query of image for resizing images. For example:
 
 ## Aligning Images
 
-We can easily align images by adding URL fragments. Such as `#center`, `#float-start` and `#float-end` represents align center, float left and float right respectively.
+We can easily align images by adding URL fragments. Such as `#center`, `#float-start` and `#float-end` represents align center, float start and float end respectively.
 
 ### Center
 
@@ -91,21 +91,21 @@ For example: `![Center](/featured-sample.webp#center)`.
 
 ![Center](/featured-sample.webp?height=120px#center)
 
-### Float Left
+### Float Start
 
 ![Float Start](/featured-sample.webp?height=120px#float-start)
 
-Adding the `#float-start` fragment for floating images to the left.
+Adding the `#float-start` fragment for floating images to the start.
 
-For example: `![Float Left](/featured-sample.webp#float-start)`.
+For example: `![Float Start](/featured-sample.webp#float-start)`.
 
-### Float Right
+### Float End
 
 ![Float End](/featured-sample.webp?height=120px#float-end)
 
-Similarly, we can also float images to the right by adding the `#float-end` fragment.
+Similarly, we can also float images to the end by adding the `#float-end` fragment.
 
-For example: `![Float Right](/featured-sample.webp#float-end)`.
+For example: `![Float End](/featured-sample.webp#float-end)`.
 
 ## Caption
 
