@@ -3,7 +3,7 @@ const stats = './hugo_stats.json';
 const fs = require('fs');
 fs.access(stats, fs.F_OK, (err) => {
   if (err) {
-    throw new Error('Hugo stats file not found, please turn on the build.writeStats.\n\n# /config/_default/config.toml\n[build]\n  writeStats = true\n')
+    throw new Error('Hugo stats file not found, please turn on the "build.writeStats". See also https://hbs.razonyang.com/v1/en/docs/getting-started/prerequisites/#configuration.')
   }
 });
 
