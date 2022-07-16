@@ -1,8 +1,7 @@
-import Component from "js/component";
+import Component from 'js/component';
 
 class TableWrapper implements Component {
-  constructor(public elements?: NodeListOf<HTMLElement>) {
-  }
+  constructor(public elements?: NodeListOf<HTMLElement>) {}
 
   run() {
     if (this.elements.length === 0) {

@@ -1,18 +1,20 @@
-import Component from "js/component";
+import Component from 'js/component';
 
 class Scroller implements Component {
   private btn: HTMLElement;
 
-  public x: number = 0;
+  public x = 0;
 
-  public y: number = 0;
+  public y = 0;
 
   constructor() {
     const btn = document.createElement('a');
     btn.setAttribute('role', 'button');
     btn.setAttribute('aria-label', 'Scroll to top');
-    btn.className = 'btn btn-sm btn-primary btn-scroll-to-top position-fixed opacity-0 p-1';
-    btn.innerHTML = '<i class="fas fa-fw fa-chevron-circle-down fa-2x" data-fa-transform="rotate-180"></i>';
+    btn.className =
+      'btn btn-sm btn-primary btn-scroll-to-top position-fixed opacity-0 p-1';
+    btn.innerHTML =
+      '<i class="fas fa-fw fa-chevron-circle-down fa-2x" data-fa-transform="rotate-180"></i>';
     window.document.body.append(btn);
     this.btn = btn;
   }
@@ -26,16 +28,18 @@ class Scroller implements Component {
   }
 
   run() {
-    const instance = this;
     window.addEventListener('scroll', () => {
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        instance.show();
+      if (
+        document.body.scrollTop > 20 ||
+        document.documentElement.scrollTop > 20
+      ) {
+        this.show();
       } else {
-        instance.hide();
+        this.hide();
       }
     });
     this.btn.addEventListener('click', () => {
-      instance.scroll();
+      this.scroll();
     });
   }
 

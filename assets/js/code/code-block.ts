@@ -1,5 +1,5 @@
-import Snackbar from "js/snackbar";
-import { default  as params } from '@params';
+import Snackbar from 'js/snackbar';
+import { default as params } from '@params';
 
 class CodeBlock {
   wrapper: HTMLElement;
@@ -14,9 +14,9 @@ class CodeBlock {
 
   maxHeight: number;
 
-  maxLines: number = 7;
+  maxLines = 7;
 
-  lineNos: boolean = true;
+  lineNos = true;
 
   constructor(element: HTMLElement) {
     this.element = element;
@@ -50,7 +50,8 @@ class CodeBlock {
     const lang = this.code.getAttribute('data-lang');
     if (lang) {
       const element = document.createElement('div');
-      element.className = 'lang position-absolute top-0 end-0 text-white fst-italic text-uppercase opacity-50 fs-xs pe-3 pt-0';
+      element.className =
+        'lang position-absolute top-0 end-0 text-white fst-italic text-uppercase opacity-50 fs-xs pe-3 pt-0';
       element.innerHTML = lang;
       this.wrapper.appendChild(element);
     }
@@ -60,7 +61,8 @@ class CodeBlock {
     const title = this.element.getAttribute('title');
     if (title) {
       const element = document.createElement('div');
-      element.className = 'title position-absolute bottom-0 end-0 text-white fst-italic opacity-50 pe-3 fs-xs user-select-all';
+      element.className =
+        'title position-absolute bottom-0 end-0 text-white fst-italic opacity-50 pe-3 fs-xs user-select-all';
       element.innerHTML = title;
       this.wrapper.appendChild(element);
     }
@@ -68,7 +70,8 @@ class CodeBlock {
 
   appendPanel() {
     this.panel = document.createElement('div');
-    this.panel.className = 'chroma panel position-absolute mb-0 end-0 opacity-0 rounded-top';
+    this.panel.className =
+      'chroma panel position-absolute mb-0 end-0 opacity-0 rounded-top';
     this.calculateMaxHeight();
     this.appendCopyButton();
     this.appendLineNumberButton();
@@ -80,7 +83,9 @@ class CodeBlock {
   calculateMaxHeight() {
     const lineNumbers = this.lineNumbers();
     if (lineNumbers > this.maxLines) {
-      const maxLine = this.code.querySelectorAll('.ln')[this.maxLines] as HTMLElement;
+      const maxLine = this.code.querySelectorAll('.ln')[
+        this.maxLines
+      ] as HTMLElement;
       this.maxHeight = maxLine.offsetTop;
     }
   }
@@ -91,9 +96,8 @@ class CodeBlock {
     btn.setAttribute('aria-label', 'Copy Code');
     btn.className = 'action';
     btn.innerHTML = '<i class="fas fa-copy"></i>';
-    const self = this;
     btn.addEventListener('click', () => {
-      const cloneCode = self.code.cloneNode(true) as HTMLElement;
+      const cloneCode = this.code.cloneNode(true) as HTMLElement;
       cloneCode.querySelectorAll('.ln').forEach((ln) => {
         ln.remove();
       });
@@ -111,9 +115,8 @@ class CodeBlock {
       btn.setAttribute('aria-label', 'Line number toggler');
       btn.className = 'action active';
       btn.innerHTML = '<i class="fas fa-list"></i>';
-      const self = this;
       btn.addEventListener('click', () => {
-        const { classList } = self.code;
+        const { classList } = this.code;
         const className = 'no-ln';
         if (classList.contains(className)) {
           classList.remove(className);
@@ -130,7 +133,7 @@ class CodeBlock {
     }
   }
 
-  hasLineNumbers() :boolean {
+  hasLineNumbers(): boolean {
     return this.lineNumbers() > 0;
   }
 
@@ -139,14 +142,13 @@ class CodeBlock {
   }
 
   appendLineWrapButton() {
-    const self = this;
     const btn = document.createElement('a');
     btn.setAttribute('role', 'button');
     btn.setAttribute('aria-label', 'Line wrap toggler');
     btn.className = 'action';
     btn.innerHTML = '<i class="fas fa-code"></i>';
     btn.addEventListener('click', () => {
-      const { classList } = self.code;
+      const { classList } = this.code;
       const className = 'text-pre-wrap';
       if (classList.contains(className)) {
         classList.remove(className);

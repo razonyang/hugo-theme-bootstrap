@@ -1,4 +1,4 @@
-import Component from "js/component";
+import Component from 'js/component';
 import { default as LocalStorage } from 'js/local-storage';
 
 class PaletteSelector implements Component {
@@ -15,14 +15,13 @@ class PaletteSelector implements Component {
       this.setPalette(palette);
     }
     const selected = this.getPalette();
-    const self = this;
     document.querySelectorAll('.palette').forEach((element) => {
       const paletteId = element.getAttribute('id').replace('palette-', '');
       if (paletteId === selected) {
         element.classList.add('active');
       }
       element.addEventListener('click', () => {
-        self.setPalette(paletteId);
+        this.setPalette(paletteId);
         document.querySelector('.palette.active').classList.remove('active');
         element.classList.add('active');
       });
@@ -35,7 +34,8 @@ class PaletteSelector implements Component {
       return palette;
     }
 
-    const paletteMeta = document.body.parentElement.getAttribute('data-palette');
+    const paletteMeta =
+      document.body.parentElement.getAttribute('data-palette');
     if (paletteMeta) {
       return paletteMeta;
     }

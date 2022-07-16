@@ -3,9 +3,4 @@ import faLiberapay from './faLiberapay';
 import faOffline from './faOffline';
 import faTipeee from './faTipeee';
 
-export {
-  faBilibili,
-  faLiberapay,
-  faOffline,
-  faTipeee,
-};
+export { faBilibili, faLiberapay, faOffline, faTipeee };

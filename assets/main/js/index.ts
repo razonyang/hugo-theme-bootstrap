@@ -1,7 +1,6 @@
 import 'bootstrap/dist/js/bootstrap.bundle';
 
 import App from 'js/app';
-import TopAppBar from 'js/top-app-bar';
 import ActionsPanel from 'js/actions-panel';
 import ModeToggle from 'js/mode';
 import PaletteSelector from 'js/palettes';
@@ -17,19 +16,18 @@ import components from './components';
 
 const app = new App();
 app.attach(
-    new TopAppBar(),
-    new ActionsPanel(),
-    new ModeToggle(),
-    new PaletteSelector(),
-    new Scroller(),
-    new LoadingBar(),
-    new SidebarToggle(document.querySelector('#sidebarToggler')),
-    new FontSizeSelector(),
-    new Code(),
-    new TableWrapper(document.querySelectorAll('table')),
-    new Docs(),
-    new FormValidator(),
-    ...components
+  new ActionsPanel(),
+  new ModeToggle(),
+  new PaletteSelector(),
+  new Scroller(),
+  new LoadingBar(),
+  new SidebarToggle(document.querySelector('#sidebarToggler')),
+  new FontSizeSelector(),
+  new Code(),
+  new TableWrapper(document.querySelectorAll('table')),
+  new Docs(),
+  new FormValidator(),
+  ...components
 );
 app.run();
 

@@ -1,10 +1,10 @@
-import Component from "js/component";
+import Component from 'js/component';
 import { default as params } from '@params';
 import { default as LocalStorage } from 'js/local-storage';
 
 class ModeToggle implements Component {
-  public key: string = 'mode';
-  private mode: string = 'auto';
+  public key = 'mode';
+  private mode = 'auto';
   private items;
 
   run() {
@@ -13,26 +13,24 @@ class ModeToggle implements Component {
   }
 
   initListeners() {
-    const instance = this;
-
     this.items = document.querySelectorAll('.mode-item');
     this.items.forEach((ele) => {
       ele.addEventListener('click', () => {
         const mode = ele.getAttribute('data-color-mode');
-        instance.active(mode)
+        this.active(mode);
       });
     });
 
     window.matchMedia('(prefers-color-scheme: dark)').addListener((e) => {
       if (this.mode === 'auto') {
-        instance.setMode(e.matches ? 'dark' : 'light');
+        this.setMode(e.matches ? 'dark' : 'light');
       }
     });
   }
 
   initMode() {
     // load scheme from localStorage.
-    let mode = LocalStorage.getItem(this.key);
+    const mode = LocalStorage.getItem(this.key);
     if (mode) {
       this.active(mode);
     } else if (params.color) {
@@ -42,12 +40,18 @@ class ModeToggle implements Component {
     }
   }
 
-  isAuto() :boolean {
+  isAuto(): boolean {
     return this.mode === 'auto';
   }
 
   getPreferMode(): string {
-    if (window.getComputedStyle(document.body).getPropertyValue('--mode').toString().trim() === 'dark') {
+    if (
+      window
+        .getComputedStyle(document.body)
+        .getPropertyValue('--mode')
+        .toString()
+        .trim() === 'dark'
+    ) {
       return 'dark';
     }
     return 'light';
@@ -55,7 +59,7 @@ class ModeToggle implements Component {
 
   active(mode: string) {
     this.mode = mode;
-    this.items.forEach((ele)=>{
+    this.items.forEach((ele) => {
       const classList = ele.querySelector('.dropdown-item').classList;
       if (ele.getAttribute('data-color-mode') === mode) {
         classList.add('active');
@@ -65,7 +69,9 @@ class ModeToggle implements Component {
     });
     LocalStorage.setItem(this.key, mode);
 
-    let icon = document.querySelector('.mode-item[data-color-mode="' + mode + '"] .mode-icon').cloneNode(true) as HTMLElement;
+    const icon = document
+      .querySelector('.mode-item[data-color-mode="' + mode + '"] .mode-icon')
+      .cloneNode(true) as HTMLElement;
     icon.setAttribute('id', 'modeIcon');
     document.querySelector('#modeIcon').replaceWith(icon);
     this.setMode(mode);
@@ -77,11 +83,7 @@ class ModeToggle implements Component {
     }
     console.debug(`Switch to ${value} mode`);
     document.body.parentElement.setAttribute('data-theme', value);
-    let checked: boolean = false;
-    if (value === 'dark') {
-      checked = true;
-    }
-    const event = new CustomEvent('hbs:mode', {'detail': {'mode': value}});
+    const event = new CustomEvent('hbs:mode', { detail: { mode: value } });
     document.dispatchEvent(event);
   }
 }
