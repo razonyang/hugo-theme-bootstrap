@@ -1,5 +1,5 @@
 interface Component {
-    run();
+  run();
 }
 
 export default Component;

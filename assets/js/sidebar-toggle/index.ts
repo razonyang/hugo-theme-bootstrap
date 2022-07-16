@@ -1,4 +1,4 @@
-import Component from "js/component";
+import Component from 'js/component';
 import { default as LocalStorage } from 'js/local-storage';
 
 class SidebarToggle implements Component {
@@ -6,10 +6,9 @@ class SidebarToggle implements Component {
 
   sidebar: HTMLElement;
 
-  key: string = 'sidebar-toggle';
+  key = 'sidebar-toggle';
 
-  constructor(public button: HTMLElement) {
-  }
+  constructor(public button: HTMLElement) {}
 
   run() {
     if (!this.button) {
@@ -18,9 +17,8 @@ class SidebarToggle implements Component {
 
     this.sidebar = document.querySelector('.content .sidebar');
     this.main = this.sidebar.previousElementSibling as HTMLElement;
-    const self = this;
     this.button.addEventListener('click', () => {
-      self.toggle();
+      this.toggle();
     });
 
     const val = LocalStorage.getItem(this.key);
@@ -42,7 +40,7 @@ class SidebarToggle implements Component {
   }
 
   getWidth(element: HTMLElement) {
-    var width = 0;
+    let width = 0;
     element.classList.forEach((value) => {
       if (value.indexOf('col-lg-') === 0) {
         width = parseInt(value.replace('col-lg-', ''));
@@ -73,14 +71,20 @@ class SidebarToggle implements Component {
   }
 
   hide() {
-    this.main.classList.replace('col-lg-' + this.getMainWidth(), 'col-lg-' + this.getFullWidth());
+    this.main.classList.replace(
+      'col-lg-' + this.getMainWidth(),
+      'col-lg-' + this.getFullWidth()
+    );
     this.sidebar.classList.add('d-none');
     this.button.classList.add('active');
     LocalStorage.setItem(this.key, 'hide');
   }
 
   show() {
-    this.main.classList.replace('col-lg-' + this.getFullWidth(), 'col-lg-' + this.getMainWidth());
+    this.main.classList.replace(
+      'col-lg-' + this.getFullWidth(),
+      'col-lg-' + this.getMainWidth()
+    );
     this.sidebar.classList.remove('d-none');
     this.button.classList.remove('active');
     LocalStorage.removeItem(this.key);

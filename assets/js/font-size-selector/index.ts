@@ -1,8 +1,8 @@
-import Component from "js/component";
+import Component from 'js/component';
 import { default as LocalStorage } from 'js/local-storage';
 
 class FontSizeSelector implements Component {
-  key: string = 'font-size';
+  key = 'font-size';
   items;
 
   constructor() {
@@ -22,11 +22,10 @@ class FontSizeSelector implements Component {
   }
 
   initListeners() {
-    const self = this;
     this.items.forEach((ele) => {
       ele.addEventListener('click', () => {
         const size = ele.getAttribute('data-size');
-        self.setSize(size);
+        this.setSize(size);
       });
     });
   }
@@ -44,7 +43,7 @@ class FontSizeSelector implements Component {
     document.body.classList.remove('fs-' + this.getSize());
     document.body.classList.add(`fs-${value}`);
     LocalStorage.setItem(this.key, value);
-    this.items.forEach((ele)=>{
+    this.items.forEach((ele) => {
       if (ele.getAttribute('data-size') === value) {
         ele.classList.add('active');
       } else {

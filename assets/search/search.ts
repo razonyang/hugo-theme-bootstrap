@@ -4,7 +4,7 @@ import Mark from 'mark.js/dist/mark.js';
 
 declare global {
   interface Window {
-    fuseOptions: any;
+    fuseOptions;
     searchResultContentWordCount: number;
     searchPaginate: number;
     searchIndex: string;
@@ -12,9 +12,9 @@ declare global {
 }
 
 export class Search {
-  public fuseOptions: any;
+  public fuseOptions;
 
-  private fuse: any;
+  private fuse;
 
   public resultsElement: HTMLElement;
 
@@ -39,29 +39,30 @@ export class Search {
 
   public searchBarInput: HTMLInputElement;
 
-  public title: string;
+  public title = '';
 
-  public paginate: number = 10;
+  public paginate = 10;
 
-  private page: number = 1;
+  private page = 1;
 
-  private results: any;
+  private results;
 
-  private loading: boolean = false;
+  private loading = false;
 
   private loadingSpinner: HTMLElement;
 
   public loadMore: HTMLElement;
 
-  constructor(public form: HTMLFormElement) {
-  }
+  constructor(public form: HTMLFormElement) {}
 
   run() {
     this.title = document.title;
     this.resultsElement = document.getElementById('searchResults');
     this.stat = document.getElementById('searchStat');
     this.loadingSpinner = document.getElementById('loadingSpinner');
-    this.tmplMissingKeywords = document.getElementById('templateMissingKeywords').innerHTML;
+    this.tmplMissingKeywords = document.getElementById(
+      'templateMissingKeywords'
+    ).innerHTML;
     this.tmplNoResults = document.getElementById('templateNoResults').innerHTML;
     this.tmplStat = document.getElementById('templateStat').innerHTML;
     this.tmplResult = document.getElementById('templateResult').innerHTML;
@@ -70,17 +71,15 @@ export class Search {
     this.initForm();
     this.initFuse();
 
-    const instance = this;
     this.loadMore = document.getElementById('btnLoadMore');
     this.loadMore.addEventListener('click', () => {
-      instance.poplateResults();
+      this.poplateResults();
     });
   }
 
   initFuse() {
-    const instance = this;
     this.fuseOptions = window.fuseOptions;
-    console.debug(instance.fuseOptions);
+    console.debug('Fuse options', this.fuseOptions);
     const xhr = new XMLHttpRequest();
     xhr.onreadystatechange = () => {
       if (xhr.readyState === 4) {
@@ -89,8 +88,8 @@ export class Search {
           return;
         }
         const pages = xhr.response;
-        instance.fuse = new Fuse(pages, instance.fuseOptions);
-        instance.search(instance.input.value);
+        this.fuse = new Fuse(pages, this.fuseOptions);
+        this.search(this.input.value);
       }
     };
     xhr.responseType = 'json';
@@ -106,9 +105,8 @@ export class Search {
     }
     this.updateSearchbar(this.input.value);
     document.querySelector('.search-bar input');
-    const instance = this;
     this.form.addEventListener('submit', (event) => {
-      instance.handleSubmit(event);
+      this.handleSubmit(event);
     });
   }
 
@@ -146,7 +144,7 @@ export class Search {
     this.loadingSpinner.classList.remove('d-none');
   }
 
- search(query: string) {
+  search(query: string) {
     this.showLoadingSpinner();
     this.resultsElement.innerHTML = ''; // Clear previous results.
     if (query === '') {
@@ -174,7 +172,7 @@ export class Search {
   }
 
   setPage(query) {
-    const title = (query ? (`${query} - `) : '') + this.title;
+    const title = (query ? `${query} - ` : '') + this.title;
     const url = `${window.location.pathname}?q=${encodeURIComponent(query)}`;
     window.history.pushState(null, title, url);
     document.title = title; // history.pushState's title was ignored.
@@ -193,11 +191,16 @@ export class Search {
     }
     this.loading = true;
     this.loadMore.setAttribute('disabled', '');
-    this.stat.innerHTML = Mustache.render(this.tmplStat, { total: this.results.length });
-    const instance = this;
-    let i = (this.page - 1) * this.paginate; let
-      count = 0;
-    for (; i < this.results.length && count < this.paginate; i += 1, count += 1) {
+    this.stat.innerHTML = Mustache.render(this.tmplStat, {
+      total: this.results.length,
+    });
+    let i = (this.page - 1) * this.paginate;
+    let count = 0;
+    for (
+      ;
+      i < this.results.length && count < this.paginate;
+      i += 1, count += 1
+    ) {
       const result = this.results[i];
       const idx = (this.page - 1) * this.paginate + i;
       const titleKeywords = [];
@@ -217,36 +220,48 @@ export class Search {
         });
       });
       let { content } = result.item;
-      if (content.length > instance.resultContentWordCount) {
+      if (content.length > this.resultContentWordCount) {
         let contentStart = 0;
         if (contentKeywords.length > 0) {
           const pos = content.indexOf(contentKeywords[0]);
-          if ((pos + contentKeywords[0].length) > instance.resultContentWordCount - 1) {
+          if (
+            pos + contentKeywords[0].length >
+            this.resultContentWordCount - 1
+          ) {
             contentStart = pos;
           }
         }
-        content = `${(contentStart === 0 ? '' : '...') + content.substring(contentStart, contentStart + instance.resultContentWordCount)}...`;
+        content = `${
+          (contentStart === 0 ? '' : '...') +
+          content.substring(
+            contentStart,
+            contentStart + this.resultContentWordCount
+          )
+        }...`;
       }
       const id = `searchResult${idx}`;
-      instance.resultsElement.insertAdjacentHTML('beforeend', Mustache.render(instance.tmplResult, {
-        title: result.item.title,
-        content,
-        id,
-        img: result.item.img,
-        smallImg: result.item.smallImg,
-        largeImg: result.item.largeImg,
-        permalink: result.item.permalink,
-        categories: result.item.categories,
-        authors: result.item.authors,
-        tags: result.item.tags,
-        series: result.item.series,
-        score: Search.formatScore(result.score),
-        date: result.item.date,
-        url() {
-          return Search.normalizeTaxonomy;
-        },
-      }));
-      instance.highlight(id, titleKeywords, contentKeywords);
+      this.resultsElement.insertAdjacentHTML(
+        'beforeend',
+        Mustache.render(this.tmplResult, {
+          title: result.item.title,
+          content,
+          id,
+          img: result.item.img,
+          smallImg: result.item.smallImg,
+          largeImg: result.item.largeImg,
+          permalink: result.item.permalink,
+          categories: result.item.categories,
+          authors: result.item.authors,
+          tags: result.item.tags,
+          series: result.item.series,
+          score: Search.formatScore(result.score),
+          date: result.item.date,
+          url() {
+            return Search.normalizeTaxonomy;
+          },
+        })
+      );
+      this.highlight(id, titleKeywords, contentKeywords);
     }
     this.loading = false;
     this.loadMore.removeAttribute('disabled');
@@ -266,9 +281,13 @@ export class Search {
   }
 
   highlight(id, titleKeywords, contentKeywords) {
-    const titleHighlighter = new Mark(document.querySelectorAll(`#${id} .search-result-title`));
+    const titleHighlighter = new Mark(
+      document.querySelectorAll(`#${id} .search-result-title`)
+    );
     titleHighlighter.mark(titleKeywords, this.highlightOptions);
-    const contentHighlighter = new Mark(document.querySelectorAll(`#${id} .search-result-content`));
+    const contentHighlighter = new Mark(
+      document.querySelectorAll(`#${id} .search-result-content`)
+    );
     contentHighlighter.mark(contentKeywords, this.highlightOptions);
   }
 }

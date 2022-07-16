@@ -3,14 +3,29 @@ import { registerRoute, setCatchHandler } from 'workbox-routing';
 import { CacheFirst, StaleWhileRevalidate } from 'workbox-strategies';
 import { CacheableResponsePlugin } from 'workbox-cacheable-response';
 import { ExpirationPlugin } from 'workbox-expiration';
-import { precacheAndRoute, matchPrecache, cleanupOutdatedCaches } from 'workbox-precaching';
+import {
+  precacheAndRoute,
+  matchPrecache,
+  cleanupOutdatedCaches,
+} from 'workbox-precaching';
 
-declare var self: ServiceWorkerGlobalScope;
-declare var config: any;
+declare let self: ServiceWorkerGlobalScope;
+declare let config: {
+  version: number;
+  langs: Array<string>;
+  assets: {
+    url: string;
+    revision: string;
+  };
+  pages: {
+    url: string;
+    revision: string;
+  };
+};
 
 clientsClaim();
 
-self.addEventListener('install', function(event) {
+self.addEventListener('install', () => {
   self.skipWaiting();
 });
 
@@ -18,8 +33,8 @@ cleanupOutdatedCaches();
 
 setCatchHandler(async ({ request }) => {
   if (request.destination === 'document') {
-    var lang = '';
-    var url = new URL(request.url);
+    let lang = '';
+    const url = new URL(request.url);
     const paths = url.pathname.split('/');
     if (paths.length > 1) {
       lang = paths[1];
@@ -34,8 +49,7 @@ setCatchHandler(async ({ request }) => {
 });
 
 registerRoute(
-  ({ request }) =>
-  request.mode === 'navigate',
+  ({ request }) => request.mode === 'navigate',
   new StaleWhileRevalidate({
     cacheName: cacheNames.precache,
     plugins: [
@@ -43,14 +57,14 @@ registerRoute(
         statuses: [200],
       }),
     ],
-  }),
+  })
 );
 
 registerRoute(
   ({ request }) =>
-    request.destination === 'style'
-    || request.destination === 'script'
-    || request.destination === 'worker',
+    request.destination === 'style' ||
+    request.destination === 'script' ||
+    request.destination === 'worker',
   new CacheFirst({
     cacheName: cacheNames.precache,
     plugins: [
@@ -58,7 +72,7 @@ registerRoute(
         statuses: [200],
       }),
     ],
-  }),
+  })
 );
 
 registerRoute(
@@ -74,7 +88,7 @@ registerRoute(
         maxAgeSeconds: 60 * 60 * 24 * 30,
       }),
     ],
-  }),
+  })
 );
 
 precacheAndRoute(config.assets);
