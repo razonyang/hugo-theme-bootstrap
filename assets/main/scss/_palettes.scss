@@ -11,7 +11,6 @@ $palette-purple: $purple !default;
 $palette-red: $red !default;
 $palette-teal: $teal-700 !default;
 $palette-yellow: $yellow-800 !default;
-
 $palettes: (
   'blue': $palette-blue,
   'blue-gray': $palette-blue-gray,
@@ -26,18 +25,24 @@ $palettes: (
   'teal': $palette-teal,
   'yellow': $palette-yellow,
 );
-
 $theme-colors: map-remove($theme-colors, 'primary');
 $theme-colors: map-merge($theme-colors, $palettes);
-
 $palette-classes: 'btn', 'btn-outline';
 
 @each $name, $color in $palettes {
-  @if validatePalette($name) {
+  @if validate-palette($name) {
     $on-primary: color-contrast($color);
     $primary-secondary: shade-color($color, 20%);
-    $on-primary-secondary: if($on-primary == $color-contrast-light, shade-color($on-primary, 20%), tint-color($on-primary, 20%));
-    $on-primary-disabled: if($on-primary == $color-contrast-light, shade-color($on-primary, 40%), tint-color($on-primary, 40%));
+    $on-primary-secondary: if(
+      $on-primary == $color-contrast-light,
+      shade-color($on-primary, 20%),
+      tint-color($on-primary, 20%)
+    );
+    $on-primary-disabled: if(
+      $on-primary == $color-contrast-light,
+      shade-color($on-primary, 40%),
+      tint-color($on-primary, 40%)
+    );
     [data-palette='#{$name}'] {
       --#{$prefix}primary: #{$color};
       --#{$prefix}primary-rgb: #{to-rgb($color)} !important;
@@ -56,7 +61,7 @@ $palette-classes: 'btn', 'btn-outline';
       // Override the primary components.
       @each $class in $palette-classes {
         .#{$class}-primary {
-          @extend .#{$class}-#{$name};
+          @extend .#{$class}-#{$name}; /* stylelint-disable-line */
         }
       }
     }
@@ -67,4 +72,5 @@ $palette-classes: 'btn', 'btn-outline';
   height: 1.5rem;
   width: 1.5rem;
 }
+
 /*! purgecss end ignore */

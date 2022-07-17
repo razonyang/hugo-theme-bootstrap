@@ -9,58 +9,71 @@
 
 .post-meta {
   margin-bottom: 1rem;
-  font-size: .875rem;
+  font-size: 0.875rem;
   word-break: break-all;
 
   span {
     &:not(:last-child) {
-      margin-right: .125rem;
+      margin-right: 0.125rem;
 
       &::after {
         content: '·';
-        margin-left: .125rem;
+        margin-left: 0.125rem;
       }
     }
   }
 
   .post-taxonomy {
-    font-size: .75rem;
+    font-size: 0.75rem;
   }
 }
 
 .post-content {
   color: var(--#{$prefix}surface-color);
 
-  h2:not(:first-child) {
-    margin-top: 3rem;
-  }
-
   h3 {
     margin-top: 2rem;
   }
 
-  h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+  h6,
+  .h6,
+  h5,
+  .h5,
+  h4,
+  .h4,
+  h3,
+  .h3,
+  h2,
+  .h2,
+  h1,
+  .h1 {
     margin-bottom: 1rem;
 
     &:hover {
-      .anchor {
-        display: inline-block !important;
+      .anchor { /* stylelint-disable-line */
+        display: inline-block !important; /* stylelint-disable-line */
       }
     }
   }
 
-  ol, ul {
+  h2:not(:first-child) {
+    margin-top: 3rem;
+  }
+
+  ol,
+  ul {
     li {
-      margin-bottom: .25rem;
+      margin-bottom: 0.25rem;
     }
   }
 }
 
-.post-content, .post-summary {
+.post-content,
+.post-summary {
   a {
     &:not(.btn) {
       color: var(--#{$prefix}primary);
-      
+
       &:hover {
         text-decoration: underline;
       }
@@ -71,25 +84,40 @@
 @if $numberifyHeadings {
   .post-content {
     counter-reset: h2Counter;
+
     @for $heading from 2 through $numberifyHeadingsEndLevel {
       h#{$heading} {
         @if $heading < $numberifyHeadingsEndLevel {
-          counter-reset: h#{$heading+1}Counter;
+          counter-reset: h#{$heading + 1}counter; /* stylelint-disable-line */
         }
 
         &::before {
           display: inline;
           counter-increment: h#{$heading}Counter;
+
           @if $heading == 2 {
             content: counter(h2Counter) $numberifyHeadingsSeparator;
           } @else if $heading == 3 {
             content: counter(h2Counter) '.' counter(h3Counter) $numberifyHeadingsSeparator;
           } @else if $heading == 4 {
-            content: counter(h2Counter) '.' counter(h3Counter) '.' counter(h4Counter) $numberifyHeadingsSeparator;
+            content:
+              counter(h2Counter) '.'
+              counter(h3Counter) '.'
+              counter(h4Counter) $numberifyHeadingsSeparator;
           } @else if $heading == 5 {
-            content: counter(h2Counter) '.' counter(h3Counter) '.' counter(h4Counter) '.' counter(h5Counter) $numberifyHeadingsSeparator;
+            content:
+              counter(h2Counter) '.'
+              counter(h3Counter) '.'
+              counter(h4Counter) '.'
+              counter(h5Counter)
+              $numberifyHeadingsSeparator;
           } @else if $heading == 6 {
-            content: counter(h2Counter) '.' counter(h3Counter) '.' counter(h4Counter) '.' counter(h5Counter) '.' counter(h6Counter) $numberifyHeadingsSeparator;
+            content:
+              counter(h2Counter) '.'
+              counter(h3Counter) '.'
+              counter(h4Counter) '.'
+              counter(h5Counter) '.'
+              counter(h6Counter) $numberifyHeadingsSeparator;
           }
         }
       }

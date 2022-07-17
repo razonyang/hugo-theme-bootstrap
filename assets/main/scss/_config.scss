@@ -1,6 +1,6 @@
 // PLEASE DO NOT OVERRIDE THIS FILE.
 {{ $params := $.Site.Params }}
-$fontSizes: (
+$font-sizes: (
     xs: {{ default ".85rem" $params.fontSize.extraSmall }},
     sm: {{ default ".925rem" $params.fontSize.small }},
     lg: {{ default "1.075rem" $params.fontSize.large }},

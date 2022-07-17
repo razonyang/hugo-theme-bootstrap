@@ -1,12 +1,16 @@
-$defaultFontSizes: map-get($utilities, 'font-size');
-$values: map-merge(map-get($defaultFontSizes, 'values'), $fontSizes);
-$utilities: map-merge($utilities, (
-    font-size: map-merge($defaultFontSizes, ('values': $values)),
-));
-
-$whiteSpace: map-get($utilities, 'white-space');
-$values: map-merge(map-get($whiteSpace, 'values'),  (pre-wrap: pre-wrap));
-$utilities: map-merge($utilities, (
-    white-space: map-merge($whiteSpace, ('values': $values)),
-));
-
+$default-font-sizes: map-get($utilities, 'font-size');
+$values: map-merge(map-get($default-font-sizes, 'values'), $font-sizes);
+$utilities: map-merge(
+  $utilities,
+  (
+    font-size: map-merge($default-font-sizes, ('values': $values)),
+  )
+);
+$white-space: map-get($utilities, 'white-space');
+$values: map-merge(map-get($white-space, 'values'), (pre-wrap: pre-wrap));
+$utilities: map-merge(
+  $utilities,
+  (
+    white-space: map-merge($white-space, ('values': $values)),
+  )
+);

@@ -1,4 +1,5 @@
-:root, [data-theme="light"] {
+:root,
+[data-theme='light'] {
   --#{$prefix}component-gutter-t: 0;
   --#{$prefix}component-gutter-b: 1.5rem;
   --#{$prefix}component-gutter-s: 0;
@@ -8,14 +9,13 @@
   --#{$prefix}border-color: var(--#{$prefix}surface-color-disabled);
   --#{$prefix}link-color: inherit;
   --#{$prefix}link-hover-color: var(--#{$prefix}primary);
-
   --#{$prefix}surface-bg: #{$surface-bg};
   --#{$prefix}surface-color: #{$surface-color};
   --#{$prefix}surface-color-secondary: #{$surface-color-secondary};
   --#{$prefix}surface-color-disabled: #{$surface-color-disabled};
 }
 
-[data-theme="dark"] {
+[data-theme='dark'] {
   --#{$prefix}surface-bg: #{$surface-bg-dark};
   --#{$prefix}surface-color: #{$surface-color-dark};
   --#{$prefix}surface-color-secondary: #{$surface-color-secondary-dark};

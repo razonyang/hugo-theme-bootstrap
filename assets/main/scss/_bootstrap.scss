@@ -4,7 +4,7 @@
 @import 'variables-theme';
 @import 'variables-theme-dark';
 @import 'bootstrap/scss/variables';
-@import "bootstrap/scss/maps";
+@import 'bootstrap/scss/maps';
 @import 'mixins';
 @import 'bootstrap/scss/utilities';
 @import 'palettes';
@@ -44,5 +44,6 @@
 
 // Helpers
 @import 'bootstrap/scss/helpers';
+
 // Utilities
 @import 'utilities';

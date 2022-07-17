@@ -1,6 +1,6 @@
 .profile {
   color: var(--#{$prefix}secondary-text-on-surface) !important;
-  padding: .5rem 0 0;
+  padding: 0.5rem 0 0;
 
   .profile-avatar {
     height: 120px;
@@ -31,12 +31,12 @@
     color: var(--#{$prefix}accent);
   }
 
-  .svg-inline--fa {
+  .svg-inline--fa { /* stylelint-disable-line */
     vertical-align: middle;
   }
 
   .social-links {
-    --#{$prefix}nav-link-padding-x: .5rem;
+    --#{$prefix}nav-link-padding-x: 0.5rem;
   }
 }
 
@@ -50,6 +50,6 @@
   }
 
   .social-links {
-    justify-content: start!important;
+    justify-content: start !important;
   }
 }

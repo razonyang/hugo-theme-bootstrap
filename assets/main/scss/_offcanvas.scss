@@ -1,5 +1,5 @@
 .offcanvas {
-  @extend .shadow-lg;
+  @extend .shadow-lg; /* stylelint-disable-line */
 
   .offcanvas-title {
     margin: 0;

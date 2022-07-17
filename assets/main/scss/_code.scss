@@ -7,9 +7,10 @@
     transition: opacity 0.5s;
 
     .action {
-      color: rgba(244, 255, 255, .75);
+      color: rgba(244, 255, 255, 0.75);
 
-      &:hover, &.active {
+      &:hover,
+      &.active {
         color: white;
       }
 
@@ -21,7 +22,7 @@
 
   &:hover {
     .panel {
-      opacity: 1!important;
+      opacity: 1 !important;
     }
   }
 }

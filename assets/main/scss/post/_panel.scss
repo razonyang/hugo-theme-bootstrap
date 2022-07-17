@@ -1,48 +1,47 @@
-
 .post-panel-wrapper {
   top: 84px;
   z-index: 1;
 
   .post-panel {
     text-align: right;
-    right: -.5rem;
-    top: -.5rem;
+    right: -0.5rem;
+    top: -0.5rem;
     margin-top: 8px;
 
-    @extend .shadow;
-
+    @extend .shadow; /* stylelint-disable-line */
 
     .action {
       margin-top: 0.25rem;
-      padding: .125rem .125rem .25rem;
+      padding: 0.125rem 0.125rem 0.25rem;
       transition: opacity 1s ease-out;
-      
+
       &:not(:last-child) {
         border-bottom: 1px #{$gray-500} solid;
       }
     }
-      
+
     .action-panel-toggler {
       opacity: 0;
       display: none;
-      border-bottom: none!important;
+      border-bottom: none !important;
     }
 
     @include media-breakpoint-down(sm) {
-      opacity: .875;
-      right: -.125rem;
-      
+      opacity: 0.875;
+      right: -0.125rem;
+
       .action {
         opacity: 0;
         display: none;
       }
-      
+
       .action-panel-toggler {
         opacity: 1;
         display: block;
       }
 
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         .action {
           opacity: 1;
           display: block;

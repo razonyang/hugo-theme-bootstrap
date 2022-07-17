@@ -1,8 +1,8 @@
 main {
-    margin-bottom: 2rem;
-    margin-top: if($fixedHeader, 92px, 28px);
+  margin-bottom: 2rem;
+  margin-top: if($fixedHeader, 92px, 28px);
 
-    @include media-breakpoint-down(sm) {
-        margin-top: if($fixedHeader, 76px, 18px);
-    }
+  @include media-breakpoint-down(sm) {
+    margin-top: if($fixedHeader, 76px, 18px);
+  }
 }

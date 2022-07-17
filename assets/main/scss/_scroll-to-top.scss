@@ -2,8 +2,8 @@
   bottom: 1.5rem;
   transition: opacity 0.5s;
   right: 1.25rem;
-  
+
   @include media-breakpoint-down(sm) {
-    right: .75rem;
+    right: 0.75rem;
   }
 }

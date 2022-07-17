@@ -1,26 +1,27 @@
 .archive {
-    &::before {
-        background: var(--#{$prefix}primary);
-        height: .5rem;
-        width: .5rem;
-        border-radius: 50%;
-        content: "";
-        margin-left: -1.15rem;
-    }
-    &::after {
-        content: attr(data-date);
-        position: absolute;
-        left: -1.75rem;
-        writing-mode: vertical-rl;
-        justify-content: center;
-        display: flex;
-        line-height: 100%;
-        height: 100%;
-        color: var(--#{$prefix}primary);
-        font-weight: bold;
-    }
+  &::before {
+    background: var(--#{$prefix}primary);
+    height: 0.5rem;
+    width: 0.5rem;
+    border-radius: 50%;
+    content: '';
+    margin-left: -1.15rem;
+  }
 
-    .archive-meta {
-        font-size: .875rem;
-    }
+  &::after {
+    content: attr(data-date);
+    position: absolute;
+    left: -1.75rem;
+    writing-mode: vertical-rl;
+    justify-content: center;
+    display: flex;
+    line-height: 100%;
+    height: 100%;
+    color: var(--#{$prefix}primary);
+    font-weight: bold;
+  }
+
+  .archive-meta {
+    font-size: 0.875rem;
+  }
 }

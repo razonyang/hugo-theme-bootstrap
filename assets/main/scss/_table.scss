@@ -1,4 +1,4 @@
 table {
-  @extend .table;
-  @extend .table-bordered;
+  @extend .table; /* stylelint-disable-line */
+  @extend .table-bordered; /* stylelint-disable-line */
 }
