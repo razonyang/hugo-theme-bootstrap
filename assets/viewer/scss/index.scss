@@ -1,13 +1,13 @@
 @import 'viewerjs/dist/viewer';
 
 .viewer-toolbar {
-    ul {
-        li {
-            margin-right: .25rem;
-        }
+  ul {
+    li {
+      margin-right: 0.25rem;
     }
+  }
 }
 
 .viewer-backdrop {
-    background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(0, 0, 0, 0.85);
 }

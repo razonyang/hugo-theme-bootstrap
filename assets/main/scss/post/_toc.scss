@@ -1,22 +1,24 @@
-#TableOfContents {
-  @extend .surface;
+#TableOfContents { /* stylelint-disable-line */
+  @extend .surface; /* stylelint-disable-line */
 
   ol,
   ul {
     @if $tocStyleType {
       list-style-type: #{$tocStyleType};
     }
-    padding-left: 1rem;
 
+    padding-left: 1rem;
   }
 
-  >ol, >ul {
+  >ol,
+  >ul {
     @if $tocStyleType == none {
-        padding-left: 0;
+      padding-left: 0;
     }
   }
 
-  ul, li {
-    margin-bottom: .25rem;
+  ul,
+  li {
+    margin-bottom: 0.25rem;
   }
 }

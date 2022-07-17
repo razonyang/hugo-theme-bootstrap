@@ -7,10 +7,10 @@ html {
       background-color: unset;
     }
   }
-  
+
   @if $backgroundImageDark != '' {
-    &[data-theme=dark] {
-      background-image: url($backgroundImageDark); 
+    &[data-theme='dark'] {
+      background-image: url($backgroundImageDark);
     }
   }
 

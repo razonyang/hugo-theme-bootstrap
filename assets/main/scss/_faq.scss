@@ -1,20 +1,20 @@
 .accordion {
-    --#{$prefix}accordion-active-color: var(--#{$prefix}primary);
-    --#{$prefix}accordion-active-bg: var(--#{$prefix}on-primary);
+  --#{$prefix}accordion-active-color: var(--#{$prefix}primary);
+  --#{$prefix}accordion-active-bg: var(--#{$prefix}on-primary);
 }
 
 @include theme(dark) {
-    .accordion-button {
-        &:not([aria-expanded="true"]) {
-            &::after {
-                filter: invert(1) grayscale(100%) brightness(200%);
-            }
-        }
+  .accordion-button {
+    &:not([aria-expanded='true']) {
+      &::after {
+        filter: invert(1) grayscale(100%) brightness(200%);
+      }
     }
+  }
 }
 
 .faq-answer {
-    a {
-        text-decoration: underline;
-    }
+  a {
+    text-decoration: underline;
+  }
 }

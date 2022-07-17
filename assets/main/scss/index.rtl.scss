@@ -1,10 +1,9 @@
 // Base
 @import 'bootstrap';
+
 /*! purgecss start ignore */
-@import 'colors';
 @import 'root';
 @import 'reboot';
-@import 'themes'; 
 
 // Components
 @import 'actions-panel';
@@ -12,27 +11,19 @@
 @import 'archives';
 @import 'author';
 @import 'blockquote';
-@import 'button';
-@import 'breadcrumb';
 @import 'card';
 @import 'component';
 @import 'code';
 @import 'dropdown';
-@import 'footer';
-@import 'form';
 @import 'gallery';
 @import 'highlight';
 @import 'image';
 @import 'main';
-@import 'modal';
 @import 'nav';
-@import 'navbar';
 @import 'offcanvas';
 @import 'pagination';
-// @import 'popover';
 @import 'post';
 @import 'profile';
-@import 'scrollbar';
 @import 'scroll-to-top';
 @import 'search';
 @import 'sidebar';
@@ -40,12 +31,12 @@
 @import 'surface';
 @import 'table';
 @import 'taxonomy';
-@import 'themes';
 @import 'top-app-bar';
 @import 'loading-bar';
 @import 'snackbar';
 @import 'docs';
 @import 'carousel';
 @import 'custom';
+
 /*! purgecss end ignore */
 @import 'faq';

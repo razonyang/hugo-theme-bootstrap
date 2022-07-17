@@ -1,50 +1,50 @@
 .top-app-bar {
-    background-color: var(--#{$prefix}primary);
+  background-color: var(--#{$prefix}primary);
+  color: var(--#{$prefix}on-primary);
+
+  --#{$prefix}link-color: var(--#{$prefix}on-primary-secondary);
+  --#{$prefix}link-hover-color: var(--#{$prefix}on-primary);
+  --#{$prefix}navbar-color: var(--#{$prefix}on-primary-secondary);
+  --#{$prefix}navbar-hover-color: var(--#{$prefix}on-primary);
+  --#{$prefix}navbar-active-color: var(--#{$prefix}on-primary);
+  --#{$prefix}navbar-disabled-color: var(--#{$prefix}on-primary-disabled);
+  --#{$prefix}navbar-brand-color: var(--#{$prefix}on-primary-secondary);
+  --#{$prefix}navbar-brand-hover-color: var(--#{$prefix}on-primary);
+  --#{$prefix}form-control-bg: var(--#{$prefix}primary-secondary);
+
+  .logo {
+    height: 32px;
+    width: auto;
+    margin-right: 0.5rem;
+
+    &:hover {
+      transform: rotate(-5deg) scale(1.1);
+    }
+  }
+
+  .form-control {
     color: var(--#{$prefix}on-primary);
+  }
 
-    --#{$prefix}link-color: var(--#{$prefix}on-primary-secondary);
-    --#{$prefix}link-hover-color: var(--#{$prefix}on-primary);
-    --#{$prefix}navbar-color: var(--#{$prefix}on-primary-secondary);
-    --#{$prefix}navbar-hover-color: var(--#{$prefix}on-primary);
-    --#{$prefix}navbar-active-color: var(--#{$prefix}on-primary);
-    --#{$prefix}navbar-disabled-color: var(--#{$prefix}on-primary-disabled);
-    --#{$prefix}navbar-brand-color: var(--#{$prefix}on-primary-secondary);
-    --#{$prefix}navbar-brand-hover-color: var(--#{$prefix}on-primary);
-    --#{$prefix}form-control-bg: var(--#{$prefix}primary-secondary);
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
 
-    .logo {
-        height: 32px;
-        width: auto;
-        margin-right: 0.5rem;
+  .nav {
+    --#{$prefix}nav-link-color: var(--#{$prefix}on-primary-secondary);
+    --#{$prefix}nav-link-hover-color: var(--#{$prefix}on-primary);
+    --#{$prefix}nav-link-active-color: var(--#{$prefix}on-primary);
+  }
 
-        &:hover {
-            transform: rotate(-5deg) scale(1.1);
-        }
+  .search-bar {
+    @include media-breakpoint-up(lg) {
+      width: 180px;
     }
 
-    .form-control {
-        color: var(--#{$prefix}on-primary);
+    .search-input {
+      padding-left: 2.25rem;
     }
-
-    a {
-        &:hover {
-            text-decoration: none;
-        }
-    }
-
-    .nav {
-        --#{$prefix}nav-link-color: var(--#{$prefix}on-primary-secondary);
-        --#{$prefix}nav-link-hover-color: var(--#{$prefix}on-primary);
-        --#{$prefix}nav-link-active-color: var(--#{$prefix}on-primary);
-    }
-
-    .search-bar {
-        @include media-breakpoint-up(lg) {
-            width: 180px;
-        }
-
-        .search-input {
-            padding-left: 2.25rem;
-        }
-    }
+  }
 }

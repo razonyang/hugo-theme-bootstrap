@@ -1,25 +1,18 @@
 $prefix: hbs- !default;
-
 $body-bg: #f6f8fa !default;
-
 $surface-bg: #fff !default;
-$surface-color: rgba(0, 0, 0, .87) !default;
-$surface-color-secondary: rgba(0, 0, 0, .54) !default;
-$surface-color-disabled: rgba(0, 0, 0, .38) !default;
-
+$surface-color: rgba(0, 0, 0, 0.87) !default;
+$surface-color-secondary: rgba(0, 0, 0, 0.54) !default;
+$surface-color-disabled: rgba(0, 0, 0, 0.38) !default;
 $enable-smooth-scroll: true !default;
-
-$grid-gutter-width: .75rem !default;
+$grid-gutter-width: 0.75rem !default;
 $card-spacer-x: 1rem !default;
 $card-spacer-y: 1rem !default;
-//$card-cap-bg: transparent !default;
-
 $enable-shadows: false !default;
-
 $border-color: var(--#{$prefix}secondary-text-on-surface) !default;
 
 // Shadows
-$box-shadow:                  0 .5rem 1rem rgba(var(--#{$prefix}shadow-rgb), .15)!default;
-$box-shadow-sm:               0 .125rem .25rem rgba(var(--#{$prefix}shadow-rgb), .075)!default;
-$box-shadow-lg:               0 1rem 3rem rgba(var(--#{$prefix}shadow-rgb), .175)!default;
-$box-shadow-inset:            inset 0 1px 2px rgba(var(--#{$prefix}shadow-rgb), .075)!default;
+$box-shadow: 0 0.5rem 1rem rgba(var(--#{$prefix}shadow-rgb), 0.15) !default;
+$box-shadow-sm: 0 0.125rem 0.25rem rgba(var(--#{$prefix}shadow-rgb), 0.075) !default;
+$box-shadow-lg: 0 1rem 3rem rgba(var(--#{$prefix}shadow-rgb), 0.175) !default;
+$box-shadow-inset: inset 0 1px 2px rgba(var(--#{$prefix}shadow-rgb), 0.075) !default;
