@@ -7,6 +7,9 @@ other = "我们似乎找不到你要查找的页面。"
 [about_me]
 other = "关于我"
 
+[actions]
+other = "操作"
+
 [alipay]
 other = "支付宝"
 
