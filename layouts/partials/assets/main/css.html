@@ -1,14 +1,15 @@
+{{- $postCSSOptions := dict }}
 {{- $dir := "" }}
 {{- if eq .Site.Language.LanguageDirection "rtl" }}
+  {{- $postCSSOptions = merge $postCSSOptions (dict "config" "assets/main/config/rtl") }}
   {{- $dir = ".rtl" }}
 {{- end }}
-{{- /* Unable to use expanded style, to be fixed. */}}
-{{- $outputStyle := "compressed" }}
+{{- $outputStyle := "expanded" }}
 {{- if hugo.IsProduction }}{{ $outputStyle = "compressed" }}{{ end }}
 {{- $options := dict "targetPath" (printf "assets/main/bundle%s.min.css" $dir) "outputStyle" $outputStyle "includePaths" (slice "node_modules") }}
 {{- $config := resources.Get "main/scss/_config.scss" | resources.ExecuteAsTemplate "main/scss/_config.scss" . }}
-{{- $main := resources.Get (printf "main/scss/index%s.scss" $dir) }}
-{{- $style := slice $config $main | resources.Concat (printf "main/scss/main%s.css" $dir) | toCSS $options | resources.PostCSS |fingerprint | resources.PostProcess }}
+{{- $main := resources.Get "main/scss/index.scss" }}
+{{- $style := slice $config $main | resources.Concat (printf "main/scss/main%s.css" $dir) | toCSS $options | resources.PostCSS $postCSSOptions |fingerprint | resources.PostProcess }}
 <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous">
 {{- range .Site.Params.customCSS }}
 <link rel="stylesheet" href="{{ absURL . }}" crossorigin="anonymous">
