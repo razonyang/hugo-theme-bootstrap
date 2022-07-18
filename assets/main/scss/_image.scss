@@ -1,3 +1,9 @@
 img {
   max-width: 100%;
+
+  @if $enable-viewer {
+    &:not([data-viewer-invisible]) {
+      cursor: pointer;
+    }
+  }
 }
