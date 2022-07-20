@@ -1,4 +1,3 @@
 {{- $options := dict "targetPath" "assets/icons/bundle.min.js" "minify" hugo.IsProduction -}}
 {{- $script := resources.Get "icons/index.js" | js.Build $options |fingerprint -}}
-{{- $.Scratch.Add "hbs-assets" (slice (dict "url" $script.Permalink "revision" ($.Scratch.Get "null"))) -}}
-<script src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous" defer></script>
+<script data-precache src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous" defer></script>

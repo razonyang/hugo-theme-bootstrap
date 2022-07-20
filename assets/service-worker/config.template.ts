@@ -1,28 +1,29 @@
-{{- $defaultRivision := now.Unix  -}}
-{{- $langs := slice -}}
-{{- $pages := slice -}}
+{{- $homepage := "/" }}
+{{- $langs := slice }}
+{{- $fallbacks := slice }}
 
-{{- partial "helpers/read-dir" (dict "Path" "/static" "Scratch" $.Scratch) -}}
-
-{{- $paths := slice "manifest.json" -}}
-{{- $layouts := slice "offline" -}}
-{{- range $site := $.Sites -}}
-  {{- $langs = $langs | append $site.LanguagePrefix -}}
-  {{ range where $site.Pages "Layout" "in" $layouts }}
-    {{- $pages = $pages | append (dict "url" .Permalink "revision" $defaultRivision) -}}
-  {{- end -}}
+{{- $paths := slice "/manifest.json" }}
+{{- $pages := slice "/offline" }}
+{{- range $site := $.Sites }}
+  {{- if eq $homepage "/" }}{{ with $site.GetPage "/" }}{{ $homepage = .Permalink }}{{ end }}{{ end }}
+  {{- $langs = $langs | append $site.Language.Lang }}
+  {{- range $pages }}
+    {{- with $site.GetPage . }}{{- $fallbacks = $fallbacks | append .Permalink }}{{ end }}
+  {{- end }}
   {{ range $path := $paths }}
-    {{- $pages = $pages | append (dict "url" ( printf "%s/%s" $site.LanguagePrefix $path | absURL) "revision" $defaultRivision) -}}
-  {{- end -}}
-{{- end -}}
+    {{- $fallbacks = $fallbacks | append (printf "%s/%s" $site.LanguagePrefix $path | absURL) }}
+  {{- end }}
+{{- end }}
 
-const langs = JSON.parse('{{ $langs | jsonify }}');
-const pages = JSON.parse('{{ $pages | jsonify }}');
-const assets = JSON.parse('{{ $.Scratch.Get "hbs-assets" | jsonify }}');
-const multilingual = {{ if eq (len .Sites) 1 }}false{{ else }}true{{ end }};
+console.log('{{ .Site.Params }}')
 const config = {
-    version: {{ now.Unix }},
-    langs: langs,
-    pages: pages,
-    assets: assets
-};
+  homepage: '{{ $homepage }}',
+  langs: JSON.parse('{{ $langs | jsonify }}'),
+  fallbacks: JSON.parse('{{ $fallbacks | jsonify }}'),
+  fallbacksCacheName: 'fallbacks',
+  imageCacheName: 'images',
+  pageCacheName: 'pages',
+  scriptCacheName: 'scripts',
+  styleCacheName: 'styles',
+}
+console.debug('service worker config:', config);
