@@ -14,8 +14,8 @@
                 {{- with $value.ByCount }}
                 <li class="nav-item" role="presentation">
                     <button class="nav-link{{ if eq $counter 0 }} active{{ end }}" id="taxonomy{{ $key | title }}Tab" data-bs-toggle="tab" data-bs-target="#taxonomy{{ $key | title }}" 
-                        type="button" role="tab" aria-controls="{{ T $key }}" aria-selected="true">
-                        {{ T $key }}
+                        type="button" role="tab" aria-controls="{{ i18n $key }}" aria-selected="true">
+                        {{ i18n $key }}
                     </button>
                 </li>
                 {{- $counter = add $counter 1 }}
@@ -27,7 +27,7 @@
             <li class="nav-item" role="presentation">
                 <button class="nav-link" id="taxonomyArchivesTab" data-bs-toggle="tab" data-bs-target="#taxonomyArchive" 
                     type="button" role="tab" aria-controls="taxonomyArchives" aria-selected="true">
-                    {{ T "archives" }}
+                    {{ i18n "archives" }}
                 </button>
             </li>
         </ul>
