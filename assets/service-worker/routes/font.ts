@@ -3,15 +3,13 @@ import { ExpirationPlugin } from 'workbox-expiration';
 import { Route } from 'workbox-routing';
 import { CacheFirst } from 'workbox-strategies';
 
-function scriptRoute(config) {
+function fontRoute(config) {
   return new Route(
     ({ request }) => {
-      return (
-        request.destination === 'script'
-      );
+      return request.destination === 'font';
     },
     new CacheFirst({
-      cacheName: config.scriptCacheName,
+      cacheName: config.fontCacheName,
       plugins: [
         new CacheableResponsePlugin({
           statuses: [200],
@@ -24,4 +22,4 @@ function scriptRoute(config) {
   );
 }
 
-export default scriptRoute;
+export default fontRoute;

@@ -1,12 +1,13 @@
 import { registerRoute, setCatchHandler } from 'workbox-routing';
 import precacheStyles from './precache-styles';
 import { catchHandler } from './handlers';
-import { imageRoute, pageRoute, scriptRoute, styleRoute } from './routes';
+import { fontRoute, imageRoute, pageRoute, scriptRoute, styleRoute } from './routes';
 
-registerRoute(scriptRoute(config));
+registerRoute(fontRoute(config));
 registerRoute(imageRoute(config));
-registerRoute(styleRoute(config));
 registerRoute(pageRoute(config));
+registerRoute(scriptRoute(config));
+registerRoute(styleRoute(config));
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
