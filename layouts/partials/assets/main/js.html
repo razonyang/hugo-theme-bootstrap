@@ -6,7 +6,7 @@
 {{- if .Site.Params.utterances -}}
   {{- $scripts = $scripts | append (resources.Get "main/js/utterances.ts") -}}
 {{- end -}}
-{{- $script := $scripts | resources.Concat "main/js/bundle.ts" | js.Build $options |fingerprint -}}
+{{- $script := $scripts | resources.Concat "main/js/bundle.ts" | js.Build $options | fingerprint -}}
 <script data-precache src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous" defer></script>
 {{- range .Site.Params.customJS -}}
 <script data-precache src="{{ absURL . }}" crossorigin="anonymous"></script>
