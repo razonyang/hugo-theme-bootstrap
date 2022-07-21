@@ -15,7 +15,6 @@
   {{- end }}
 {{- end }}
 
-console.log('{{ .Site.Params }}')
 const config = {
   homepage: '{{ $homepage }}',
   langs: JSON.parse('{{ $langs | jsonify }}'),
