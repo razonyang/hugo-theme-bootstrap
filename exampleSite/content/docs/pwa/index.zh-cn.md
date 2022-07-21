@@ -50,6 +50,12 @@ PWAs([渐进式 web 应用程序](https://developer.mozilla.org/en-US/docs/Web/P
 | `pwa.manifest.icons` | Array | - |
 | `pwa.manifest.icons.sizes` | String | - | 图标尺寸，如："96x96"
 | `pwa.manifest.icons.src` | String | - | 图标 URL
+| `pwa.precache` | Object | - | Precache assets
+| `pwa.precache.fonts` | Array | - | Precache fonts
+| `pwa.precache.images` | Array | - | Precache images
+| `pwa.precache.pages` | Array | - | Precache pages
+| `pwa.precache.scripts` | Array | - | Precache scripts
+| `pwa.precache.styles` | Array | - | Precache styles
 
 ## Manifest
 
@@ -70,5 +76,6 @@ layout = 'offline'
 
 ## 预载
 
-目前，我们还没有提供任何预缓存自定义文件的方法。
-如果您需要此功能，请随时通知我们。
+{{< code-toggle filename="params">}}
+{{% code/pwa-precache %}}
+{{< /code-toggle >}}
