@@ -11,7 +11,7 @@
     {{- with $site.GetPage . }}{{- $fallbacks = $fallbacks | append .Permalink }}{{ end }}
   {{- end }}
   {{ range $path := $paths }}
-    {{- $fallbacks = $fallbacks | append (printf "%s/%s" $site.LanguagePrefix $path | absURL) }}
+    {{- $fallbacks = $fallbacks | append (printf "%s%s" $site.LanguagePrefix $path | absURL) }}
   {{- end }}
 {{- end }}
 

@@ -16,11 +16,13 @@ registerRoute(scriptRoute(config));
 registerRoute(styleRoute(config));
 
 self.addEventListener('install', (event) => {
-  event.waitUntil(
-    caches
-      .open(config.fallbacksCacheName)
-      .then((cache) => cache.addAll(config.fallbacks))
-  );
+  if (config.fallbacks) {
+    event.waitUntil(
+      caches
+        .open(config.fallbacksCacheName)
+        .then((cache) => cache.addAll(config.fallbacks))
+    );
+  }
   event.waitUntil(precacheAssets(config));
   if (config.fonts) {
     event.waitUntil(
