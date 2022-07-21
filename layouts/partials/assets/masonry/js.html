@@ -1,6 +1,6 @@
 {{- if or .Site.Params.masonry (.HasShortcode "gallery") -}}
 {{- $options := dict "target" "es2015" "targetPath" "assets/masonry/bundle.min.js" "minify" hugo.IsProduction -}}
 {{- $main := resources.Get "masonry/index.ts" }}
-{{- $script := $main | js.Build $options |fingerprint -}}
+{{- $script := $main | js.Build $options | fingerprint -}}
 <script data-precache src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous" defer></script>
 {{- end -}}

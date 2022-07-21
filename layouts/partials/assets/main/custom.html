@@ -1,0 +1,3 @@
+{{- range .Site.Params.customCSS }}
+<link data-precache rel="stylesheet" href="{{ absURL . }}" crossorigin="anonymous">
+{{- end -}}
