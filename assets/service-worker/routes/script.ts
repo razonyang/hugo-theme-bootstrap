@@ -11,7 +11,7 @@ function scriptRoute(config) {
       );
     },
     new CacheFirst({
-      cacheName: config.scriptCacheName,
+      cacheName: config.scriptsCacheName,
       plugins: [
         new CacheableResponsePlugin({
           statuses: [200],

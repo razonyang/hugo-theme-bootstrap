@@ -186,6 +186,23 @@ viewer = true # Image Viewer
     # [[pwa.manifest.icons]]
     #   sizes = "144x144"
     #   src = "/images/icons/icon-144x144.png"
+  [pwa.precache]
+    # fonts = [
+    #   "/assets/katex/fonts/KaTeX_Math-Italic.woff2"
+    # ]
+    # images = [
+    #   "/images/logo.webp",
+    #   "/images/profile.webp"
+    # ]
+    # pages = [
+    #   "/"
+    # ]
+    # scripts = [
+    #   "https://utteranc.es/client.js"
+    # ]
+    # styles = [
+    #   "https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+    # ]
 
 [contact]
   endpoint = "https://getform.io/f/56041c81-9e03-4c24-b9c5-61238854d4cd" # Backend endpoint, remove this line if you're using Netlify.

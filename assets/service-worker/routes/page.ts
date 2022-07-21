@@ -8,7 +8,7 @@ function pageRoute(config) {
       return request.mode === 'navigate';
     },
     new NetworkFirst({
-      cacheName: config.pageCacheName,
+      cacheName: config.pagesCacheName,
       networkTimeoutSeconds: 3,
       plugins: [
         new CacheableResponsePlugin({

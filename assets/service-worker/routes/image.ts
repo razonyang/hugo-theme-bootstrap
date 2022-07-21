@@ -9,7 +9,7 @@ function imageRoute(config) {
       return request.destination === 'image';
     },
     new CacheFirst({
-      cacheName: config.imageCacheName,
+      cacheName: config.imagesCacheName,
       plugins: [
         new CacheableResponsePlugin({
           statuses: [200],
