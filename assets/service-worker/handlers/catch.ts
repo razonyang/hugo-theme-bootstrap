@@ -1,13 +1,11 @@
 function catchHandler(config) {
   return async (request) => {
-    console.log('catch handler', request.url);
     const cache = await self.caches.open(config.fallbacksCacheName);
     let offlinePage = '/offline/';
     const lang = getLanguageFromRequest(request, config.langs);
     if (lang !== '') {
       offlinePage = '/' + lang + offlinePage;
     }
-    console.log(cache, lang, offlinePage);
     return (await cache.match(offlinePage)) || Response.error();
   };
 }

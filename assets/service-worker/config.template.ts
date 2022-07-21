@@ -1,5 +1,3 @@
-import { precache } from "workbox-precaching"
-
 {{- $homepage := "/" }}
 {{- $langs := slice }}
 {{- $fallbacks := slice }}
