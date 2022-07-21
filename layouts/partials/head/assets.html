@@ -1,8 +1,8 @@
 {{- if  eq .Site.Language.LanguageDirection "rtl" }}
-  {{- partialCached "assets/main/css-rtl" . }}
+  {{- partial "assets/main/css-rtl" . }}
 {{- else }}
-  {{- partialCached "assets/main/css" . }}
+  {{- partial "assets/main/css" . }}
 {{- end }}
-{{- partialCached "assets/math/css" . }}
-{{- partialCached "assets/viewer/css" . }}
-{{- partialCached "assets/docsearch/css" . -}}
+{{- partial "assets/math/css" . }}
+{{- partial "assets/viewer/css" . }}
+{{- partial "assets/docsearch/css" . -}}
