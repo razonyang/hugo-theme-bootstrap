@@ -10,8 +10,8 @@
   {{- range $pages }}
     {{- with $site.GetPage . }}{{- $fallbacks = $fallbacks | append .Permalink }}{{ end }}
   {{- end }}
-  {{ range $path := $paths }}
-    {{- $fallbacks = $fallbacks | append (printf "%s%s" $site.LanguagePrefix $path | absURL) }}
+  {{ range $paths }}
+    {{- $fallbacks = $fallbacks | append ((printf "%s%s" (strings.TrimPrefix "/" $site.LanguagePrefix) .) | absURL ) }}
   {{- end }}
 {{- end }}
 
@@ -19,6 +19,7 @@
 const precache = JSON.parse('{{ $precache | jsonify }}');
 
 const config = {
+  baseURL: '{{ $.Site.BaseURL }}',
   homepage: '{{ $homepage }}',
   langs: JSON.parse('{{ $langs | jsonify }}'),
   fallbacks: JSON.parse('{{ $fallbacks | jsonify }}'),

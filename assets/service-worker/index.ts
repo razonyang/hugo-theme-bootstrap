@@ -21,6 +21,9 @@ self.addEventListener('install', (event) => {
       caches
         .open(config.fallbacksCacheName)
         .then((cache) => cache.addAll(config.fallbacks))
+        .catch((error) => {
+          console.log('unable to cache fallbacks:', error);
+        })
     );
   }
   event.waitUntil(precacheAssets(config));
@@ -29,6 +32,9 @@ self.addEventListener('install', (event) => {
       caches
         .open(config.fontsCacheName)
         .then((cache) => cache.addAll(config.fonts))
+        .catch((error) => {
+          console.log('unable to cache fonts:', error);
+        })
     );
   }
   if (config.images) {
@@ -36,6 +42,9 @@ self.addEventListener('install', (event) => {
       caches
         .open(config.imagesCacheName)
         .then((cache) => cache.addAll(config.images))
+        .catch((error) => {
+          console.log('unable to cache images:', error);
+        })
     );
   }
   if (config.pages) {
@@ -43,6 +52,9 @@ self.addEventListener('install', (event) => {
       caches
         .open(config.pagesCacheName)
         .then((cache) => cache.addAll(config.pages))
+        .catch((error) => {
+          console.log('unable to cache pages:', error);
+        })
     );
   }
   if (config.scripts) {
@@ -50,6 +62,9 @@ self.addEventListener('install', (event) => {
       caches
         .open(config.scriptsCacheName)
         .then((cache) => cache.addAll(config.scripts))
+        .catch((error) => {
+          console.log('unable to cache scripts:', error);
+        })
     );
   }
   if (config.styles) {
@@ -57,6 +72,9 @@ self.addEventListener('install', (event) => {
       caches
         .open(config.stylesCacheName)
         .then((cache) => cache.addAll(config.styles))
+        .catch((error) => {
+          console.log('unable to cache styles:', error);
+        })
     );
   }
 });
