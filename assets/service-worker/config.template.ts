@@ -21,6 +21,7 @@ const config = {
   langs: JSON.parse('{{ $langs | jsonify }}'),
   fallbacks: JSON.parse('{{ $fallbacks | jsonify }}'),
   fallbacksCacheName: 'fallbacks',
+  fontCacheName: 'fonts',
   imageCacheName: 'images',
   pageCacheName: 'pages',
   scriptCacheName: 'scripts',
