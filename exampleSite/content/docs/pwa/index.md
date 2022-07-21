@@ -50,6 +50,12 @@ Firstly, we need to specify the `pwa` parameter, even it is empty.
 | `pwa.manifest.icons` | Array | - |
 | `pwa.manifest.icons.sizes` | String | - | Icons' sizes, i.e. "96x96"
 | `pwa.manifest.icons.src` | String | - | Icon's URL
+| `pwa.precache` | Object | - | Precache assets
+| `pwa.precache.fonts` | Array | - | Precache fonts
+| `pwa.precache.images` | Array | - | Precache images
+| `pwa.precache.pages` | Array | - | Precache pages
+| `pwa.precache.scripts` | Array | - | Precache scripts
+| `pwa.precache.styles` | Array | - | Precache styles
 
 ## Manifest
 
@@ -70,5 +76,6 @@ layout = 'offline'
 
 ## Precache
 
-Currently, we haven't provide any way to precache custom files yet.
-If you need this feature, please feel free to let us know.
+{{< code-toggle filename="params">}}
+{{% code/pwa-precache %}}
+{{< /code-toggle >}}
