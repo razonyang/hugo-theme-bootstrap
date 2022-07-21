@@ -6,9 +6,7 @@ import { CacheFirst } from 'workbox-strategies';
 function scriptRoute(config) {
   return new Route(
     ({ request }) => {
-      return (
-        request.destination === 'script'
-      );
+      return request.destination === 'script';
     },
     new CacheFirst({
       cacheName: config.scriptsCacheName,
