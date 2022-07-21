@@ -5,7 +5,7 @@ const scriptReg = new RegExp(
   /<script data-precache.*?src="?([^"\s]+)"?[^>]*><\/script>/g
 );
 
-function precacheStyles(config) {
+function precacheAssets(config) {
   return fetch(config.homepage)
     .then((response) => {
       return response.text();
@@ -28,10 +28,10 @@ function precacheStyles(config) {
     .then((assets) => {
       return (
         self.caches
-          .open(config.styleCacheName)
+          .open(config.stylesCacheName)
           .then((cache) => cache.addAll(assets.styles)) &&
         self.caches
-          .open(config.scriptCacheName)
+          .open(config.scriptsCacheName)
           .then((cache) => cache.addAll(assets.scripts))
       );
     })
@@ -40,4 +40,4 @@ function precacheStyles(config) {
     });
 }
 
-export default precacheStyles;
+export default precacheAssets;

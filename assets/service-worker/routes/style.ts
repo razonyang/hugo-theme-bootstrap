@@ -9,7 +9,7 @@ function styleRoute(config) {
       return request.destination === 'style';
     },
     new CacheFirst({
-      cacheName: config.styleCacheName,
+      cacheName: config.stylesCacheName,
       plugins: [
         new CacheableResponsePlugin({
           statuses: [200],

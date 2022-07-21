@@ -1,3 +1,5 @@
+import { precache } from "workbox-precaching"
+
 {{- $homepage := "/" }}
 {{- $langs := slice }}
 {{- $fallbacks := slice }}
@@ -15,15 +17,23 @@
   {{- end }}
 {{- end }}
 
+{{- $precache := default dict .Site.Params.pwa.precache }}
+const precache = JSON.parse('{{ $precache | jsonify }}');
+
 const config = {
   homepage: '{{ $homepage }}',
   langs: JSON.parse('{{ $langs | jsonify }}'),
   fallbacks: JSON.parse('{{ $fallbacks | jsonify }}'),
   fallbacksCacheName: 'fallbacks',
-  fontCacheName: 'fonts',
-  imageCacheName: 'images',
-  pageCacheName: 'pages',
-  scriptCacheName: 'scripts',
-  styleCacheName: 'styles',
+  fonts: precache.fonts ? precache.fonts : [],
+  fontsCacheName: 'fonts',
+  images: precache.images ? precache.images : [],
+  imagesCacheName: 'images',
+  pages: precache.pages ? precache.pages : [],
+  pagesCacheName: 'pages',
+  scripts:precache.scripts ? precache.scripts : [],
+  scriptsCacheName: 'scripts',
+  styles: precache.styles ? precache.styles : [],
+  stylesCacheName: 'styles',
 }
 console.debug('service worker config:', config);

@@ -9,7 +9,7 @@ function fontRoute(config) {
       return request.destination === 'font';
     },
     new CacheFirst({
-      cacheName: config.fontCacheName,
+      cacheName: config.fontsCacheName,
       plugins: [
         new CacheableResponsePlugin({
           statuses: [200],
