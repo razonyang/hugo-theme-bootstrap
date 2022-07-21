@@ -1,7 +1,13 @@
 import { registerRoute, setCatchHandler } from 'workbox-routing';
 import precacheAssets from './precache';
 import { catchHandler } from './handlers';
-import { fontRoute, imageRoute, pageRoute, scriptRoute, styleRoute } from './routes';
+import {
+  fontRoute,
+  imageRoute,
+  pageRoute,
+  scriptRoute,
+  styleRoute,
+} from './routes';
 
 registerRoute(fontRoute(config));
 registerRoute(imageRoute(config));
@@ -17,19 +23,39 @@ self.addEventListener('install', (event) => {
   );
   event.waitUntil(precacheAssets(config));
   if (config.fonts) {
-    event.waitUntil(caches.open(config.fontsCacheName).then((cache) => cache.addAll(config.fonts)));
+    event.waitUntil(
+      caches
+        .open(config.fontsCacheName)
+        .then((cache) => cache.addAll(config.fonts))
+    );
   }
   if (config.images) {
-    event.waitUntil(caches.open(config.imagesCacheName).then((cache) => cache.addAll(config.images)));
+    event.waitUntil(
+      caches
+        .open(config.imagesCacheName)
+        .then((cache) => cache.addAll(config.images))
+    );
   }
   if (config.pages) {
-    event.waitUntil(caches.open(config.pagesCacheName).then((cache) => cache.addAll(config.pages)));
+    event.waitUntil(
+      caches
+        .open(config.pagesCacheName)
+        .then((cache) => cache.addAll(config.pages))
+    );
   }
   if (config.scripts) {
-    event.waitUntil(caches.open(config.scriptsCacheName).then((cache) => cache.addAll(config.scripts)));
+    event.waitUntil(
+      caches
+        .open(config.scriptsCacheName)
+        .then((cache) => cache.addAll(config.scripts))
+    );
   }
   if (config.styles) {
-    event.waitUntil(caches.open(config.stylesCacheName).then((cache) => cache.addAll(config.styles)));
+    event.waitUntil(
+      caches
+        .open(config.stylesCacheName)
+        .then((cache) => cache.addAll(config.styles))
+    );
   }
 });
 
