@@ -1,0 +1,209 @@
+[404_title]
+other = "哎哟！页面未找到。"
+
+[404_info]
+other = "我们似乎找不到你要查找的页面。"
+
+[about_me]
+other = "关于我"
+
+[actions]
+other = "操作"
+
+[alipay]
+other = "支付宝"
+
+[all]
+other = "全部"
+
+[archives]
+other = "归档"
+
+[authors]
+other = "作者"
+
+[button_copy_url]
+other = "复制链接"
+
+[button_reload]
+other = "刷新"
+
+[button_social_share]
+other = "分享"
+
+[button_submit]
+other = "提交"
+
+[buy_me_a_coffee]
+other = "打赏"
+
+[categories]
+other = "分类"
+
+[color_blue]
+other = "蓝色"
+
+[color_blue_gray]
+other = "蓝灰色"
+
+[color_brown]
+other = "棕色"
+
+[color_cyan]
+other = "青色"
+
+[color_green]
+other = "绿色"
+
+[color_indigo]
+other = "靛青色"
+
+[color_orange]
+other = "橙色"
+
+[color_pink]
+other = "粉色"
+
+[color_purple]
+other = "紫色"
+
+[color_red]
+other = "红色"
+
+[color_teal]
+other = "蓝绿色"
+
+[color_yellow]
+other = "黄色"
+
+[comments]
+other = "评论"
+
+[contact_name]
+other = "名称"
+
+[contact_email]
+other = "邮箱"
+
+[contact_email_help]
+other = "我们不会泄露你的邮箱地址。"
+
+[contact_file]
+other = "文件"
+
+[contact_subject]
+other = "主题"
+
+[contact_message]
+other = "内容"
+
+[copyright]
+other = "版权"
+
+[featured_posts]
+other = "精选文章"
+
+[font_size]
+other = "字体大小"
+
+[font_size_lg]
+other = "大号"
+
+[font_size_md]
+other = "中等"
+
+[font_size_sm]
+other = "小号"
+
+[font_size_xl]
+other = "特大号"
+
+[font_size_xs]
+other = "特小号"
+
+[go_back]
+other = "返回"
+
+[home]
+other = "主页"
+
+[language]
+other = "语言"
+
+[load_more]
+other = "加载更多"
+
+[mode]
+other = "模式"
+
+[noscript_info]
+other = "你的浏览器不支持 JavaScript。"
+
+[offline_title]
+other = "哎哟！你离线了。"
+
+[offline_info]
+other = "看来你的连接有问题，请检查你的网络状态。"
+
+[pagination_title]
+other = "第 {{ .PageNumber }} 页"
+
+[palette]
+other = "配色"
+
+[post_count]
+other = "总共 {{ .Count }} 篇文章"
+
+[post_date]
+other = "创建于 {{ .createdOn }}{{ with .updatedOn }}，更新于 {{ . }}{{ end }}。"
+
+[read_more]
+other = "阅读更多"
+
+[reading_time]
+other = "{{ .ReadingTime }} 分钟阅读"
+
+[recent_posts]
+other = "最近文章"
+
+[related_posts]
+other = "相关文章"
+
+[repo_action_edit]
+other = "编辑当前页"
+
+[repo_action_view]
+other = "查看源代码"
+
+[repo_title]
+other = "仓库"
+
+[search]
+other = "搜索"
+
+[search_missing_keywords]
+other = "请输入搜索关键词"
+
+[search_no_results]
+other = "找不到相关结果"
+
+[search_stat]
+other = "找到相关结果 {{ .Total }} 个"
+
+[series]
+other = "专栏"
+
+[settings]
+other = "设置"
+
+[table_of_contents]
+other = "目录"
+
+[tags]
+other = "标签"
+
+[try_again]
+other = "再试一次"
+
+[wechat]
+other = "微信"

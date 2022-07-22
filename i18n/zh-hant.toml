@@ -1,0 +1,209 @@
+[404_title]
+other = "哎喲！頁面未找到。"
+
+[404_info]
+other = "我們似乎找不到你要查找的頁面。"
+
+[about_me]
+other = "關於我"
+
+[actions]
+other = "操作"
+
+[alipay]
+other = "支付寶"
+
+[all]
+other = "全部"
+
+[archives]
+other = "歸檔"
+
+[authors]
+other = "作者"
+
+[button_copy_url]
+other = "複製連結"
+
+[button_reload]
+other = "刷新"
+
+[button_social_share]
+other = "分享"
+
+[button_submit]
+other = "提交"
+
+[buy_me_a_coffee]
+other = "打賞"
+
+[categories]
+other = "分類"
+
+[color_blue]
+other = "藍色"
+
+[color_blue_gray]
+other = "藍灰色"
+
+[color_brown]
+other = "棕色"
+
+[color_cyan]
+other = "青色"
+
+[color_green]
+other = "綠色"
+
+[color_indigo]
+other = "靛青色"
+
+[color_orange]
+other = "橙色"
+
+[color_pink]
+other = "粉色"
+
+[color_purple]
+other = "紫色"
+
+[color_red]
+other = "紅色"
+
+[color_teal]
+other = "藍綠色"
+
+[color_yellow]
+other = "黃色"
+
+[comments]
+other = "評論"
+
+[contact_name]
+other = "名稱"
+
+[contact_email]
+other = "郵箱"
+
+[contact_email_help]
+other = "我們不會洩露你的郵箱地址。"
+
+[contact_file]
+other = "文件"
+
+[contact_subject]
+other = "主題"
+
+[contact_message]
+other = "內容"
+
+[copyright]
+other = "版權"
+
+[featured_posts]
+other = "精選文章"
+
+[font_size]
+other = "字體大小"
+
+[font_size_lg]
+other = "大號"
+
+[font_size_md]
+other = "中等"
+
+[font_size_sm]
+other = "小號"
+
+[font_size_xl]
+other = "特大號"
+
+[font_size_xs]
+other = "特小號"
+
+[go_back]
+other = "返回"
+
+[home]
+other = "主頁"
+
+[language]
+other = "語言"
+
+[load_more]
+other = "加載更多"
+
+[mode]
+other = "模式"
+
+[noscript_info]
+other = "你的瀏覽器不支持 JavaScript。"
+
+[offline_title]
+other = "哎喲！你離線了。"
+
+[offline_info]
+other = "看來你的連接有問題，請檢查你的網絡狀態。"
+
+[pagination_title]
+other = "第 {{ .PageNumber }} 頁"
+
+[palette]
+other = "配色"
+
+[post_count]
+other = "總共 {{ .Count }} 篇文章"
+
+[post_date]
+other = "創建於 {{ .createdOn }}{{ with .updatedOn }}，更新於 {{ . }}{{ end }}。"
+
+[read_more]
+other = "閱讀更多"
+
+[reading_time]
+other = "{{ .ReadingTime }} 分鐘閱讀"
+
+[recent_posts]
+other = "最近文章"
+
+[related_posts]
+other = "相關文章"
+
+[repo_action_edit]
+other = "編輯當前頁"
+
+[repo_action_view]
+other = "查看源代碼"
+
+[repo_title]
+other = "倉庫"
+
+[search]
+other = "搜尋"
+
+[search_missing_keywords]
+other = "請輸入搜尋關鍵詞"
+
+[search_no_results]
+other = "找不到相關結果"
+
+[search_stat]
+other = "找到相關結果 {{ .Total }} 個"
+
+[series]
+other = "專欄"
+
+[settings]
+other = "設置"
+
+[table_of_contents]
+other = "目錄"
+
+[tags]
+other = "標籤"
+
+[try_again]
+other = "再試一次"
+
+[wechat]
+other = "微信"
