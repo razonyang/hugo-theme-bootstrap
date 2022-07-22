@@ -1,5 +1,5 @@
 {{- $count := default .Params.featuredPostCount .Site.Params.featuredPostCount }}
-{{- if $count }}
+{{- if and $count (default false .Site.Params.sidebar.featuredPosts) }}
   {{- $featuredPosts := first $count (where (where site.RegularPages "Type" "in" site.Params.mainSections) ".Params.featured" "eq" true) }}
   {{- with $featuredPosts }}
   <section class="featured-posts row card component">

@@ -139,6 +139,9 @@ authors = ["RazonYang"]
 | `sidebar.tags` | Boolean | `false` | Show the tags widget on the sidebar.
 | `sidebar.archives` | Boolean | `false` | Show the archive widget on the sidebar.
 | `sidebar.authors` | Boolean | `false` | Show the authors widget on the sidebar.
+| `sidebar.postsToggle` | Boolean | `true` | Show the posts toggle on the sidebar.
+| `sidebar.featuredPosts` | Boolean | `false` | Show the featured posts widget on the sidebar.
+| `sidebar.recentPosts` | Boolean | `false` | Show the recent posts widget on the sidebar.
 | **Meta Tag**
 | `metaRobots` | String | - | 空字符串表示禁用。
 | `contact` | Object | - | [聯系表單]({{< ref "docs/layouts/contact" >}})
