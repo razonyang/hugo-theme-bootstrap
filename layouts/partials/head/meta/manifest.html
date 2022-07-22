@@ -1,8 +1,5 @@
 {{- if isset .Site.Params "pwa" }}
-{{- $url := relURL "/manifest.json" }}
-{{- if gt (len $.Site.Home.AllTranslations) 1 }}
-  {{- $url = relLangURL "/manifest.json" }}
-{{- end }}
-{{- $manifest := resources.Get "service-worker/manifest.json" | resources.ExecuteAsTemplate $url . }}
-<link rel="manifest" href="{{ $manifest.Permalink }}">
+  {{- $url := printf "%s/manifest.json" (strings.TrimPrefix "/" .Site.LanguagePrefix) }}
+  {{- $manifest := resources.Get "service-worker/manifest.json" | resources.ExecuteAsTemplate $url . }}
+  <link rel="manifest" href="{{ $manifest.Permalink }}">
 {{- end -}}
