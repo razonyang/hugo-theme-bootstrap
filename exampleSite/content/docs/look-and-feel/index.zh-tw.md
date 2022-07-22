@@ -2,7 +2,7 @@
 title = "觀感"
 linkTitleIcon = '<i class="fas fa-palette fa-fw"></i>'
 date = 2021-12-03T19:42:57+08:00
-featured = true
+featured = false
 comment = true
 toc = true
 reward = true
