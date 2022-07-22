@@ -2,7 +2,7 @@
 title = "Media Shortcodes"
 date = "2020-10-22"
 description = "A detailed description of media shortcodes"
-featured = true
+featured = false
 categories = [
   "Shortcode"
 ]

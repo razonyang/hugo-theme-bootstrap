@@ -2,7 +2,7 @@
 title = "Online IDE Shortcodes"
 date = "2020-10-22"
 description = "A detailed description of online IDE shortcodes"
-featured = true
+featured = false
 categories = [
   "Shortcode"
 ]

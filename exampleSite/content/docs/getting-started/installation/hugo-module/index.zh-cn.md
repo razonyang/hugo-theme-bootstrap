@@ -2,7 +2,7 @@
 title = "通过 Hugo Module 安装"
 linkTitle = "Hugo Module"
 date = 2022-02-26T17:10:39+02:00
-featured = true
+featured = false
 comment = true
 toc = true
 reward = true

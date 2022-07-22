@@ -1,7 +1,7 @@
 +++
 title = "自定義資源"
 date = 2021-11-28T16:00:56+08:00
-featured = true
+featured = false
 comment = true
 toc = true
 reward = true

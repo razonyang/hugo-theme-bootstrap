@@ -8,6 +8,7 @@ comment = true
 toc = true
 reward = true
 carousel = true
+featured = true
 categories = [
   "Markdown"
 ]
