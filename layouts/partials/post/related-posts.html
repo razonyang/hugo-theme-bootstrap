@@ -13,7 +13,7 @@
           <a class="post-title" href="{{ .Permalink }}">
             {{ partial "helpers/title" . }}
           </a>
-          <span class="float-end post-date text-muted">{{ partial "helpers/post-date" . }}</span>
+          <span class="post-meta post-date float-end">{{ partial "helpers/post-date" . }}</span>
           <div class="post-summary my-3">{{ partial "post/excerpt" . }}</div>
         </li>
         {{- end -}}
