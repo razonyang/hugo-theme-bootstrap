@@ -68,7 +68,7 @@
 
 {{- define "post-item" }}
     {{- $thumbnail := false }}
-    {{- if isset .Params.images 0 }}{{ $thumbnail = true }}{{ end }}
+    {{- with .Params.images }}{{ if isset . 0 }}{{ $thumbnail = true }}{{ end }}{{ end }}
     {{- $images := .Resources.ByType "image" -}}
     {{- $featured := $images.GetMatch "*feature*" -}}
     {{- if not $featured }}{{ $featured = $images.GetMatch "{*cover*,*thumbnail*}" }}{{ end -}}
