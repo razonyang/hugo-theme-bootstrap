@@ -25,6 +25,14 @@ command = "cd exampleSite && npm install && hugo --minify --themesDir=../../ --t
     X-XSS-Protection = "1; mode=block"
 
 [[redirects]]
+  from = "/zh-cn/*"
+  to = "/zh-hans/:splat"
+
+[[redirects]]
+  from = "/zh-tw/*"
+  to = "/zh-hant/:splat"
+
+[[redirects]]
   from = "/:lang/*"
   to = "/:lang/404.html"
   status = 404

@@ -6,25 +6,22 @@
   languageName = "Français"
   weight = 2
   [fr.params]
-    dateFormat = "02-01-2006"
     description = "Un thème de blog extrêmement rapide, réactif et riche en fonctionnalités pour Hugo"
     keywords = "Hugo, Bootstrap, Thème Blog"
 
-[zh-cn]
+[zh-hans]
   languageName = "简体中文"
   weight = 4
-  [zh-cn.params]
-    dateFormat = "2006-01-02"
+  [zh-hans.params]
     description = "一个快速、响应式和功能丰富的 Hugo 博客主题"
     keywords = "Hugo, Bootstrap, 博客主题"
     [zh-cn.params.archive]
       dateFormat = "01-02"
 
-[zh-tw]
+[zh-hant]
   languageName = "繁體中文"
   weight = 3
-  [zh-tw.params]
-    dateFormat = "2006-01-02"
+  [zh-hant.params]
     description = "一個快速、響應式和功能豐富的 Hugo 博客主題"
     keywords = "Hugo, Bootstrap, 博客主題"
     [zh-tw.params.archive]
@@ -35,5 +32,4 @@
   LanguageDirection = 'rtl'
   weight = 5
   [ar.params]
-    dateFormat = "02-01-2006"
     description = "ثيم مدونة مصمم لـ هوجو سريع وغني بالميزات"
