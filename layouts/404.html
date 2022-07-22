@@ -4,7 +4,7 @@
   <h1 class="error-title mb-4">{{ i18n "404_title" }}</h1>
   <div class="mb-4 error-info text-muted">{{ i18n "404_info" }}</div>
   <div class="mb-4 error-actions">
-    <a class="error-action btn btn-sm btn-outline-primary" href="{{ absLangURL "/" }}">
+    <a class="error-action btn btn-sm btn-outline-primary" href="{{ strings.TrimPrefix "/" $.Site.LanguagePrefix | absURL }}">
       <i class="fas fa-fw fa-home me-1"></i>{{ i18n "home" }}
     </a>
     <a class="error-action btn btn-sm btn-outline-primary" href="javascript: window.history.back();">
