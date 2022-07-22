@@ -22,6 +22,9 @@ aliases = [
   "/en/posts/pwa"
 ]
 authors = ["RazonYang"]
+videos = [
+  "https://www.bilibili.com/video/BV1yg411Z77A"
+]
 [menu.footer]
   parent = "features"
   weight = 2
@@ -32,6 +35,8 @@ PWAs([Progressive web apps](https://developer.mozilla.org/en-US/docs/Web/Progres
 We are in the experimental stage of PWA, but some major features have been added, such as install site to home screen, precache files and available offline.
 
 <!--more-->
+
+{{< bilibili BV1yg411Z77A >}}
 
 ## Site Parameters
 

@@ -22,6 +22,9 @@ aliases = [
   "/zh-cn/posts/pwa"
 ]
 authors = ["RazonYang"]
+videos = [
+  "https://www.bilibili.com/video/BV1yg411Z77A"
+]
 [menu.footer]
   parent = "features"
   weight = 2
@@ -32,6 +35,8 @@ PWAs([渐进式 web 应用程序](https://developer.mozilla.org/en-US/docs/Web/P
 我们正处于 PWA 的实验阶段，但添加了一些主要功能，如将站点安装到主屏幕、预缓存文件和离线可用。
 
 <!--more-->
+
+{{< bilibili BV1yg411Z77A >}}
 
 ## 站点配置
 
