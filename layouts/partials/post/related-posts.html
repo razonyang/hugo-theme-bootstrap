@@ -9,9 +9,12 @@
     <div class="card-body">
       <ul class="post-list list-unstyled">
         {{- range . -}}
-        <li>
-          <a href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a>
-          <span class="float-end post-date">{{- partial "helpers/post-date" . -}}</span>
+        <li class="mb-3 border-bottom">
+          <a class="post-title" href="{{ .Permalink }}">
+            {{ partial "helpers/title" . }}
+          </a>
+          <span class="float-end post-date text-muted">{{ partial "helpers/post-date" . }}</span>
+          <div class="post-summary my-3">{{ partial "post/excerpt" . }}</div>
         </li>
         {{- end -}}
       </ul>
