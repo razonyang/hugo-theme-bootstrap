@@ -2,7 +2,7 @@
 {{- if default true .Site.Params.sidebar.taxonomiesToggle }}
 <section class="taxonomies row card component">
     <div class="card-body">
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <ul class="nav nav-pills nav-fill" id="myTab" role="tablist">
             {{- $counter := 0 }}
             {{- range $expected := $.Site.Params.sidebarTaxonomies }}
             {{- range $key, $value := $.Site.Taxonomies }}
