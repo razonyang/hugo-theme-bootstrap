@@ -29,7 +29,7 @@
             {{- end }}
             {{- if $recentPosts }}
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="recent-posts-tab" data-bs-toggle="tab" data-bs-target="#recent-posts" 
+                <button class="nav-link{{ if not $featuredPosts }} active{{ end }}" id="recent-posts-tab" data-bs-toggle="tab" data-bs-target="#recent-posts" 
                     type="button" role="tab" aria-controls="recent-posts" aria-selected="true">
                     {{ i18n "recent_posts" }}
                 </button>
@@ -50,7 +50,7 @@
             </div>
             {{- end }}
             {{- with $recentPosts }}
-            <div class="tab-pane" id="recent-posts" role="tabpanel" aria-labelledby="recent-posts-tab" tabindex="0">
+            <div class="tab-pane{{ if not $featuredPosts }} active{{ end }}" id="recent-posts" role="tabpanel" aria-labelledby="recent-posts-tab" tabindex="0">
                 <ul class="post-list list-unstyled ms-1">
                 {{- range . }}
                   <li class="mb-2">
