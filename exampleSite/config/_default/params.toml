@@ -80,6 +80,9 @@ viewer = true # Image Viewer
   # tags = true # Enable tags widget
   # series = true # Enable series widget
   # authors = true # Enable authors widget
+  # postsToggle = false # Disable posts toggle
+  # featuredPosts = true # Enable featured posts widget
+  # recentPosts = true # Enable featured posts widget
 
 [codeBlock]
   # maxLines = 8
