@@ -40,11 +40,11 @@
         <a {{ printf "href=\"%s%s/%s/\"" $baseURL . $placeholder | safeHTMLAttr }}
           class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy">
           {{- if eq . "authors" }}
-            <i class="fas fa-fw fa-user"></i>
+            <i class="fas fa-fw fa-user me-1"></i>
           {{- else if eq . "series" }}
-            <i class="fas fa-fw fa-columns"></i>
+            <i class="fas fa-fw fa-columns me-1"></i>
           {{- else if eq . "categories" }}
-            <i class="fas fa-fw fa-folder"></i>
+            <i class="fas fa-fw fa-folder me-1"></i>
           {{- end }}
           {{- printf "{{.}}" }}
         </a>
