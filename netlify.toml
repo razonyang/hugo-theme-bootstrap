@@ -26,11 +26,11 @@ command = "cd exampleSite && npm install && hugo --minify --themesDir=../../ --t
 
 [[redirects]]
   from = "/zh-cn/*"
-  to = "/zh-hans/:splat"
+  to = "/v1/zh-hans/:splat"
 
 [[redirects]]
   from = "/zh-tw/*"
-  to = "/zh-hant/:splat"
+  to = "/v1/zh-hant/:splat"
 
 [[redirects]]
   from = "/:lang/*"
