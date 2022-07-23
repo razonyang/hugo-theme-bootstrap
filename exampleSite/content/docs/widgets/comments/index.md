@@ -11,7 +11,8 @@ categories = [
 ]
 tags = [
   "Disqus",
-  "Utterances"
+  "Utterances",
+  "Giscus"
 ]
 series = [
   "Docs"
@@ -27,7 +28,7 @@ authors = ["RazonYang"]
   pre = '<i class="fas fa-fw fa-comments me-1"></i>'
 +++
 
-[Disqus](https://disqus.com/) and [Utterances](https://utteranc.es/) comments widgets are supported out of box.
+[Disqus](https://disqus.com/), [Utterances](https://utteranc.es/) and [Giscus](https://giscus.app/) comments widgets are supported out of box.
 This article shows how to configure them and even customize your own comment widgets.
 
 <!--more-->
@@ -70,6 +71,32 @@ disqusShortname = "yourdiscussshortname"
 - Make sure the repo is public, otherwise your readers will not be able to view the issues/comments.
 - Make sure the [utterances app](https://github.com/apps/utterances) is installed on the repo, otherwise users will not be able to post comments.
 - If your repo is a fork, navigate to its settings tab and confirm the issues feature is turned on.
+
+## Giscus
+
+[Giscus](https://giscus.app/) is a lightweight comments widget built on GitHub discussions.
+
+```toml
+[giscus]
+  repo = "user/repo"
+  repoId = ""
+  category = ""
+  categoryId = ""
+```
+
+### Parameters
+
+| Name | Type | Default | Description |
+|:---|:---|:---|:---
+| `giscus.repo` | String | - | GitHub repository. Required.
+| `giscus.repoId` | String | - | GitHub repository ID. Required.
+| `giscus.category` | String | - | Discussions category. Required.
+| `giscus.categoryId` | String | - | Discussions category ID. Required.
+| `giscus.theme` | String | - | Left it empty if you want to follow the theme mode.
+| `giscus.mapping` | String | `pathname` | The mapping between blog posts and GitHub discussions: `pathname`, `url`, `title` and `og:title`.
+| `giscus.inputPosition` | String | `top` | The input position: `top` or `bottom`.
+| `giscus.reactions` | Boolean | `true` | Turn on/off the reactions.
+| `giscus.metadata` | Boolean | `false` | Emit discussion metadata.
 
 ## Custom Comments Widget
 

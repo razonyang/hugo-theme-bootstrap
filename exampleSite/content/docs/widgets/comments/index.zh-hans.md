@@ -11,7 +11,8 @@ categories = [
 ]
 tags = [
   "Disqus",
-  "Utterances"
+  "Utterances",
+  "Giscus"
 ]
 series = [
   "文档"
@@ -27,7 +28,7 @@ authors = ["RazonYang"]
   pre = '<i class="fas fa-fw fa-comments me-1"></i>'
 +++
 
-[Disqus](https://disqus.com/) 和 [Utterances](https://utteranc.es/) 评论小部件都是开箱即用的。本文将展示如何配置它们，甚至自定义你自己的评论小部件。
+[Disqus](https://disqus.com/)、[Utterances](https://utteranc.es/) 和 [Giscus](https://giscus.app/) 评论小部件都是开箱即用的。本文将展示如何配置它们，甚至自定义你自己的评论小部件。
 
 <!--more-->
 
@@ -69,6 +70,32 @@ disqusShortname = "yourdiscussshortname"
 - 确保仓库是公开的，否则读者无法查看评论。
 - 确保仓库已经安装了 [utterances app](https://github.com/apps/utterances)，否则用户无法发表评论。
 - 如果你的仓库是克隆的，请在设置中确保已经启用了 issues 功能。
+
+## Giscus
+
+[Giscus](https://giscus.app/) is a lightweight comments widget built on GitHub discussions.
+
+```toml
+[giscus]
+  repo = "user/repo"
+  repoId = ""
+  category = ""
+  categoryId = ""
+```
+
+### Parameters
+
+| Name | Type | Default | Description |
+|:---|:---|:---|:---
+| `giscus.repo` | String | - | GitHub repository. Required.
+| `giscus.repoId` | String | - | GitHub repository ID. Required.
+| `giscus.category` | String | - | Discussions category. Required.
+| `giscus.categoryId` | String | - | Discussions category ID. Required.
+| `giscus.theme` | String | - | Left it empty if you want to follow the theme mode.
+| `giscus.mapping` | String | `pathname` | The mapping between blog posts and GitHub discussions: `pathname`, `url`, `title` and `og:title`.
+| `giscus.inputPosition` | String | `top` | The input position: `top` or `bottom`.
+| `giscus.reactions` | Boolean | `true` | Turn on/off the reactions.
+| `giscus.metadata` | Boolean | `false` | Emit discussion metadata.
 
 ## 自定义评论小部件
 

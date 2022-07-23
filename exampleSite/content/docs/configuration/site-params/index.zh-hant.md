@@ -104,6 +104,7 @@ authors = ["RazonYang"]
 | `customCSS` | Array | - | 自定義 CSS， 主要用於導入外部。 請查閱[自定義資源](#自定義資源)。
 | `customJS` | Array | - | 自定義 JS， 主要用於導入外部 JS。 請查閱[自定義資源](#自定義資源)。
 | `utterances` | Object | - | [Utterances]({{< ref "/docs/widgets/comments#utterances" >}}) 配置。
+| `giscus` | Object | - | [Giscus]({{< ref "/docs/widgets/comments#giscus" >}}) 配置。
 | **Creative Commons License**
 | `creativeCommons` | Object | - |
 | `creativeCommons.by` | Boolean | `true` | 署名

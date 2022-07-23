@@ -101,6 +101,7 @@ The site parameters are located in `config/_default/params.toml` by default.
 | `customCSS` | Array | - | See also [custom assets]({{< ref "/docs/advanced/custom-assets#external-assets" >}}).
 | `customJS` | Array | - | See also [custom assets]({{< ref "/docs/advanced/custom-assets#external-assets" >}}).
 | `utterances` | Object | - | [Utterances]({{< ref "/docs/widgets/comments#utterances" >}}) configuration.
+| `giscus` | Object | - | [Giscus]({{< ref "/docs/widgets/comments#giscus" >}}) configuration.
 | **Creative Commons License**
 | `creativeCommons` | Object | - |
 | `creativeCommons.by` | Boolean | `true` | Credit must be given to you, the creator.
