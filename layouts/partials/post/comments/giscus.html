@@ -1,6 +1,6 @@
 {{- with .Site.Params.giscus }}
 {{- $langs := dict "zh-hans" "zh-CN" "zh-hant" "zh-TW" -}}
-{{- $lang := $.Site.Language.Lang }}
+{{- $lang := default $.Site.Language.Lang .lang }}
 {{- with index $langs $lang }}{{ $lang = . }}{{ end }}
 <script src="https://giscus.app/client.js"
     data-repo="{{ .repo }}"
