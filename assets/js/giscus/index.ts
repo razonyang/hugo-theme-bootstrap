@@ -1,9 +1,10 @@
 import * as params from '@params';
 import { default as LocalStorage } from 'js/local-storage';
+import { getPreferMode } from 'js/mode/prefer';
 
-class Utterances {
+class Giscus {
   run() {
-    const theme = params.utterances.theme;
+    const theme = params.giscus.theme;
     if (!theme) {
       document.addEventListener('hbs:mode', (e: CustomEvent) => {
         this.rerender(this.getTheme(e.detail.mode));
@@ -14,24 +15,11 @@ class Utterances {
     }
   }
 
-  getPreferMode(): string {
-    if (
-      window
-        .getComputedStyle(document.body)
-        .getPropertyValue('--mode')
-        .toString()
-        .trim() === 'dark'
-    ) {
-      return 'dark';
-    }
-    return 'light';
-  }
-
   getTheme(mode) {
     if (mode === 'auto') {
-      mode = this.getPreferMode();
+      mode = getPreferMode();
     }
-    return mode === 'dark' ? 'github-dark' : 'github-light';
+    return mode === 'dark' ? 'dark' : 'light';
   }
 
   rerender(theme) {
@@ -39,12 +27,18 @@ class Utterances {
       type: 'set-theme',
       theme: theme,
     };
-    const iframe =
-      document.querySelector<HTMLIFrameElement>('.utterances-frame');
-    iframe?.contentWindow?.postMessage(msg, 'https://utteranc.es');
+    const iframe = document.querySelector<HTMLIFrameElement>('iframe.giscus-frame');
+    if (!iframe) {
+        return;
+    };
+    iframe.contentWindow.postMessage({ giscus: {
+        setConfig: {
+            theme: 'https://giscus.app/themes/' + theme + '.css',
+        }
+    }}, 'https://giscus.app');
   }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  new Utterances().run();
+  new Giscus().run();
 });

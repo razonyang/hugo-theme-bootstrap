@@ -125,13 +125,24 @@ viewer = true # Image Viewer
   # nd = true # No derivatives or adaptations of your work are permitted.
   # sa = true # Adaptations must be shared under the same terms.
 
-[utterances]
-  repo = "razonyang/hugo-theme-bootstrap-comments" # Replace with your repository.
-  #issueTerm = "pathname" # pathname, url, title, og:title
-  #label = "comment"
+# [utterances]
+  # repo = "razonyang/hugo-theme-bootstrap" # Replace with your repository.
+  # issueTerm = "pathname" # pathname, url, title, og:title
+  # label = "comment"
   # By default, light and dark mode correspond to github-light and github-dark, respectively.
   # Optional values: github-light, github-dark, preferred-color-scheme, github-dark-orange, icy-dark, dark-blue, photon-dark.
-  #theme = "" 
+  # theme = ""
+
+[giscus]
+  repo = "razonyang/hugo-theme-bootstrap"
+  repoId = "MDEwOlJlcG9zaXRvcnkzMDQzMzI4NTM="
+  category = "General"
+  categoryId = "MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyODkzODg2"
+  # theme = "dark" # Default to auto.
+  # mapping = "title" # Default to pathname.
+  # inputPosition = "bottom" # Default to top.
+  #reactions = false # Disable reactions.
+  # metadata = true # Emit discussion metadata.
 
 [search]
   paginate = 5 # Pagination. Default to 10.
