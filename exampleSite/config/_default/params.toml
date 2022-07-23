@@ -141,7 +141,7 @@ viewer = true # Image Viewer
   # theme = "dark" # Default to auto.
   # mapping = "title" # Default to pathname.
   # inputPosition = "bottom" # Default to top.
-  #reactions = false # Disable reactions.
+  # reactions = false # Disable reactions.
   # metadata = true # Emit discussion metadata.
 
 [search]

@@ -104,6 +104,7 @@ authors = ["RazonYang"]
 | `customCSS` | Array | - | 自定义 CSS， 主要用于导入外部。 请查阅[自定义资源](#自定义资源)。
 | `customJS` | Array | - | 自定义 JS， 主要用于导入外部 JS。 请查阅[自定义资源](#自定义资源)。
 | `utterances` | Object | - | [Utterances]({{< ref "/docs/widgets/comments#utterances" >}}) 配置。
+| `giscus` | Object | - | [Giscus]({{< ref "/docs/widgets/comments#giscus" >}}) 配置。
 | **Creative Commons License**
 | `creativeCommons` | Object | - |
 | `creativeCommons.by` | Boolean | `true` | 署名
