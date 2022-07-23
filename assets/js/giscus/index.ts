@@ -1,6 +1,6 @@
 import * as params from '@params';
 import { default as LocalStorage } from 'js/local-storage';
-import { getPreferMode } from 'js/mode/prefer';
+import { getPreferMode } from 'js/mode/functions';
 
 class Giscus {
   run() {

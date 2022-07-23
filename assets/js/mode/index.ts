@@ -1,7 +1,7 @@
 import Component from 'js/component';
 import { default as params } from '@params';
 import { default as LocalStorage } from 'js/local-storage';
-import { getPreferMode } from './prefer';
+import { getPreferMode } from './functions';
 
 class ModeToggle implements Component {
   public key = 'mode';
