@@ -143,7 +143,7 @@ viewer = true # Image Viewer
   # inputPosition = "bottom" # Default to top.
   # reactions = false # Disable reactions.
   # metadata = true # Emit discussion metadata.
-  # lang = "" # Specify language, default to site language.
+  # lang = "en" # Specify language, default to site language.
 
 [search]
   paginate = 5 # Pagination. Default to 10.
