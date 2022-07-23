@@ -1,4 +1,7 @@
 {{- with .Site.Params.giscus }}
+{{- $langs := dict "zh-hans" "zh-CN" "zh-hant" "zh-TW" -}}
+{{- $lang := $.Site.Language.Lang }}
+{{- with index $langs $lang }}{{ $lang = . }}{{ end }}
 <script src="https://giscus.app/client.js"
     data-repo="{{ .repo }}"
     data-repo-id="{{ .repoId }}"
@@ -9,7 +12,7 @@
     data-emit-metadata="{{ if default false .metadata }}1{{ else }}0{{ end }}"
     data-input-position="{{ default "top" .inputPosition }}"
     data-theme="{{ default "preferred_color_scheme" .theme }}"
-    data-lang="{{ .Lang }}"
+    data-lang="{{ $lang }}"
     data-loading="lazy"
     crossorigin="anonymous"
     async>
