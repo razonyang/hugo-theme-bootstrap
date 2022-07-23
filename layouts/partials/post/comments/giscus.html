@@ -1,0 +1,17 @@
+{{- with .Site.Params.giscus }}
+<script src="https://giscus.app/client.js"
+    data-repo="{{ .repo }}"
+    data-repo-id="{{ .repoId }}"
+    data-category="{{ .category }}"
+    data-category-id="{{ .categoryId }}"
+    data-mapping="{{ default "pathname" .mapping }}"
+    data-reactions-enabled="{{ if default true .reactions }}1{{ else }}0{{ end }}"
+    data-emit-metadata="{{ if default false .metadata }}1{{ else }}0{{ end }}"
+    data-input-position="{{ default "top" .inputPosition }}"
+    data-theme="{{ default "preferred_color_scheme" .theme }}"
+    data-lang="{{ .Lang }}"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async>
+</script>
+{{- end }}

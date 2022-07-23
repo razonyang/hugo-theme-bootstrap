@@ -1,6 +1,7 @@
 import Component from 'js/component';
 import { default as params } from '@params';
 import { default as LocalStorage } from 'js/local-storage';
+import { getPreferMode } from './prefer';
 
 class ModeToggle implements Component {
   public key = 'mode';
@@ -44,19 +45,6 @@ class ModeToggle implements Component {
     return this.mode === 'auto';
   }
 
-  getPreferMode(): string {
-    if (
-      window
-        .getComputedStyle(document.body)
-        .getPropertyValue('--mode')
-        .toString()
-        .trim() === 'dark'
-    ) {
-      return 'dark';
-    }
-    return 'light';
-  }
-
   active(mode: string) {
     this.mode = mode;
     this.items.forEach((ele) => {
@@ -79,7 +67,7 @@ class ModeToggle implements Component {
 
   setMode(value: string) {
     if (value === 'auto') {
-      value = this.getPreferMode();
+      value = getPreferMode();
     }
     console.debug(`Switch to ${value} mode`);
     document.body.parentElement.setAttribute('data-theme', value);

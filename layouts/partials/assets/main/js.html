@@ -4,7 +4,10 @@
 {{- $main := resources.Get "main/js/index.ts" }}
 {{- $scripts := slice $main -}}
 {{- if .Site.Params.utterances -}}
-  {{- $scripts = $scripts | append (resources.Get "main/js/utterances.ts") -}}
+  {{- $scripts = $scripts | append (resources.Get "js/utterances/index.ts") -}}
+{{- end -}}
+{{- if .Site.Params.giscus -}}
+  {{- $scripts = $scripts | append (resources.Get "js/giscus/index.ts") -}}
 {{- end -}}
 {{- $script := $scripts | resources.Concat "main/js/bundle.ts" | js.Build $options | fingerprint -}}
 <script data-precache src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous" defer></script>
