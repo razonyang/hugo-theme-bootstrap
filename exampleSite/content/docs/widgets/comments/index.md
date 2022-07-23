@@ -97,6 +97,7 @@ disqusShortname = "yourdiscussshortname"
 | `giscus.inputPosition` | String | `top` | The input position: `top` or `bottom`.
 | `giscus.reactions` | Boolean | `true` | Turn on/off the reactions.
 | `giscus.metadata` | Boolean | `false` | Emit discussion metadata.
+| `giscus.lang` | String | - | Specify language, default to site language.
 
 ## Custom Comments Widget
 
