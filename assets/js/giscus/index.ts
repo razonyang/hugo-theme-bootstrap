@@ -23,19 +23,22 @@ class Giscus {
   }
 
   rerender(theme) {
-    const msg = {
-      type: 'set-theme',
-      theme: theme,
-    };
-    const iframe = document.querySelector<HTMLIFrameElement>('iframe.giscus-frame');
+    const iframe = document.querySelector<HTMLIFrameElement>(
+      'iframe.giscus-frame'
+    );
     if (!iframe) {
-        return;
-    };
-    iframe.contentWindow.postMessage({ giscus: {
-        setConfig: {
+      return;
+    }
+    iframe.contentWindow.postMessage(
+      {
+        giscus: {
+          setConfig: {
             theme: 'https://giscus.app/themes/' + theme + '.css',
-        }
-    }}, 'https://giscus.app');
+          },
+        },
+      },
+      'https://giscus.app'
+    );
   }
 }
 

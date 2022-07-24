@@ -1,6 +1,6 @@
 function catchHandler(config) {
-  let baseURL = new URL(config.baseURL);
-  
+  const baseURL = new URL(config.baseURL);
+
   return async (request) => {
     const cache = await self.caches.open(config.fallbacksCacheName);
     let offlinePage = '/offline/';
@@ -8,7 +8,10 @@ function catchHandler(config) {
     if (lang !== '') {
       offlinePage = '/' + lang + offlinePage;
     }
-    return (await cache.match(baseURL.pathname.replace(/\/+$/, '') + offlinePage)) || Response.error();
+    return (
+      (await cache.match(baseURL.pathname.replace(/\/+$/, '') + offlinePage)) ||
+      Response.error()
+    );
   };
 }
 
