@@ -42,3 +42,14 @@ You should use `hugo --minify` to minify the final HTML in production environmen
 
 Compression is not the same thing of minification, it compresses files with some algorithm (such as `gzip`), and then transfer to clients, the clients then decompress before parsing those files.
 This is the configuration of the web server. Please refer to the relevant documents according to your own situation.
+
+## Images Resources
+
+Please place the featured, cover or thumbnail images under the page folder whenever possible, so that the images would be treated as page resources that can be processed by the theme. HBS will crop it into multiple smaller sizes to suit different devices, in order to save users bandwidth and improve the performance and user experience.
+
+```
+├── featured-sample.webp
+├── index.md
+├── index.zh-hans.md
+└── index.zh-hant.md
+```
