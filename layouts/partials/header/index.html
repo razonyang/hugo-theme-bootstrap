@@ -7,13 +7,7 @@
       <i class="fas fa-bars"></i>
     </button>
     {{- end }}
-    {{- $logo := (default "images/logo.webp" .Site.Params.logo) }}
-    <a class="navbar-brand d-flex align-items-center flex-grow-1 flex-lg-grow-0 text-lg-start{{ if eq .Type "docs" }} text-center{{ end }} ms-2 ms-lg-0 mx-auto me-lg-3{{ if .IsHome }} active{{ end }}" href="{{ "" | absLangURL }}">
-      {{- if $logo }}
-        {{ partial "helpers/image" (dict "filename" $logo "alt" "Logo" "class" "logo" "resources" .Resources) }}
-      {{- end }}
-      {{- with .Site.Params.brand }}{{ . }}{{ else }}{{ $.Site.Title }}{{ end }}
-    </a>
+    {{- partial "header/brand" . }}
     <button class="navbar-toggler order-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarMenus"
       aria-controls="navbarMenus" aria-expanded="false" aria-label="Toggle navigation">
       <i class="fas fa-ellipsis-h"></i>
