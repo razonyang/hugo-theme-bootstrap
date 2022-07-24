@@ -33,6 +33,8 @@ $palette-classes: 'btn', 'btn-outline';
   @if validate-palette($name) {
     $on-primary: color-contrast($color);
     $primary-secondary: shade-color($color, 20%);
+    $primary-tint: tint-color($color, 50%);
+    $theme-colors: map-merge($theme-colors, ('#{$name}-tint': $primary-tint));
     $on-primary-secondary: if(
       $on-primary == $color-contrast-light,
       shade-color($on-primary, 20%),
@@ -63,6 +65,24 @@ $palette-classes: 'btn', 'btn-outline';
         .#{$class}-primary {
           @extend .#{$class}-#{$name}; /* stylelint-disable-line */
         }
+      }
+
+      &[data-theme='dark'] {
+        --#{$prefix}primary: #{$primary-tint};
+        --#{$prefix}primary-rgb: #{to-rgb($primary-tint)};
+        --#{$prefix}accent-bg: #{$primary-tint} !important;
+        --#{$prefix}accent-color: #{$on-primary} !important;
+        --#{$prefix}accent-border: #{$primary-tint} !important;
+
+        @each $class in $palette-classes {
+          .#{$class}-primary {
+            @extend .#{$class}-#{$name}-tint; /* stylelint-disable-line */
+          }
+        }
+      }
+
+      .text-primary {
+        color: var(--#{$prefix}primary) !important;
       }
     }
   }
