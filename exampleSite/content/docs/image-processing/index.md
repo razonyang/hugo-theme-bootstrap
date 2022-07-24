@@ -46,7 +46,7 @@ authors = ["RazonYang"]
   weight = 2
 +++
 
-This article offers some use cases for showing how to resize and align images.
+This article offers some use cases for showing how to resize, crop, fit, fill and align images.
 <!--more-->
 
 ## Resizing Images
