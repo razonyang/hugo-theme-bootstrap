@@ -12,6 +12,11 @@
   --#{$prefix}navbar-brand-hover-color: var(--#{$prefix}on-primary);
   --#{$prefix}form-control-bg: var(--#{$prefix}primary-secondary);
 
+  .offcanvas-lg {
+    --#{$prefix}offcanvas-bg: var(--#{$prefix}primary);
+    --#{$prefix}offcanvas-color: var(--#{$prefix}on-primary);
+  }
+
   .logo {
     height: 32px;
     width: auto;
@@ -55,5 +60,10 @@
     color: var(--#{$prefix}surface-color-secondary);
 
     --#{$prefix}form-control-bg: var(--#{$prefix}surface-bg);
+
+    .offcanvas-lg {
+      --#{$prefix}offcanvas-bg: var(--#{$prefix}surface-bg);
+      --#{$prefix}offcanvas-color: var(#{$prefix}surface-color-secondary);
+    }
   }
 }
