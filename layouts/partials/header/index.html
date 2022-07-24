@@ -1,5 +1,5 @@
 {{- $baseURL := $.Site.BaseURL }}
-<nav class="top-app-bar shadow bg-primary text-white navbar navbar-expand-lg{{ if $.Site.Params.fixedHeader }} fixed-top{{ end }}">
+<nav class="top-app-bar shadow navbar navbar-expand-lg{{ if $.Site.Params.fixedHeader }} fixed-top{{ end }}">
   <div class="{{- partial "helpers/fullwidth" (dict "Page" . "Output" "container" "FullWidthOutput" "container-fluid") -}}">
     {{- if eq .Type "docs" }}
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDocsNav"
@@ -12,7 +12,7 @@
       aria-controls="navbarMenus" aria-expanded="false" aria-label="Toggle navigation">
       <i class="fas fa-ellipsis-h"></i>
     </button>
-    <div class="offcanvas-lg offcanvas-end flex-grow-1 bg-primary text-white" data-bs-scroll="true" tabindex="-1" id="navbarMenus" aria-labelledby="navbarMenusLabel">
+    <div class="offcanvas-lg offcanvas-end flex-grow-1" data-bs-scroll="true" tabindex="-1" id="navbarMenus" aria-labelledby="navbarMenusLabel">
       <div class="offcanvas-header px-4 pb-0">
         <h5 class="offcanvas-title" id="navbarMenusLabel">{{ $.Site.Title }}</h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" data-bs-target="#navbarMenus" aria-label="Close"></button>

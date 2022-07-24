@@ -48,3 +48,12 @@
     }
   }
 }
+
+@include theme(dark) {
+  .top-app-bar {
+    background-color: var(--#{$prefix}surface-bg);
+    color: var(--#{$prefix}surface-color-secondary);
+
+    --#{$prefix}form-control-bg: var(--#{$prefix}surface-bg);
+  }
+}
