@@ -33,7 +33,7 @@ $palette-classes: 'btn', 'btn-outline';
   @if validate-palette($name) {
     $on-primary: color-contrast($color);
     $primary-secondary: shade-color($color, 20%);
-    $primary-tint: tint-color($color, 50%);
+    $primary-tint: tint-color($color, 30%);
     $theme-colors: map-merge($theme-colors, ('#{$name}-tint': $primary-tint));
     $on-primary-secondary: if(
       $on-primary == $color-contrast-light,
