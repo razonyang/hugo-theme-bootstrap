@@ -74,15 +74,12 @@ palette = "indigo"
 
 ### 修改配色
 
-主题的调色板系统基于 CSS 变量，因此，我们可以轻松地为每个调色板自定义颜色。
-
-```scss {title="assets/main/scss/_custom.scss"}
-[data-palette=blue] {
-    --#{$prefix}primary: darkblue;
-}
+```scss {title="assets/main/scss/_variables.scss"}
+$palette-blue: darkblue;
 ```
 
-在 `assets/main/scss/_custom.scss` 追加样式后，`blue` 调色板的颜色将会变成 `darkblue`。
+在 `assets/main/scss/_variables.scss` 修改 SCSS 变量后，`blue` 调色板的颜色将会变成 `darkblue`。
+更多 SCSS 变量请参阅 [SCSS 变量]({{< ref "docs/advanced/scss-variables" >}})。
 
 ## 字体
 

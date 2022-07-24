@@ -75,15 +75,12 @@ palette = "indigo"
 
 ### Override Palette Color
 
-The palettes system is based on CSS variable, therefore, we can easily custom the color per palette.
-
-```scss {title="assets/main/scss/_custom.scss"}
-[data-palette=blue] {
-    --#{$prefix}primary: darkblue;
-}
+```scss {title="assets/main/scss/_variables.scss"}
+$palette-blue: darkblue;
 ```
 
-After appending the style to `assets/main/scss/_custom.scss`, the color of `blue` palette will be changed to `darkblue`.
+After modifying the SCSS variables on `assets/main/scss/_variables.scss`, the color of `blue` palette will be changed to `darkblue`.
+Please checkout the [SCSS Variables]({{< ref "docs/advanced/scss-variables" >}}) for details.
 
 ## Fonts
 
