@@ -7,6 +7,6 @@
 
   &:hover,
   &:focus {
-    @extend .shadow; /* stylelint-disable-line */
+    @extend .shadow-sm; /* stylelint-disable-line */
   }
 }

@@ -13,6 +13,7 @@
   --#{$prefix}surface-color: #{$surface-color};
   --#{$prefix}surface-color-secondary: #{$surface-color-secondary};
   --#{$prefix}surface-color-disabled: #{$surface-color-disabled};
+  --#{$prefix}shadow-rgb: 0, 0, 0;
 }
 
 [data-theme='dark'] {
@@ -20,4 +21,5 @@
   --#{$prefix}surface-color: #{$surface-color-dark};
   --#{$prefix}surface-color-secondary: #{$surface-color-secondary-dark};
   --#{$prefix}surface-color-disabled: #{$surface-color-disabled-dark};
+  --#{$prefix}shadow-rgb: 255, 255, 255;
 }

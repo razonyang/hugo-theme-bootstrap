@@ -1,9 +1,0 @@
-.shadow {
-    --#{$prefix}shadow-rgb: 0, 0, 0;
-}
-
-@include theme(dark) {
-    .shadow {
-        --#{$prefix}shadow-rgb: 255, 255, 255;
-    }
-}
