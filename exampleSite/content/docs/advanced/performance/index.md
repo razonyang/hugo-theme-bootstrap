@@ -24,7 +24,7 @@ The easiest way to improve performance is to reduce the file size for transferri
 
 ## Environment
 
-The theme relies on the `production` environment to minify the JavaScript and CSS assets.
+The theme relies on the `production` environment to minify the JavaScript and CSS assets, and purge unused CSS.
 
 | Default environment | Value |
 |---|---|

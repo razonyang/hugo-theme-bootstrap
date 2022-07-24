@@ -24,7 +24,7 @@ images = []
 
 ## 環境
 
-這個主題依靠 `production` 環境來簡化 JavaScript 和 CSS 資源。
+這個主題依靠 `production` 環境來簡化 JavaScript 和 CSS 資源，並刪除未使用的 CSS。
 
 | Default environment | Value |
 |---|---|
