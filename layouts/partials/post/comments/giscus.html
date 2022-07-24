@@ -1,6 +1,6 @@
 {{- with .Site.Params.giscus }}
 {{- $langs := dict "zh-cn" "zh-CN" "zh-tw" "zh-TW" "zh-hk" "zh-TW" "zh-hans" "zh-CN" "zh-hant" "zh-TW" -}}
-{{- $validLangs := slice "de" "gsw" "es" "en" "fr" "id" "it" "ja" "ko" "pl" "pt" "ro" "ru" "tr" "vi" "zh-CN" "zh-TW" -}}
+{{- $validLangs := slice "ar" "de" "gsw" "es" "en" "fr" "id" "it" "ja" "ko" "pl" "pt" "ro" "ru" "tr" "vi" "zh-CN" "zh-TW" -}}
 {{- $lang := default $.Site.Language.Lang .lang }}
 {{- with index $langs $lang }}{{ $lang = . }}{{ end }}
 {{- if not (in $validLangs $lang) }}
