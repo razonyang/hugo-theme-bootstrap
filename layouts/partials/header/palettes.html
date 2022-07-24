@@ -9,7 +9,7 @@
             {{- range .Site.Params.Palettes }}
             {{- $key := replace . " " "-" }}
             {{- $title := replace . " " "_" | printf "color_%s" | i18n }}
-            <li class="col-3 my-1">
+            <li class="col-4 my-1">
                 <a role="button" id="palette-{{ $key }}" aria-label="{{ $title }}"
                     class="btn btn-sm w-100 palette text-bg-{{ $key }}" data-palette="{{ $key }}">
                 </a>

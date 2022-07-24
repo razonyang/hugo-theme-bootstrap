@@ -3,7 +3,7 @@
     {{- $pinnedPosts := .PinnedPosts }}
     {{- with .Page.File.UniqueID }}
       {{- if in $pinnedPosts . }}
-      <span class="position-absolute start-0 top-0 text-primary"><i class="fas fa-thumbtack" data-fa-transform="rotate-45"></i></span>
+      <span class="post-pinned-icon position-absolute start-0 top-0 text-primary"><i class="fas fa-thumbtack" data-fa-transform="rotate-45"></i></span>
       {{- end }}
     {{- end }}
   {{- end }}
