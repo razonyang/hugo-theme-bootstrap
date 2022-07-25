@@ -167,6 +167,12 @@ other = "{{ .Count }} posts in total"
 [post_date]
 other = "created on {{ .createdOn }}{{ with .updatedOn }}, updated on {{ . }}{{ end }}."
 
+[posts]
+other = "Posts"
+
+[profile]
+other = "Profile"
+
 [read_more]
 other = "Read More"
 
@@ -214,6 +220,9 @@ other = "Contents"
 
 [tags]
 other = "Tags"
+
+[taxonomies]
+other = "Taxonomies"
 
 [tipeee]
 other = "Tipeee"

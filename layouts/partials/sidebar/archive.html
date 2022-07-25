@@ -2,18 +2,23 @@
 {{- $basePath := strings.TrimSuffix "/" (default "/archives" .Site.Params.archive.basePath) }}
 {{- $basePath = printf "/%s/" (strings.TrimPrefix "/" $basePath)  }}
 {{- $archivePage := $.GetPage $basePath }}
-<section class="row card component">
-    <div class="card-header">
-      <h2 class="card-title my-2 fs-4 text-surface">
-          {{- with $archivePage }}
-          <a href="{{ .Permalink }}">{{ i18n "archives" }}</a>
-          {{- else }}
-          {{ i18n "archives" }}
-          {{- end }}
-      </h2>
-    </div>
-    <div class="card-body">
-      {{- partial "sidebar/archive-items" . }}
-    </div>
-</section>
+<div class="accordion">
+  <section class="row card component">
+      <div class="card-header">
+        <h2 class="card-title my-2 fs-4 text-surface d-none d-lg-block">
+            {{- with $archivePage }}
+            <a href="{{ .Permalink }}">{{ i18n "archives" }}</a>
+            {{- else }}
+            {{ i18n "archives" }}
+            {{- end }}
+        </h2>
+        <button class="accordion-button d-lg-none mb-1 collapsed shadow-none px-3 py-2" type="button" data-bs-toggle="collapse" data-bs-target="#archives" aria-expanded="false" aria-controls="archives">
+            {{ i18n "archives" }}
+        </button>
+      </div>
+      <div class="card-body collapse accordion-collapse accordion-body d-lg-block" id="archives">
+        {{- partial "sidebar/archive-items" . }}
+      </div>
+  </section>
+</div>
 {{- end }}

@@ -157,6 +157,12 @@ other = "总共 {{ .Count }} 篇文章"
 [post_date]
 other = "创建于 {{ .createdOn }}{{ with .updatedOn }}，更新于 {{ . }}{{ end }}。"
 
+[posts]
+other = "文章"
+
+[profile]
+other = "Profile"
+
 [read_more]
 other = "阅读更多"
 
@@ -201,6 +207,9 @@ other = "目录"
 
 [tags]
 other = "标签"
+
+[taxonomies]
+other = "Taxonomies"
 
 [try_again]
 other = "再试一次"

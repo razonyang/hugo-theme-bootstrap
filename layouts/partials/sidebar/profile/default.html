@@ -1,10 +1,18 @@
-<div class="card row text-center profile component">
-  <div class="card-body">
-    <div class="col-12 d-flex align-items-center justify-content-center">
-      {{- partial "sidebar/profile/avatar" . -}}
+<div class="accordion">
+  <div class="accordion-item card row text-center profile component">
+    <div class="accordion-header card-header border-0" id="profile-header">
+      <button class="accordion-button d-lg-none mb-2 collapsed shadow-none px-3 py-2" type="button" data-bs-toggle="collapse" data-bs-target="#profile" aria-expanded="false" aria-controls="profile">
+        {{ i18n "profile" }}
+      </button>
     </div>
-    <div class="col-12 profile-meta">
-      {{- partial "sidebar/profile/meta" . -}}
+    <div class="card-body collapse accordion-collapse accordion-body d-lg-block" id="profile" aria-labelledby="profile-header">
+      <div class="col-12 d-flex align-items-center justify-content-center">
+        {{- partial "sidebar/profile/avatar" . -}}
+      </div>
+      <div class="col-12 profile-meta">
+        {{- partial "sidebar/profile/meta" . -}}
+      </div>
+      {{- partial "sidebar/profile/social-links" . -}}
     </div>
   </div>
 </div>
