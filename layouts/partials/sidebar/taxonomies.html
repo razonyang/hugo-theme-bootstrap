@@ -25,7 +25,7 @@
             {{- $count := 0 }}
             {{- range . }}
               {{- if and (lt $count $taxonomyCount) (ne .Name "") }}
-              <a href="{{ .Page.Permalink }}" class="btn btn-sm btn-secondary post-taxonomy post-{{ $key | singularize }} me-2 mb-2" title="{{ .Page.Title }}">
+              <a href="{{ .Page.Permalink }}" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-{{ $key | singularize }} me-2 mb-2" title="{{ .Page.Title }}">
                 {{ .Page.Title }}
                 {{- if $.Site.Params.countTaxonomyPosts }}
                   <span class="badge badge-sm text-secondary bg-white ms-1">{{ .Count }}</span>
@@ -35,7 +35,7 @@
               {{- end }}
             {{- end }}
             {{- if gt (len $value) $taxonomyCount }}
-            <a href="{{ absLangURL (urlize $key) }}" class="btn btn-sm btn-secondary post-taxonomy post-{{ $key | singularize }} me-2 mb-2" title='{{ i18n "all" | upper }}'>
+            <a href="{{ absLangURL (urlize $key) }}" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-{{ $key | singularize }} me-2 mb-2" title='{{ i18n "all" | upper }}'>
               {{ i18n "all" | upper }}
               <span class="badge badge-sm text-secondary bg-white ms-1">{{ len $value }}</span>
             </a>
