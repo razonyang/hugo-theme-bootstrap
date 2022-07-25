@@ -16,9 +16,9 @@
             <h2 class="card-title my-2 fs-4 text-surface d-none d-lg-block">
               <a href="{{ absLangURL (urlize $key) }}">{{ i18n $key }}</a>
             </h2>
-            <button class="accordion-button d-lg-none mb-1 collapsed shadow-none px-3 py-2" type="button" data-bs-toggle="collapse" data-bs-target="#taxonomy-{{ $key }}" aria-expanded="false" aria-controls="taxonomy-{{ $key }}">
+            <a class="accordion-button d-lg-none mb-1 collapsed shadow-none p-0 bg-transparent text-surface" type="button" data-bs-toggle="collapse" data-bs-target="#taxonomy-{{ $key }}" aria-expanded="false" aria-controls="taxonomy-{{ $key }}">
                 {{ i18n $key }}
-            </button>
+            </a>
           </div>
           <div class="card-body collapse accordion-collapse accordion-body d-lg-block" id="taxonomy-{{ $key }}">
             <div class="py-2">

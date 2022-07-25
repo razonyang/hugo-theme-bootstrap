@@ -12,9 +12,9 @@
             {{ i18n "archives" }}
             {{- end }}
         </h2>
-        <button class="accordion-button d-lg-none mb-1 collapsed shadow-none px-3 py-2" type="button" data-bs-toggle="collapse" data-bs-target="#archives" aria-expanded="false" aria-controls="archives">
+        <a class="accordion-button d-lg-none mb-1 collapsed shadow-none p-0 bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#archives" aria-expanded="false" aria-controls="archives">
             {{ i18n "archives" }}
-        </button>
+        </a>
       </div>
       <div class="card-body collapse accordion-collapse accordion-body d-lg-block" id="archives">
         {{- partial "sidebar/archive-items" . }}
