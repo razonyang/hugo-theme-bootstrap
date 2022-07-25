@@ -1,6 +1,5 @@
 .profile {
   color: var(--#{$prefix}secondary-text-on-surface) !important;
-  padding: 0.5rem 0 0;
 
   .profile-avatar {
     height: 120px;
@@ -47,9 +46,5 @@
     @include media-breakpoint-down(sm) {
       text-align: center;
     }
-  }
-
-  .social-links {
-    justify-content: start !important;
   }
 }

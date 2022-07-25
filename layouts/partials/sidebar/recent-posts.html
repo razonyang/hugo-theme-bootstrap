@@ -4,18 +4,23 @@
   {{- $sections = slice .Type }}
 {{- end }}
 {{- if and $count (default false .Site.Params.sidebar.recentPosts) }}
-<section class="recent-posts row card component">
-  <div class="card-header">
-    <h2 class="card-title my-2 fs-4 text-surface">{{ i18n "recent_posts" }}</h2>
-  </div>
-  <div class="card-body">
-    <ul class="post-list list-unstyled ms-1">
-    {{- range first $count (where site.RegularPages.ByDate.Reverse "Type" "in" $sections) }}
-      <li class="mb-2">
-        <a href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a>
-      </li>
-    {{- end }}
-    </ul>
-  </div>
-</section>
+<div class="accordion">
+  <section class="recent-posts row card component">
+    <div class="card-header">
+      <h2 class="card-title my-2 fs-4 text-surface d-none d-lg-block">{{ i18n "recent_posts" }}</h2>
+      <button class="accordion-button d-lg-none mb-1 collapsed shadow-none px-3 py-2" type="button" data-bs-toggle="collapse" data-bs-target="#recent-posts" aria-expanded="false" aria-controls="recent-posts">
+          {{ i18n "recent_posts" }}
+      </button>
+    </div>
+    <div class="card-body collapse accordion-collapse accordion-body d-lg-block" id="recent-posts">
+      <ul class="post-list list-unstyled ms-1">
+      {{- range first $count (where site.RegularPages.ByDate.Reverse "Type" "in" $sections) }}
+        <li class="mb-2">
+          <a href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a>
+        </li>
+      {{- end }}
+      </ul>
+    </div>
+  </section>
+</div>
 {{- end }}

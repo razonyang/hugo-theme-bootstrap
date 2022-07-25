@@ -1,77 +1,84 @@
 
 {{- if default true .Site.Params.sidebar.taxonomiesToggle }}
-<section class="taxonomies row card component">
-    <div class="card-body">
-        <ul class="nav nav-pills nav-fill" id="myTab" role="tablist">
-            {{- $counter := 0 }}
-            {{- range $expected := $.Site.Params.sidebarTaxonomies }}
-            {{- range $key, $value := $.Site.Taxonomies }}
-              {{- if eq $key $expected }}
-              {{- $countParams := dict "categories" "categoryCount" "tags" "tagCount" "series" "seriesCount" }}
-              {{- $param := default "" (index $countParams $key) }}
-              {{- $taxonomyCount := default 10 ($.Site.Param $param) }}
-              {{- if $taxonomyCount }}
-                {{- with $value.ByCount }}
+<div class="accordion">
+    <section class="taxonomies row card component accordion-item">
+        <div class="accordion-header card-header">
+            <button class="accordion-button d-lg-none mb-1 collapsed shadow-none px-3 py-2" type="button" data-bs-toggle="collapse" data-bs-target="#taxonomies-toggle" aria-expanded="false" aria-controls="taxonomies-toggle">
+                {{ i18n "taxonomies" }}
+            </button>
+        </div>
+        <div class="card-body collapse accordion-collapse accordion-body d-lg-block" id="taxonomies-toggle">
+            <ul class="nav nav-pills nav-fill" id="myTab" role="tablist">
+                {{- $counter := 0 }}
+                {{- range $expected := $.Site.Params.sidebarTaxonomies }}
+                {{- range $key, $value := $.Site.Taxonomies }}
+                {{- if eq $key $expected }}
+                {{- $countParams := dict "categories" "categoryCount" "tags" "tagCount" "series" "seriesCount" }}
+                {{- $param := default "" (index $countParams $key) }}
+                {{- $taxonomyCount := default 10 ($.Site.Param $param) }}
+                {{- if $taxonomyCount }}
+                    {{- with $value.ByCount }}
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link{{ if eq $counter 0 }} active{{ end }}" id="taxonomy{{ $key | title }}Tab" data-bs-toggle="tab" data-bs-target="#taxonomy{{ $key | title }}" 
+                            type="button" role="tab" aria-controls="{{ i18n $key }}" aria-selected="true">
+                            {{ i18n $key }}
+                        </button>
+                    </li>
+                    {{- $counter = add $counter 1 }}
+                    {{- end }}
+                {{- end }}
+                {{- end }}
+                {{- end }}
+                {{- end }}
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link{{ if eq $counter 0 }} active{{ end }}" id="taxonomy{{ $key | title }}Tab" data-bs-toggle="tab" data-bs-target="#taxonomy{{ $key | title }}" 
-                        type="button" role="tab" aria-controls="{{ i18n $key }}" aria-selected="true">
-                        {{ i18n $key }}
+                    <button class="nav-link" id="taxonomyArchivesTab" data-bs-toggle="tab" data-bs-target="#taxonomyArchive" 
+                        type="button" role="tab" aria-controls="taxonomyArchives" aria-selected="true">
+                        {{ i18n "archives" }}
                     </button>
                 </li>
-                {{- $counter = add $counter 1 }}
-                {{- end }}
-              {{- end }}
-              {{- end }}
-            {{- end }}
-            {{- end }}
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="taxonomyArchivesTab" data-bs-toggle="tab" data-bs-target="#taxonomyArchive" 
-                    type="button" role="tab" aria-controls="taxonomyArchives" aria-selected="true">
-                    {{ i18n "archives" }}
-                </button>
-            </li>
-        </ul>
-          
-        <div class="tab-content mt-3">
-            {{- $counter := 0 }}
-            {{- range $expected := $.Site.Params.sidebarTaxonomies }}
-            {{- range $key, $value := $.Site.Taxonomies }}
-            {{- if eq $key $expected }}
-            {{- $countParams := dict "categories" "categoryCount" "tags" "tagCount" "series" "seriesCount" }}
-            {{- $param := default "" (index $countParams $key) }}
-            {{- $taxonomyCount := default 10 ($.Site.Param $param) }}
-            {{- if $taxonomyCount }}
-                {{- with $value.ByCount }}
-                <div class="tab-pane{{ if eq $counter 0 }} active{{ end }}" id="taxonomy{{ $key | title }}" role="tabpanel" aria-labelledby="taxonomy{{ $key | title }}Tab" tabindex="0">
-                    {{- $count := 0 }}
-                    {{- range . }}
-                    {{- if and (lt $count $taxonomyCount) (ne .Name "") }}
-                    <a href="{{ .Page.Permalink }}" class="btn btn-sm btn-secondary post-taxonomy post-{{ $key | singularize }} me-2 mb-2" title="{{ .Page.Title }}">
-                        {{ .Page.Title }}
-                        {{- if $.Site.Params.countTaxonomyPosts }}
-                        <span class="badge badge-sm text-secondary bg-white ms-1">{{ .Count }}</span>
+            </ul>
+            
+            <div class="tab-content mt-3">
+                {{- $counter := 0 }}
+                {{- range $expected := $.Site.Params.sidebarTaxonomies }}
+                {{- range $key, $value := $.Site.Taxonomies }}
+                {{- if eq $key $expected }}
+                {{- $countParams := dict "categories" "categoryCount" "tags" "tagCount" "series" "seriesCount" }}
+                {{- $param := default "" (index $countParams $key) }}
+                {{- $taxonomyCount := default 10 ($.Site.Param $param) }}
+                {{- if $taxonomyCount }}
+                    {{- with $value.ByCount }}
+                    <div class="tab-pane{{ if eq $counter 0 }} active{{ end }}" id="taxonomy{{ $key | title }}" role="tabpanel" aria-labelledby="taxonomy{{ $key | title }}Tab" tabindex="0">
+                        {{- $count := 0 }}
+                        {{- range . }}
+                        {{- if and (lt $count $taxonomyCount) (ne .Name "") }}
+                        <a href="{{ .Page.Permalink }}" class="btn btn-sm btn-secondary post-taxonomy post-{{ $key | singularize }} me-2 mb-2" title="{{ .Page.Title }}">
+                            {{ .Page.Title }}
+                            {{- if $.Site.Params.countTaxonomyPosts }}
+                            <span class="badge badge-sm text-secondary bg-white ms-1">{{ .Count }}</span>
+                            {{- end }}
+                        </a>
+                        {{- $count = add $count 1 }}
                         {{- end }}
-                    </a>
-                    {{- $count = add $count 1 }}
+                        {{- end }}
+                        {{- if gt (len $value) $taxonomyCount }}
+                        <a href="{{ absLangURL (urlize $key) }}" class="btn btn-sm btn-secondary post-taxonomy post-{{ $key | singularize }} me-2 mb-2" title='{{ i18n "all" | upper }}'>
+                        {{ i18n "all" | upper }}
+                        <span class="badge badge-sm text-secondary bg-white ms-1">{{ len $value }}</span>
+                        </a>
+                        {{- end }}
+                    </div>
+                    {{- $counter = add $counter 1 }}
                     {{- end }}
-                    {{- end }}
-                    {{- if gt (len $value) $taxonomyCount }}
-                    <a href="{{ absLangURL (urlize $key) }}" class="btn btn-sm btn-secondary post-taxonomy post-{{ $key | singularize }} me-2 mb-2" title='{{ i18n "all" | upper }}'>
-                    {{ i18n "all" | upper }}
-                    <span class="badge badge-sm text-secondary bg-white ms-1">{{ len $value }}</span>
-                    </a>
-                    {{- end }}
-                </div>
-                {{- $counter = add $counter 1 }}
                 {{- end }}
-            {{- end }}
-            {{- end }}
-            {{- end }}
-            {{- end }}
-            <div class="tab-pane" id="taxonomyArchive" role="tabpanel" aria-labelledby="taxonomyArchiveTab" tabindex="0">
-                {{- partial "sidebar/archive-items" . }}
+                {{- end }}
+                {{- end }}
+                {{- end }}
+                <div class="tab-pane" id="taxonomyArchive" role="tabpanel" aria-labelledby="taxonomyArchiveTab" tabindex="0">
+                    {{- partial "sidebar/archive-items" . }}
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+</div>
 {{- end -}}

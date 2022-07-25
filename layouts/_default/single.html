@@ -1,9 +1,9 @@
 {{ define "content" }}
+{{- partial "sidebar" . -}}
 <div class="col-lg-8">
   <div class="container">
     {{- partial "breadcrumb" . -}}
     {{- partial "post" . -}}
   </div>
 </div>
-{{- partial "sidebar" . -}}
 {{ end }}

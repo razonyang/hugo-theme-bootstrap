@@ -1,4 +1,5 @@
 {{ define "content" }}
+{{- partial "sidebar" . -}}
 <div class="col-lg-8">
     {{- partial "breadcrumb" . -}}
     <div class="contact row component card">
@@ -14,6 +15,5 @@
         </div>
     </div>
 </div>
-{{- partial "sidebar" . -}}
 {{ end }}
   
