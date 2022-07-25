@@ -47,6 +47,5 @@ const options = {
 };
 export default options;
 ```
-```
 
 Avialable options are listed on [Viewer.js Options](https://github.com/fengyuanchen/viewerjs#options).

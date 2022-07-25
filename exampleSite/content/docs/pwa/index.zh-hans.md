@@ -75,7 +75,6 @@ PWAs([渐进式 web 应用程序](https://developer.mozilla.org/en-US/docs/Web/P
 ```toml
 +++
 title = 'Offline'
-layout = 'offline'
 +++
 ```
 

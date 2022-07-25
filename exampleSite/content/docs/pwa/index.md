@@ -75,7 +75,6 @@ We need to create an offline page called `offline/index.md` in the `content` dir
 ```toml
 +++
 title = 'Offline'
-layout = 'offline'
 +++
 ```
 

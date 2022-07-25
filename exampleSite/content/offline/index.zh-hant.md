@@ -1,4 +1,3 @@
 +++
 title = 'Offline'
-layout = 'offline'
 +++
