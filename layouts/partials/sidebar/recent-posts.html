@@ -4,8 +4,8 @@
   {{- $sections = slice .Type }}
 {{- end }}
 {{- if and $count (default false .Site.Params.sidebar.recentPosts) }}
-<div class="accordion">
-  <section class="recent-posts row card component">
+<div class="accordion recent-posts">
+  <section class="row card component">
     <div class="card-header">
       <h2 class="card-title my-2 fs-4 text-surface d-none d-lg-block">{{ i18n "recent_posts" }}</h2>
       <a class="accordion-button d-lg-none mb-1 collapsed shadow-none p-0 bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#recent-posts" aria-expanded="false" aria-controls="recent-posts">

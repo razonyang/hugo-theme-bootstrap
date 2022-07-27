@@ -2,7 +2,7 @@
 {{- $basePath := strings.TrimSuffix "/" (default "/archives" .Site.Params.archive.basePath) }}
 {{- $basePath = printf "/%s/" (strings.TrimPrefix "/" $basePath)  }}
 {{- $archivePage := $.GetPage $basePath }}
-<div class="accordion">
+<div class="accordion archives">
   <section class="row card component">
       <div class="card-header">
         <h2 class="card-title my-2 fs-4 text-surface d-none d-lg-block">

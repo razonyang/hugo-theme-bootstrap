@@ -2,8 +2,8 @@
 {{- if and $count (default false .Site.Params.sidebar.featuredPosts) }}
   {{- $featuredPosts := first $count (where (where site.RegularPages "Type" "in" site.Params.mainSections) ".Params.featured" "eq" true) }}
   {{- with $featuredPosts }}
-  <div class="accordion">
-    <section class="featured-posts row card component">
+  <div class="accordion featured-posts">
+    <section class="row card component">
       <div class="card-header">
         <h2 class="card-title my-2 fs-4 text-surface d-none d-lg-block">{{ i18n "featured_posts" }}</h2>
         <a class="accordion-button d-lg-none mb-1 collapsed shadow-none p-0 bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#featured-posts" aria-expanded="false" aria-controls="featured-posts">
