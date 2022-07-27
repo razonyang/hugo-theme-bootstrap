@@ -1,6 +1,12 @@
 .post-panel-wrapper {
+  opacity: 0.75;
   top: 84px;
   z-index: 1;
+
+  &:hover,
+  &:active {
+    opacity: 1;
+  }
 
   .post-panel {
     text-align: right;
