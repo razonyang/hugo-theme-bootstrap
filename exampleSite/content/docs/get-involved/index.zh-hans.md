@@ -21,9 +21,11 @@ authors = ["RazonYang"]
 [menu.main]
   parent = "support"
   weight = 5
+  pre = '<i class="fas fa-handshake fa-fw me-1"></i>'
 [menu.footer]
   parent = "support"
   weight = 5
+  pre = '<i class="fas fa-handshake fa-fw me-1"></i>'
 +++
 
 我们很乐意倾听你的意见和反馈，也欢迎你参与进来。

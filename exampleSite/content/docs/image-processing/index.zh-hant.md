@@ -44,6 +44,7 @@ navWeight = 800
 [menu.footer]
   parent = "features"
   weight = 2
+  pre = '<i class="fas fa-image fa-fw me-1"></i>'
 +++
 
 本文提供一些調整圖片大小、裁剪和對齊圖片的用例。

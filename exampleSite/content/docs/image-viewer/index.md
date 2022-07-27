@@ -23,6 +23,7 @@ navWeight = 810
 [menu.footer]
   parent = "features"
   weight = 3
+  pre = '<i class="fas fa-images fa-fw me-1"></i>'
 +++
 
 Image viewer is an image gallery, it will be shown up when you click a non-linkable image.

@@ -1,35 +1,46 @@
 [[main]]
   identifier = "home"
-  pre = '<i class="fas fa-home"></i>'
-  post = '<span class="d-lg-none ms-1">Home</span>'
+  name = "Home"
+  pre = '<i class="fas fa-home me-1"></i>'
   weight = 1
   url = "https://hbs.razonyang.com/"
 [[main]]
   identifier = "blog"
   name = "Blog"
+  pre = '<i class="fas fa-fw fa-blog me-1"></i>'
   weight = 2
-  url = "https://hbs.razonyang.com/blog/"
 [[main]]
   name = "Support"
   identifier = "support"
+  pre = '<i class="fas fa-fw fa-info-circle me-1"></i>'
   weight = 40
 [[main]]
   name = "Repository"
   identifier = "repository"
   parent = "support"
+  pre = '<i class="fab fa-fw fa-github me-1"></i>'
   url = "https://github.com/razonyang/hugo-theme-bootstrap"
   weight = 1
 [[main]]
   name = "Discussions"
   identifier = "discussions"
   parent = "support"
+  pre = '<i class="fas fa-fw fa-comments me-1"></i>'
   url = "https://github.com/razonyang/hugo-theme-bootstrap/discussions/new"
   weight = 2
 [[main]]
   name = "Features Request"
   identifier = "feature-request"
+  pre = '<i class="fas fa-fw fa-lightbulb me-1"></i>'
   parent = "support"
   url = "https://github.com/razonyang/hugo-theme-bootstrap/issues/new?template=feature_request.md"
+  weight = 3
+[[main]]
+  name = "Bug Report"
+  identifier = "bug-report"
+  parent = "support"
+  pre = '<i class="fas fa-fw fa-bug me-1"></i>'
+  url = "https://github.com/razonyang/hugo-theme-bootstrap/issues/new?template=bug_report.md"
   weight = 3
 [[main]]
   parent = "support"
@@ -59,12 +70,14 @@
   name = "Features Request"
   identifier = "feature-request"
   parent = "support"
+  pre = '<i class="fas fa-fw fa-lightbulb me-1"></i>'
   url = "https://github.com/razonyang/hugo-theme-bootstrap/issues/new?template=feature_request.md"
   weight = 3
 [[footer]]
   name = "Bug Report"
   identifier = "bug-report"
   parent = "support"
+  pre = '<i class="fas fa-fw fa-bug me-1"></i>'
   url = "https://github.com/razonyang/hugo-theme-bootstrap/issues/new?template=bug_report.md"
   weight = 4
 

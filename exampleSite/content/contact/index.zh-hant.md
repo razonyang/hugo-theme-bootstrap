@@ -1,5 +1,5 @@
 +++
-title = "聯繫我們"
+title = "聯繫我"
 layout = "contact"
 [menu.footer]
   parent = "support"

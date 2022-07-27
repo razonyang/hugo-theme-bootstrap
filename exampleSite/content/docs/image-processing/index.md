@@ -45,6 +45,7 @@ authors = ["RazonYang"]
 [menu.footer]
   parent = "features"
   weight = 2
+  pre = '<i class="fas fa-image fa-fw me-1"></i>'
 +++
 
 This article offers some use cases for showing how to resize, crop, fit, fill and align images.

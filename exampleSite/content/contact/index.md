@@ -1,5 +1,5 @@
 +++
-title = "Contact Us"
+title = "Contact Me"
 layout = "contact"
 [menu.footer]
   parent = "support"

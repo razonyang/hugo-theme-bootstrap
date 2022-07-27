@@ -23,6 +23,7 @@ authors = ["RazonYang"]
 [menu.footer]
   parent = "docs"
   weight = 5
+  pre = '<i class="fas fa-newspaper fa-fw me-1"></i>'
 +++
 
 ## Main Sections

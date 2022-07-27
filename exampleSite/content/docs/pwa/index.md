@@ -30,6 +30,7 @@ videos = [
 [menu.footer]
   parent = "features"
   weight = 2
+  pre = '<i class="fas fa-th-large fa-fw me-1"></i>'
 +++
 
 PWAs([Progressive web apps](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)) are web apps developed using a number of specific technologies and standard patterns to allow them to take advantage of both web and native app features.

@@ -21,9 +21,11 @@ navWeight = 10
 [menu.main]
   parent = "support"
   weight = 5
+  pre = '<i class="fas fa-handshake fa-fw me-1"></i>'
 [menu.footer]
   parent = "support"
   weight = 5
+  pre = '<i class="fas fa-handshake fa-fw me-1"></i>'
 +++
 
 We are happy to listen to your opinions and feedback, and welcome you to get involved.
