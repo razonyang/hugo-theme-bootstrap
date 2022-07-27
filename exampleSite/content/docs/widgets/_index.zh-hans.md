@@ -4,4 +4,5 @@ linkTitleIcon = '<i class="fas fa-cubes fa-fw"></i>'
 aliases = [
   "/zh-cn/posts/widgets"
 ]
+navWeight = 700
 +++

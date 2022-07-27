@@ -37,6 +37,7 @@ tags = [
 series = [
   "Docs"
 ]
+navWeight = 800
 aliases = [
   "/en/posts/image-processing"
 ]

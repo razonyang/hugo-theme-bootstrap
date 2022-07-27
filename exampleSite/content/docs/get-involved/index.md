@@ -17,7 +17,7 @@ aliases = [
   "/en/posts/get-involved"
 ]
 authors = ["RazonYang"]
-navWeight = 1
+navWeight = 10
 [menu.main]
   parent = "support"
   weight = 5

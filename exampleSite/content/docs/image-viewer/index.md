@@ -19,6 +19,7 @@ aliases = [
   "/en/posts/image-viewer"
 ]
 authors = ["RazonYang"]
+navWeight = 810
 [menu.footer]
   parent = "features"
   weight = 3

@@ -40,6 +40,7 @@ aliases = [
   "/zh-cn/posts/image-processing"
 ]
 authors = ["RazonYang"]
+navWeight = 800
 [menu.footer]
   parent = "features"
   weight = 2

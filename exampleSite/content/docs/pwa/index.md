@@ -1,5 +1,6 @@
 +++
 title = "Progressive Web App"
+linkTitle = "PWA"
 linkTitleIcon = '<i class="fas fa-th-large fa-fw"></i>'
 date = 2021-12-03T19:39:01+08:00
 featured = false
@@ -22,6 +23,7 @@ aliases = [
   "/en/posts/pwa"
 ]
 authors = ["RazonYang"]
+navWeight = 400
 videos = [
   "https://www.bilibili.com/video/BV1yg411Z77A"
 ]

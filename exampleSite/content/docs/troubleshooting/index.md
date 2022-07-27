@@ -16,6 +16,7 @@ tags = []
 series = []
 images = []
 authors = ["RazonYang"]
+navWeight = 20
 +++
 
 This article lists some common problems so that you can easily solve them.
