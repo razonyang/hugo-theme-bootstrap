@@ -15,7 +15,7 @@
   [zh-hans.params]
     description = "一个快速、响应式和功能丰富的 Hugo 博客主题"
     keywords = "Hugo, Bootstrap, 博客主题"
-    [zh-cn.params.archive]
+    [zh-hans.params.archive]
       dateFormat = "01-02"
 
 [zh-hant]
@@ -24,7 +24,7 @@
   [zh-hant.params]
     description = "一個快速、響應式和功能豐富的 Hugo 博客主題"
     keywords = "Hugo, Bootstrap, 博客主題"
-    [zh-tw.params.archive]
+    [zh-hant.params.archive]
       dateFormat = "01-02"
 
 [ar]
