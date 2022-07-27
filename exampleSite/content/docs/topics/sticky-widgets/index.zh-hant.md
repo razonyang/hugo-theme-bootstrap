@@ -25,14 +25,14 @@ images = []
 
 ## 創建一個新的粘性小部件
 
-首先，在 `layouts/parials` 文件夾下創建一個 partial，我們以 `layouts/partials/custom/sticky-info.html` 為例。
+首先，在 `layouts/parials` 文件夾下創建一個模板，我們以 `layouts/partials/custom/sticky-info.html` 為例。
 
 {{% code/sticky-widgets-partial %}}
 
-> 文件名 `custom/sticky-info` 可以隨意改變，但我們建議使用一些更具體的名字，以避免以後覆蓋主題的 partials。
+> 文件名 `custom/sticky-info` 可以隨意改變，但我們建議使用一些更具體的名字，以避免以後覆蓋主題的模板。
 > 比如 `custom`、`mywidgets`。
 
-然後使用 `layouts/partials/hooks/sidebar-end.html` 鉤子來包含粘性 partial。
+然後使用 `layouts/partials/hooks/sidebar-end.html` 鉤子來包含粘性模板。
 
 ```html { title="layouts/partials/hooks/sidebar-end.html" }
 {{- partial "custom/sticky-info" . }}
