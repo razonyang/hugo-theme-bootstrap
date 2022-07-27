@@ -22,7 +22,6 @@ authors = ["RazonYang"]
 +++
 
 This article refers to the traditional installation method of cloning the theme locally as Git submodule.
-It describes how to install, upgrade the theme, and write new articles.
 While this installation method is still widely used, we recommend to install the theme as [Hugo module]({{< ref "/docs/getting-started/installation/hugo-module" >}}).
 
 ## 从头开始创建站点

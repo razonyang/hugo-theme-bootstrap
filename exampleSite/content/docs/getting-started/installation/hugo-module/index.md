@@ -22,7 +22,6 @@ authors = ["RazonYang"]
 +++
 
 This article refers to the modern, up-to-date installation method of installing the theme locally as Hugo module.
-It describes how to install, upgrade the theme, and write new articles.
 
 ## Proxy (Optional)
 
