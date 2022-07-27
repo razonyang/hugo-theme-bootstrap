@@ -73,7 +73,7 @@ PWAs([渐进式 web 应用程序](https://developer.mozilla.org/en-US/docs/Web/P
 
 如果在没有网络的情况下请求新页面，将显示脱机页面。
 
-我们需要在 `content` 目录中创建一个名为 `offline/index.md` 的脱机页面，其首要内容如下。
+我们需要在 `content` 目录中创建一个名为 `offline/_index.md` 的脱机页面，其首要内容如下。
 
 ```toml
 +++

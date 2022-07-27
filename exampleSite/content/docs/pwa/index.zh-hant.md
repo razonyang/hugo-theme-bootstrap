@@ -72,7 +72,7 @@ PWAs([漸進式 web 應用程序](https://developer.mozilla.org/en-US/docs/Web/P
 
 如果在沒有網絡的情况下請求新頁面，將顯示離線頁面。
 
-我們需要在 `content` 目錄中創建一個名為 `offline/index.md` 的離線頁面，其首要內容如下。
+我們需要在 `content` 目錄中創建一個名為 `offline/_index.md` 的離線頁面，其首要內容如下。
 
 ```toml
 +++

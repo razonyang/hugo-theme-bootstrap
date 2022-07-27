@@ -73,7 +73,7 @@ The `manifest.json` will be generated automatically.
 
 The offline page will be shown in the case of requesting a new page without network.
 
-We need to create an offline page called `offline/index.md` in the `content` directory with the following front matter.
+We need to create an offline page called `offline/_index.md` in the `content` directory with the following front matter.
 
 ```toml
 +++
