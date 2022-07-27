@@ -16,7 +16,7 @@ class SidebarToggle implements Component {
     }
 
     this.sidebar = document.querySelector('.content .sidebar');
-    this.main = this.sidebar.previousElementSibling as HTMLElement;
+    this.main = this.sidebar.nextElementSibling as HTMLElement;
     this.button.addEventListener('click', () => {
       this.toggle();
     });
