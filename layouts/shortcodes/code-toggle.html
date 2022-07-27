@@ -1,11 +1,11 @@
 {{/* Inspired by https://github.com/gohugoio/hugoDocs/blob/master/layouts/shortcodes/code-toggle.html */}}
 {{- $filename := default "" (.Get "filename") -}}
-{{- $idSuffix := printf "%s%s" $filename (delimit (shuffle (seq 1 9)) "") -}}
+{{- $idSuffix := printf "%s%s" (replace $filename "/" "-") (delimit (shuffle (seq 1 9)) "") -}}
 {{- $langs := slice "toml" "yaml" "json" -}}
 <ul class="nav nav-tabs" role="tablist">
 {{- $i := 0 -}}
 {{- with $filename -}}
-    <li class="nav-item d-flex align-items-center me-1">
+    <li class="nav-item d-flex align-items-end me-1">
         <span class="text-secondary px-2">{{ . }}.</span>
     </li>
 {{- end -}}
