@@ -19,6 +19,7 @@
 const precache = JSON.parse('{{ $precache | jsonify }}');
 
 const config = {
+  env: '{{ hugo.Environment }}',
   baseURL: '{{ $.Site.BaseURL }}',
   homepage: '{{ $homepage }}',
   langs: JSON.parse('{{ $langs | jsonify }}'),
