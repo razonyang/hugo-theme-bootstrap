@@ -32,9 +32,6 @@ authors = ["RazonYang"]
 
 ## 構建工具
 
-- [Git](https://git-scm.com/downloads)。
-- [Hugo](https://gohugo.io/getting-started/installing/)：**extended** `0.97.0` 版本或以上。
-- [npm](https://nodejs.org/en/download/)：用於安裝 CSS 和 JS  依賴。
-- [Go](https://go.dev/dl/): `1.12` 版本或以上，僅當安裝為 [Hugo Module]({{< ref "/docs/getting-started/installation/hugo-module" >}}) 時必須。
+{{% code/prerequisites-build-tools %}}
 
 > 我們建議使用這些工具的最新版本。
