@@ -24,21 +24,14 @@ As the example site shown, we use [Configuration Directory](https://gohugo.io/ge
 
 <!--more-->
 
-```bash
-$ tree exampleSite/config
-exampleSite/config
-├── _default
-│   ├── author.toml
-│   ├── config.toml
-│   ├── config.zh-cn.toml
-│   ├── config.zh-tw.toml
-│   ├── languages.toml
-│   ├── markup.toml
-│   ├── menu.toml
-│   ├── params.toml
-│   ├── server.toml
-│   └── social.toml
-└── production
-    ├── config.toml
-    └── params.toml
-```
+{{% code/configuration-structure %}}
+
+> Hugo supports multiple configuration formats: `TOML`, `YAML` and `JSON`, change it at will.
+
+- `_default` contains the default configurations.
+- `production` configurations will override the default configurations on production environment.
+- You can also define more environment configurations, such as `development`(the default environment of `hugo server`), `testing`, `staging`. And then specify the environment via `-e` flag.
+- The configurations filename with language code affected take effect only on that language site, such as `config.zh-hans.toml`, it's useful to separate configurations and parameters from different languages.
+
+> The multilingual configurations doesn't work on `author` configurations, that is, `author.zh-hans.toml` will not take effect.
+> The `config`, `params`, `menu` and `menus` are known that supported multilingual configuring.

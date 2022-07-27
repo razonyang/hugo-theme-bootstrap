@@ -24,21 +24,14 @@ authors = ["RazonYang"]
 
 <!--more-->
 
-```bash
-$ tree exampleSite/config
-exampleSite/config
-├── _default
-│   ├── author.toml
-│   ├── config.toml
-│   ├── config.zh-cn.toml
-│   ├── config.zh-tw.toml
-│   ├── languages.toml
-│   ├── markup.toml
-│   ├── menu.toml
-│   ├── params.toml
-│   ├── server.toml
-│   └── social.toml
-└── production
-    ├── config.toml
-    └── params.toml
-```
+{{% code/configuration-structure %}}
+
+> Hugo 支持多种配置格式：`TOML`、`YAML` 和 `JSON`，可以随意更改。
+
+- `_default` 包含默认配置。
+- `production` 配置将覆盖生产环境中的默认配置。
+- 你也可以定义更多的环境配置，如 `development`（`hugo server` 的默认环境）、`testing`、`staging`。然后通过 `-e` 标志指定环境。
+- 带有语言代码的配置文件名只在该语言站点上生效，如 `config.zh-hans.toml`，这对分离不同语言的配置和参数很有用。
+
+> 多语言配置不适用于 `author` 配置，即 `author.zh-hans.toml` 不会生效。
+> 已知 `config`、`params`、`menu` 和 `menus` 支持多語言配置。
