@@ -33,6 +33,12 @@ The `mainSections` parameter is used to filter pages, default to `["posts", "doc
 mainSections = ["blog", "posts", "docs", "notes"]
 ```
 
+## Front Matter
+
+Front Matter is the place where we put page metadata and parameters, such as title, date and so on.
+
+See also [Page Parameters]({{< ref "docs/configuration/page-params" >}}) and [Hugo Front Matter](https://gohugo.io/content-management/front-matter).
+
 ## Content Types
 
 You may want to use `docs` layout in other sections instead of `/docs`, such as `/notes`.
@@ -81,7 +87,7 @@ $ hugo new posts/new-post/index.zh-cn.md
 > Please remind that, the created posts are generally in draft state. You'll need to specify the `-D` parameter of the command `hugo server` for previewing.
 > Similarly, you need to change the `draft` to `false` or remove `draft` parameter if you want to publish the article.
 
-## Summary Selection Order
+## Summaries Selection Order
 
 1. If `post.excerpt = "description"` and `description` is not empty, then it'll be used.
 1. Manual splitting via <code>&lt;!--more--&gt;</code>.
@@ -96,10 +102,22 @@ $ hugo new posts/new-post/index.zh-cn.md
   # plainifyExcerpt = false # Format excerpt in HTML if false.
 ```
 
+## Featured Images Selection Order
+
+1. The `images` on front matter are preferred.
+1. Page images resources that match the `*feature*` pattern. Such as `posts/my-page/feature.png`, `posts/my-page/featured-sample.jpg`.
+
+The featured image doesn't show up above content by default, you'll need to turn on this feature by following parameter.
+
+{{< code-toggle filename="config/_default/params" >}}
+[post]
+  featuredImage = true
+{{< /code-toggle >}}
+
 ## Thumbnail Selection Order
 
 1. The `images` on front matter are preferred.
-1. Page images resources that match the filename's patterns: `*feature*`, `*cover*` and `*thumbnail*`. Such as `posts/my-page/feature.png`.
+1. Page images resources that match the filename's patterns: `*feature*`, `*cover*` and `*thumbnail*`. Such as `posts/my-page/feature.png`, `posts/my-page/thumnail.jpg`.
 
 > The page images resources will be resized to several smaller versions to suit the users devices for saving the bandwidth.
 

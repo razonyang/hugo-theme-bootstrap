@@ -25,13 +25,19 @@ authors = ["RazonYang"]
   weight = 5
 +++
 
-## Main Sections
+## 主要 Sections
 
 `mainSections` 参数用于过滤页面，默认为 `["posts", "docs"]`。
 
 ```toml {title="config/_default/params.toml"}
 mainSections = ["blog", "posts", "docs", "notes"]
 ```
+
+## Front Matter
+
+Front Matter is the place where we put page metadata and parameters, such as title, date and so on.
+
+See also [Page Parameters]({{< ref "docs/configuration/page-params" >}}) and [Hugo Front Matter](https://gohugo.io/content-management/front-matter).
 
 ## 内容类型
 
@@ -79,7 +85,7 @@ $ hugo new posts/new-post/index.zh-cn.md
 
 > 请注意：创建的文章一般处于草稿状态，本地预览时，`hugo server` 需要指定 `-D` 参数才能预览草稿文章。文章发布时，需要将 `draft` 改为 `false`，或者直接移除 `draft` 参数。
 
-## Summary Selection Order
+## 摘要选择顺序
 
 1. If `post.excerpt = "description"` and `description` is not empty, then it'll be used.
 1. Manual splitting via <code>&lt;!--more--&gt;</code>.
@@ -94,10 +100,22 @@ $ hugo new posts/new-post/index.zh-cn.md
   # plainifyExcerpt = false # Format excerpt in HTML if false.
 ```
 
-## Thumbnail Selection Order
+## 特色图片选择顺序
 
 1. The `images` on front matter are preferred.
-1. Page images resources that match the filename's patterns: `*feature*`, `*cover*` and `*thumbnail*`. Such as `posts/my-page/feature.png`.
+1. Page images resources that match the `*feature*` pattern. Such as `posts/my-page/feature.png`, `posts/my-page/featured-sample.jpg`.
+
+The featured image doesn't show up above content by default, you'll need to turn on this feature by following parameter.
+
+{{< code-toggle filename="config/_default/params" >}}
+[post]
+  featuredImage = true
+{{< /code-toggle >}}
+
+## 缩略图选择顺序
+
+1. The `images` on front matter are preferred.
+1. Page images resources that match the filename's patterns: `*feature*`, `*cover*` and `*thumbnail*`. Such as `posts/my-page/feature.png`, `posts/my-page/thumnail.jpg`.
 
 > The page images resources will be resized to several smaller versions to suit the users devices for saving the bandwidth.
 
