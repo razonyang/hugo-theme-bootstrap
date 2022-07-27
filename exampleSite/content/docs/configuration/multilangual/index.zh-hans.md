@@ -41,6 +41,6 @@ HBS 支持多种语言，如英语、简体中文、繁体中文、法语和俄�
 
 > 请注意，不支持 `zh-cn`、`zh-tw` 和 `zh-hk`，因为语言代码无法与 [Hugo Locales](https://github.com/gohugoio/locales) 中定义的locales匹配。
 
-## 进一步阅读
+## 延伸阅读
 
 - [Translate Your Content](https://gohugo.io/content-management/multilingual/#translate-your-content)
