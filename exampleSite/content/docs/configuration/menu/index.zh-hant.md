@@ -21,7 +21,7 @@ aliases = [
   "/zh-tw/posts/menu",
   "/zh-hant/docs/menu"
 ]
-navWeight = 970
+navWeight = 900
 authors = ["RazonYang"]
 +++
 
