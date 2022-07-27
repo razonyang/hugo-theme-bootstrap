@@ -175,5 +175,5 @@ The author image should be placed at the same folder with pattern `avatar*`, suc
 ## 下一步
 
 - [调整配置]({{< ref "/docs/configuration" >}})
-- [菜单]({{< ref "/docs/menu" >}})
+- [菜单]({{< ref "/docs/configuration/menu" >}})
 - [观感]({{< ref "/docs/look-and-feel" >}})

@@ -175,5 +175,5 @@ The author image should be placed at the same folder with pattern `avatar*`, suc
 ## Up Next
 
 - [Tweak Configuration]({{< ref "/docs/configuration" >}})
-- [Menu]({{< ref "/docs/menu" >}})
+- [Menu]({{< ref "/docs/configuration/menu" >}})
 - [Look and Feel]({{< ref "/docs/look-and-feel" >}})

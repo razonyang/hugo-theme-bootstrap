@@ -1,6 +1,5 @@
 +++
 title = "Menu"
-linkTitleIcon = '<i class="fas fa-bars fa-fw"></i>'
 date = 2021-12-16T17:25:20+08:00
 featured = false
 comment = true
@@ -19,7 +18,8 @@ series = [
 ]
 images = []
 aliases = [
-  "/en/posts/menu"
+  "/en/posts/menu",
+  "/en/docs/menu"
 ]
 navWeight = 970
 authors = ["RazonYang"]
