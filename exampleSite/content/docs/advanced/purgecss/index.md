@@ -43,7 +43,7 @@ Finally PurgeCSS relies on this file to purge unused CSS.
 
 **The `hugo_stats.json` only works in `*.html` templates**, that is, any CSS classes, tags and ids used on JavaScript files will still be purged.
 
-But don worry, there are two ways to solve this problem.
+But don't worry, there are two ways to solve this problem.
 
 ### Extra Stats
 
