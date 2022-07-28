@@ -85,6 +85,7 @@ The site parameters are located in `config/_default/params.toml` by default.
 | `topAppBar` | Object | - |
 | `topAppBar.social` | Object | - | [Social Links]({{< ref "/docs/widgets/social-links" >}}).
 | `topAppBar.colorToggle` | Boolean | `true` | Turn on/off the color/mode toggle.
+| `topAppBar.coloredInDark` | Boolean | `false` | Colored in dark mode.
 | **Webmaster Site Verification** 
 | `siteVerification` | Object | - |
 | `siteVerification.google` | String | - | Google
