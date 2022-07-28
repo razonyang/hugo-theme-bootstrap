@@ -1,0 +1,3 @@
+{{- $icons := dict "info" "info-circle" "success" "check-circle" "warning" "exclamation-triangle" "danger" "skull-crossbones"}}
+{{- $icon := default "info-circle" (index $icons .) -}}
+<i class="alert-icon fas fa-fw fa-{{ $icon }} me-1"></i>

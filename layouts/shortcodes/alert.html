@@ -1,7 +1,7 @@
-{{- $msg := .Get 0 -}}
-{{- $type := default "info" (.Get 1) -}}
-{{- $icons := dict "info" "info-circle" "success" "check-circle" "warning" "exclamation-triangle" "danger" "skull-crossbones"}}
-{{- $icon := default "info-circle" (index $icons $type) -}}
+{{- $type := default "info" (.Get 0) -}}
 <div class="alert alert-{{ $type }}" role="alert">
-  <i class="fas fa-fw fa-{{ $icon }}"></i>{{ $msg }}
+  {{- if not (findRE "<i.*class=\"alert-icon.*\".*></i>" .Inner) }}
+    {{- partial "utilities/alert-icon" $type }}
+  {{- end }}
+  {{ .Inner }}
 </div>
