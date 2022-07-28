@@ -1,6 +1,6 @@
 .archive {
   &::before {
-    background: var(--#{$prefix}primary);
+    background: var(--#{$prefix}secondary);
     height: 0.5rem;
     width: 0.5rem;
     border-radius: 50%;
@@ -17,8 +17,9 @@
     display: flex;
     line-height: 100%;
     height: 100%;
-    color: var(--#{$prefix}primary);
+    color: var(--#{$prefix}secondary);
     font-weight: bold;
+    text-transform: uppercase;
   }
 
   .archive-meta {
