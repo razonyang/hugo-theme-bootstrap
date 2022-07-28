@@ -51,4 +51,10 @@ Track and review changes to the theme source files and documentation to help you
 
 ### Docs
 
-- BREAKING CHANGE: use the `navWeight` instead of `weight` for sorting pages on docs nav.
+- {{< badge-breaking-change >}} use the `navWeight` instead of `weight` for sorting pages on docs nav.
+
+### Shortcodes
+
+#### Alert Shortcode
+
+- {{< badge-breaking-change >}} change `alert` syntax, see also [Alert Shortcode Syntax]({{< ref "docs/shortcodes/alert#syntax" >}}).
