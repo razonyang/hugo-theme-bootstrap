@@ -97,6 +97,7 @@ disqusShortname = "yourdiscussshortname"
 | `giscus.reactions` | Boolean | `true` | Turn on/off the reactions.
 | `giscus.metadata` | Boolean | `false` | Emit discussion metadata.
 | `giscus.lang` | String | - | Specify language, default to site language.
+| `giscus.lazyLoading` | Boolean | `true` | Enable lazy loading.
 
 ## 自定義評論小部件
 

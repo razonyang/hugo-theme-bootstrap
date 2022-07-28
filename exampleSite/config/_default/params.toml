@@ -144,6 +144,7 @@ viewer = true # Image Viewer
   # reactions = false # Disable reactions.
   # metadata = true # Emit discussion metadata.
   # lang = "en" # Specify language, default to site language.
+  # lazyLoading = false # Default to true.
 
 [search]
   paginate = 5 # Pagination. Default to 10.

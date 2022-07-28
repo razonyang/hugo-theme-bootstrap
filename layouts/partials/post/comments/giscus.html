@@ -18,7 +18,7 @@
     data-input-position="{{ default "top" .inputPosition }}"
     data-theme="{{ default "preferred_color_scheme" .theme }}"
     data-lang="{{ $lang }}"
-    data-loading="lazy"
+    {{ with default true .lazyLoading }}data-loading="lazy"{{ end }}
     crossorigin="anonymous"
     async>
 </script>
