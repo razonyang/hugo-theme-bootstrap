@@ -59,6 +59,8 @@ github = "githubusername"
 
 ## Platforms
 
+> The value can be changed to a full URL if necessary.
+
 | Platform | User Identifier |
 |---|---|
 | `email` | Email Address |
