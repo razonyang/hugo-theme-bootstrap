@@ -1,22 +1,18 @@
 <div class="post-meta mb-3">
   {{- if default .Site.Params.postDate .Params.postDate }}
   {{- $dateParams := dict "createdOn" .Date.Local }}
-  {{ if gt .Lastmod .Date }}
+  {{- if gt .Lastmod .Date }}
     {{- $dateParams = merge $dateParams (dict "updatedOn" .Lastmod.Local) }}
-  {{ end }}
-  <span class="post-date me-1 mb-1" title="{{ i18n "post_date" $dateParams }}">
-    {{ .Date | time.Format $.Site.Params.dateFormat }}
-  </span>
   {{- end }}
-  {{- if default .Site.Params.readingTime .Params.readingTime }}
-  <span class="post-reading-time me-1 mb-1">
-    {{ i18n "reading_time" . }}
-  </span>
+  <span class="post-date me-1 mb-1" title="{{ i18n "post_date" $dateParams }}">{{- .Date | time.Format $.Site.Params.dateFormat }}</span>
+  {{- end }}
+  {{- if default .Site.Params.readingTime .Params.readingTime -}}
+  <span class="post-reading-time me-1 mb-1">{{- i18n "reading_time" . }}</span>
   {{- end }}
   {{- range $key, $value := .Site.Taxonomies }}
     {{- $taxonomies := ($.GetTerms $key).ByTitle }}
     {{- if eq $.Site.Params.taxonomySortingMethod "popularity" }}{{ $taxonomies = (sort $taxonomies ".Data.Pages" "desc") }}{{ end }}
-    {{- range $taxonomies }}
+    {{- range $taxonomies -}}
     <a href="{{ .Permalink }}" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-{{ $key | singularize }}">
       {{- if eq $key "series" }}
       <i class="fas fa-fw fa-columns"></i>
@@ -25,7 +21,7 @@
       {{- else if eq $key "authors" }}
       <i class="fas fa-fw fa-user"></i>
       {{- end }}
-      {{ .Name | title }}
+      {{- .Name | title -}}
     </a>
     {{- end }}
   {{- end }}
