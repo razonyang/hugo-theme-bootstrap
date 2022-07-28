@@ -58,7 +58,10 @@
       </a>
   {{- else }}
     {{- with index $items $key }}
-      <a class="nav-link social-link{{ with $linkClass }} {{ . }}{{ end }}" target="_blank" href="{{ printf .url $user }}" title="{{ default (title $key) .title }}" rel="noopener noreferrer">
+      {{- $link := printf .url $user }}
+      {{- $url := urls.Parse $user }}
+      {{- if $url.Scheme }}{{ $link = $url.String }}{{ end }}
+      <a class="nav-link social-link{{ with $linkClass }} {{ . }}{{ end }}" target="_blank" href="{{ $link }}" title="{{ default (title $key) .title }}" rel="noopener noreferrer">
         <i class="fa-fw{{ with $size }} {{ . }}{{ end }} {{ default ( printf "fab fa-%s" $key ) .icon }}"></i>
         {{- if $iconText }}
         <span{{ with $iconTextClass }} class="{{ . }}"{{ end }}>{{ default (title $key) .title }}</span>
