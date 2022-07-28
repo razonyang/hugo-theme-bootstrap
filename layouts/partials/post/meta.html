@@ -15,11 +15,11 @@
     {{- range $taxonomies -}}
     <a href="{{ .Permalink }}" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-{{ $key | singularize }}">
       {{- if eq $key "series" }}
-      <i class="fas fa-fw fa-columns"></i>
+      <i class="fas fa-fw fa-columns me-1"></i>
       {{- else if eq $key "categories" }}
-      <i class="fas fa-fw fa-folder"></i>
+      <i class="fas fa-fw fa-folder me-1"></i>
       {{- else if eq $key "authors" }}
-      <i class="fas fa-fw fa-user"></i>
+      <i class="fas fa-fw fa-user me-1"></i>
       {{- end }}
       {{- .Name | title -}}
     </a>
