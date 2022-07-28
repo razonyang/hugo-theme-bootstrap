@@ -54,16 +54,18 @@
   }
 }
 
-@include theme(dark) {
-  .top-app-bar {
-    background-color: var(--#{$prefix}surface-bg);
-    color: var(--#{$prefix}surface-color-secondary);
+@if not $colored-top-app-bar-in-dark {
+  @include theme(dark) {
+    .top-app-bar {
+      background-color: var(--#{$prefix}surface-bg);
+      color: var(--#{$prefix}surface-color-secondary);
 
-    --#{$prefix}form-control-bg: var(--#{$prefix}surface-bg);
+      --#{$prefix}form-control-bg: var(--#{$prefix}surface-bg);
 
-    .offcanvas-lg {
-      --#{$prefix}offcanvas-bg: var(--#{$prefix}surface-bg);
-      --#{$prefix}offcanvas-color: var(#{$prefix}surface-color-secondary);
+      .offcanvas-lg {
+        --#{$prefix}offcanvas-bg: var(--#{$prefix}surface-bg);
+        --#{$prefix}offcanvas-color: var(#{$prefix}surface-color-secondary);
+      }
     }
   }
 }

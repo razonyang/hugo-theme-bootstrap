@@ -87,6 +87,7 @@ authors = ["RazonYang"]
 | `topAppBar` | Object | - |
 | `topAppBar.social` | Object | - | [社交链接]({{< ref "/docs/widgets/social-links" >}})。
 | `topAppBar.colorToggle` | Boolean | `true` | 开启或禁用颜色/模式开关。
+| `topAppBar.coloredInDark` | Boolean | `false` | 在深色模式下着色。
 | **Webmaster Site Verification** 
 | `siteVerification` | Object | - |
 | `siteVerification.google` | String | - | Google
