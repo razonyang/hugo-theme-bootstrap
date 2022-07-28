@@ -86,7 +86,7 @@
     counter-reset: h2Counter;
 
     @for $heading from 2 through $numberifyHeadingsEndLevel {
-      h#{$heading} {
+      h#{$heading}[data-numberify] {
         @if $heading < $numberifyHeadingsEndLevel {
           counter-reset: h#{$heading + 1}Counter; /* stylelint-disable-line */
         }
