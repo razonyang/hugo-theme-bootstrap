@@ -1,0 +1,5 @@
+{{- $type := default "info" (.Parent.Get 0) -}}
+<h4 class="alert-heading">
+  {{- partial "utilities/alert-icon" $type -}}
+  {{- .Inner -}}
+</h4>

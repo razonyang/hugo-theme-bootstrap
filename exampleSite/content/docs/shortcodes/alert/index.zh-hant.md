@@ -11,7 +11,7 @@ tags = [
   "Alert"
 ]
 series = [
-  "Docs"
+  "文檔"
 ]
 images = [
 ]
@@ -21,11 +21,11 @@ aliases = [
 authors = ["RazonYang"]
 +++
 
-This article shows how to use the `alert` shortcode.
+本文將介紹如何使用 `alert` shortcode。
 
 <!--more-->
 
-## Syntax
+## 語法
 
 ### Inline
 
@@ -43,7 +43,7 @@ BLOCK ALERT
 
 > The parameter `type` is optional. Default to `info`, availiable values: `info`, `success`, `warning` and `danger`.
 
-### With Heading
+### 帶有標題
 
 ```markdown
 {{</* alert [type] */>}}
@@ -52,7 +52,7 @@ ALERT MESSAGE
 {{</* /alert */>}}
 ```
 
-## Examples
+## 例子
 
 {{< alert >}}Info{{< /alert >}}
 
