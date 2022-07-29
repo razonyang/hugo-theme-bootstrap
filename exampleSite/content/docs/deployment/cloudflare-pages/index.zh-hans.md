@@ -43,4 +43,4 @@ npm i && hugo --gc --minify --enableGitInfo -b https://hbs-skeleton.pages.dev
 
 ## 404 页面
 
-Cloudflare 足够智能地使用最匹配的 404 页面，即便是多语言站点，也能正常工作，而无需额外的工作。
+Cloudflare 足够智能地使用最匹配的 404 页面，即便是多语言站点，也能正常工作，而无需额外的配置。

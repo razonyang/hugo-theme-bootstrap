@@ -43,4 +43,4 @@ npm i && hugo --gc --minify --enableGitInfo -b https://hbs-skeleton.pages.dev
 
 ## 404 Page
 
-Cloudflare is smart enough to use the best matching 404 pages, even for multilingual sites, and works without additional work.
+Cloudflare is smart enough to use the best matching 404 pages, even for multilingual sites, and works without additional configurations.

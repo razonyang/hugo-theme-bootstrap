@@ -56,7 +56,7 @@ Create a `deploy/nginx/default.conf` in the site root:
 - `mysite`: the image name.
 - `HUGO_BASEURL`：the `baseURL`.
 
-For users located in China mainland, you need to specify `HUGO_MODULE_PROXY` and `NPM_CONFIG_REGISTRY` to build the mirror successfully and quickly:
+For users located in China mainland, you need to specify `HUGO_MODULE_PROXY` and `NPM_CONFIG_REGISTRY` to build the image successfully and quickly:
 
 ```bash
 {{% code/deployment-docker-build-china %}}
@@ -64,7 +64,7 @@ For users located in China mainland, you need to specify `HUGO_MODULE_PROXY` and
 
 ## Deployment
 
-There are many ways to deploy Docker, such as `docker run`, `k8s`, etc. This article will only explain `docker run`.
+There are many ways to deploy Docker image, such as `docker run`, `k8s`, etc. This article will only explain `docker run`.
 
 ### Run
 
