@@ -1,0 +1,116 @@
+[about_me]
+other = "Про мене"
+
+[alipay]
+other = "Alipay"
+
+[archives]
+other = "Архів"
+
+[buy_me_a_coffee]
+other = "Донат на каву"
+
+[categories]
+other = "Категорії"
+
+[color_blue]
+other = "Синій"
+
+[color_blue_gray]
+other = "Сіро-синій"
+
+[color_brown]
+other = "Коричневий"
+
+[color_cyan]
+other = "Блакитний"
+
+[color_green]
+other = "Зелений"
+
+[color_indigo]
+other = "Індіго"
+
+[color_orange]
+other = "Оранжевий"
+
+[color_pink]
+other = "Рожевий"
+
+[color_purple]
+other = "Фіолетовий"
+
+[color_red]
+other = "Червоний"
+
+[color_teal]
+other = "Бірюзовий"
+
+[color_yellow]
+other = "Жовтий"
+
+[copyright]
+other = "Авторское право"
+
+[featured_posts]
+other = "Головні статті"
+
+[font_size]
+other = "Розмір шрифта"
+
+[home]
+other = "Головна"
+
+[language]
+other = "Мова"
+
+[load_more]
+other = "Завантажити більше"
+
+[mode]
+other = "Режим"
+
+[pagination_title]
+other = "{{ .PageNumber }} - сторінка"
+
+[palette]
+other = "Palitra"
+
+[read_more]
+other = "Read More"
+
+[reading_time]
+other = "Читається за {{ .ReadingTime }} хв."
+
+[recent_posts]
+other = "Останні оновлення"
+
+[related_posts]
+other = "Похожие публикации"
+
+[search]
+other = "Пошук"
+
+[search_missing_keywords]
+other = "Задайте ключові слова"
+
+[search_no_results]
+other = "Результатів нема"
+
+[search_stat]
+other = "Всього {{ .Total }} результатів"
+
+[series]
+other = "Серії"
+
+[settings]
+other = "Налашування"
+
+[table_of_contents]
+other = "Зміст"
+
+[tags]
+other = "Теги"
+
+[wechat]
+other = "WeChat"
