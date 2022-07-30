@@ -26,7 +26,7 @@
   {{- $linkTitle = "CC CC0 1.0 " }}
   {{- $icons = slice "" "-zero" -}}
 {{- end -}}
-{{- $langs := dict "zh-cn" "zh" "zh-tw" "zh_TW" "zh-hk" "zh_TW" -}}
+{{- $langs := dict "zh-cn" "zh" "zh-hans" "zh" "zh-hant" "zh_TW" "zh-tw" "zh_TW" "zh-hk" "zh_TW" -}}
 {{- $iconsHTML := "" -}}
 {{- range $icons -}}
   {{- $iconsHTML = printf `%s<i class="fab fa-fw fa-2x fa-creative-commons%s"></i>` $iconsHTML .  -}}
