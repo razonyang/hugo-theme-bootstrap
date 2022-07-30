@@ -7,7 +7,7 @@
     {{- partial "post/meta" . -}}
     {{- partial "post/featured-image" . -}}
     {{- partial "hooks/content-begin" . -}}
-    <div class="post-content mb-3">
+    <div class="post-content mb-3" data-bs-spy="scroll" data-bs-target="#TableOfContents" tabindex="0">
     {{- .Content -}}
     </div>
     {{- partial "post/reward" . -}}

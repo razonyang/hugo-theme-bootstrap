@@ -21,4 +21,10 @@
   li {
     margin-bottom: 0.25rem;
   }
+
+  a {
+    &.active {
+      color: var(--#{$prefix}primary);
+    }
+  }
 }
