@@ -1,4 +1,4 @@
-{{- $fullWidth := .Site.Params.fullWidth -}}
+{{- $fullWidth := .Page.Site.Params.fullWidth -}}
 {{- $section := strings.TrimPrefix (relLangURL "/") .Page.FirstSection.RelPermalink | strings.TrimSuffix "/" -}}
 {{- with .Page.Site.Params.fullWidthInSections -}}
     {{- if isset . $section -}}
