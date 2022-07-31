@@ -19,6 +19,9 @@ other = "الكل"
 [archives]
 other = "الأرشيف"
 
+[authors]	
+other = "الكُتَّاب"
+
 [button_copy_url]
 other = "نسخ الرابط"
 
@@ -164,6 +167,12 @@ other = "{{ .Count }} منشورات"
 [post_date]
 other = "أنشئت في {{ .createdOn }}{{ with .updatedOn }}, وحٌدثت في {{ . }}{{ end }}."
 
+[posts]
+other = "التدوينات"
+
+[profile]
+other = "الملف الشخصي"
+
 [read_more]
 other = "اقرأ المزيد"
 
@@ -211,6 +220,9 @@ other = "الفِهْرِس"
 
 [tags]
 other = "التسميات"
+
+[taxonomies]
+other = "التصنيفات"
 
 [tipeee]
 other = "تيبي"
