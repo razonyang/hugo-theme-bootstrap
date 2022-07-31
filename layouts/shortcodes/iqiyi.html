@@ -4,7 +4,7 @@
 {{- $appID := "1368" -}}
 {{- $appKey := "8c634248790d4343bcae1f66129c1010" -}}
 {{- $srcFormat := "https://open.iqiyi.com/developer/player_js/coopPlayerIndex.html?vid=%s&tvId=%s&accessToken=%s&appId=%s&appKey=%s" -}}
-<div class="ratio ratio-16x9 iqiyi">
+<div class="ratio ratio-16x9 iqiyi mb-4">
   <iframe
     class="iqiyi-iframe"
     src="{{ printf $srcFormat $vID $tvID $accessToken $appID $appKey }}"
