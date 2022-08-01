@@ -7,7 +7,7 @@
     <ul class="nav nav-pills justify-content-between">
       {{- range . -}}
         {{- if gt .Pages.Len 0 -}}
-        <li class="nav-item post-section mb-2">
+        <li class="nav-item post-section my-2 mx-1">
           <a class="btn btn-sm btn-secondary" href="{{ .Permalink }}">{{- .Title -}}</a>
         </li>
         {{- end -}}
