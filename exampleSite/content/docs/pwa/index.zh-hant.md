@@ -70,6 +70,8 @@ PWAs([漸進式 web 應用程序](https://developer.mozilla.org/en-US/docs/Web/P
 
 ## 離線
 
+### 離線頁面
+
 如果在沒有網絡的情况下請求新頁面，將顯示離線頁面。
 
 我們需要在 `content` 目錄中創建一個名為 `offline/_index.md` 的離線頁面，其首要內容如下。
@@ -79,6 +81,11 @@ PWAs([漸進式 web 應用程序](https://developer.mozilla.org/en-US/docs/Web/P
 title = 'Offline'
 +++
 ```
+
+### 離線圖片
+
+與離線頁面壹樣，有壹個脫機圖片用於在沒有網絡的情況下請求圖片。HBS 提供了壹個內置的離線圖片，文件名是 `assets/images/offline.png`。
+妳可以通過在妳的網站根目錄下創建妳自己的具有相同文件名的離線圖片來覆蓋它。
 
 ## 預載
 

@@ -71,6 +71,8 @@ The `manifest.json` will be generated automatically.
 
 ## Offline
 
+### Offline Page
+
 The offline page will be shown in the case of requesting a new page without network.
 
 We need to create an offline page called `offline/_index.md` in the `content` directory with the following front matter.
@@ -80,6 +82,11 @@ We need to create an offline page called `offline/_index.md` in the `content` di
 title = 'Offline'
 +++
 ```
+
+### Offline Image
+
+Same as offline page, there is an offline image for requesting images without network. HBS provides a built-in offline image with the filename `assets/images/offline.png`.
+You can override it by creating your own offline image with the same filename under your site root.
 
 ## Precache
 
