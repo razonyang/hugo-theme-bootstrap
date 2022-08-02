@@ -15,6 +15,9 @@
   {{- end }}
 {{- end }}
 
+{{- $fallbackImage := "images/offline.png" }}
+{{- $fallbacks =  $fallbacks | append (resources.Get $fallbackImage).Permalink }}
+
 {{- $precache := default dict .Site.Params.pwa.precache }}
 const precache = JSON.parse('{{ $precache | jsonify }}');
 
@@ -25,6 +28,7 @@ const config = {
   langs: JSON.parse('{{ $langs | jsonify }}'),
   fallbacks: JSON.parse('{{ $fallbacks | jsonify }}'),
   fallbacksCacheName: 'fallbacks',
+  fallbacksImage: '{{ $fallbackImage }}',
   fonts: precache.fonts ? precache.fonts : [],
   fontsCacheName: 'fonts',
   images: precache.images ? precache.images : [],

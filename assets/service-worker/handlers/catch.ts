@@ -1,16 +1,20 @@
 function catchHandler(config) {
   const baseURL = new URL(config.baseURL);
 
-  return async (request) => {
+  return async (options) => {
     const cache = await self.caches.open(config.fallbacksCacheName);
-    let offlinePage = '/offline/';
-    const lang = getLanguageFromRequest(request, config);
-    if (lang !== '') {
-      offlinePage = '/' + lang + offlinePage;
+    let fallback = '/offline/';
+    if (options.request.destination === 'image') {
+      fallback = config.fallbacksImage;
+    } else {
+      const lang = getLanguageFromRequest(options.request, config);
+      if (lang !== '') {
+        fallback = '/' + lang + fallback;
+      }
+      fallback = baseURL.pathname.replace(/\/+$/, '') + fallback
     }
     return (
-      (await cache.match(baseURL.pathname.replace(/\/+$/, '') + offlinePage)) ||
-      Response.error()
+      (await cache.match(fallback)) || Response.error()
     );
   };
 }
