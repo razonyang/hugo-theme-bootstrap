@@ -71,6 +71,8 @@ PWAs([渐进式 web 应用程序](https://developer.mozilla.org/en-US/docs/Web/P
 
 ## 离线
 
+### 脱机页面
+
 如果在没有网络的情况下请求新页面，将显示脱机页面。
 
 我们需要在 `content` 目录中创建一个名为 `offline/_index.md` 的脱机页面，其首要内容如下。
@@ -80,6 +82,11 @@ PWAs([渐进式 web 应用程序](https://developer.mozilla.org/en-US/docs/Web/P
 title = 'Offline'
 +++
 ```
+
+### 脱机图片
+
+与脱机页面一样，有一个脱机图片用于在没有网络的情况下请求图片。HBS 提供了一个内置的离线图片，文件名是 `assets/images/offline.png`。
+你可以通过在你的网站根目录下创建你自己的具有相同文件名的离线图片来覆盖它。
 
 ## 预载
 
