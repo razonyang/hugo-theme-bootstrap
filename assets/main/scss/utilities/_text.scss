@@ -1,5 +1,5 @@
 $default-font-sizes: map-get($utilities, 'font-size');
-$values: map-merge(map-get($default-font-sizes, 'values'), $font-sizes);
+$values: map-merge(map-get($default-font-sizes, 'values'), $custom-font-sizes);
 $utilities: map-merge(
   $utilities,
   (
