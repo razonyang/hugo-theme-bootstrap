@@ -32,30 +32,32 @@ authors = ["RazonYang"]
 
 ## 總覽
 
-| 鉤子 | 描述 |
-|---|---|
-| `head-end` | `<head>` 結束之前 |
-| `body-end` | `<body>` 結束之前 |
-| `main-begin` | `<main>` 上方 |
-| `main-end` | `<main>` 下方 |
-| `list-begin` | 文章列表上方 |
-| `list-end` | 文章列表上方 |
-| `sidebar-begin` | 側邊欄上方 |
-| `sidebar-end` | 側邊欄下方 |
-| `content-begin` | 文章內容上方 |
-| `content-end` | 文章內容下方 |
-| `comments-begin` | 評論上方 |
-| `comments-end` | 評論下方 |
-| `footer-begin` | `footer` 上方 |
-| `footer-end` | `footer` 下方 |
-| `post-panel-begin` | 文章工具欄上方 |
-| `post-panel-end` | 文章工具欄下方 |
-| `docs/sidebar-begin` | 文檔側邊欄上方 |
-| `docs/sidebar-end` | 文檔側邊欄上方 |
-| `docs/nav-begin` | 文檔導航上方 |
-| `docs/nav-end` | 文檔導航下方 |
-| `contact/form-field-begin` | 表單字段上方 |
-| `contact/form-field-end` | 表單字段下方 |
+| 鉤子                       | 描述                                |
+| -------------------------- | ----------------------------------- |
+| `head-end`                 | `<head>` 結束之前                   |
+| `body-end`                 | `<body>` 結束之前                   |
+| `main-begin`               | `<main>` 上方                       |
+| `main-end`                 | `<main>` 下方                       |
+| `list-begin`               | 文章列表上方                        |
+| `list-end`                 | 文章列表上方                        |
+| `sidebar-begin`            | 側邊欄上方                          |
+| `sidebar-end`              | 側邊欄下方                          |
+| `content-begin`            | 文章內容上方                        |
+| `content-end`              | 文章內容下方                        |
+| `comments-begin`           | 評論上方                            |
+| `comments-end`             | 評論下方                            |
+| `footer-begin`             | `footer` 上方                       |
+| `footer-end`               | `footer` 下方                       |
+| `post-panel-begin`         | 文章工具欄上方                      |
+| `post-panel-end`           | 文章工具欄下方                      |
+| `docs/sidebar-begin`       | 文檔側邊欄上方                      |
+| `docs/sidebar-end`         | 文檔側邊欄上方                      |
+| `docs/nav-begin`           | 文檔導航上方                        |
+| `docs/nav-end`             | 文檔導航下方                        |
+| `contact/form-field-begin` | 表單字段上方                        |
+| `contact/form-field-end`   | 表單字段下方                        |
+| `search/sidebar-begin`     | At very top of the `search` sidebar |
+| `search/sidebar-end`       | Before the `search` sidebar end     |
 
 ## 用法
 
