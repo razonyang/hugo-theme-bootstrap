@@ -1,7 +1,7 @@
 {{ define "content" }}
 <div class="search container">
   <div class="row">
-    <div class="d-flex">
+    <div class="d-flex col-12 col-lg-8">
       {{- $logo := (default "images/logo.webp" .Site.Params.logo) }}
       {{- if $logo }}
       <div class="flex-shrink-0 d-none d-md-block">
@@ -28,6 +28,9 @@
           <button class="btn btn-block btn-outline-primary d-none" type="button" id="btnLoadMore">{{ i18n "load_more" }}</button>
         </div>
       </div>
+    </div>
+    <div class="col-lg-4 d-none d-lg-block">
+      {{- partial "search/sidebar" . }}
     </div>
   </div>
 </div>

@@ -32,30 +32,32 @@ In this article, we will introduce all hooks and provide some use cases.
 
 ## Overview
 
-| Hook | Description |
-|---|---|
-| `head-end` | Before the `<head>` end |
-| `body-end` | Before the `<body>` end |
-| `main-begin` | Above of the `<main>` |
-| `main-end` | Follow the `<main>` |
-| `list-begin` | Above of the posts list |
-| `list-end` | Follow the posts list |
-| `sidebar-begin` | At very top of the sidebar |
-| `sidebar-end` | Before the sidebar end |
-| `content-begin` | Above of the post content |
-| `content-end` | Follow the post content |
-| `comments-begin` | Above of the comments |
-| `comments-end` | Follow the comments |
-| `footer-begin` | At very top of the footer |
-| `footer-end` | Before the footer end |
-| `post-panel-begin` | At very top of the post panel |
-| `post-panel-end` | Before the post panel end |
-| `docs/sidebar-begin` | At very top of the `docs` sidebar |
-| `docs/sidebar-end` | Before the `docs` sidebar end |
-| `docs/nav-begin` | At very top of the navigation |
-| `docs/nav-end` | Before the navigation end |
+| Hook                       | Description                           |
+| -------------------------- | ------------------------------------- |
+| `head-end`                 | Before the `<head>` end               |
+| `body-end`                 | Before the `<body>` end               |
+| `main-begin`               | Above of the `<main>`                 |
+| `main-end`                 | Follow the `<main>`                   |
+| `list-begin`               | Above of the posts list               |
+| `list-end`                 | Follow the posts list                 |
+| `sidebar-begin`            | At very top of the sidebar            |
+| `sidebar-end`              | Before the sidebar end                |
+| `content-begin`            | Above of the post content             |
+| `content-end`              | Follow the post content               |
+| `comments-begin`           | Above of the comments                 |
+| `comments-end`             | Follow the comments                   |
+| `footer-begin`             | At very top of the footer             |
+| `footer-end`               | Before the footer end                 |
+| `post-panel-begin`         | At very top of the post panel         |
+| `post-panel-end`           | Before the post panel end             |
+| `docs/sidebar-begin`       | At very top of the `docs` sidebar     |
+| `docs/sidebar-end`         | Before the `docs` sidebar end         |
+| `docs/nav-begin`           | At very top of the navigation         |
+| `docs/nav-end`             | Before the navigation end             |
 | `contact/form-field-begin` | At very top of the contact form field |
-| `contact/form-field-end` | Before the contact form field end |
+| `contact/form-field-end`   | Before the contact form field end     |
+| `search/sidebar-begin`     | At very top of the `search` sidebar   |
+| `search/sidebar-end`       | Before the `search` sidebar end       |
 
 ## Usages
 
