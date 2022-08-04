@@ -22,8 +22,10 @@
     width: auto;
     margin-right: 0.5rem;
 
-    &:hover {
-      transform: rotate(-5deg) scale(1.1);
+    @if $logo-animation {
+      &:hover {
+        transform: rotate(-5deg) scale(1.1);
+      }
     }
   }
 

@@ -33,3 +33,7 @@ images = []
 ### Palettes
 
 {{% code/scss-variables-palettes %}}
+
+### Options
+
+{{% code/scss-options %}}
