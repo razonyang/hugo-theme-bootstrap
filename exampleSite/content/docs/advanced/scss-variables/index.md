@@ -33,3 +33,7 @@ You can find the Bootstrap built-in SCSS variables from source code and [officia
 ### Palettes
 
 {{% code/scss-variables-palettes %}}
+
+### Options
+
+{{% code/scss-options %}}
