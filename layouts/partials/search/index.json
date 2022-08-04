@@ -1,6 +1,7 @@
 {{- $.Scratch.Add "index" slice -}}
 {{- range .Site.RegularPages -}}
-    {{- $date := .Date.Format $.Site.Params.dateFormat -}}
+    {{- $page := . }}
+    {{- $date := .Date | time.Format ":date_long" -}}
     {{- $title := .Title }}
     {{- if $.Site.Params.titleCase -}}
         {{- $title = title $title -}}
@@ -22,7 +23,22 @@
         {{- $img = $featured.Permalink -}}
       {{- end -}}
     {{- end -}}
-    {{- $item := (dict "title" $title "authors" .Params.authors "tags" .Params.tags "categories" .Params.categories "series" .Params.series "content" .Plain "permalink" .Permalink "date" $date "img" $img "smallImg" $smallImg "largeImg" $largeImg) -}}
+    {{- $item := (dict 
+      "title" $title 
+      "content" .Plain 
+      "permalink" .Permalink 
+      "date" $date 
+      "img" $img 
+      "smallImg" $smallImg
+      "largeImg" $largeImg
+    ) -}}
+    {{- range $taxonomyName, $value := $.Site.Taxonomies }}
+      {{- $terms := slice }}
+      {{- range $page.GetTerms $taxonomyName }}
+        {{- $terms = $terms | append (dict "title" .Title "url" .Permalink) }}
+      {{- end }}
+      {{- $item = merge $item (dict $taxonomyName $terms) }}
+    {{- end }}
     {{- $.Scratch.Add "index" $item -}}
 {{- end -}}
 {{- $.Scratch.Get "index" | uniq | jsonify -}}

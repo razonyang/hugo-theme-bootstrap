@@ -1,45 +1,43 @@
-<div class="search-result row card component" id="{{id}}">
-    <div class="card-header">
-        <h2 class="card-title search-result-title fs-4 my-2 text-surface">
-        <a "href="{{permalink}}">{{title}}</a>
-        </h2>
-    </div>
+<div class="search-result col-12 border-bottom pb-3 mb-3" id="{{id}}">
     <div class="card-body">
-        <div class="post-meta mb-3">
+        <h2 class="card-title search-result-title fs-4 mt-2 mb-1 text-surface"><a href="{{permalink}}">{{title}}</a></h2>
+        <p class="text-success user-select-all mb-1 text-nowrap overflow-hidden text-truncate">{{permalink}}</p>
+        <div class="post-meta mb-2">
         <span class="post-date">{{date}}</span>
-        {{- $baseURL := absLangURL "" -}}
-        {{- $placeholder := "{{#url}}{{.}}{{/url}}" -}}
-        {{- range slice "authors" "series" "categories" "tags" -}}
-        {{- printf "{{#%s}}" . }}
-        <a {{ printf "href=\"%s%s/%s/\"" $baseURL . $placeholder | safeHTMLAttr }}
-            class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy">
-            {{- if eq . "authors" }}
-            <i class="fas fa-fw fa-user me-1"></i>d
-            {{- else if eq . "series" }}
-            <i class="fas fa-fw fa-columns me-1"></i>
-            {{- else if eq . "categories" }}
-            <i class="fas fa-fw fa-folder me-1"></i>
-            {{- end }}
-            {{- printf "{{.}}" }}
-        </a>
-        {{ printf "{{/%s}}" . }}
-        {{- end -}}
+        {{#authors}}
+            <a href="{{url}}" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy">
+                <i class="fas fa-fw fa-user me-1"></i>{{title}}
+            </a>
+        {{/authors}}
+        {{#categories}}
+            <a href="{{url}}" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy">
+                <i class="fas fa-fw fa-folder me-1"></i>{{title}}
+            </a>
+        {{/categories}}
+        {{#series}}
+            <a href="{{url}}" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy">
+                <i class="fas fa-fw fa-columns me-1"></i>{{title}}
+            </a>
+        {{/series}}
+        {{#tags}}
+            <a href="{{url}}" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy">{{title}}</a>
+        {{/tags}}
         </div>
-        <div class="search-result-content mb-3">
-        {{- print "{{#img}}" -}}
-        {{- print "{{#smallImg}}" -}}
-        <picture>
-            <source {{ print "srcset=\"{{{largeImg}}}\"" | safeHTMLAttr }} media="(max-width: 576px)">
-            <img class="img-fluid" alt="{{ print "{{{title}}}" }}" {{ print "src=\"{{{smallImg}}}\"" | safeHTMLAttr }} {{ print "data-src=\"{{{img}}}\"" | safeHTMLAttr }} loading="lazy"/>
-        </picture>
-        {{- print "{{/smallImg}}" -}}
-        {{- print "{{^smallImg}}" -}}
-        <picture>
-            <img class="img-fluid" alt="{{ print "{{{title}}}" }}" {{ print "src=\"{{{img}}}\"" | safeHTMLAttr }} loading="lazy"/>
-        </picture>
-        {{- print "{{/smallImg}}" -}}
-        {{- print "{{/img}}" -}}
-        {{ print "{{{content}}}" }}
+        <div class="search-result-content mb-2">
+        {{#img}}
+            {{#smallImg}}
+            <picture>
+                <source srcset="{{{largeImg}}}" media="(max-width: 576px)">
+                <img class="img-fluid" alt="{{title}}" src="{{{smallImg}}}" data-src="{{{img}}}" loading="lazy"/>
+            </picture>
+            {{/smallImg}}
+            {{^smallImg}}
+            <picture>
+                <img class="img-fluid" alt="{{title}}"src="{{{img}}}" loading="lazy"/>
+            </picture>
+            {{/smallImg}}
+        {{/img}}
+        {{{content}}}
         </div>
     </div>
 </div>
