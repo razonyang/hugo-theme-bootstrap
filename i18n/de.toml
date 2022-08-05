@@ -133,6 +133,9 @@ other = "mehr"
 [mode]
 other = "Modus"
 
+[noscript_info]
+other = "Dein Browser unterstützt kein JavaScript."
+
 [offline_title]
 other = "Du bist vom Internet getrennt."
 
