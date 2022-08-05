@@ -1,29 +1,24 @@
 {{ define "content" }}
 <div class="search container">
   <div class="row">
-    <div class="d-flex col-12 col-lg-8">
+    <div class="d-flex col-12 col-lg-8 component py-3 pt-4 px-2 rounded">
       {{- $logo := (default "images/logo.webp" .Site.Params.logo) }}
       {{- if $logo }}
       <div class="flex-shrink-0 d-none d-md-block">
-        <img src="{{ $logo | absURL }}" width="80px" height="80px">
+        <img class="position-sticky" src="{{ $logo | absURL }}" width="80px" height="80px" style="top: 84px">
       </div>
       {{- end -}}
-      <div class="{{ if $logo }}flex-grow-1 ms-0 ms-md-3{{ end }} container px-0">
-        <form id="searchForm" class="col-12 search-form mb-3 p-0">
-          <div class="input-group input-group-lg align-items-center">
-            <span class="btn btn-search disabled position-absolute left-0 border-0" type="submit" aria-label="submit">
-              <i class="fas fa-fw fa-search text-primary"></i>
-            </span>
-            <input class="form-control rounded ps-5 border-primary" name="q" type="search" aria-label="Search">
-          </div>
-        </form>
-        <div class="search-stat mb-3 p-0 col-12">
+      <div class="{{ if $logo }}flex-grow-1 ms-0 ms-md-3{{ end }} container">
+        {{- partial "search/form" . }}
+        <div class="text-center my-2">
           <div id="loadingSpinner" class="spinner-border text-primary" role="status">
             <span class="visually-hidden">Loading...</span>
           </div>
+        </div>
+        <div class="search-stat mb-3 col-12">
           <span id="searchStat"></span>
         </div>
-        <div id="searchResults" class="search-results mb-3 p-0 row"></div>
+        <div id="searchResults" class="search-results mb-3 row"></div>
         <div class="text-center mb-3">
           <button class="btn btn-block btn-outline-primary d-none" type="button" id="btnLoadMore">{{ i18n "load_more" }}</button>
         </div>

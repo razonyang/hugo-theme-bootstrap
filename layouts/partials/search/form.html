@@ -1,0 +1,41 @@
+<form id="searchForm" class="col-12 search-form mb-3" novalidate>
+    <div class="input-group input-group-lg align-items-center">
+        <input class="form-control rounded border-primary pe-5" name="q" type="search" aria-label="Search">
+        <button class="btn btn-sm btn-search position-absolute end-0 border-0 border-start border-secondary p-2" type="submit">
+            <i class="fas fa-fw fa-search text-primary"></i>
+        </button>
+    </div>
+    <p class="text-end mt-1">
+        <a class="" data-bs-toggle="collapse" href="#advanced-search" role="button" aria-expanded="false" aria-controls="advanced-search">
+          {{- i18n "search_advanced" -}}
+        </a>
+    </p>
+    <div class="row g-1 collapse" id="advanced-search">
+        <select class="form-select col-12 mb-2" aria-label="Language" name="lang" id="languages-select">
+            <option selected value="">{{ i18n "language" }}</option>
+            {{- range .Site.Languages -}}
+            <option value="{{ .Lang }}">{{ .LanguageName }}</option>
+            {{- end }}
+        </select>
+        <div class="form-floating col-6 col-lg-3">
+            <input type="text" class="form-control form-control-sm" name="author" id="author-input" list="authors-list" placeholder="{{ i18n "authors" }}">
+            <label for="author-input">{{ i18n "authors" }}</label>
+            <datalist id="authors-list"></datalist>
+        </div>
+        <div class="form-floating col-6 col-lg-3">
+            <input type="text" class="form-control form-control-sm" name="category" id="category-input" list="categories-list" placeholder="{{ i18n "categories" }}">
+            <label for="category-input">{{ i18n "categories" }}</label>
+            <datalist id="categories-list"></datalist>
+        </div>
+        <div class="form-floating col-6 col-lg-3">
+            <input type="text" class="form-control form-control-sm" name="series" id="series-input" list="series-list" placeholder="{{ i18n "series" }}">
+            <label for="series-input">{{ i18n "series" }}</label>
+            <datalist id="series-list"></datalist>
+        </div>
+        <div class="form-floating col-6 col-lg-3">
+            <input type="text" class="form-control form-control-sm" name="tag" id="tag-input" list="tags-list" placeholder="{{ i18n "tags" }}">
+            <label for="tag-input">{{ i18n "tags" }}</label>
+            <datalist id="tags-list"></datalist>
+        </div>
+    </div>
+</form>

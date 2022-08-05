@@ -187,6 +187,9 @@ other = "仓库"
 [search]
 other = "搜索"
 
+[search_advanced]
+other = "高级"
+
 [search_missing_keywords]
 other = "请输入搜索关键词"
 

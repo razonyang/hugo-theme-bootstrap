@@ -187,6 +187,9 @@ other = "倉庫"
 [search]
 other = "搜尋"
 
+[search_advanced]
+other = "高級"
+
 [search_missing_keywords]
 other = "請輸入搜尋關鍵詞"
 
