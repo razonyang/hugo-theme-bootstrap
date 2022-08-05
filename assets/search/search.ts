@@ -1,6 +1,7 @@
 import Fuse from 'fuse.js';
 import Mustache from 'mustache';
 import Mark from 'mark.js/dist/mark.js';
+import Languages from './languages';
 
 declare global {
   interface Window {
@@ -75,11 +76,25 @@ export class Search {
     this.loadMore.addEventListener('click', () => {
       this.poplateResults();
     });
+
+    new Languages(() => {
+      this.search(this.input.value);
+    });
   }
 
   initFuse() {
-    this.fuseOptions = window.fuseOptions;
-    console.debug('Fuse options', this.fuseOptions);
+    this.fuseOptions = Object.assign(window.fuseOptions, {
+      useExtendedSearch: true,
+      keys: [
+        'title',
+        'content',
+        'lang',
+        'authors.title',
+        'categories.title',
+        'series.title',
+        'tags.title',
+      ],
+    });
     const xhr = new XMLHttpRequest();
     xhr.onreadystatechange = () => {
       if (xhr.readyState === 4) {
@@ -87,7 +102,16 @@ export class Search {
           console.error({ error: xhr.statusText });
           return;
         }
-        const pages = xhr.response;
+        const pages = xhr.response.pages;
+        const taxonomies = ['categories', 'authors', 'series', 'tags'];
+        for (let i in taxonomies) {
+          const datalist = document.querySelector('#' + taxonomies[i] + '-list');
+          for (let j in xhr.response[taxonomies[i]]) {
+            const option = document.createElement('option');
+            option.value =  xhr.response[taxonomies[i]][j];
+            datalist.appendChild(option);
+          }
+        }
         this.fuse = new Fuse(pages, this.fuseOptions);
         this.search(this.input.value);
       }
@@ -105,15 +129,15 @@ export class Search {
     }
     this.updateSearchbar(this.input.value);
     document.querySelector('.search-bar input');
-    this.form.addEventListener('submit', (event) => {
-      this.handleSubmit(event);
+    this.form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      this.handleSubmit();
     });
   }
 
-  handleSubmit(event) {
+  handleSubmit() {
     this.search(this.input.value);
     this.updateSearchbar(this.input.value);
-    event.preventDefault();
   }
 
   updateSearchbar(value) {
@@ -153,22 +177,61 @@ export class Search {
       this.hideLoadingSpinner();
       return;
     }
-    this.page = 1;
-    this.setPage(query);
-    const results = this.fuse.search(query);
-    console.debug({ results });
-    this.results = results;
-    this.hideLoadingSpinner();
-    if (this.results.length > this.paginate) {
-      this.showLoadMoreBtn();
-    } else {
-      this.hideLoadMoreBtn();
+    try {
+      this.page = 1;
+      this.setPage(query);
+      const params = this.serializeForm(query);
+      const results = this.fuse.search(params);
+      this.results = results;
+      if (this.results.length > this.paginate) {
+        this.showLoadMoreBtn();
+      } else {
+        this.hideLoadMoreBtn();
+      }
+      if (results.length > 0) {
+        this.poplateResults();
+      } else {
+        this.stat.innerHTML = this.tmplNoResults;
+      }
+    } catch (err) {
+      console.error(err);
+    } finally {
+      this.hideLoadingSpinner();
     }
-    if (results.length > 0) {
-      this.poplateResults();
-    } else {
-      this.stat.innerHTML = this.tmplNoResults;
+  }
+
+  serializeForm(query) {
+    let params = {
+      $and: [
+        {
+          $or: [
+            { title: query },
+            { content: query },
+          ]
+        }
+      ]
     }
+    let author = document.querySelector('#author-input').value;
+    if (author) {
+      params.$and.push({'authors.title': author});
+    }
+    let category = document.querySelector('#category-input').value;
+    if (category) {
+      params.$and.push({'categories.title': category});
+    }
+    let series = document.querySelector('#series-input').value;
+    if (series) {
+      params.$and.push({'series.title': series});
+    }
+    let tag = document.querySelector('#tag-input').value;
+    if (tag) {
+      params.$and.push({'tags.title': tag});
+    }
+    let lang = document.querySelector('select[name="lang"]').value;
+    if (lang) {
+      params.$and.push({'lang': '=' + lang});
+    }
+    return params;
   }
 
   setPage(query) {

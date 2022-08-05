@@ -197,6 +197,9 @@ other = "Repository"
 [search]
 other = "Search"
 
+[search_advanced]
+other = "Advanced"
+
 [search_missing_keywords]
 other = "Please enter search keywords"
 
