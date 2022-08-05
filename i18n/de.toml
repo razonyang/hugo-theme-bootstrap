@@ -100,6 +100,21 @@ other = "im Fokus"
 [font_size]
 other = "Schriftgröße"
 
+[font_size_lg]
+other = "Groß"
+
+[font_size_md]
+other = "Mittel"
+
+[font_size_sm]
+other = "Klein"
+
+[font_size_xl]
+other = "Extra groß"
+
+[font_size_xs]
+other = "Extra klein"
+
 [go_back]
 other = "zurück"
 
