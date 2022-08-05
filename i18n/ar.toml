@@ -197,6 +197,9 @@ other = "المستودع"
 [search]
 other = "البحث"
 
+[search_advanced]
+other = "بحث متقدم"
+
 [search_missing_keywords]
 other = "من فضلك أدخل كلمات البحث"
 
