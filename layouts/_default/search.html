@@ -2,13 +2,7 @@
 <div class="search container">
   <div class="row">
     <div class="d-flex col-12 col-lg-8 component py-3 pt-4 px-2 rounded">
-      {{- $logo := (default "images/logo.webp" .Site.Params.logo) }}
-      {{- if $logo }}
-      <div class="flex-shrink-0 d-none d-md-block">
-        <img class="position-sticky" src="{{ $logo | absURL }}" width="80px" height="80px" style="top: 84px">
-      </div>
-      {{- end -}}
-      <div class="{{ if $logo }}flex-grow-1 ms-0 ms-md-3{{ end }} container">
+      <div class="container">
         {{- partial "search/form" . }}
         <div class="text-center my-2">
           <div id="loadingSpinner" class="spinner-border text-primary" role="status">
