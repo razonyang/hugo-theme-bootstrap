@@ -22,7 +22,7 @@
             {{- range first $postCount .Pages -}}
             <li class="taxonomy-post mb-2">
               <a class="post-title" href="{{ .Permalink }}">{{ .Title }}</a>
-              <span class="float-end post-date">{{ .Date.Format (default "Jan 2" $.Site.Params.archive.dateFormat) }}</span>
+              <span class="float-end post-date">{{ .Date.Format (default "Jan 2" $.Site.Params.dateFormat) }}</span>
             </li>
             {{- end -}}
           </ul>
