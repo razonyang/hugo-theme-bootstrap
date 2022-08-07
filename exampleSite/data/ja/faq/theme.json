@@ -1,0 +1,26 @@
+{
+    "title": "テーマ",
+    "weight": 1,
+    "questions": [
+        {
+            "question": "FAQページの設置方法は？",
+            "answer": "こちらもご覧下さい [FAQ Page](/ja/posts/faq)."
+        },
+        {
+            "question": "FAQページはMarkdown構文に対応していますか？",
+            "answer": "もちろん、次のような有効なMarkdown構文を入力することができます。 `code`, *italic*, **bold text** etc.\n#### Table\n| Foo |\n|:---|\n| Bar |\n#### List\n- One\n- Two\n"
+        },
+        {
+            "question": "アイコンを増やすには？",
+            "answer": "こちらもご覧下さい [Look and Feel](/ja/posts/look-and-feel#icons)."
+        },
+        {
+            "question": "言語を削除するには？",
+            "answer": "zh-cn`を例にとって考えてみよう。\n- `config/_default/languages.toml`から言語を削除\n- コマンドによるコンテンツの削除 `find . -type f -name \"*.zh-cn.*\" -delete`."
+        },
+        {
+            "question": "新しい言語を追加するには？",
+            "answer": "- 新しい言語を `config/_default/languages.toml`に追加\n- [Write Articles](/en/docs/content/)."
+        }
+    ]
+}
