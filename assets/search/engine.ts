@@ -17,32 +17,29 @@ class Engine {
         'tags.title',
       ],
     });
-    const xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = () => {
-      if (xhr.readyState === 4) {
-        if (xhr.status !== 200) {
-          console.error({ error: xhr.statusText });
-          return;
+    fetch(window.searchIndex).then((response)=>{
+      return response.json();
+    }).then((response) => {
+      const pages = response.pages;
+      const taxonomies = ['categories', 'authors', 'series', 'tags'];
+      for (const i in taxonomies) {
+        const datalist = document.querySelector(
+          '#' + taxonomies[i] + '-list'
+        );
+        const terms = response[i]
+        for (const j in terms) {
+          const option = document.createElement('option');
+          option.value = terms[j];
+          datalist.appendChild(option);
         }
-        const pages = xhr.response.pages;
-        const taxonomies = ['categories', 'authors', 'series', 'tags'];
-        for (const i in taxonomies) {
-          const datalist = document.querySelector(
-            '#' + taxonomies[i] + '-list'
-          );
-          for (const j in xhr.response[taxonomies[i]]) {
-            const option = document.createElement('option');
-            option.value = xhr.response[taxonomies[i]][j];
-            datalist.appendChild(option);
-          }
-        }
-        this.fuse = new Fuse(pages, options);
-        callback(form.data());
       }
-    };
-    xhr.responseType = 'json';
-    xhr.open('GET', window.searchIndex, true);
-    xhr.send(null);
+      this.fuse = new Fuse(pages, options);
+      callback(form.data());
+    }).catch((err) => {
+      console.error('unable to load search index',err)
+    }).finally(() => {
+
+    })
   }
 
   search(data: FormData) {
