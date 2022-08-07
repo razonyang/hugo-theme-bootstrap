@@ -2,7 +2,7 @@ import Fuse from 'fuse.js';
 import Mustache from 'mustache';
 import Mark from 'mark.js/dist/mark.js';
 import Form from './form';
-import Engine from './fuse';
+import Engine from './engine';
 
 declare global {
   interface Window {
