@@ -1,7 +1,8 @@
 import Fuse from 'fuse.js';
 import Mustache from 'mustache';
 import Mark from 'mark.js/dist/mark.js';
-import Languages from './languages';
+import Form from './form';
+import Engine from './fuse';
 
 declare global {
   interface Window {
@@ -13,9 +14,6 @@ declare global {
 }
 
 export class Search {
-  public fuseOptions;
-
-  private fuse;
 
   public resultsElement: HTMLElement;
 
@@ -36,12 +34,6 @@ export class Search {
 
   public tmplResult: string;
 
-  public input: HTMLInputElement;
-
-  public searchBarInput: HTMLInputElement;
-
-  public title = '';
-
   public paginate = 10;
 
   private page = 1;
@@ -54,10 +46,19 @@ export class Search {
 
   public loadMore: HTMLElement;
 
-  constructor(public form: HTMLFormElement) {}
+  private form: Form;
+  private engine: Engine;
+
+  constructor(form: HTMLFormElement) {
+    this.form = new Form(form, (data: FormData) => {
+      this.search(data);
+    });
+    this.engine = new Engine(this.form, (data: FormData) => {
+      this.search(data);
+    });
+  }
 
   run() {
-    this.title = document.title;
     this.resultsElement = document.getElementById('searchResults');
     this.stat = document.getElementById('searchStat');
     this.loadingSpinner = document.getElementById('loadingSpinner');
@@ -69,85 +70,15 @@ export class Search {
     this.tmplResult = document.getElementById('templateResult').innerHTML;
     this.resultContentWordCount = window.searchResultContentWordCount;
     this.paginate = window.searchPaginate;
-    this.initForm();
     this.initFuse();
 
     this.loadMore = document.getElementById('btnLoadMore');
     this.loadMore.addEventListener('click', () => {
       this.poplateResults();
     });
-
-    new Languages(() => {
-      this.search(this.input.value);
-    });
   }
 
   initFuse() {
-    this.fuseOptions = Object.assign(window.fuseOptions, {
-      useExtendedSearch: true,
-      keys: [
-        'title',
-        'content',
-        'lang',
-        'authors.title',
-        'categories.title',
-        'series.title',
-        'tags.title',
-      ],
-    });
-    const xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = () => {
-      if (xhr.readyState === 4) {
-        if (xhr.status !== 200) {
-          console.error({ error: xhr.statusText });
-          return;
-        }
-        const pages = xhr.response.pages;
-        const taxonomies = ['categories', 'authors', 'series', 'tags'];
-        for (let i in taxonomies) {
-          const datalist = document.querySelector('#' + taxonomies[i] + '-list');
-          for (let j in xhr.response[taxonomies[i]]) {
-            const option = document.createElement('option');
-            option.value =  xhr.response[taxonomies[i]][j];
-            datalist.appendChild(option);
-          }
-        }
-        this.fuse = new Fuse(pages, this.fuseOptions);
-        this.search(this.input.value);
-      }
-    };
-    xhr.responseType = 'json';
-    xhr.open('GET', window.searchIndex, true);
-    xhr.send(null);
-  }
-
-  initForm() {
-    this.input = this.form.querySelector('input[name="q"]');
-    this.searchBarInput = document.querySelector('.search-bar input[name="q"]');
-    if (this.input.value === '') {
-      this.input.value = Search.getKeywordFromURL();
-    }
-    this.updateSearchbar(this.input.value);
-    document.querySelector('.search-bar input');
-    this.form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      this.handleSubmit();
-    });
-  }
-
-  handleSubmit() {
-    this.search(this.input.value);
-    this.updateSearchbar(this.input.value);
-  }
-
-  updateSearchbar(value) {
-    if (this.searchBarInput) {
-      this.searchBarInput.value = value;
-    }
-  }
-
-  static getKeywordFromURL() {
-    return new URLSearchParams(window.location.search).get('q');
   }
 
   hideLoadMoreBtn() {
@@ -168,20 +99,19 @@ export class Search {
     this.loadingSpinner.classList.remove('d-none');
   }
 
-  search(query: string) {
-    this.showLoadingSpinner();
-    this.resultsElement.innerHTML = ''; // Clear previous results.
-    if (query === '') {
-      this.stat.innerHTML = this.tmplMissingKeywords;
-      this.hideLoadMoreBtn();
-      this.hideLoadingSpinner();
-      return;
-    }
+  search(data: FormData) {
     try {
+      this.resultsElement.innerHTML = ''; // Clear previous results.
+      this.showLoadingSpinner();
+      if (!data.has('q')) {
+        this.stat.innerHTML = this.tmplMissingKeywords;
+        this.hideLoadMoreBtn();
+        this.hideLoadingSpinner();
+        return;
+      }
+      this.setPage(data.get('q'));
+      const results = this.engine.search(data);
       this.page = 1;
-      this.setPage(query);
-      const params = this.serializeForm(query);
-      const results = this.fuse.search(params);
       this.results = results;
       if (this.results.length > this.paginate) {
         this.showLoadMoreBtn();
@@ -201,37 +131,6 @@ export class Search {
   }
 
   serializeForm(query) {
-    let params = {
-      $and: [
-        {
-          $or: [
-            { title: query },
-            { content: query },
-          ]
-        }
-      ]
-    }
-    let author = document.querySelector('#author-input').value;
-    if (author) {
-      params.$and.push({'authors.title': author});
-    }
-    let category = document.querySelector('#category-input').value;
-    if (category) {
-      params.$and.push({'categories.title': category});
-    }
-    let series = document.querySelector('#series-input').value;
-    if (series) {
-      params.$and.push({'series.title': series});
-    }
-    let tag = document.querySelector('#tag-input').value;
-    if (tag) {
-      params.$and.push({'tags.title': tag});
-    }
-    let lang = document.querySelector('select[name="lang"]').value;
-    if (lang) {
-      params.$and.push({'lang': '=' + lang});
-    }
-    return params;
   }
 
   setPage(query) {
