@@ -2,7 +2,7 @@
 @import 'bootstrap/scss/utilities/api';
 
 .text-lg-nowrap {
-    @include media-breakpoint-up(lg) {
-        white-space: nowrap!important;
-    }
+  @include media-breakpoint-up(lg) {
+    white-space: nowrap !important;
+  }
 }

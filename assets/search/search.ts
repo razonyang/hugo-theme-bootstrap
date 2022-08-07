@@ -1,4 +1,3 @@
-import Fuse from 'fuse.js';
 import Mustache from 'mustache';
 import Mark from 'mark.js/dist/mark.js';
 import Form from './form';
@@ -14,7 +13,6 @@ declare global {
 }
 
 export class Search {
-
   public resultsElement: HTMLElement;
 
   public stat: HTMLElement;
@@ -46,6 +44,8 @@ export class Search {
 
   public loadMore: HTMLElement;
 
+  private title = '';
+
   private form: Form;
   private engine: Engine;
 
@@ -56,6 +56,7 @@ export class Search {
     this.engine = new Engine(this.form, (data: FormData) => {
       this.search(data);
     });
+    this.title = document.title;
   }
 
   run() {
@@ -70,15 +71,11 @@ export class Search {
     this.tmplResult = document.getElementById('templateResult').innerHTML;
     this.resultContentWordCount = window.searchResultContentWordCount;
     this.paginate = window.searchPaginate;
-    this.initFuse();
 
     this.loadMore = document.getElementById('btnLoadMore');
     this.loadMore.addEventListener('click', () => {
       this.poplateResults();
     });
-  }
-
-  initFuse() {
   }
 
   hideLoadMoreBtn() {
@@ -128,9 +125,6 @@ export class Search {
     } finally {
       this.hideLoadingSpinner();
     }
-  }
-
-  serializeForm(query) {
   }
 
   setPage(query) {

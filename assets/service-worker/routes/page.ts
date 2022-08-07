@@ -29,7 +29,9 @@ function pageRoute(config) {
     ({ request }) => {
       return request.mode === 'navigate';
     },
-    config.env === 'production' ? staleWhileRevalidate(config) : networkFirst(config)
+    config.env === 'production'
+      ? staleWhileRevalidate(config)
+      : networkFirst(config)
   );
 }
 

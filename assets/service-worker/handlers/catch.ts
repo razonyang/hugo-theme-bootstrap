@@ -11,11 +11,9 @@ function catchHandler(config) {
       if (lang !== '') {
         fallback = '/' + lang + fallback;
       }
-      fallback = baseURL.pathname.replace(/\/+$/, '') + fallback
+      fallback = baseURL.pathname.replace(/\/+$/, '') + fallback;
     }
-    return (
-      (await cache.match(fallback)) || Response.error()
-    );
+    return (await cache.match(fallback)) || Response.error();
   };
 }
 
