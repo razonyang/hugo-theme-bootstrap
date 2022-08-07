@@ -60,3 +60,23 @@
     }
   }
 }
+
+.search-result-score {
+  font-size: 20px;
+  position: relative;
+
+  &::before {
+    content: "★★★★★";
+  }
+
+  span {
+    color: var(--#{$prefix}primary);
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+
+    &::before {
+      content: "★★★★★";
+    }
+  }
+}

@@ -3,41 +3,44 @@
         <h2 class="card-title search-result-title fs-4 mt-2 mb-1 text-surface"><a href="{{permalink}}">{{title}}</a></h2>
         <p class="text-success user-select-all mb-1 text-nowrap overflow-hidden text-truncate">{{permalink}}</p>
         <div class="post-meta mb-2">
-        <span class="post-date">{{date}}</span>
-        {{#authors}}
-            <a href="{{url}}" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy">
-                <i class="fas fa-fw fa-user me-1"></i>{{title}}
-            </a>
-        {{/authors}}
-        {{#categories}}
-            <a href="{{url}}" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy">
-                <i class="fas fa-fw fa-folder me-1"></i>{{title}}
-            </a>
-        {{/categories}}
-        {{#series}}
-            <a href="{{url}}" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy">
-                <i class="fas fa-fw fa-columns me-1"></i>{{title}}
-            </a>
-        {{/series}}
-        {{#tags}}
-            <a href="{{url}}" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy">{{title}}</a>
-        {{/tags}}
-        </div>
-        <div class="search-result-content text-surface-secondary mb-2">
-        {{#img}}
-            {{#smallImg}}
-            <picture>
-                <source srcset="{{{largeImg}}}" media="(max-width: 576px)">
-                <img class="img-fluid" alt="{{title}}" src="{{{smallImg}}}" data-src="{{{img}}}" loading="lazy"/>
-            </picture>
-            {{/smallImg}}
-            {{^smallImg}}
-            <picture>
-                <img class="img-fluid" alt="{{title}}"src="{{{img}}}" loading="lazy"/>
-            </picture>
-            {{/smallImg}}
-        {{/img}}
-        {{{content}}}
-        </div>
+            <span class="search-result-score text-nowrap overflow-hidden">
+                <span style="width: {{score}}"></span>
+            </span>
+            <span class="post-date">{{date}}</span>
+            {{#authors}}
+                <a href="{{url}}" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy">
+                    <i class="fas fa-fw fa-user me-1"></i>{{title}}
+                </a>
+            {{/authors}}
+            {{#categories}}
+                <a href="{{url}}" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy">
+                    <i class="fas fa-fw fa-folder me-1"></i>{{title}}
+                </a>
+            {{/categories}}
+            {{#series}}
+                <a href="{{url}}" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy">
+                    <i class="fas fa-fw fa-columns me-1"></i>{{title}}
+                </a>
+            {{/series}}
+            {{#tags}}
+                <a href="{{url}}" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy">{{title}}</a>
+            {{/tags}}
+            </div>
+            <div class="search-result-content text-surface-secondary mb-2">
+            {{#img}}
+                {{#smallImg}}
+                <picture>
+                    <source srcset="{{{largeImg}}}" media="(max-width: 576px)">
+                    <img class="img-fluid" alt="{{title}}" src="{{{smallImg}}}" data-src="{{{img}}}" loading="lazy"/>
+                </picture>
+                {{/smallImg}}
+                {{^smallImg}}
+                <picture>
+                    <img class="img-fluid" alt="{{title}}"src="{{{img}}}" loading="lazy"/>
+                </picture>
+                {{/smallImg}}
+            {{/img}}
+            {{{content}}}
+            </div>
     </div>
 </div>

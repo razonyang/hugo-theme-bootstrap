@@ -233,7 +233,7 @@ export class Search {
   }
 
   static formatScore(value) {
-    return (100 * (1 - value)).toFixed(1);
+    return (100 * (1 - value)).toFixed(0) + '%';
   }
 
   highlight(id, titleKeywords, contentKeywords) {
