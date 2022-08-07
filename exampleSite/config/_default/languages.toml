@@ -33,3 +33,12 @@
   weight = 5
   [ar.params]
     description = "ثيم مدونة مصمم لـ هوجو سريع وغني بالميزات"
+
+[ja]
+  languageName = "日本語"
+  weight = 6
+  [ja.params]
+    description = "Hugo向けにカスタマイズされた非常に高速で応答性の高い、機能豊富なブログテーマ"
+    keywords = "Hugo, Bootstrap, ブログテーマ"
+    [ja.params.archive]
+      dateFormat = "1/2"

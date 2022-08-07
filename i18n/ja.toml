@@ -1,0 +1,237 @@
+[404_title]
+other = "おっと! ページが見つかりません。"
+
+[404_info]
+other = "お探しのページは見つかりませんでした。"
+
+[about_me]
+other = "私について"
+
+[actions]
+other = "Actions"
+
+[alipay]
+other = "Alipay"
+
+[all]
+other = "全部"
+
+[archives]
+other = "アーカイブ"
+
+[authors]
+other = "執筆者"
+
+[button_copy_url]
+other = "URLをコピー"
+
+[button_reload]
+other = "再表示"
+
+[button_social_share]
+other = "シェア"
+
+[button_submit]
+other = "送信"
+
+[buy_me_a_coffee]
+other = "コーヒーを買ってあげる"
+
+[categories]
+other = "カテゴリ"
+
+[color_blue]
+other = "Blue"
+
+[color_blue_gray]
+other = "Blue Gray"
+
+[color_brown]
+other = "Brown"
+
+[color_cyan]
+other = "Cyan"
+
+[color_green]
+other = "Green"
+
+[color_indigo]
+other = "Indigo"
+
+[color_orange]
+other = "Orange"
+
+[color_pink]
+other = "Pink"
+
+[color_purple]
+other = "Purple"
+
+[color_red]
+other = "Red"
+
+[color_teal]
+other = "Teal"
+
+[color_yellow]
+other = "Yellow"
+
+[comments]
+other = "コメント"
+
+[contact_name]
+other = "氏名"
+
+[contact_email]
+other = "メールアドレス"
+
+[contact_email_help]
+other = "お客様のEメールを他者に開示することはありません。"
+
+[contact_file]
+other = "ファイル"
+
+[contact_subject]
+other = "件名"
+
+[contact_message]
+other = "メッセージ"
+
+[copyright]
+other = "Copyright"
+
+[featured_posts]
+other = "注目の投稿"
+
+[font_size]
+other = "フォントサイズ"
+
+[font_size_lg]
+other = "大"
+
+[font_size_md]
+other = "標準"
+
+[font_size_sm]
+other = "小"
+
+[font_size_xl]
+other = "特大"
+
+[font_size_xs]
+other = "極小"
+
+[go_back]
+other = "戻る"
+
+[home]
+other = "ホーム"
+
+[language]
+other = "言語"
+
+[liberapay]
+other = "Liberapay"
+
+[load_more]
+other = "もっと見る"
+
+[mode]
+other = "表示モード"
+
+[noscript_info]
+other = "あなたのブラウザはJavascriptをサポートしていません。"
+
+[offline_title]
+other = "おっと! オフラインになりました。"
+
+[offline_info]
+other = "接続に問題があるようです。ネットワークの状態をご確認ください。"
+
+[pagination_title]
+other = "ページ {{ .PageNumber }}"
+
+[palette]
+other = "パレット"
+
+[patreon]
+other = "Patreon"
+
+[paypal]
+other = "Paypal"
+
+[post_count]
+one = "全{{ .Count }}件の投稿"
+other = "全{{ .Count }}件の投稿"
+
+[post_date]
+other = "公開: {{ .createdOn }}{{ with .updatedOn }}, 更新: {{ . }}{{ end }}."
+
+[posts]
+other = "投稿"
+
+[profile]
+other = "プロフィール"
+
+[read_more]
+other = "もっと読む"
+
+[reading_time]
+other = "{{ .ReadingTime }}分間"
+
+[recent_posts]
+other = "最近の投稿"
+
+[related_posts]
+other = "関連する投稿"
+
+[repo_action_edit]
+other = "このページを編集"
+
+[repo_action_view]
+other = "ページソースを表示"
+
+[repo_title]
+other = "リポジトリ"
+
+[search]
+other = "検索"
+
+[search_advanced]
+other = "詳細な検索"
+
+[search_missing_keywords]
+other = "検索キーワードを入力して下さい。"
+
+[search_no_results]
+other = "該当する結果がありません。"
+
+[search_stat]
+other = "{{ .Total }} 件見つかりました。"
+
+[sections]
+other = "セクション"
+
+[series]
+other = "シリーズ"
+
+[settings]
+other = "設定"
+
+[table_of_contents]
+other = "目次"
+
+[tags]
+other = "タグ"
+
+[taxonomies]
+other = "分類"
+
+[tipeee]
+other = "Tipeee"
+
+[try_again]
+other = "再試行"
+
+[wechat]
+other = "WeChat"
