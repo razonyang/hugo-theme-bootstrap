@@ -64,6 +64,7 @@
 .search-result-score {
   font-size: 20px;
   position: relative;
+  word-break: keep-all;
 
   &::before {
     content: "★★★★★";
