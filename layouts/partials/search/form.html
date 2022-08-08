@@ -5,11 +5,16 @@
             <i class="fas fa-fw fa-search text-primary"></i>
         </button>
     </div>
-    <p class="text-end mt-1">
-        <a class="" data-bs-toggle="collapse" href="#advanced-search" role="button" aria-expanded="false" aria-controls="advanced-search">
-          {{- i18n "search_advanced" -}}
-        </a>
-    </p>
+    <div class="search-meta d-flex justify-content-between my-2 col-12">
+        <span class="search-stat">
+            <span id="searchStat"></span>
+        </span>
+        <span class="search-options">
+            <a class="" data-bs-toggle="collapse" href="#advanced-search" role="button" aria-expanded="false" aria-controls="advanced-search">
+            {{- i18n "search_advanced" -}}
+            </a>
+        </span>
+    </div>
     <div class="row g-1 collapse" id="advanced-search">
         <select class="form-select col-12 mb-2" aria-label="Language" name="lang" id="languages-select">
             <option selected value="">{{ i18n "language" }}</option>
