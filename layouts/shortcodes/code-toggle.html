@@ -5,14 +5,14 @@
 <ul class="nav nav-tabs" role="tablist">
 {{- $i := 0 -}}
 {{- with $filename -}}
-    <li class="nav-item d-flex align-items-end me-1">
-        <span class="text-secondary px-2">{{ . }}.</span>
+    <li class="nav-item mb-0">
+        <span class="nav-link disabled text-secondary px-2 py-1">{{ . }}.</span>
     </li>
 {{- end -}}
 {{- range $langs -}}
     {{- $id := printf "%s-%s" . $idSuffix -}}
     <li class="nav-item mb-0" role="presentation">
-        <button class="nav-link{{ if eq $i 0 }} active{{ end }}" id="{{ $id }}-tab" data-bs-toggle="tab" data-bs-target="#{{ $id }}" type="button" role="tab" 
+        <button class="nav-link px-2 py-1 border-0{{ if eq $i 0 }} active{{ end }}" id="{{ $id }}-tab" data-bs-toggle="tab" data-bs-target="#{{ $id }}" type="button" role="tab" 
             aria-controls="home" aria-selected="{{ if eq $i 0 }}true{{ else }}false{{ end }}">
             {{ . }}
         </button>
