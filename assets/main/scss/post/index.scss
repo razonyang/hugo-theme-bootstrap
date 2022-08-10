@@ -66,6 +66,12 @@
       margin-bottom: 0.25rem;
     }
   }
+
+  .alert {
+    p:first-of-type {
+      display: inline;
+    }
+  }
 }
 
 .post-content,
