@@ -52,6 +52,27 @@ ALERT MESSAGE
 {{</* /alert */>}}
 ```
 
+### 帶有 Markdown 格式
+
+````markdown
+{{%/* alert warning */%}}
+Alert Shortcode with Markdown Syntax:
+```bash
+$ echo 'An example of alert shortcode with the Markdown syntax'
+```
+{{%/* /alert */%}}
+````
+
+{{% alert warning %}}
+{{% code/alert-with-markdown-example %}}
+{{% /alert %}}
+
+請注意，你需要開啟 `markup.goldmark.renderer.unsafe` 配置。
+
+{{< code-toggle filename="config" >}}
+{{% config/markup-goldmark-renderer-unsafe %}}
+{{< /code-toggle >}}
+
 ## 例子
 
 {{< alert >}}Info{{< /alert >}}
