@@ -60,5 +60,6 @@ Sponsors will appear on our website with their brands and logos.
 - [Sagar Behere](https://github.com/sagarbehere)
 - [Norbert Boros](https://github.com/Mecanik)
 - [Arvind Singh](https://github.com/ArvindRSingh)
+- [Vri](https://github.com/vrifox)
 
 <object type="image/svg+xml" data="https://opencollective.com/hbs/tiers/backer.svg?avatarHeight=36&width=600"></object>
