@@ -59,5 +59,6 @@ Sponsors will appear on our website with their brands and logos.
 - [Dikea](https://github.com/Dikea)
 - [Sagar Behere](https://github.com/sagarbehere)
 - [Norbert Boros](https://github.com/Mecanik)
+- [Arvind Singh](https://github.com/ArvindRSingh)
 
 <object type="image/svg+xml" data="https://opencollective.com/hbs/tiers/backer.svg?avatarHeight=36&width=600"></object>
