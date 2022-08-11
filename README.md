@@ -49,7 +49,7 @@ Thank you very much to the following sponsors and backers(sort by funding time).
 
 Sponsors will appear on our website with their brands and logos.
 
-- [Netlify](https://netlify.app/): the exmaple site is published on Netlify with [Open Source Plan](https://www.netlify.com/legal/open-source-policy/).
+- [Netlify](https://netlify.app/): the example site is published on Netlify with [Open Source Plan](https://www.netlify.com/legal/open-source-policy/).
 - [DocSearch](https://docsearch.algolia.com/): We're using DocSearch instead of local search on our webstie.
 
 <object type="image/svg+xml" data="https://opencollective.com/hbs/tiers/sponsor.svg?avatarHeight=36&width=600"></object>
