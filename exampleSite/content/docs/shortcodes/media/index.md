@@ -11,7 +11,8 @@ tags = [
   "Tencent",
   "Youku",
   "iQiyi",
-  "Netease Music"
+  "Netease Music",
+  "asciinema",
 ]
 series = [
   "Docs"
@@ -71,3 +72,11 @@ A detailed description of media shortcodes, such as Bilibili, Tencent, Youku, iQ
 | `type` | The `type` parameter is optional. Default to `2`.
 
 {{< neteasemusic "24953439" false >}}
+
+## asciinema
+
+```markdown
+{{</* asciinema id */>}}
+```
+
+{{< asciinema 514468 >}}
