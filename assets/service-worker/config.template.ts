@@ -21,9 +21,14 @@
 {{- $precache := default dict .Site.Params.pwa.precache }}
 const precache = JSON.parse('{{ $precache | jsonify }}');
 
+{{- $baseURL := $.Site.BaseURL }}
+{{- if hasPrefix $baseURL "//" }}
+  {{- $baseURL = printf "http:%s" $baseURL }}
+{{- end }}
+
 const config = {
   env: '{{ hugo.Environment }}',
-  baseURL: '{{ $.Site.BaseURL }}',
+  baseURL: '{{ $baseURL }}',
   homepage: '{{ $homepage }}',
   langs: JSON.parse('{{ $langs | jsonify }}'),
   fallbacks: JSON.parse('{{ $fallbacks | jsonify }}'),
