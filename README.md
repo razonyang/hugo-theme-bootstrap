@@ -1,8 +1,7 @@
 # Hugo Bootstrap Theme
 
 [![PageSpeed insights](https://img.shields.io/badge/pagespeed-95%2B-success?style=flat-square)](https://pagespeed.web.dev/report?url=https://hbs-skeleton.netlify.app/)
-[![Backer](https://opencollective.com/hbs/tiers/backer/badge.svg?label=backer&color=brightgreen)](https://opencollective.com/hbs)
-[![Sponsor](https://opencollective.com/hbs/tiers/sponsor/badge.svg?label=sponsor&color=brightgreen)](https://opencollective.com/hbs)
+[![Financial Contributors](https://opencollective.com/hbs/tiers/badge.svg)](https://opencollective.com/hbs)
 [![Hugo version](https://img.shields.io/badge/hugo-0.97.0%2B-important?style=flat-square)](https://github.com/gohugoio/hugo/releases)
 [![Releases](https://img.shields.io/github/release/razonyang/hugo-theme-bootstrap?style=flat-square)](https://github.com/razonyang/hugo-theme-bootstrap/releases)
 [![GitHub contributors](https://img.shields.io/github/contributors/razonyang/hugo-theme-bootstrap?style=flat-square)](https://github.com/razonyang/hugo-theme-bootstrap/graphs/contributors)
@@ -52,8 +51,6 @@ Sponsors will appear on our website with their brands and logos.
 - [Netlify](https://netlify.app/): the example site is published on Netlify with [Open Source Plan](https://www.netlify.com/legal/open-source-policy/).
 - [DocSearch](https://docsearch.algolia.com/): We're using DocSearch instead of local search on our webstie.
 
-<object type="image/svg+xml" data="https://opencollective.com/hbs/tiers/sponsor.svg?avatarHeight=36&width=600"></object>
-
 ### Backers
 
 - [Dikea](https://github.com/Dikea)
@@ -61,5 +58,3 @@ Sponsors will appear on our website with their brands and logos.
 - [Norbert Boros](https://github.com/Mecanik)
 - [Arvind Singh](https://github.com/ArvindRSingh)
 - [Vri](https://github.com/vrifox)
-
-<object type="image/svg+xml" data="https://opencollective.com/hbs/tiers/backer.svg?avatarHeight=36&width=600"></object>
