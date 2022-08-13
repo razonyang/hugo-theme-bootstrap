@@ -212,6 +212,7 @@ export class Search {
           series: result.item.series,
           score: Search.formatScore(result.score),
           date: result.item.date,
+          langName: result.item.langName,
           url() {
             return Search.normalizeTaxonomy;
           },

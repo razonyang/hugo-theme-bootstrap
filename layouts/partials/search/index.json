@@ -29,6 +29,7 @@
     {{- end -}}
     {{- $item := (dict 
       "lang" .Language.Lang
+      "langName" .Language.LanguageName
       "title" $title 
       "content" .Plain 
       "permalink" .Permalink 
