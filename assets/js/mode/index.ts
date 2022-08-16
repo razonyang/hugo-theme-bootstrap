@@ -70,7 +70,8 @@ class ModeToggle implements Component {
       value = getPreferMode();
     }
     console.debug(`Switch to ${value} mode`);
-    document.body.parentElement.setAttribute('data-theme', value);
+    document.body.parentElement.setAttribute('data-theme', value); // TODO: remove in v1
+    document.body.parentElement.setAttribute('data-bs-theme', value);
     const event = new CustomEvent('hbs:mode', { detail: { mode: value } });
     document.dispatchEvent(event);
   }

@@ -3,7 +3,9 @@
 {{- if not (in (slice "light" "dark" "auto") $color) }}
   {{- $color = "auto" }}
 {{- end }}
-<html class="position-relative" itemscope itemtype="http://schema.org/WebPage" lang="{{ .Lang }}" data-theme="{{ $color }}"
+<html class="position-relative" itemscope itemtype="http://schema.org/WebPage" lang="{{ .Lang }}"
+  data-theme="{{ $color }}" {{/* TODO: remove in v1 */}}
+  data-bs-theme="{{ $color }}"
   {{- with $.Site.Language.LanguageDirection }} dir="{{ . }}"{{ end }}
   {{- with $.Site.Params.palette }} data-palette="{{ replace . " " "-" }}"{{ end }}>
   <head>
