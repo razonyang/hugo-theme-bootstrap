@@ -46,7 +46,7 @@ authors = ["RazonYang"]
 | `brand` | String | - | Brand
 | `description` | String | - | 站點描述
 | `keywords` | String | - | 站點關鍵詞
-| `color` | String | - | 顏色風格， `light`，`dark` 或者 dynamic（默認）。 
+| `color` | String | - | 顏色風格， `light`，`dark` 或者 `auto`（默認）。
 | `palette` | String | - | 默認配色，清理 Cookie 後生效。
 | `palettes` | Array | **ALL** | 可選配色，如需禁用此選項，可將其設為空值 `[]`。
 | `featuredPostCount` | Integer/Boolean | `5` | 精選文章數，`false` 則隱藏。

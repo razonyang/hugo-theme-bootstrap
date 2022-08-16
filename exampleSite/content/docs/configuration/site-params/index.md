@@ -45,7 +45,7 @@ The site parameters are located in `config/_default/params.toml` by default.
 | `brand` | String | - | Brand text.
 | `description` | String | - | Site description.
 | `keywords` | String | - | Site keywords.
-| `color` | String | - | Color mode, `light`, `dark` or dynamic. Default to dynamic.
+| `color` | String | - | Color mode, `light`, `dark` or `auto`. Default to `auto`.
 | `palette` | String | - | Default palette. This will take effect after clearing the Cookie.
 | `palettes` | Array | **ALL** | Available palettes. You can disable it by setting it to empty `[]`.
 | `featuredPostCount` | Integer/Boolean | `5` | The number of featured posts shown in sidebar. Turn off by setting it to `false`.
