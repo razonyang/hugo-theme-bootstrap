@@ -12,7 +12,7 @@
   font-size: 0.875rem;
   word-break: break-all;
 
-  span {
+  > span {
     &:not(:last-child) {
       margin-right: 0.125rem;
 

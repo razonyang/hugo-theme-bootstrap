@@ -3,8 +3,12 @@
         <h2 class="card-title search-result-title fs-4 mt-2 mb-1 text-surface"><a href="{{permalink}}">{{title}}</a></h2>
         <p class="text-success user-select-all mb-1 text-nowrap overflow-hidden text-truncate">{{permalink}}</p>
         <div class="post-meta mb-2">
-            <span class="search-result-score text-nowrap overflow-hidden">
-                <span style="width: {{score}}"></span>
+            <span class="search-result-score-wrapper">
+                <span class="search-result-score">{{score}}</span>
+                <span class="search-result-score-rating text-nowrap overflow-hidden">
+                    <span style="width: calc({{score}}/5*100%);">
+                    </span>
+                </span>
             </span>
             <span class="post-lang">{{langName}}</span>
             <span class="post-date">{{date}}</span>

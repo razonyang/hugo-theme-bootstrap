@@ -245,7 +245,7 @@ export class Search {
   }
 
   static formatScore(value) {
-    return (100 * (1 - value)).toFixed(0) + '%';
+    return ((1 - value) * 5).toFixed(1);
   }
 
   highlight(id, titleKeywords, contentKeywords) {

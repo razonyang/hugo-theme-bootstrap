@@ -61,21 +61,22 @@
   }
 }
 
-.search-result-score {
+.search-result-score-rating {
   font-size: 20px;
   position: relative;
+  width: fit-content;
 
   &::before {
     content: "★★★★★";
   }
 
   span {
-    color: var(--#{$prefix}primary);
     left: 0;
     overflow: hidden;
     position: absolute;
 
     &::before {
+      color: gold;
       content: "★★★★★";
     }
   }
