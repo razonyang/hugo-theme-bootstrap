@@ -43,34 +43,39 @@ class Engine {
   }
 
   search(data: FormData) {
-    const params = {
-      $and: [
-        {
-          $or: [{ title: data.get('q') }, { content: data.get('q') }],
-        },
-      ],
-    };
-    const author = data.get('author');
-    if (author) {
-      params.$and.push({ 'authors.title': author });
-    }
-    const category = data.get('category');
-    if (category) {
-      params.$and.push({ 'categories.title': category });
-    }
-    const series = data.get('series');
-    if (series) {
-      params.$and.push({ 'series.title': series });
-    }
-    const tag = data.get('tag');
-    if (tag) {
-      params.$and.push({ 'tags.title': tag });
-    }
-    const lang = data.get('lang');
-    if (lang) {
-      params.$and.push({ lang: '=' + lang });
-    }
-    return this.fuse.search(params);
+    return new Promise((resolve) => {
+      // delay search for displaying the loading spinner.
+      setTimeout(() => {
+        const params = {
+          $and: [
+            {
+              $or: [{ title: data.get('q') }, { content: data.get('q') }],
+            },
+          ],
+        };
+        const author = data.get('author');
+        if (author) {
+          params.$and.push({ 'authors.title': author });
+        }
+        const category = data.get('category');
+        if (category) {
+          params.$and.push({ 'categories.title': category });
+        }
+        const series = data.get('series');
+        if (series) {
+          params.$and.push({ 'series.title': series });
+        }
+        const tag = data.get('tag');
+        if (tag) {
+          params.$and.push({ 'tags.title': tag });
+        }
+        const lang = data.get('lang');
+        if (lang) {
+          params.$and.push({ lang: '=' + lang });
+        }
+        resolve(this.fuse.search(params))
+      }, 1)
+    })
   }
 }
 

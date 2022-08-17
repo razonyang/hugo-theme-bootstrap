@@ -74,7 +74,10 @@ export class Search {
 
     this.loadMore = document.getElementById('btnLoadMore');
     this.loadMore.addEventListener('click', () => {
-      this.poplateResults();
+      this.showLoadingSpinner();
+      this.poplateResults().finally(() => {
+        this.hideLoadingSpinner();
+      });
     });
   }
 
@@ -97,17 +100,16 @@ export class Search {
   }
 
   search(data: FormData) {
-    try {
-      this.resultsElement.innerHTML = ''; // Clear previous results.
-      this.showLoadingSpinner();
-      if (!data.has('q')) {
-        this.stat.innerHTML = this.tmplMissingKeywords;
-        this.hideLoadMoreBtn();
-        this.hideLoadingSpinner();
-        return;
-      }
-      this.setPage(data.get('q'));
-      const results = this.engine.search(data);
+    this.resultsElement.innerHTML = ''; // Clear previous results.
+    this.showLoadingSpinner();
+    if (!data.has('q')) {
+      this.stat.innerHTML = this.tmplMissingKeywords;
+      this.hideLoadMoreBtn();
+      this.hideLoadingSpinner();
+      return;
+    }
+    this.setPage(data.get('q'));
+    this.engine.search(data).then((results) => {
       this.page = 1;
       this.results = results;
       if (this.results.length > this.paginate) {
@@ -115,16 +117,17 @@ export class Search {
       } else {
         this.hideLoadMoreBtn();
       }
-      if (results.length > 0) {
-        this.poplateResults();
+    }).then(() => {
+      if (this.results.length > 0) {
+        this.poplateResultsInternal();
       } else {
         this.stat.innerHTML = this.tmplNoResults;
       }
-    } catch (err) {
-      console.error(err);
-    } finally {
+    }).catch((err) => {
+      console.error(err)
+    }).finally(() => {
       this.hideLoadingSpinner();
-    }
+    })
   }
 
   setPage(query) {
@@ -139,6 +142,14 @@ export class Search {
   }
 
   poplateResults() {
+    return new Promise(resolve => {
+      setTimeout(() => {
+        resolve(this.poplateResultsInternal())
+      }, 1)
+    })
+  }
+
+  private poplateResultsInternal() {
     if (!this.results) {
       return;
     }
