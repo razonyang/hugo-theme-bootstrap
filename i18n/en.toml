@@ -218,6 +218,9 @@ other = "Series"
 [settings]
 other = "Settings"
 
+[stats]
+other = "Stats"
+
 [table_of_contents]
 other = "Contents"
 

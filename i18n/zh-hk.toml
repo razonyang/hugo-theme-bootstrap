@@ -205,6 +205,9 @@ other = "專欄"
 [settings]
 other = "設置"
 
+[stats]
+other = "統計"
+
 [table_of_contents]
 other = "目錄"
 

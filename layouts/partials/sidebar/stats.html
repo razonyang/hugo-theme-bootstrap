@@ -1,0 +1,29 @@
+{{- $icons := dict
+    "authors" "user"
+    "tags" "tags"
+    "series" "columns"
+    "categories" "folder"
+}}
+<div class="accordion stats">
+  <div class="accordion-item card row component">
+    <div class="accordion-header card-header border-0" id="stats-header">
+      <a class="accordion-button d-lg-none mb-2 collapsed shadow-none p-0 bg-transparent text-surface" type="button" data-bs-toggle="collapse" data-bs-target="#stats" aria-expanded="false" aria-controls="stats">
+        {{ i18n "stats" }}
+      </a>
+    </div>
+    <div class="card-body collapse accordion-collapse accordion-body d-lg-block" id="stats" aria-labelledby="stats-header">
+        <div class="row row-cols-5">
+            <a class="stat col d-flex flex-column align-items-center" title="{{ i18n "posts" }}" href="{{ absURL "/" }}">
+                <i class="stat-icon fas fa-fw fa-2x fa-file-alt mb-2"></i>
+                <span class="stat-count">{{ len $.Site.RegularPages }}</span>
+            </a>
+            {{- range $key, $value := $.Site.Taxonomies }}
+            <a class="stat col d-flex flex-column align-items-center" title="{{ i18n $key }}" href="{{ absLangURL (urlize $key) }}">
+                <i class="stat-icon fas fa-fw fa-2x fa-{{ index $icons $key }} mb-2"></i>
+                <span class="stat-count">{{ len $value.ByCount }}</span>
+            </a>
+            {{- end }}
+        </div>
+    </div>
+  </div>
+</div>

@@ -205,6 +205,9 @@ other = "专栏"
 [settings]
 other = "设置"
 
+[stats]
+other = "统计"
+
 [table_of_contents]
 other = "目录"
 
