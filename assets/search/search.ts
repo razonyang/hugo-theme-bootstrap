@@ -74,7 +74,10 @@ export class Search {
 
     this.loadMore = document.getElementById('btnLoadMore');
     this.loadMore.addEventListener('click', () => {
-      this.poplateResults();
+      this.showLoadingSpinner();
+      this.poplateResults().finally(() => {
+        this.hideLoadingSpinner();
+      });
     });
   }
 
@@ -116,7 +119,7 @@ export class Search {
       }
     }).then(() => {
       if (this.results.length > 0) {
-        this.poplateResults();
+        this.poplateResultsInternal();
       } else {
         this.stat.innerHTML = this.tmplNoResults;
       }
@@ -139,6 +142,14 @@ export class Search {
   }
 
   poplateResults() {
+    return new Promise(resolve => {
+      setTimeout(() => {
+        resolve(this.poplateResultsInternal())
+      }, 1)
+    })
+  }
+
+  private poplateResultsInternal() {
     if (!this.results) {
       return;
     }
