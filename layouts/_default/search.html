@@ -4,11 +4,7 @@
     <div class="d-flex col-12 col-lg-8 component py-3 pt-4 px-2 rounded">
       <div class="container">
         {{- partial "search/form" . }}
-        <div class="text-center my-2">
-          <div id="loadingSpinner" class="spinner-border text-primary" role="status">
-            <span class="visually-hidden">Loading...</span>
-          </div>
-        </div>
+        {{- partial "search/loading" . }}
         <div id="searchResults" class="search-results mb-3 row"></div>
         <div class="text-center mb-3">
           <button class="btn btn-sm btn-secondary w-100 d-none" type="button" id="btnLoadMore">{{ i18n "load_more" }}</button>
