@@ -37,7 +37,7 @@ Finally PurgeCSS relies on this file to purge unused CSS.
 
 > The PurgeCSS works only under `production` environment.
 
-> We **DON NOT** recommend overriding the those files.`postcss.config.js` and `assets/main/config/rtl/postcss.config.js`, otherwise, unexpected problems will occur during version updates.
+> We **DO NOT** recommend overriding `postcss.config.js` and `assets/main/config/rtl/postcss.config.js`, otherwise unexpected problems will occur during version updates.
 
 ## Limitations
 
