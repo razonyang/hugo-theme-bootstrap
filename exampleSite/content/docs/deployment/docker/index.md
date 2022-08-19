@@ -34,7 +34,7 @@ Create a `Dockerfile` in the site root.
 {{% code/deployment-docker-dockerfile %}}
 ```
 
-- There are two stages to the build, a build stafe and a release stage. The release stage contains only the generated static files, keeping the size of the Docker image as small as possible.
+- There are two stages to the build, a build stage and a release stage. The release stage contains only the generated static files, keeping the size of the Docker image as small as possible.
 - If you have `defaultContentLanguageInSubdir` enabled, please uncomment and modify it on demand.
 - The `HUGO_BASEURL` parameter is used to specify the `baseURL` of the site during the build, and is generally used when the `baseURL` is different from the configuration, so you can remove it yourself if you don't need it.
 - `HUGO_MODULE_PROXY` and `NPM_CONFIG_REGISTRY` are optional build parameters that can be removed if not needed.
