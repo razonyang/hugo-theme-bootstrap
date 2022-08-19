@@ -8,13 +8,13 @@ HUGO_ENABLEGITINFO = "true"
 GO_VERSION = "1.17.7"
 
 [context.production]
-command = "cd exampleSite && npm install && hugo --minify --themesDir=../../ --theme=repo"
+command = "cd exampleSite && npm install && npm update && hugo --minify --themesDir=../../ --theme=repo"
 
 [context.production.environment]
 HUGO_ENV = "production"
 
 [context.deploy-preview]
-command = "cd exampleSite && npm install && hugo --minify --themesDir=../../ --theme=repo -b=$DEPLOY_PRIME_URL"
+command = "cd exampleSite && npm install && npm update && hugo --minify --themesDir=../../ --theme=repo -b=$DEPLOY_PRIME_URL"
 
 [[headers]]
   for = "/*"
