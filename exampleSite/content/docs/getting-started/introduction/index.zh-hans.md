@@ -19,7 +19,7 @@ navWeight = 100
 authors = ["RazonYang"]
 +++
 
-Hugo Bootstap Theme(HBS) 是一个快速、响应式、多用途和功能丰富的 Hugo 主题。其通常用于博客和文档站点。
+Hugo Bootstrap Theme(HBS) 是一个快速、响应式、多用途和功能丰富的 Hugo 主题。其通常用于博客和文档站点。
 
 <!--more-->
 
