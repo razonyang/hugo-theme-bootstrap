@@ -9,7 +9,7 @@ html {
   }
 
   @if $backgroundImageDark != '' {
-    &[data-theme='dark'] {
+    &[data-bs-theme='dark'] {
       background-image: url($backgroundImageDark);
     }
   }

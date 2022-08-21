@@ -1,5 +1,5 @@
 :root,
-[data-theme='light'] {
+[data-bs-theme='light'] {
   --#{$prefix}component-gutter-t: 0;
   --#{$prefix}component-gutter-b: 1.5rem;
   --#{$prefix}component-gutter-s: 0;
@@ -16,7 +16,7 @@
   --#{$prefix}shadow-rgb: 0, 0, 0;
 }
 
-[data-theme='dark'] {
+[data-bs-theme='dark'] {
   --#{$prefix}surface-bg: #{$surface-bg-dark};
   --#{$prefix}surface-color: #{$surface-color-dark};
   --#{$prefix}surface-color-secondary: #{$surface-color-secondary-dark};
