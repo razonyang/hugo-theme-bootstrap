@@ -14,7 +14,6 @@ categories = [
     "事件"
 ]
 tags = [
-    "getPreferMode"
 ]
 series = [
     "文檔"
@@ -32,5 +31,3 @@ images = []
 內置的 Utterances 和 Giscus 評論引擎就是依靠這個事件來調整它們的主題為淺色或深色。
 
 {{% code/events-mode-catch %}}
-
-- `getPreferMode` 函數返回你的系統/瀏覽器的首選顏色模式。

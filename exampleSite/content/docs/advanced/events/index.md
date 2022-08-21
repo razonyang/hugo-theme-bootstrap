@@ -14,7 +14,6 @@ categories = [
     "Events"
 ]
 tags = [
-    "getPreferMode"
 ]
 series = [
     "Docs"
@@ -32,5 +31,3 @@ HBS will emit a custom event called `hbs:mode` on color mode changed, it's usefu
 The built-in Utterances and Giscus comments engines are relying on this event for adjusting their theme to light or dark.
 
 {{% code/events-mode-catch %}}
-
-- `getPreferMode` is a function that return the prefer color mode of your system/browser.

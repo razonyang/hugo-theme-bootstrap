@@ -1,7 +1,5 @@
 ```js
-import { getPreferMode } from 'js/mode/functions';
-
 document.addEventListener('hbs:mode', (e: CustomEvent) => {
-  console.log('mode changed: ', e.detail.mode === 'auto' ? getPreferMode() : e.detail.mode);
+  console.log('mode changed: ', e.detail.mode);
 });
 ```

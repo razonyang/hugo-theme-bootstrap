@@ -1,6 +1,6 @@
 import * as params from '@params';
 import { default as LocalStorage } from 'js/local-storage';
-import { getPreferMode } from 'js/mode/functions';
+import ModeToggle from 'js/mode';
 
 class Utterances {
   run() {
@@ -17,7 +17,7 @@ class Utterances {
 
   getTheme(mode) {
     if (mode === 'auto') {
-      mode = getPreferMode();
+      mode = ModeToggle.getPreferredMode();
     }
     return mode === 'dark' ? 'github-dark' : 'github-light';
   }
