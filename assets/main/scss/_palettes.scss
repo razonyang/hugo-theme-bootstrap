@@ -67,7 +67,7 @@ $palette-classes: 'btn', 'btn-outline';
         }
       }
 
-      &[data-theme='dark'] {
+      &[data-bs-theme='dark'] {
         --#{$prefix}primary: #{$primary-tint};
         --#{$prefix}primary-rgb: #{to-rgb($primary-tint)} !important;
         --#{$prefix}accent-bg: #{$primary-tint} !important;

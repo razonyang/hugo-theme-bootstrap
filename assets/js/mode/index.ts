@@ -9,8 +9,12 @@ class ModeToggle implements Component {
   private items;
 
   run() {
-    this.initListeners();
-    this.initMode();
+    const mode = LocalStorage.getItem(this.key);
+    this.setMode(mode);
+    window.addEventListener('load', () => {
+      this.initListeners();
+      this.initMode();
+    })
   }
 
   initListeners() {
@@ -23,7 +27,7 @@ class ModeToggle implements Component {
     });
 
     window.matchMedia('(prefers-color-scheme: dark)').addListener((e) => {
-      if (this.mode === 'auto') {
+      if (this.isAuto()) {
         this.setMode(e.matches ? 'dark' : 'light');
       }
     });
@@ -70,8 +74,7 @@ class ModeToggle implements Component {
       value = getPreferMode();
     }
     console.debug(`Switch to ${value} mode`);
-    document.body.parentElement.setAttribute('data-theme', value); // TODO: remove in v1
-    document.body.parentElement.setAttribute('data-bs-theme', value);
+    document.documentElement.setAttribute('data-bs-theme', value);
     const event = new CustomEvent('hbs:mode', { detail: { mode: value } });
     document.dispatchEvent(event);
   }

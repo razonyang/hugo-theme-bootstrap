@@ -1,0 +1,6 @@
+{{- $params := .Site.Params -}}
+{{- $params = merge $params (dict "baseURL" .Site.BaseURL) -}}
+{{- $options := dict "target" "es2015" "targetPath" "assets/init/bundle.min.js" "minify" hugo.IsProduction "params" $params -}}
+{{- $main := resources.Get "main/js/index.ts" }}
+{{- $script := resources.Get "init/js/index.ts" | js.Build $options | fingerprint -}}
+<script src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>

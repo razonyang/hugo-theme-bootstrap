@@ -35,7 +35,7 @@ const purgecss = require('@fullhuman/postcss-purgecss')({
     // deep: [/blue$/],
     greedy: [/carousel-indicators$/]
   },
-  dynamicAttributes: ['data-bs-popper', 'data-theme', 'data-bs-theme', 'data-palette', 'role', 'placeholder-shown']
+  dynamicAttributes: ['data-bs-popper', 'data-bs-theme', 'data-palette', 'role', 'placeholder-shown']
 });
 
 exports.default = purgecss;

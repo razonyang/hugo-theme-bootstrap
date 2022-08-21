@@ -2,18 +2,19 @@ import Component from 'js/component';
 import { default as LocalStorage } from 'js/local-storage';
 
 class PaletteSelector implements Component {
-  key: string;
+  key = 'palette';
 
   run() {
-    this.key = 'palette';
-    this.initPalette();
-  }
-
-  initPalette() {
     const palette = this.getPalette();
     if (palette) {
       this.setPalette(palette);
     }
+    window.addEventListener('load', () => {
+      this.initPalette();
+    })
+  }
+
+  initPalette() {
     const selected = this.getPalette();
     document.querySelectorAll('.palette').forEach((element) => {
       const paletteId = element.getAttribute('id').replace('palette-', '');
@@ -35,7 +36,7 @@ class PaletteSelector implements Component {
     }
 
     const paletteMeta =
-      document.body.parentElement.getAttribute('data-palette');
+      document.documentElement.getAttribute('data-palette');
     if (paletteMeta) {
       return paletteMeta;
     }
@@ -45,7 +46,7 @@ class PaletteSelector implements Component {
 
   setPalette(palette: string) {
     console.debug(`switch to palette: ${palette}`);
-    document.body.parentElement.setAttribute('data-palette', palette);
+    document.documentElement.setAttribute('data-palette', palette);
     LocalStorage.setItem(this.key, palette);
   }
 }

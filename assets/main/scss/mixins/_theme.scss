@@ -1,5 +1,5 @@
 @mixin theme($name) {
-  [data-theme=#{$name}] {
+  [data-bs-theme=#{$name}] {
     @content;
   }
 }
