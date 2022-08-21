@@ -1,7 +1,6 @@
 import Component from 'js/component';
 import { default as params } from '@params';
 import { default as LocalStorage } from 'js/local-storage';
-import { getPreferMode } from './functions';
 
 class ModeToggle implements Component {
   public key = 'mode';
@@ -71,12 +70,19 @@ class ModeToggle implements Component {
 
   setMode(value: string) {
     if (value === 'auto') {
-      value = getPreferMode();
+      value = ModeToggle.getPreferredMode();
     }
     console.debug(`Switch to ${value} mode`);
     document.documentElement.setAttribute('data-bs-theme', value);
     const event = new CustomEvent('hbs:mode', { detail: { mode: value } });
     document.dispatchEvent(event);
+  }
+
+  static getPreferredMode(): string {
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      return 'dark';
+    }
+    return 'light';
   }
 }
 

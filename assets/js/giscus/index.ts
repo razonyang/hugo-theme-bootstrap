@@ -1,6 +1,6 @@
 import * as params from '@params';
 import { default as LocalStorage } from 'js/local-storage';
-import { getPreferMode } from 'js/mode/functions';
+import ModeToggle from 'js/mode';
 
 class Giscus {
   run() {
@@ -17,7 +17,7 @@ class Giscus {
 
   getTheme(mode) {
     if (mode === 'auto') {
-      mode = getPreferMode();
+      mode = ModeToggle.getPreferredMode();
     }
     return mode === 'dark' ? 'dark' : 'light';
   }
