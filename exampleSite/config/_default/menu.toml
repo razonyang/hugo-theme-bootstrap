@@ -33,14 +33,14 @@
   identifier = "feature-request"
   pre = '<i class="fas fa-fw fa-lightbulb me-1"></i>'
   parent = "support"
-  url = "https://github.com/razonyang/hugo-theme-bootstrap/issues/new?template=feature_request.md"
+  url = "https://github.com/razonyang/hugo-theme-bootstrap/issues/new?template=feature_request.yml"
   weight = 3
 [[main]]
   name = "Bug Report"
   identifier = "bug-report"
   parent = "support"
   pre = '<i class="fas fa-fw fa-bug me-1"></i>'
-  url = "https://github.com/razonyang/hugo-theme-bootstrap/issues/new?template=bug_report.md"
+  url = "https://github.com/razonyang/hugo-theme-bootstrap/issues/new?template=bug_report.yml"
   weight = 3
 [[main]]
   parent = "support"

@@ -34,8 +34,8 @@ We are happy to listen to your opinions and feedback, and welcome you to get inv
 
 ## Community
 
-- [Feature Request](https://github.com/razonyang/hugo-theme-bootstrap/issues/new?template=feature_request.md)
-- [Bug Report](https://github.com/razonyang/hugo-theme-bootstrap/issues/new?template=bug_report.md)
+- [Feature Request](https://github.com/razonyang/hugo-theme-bootstrap/issues/new?template=feature_request.yml)
+- [Bug Report](https://github.com/razonyang/hugo-theme-bootstrap/issues/new?template=bug_report.yml)
 - [Discussions](https://github.com/razonyang/hugo-theme-bootstrap/discussions): ask questions, share ideas etc.
 
 ## Contribute

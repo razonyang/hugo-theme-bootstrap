@@ -34,8 +34,8 @@ authors = ["RazonYang"]
 
 ## 社区
 
-- [特性请求](https://github.com/razonyang/hugo-theme-bootstrap/issues/new?template=feature_request.md)
-- [Bug 反馈](https://github.com/razonyang/hugo-theme-bootstrap/issues/new?template=bug_report.md)
+- [特性请求](https://github.com/razonyang/hugo-theme-bootstrap/issues/new?template=feature_request.yml)
+- [Bug 反馈](https://github.com/razonyang/hugo-theme-bootstrap/issues/new?template=bug_report.yml)
 - [讨论](https://github.com/razonyang/hugo-theme-bootstrap/discussions): 提问题、分享想法等。
 
 ## 贡献
