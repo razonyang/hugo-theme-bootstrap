@@ -2,3 +2,5 @@ node_modules/
 exampleSite/resources/_gen/
 .idea/
 .hugo_build.lock
+public/
+resources/
