@@ -1,10 +1,10 @@
 # Hugo Bootstrap Theme
 
-[![PageSpeed insights](https://img.shields.io/badge/pagespeed-95%2B-success?style=flat-square)](https://pagespeed.web.dev/report?url=https://hbs-skeleton.netlify.app/)
+[![PageSpeed insights](https://img.shields.io/badge/pagespeed-90%2B-success?style=flat-square)](https://pagespeed.web.dev/report?url=https://hbs-skeleton.netlify.app/)
+[![GitHub contributors](https://img.shields.io/github/contributors-anon/razonyang/hugo-theme-bootstrap?style=flat-square)](https://github.com/razonyang/hugo-theme-bootstrap/graphs/contributors)
 [![Financial Contributors](https://opencollective.com/hbs/tiers/badge.svg)](https://opencollective.com/hbs)
 [![Hugo version](https://img.shields.io/badge/hugo-0.97.0%2B-important?style=flat-square)](https://github.com/gohugoio/hugo/releases)
 [![Releases](https://img.shields.io/github/release/razonyang/hugo-theme-bootstrap?style=flat-square)](https://github.com/razonyang/hugo-theme-bootstrap/releases)
-[![GitHub contributors](https://img.shields.io/github/contributors/razonyang/hugo-theme-bootstrap?style=flat-square)](https://github.com/razonyang/hugo-theme-bootstrap/graphs/contributors)
 [![License](https://img.shields.io/github/license/razonyang/hugo-theme-bootstrap?style=flat-square)](https://github.com/razonyang/hugo-theme-bootstrap/blob/master/LICENSE)
 
 A fast, responsive and feature-rich Hugo theme for personal blog and documentations.
@@ -40,18 +40,28 @@ There is also a [list of websites that use this theme](https://github.com/razony
 | [Get Involved](https://hbs.razonyang.com/v1/en/docs/get-involved) | [参与我们](https://hbs.razonyang.com/v1/zh-hans/docs/get-involved) | [參與我們](https://hbs.razonyang.com/v1/zh-hant/docs/get-involved)
 
 
-## Funding
+## Contributions
 
-Thank you very much to the following sponsors and backers(sort by funding time).
+Thank you very much to the following contributors, sponsors and backers(sort by contributed or funding time).
+
+### Contributors
+
+[![GitHub contributors](https://img.shields.io/github/contributors-anon/razonyang/hugo-theme-bootstrap?style=for-the-badge)](https://github.com/razonyang/hugo-theme-bootstrap/graphs/contributors)
 
 ### Sponsors
 
+[![Become a Sponsor](https://opencollective.com/hbs/tiers/sponsor.svg?avatarHeight=56)](https://opencollective.com/hbs#support)
+
 Sponsors will appear on our website with their brands and logos.
 
-- [Netlify](https://netlify.app/): the example site is published on Netlify with [Open Source Plan](https://www.netlify.com/legal/open-source-policy/).
-- [DocSearch](https://docsearch.algolia.com/): We're using DocSearch instead of local search on our webstie.
+| Sponsor | Description |
+|---|---|
+| [![Netlify](https://www.netlify.com/img/global/badges/netlify-color-accent.svg)](https://netlify.app/) | the docs site is deployed on Netlify with [Open Source Plan](https://www.netlify.com/legal/open-source-policy/).
+| [![DocSearch](https://docsearch.algolia.com/img/docsearch-logo.svg)](https://docsearch.algolia.com/) | We use DocSearch instead of built-in local search on the documentations site.
 
 ### Backers
+
+[![Become a Backer](https://opencollective.com/hbs/tiers/backer.svg?avatarHeight=56)](https://opencollective.com/hbs#support)
 
 - [Dikea](https://github.com/Dikea)
 - [Sagar Behere](https://github.com/sagarbehere)
