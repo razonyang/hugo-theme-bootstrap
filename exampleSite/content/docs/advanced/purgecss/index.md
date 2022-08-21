@@ -59,7 +59,13 @@ A common scenario is rendering HTML blocks using JavaScript, if you're using Jav
 
 {{% code/purgecss-template-partial %}}
 
-Hugo will calculate used CSS into `hugo_stats.json`, such as the `search-results` class.
+Hugo will calculate used CSS into `hugo_stats.json`.
+
+{{% code/purgecss-template-stat %}}
+
+As you can see, the CSS(`custom-widget-bar`) used inside `<script>` tag won't be included into `hugo_stats.json`, so we should use other HTML tags with the `d-none` class to wrap your template.
+
+> `d-none` is a Bootstrap CSS utility, equals to `display: none`.
 
 1. And then render the template via any template engines.
 

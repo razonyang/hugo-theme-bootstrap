@@ -58,7 +58,13 @@ PurgeCSS 需要设置以下配置。
 
 {{% code/purgecss-template-partial %}}
 
-Hugo 会将使用过的 CSS 计算到 `hugo_stats.json` 中，例如 `search-results`。
+Hugo 会将使用过的 CSS 计算到 `hugo_stats.json` 中。
+
+{{% code/purgecss-template-stat %}}
+
+正如你所看到的，在 `<script>` 标签中使用的 CSS（`custom-widget-bar`）不会被包含在 `hugo_stats.json` 中，所以我们应该使用其他带有 `d-none` 类的 HTML 标签来包装你的模板。
+
+> `d-none` 是 Bootstrap 中的一个 CSS 类，等同于 `display: none`。
 
 1. 然后通过任意的模板引擎渲染模板。
 
