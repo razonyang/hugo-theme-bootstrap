@@ -14,6 +14,11 @@
   --#{$prefix}surface-color-secondary: #{$surface-color-secondary};
   --#{$prefix}surface-color-disabled: #{$surface-color-disabled};
   --#{$prefix}shadow-rgb: 0, 0, 0;
+  --#{$prefix}scrollbar-width: 10px;
+  --#{$prefix}scrollbar-height: 10px;
+  --#{$prefix}scrollbar-track-bg: var(--#{$prefix}secondary-bg);
+  --#{$prefix}scrollbar-thumb-bg: var(--#{$prefix}secondary);
+  --#{$prefix}scrollbar-corner-bg: var(--#{$prefix}secondary);
 }
 
 [data-bs-theme='dark'] {

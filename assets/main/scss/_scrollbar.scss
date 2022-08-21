@@ -1,0 +1,16 @@
+::-webkit-scrollbar {
+    width: var(--#{$prefix}scrollbar-width);
+    height: var(--#{$prefix}scrollbar-height);
+}
+
+::-webkit-scrollbar-track {
+    background: var(--#{$prefix}scrollbar-track-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--#{$prefix}scrollbar-thumb-bg);
+}
+
+::-webkit-scrollbar-corner {
+    background: var(--#{$prefix}scrollbar-corner-bg);
+}
