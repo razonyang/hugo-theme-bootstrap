@@ -64,7 +64,7 @@ body:
     id: version-theme
     attributes:
       label: What version of theme are you using?
-      description: '`cd themes/hugo-theme-bootstrap && git log -n 1 --decorate --pretty=oneline` or `grep 'require\ github.com/razonyang/hugo-theme-bootstrap' go.mod`'
+      description: "`cd themes/hugo-theme-bootstrap && git log -n 1 --decorate --pretty=oneline` or `grep 'require\ github.com/razonyang/hugo-theme-bootstrap' go.mod`"
       placeholder: 'e.g., v1.0.0, branch(master) or commit'
     validations:
       required: true
