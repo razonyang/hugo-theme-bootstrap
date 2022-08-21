@@ -31,17 +31,12 @@ Users who have used the block copy button are no stranger to the Snackbar, which
 
 Thanks to `assets/main/js/custom.ts`, we can customize the JavaScript, here we export the whole Snackbar as a global variable:
 
-```typescript
-import Snackbar from '... /... /js/snackbar';
-
-const _global = (window || global ) as any
-_global.Snackbar = Snackbar
-```
+{{% code/snackbar %}}
 
 ## Usage
 
 Then we can call it up in HTML or JavaScript:
 
-```html
-<button onclick="Snackbar.show('Triggered by button')">Snackbar</button>
-```
+{{% code/snackbar-example %}}
+
+> See [Hooks]({{< ref "docs/advanced/hooks" >}}) for how to inject custom HTML.

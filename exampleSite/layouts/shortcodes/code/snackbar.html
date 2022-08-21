@@ -1,0 +1,11 @@
+```typescript
+import Snackbar from 'js/snackbar';
+
+// Show a message via JavaScript.
+Snackbar.show('a message with 3s duration from pure JavaScript', 3000)
+
+// Export the Snackbar as a global variable, so that you can send a message from a HTML.
+// Such as: <button onclick="Snackbar.show('message from a button')">Snackbar</button>.
+const _global = (window || global ) as any
+_global.Snackbar = Snackbar
+```

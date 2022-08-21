@@ -31,17 +31,12 @@ authors = ["RazonYang"]
 
 得益于 `assets/main/js/custom.ts`，我们可以自定义 JavaScript，这里我们将整个 Snackbar 导出为全局变量：
 
-```typescript
-import Snackbar from '../../js/snackbar';
-
-const _global = (window || global ) as any
-_global.Snackbar = Snackbar
-```
+{{% code/snackbar %}}
 
 ## 使用
 
 接着我们就可以在 HTML 或 JavaScript 中进行调用：
 
-```html
-<button onclick="Snackbar.show('Triggered by button')">Snackbar</button>
-```
+{{% code/snackbar-example %}}
+
+> 参阅[钩子]({{< ref "docs/advanced/hooks" >}})以了解如何注入自定义 HTML。
