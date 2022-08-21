@@ -2,3 +2,6 @@ contact_links:
   - name: Discussions
     url: https://github.com/razonyang/hugo-theme-bootstrap/discussions/new
     about: Ask and discuss questions with others.
+  - name: Documentations
+    url: https://hbs.razonyang.com
+    about: Read and search the documentations.
