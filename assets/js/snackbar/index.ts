@@ -17,6 +17,9 @@ class Snackbar {
     this.element.classList.add('show');
     setTimeout(() => {
       this.element.classList.remove('show');
+      setTimeout(() => {
+        this.element.innerHTML = '';
+      }, 1000)
     }, duration);
   }
 }
