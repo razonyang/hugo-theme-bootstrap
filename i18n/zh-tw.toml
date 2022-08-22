@@ -190,11 +190,17 @@ other = "搜尋"
 [search_advanced]
 other = "高級"
 
+[search_date]
+other = "日期"
+
 [search_missing_keywords]
 other = "請輸入搜尋關鍵詞"
 
 [search_no_results]
 other = "找不到相關結果"
+
+[search_sorting]
+other = "排序"
 
 [search_stat]
 other = "找到相關結果 {{ .Total }} 個"

@@ -3,6 +3,7 @@ import Form from './form';
 
 class Engine {
   private fuse: Fuse;
+  private pages;
 
   constructor(form: Form, callback: (data: FormData) => void) {
     const options = Object.assign(window.fuseOptions, {
@@ -21,6 +22,7 @@ class Engine {
       return response.json();
     }).then((response) => {
       const pages = response.pages;
+      this.pages = pages;
       const taxonomies = ['categories', 'authors', 'series', 'tags'];
       for (const i in taxonomies) {
         const datalist = document.querySelector(
@@ -42,7 +44,35 @@ class Engine {
     })
   }
 
+  sortByDate(a, b, asc = true): number {
+    if (!(a.idx in this.pages)) {
+      return 1;
+    }
+    if (!(b.idx in this.pages)) {
+      return -1;
+    }
+    return this.pages[a.idx].timestamp < this.pages[b.idx].timestamp ? (asc ? -1 : 1) : (asc ? 1 : -1)
+  }
+
+  sortByScore(a, b): number {
+    return a.score === b.score ? a.idx < b.idx ? -1 : 1 : a.score < b.score ? -1 : 1
+  }
+
   search(data: FormData) {
+    console.log(data.get('sort'))
+    switch(data.get('sort')) {
+      case 'date asc':
+        this.fuse.options.sortFn = (a, b) => this.sortByDate(a, b)
+        break;
+      case 'date desc':
+        this.fuse.options.sortFn = (a, b): number => {
+          return this.sortByDate(a, b, false)
+        }
+        break;
+      default:
+        this.fuse.options.sortFn = this.sortByScore
+        break;
+    }
     return new Promise((resolve) => {
       // delay search for displaying the loading spinner.
       setTimeout(() => {
