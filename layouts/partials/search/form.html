@@ -16,17 +16,21 @@
         </span>
     </div>
     <div class="row g-1 collapse" id="advanced-search">
-        <select class="form-select col-12 mb-2" aria-label="Sorting" name="sort" id="sorting-select">
-            <option selected value="">{{ i18n "search_sorting" }}</option>
-            <option value="date asc">{{ i18n "search_date"}} ↑</option>
-            <option value="date desc">{{ i18n "search_date"}} ↓</option>
-        </select>
-        <select class="form-select col-12 mb-2" aria-label="Language" name="lang" id="languages-select">
-            <option selected value="">{{ i18n "language" }}</option>
-            {{- range .Site.Languages -}}
-            <option value="{{ .Lang }}">{{ .LanguageName }}</option>
-            {{- end }}
-        </select>
+        <div class="col-6 mb-2">
+            <select class="form-select" aria-label="{{ i18n "language" }}" name="lang" id="languages-select">
+                <option selected value="">{{ i18n "language" }}</option>
+                {{- range .Site.Languages -}}
+                <option value="{{ .Lang }}">{{ .LanguageName }}</option>
+                {{- end }}
+            </select>
+        </div>
+        <div class="col-6 mb-2">
+            <select class="form-select" aria-label="{{ i18n "search_sorting" }}" name="sort" id="sorting-select">
+                <option selected value="">{{ i18n "search_sorting" }}</option>
+                <option value="date asc">{{ i18n "search_date"}} ↑</option>
+                <option value="date desc">{{ i18n "search_date"}} ↓</option>
+            </select>
+        </div>
         <div class="form-floating col-6 col-lg-3">
             <input type="text" class="form-control form-control-sm" name="author" id="author-input" list="authors-list" placeholder="{{ i18n "authors" }}">
             <label for="author-input">{{ i18n "authors" }}</label>
