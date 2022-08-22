@@ -190,11 +190,17 @@ other = "搜索"
 [search_advanced]
 other = "高级"
 
+[search_date]
+other = "日期"
+
 [search_missing_keywords]
 other = "请输入搜索关键词"
 
 [search_no_results]
 other = "找不到相关结果"
+
+[search_sorting]
+other = "排序"
 
 [search_stat]
 other = "找到相关结果 {{ .Total }} 个"

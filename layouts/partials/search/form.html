@@ -16,6 +16,11 @@
         </span>
     </div>
     <div class="row g-1 collapse" id="advanced-search">
+        <select class="form-select col-12 mb-2" aria-label="Sorting" name="sort" id="sorting-select">
+            <option selected value="">{{ i18n "search_sorting" }}</option>
+            <option value="date asc">{{ i18n "search_date"}} ↑</option>
+            <option value="date desc">{{ i18n "search_date"}} ↓</option>
+        </select>
         <select class="form-select col-12 mb-2" aria-label="Language" name="lang" id="languages-select">
             <option selected value="">{{ i18n "language" }}</option>
             {{- range .Site.Languages -}}

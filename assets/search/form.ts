@@ -25,6 +25,10 @@ class Form {
     this.lang.addEventListener('change', () => {
       this.submit();
     });
+    
+    form.querySelector('#sorting-select').addEventListener('change', () => {
+      this.submit();
+    })
   }
 
   private submit() {
