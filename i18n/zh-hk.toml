@@ -199,6 +199,9 @@ other = "請輸入搜索關鍵詞"
 [search_no_results]
 other = "找不到相關結果"
 
+[search_score]
+other = "評分"
+
 [search_sorting]
 other = "排序"
 

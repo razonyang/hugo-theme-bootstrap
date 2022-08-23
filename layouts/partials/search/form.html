@@ -16,20 +16,22 @@
         </span>
     </div>
     <div class="row g-1 collapse" id="advanced-search">
-        <div class="col-6 mb-2">
+        <div class="form-floating col-6 mb-2">
             <select class="form-select" aria-label="{{ i18n "language" }}" name="lang" id="languages-select">
-                <option selected value="">{{ i18n "language" }}</option>
+                <option selected value="">{{ i18n "all" }}</option>
                 {{- range .Site.Languages -}}
                 <option value="{{ .Lang }}">{{ .LanguageName }}</option>
                 {{- end }}
             </select>
+            <label for="languages-select">{{ i18n "language" }}</label>
         </div>
-        <div class="col-6 mb-2">
+        <div class="form-floating col-6 mb-2">
             <select class="form-select" aria-label="{{ i18n "search_sorting" }}" name="sort" id="sorting-select">
-                <option selected value="">{{ i18n "search_sorting" }}</option>
+                <option selected value="">{{ i18n "search_score" }}</option>
                 <option value="date asc">{{ i18n "search_date"}} ↑</option>
                 <option value="date desc">{{ i18n "search_date"}} ↓</option>
             </select>
+            <label for="sorting-select">{{ i18n "search_sorting" }}</label>
         </div>
         <div class="form-floating col-6 col-lg-3">
             <input type="text" class="form-control form-control-sm" name="author" id="author-input" list="authors-list" placeholder="{{ i18n "authors" }}">

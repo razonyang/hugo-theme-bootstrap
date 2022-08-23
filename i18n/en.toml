@@ -209,6 +209,9 @@ other = "Please enter search keywords"
 [search_no_results]
 other = "No results found"
 
+[search_score]
+other = "Score"
+
 [search_sorting]
 other = "Sorting"
 
