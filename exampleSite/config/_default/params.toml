@@ -147,7 +147,7 @@ viewer = true # Image Viewer
   # lazyLoading = false # Default to true.
 
 [search]
-  paginate = 5 # Pagination. Default to 10.
+  # paginate = 5 # Pagination. Default to 10.
   # resultContentWordCount = 240 # The maximum word count of result content for displaying.
   # Fuse.js options. See https://fusejs.io/api/options.html.
   [search.fuse]
@@ -214,7 +214,7 @@ viewer = true # Image Viewer
     #   "/"
     # ]
     # scripts = [
-    #   "https://utteranc.es/client.js"
+    #   "/assets/js/foo.js"
     # ]
     # styles = [
     #   "https://fonts.googleapis.com/css2?family=Roboto&display=swap"
