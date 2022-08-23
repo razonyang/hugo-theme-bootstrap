@@ -130,11 +130,11 @@ You can pin posts on the home page by setting `pinned` to `true` on the front ma
 +++
 title = "Pinned Post"
 pinned = true
-weight = 100
+pinnedWeight = 100
 +++
 ```
 
-> If there is multiple pinned posts, they are sorted by `weight` in descending order.
+> If there is multiple pinned posts, they are sorted by `pinnedWeight` in descending order.
 
 ```toml {title="config/_default/params.toml"}
 pinnedPost = false # Disable pinned posts globally.

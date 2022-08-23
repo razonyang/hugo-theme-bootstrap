@@ -128,11 +128,11 @@ The featured image doesn't show up above content by default, you'll need to turn
 +++
 title = "Pinned Post"
 pinned = true
-weight = 100
+pinnedWeight = 100
 +++
 ```
 
-> 如果有多个置顶文章，那么将按照 `weight` 进行降序排序。
+> 如果有多个置顶文章，那么将按照 `pinnedWeight` 进行降序排序。
 
 ### 站点配置
 
