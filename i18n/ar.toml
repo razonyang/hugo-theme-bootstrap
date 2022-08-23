@@ -200,11 +200,20 @@ other = "البحث"
 [search_advanced]
 other = "بحث متقدم"
 
+[search_date]
+other = "التاريخ"
+
 [search_missing_keywords]
 other = "من فضلك أدخل كلمات البحث"
 
 [search_no_results]
 other = "لا يوجد نتائج"
+
+[search_score]
+other = "التقييم"
+
+[search_sorting]
+other = "الترتيب"
 
 [search_stat]
 other = "عُثر على {{ .Total }} نتيجة"
@@ -217,6 +226,9 @@ other = "السلاسل"
 
 [settings]
 other = "الإعدادات"
+
+[stats]
+other = "اﻹحصائيات"
 
 [table_of_contents]
 other = "الفِهْرِس"
