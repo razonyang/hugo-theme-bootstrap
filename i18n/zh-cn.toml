@@ -199,6 +199,9 @@ other = "请输入搜索关键词"
 [search_no_results]
 other = "找不到相关结果"
 
+[search_score]
+other = "评分"
+
 [search_sorting]
 other = "排序"
 
