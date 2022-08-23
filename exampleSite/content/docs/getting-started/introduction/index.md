@@ -35,7 +35,7 @@ Hugo Bootstrap Theme(HBS) is a fast, responsive, multipurpose and feature-rich H
 - PurgeCSS: remove unused CSS.
 - [Flexible and Configurable]({{< ref "/docs/configuration" >}}).
 - Fast and Good User Experience: [Google PageSpeed Insights](https://pagespeed.web.dev/report?url=https://hbs.razonyang.com/en/)'s score is over 95.
-- RTL support: [Arabic demo site](https://hbs.razonyang.com/ar/).
+- RTL support: [Arabic demo site]({{< ref path="/" lang="ar" >}}).
 - Built on top of [Bootstrap 5](https://getbootstrap.com/).
 - FontAwesome icons.
 - Responsive.
