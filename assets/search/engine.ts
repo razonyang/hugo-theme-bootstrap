@@ -59,7 +59,6 @@ class Engine {
   }
 
   search(data: FormData) {
-    console.log(data.get('sort'))
     switch(data.get('sort')) {
       case 'date asc':
         this.fuse.options.sortFn = (a, b) => this.sortByDate(a, b)
