@@ -17,7 +17,7 @@ series = ["Docs"]
 images = []
 +++
 
-This article will detail how to build a Docker images.
+This article will detail how to build a Docker image.
 
 <!--more-->
 
