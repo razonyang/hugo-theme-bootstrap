@@ -35,7 +35,7 @@ videos = [
 
 PWAs([Progressive web apps](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)) are web apps developed using a number of specific technologies and standard patterns to allow them to take advantage of both web and native app features.
 
-We are in the experimental stage of PWA, but some major features have been added, such as install site to home screen, precache files and available offline.
+HBS provides some basic features, such as install site to home screen, precache files and available offline.
 
 <!--more-->
 

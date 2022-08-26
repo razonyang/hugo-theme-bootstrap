@@ -35,7 +35,7 @@ videos = [
 
 PWAs([渐进式 web 应用程序](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)) 是使用一些特定的技术和标准模式开发的，允许它们同时利用 web 和本机应用程序功能。
 
-我们正处于 PWA 的实验阶段，但添加了一些主要功能，如将站点安装到主屏幕、预缓存文件和离线可用。
+HBS 提供了一些基本的特性，如将站点安装到主屏幕、预缓存文件和离线可用。
 
 <!--more-->
 
