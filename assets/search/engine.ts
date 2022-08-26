@@ -12,10 +12,10 @@ class Engine {
         'title',
         'content',
         'lang',
-        'authors.title',
-        'categories.title',
-        'series.title',
-        'tags.title',
+        'authors_titles',
+        'categories_titles',
+        'series_titles',
+        'tags_titles',
       ],
     });
     fetch(window.searchIndex).then((response)=>{
@@ -84,19 +84,19 @@ class Engine {
         };
         const author = data.get('author');
         if (author) {
-          params.$and.push({ 'authors.title': author });
+          params.$and.push({ 'authors_titles': author });
         }
         const category = data.get('category');
         if (category) {
-          params.$and.push({ 'categories.title': category });
+          params.$and.push({ 'categories_titles': category });
         }
         const series = data.get('series');
         if (series) {
-          params.$and.push({ 'series.title': series });
+          params.$and.push({ 'series_titles': series });
         }
         const tag = data.get('tag');
         if (tag) {
-          params.$and.push({ 'tags.title': tag });
+          params.$and.push({ 'tags_titles': tag });
         }
         const lang = data.get('lang');
         if (lang) {

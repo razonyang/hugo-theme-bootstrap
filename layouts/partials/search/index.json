@@ -41,11 +41,16 @@
     ) -}}
     {{- range $taxonomyName, $value := $.Site.Taxonomies }}
       {{- $terms := slice }}
+      {{- $termTitles := slice }}
       {{- range $page.GetTerms $taxonomyName }}
         {{- $terms = $terms | append (dict "title" .Title "url" .Permalink) }}
+        {{- $termTitles = $termTitles | append .Title }}
         {{- $.Scratch.Add ($taxonomyName | pluralize) (slice .Title) }}
       {{- end }}
-      {{- $item = merge $item (dict $taxonomyName $terms) }}
+      {{- $item = merge $item (dict
+          $taxonomyName $terms
+          (printf "%s_titles" $taxonomyName) (delimit $termTitles " ")
+      )}}
     {{- end }}
     {{- $.Scratch.Add "pages" (slice $item) }}
 {{- end -}}
