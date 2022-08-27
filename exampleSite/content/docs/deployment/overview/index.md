@@ -62,6 +62,7 @@ This step depends on the which deployment methods you use.
 1. [GitHub Pages]({{< ref "docs/deployment/github-pages" >}})
 1. [Netlify]({{< ref "docs/deployment/netlify" >}})
 1. [Cloudflare Pages]({{< ref "docs/deployment/cloudflare-pages" >}})
+1. [GitLab Pages]({{< ref "docs/deployment/gitlab-pages" >}})
 1. Find more on [Hosting & Deployment](https://gohugo.io/hosting-and-deployment/)
 
 ## Further Reading
