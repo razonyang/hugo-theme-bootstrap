@@ -15,6 +15,7 @@ categories = ["Deployment"]
 tags = ["GitLab Pages", "GitLab CI"]
 series = ["Docs"]
 images = []
+authors = ["Rubonnek"]
 +++
 
 This article explains how to deploy sites to [GitLab Pages](https://docs.gitlab.com/ee/user/project/pages/) using GitLab CI.
