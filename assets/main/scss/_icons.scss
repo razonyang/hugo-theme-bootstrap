@@ -1,0 +1,20 @@
+:not([fontawesome-i2svg-complete]) {
+    i {
+        &.fas,
+        &.fag,
+        &.fab {
+            &::before {
+                content: '';
+                display: inline-block;
+                width: 1.25em;
+                height: 1em;
+            }
+
+            &.fa-2x {
+                &::before {
+                    font-size: 2em;
+                }
+            }
+        }
+    }
+}
