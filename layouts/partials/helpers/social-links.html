@@ -24,6 +24,7 @@
 {{- $lastfm := dict "lastfm" (dict "url" "https://www.last.fm/user/%s" "title" "Last.fm") }}
 {{- $bilibili := dict "bilibili" (dict "url" "https://space.bilibili.com/%s" "title" "bilibili" "icon" "fab fa-bilibili") }}
 {{- $tiktok := dict "tiktok" (dict "url" "https://www.tiktok.com/@%s" "title" "TikTok" "icon" "fab fa-tiktok") }}
+{{- $artstation := dict "artstation" (dict "url" "https://www.artstation.com/%s" "icon" "fab fa-artstation") }}
 {{- $pinterest := dict "pinterest" (dict "url" "https://www.pinterest.com/%s" "icon" "fab fa-pinterest") }}
 {{- $mastodon := dict "mastodon" (dict "url" "https://mastodon.social/@%s" "icon" "fab fa-mastodon") }}
 {{- $liberapay := dict "liberapay" (dict "url" "https://liberapay.com/%s" "icon" "fab fa-liberapay") }}
@@ -31,7 +32,7 @@
 {{- $patreon := dict "patreon" (dict "url" "https://www.patreon.com/%s" "icon" "fab fa-patreon") }}
 {{- $tipeee := dict "tipeee" (dict "url" "https://fr.tipeee.com/%s" "icon" "fab fa-tipeee") }}
 {{- $website := dict "website" (dict "url" "%s" "icon" "fas fa-link") }}
-{{- $items = merge $items $tumblr $reddit $telegram $qq $dockerhub $bitbucket $kaggle $lastfm $bilibili $tiktok $pinterest $mastodon $liberapay $paypal $patreon $tipeee $website }}
+{{- $items = merge $items $tumblr $reddit $telegram $qq $dockerhub $bitbucket $kaggle $lastfm $bilibili $tiktok $artstation $pinterest $mastodon $liberapay $paypal $patreon $tipeee $website }}
 {{- $size := default "" .size }}
 {{- $linkClass := default "" .linkClass }}
 {{- $iconText := default false .iconText }}
