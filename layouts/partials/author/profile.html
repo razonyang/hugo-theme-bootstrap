@@ -2,7 +2,7 @@
     {{- if eq .Data.Plural "authors" }}
     <div class="row card author component">
         <div class="card-body">
-            <div class="d-flex">
+            <div class="d-flex flex-column flex-md-row align-items-center align-items-md-start">
                 {{- $avatar := .Resources.GetMatch "avatar*" -}}
                 {{- with $avatar}}
                 <div class="flex-shrink-0 d-flex align-items-center">
@@ -12,13 +12,20 @@
                     </picture>
                 </div>
                 {{- end }}
-                <div class="flex-grow-1{{ if $avatar }} ms-4{{ end }}">
+                <div class="text-center text-md-start flex-grow-1{{ if $avatar }} ms-0 ms-md-4{{ end }}">
                     <h1 class="author-name mb-2 text-surface">{{ .Title }}</h1>
                     {{- with .Description }}
                     <div class="author-description mb-2">{{ . }}</div>
                     {{- end }}
                     {{- with .Params.social }}
-                        {{- partial "helpers/social-links" (dict "links" . "size" "fa-2x" "class" "mb-1" "OutputFormats" $.OutputFormats "home" ($.GetPage "/") "params" $.Site.Params) -}}
+                        {{- partial "helpers/social-links" (dict
+                            "links" .
+                            "size" "fa-2x"
+                            "class" "justify-content-md-start mb-1"
+                            "OutputFormats" $.OutputFormats
+                            "home" ($.GetPage "/")
+                            "params" $.Site.Params
+                        ) -}}
                     {{- end }}
                     <div class="author-meta">
                         <span class="author-post-count"><i class="fas fa-fw fa-file-alt me-1"></i>{{ i18n "post_count" (dict "Count" (len .Data.Pages)) }}</span>
