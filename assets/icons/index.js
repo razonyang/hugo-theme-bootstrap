@@ -56,6 +56,7 @@ import {
 import { faStar } from '@fortawesome/free-regular-svg-icons';
 import {
   faAlipay,
+  faArtstation,
   faBitbucket,
   faCreativeCommons,
   faCreativeCommonsBy,
@@ -155,6 +156,7 @@ let icons = [
 
   // Brands
   faAlipay,
+  faArtstation,
   faBitbucket,
   faCreativeCommons,
   faCreativeCommonsBy,
