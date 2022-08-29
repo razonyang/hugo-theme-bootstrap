@@ -227,6 +227,114 @@ other = "Series"
 [settings]
 other = "Settings"
 
+[social_artstation]
+other = "ArtStation"
+
+[social_bilibili]
+other = "Bilibili"
+
+[social_bitbucket]
+other = "Bitbucket"
+
+[social_discord]
+other = "Discord"
+
+[social_discourse]
+other = "Discourse"
+
+[social_dockerhub]
+other = "Docker Hub"
+
+[social_email]
+other = "Email"
+
+[social_facebook]
+other = "Facebook"
+
+[social_facebookgroup]
+other = "Facebook Group"
+
+[social_github]
+other = "GitHub"
+
+[social_gitlab]
+other = "GitLab"
+
+[social_instagram]
+other = "Instagram"
+
+[social_kaggle]
+other = "Kaggle"
+
+[social_lastfm]
+other = "Last.fm"
+
+[social_liberapay]
+other = "Liberapay"
+
+[social_linkedin]
+other = "LinkedIn"
+
+[social_mastodon]
+other = "Mastodon"
+
+[social_medium]
+other = "Medium"
+
+[social_patreon]
+other = "Patreon"
+
+[social_paypal]
+other = "PayPal"
+
+[social_pinterest]
+other = "Pinterest"
+
+[social_qq]
+other = "QQ"
+
+[social_quora]
+other = "Quora"
+
+[social_reddit]
+other = "Reddit"
+
+[social_rss]
+other = "RSS"
+
+[social_stackoverflow]
+other = "Stack Overflow"
+
+[social_telegram]
+other = "Telegram"
+
+[social_tipeee]
+other = "Tipeee"
+
+[social_tiktok]
+other = "TikTok"
+
+[social_tumblr]
+other = "Tumblr"
+
+[social_twitter]
+other = "Twitter"
+
+[social_website]
+other = "Website"
+
+[social_weibo]
+other = "Weibo"
+
+[social_xing]
+other = "XING"
+
+[social_youtube]
+other = "YouTube"
+
+[social_zhihu]
+other = "Zhihu"
+
 [stats]
 other = "Stats"
 

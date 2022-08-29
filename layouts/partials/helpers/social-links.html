@@ -2,36 +2,37 @@
 {{/* icon: the Font Awesome icon class */}}
 {{- $socials := dict
   "artstation" (dict "url" "https://www.artstation.com/%s" "icon" "fab fa-artstation")
-  "bilibili" (dict "url" "https://space.bilibili.com/%s" "title" "bilibili" "icon" "fab fa-bilibili")
+  "bilibili" (dict "url" "https://space.bilibili.com/%s" "icon" "fab fa-bilibili")
   "bitbucket" (dict "url" "https://bitbucket.org/%s")
   "discord" (dict "url" "https://discord.com/invite/%s" "icon" "fab fa-discord")
   "discourse" (dict "url" "%s" "icon" "fab fa-discourse")
-  "dockerhub" (dict "url" "https://hub.docker.com/u/%s" "icon" "fab fa-docker" "title" "Docker Hub")
+  "dockerhub" (dict "url" "https://hub.docker.com/u/%s" "icon" "fab fa-docker")
   "facebook" (dict "url" "https://facebook.com/%s" "icon" "fab fa-facebook-f")
-  "facebookgroup" (dict "url" "https://facebook.com/groups/%s" "icon" "fab fa-facebook-square" "title" "Facebook Group")
-  "github" (dict "url" "https://github.com/%s" "title" "GitHub")
-  "gitlab" (dict "url" "https://gitlab.com/%s" "title" "GitLab")
+  "facebookgroup" (dict "url" "https://facebook.com/groups/%s" "icon" "fab fa-facebook-square")
+  "github" (dict "url" "https://github.com/%s")
+  "gitlab" (dict "url" "https://gitlab.com/%s")
   "instagram" (dict "url" "https://www.instagram.com/%s")
   "kaggle" (dict "url" "https://kaggle.com/%s")
-  "lastfm" (dict "url" "https://www.last.fm/user/%s" "title" "Last.fm")
+  "lastfm" (dict "url" "https://www.last.fm/user/%s")
   "liberapay" (dict "url" "https://liberapay.com/%s" "icon" "fab fa-liberapay")
-  "linkedin" (dict "url" "https://linkedin.com/in/%s" "icon" "fab fa-linkedin-in" "title" "LinkedIn")
+  "linkedin" (dict "url" "https://linkedin.com/in/%s" "icon" "fab fa-linkedin-in")
   "mastodon" (dict "url" "https://mastodon.social/@%s" "icon" "fab fa-mastodon")
+  "medium" (dict "url" "https://medium.com/@%s" "icon" "fab fa-medium-m")
   "patreon" (dict "url" "https://www.patreon.com/%s" "icon" "fab fa-patreon")
   "paypal" (dict "url" "https://www.paypal.com/paypalme/%s" "icon" "fab fa-paypal")
   "pinterest" (dict "url" "https://www.pinterest.com/%s" "icon" "fab fa-pinterest")
-  "qq" (dict "url" "http://wpa.qq.com/msgrd?v=3&uin=%s&site=qq&menu=yes" "title" "QQ")
+  "qq" (dict "url" "http://wpa.qq.com/msgrd?v=3&uin=%s&site=qq&menu=yes")
   "quora" (dict "url" "https://www.quora.com/profile/%s")
   "reddit" (dict "url" "https://www.reddit.com/user/%s")
-  "stackoverflow" (dict "url" "https://stackoverflow.com/users/%s" "icon" "fab fa-stack-overflow" "title" "Stack Overflow")
+  "stackoverflow" (dict "url" "https://stackoverflow.com/users/%s" "icon" "fab fa-stack-overflow")
   "telegram" (dict "url" "https://t.me/%s" "icon" "fab fa-telegram-plane")
   "tipeee" (dict "url" "https://fr.tipeee.com/%s" "icon" "fab fa-tipeee")
-  "tiktok" (dict "url" "https://www.tiktok.com/@%s" "title" "TikTok" "icon" "fab fa-tiktok")
+  "tiktok" (dict "url" "https://www.tiktok.com/@%s" "icon" "fab fa-tiktok")
   "tumblr" (dict "url" "https://%s.tumblr.com")
   "twitter" (dict "url" "https://twitter.com/%s")
   "website" (dict "url" "%s" "icon" "fas fa-link")
   "weibo" (dict "url" "https://weibo.com/%s")
-  "xing" (dict "url" "https://www.xing.com/profile/%s" "icon" "fab fa-xing" "title" "Xing")
+  "xing" (dict "url" "https://www.xing.com/profile/%s" "icon" "fab fa-xing")
   "youtube" (dict "url" "https://www.youtube.com/channel/%s" "icon" "fab fa-youtube")
   "zhihu" (dict "url" "https://www.zhihu.com/people/%s")
 -}}
@@ -43,29 +44,18 @@
 <nav class="social-links nav justify-content-center{{ with .class }} {{ . }}{{ end }}">
 {{- range $key, $user := .links }}
   {{- if eq $key "email" }}
-    <a class="nav-link social-link{{ with $linkClass }} {{ . }}{{ end }}" href="mailto:{{ $user }}" title="{{ title $key }}">
+    <a class="nav-link social-link{{ with $linkClass }} {{ . }}{{ end }}" href="mailto:{{ $user }}" title="{{ "social_email" | i18n }}">
       <i class="fas fa-fw{{ with $size }} {{ . }}{{ end }} fa-envelope"></i>
       {{- if $iconText }}
       <span{{ with $iconTextClass }} class="{{ . }}"{{ end }}>Email</span>
       {{- end }}
     </a>
-  {{- else if eq $key "medium" }}
-    {{- $url := urls.Parse $user }}
-    {{- if eq $url.Host "" }}
-      {{- $url = printf "https://medium.com/@%s" $user | urls.Parse }}
-    {{- end }}
-      <a class="nav-link social-link{{ with $linkClass }} {{ . }}{{ end }}" target="_blank" href="{{ $url.String }}" title="Medium" rel="noopener noreferrer">
-        <i class="fab fa-fw{{ with $size }} {{ . }}{{ end }} fa-medium-m"></i>
-        {{- if $iconText }}
-        <span{{ with $iconTextClass }} class="{{ . }}"{{ end }}>Medium</span>
-        {{- end }}
-      </a>
   {{- else }}
     {{- with index $socials $key }}
       {{- $link := printf .url $user }}
       {{- $url := urls.Parse $user }}
       {{- if $url.Scheme }}{{ $link = $url.String }}{{ end }}
-      <a class="nav-link social-link{{ with $linkClass }} {{ . }}{{ end }}" target="_blank" href="{{ $link }}" title="{{ default (title $key) .title }}" rel="noopener noreferrer">
+      <a class="nav-link social-link{{ with $linkClass }} {{ . }}{{ end }}" target="_blank" href="{{ $link }}" title="{{ printf "social_%s" $key | i18n }}" rel="noopener noreferrer">
         <i class="fa-fw{{ with $size }} {{ . }}{{ end }} {{ default ( printf "fab fa-%s" $key ) .icon }}"></i>
         {{- if $iconText }}
         <span{{ with $iconTextClass }} class="{{ . }}"{{ end }}>{{ default (title $key) .title }}</span>
@@ -89,7 +79,7 @@
     {{- end }}
   {{- end }}
   {{- with $rss }}
-  <a class="nav-link social-link{{ with $linkClass }} {{ . }}{{ end }}" target="_blank" href="{{ .Permalink }}" title="RSS" rel="noopener noreferrer">
+  <a class="nav-link social-link{{ with $linkClass }} {{ . }}{{ end }}" target="_blank" href="{{ .Permalink }}" title="{{ "social_rss" | i18n }}" rel="noopener noreferrer">
     <i class="fas fa-fw{{ with $size }} {{ . }}{{ end }} fa-rss"></i>
     {{- if $iconText }}
     <span{{ with $iconTextClass }} class="{{ . }}"{{ end }}>RSS</span>
