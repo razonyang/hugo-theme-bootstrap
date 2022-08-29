@@ -1,42 +1,45 @@
-{{- $github := dict "github" (dict "url" "https://github.com/%s" "title" "GitHub") }}
-{{- $gitlab := dict "gitlab" (dict "url" "https://gitlab.com/%s" "title" "GitLab") }}
-{{- $twitter := dict "twitter" (dict "url" "https://twitter.com/%s") }}
-{{- $facebook := dict "facebook" (dict "url" "https://facebook.com/%s" "icon" "fab fa-facebook-f") }}
-{{- $facebookGroup := dict "facebookgroup" (dict "url" "https://facebook.com/groups/%s" "icon" "fab fa-facebook-square" "title" "Facebook Group") }}
-{{- $linkedin := dict "linkedin" (dict "url" "https://linkedin.com/in/%s" "icon" "fab fa-linkedin-in" "title" "LinkedIn") }}
-{{- $xing := dict "xing" (dict "url" "https://www.xing.com/profile/%s" "icon" "fab fa-xing" "title" "Xing") }}
-{{- $stackoverflow := dict "stackoverflow" (dict "url" "https://stackoverflow.com/users/%s" "icon" "fab fa-stack-overflow" "title" "Stack Overflow") }}
-{{- $weibo := dict "weibo" (dict "url" "https://weibo.com/%s") }}
-{{- $zhihu := dict "zhihu" (dict "url" "https://www.zhihu.com/people/%s") }}
-{{- $quora := dict "quora" (dict "url" "https://www.quora.com/profile/%s") }}
-{{- $instagram := dict "instagram" (dict "url" "https://www.instagram.com/%s") }}
-{{- $tumblr := dict "tumblr" (dict "url" "https://%s.tumblr.com") }}
-{{- $reddit := dict "reddit" (dict "url" "https://www.reddit.com/user/%s") }}
-{{- $telegram := dict "telegram" (dict "url" "https://t.me/%s" "icon" "fab fa-telegram-plane") }}
-{{- $qq := dict "qq" (dict "url" "http://wpa.qq.com/msgrd?v=3&uin=%s&site=qq&menu=yes" "title" "QQ") }}
-{{- $dockerhub := dict "dockerhub" (dict "url" "https://hub.docker.com/u/%s" "icon" "fab fa-docker" "title" "Docker Hub") }}
-{{- $bitbucket := dict "bitbucket" (dict "url" "https://bitbucket.org/%s") }}
-{{- $kaggle := dict "kaggle" (dict "url" "https://kaggle.com/%s") }}
-{{- $youtube := dict "youtube" (dict "url" "https://www.youtube.com/channel/%s" "icon" "fab fa-youtube") }}
-{{- $discord := dict "discord" (dict "url" "https://discord.com/invite/%s" "icon" "fab fa-discord") }}
-{{- $discourse := dict "discourse" (dict "url" "%s" "icon" "fab fa-discourse") }}
-{{- $items := merge $github $gitlab $twitter $facebook $facebookGroup $linkedin $xing $stackoverflow $weibo $zhihu $quora $instagram $discourse $discord $youtube }}
-{{- $lastfm := dict "lastfm" (dict "url" "https://www.last.fm/user/%s" "title" "Last.fm") }}
-{{- $bilibili := dict "bilibili" (dict "url" "https://space.bilibili.com/%s" "title" "bilibili" "icon" "fab fa-bilibili") }}
-{{- $tiktok := dict "tiktok" (dict "url" "https://www.tiktok.com/@%s" "title" "TikTok" "icon" "fab fa-tiktok") }}
-{{- $artstation := dict "artstation" (dict "url" "https://www.artstation.com/%s" "icon" "fab fa-artstation") }}
-{{- $pinterest := dict "pinterest" (dict "url" "https://www.pinterest.com/%s" "icon" "fab fa-pinterest") }}
-{{- $mastodon := dict "mastodon" (dict "url" "https://mastodon.social/@%s" "icon" "fab fa-mastodon") }}
-{{- $liberapay := dict "liberapay" (dict "url" "https://liberapay.com/%s" "icon" "fab fa-liberapay") }}
-{{- $paypal := dict "paypal" (dict "url" "https://www.paypal.com/paypalme/%s" "icon" "fab fa-paypal") }}
-{{- $patreon := dict "patreon" (dict "url" "https://www.patreon.com/%s" "icon" "fab fa-patreon") }}
-{{- $tipeee := dict "tipeee" (dict "url" "https://fr.tipeee.com/%s" "icon" "fab fa-tipeee") }}
-{{- $website := dict "website" (dict "url" "%s" "icon" "fas fa-link") }}
-{{- $items = merge $items $tumblr $reddit $telegram $qq $dockerhub $bitbucket $kaggle $lastfm $bilibili $tiktok $artstation $pinterest $mastodon $liberapay $paypal $patreon $tipeee $website }}
+{{/* url: the URL format, "%s" is the username placeholder */}}
+{{/* icon: the Font Awesome icon class */}}
+{{- $socials := dict
+  "artstation" (dict "url" "https://www.artstation.com/%s" "icon" "fab fa-artstation")
+  "bilibili" (dict "url" "https://space.bilibili.com/%s" "title" "bilibili" "icon" "fab fa-bilibili")
+  "bitbucket" (dict "url" "https://bitbucket.org/%s")
+  "discord" (dict "url" "https://discord.com/invite/%s" "icon" "fab fa-discord")
+  "discourse" (dict "url" "%s" "icon" "fab fa-discourse")
+  "dockerhub" (dict "url" "https://hub.docker.com/u/%s" "icon" "fab fa-docker" "title" "Docker Hub")
+  "facebook" (dict "url" "https://facebook.com/%s" "icon" "fab fa-facebook-f")
+  "facebookgroup" (dict "url" "https://facebook.com/groups/%s" "icon" "fab fa-facebook-square" "title" "Facebook Group")
+  "github" (dict "url" "https://github.com/%s" "title" "GitHub")
+  "gitlab" (dict "url" "https://gitlab.com/%s" "title" "GitLab")
+  "instagram" (dict "url" "https://www.instagram.com/%s")
+  "kaggle" (dict "url" "https://kaggle.com/%s")
+  "lastfm" (dict "url" "https://www.last.fm/user/%s" "title" "Last.fm")
+  "liberapay" (dict "url" "https://liberapay.com/%s" "icon" "fab fa-liberapay")
+  "linkedin" (dict "url" "https://linkedin.com/in/%s" "icon" "fab fa-linkedin-in" "title" "LinkedIn")
+  "mastodon" (dict "url" "https://mastodon.social/@%s" "icon" "fab fa-mastodon")
+  "patreon" (dict "url" "https://www.patreon.com/%s" "icon" "fab fa-patreon")
+  "paypal" (dict "url" "https://www.paypal.com/paypalme/%s" "icon" "fab fa-paypal")
+  "pinterest" (dict "url" "https://www.pinterest.com/%s" "icon" "fab fa-pinterest")
+  "qq" (dict "url" "http://wpa.qq.com/msgrd?v=3&uin=%s&site=qq&menu=yes" "title" "QQ")
+  "quora" (dict "url" "https://www.quora.com/profile/%s")
+  "reddit" (dict "url" "https://www.reddit.com/user/%s")
+  "stackoverflow" (dict "url" "https://stackoverflow.com/users/%s" "icon" "fab fa-stack-overflow" "title" "Stack Overflow")
+  "telegram" (dict "url" "https://t.me/%s" "icon" "fab fa-telegram-plane")
+  "tipeee" (dict "url" "https://fr.tipeee.com/%s" "icon" "fab fa-tipeee")
+  "tiktok" (dict "url" "https://www.tiktok.com/@%s" "title" "TikTok" "icon" "fab fa-tiktok")
+  "tumblr" (dict "url" "https://%s.tumblr.com")
+  "twitter" (dict "url" "https://twitter.com/%s")
+  "website" (dict "url" "%s" "icon" "fas fa-link")
+  "weibo" (dict "url" "https://weibo.com/%s")
+  "xing" (dict "url" "https://www.xing.com/profile/%s" "icon" "fab fa-xing" "title" "Xing")
+  "youtube" (dict "url" "https://www.youtube.com/channel/%s" "icon" "fab fa-youtube")
+  "zhihu" (dict "url" "https://www.zhihu.com/people/%s")
+-}}
 {{- $size := default "" .size }}
 {{- $linkClass := default "" .linkClass }}
 {{- $iconText := default false .iconText }}
 {{- $iconTextClass := default "ms-1" .iconTextClass }}
+
 <nav class="social-links nav justify-content-center{{ with .class }} {{ . }}{{ end }}">
 {{- range $key, $user := .links }}
   {{- if eq $key "email" }}
@@ -58,7 +61,7 @@
         {{- end }}
       </a>
   {{- else }}
-    {{- with index $items $key }}
+    {{- with index $socials $key }}
       {{- $link := printf .url $user }}
       {{- $url := urls.Parse $user }}
       {{- if $url.Scheme }}{{ $link = $url.String }}{{ end }}
