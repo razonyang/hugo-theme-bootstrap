@@ -55,3 +55,9 @@ pre {
     opacity: 1;
   }
 }
+
+@if ($code-select) {
+  :not(pre)>code {
+    user-select: all;
+  }
+}
