@@ -1,6 +1,5 @@
-#TableOfContents { /* stylelint-disable-line */
-  @extend .surface; /* stylelint-disable-line */
-
+#TableOfContents,
+#post-toc-container > nav { /* stylelint-disable-line */
   ol,
   ul {
     @if $tocStyleType {
@@ -27,4 +26,13 @@
       color: var(--#{$prefix}primary);
     }
   }
+}
+
+#TableOfContents {
+  @extend .surface; /* stylelint-disable-line */
+}
+
+#post-toc-container > nav {
+  background: var(--#{$prefix}surface-bg);
+  color: var(--#{$prefix}surface-color);
 }
