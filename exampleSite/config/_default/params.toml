@@ -83,6 +83,7 @@ viewer = true # Image Viewer
   # postsToggle = false # Disable posts toggle
   # featuredPosts = true # Enable featured posts widget
   # recentPosts = true # Enable featured posts widget
+  # collapsed = true # Collapse sidebar widgets by default on small screens.
 
 [codeBlock]
   # maxLines = 8

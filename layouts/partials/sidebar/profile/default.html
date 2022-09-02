@@ -1,11 +1,14 @@
+{{- $collapsed := default false .Site.Params.sidebar.collapsed }}
 <div class="accordion profile">
   <div class="accordion-item card row text-center component">
     <div class="accordion-header card-header border-0" id="profile-header">
-      <a class="accordion-button d-lg-none mb-2 collapsed shadow-none p-0 bg-transparent text-surface" type="button" data-bs-toggle="collapse" data-bs-target="#profile" aria-expanded="false" aria-controls="profile">
+      <a
+        class="accordion-button d-lg-none mb-2 shadow-none p-0 bg-transparent text-surface{{ if $collapsed }} collapsed{{ end }}"
+        type="button" data-bs-toggle="collapse" data-bs-target="#profile" aria-expanded="{{ if $collapsed }}false{{ else }}true{{ end }}" aria-controls="profile">
         {{ i18n "profile" }}
       </a>
     </div>
-    <div class="card-body collapse accordion-collapse accordion-body d-lg-block" id="profile" aria-labelledby="profile-header">
+    <div class="card-body collapse accordion-collapse accordion-body d-lg-block{{ if not $collapsed }} show{{ end }}" id="profile" aria-labelledby="profile-header">
       <div class="col-12 d-flex align-items-center justify-content-center">
         {{- partial "sidebar/profile/avatar" . -}}
       </div>

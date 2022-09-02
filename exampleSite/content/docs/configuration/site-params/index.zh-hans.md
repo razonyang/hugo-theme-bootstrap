@@ -145,6 +145,7 @@ authors = ["RazonYang"]
 | `sidebar.postsToggle` | Boolean | `true` | Show the posts toggle on the sidebar.
 | `sidebar.featuredPosts` | Boolean | `false` | Show the featured posts widget on the sidebar.
 | `sidebar.recentPosts` | Boolean | `false` | Show the recent posts widget on the sidebar.
+| `sidebar.collapsed` | Boolean | `flase` | Collapse sidebar widgets by default on small screens.
 | **Meta Tag**
 | `metaRobots` | String | - | 空字符串表示禁用。
 | `contact` | Object | - | [联系表单]({{< ref "docs/layouts/contact" >}})

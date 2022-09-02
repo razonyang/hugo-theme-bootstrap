@@ -2,6 +2,7 @@
 {{- $basePath := strings.TrimSuffix "/" (default "/archives" .Site.Params.archive.basePath) }}
 {{- $basePath = printf "/%s/" (strings.TrimPrefix "/" $basePath)  }}
 {{- $archivePage := $.GetPage $basePath }}
+{{- $collapsed := default false .Site.Params.sidebar.collapsed }}
 <div class="accordion archives">
   <section class="row card component">
       <div class="card-header">
@@ -12,11 +13,13 @@
             {{ i18n "archives" }}
             {{- end }}
         </h2>
-        <a class="accordion-button d-lg-none mb-1 collapsed shadow-none p-0 bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#archives" aria-expanded="false" aria-controls="archives">
+        <a
+          class="accordion-button d-lg-none mb-1 shadow-none p-0 bg-transparent{{ if $collapsed }} collapsed{{ end }}"
+          type="button" data-bs-toggle="collapse" data-bs-target="#archives" aria-expanded="{{ if $collapsed }}false{{ else }}true{{ end }}" aria-controls="archives">
             {{ i18n "archives" }}
         </a>
       </div>
-      <div class="card-body collapse accordion-collapse accordion-body d-lg-block" id="archives">
+      <div class="card-body collapse accordion-collapse accordion-body d-lg-block{{ if not $collapsed }} show{{ end }}" id="archives">
         {{- partial "sidebar/archive-items" . }}
       </div>
   </section>
