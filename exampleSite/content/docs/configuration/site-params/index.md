@@ -142,6 +142,7 @@ The site parameters are located in `config/_default/params.toml` by default.
 | `sidebar.postsToggle` | Boolean | `true` | Show the posts toggle on the sidebar.
 | `sidebar.featuredPosts` | Boolean | `false` | Show the featured posts widget on the sidebar.
 | `sidebar.recentPosts` | Boolean | `false` | Show the recent posts widget on the sidebar.
+| `sidebar.collapsed` | Boolean | `flase` | Collapse sidebar widgets by default on small screens.
 | **Meta Tag**
 | `metaRobots` | String | - | Empty means that turn it off.
 | `contact` | Object | - | [Contact Form]({{< ref "docs/layouts/contact" >}})
