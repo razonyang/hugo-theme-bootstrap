@@ -9,6 +9,8 @@
     {{- partial "hooks/content-begin" . -}}
     {{- if eq "content" .Site.Params.tocPosition -}}
       {{- partial "post/toc" . -}}
+    {{- else }}
+      {{- partial "post/toc-wrapper" . -}}
     {{- end -}}
     {{- partial "post/share" . -}}
     <div class="post-content mb-3" data-bs-spy="scroll" data-bs-target="#TableOfContents" tabindex="0">
