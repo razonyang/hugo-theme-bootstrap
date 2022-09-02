@@ -239,6 +239,7 @@ viewer = true # Image Viewer
 [topAppBar]
   # colorToggle = false # Disable the color toggle
   # coloredInDark = true # Colored in dark mode
+  # dropdownMenuToggle = false # Hide the dropdown menu toggle.
   [topAppBar.social]
     github = "razonyang/hugo-theme-bootstrap"
     patreon = "razonyang"

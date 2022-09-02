@@ -88,6 +88,7 @@ authors = ["RazonYang"]
 | `topAppBar.social` | Object | - | [社交鏈接]({{< ref "/docs/widgets/social-links" >}})。
 | `topAppBar.colorToggle` | Boolean | `true` | 開啟或禁用顏色/模式開關。
 | `topAppBar.coloredInDark` | Boolean | `false` | 在深色模式下著色。
+| `topAppBar.dropdownMenuToggle` | Boolean | `true` | 隱藏下拉菜單的按鈕。
 | **Webmaster Site Verification** 
 | `siteVerification` | Object | - |
 | `siteVerification.google` | String | - | Google

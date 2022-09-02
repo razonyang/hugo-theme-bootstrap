@@ -1,4 +1,5 @@
 {{- $baseURL := $.Site.BaseURL }}
+{{- $dropdownMenuToggle := default true $.Site.Params.topAppBar.dropdownMenuToggle }}
 <nav class="top-app-bar shadow navbar navbar-expand-lg{{ if $.Site.Params.fixedHeader }} fixed-top{{ end }}">
   <div class="{{- partial "helpers/fullwidth" (dict "Page" . "Output" "container" "FullWidthOutput" "container-fluid") -}}">
     {{- if eq .Type "docs" }}
@@ -25,8 +26,9 @@
           {{- $url := .URL | absURL }}
           {{- $active := or (eq $currentPage.Permalink (absURL .URL)) ($currentPage.IsMenuCurrent "main" .) }}
           {{- if .HasChildren }}
-          <li class="nav-item col-6 col-lg-auto dropdown py-2 px-0 px-lg-2">
-            <a class="dropdown-toggle" href="#" class="nav-link{{ if $currentPage.HasMenuCurrent "main" . }} active{{ end }}"
+          <li class="nav-item col-6 col-lg-auto dropdown px-0">
+            <a href="#"
+              class="nav-link{{ if $dropdownMenuToggle }} dropdown-toggle{{ end }}{{ if $currentPage.HasMenuCurrent "main" . }} active{{ end }}"
               id="navbarDropdown{{ title .Identifier }}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               {{ .Pre }} {{- .Name -}} {{ .Post }}
             </a>
