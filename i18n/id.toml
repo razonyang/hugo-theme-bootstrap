@@ -147,7 +147,7 @@ other = "Dibuat pada {{ .createdOn }}{{ with .updatedOn }}, Diperbaharui pada {{
 other = "Baca lebih banyak"
 
 [reading_time]
-other = "Minimal baca {{ .ReadingTime }}"
+other = "{{ .ReadingTime }} menit baca"
 
 [recent_posts]
 other = "Postingan Terbaru"
