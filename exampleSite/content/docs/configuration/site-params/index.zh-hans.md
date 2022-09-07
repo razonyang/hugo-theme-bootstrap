@@ -131,6 +131,7 @@ authors = ["RazonYang"]
 | `post.imageTitleAsCaption` | Boolean | `false` | 将图片标题作为 caption。
 | `post.panel` | Boolean | `true` | 是否显示 post panel。
 | `post.nav` | Boolean | `true` | 是否顯示上一篇和下一篇。
+| `post.readMoreFromContent` | Boolean | `false` | The page position after clicking the read more button, read more from content if true. Default to the beginning of page. It supports only of the manual summaries spliting via `<!--more-->`.
 | `viewer` | Boolean | true | [图片查看器]({{< ref "docs/image-viewer" >}})
 | `pwa` | Object | - | [渐进式 web 应用]({{< ref "/docs/pwa" >}})
 | **Sidebar**

@@ -8,9 +8,7 @@
     {{- partial "post/featured-image" . -}}
     {{- partial "hooks/content-begin" . -}}
     {{- partial "post/toc-wrapper" . -}}
-    <div class="post-content mb-3" data-bs-spy="scroll" data-bs-target="#TableOfContents" tabindex="0">
-    {{- .Content -}}
-    </div>
+    {{- partial "post/content" . -}}
     {{- partial "post/reward" . -}}
     {{- partial "hooks/content-end" . -}}
 </div>
