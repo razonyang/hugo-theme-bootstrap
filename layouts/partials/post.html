@@ -13,9 +13,7 @@
       {{- partial "post/toc-wrapper" . -}}
     {{- end -}}
     {{- partial "post/share" . -}}
-    <div class="post-content mb-3" data-bs-spy="scroll" data-bs-target="#TableOfContents" tabindex="0">
-      {{- .Content -}}
-    </div>
+    {{- partial "post/content" . -}}
     {{- partial "post/reward" . -}}
     {{- partial "hooks/content-end" . -}}
   </div>

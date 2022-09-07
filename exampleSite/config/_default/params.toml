@@ -102,6 +102,9 @@ viewer = true # Image Viewer
   imageTitleAsCaption = true
   # panel = false # Disable the post panel.
   # nav = false # Disable post navigations.
+  # The page position after clicking the read more button, read more from content if true. Default to the beginning of page.
+  # It supports only of the manual summaries spliting via <!--more-->.
+  # readMoreFromContent = true
 
 [archive]
   # basePath = "/archiv" # The base path of archive pages.
