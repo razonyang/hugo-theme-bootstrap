@@ -1,6 +1,8 @@
 .sidebar {
-    .post-toc {
-        position: sticky;
-        top: 84px;
+    &:not(.docs-sidebar) {
+        .post-toc {
+            position: sticky;
+            top: 84px;
+        }
     }
 }
