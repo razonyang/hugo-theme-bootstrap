@@ -1,0 +1,16 @@
+{{- if .Params.images }}
+  {{- $img := index .Params.images 0 }}
+  {{- $url := urls.Parse $img }}
+  {{- $filename := path.Join "static" $img }}
+  {{- if and (not $url.Scheme) (fileExists $filename) -}}
+    {{- $file := readFile $filename }}
+    {{- $imgConfig := imageConfig $filename }}
+    <enclosure url="{{ $img | absURL  }}" length="{{ len $file }}" type="image/{{ path.Ext $filename }}" />
+  {{- end -}}
+{{- else -}}
+  {{- $images := .Resources.ByType "image" -}}
+  {{- $featured := $images.GetMatch "*feature*" -}}
+  {{- with $featured -}}
+      <enclosure url="{{ $featured.Permalink }}" length="{{ len $featured.Content }}" type="{{ $featured.MediaType }}" />
+  {{- end -}}
+{{- end -}}
