@@ -253,3 +253,6 @@ viewer = true # Image Viewer
 [docs]
   [docs.nav]
     # expand = true # Expand docs navigations.
+
+[feeds]
+  # content = true

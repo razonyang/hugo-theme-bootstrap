@@ -150,6 +150,8 @@ The site parameters are located in `config/_default/params.toml` by default.
 | `pinnedPost` | Boolean | `true` | Turn on/off pinned posts.
 | `pinnedPostCount` | Integer | `1` | The number of pinned posts.
 | `rss` | String/Boolean | `true` | Display the RSS button on the social links. Turn it off by `false`, link it to homepage all the times by setting it to `home`.
+| `feeds` | Object | - | RSS feeds
+| `feeds.content` | Boolean | `false` | Display the full content if ebabled.
 | `actionsPanel` | Object | - |
 | `actionsPanel.disabled` | Boolean | `false` | Disable actions panel.
 
