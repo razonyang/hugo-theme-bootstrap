@@ -252,4 +252,4 @@ viewer = true # Image Viewer
     # expand = true # Expand docs navigations.
 
 [feeds]
-  # contentAsDescription = true
+  content = true
