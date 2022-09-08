@@ -152,6 +152,8 @@ authors = ["RazonYang"]
 | `pinnedPost` | Boolean | `true` | 開啟/禁用文章置頂。
 | `pinnedPostCount` | Integer | `1` | 置頂的文章數量。
 | `rss` | String/Boolean | `true` | 在社交鏈接中顯示 RSS 鏈接。`false` 為不顯示，`home` 則總是鏈接到主頁。
+| `feeds` | Object | - | RSS feeds
+| `feeds.content` | Boolean | `false` | Display the full content if ebabled.
 | `actionsPanel` | Object | - |
 | `actionsPanel.disabled` | Boolean | `false` | 禁用 actions panel。
 
