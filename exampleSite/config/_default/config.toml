@@ -23,6 +23,8 @@ enableRobotsTXT = true
 
 enableEmoji = true
 
+enableGitInfo = true
+
 # hasCJKLanguage = true # Uncomment it if your content contains Chinese/Japanese/Korean Languages.
 
 pygmentsUseClasses = true
