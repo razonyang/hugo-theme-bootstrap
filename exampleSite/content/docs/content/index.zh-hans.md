@@ -38,6 +38,22 @@ mainSections = ["blog", "posts", "docs", "notes"]
 
 Front Matter is the place where we put page metadata and parameters, such as title, date and so on.
 
+### Formats
+
+Hugo supports three formats of front matter: `YAML`, `TOML` and `JSON`.
+
+- `TOML`: identified by opening and closing `+++`.
+- `YAML`: identified by opening and closing `---`.
+- `JSON`: a single JSON object surrounded by `{` and `}`, followed by a new line.
+
+Let's take `TOML` as an example:
+
+```toml
++++
+title = 'Hello world!'
++++
+```
+
 See also [Page Parameters]({{< ref "docs/configuration/page-params" >}}) and [Hugo Front Matter](https://gohugo.io/content-management/front-matter).
 
 ## 内容类型
