@@ -157,5 +157,6 @@ authors = ["RazonYang"]
 | `feeds.content` | Boolean | `false` | Display the full content if ebabled.
 | `actionsPanel` | Object | - |
 | `actionsPanel.disabled` | Boolean | `false` | 禁用 actions panel。
+| `repo` | Object | - | See [Repository widget]({{< ref "docs/widgets/repository" >}}).
 
 > 除了 Google 站長工具外，其他搜索引擎站長工具無法與 `hugo --minify` 同時使用，這是因為它們無法識別優化後的元標簽。

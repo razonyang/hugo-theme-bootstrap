@@ -154,5 +154,6 @@ The site parameters are located in `config/_default/params.toml` by default.
 | `feeds.content` | Boolean | `false` | Display the full content if ebabled.
 | `actionsPanel` | Object | - |
 | `actionsPanel.disabled` | Boolean | `false` | Disable actions panel.
+| `repo` | Object | - | See [Repository widget]({{< ref "docs/widgets/repository" >}}).
 
 > Except the Google webmaster tool, the other webmaster tools cannot work with `hugo --minify`, because they cannot recognize the minified meta tag.
