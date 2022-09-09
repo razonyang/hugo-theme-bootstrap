@@ -53,3 +53,7 @@ Please place the featured, cover or thumbnail images under the page folder whene
 ├── index.zh-hans.md
 └── index.zh-hant.md
 ```
+
+## SCSS Variables
+
+Use SCSS variables when possible, see also [SCSS Variables]({{< ref "docs/advanced/scss-variables" >}}).

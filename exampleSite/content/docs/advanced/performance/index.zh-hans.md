@@ -53,3 +53,7 @@ images = []
 ├── index.zh-hans.md
 └── index.zh-hant.md
 ```
+
+## SCSS 变量
+
+尽可能使用 SCSS 变量，参阅 [SCSS 变量]({{< ref "docs/advanced/scss-variables" >}})。
