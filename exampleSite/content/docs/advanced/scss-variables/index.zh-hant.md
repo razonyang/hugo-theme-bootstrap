@@ -22,7 +22,33 @@ images = []
 
 ## 為什麽選擇 SCSS 變量？
 
-雖然我們可以通過 `assets/main/scss/_custom.scss` 覆蓋 CSS，但這最終會增加 CSS 包的大小，但 SCSS 變量不會。
+雖然我們可以通過 `assets/main/scss/_custom.scss` 覆蓋 CSS，但這最終會增加 CSS 包的大小，而大多情況下 SCSS 變量不會。
+
+舉個例子， 鼠標懸停在 Logo 時有一個默認的動畫。
+
+```css
+{{% code/scss-variables-logo-animation %}}
+```
+
+我們可以通過自定義 SCSS 以禁用它。
+
+```scss {title="assets/main/scss/_custom.scss"}
+{{% code/scss-variables-disable-logo-animation %}}
+```
+
+但因為我們只是覆蓋了樣式，之前我們不需要的樣式仍會出現在 CSS bundle 中。
+
+```css
+{{% code/scss-variables-disable-logo-animation-output %}}
+```
+
+而 SCSS 則不會生成*未使用*的樣式。
+
+```scss {title="assets/main/scss/_variables.scss"}
+$logo-animation: false;
+```
+
+較小的 CSS bundle 意味著更好的性能，所以我們建議盡可能使用 SCSS 變量。
 
 ## Bootstrap SCSS 變量
 

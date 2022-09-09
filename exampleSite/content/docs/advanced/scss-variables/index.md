@@ -22,7 +22,33 @@ Thanks to `assets/main/scss/_variables.scss`, we have the ability to change the 
 
 ## Why SCSS Variables?
 
-Although we can override the CSS via `assets/main/scss/_custom.scss`, but this will eventually increase the size of CSS bundle, however the SCSS variable does not.
+Although we can override the CSS via `assets/main/scss/_custom.scss`, this will eventually increase the size of CSS bundle, however the SCSS variable does not in most cases.
+
+For example, there is a default animation for logo on hover.
+
+```css
+{{% code/scss-variables-logo-animation %}}
+```
+
+It's able to disable it via custom SCSS.
+
+```scss {title="assets/main/scss/_custom.scss"}
+{{% code/scss-variables-disable-logo-animation %}}
+```
+
+But the previous style which we don't need still present in CSS bundle, since we just overrided it by the custom SCSS.
+
+```css
+{{% code/scss-variables-disable-logo-animation-output %}}
+```
+
+And the SCSS variables will not generate *unused* style into CSS bundle.
+
+```scss {title="assets/main/scss/_variables.scss"}
+$logo-animation: false;
+```
+
+Smaller CSS bundle size means better performance, so we recommend using SCSS variables when possible.
 
 ## Bootstrap SCSS Variables
 
