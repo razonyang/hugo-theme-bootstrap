@@ -1,6 +1,14 @@
 {{- $collapsed := default false .Site.Params.sidebar.collapsed }}
 {{- with $.Site.Params.repo -}}
 {{- $url := .url -}}
+{{- $sourceUrlFormat := "%s/blob/%s" }}
+{{- $editUrlFormat := "%s/edit/%s" }}
+{{- $commitUrlFormat := "%s/commit/%s" }}
+{{- if findRE "gitlab.com" $url }}
+    {{- $sourceUrlFormat = "%s/-/blob/%s" }}
+    {{- $editUrlFormat = "%s/-/edit/%s" }}
+    {{- $commitUrlFormat = "%s/-/commit/%s" }}
+{{- end }}
 {{- $branch := default "master" .branch -}}
 {{- $dateFormat := default "02/01/2006, 15:04:05 PM" .dateFormat -}}
 {{- $subPath := default "" .subPath -}}
@@ -21,19 +29,19 @@
                 {{- if $.File -}}
                 {{- $filePath := printf "%s%s/%s/%s" $branch $subPath $contentDir $.File.Path -}}
                 <li class="mb-1">
-                    <a href="{{ printf "%s/blob/%s" $url $filePath }}" target="_blank" rel="noopener noreferrer">
+                    <a href="{{ printf $sourceUrlFormat $url $filePath }}" target="_blank" rel="noopener noreferrer">
                         <i class="fas fa-fw fa-file-archive"></i> {{ i18n "repo_action_view" }}
                     </a>
                 </li>
                 <li class="mb-1">
-                    <a href="{{ printf "%s/edit/%s" $url $filePath  }}" target="_blank" rel="noopener noreferrer">
+                    <a href="{{ printf $editUrlFormat $url $filePath  }}" target="_blank" rel="noopener noreferrer">
                         <i class="fas fa-fw fa-edit"></i> {{ i18n "repo_action_edit" }}
                     </a>
                 </li>
                 {{- end -}}
                 {{- with $.GitInfo -}}
                 <li class="mb-1">
-                    <i class="fas fa-fw fa-code"></i> <a href="{{ printf "%s/commit/%s" $url .Hash }}" target="_blank" rel="noopener noreferrer">{{ .AbbreviatedHash }}</a>
+                    <i class="fas fa-fw fa-code"></i> <a href="{{ printf $commitUrlFormat $url .Hash }}" target="_blank" rel="noopener noreferrer">{{ .AbbreviatedHash }}</a>
                 </li>
                 <li class="mb-1">
                     <i class="fas fa-fw fa-history"></i> {{ .AuthorDate.Format $dateFormat }}
