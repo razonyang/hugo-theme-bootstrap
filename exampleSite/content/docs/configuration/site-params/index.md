@@ -128,7 +128,7 @@ The site parameters are located in `config/_default/params.toml` by default.
 | `post.imageTitleAsCaption` | Boolean | `false` | Use image title as caption.
 | `post.panel` | Boolean | `true` | Turn on/off the post panel.
 | `post.nav` | Boolean | `true` | Turn on/off the navigations.
-| `post.readMoreFromContent` | Boolean | `false` | The page position after clicking the read more button, read more from content if true. Default to the beginning of page. It supports only of the manual summaries spliting via `<!--more-->`.
+| `post.readMoreFromContent` | Boolean | `false` | The page position after clicking the read more button, read more from content if true. Default to the beginning of page. It supports only of the manual summaries splitting via `<!--more-->`.
 | `viewer` | Boolean | true | [Image Viewer]({{< ref "docs/image-viewer" >}})
 | `pwa` | Object | - | [Progressive Web Apps]({{< ref "/docs/pwa" >}})
 | **Sidebar**

@@ -103,7 +103,7 @@ viewer = true # Image Viewer
   # panel = false # Disable the post panel.
   # nav = false # Disable post navigations.
   # The page position after clicking the read more button, read more from content if true. Default to the beginning of page.
-  # It supports only of the manual summaries spliting via <!--more-->.
+  # It supports only of the manual summaries splitting via <!--more-->.
   # readMoreFromContent = true
 
 [archive]
