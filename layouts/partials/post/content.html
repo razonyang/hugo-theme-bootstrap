@@ -1,6 +1,6 @@
 <div class="post-content mb-3" data-bs-spy="scroll" data-bs-target="#TableOfContents" tabindex="0">
-    {{- if default false $.Site.Params.post.readMoreFromContent }}
-        {{- with .Summary }}<div id="post-summary">{{ . }}</div>{{ end }}
+    {{- if and .Summary (default false $.Site.Params.post.readMoreFromContent) (hasPrefix .Content .Summary) }}
+        <div id="post-summary">{{ .Summary }}</div>
         <div id="post-content-body">{{- strings.TrimPrefix .Summary .Content | safeHTML -}}</div>
     {{- else }}
         <div id="post-content-body">{{ .Content }}</div>
