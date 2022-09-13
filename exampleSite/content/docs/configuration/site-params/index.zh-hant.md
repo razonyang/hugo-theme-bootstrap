@@ -101,6 +101,8 @@ authors = ["RazonYang"]
 | **Analytics** 
 | `analytics` | Object | - | Analytics.
 | `analytics.baidu` | String | - | 百度統計
+| `analytics.plausible` | String | - | Plausible Analytics Domains. Multiple domains separate by comma.
+| `analytics.plausibleScript` | String | `https://plausible.io/js/script.js` | Specify the self-hosted Plausible Analytics script or [extended script](https://plausible.io/docs/script-extensions).
 | **Others** 
 | `googleAdsense` | String | - | Google Adsense。
 | `customCSS` | Array | - | 自定義 CSS， 主要用於導入外部。 請查閱[自定義資源](#自定義資源)。
