@@ -99,6 +99,8 @@ The site parameters are located in `config/_default/params.toml` by default.
 | **Analytics** 
 | `analytics` | Object | - | Analytics configuration.
 | `analytics.baidu` | String | - | Baidu Analytics.
+| `analytics.plausible` | String | - | Plausible Analytics Domains. Multiple domains separate by comma.
+| `analytics.plausibleScript` | String | `https://plausible.io/js/script.js` | Specify the self-hosted Plausible Analytics script or [extended script](https://plausible.io/docs/script-extensions).
 | `googleAdsense` | String | - | Google Adsense.
 | `customCSS` | Array | - | See also [custom assets]({{< ref "/docs/advanced/custom-assets#external-assets" >}}).
 | `customJS` | Array | - | See also [custom assets]({{< ref "/docs/advanced/custom-assets#external-assets" >}}).

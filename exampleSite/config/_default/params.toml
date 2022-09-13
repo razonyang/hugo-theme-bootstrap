@@ -112,6 +112,8 @@ viewer = true # Image Viewer
 
 [analytics]
   # baidu = "" # Baidu Analytics
+  # plausible = "razonyang.com,hbs.razonyang.com" # Multiple domains separate by comma.
+  # plausibleScript = "" # Specify the self-hosted script or extended script. Default to https://plausible.io/js/script.js.
 
 # Site verification
 [siteVerification]
