@@ -15,10 +15,15 @@
       {{- $featured := $images.GetMatch "*feature*" -}}
       {{- if not $featured }}{{ $featured = $images.GetMatch "{*cover*,*thumbnail*}" }}{{ end -}}
       {{- with $featured -}}
+      {{- if eq .MediaType.SubType "svg" -}}
+        {{- $smallImg = $featured.Permalink -}}
+        {{- $largeImg = $featured.Permalink -}}
+      {{- else -}}
         {{- $smallImage := $featured.Resize "180x" -}}
         {{- $smallImg = $smallImage.Permalink -}}
         {{- $largeImage := $featured.Resize "500x" -}}
         {{- $largeImg = $largeImage.Permalink -}}
+      {{- end -}}
         {{- $img = $featured.Permalink -}}
       {{- end -}}
     {{- end -}}
