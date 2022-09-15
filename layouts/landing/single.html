@@ -1,0 +1,6 @@
+{{ define "content" }}
+<div class="{{ if default true .Params.sidebar }}col-lg-8{{ else }}col-lg-12{{ end }}">
+  {{ .Content }}
+</div>
+{{- partial "sidebar" . }}
+{{ end }}
