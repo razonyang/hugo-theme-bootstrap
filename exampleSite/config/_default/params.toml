@@ -76,6 +76,7 @@ viewer = true # Image Viewer
   # fixed = true
   # archives = true # Enable archives widget
   # taxonomiesToggle = false # Disable taxonomy toggle
+  # taxonomiesToggleArchives = false # Don't show the archives on taxonomies toggle widget.
   # categories = true # Enable categories widget
   # tags = true # Enable tags widget
   # series = true # Enable series widget

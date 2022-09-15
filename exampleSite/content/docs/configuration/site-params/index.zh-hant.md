@@ -140,6 +140,7 @@ authors = ["RazonYang"]
 | `sidebar` | Object | - |
 | `sidebar.fixed` | Boolean | `false` | 固定默認側邊欄。
 | `sidebar.taxonomiesToggle` | Boolean | `true` | Show the taxonomies toggle widget on the sidebar.
+| `sidebar.taxonomiesToggleArchives` | Boolean | `true` | Show/Hide the archives from the taxonomies toggle.
 | `sidebar.series` | Boolean | `false` | Show the series widget on the sidebar.
 | `sidebar.categories` | Boolean | `false` | Show the categories widget on the sidebar.
 | `sidebar.tags` | Boolean | `false` | Show the tags widget on the sidebar.
