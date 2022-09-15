@@ -137,6 +137,7 @@ The site parameters are located in `config/_default/params.toml` by default.
 | `sidebar` | Object | - |
 | `sidebar.fixed` | Boolean | `false` | Fix default sidebar.
 | `sidebar.taxonomiesToggle` | Boolean | `true` | Show the taxonomies toggle widget on the sidebar.
+| `sidebar.taxonomiesToggleArchives` | Boolean | `true` | Show/Hide the archives from the taxonomies toggle.
 | `sidebar.series` | Boolean | `false` | Show the series widget on the sidebar.
 | `sidebar.categories` | Boolean | `false` | Show the categories widget on the sidebar.
 | `sidebar.tags` | Boolean | `false` | Show the tags widget on the sidebar.
