@@ -1,3 +1,4 @@
+{{- if default true .Params.sidebar }}
 <aside class="col-lg-4 sidebar d-flex">
   <div class="container d-flex flex-column">
     {{ partial "hooks/sidebar-begin" . }}
@@ -5,3 +6,4 @@
     {{ partial "hooks/sidebar-end" . }}
   </div>
 </aside>
+{{- end }}
