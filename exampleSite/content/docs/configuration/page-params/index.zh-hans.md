@@ -39,6 +39,7 @@ authors = ["RazonYang"]
 | `copyright` | Boolean | `true` | 是否显示版权部分
 | `carousel` | Boolean | `false` | 是否在 Carousel 显示
 | `nav` | Boolean | `true` | 是否显示上一篇和下一篇
+| `sidebar` | Boolean | `true` | Show/Hide the sidebar.
 | **Creative Commons License**
 | `creativeCommons` | Object | - |
 | `creativeCommons.by` | Boolean | `true` | 署名

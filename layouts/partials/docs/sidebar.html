@@ -1,3 +1,4 @@
+{{- if default true .Params.sidebar }}
 <aside class="sidebar d-flex docs-sidebar col-lg-3 position-sticky order-lg-5">
   <div class="container">
     {{ partial "hooks/docs/sidebar-begin" . }}
@@ -5,3 +6,4 @@
     {{ partial "hooks/docs/sidebar-end" . }}
   </div>
 </aside>
+{{- end }}

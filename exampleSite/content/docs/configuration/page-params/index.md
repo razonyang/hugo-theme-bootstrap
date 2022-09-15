@@ -40,6 +40,7 @@ Page parameters are located in page's [Front Matter](https://gohugo.io/content-m
 | `copyright` | Boolean | `true` | Whether to display copyright section.
 | `carousel` | Boolean | `false` | Show on carousel.
 | `nav` | Boolean | `true` | Turn on/off the navigations.
+| `sidebar` | Boolean | `true` | Show/Hide the sidebar.
 | **Creative Commons License**
 | `creativeCommons` | Object | - |
 | `creativeCommons.by` | Boolean | `true` | Credit must be given to you, the creator.

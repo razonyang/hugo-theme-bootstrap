@@ -1,5 +1,5 @@
 {{ define "content" }}
-<div class="col-lg-8">
+<div class="{{ if default true .Params.sidebar }}col-lg-8{{ else }}col-lg-12{{ end }}">
     {{- partial "breadcrumb" . -}}
     <div class="contact row component card">
       <div class="card-header">
