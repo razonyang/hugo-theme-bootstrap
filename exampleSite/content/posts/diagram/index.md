@@ -45,11 +45,11 @@ YOUR DIAGRAM INSTRUCTIONS
 You can also wrap it with other shortcodes, such as `text/align-center`.
 
 ```markdown
-{{% text/align-center %}}
+{{%/* text/align-center */%}}
 {{</* mermaid */>}}
 YOUR DIAGRAM INSTRUCTIONS
 {{</* /mermaid */>}}
-{{% /text/align-center %}}
+{{%/* /text/align-center */%}}
 ```
 
 ## Examples
