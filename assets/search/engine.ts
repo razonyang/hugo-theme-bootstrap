@@ -8,6 +8,8 @@ class Engine {
   constructor(form: Form, callback: (data: FormData) => void) {
     const options = Object.assign(window.fuseOptions, {
       useExtendedSearch: true,
+      includeMatches: true,
+      includeScore: true,
       keys: [
         'title',
         'content',
@@ -35,6 +37,7 @@ class Engine {
           datalist.appendChild(option);
         }
       }
+      console.debug('Fuse.js options', options)
       this.fuse = new Fuse(pages, options);
       callback(form.data());
     }).catch((err) => {

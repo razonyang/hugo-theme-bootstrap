@@ -156,15 +156,17 @@ viewer = true # Image Viewer
 [search]
   # paginate = 5 # Pagination. Default to 10.
   # resultContentWordCount = 240 # The maximum word count of result content for displaying.
-  # Fuse.js options. See https://fusejs.io/api/options.html.
+  # Fuse.js options, the following options are available. See https://fusejs.io/api/options.html.
   [search.fuse]
     # ignoreLocation = true
     # location = 0
-    # isCaseSensitive = false
-    minMatchCharLength = 3
+    # isCaseSensitive = true
+    # minMatchCharLength = 3
     # threshold = 0.6
     # distance = 100
-    # useExtendedSearch = true
+    # findAllMatches = true
+    # ignoreFieldNorm = true
+    # fieldNormWeight = 0
 
 #[docsearch]
 #  # https://docsearch.algolia.com/docs/api

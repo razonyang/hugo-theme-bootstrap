@@ -1,18 +1,20 @@
 {{- if eq .Type "search" -}}
-{{- $titleKey := dict "name" "title" "weight" 0.8 -}}
-{{- $contentKey := dict "name" "content" "weight" 0.5 -}}
-{{- $tagsKey := dict "name" "tags" "weight" 0.3 -}}
-{{- $categoriesKey := dict "name" "categories" "weight" 0.3 -}}
-{{- $seriesKey := dict "name" "series" "weight" 0.3 -}}
-{{- $keys := slice $titleKey $contentKey $tagsKey $categoriesKey $seriesKey -}}
-{{- $options := dict "ignoreLocation" true "includeMatches" true "includeScore" true "keys" $keys -}}
-{{- $optionWhitelist := slice "ignoreLocation" "isCaseSensitive" "minMatchCharLength" "threshold" "distance" "useExtendedSearch" -}}
+{{- $options := dict "ignoreLocation" true -}}
+{{- $optionWhitelist := dict
+  "ignorelocation" "ignoreLocation"
+  "iscasesensitive" "isCaseSensitive"
+  "minmatchcharlength" "minMatchCharLength"
+  "location" "location"
+  "threshold" "threshold"
+  "distance" "distance"
+  "findallmatches" "findAllMatches"
+  "ignorefieldnorm" "ignoreFieldNorm"
+  "fieldnormweight" "fieldNormWeight"
+-}}
 {{- with .Site.Params.search.fuse -}}
   {{- range $key, $value := . -}}
-    {{- range $optionWhitelist -}}
-      {{- if eq $key (lower .) -}}
-        {{- $options = merge $options (dict . $value) -}}
-      {{- end -}}
+    {{- if isset $optionWhitelist $key -}}
+      {{- $options = merge $options (dict (index $optionWhitelist $key) $value) -}}
     {{- end -}}
   {{- end -}}
 {{- end -}}
