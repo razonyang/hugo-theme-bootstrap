@@ -7,11 +7,12 @@ class Client
 
     constructor()
     {
-        const baseURL = params.staticman.baseurl.replace(/\/*$/, "")
+        const endpoint = params.staticman.endpoint.replace(/\/*$/, "")
+        const service = params.staticman.service ? params.staticman.service : 'github'
         const repo = params.staticman.repo
         const branch = params.staticman.branch ? params.staticman.branch : 'master'
         const property = params.staticman.property ? params.staticman.property : 'comments'
-        this.apiUrl = `${baseURL}/v2/entry/${repo}/${branch}/${property}`
+        this.apiUrl = `${endpoint}/v3/entry/${service}/${repo}/${branch}/${property}`
     }
 
     send(data) {
