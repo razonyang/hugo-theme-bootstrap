@@ -1,0 +1,119 @@
+{{- if isset $.Site.Params "staticman" }}
+    {{- $slug := printf "%scomments/%s" .File.Dir .Lang }}
+    {{- $sorting := default "desc" $.Site.Params.staticman.sorting }}
+    <form id="staticman-comment-form" class="needs-validation mb-3" novalidate>
+        <input name="slug" type="hidden" value="{{ $slug }}">
+        <div class="row g-3 mb-2">
+            <div class="form-floating col-6 mb-2">
+                <input class="form-control form-control-sm" aria-label="Name" name="name" type="text" id="comment-name" required />
+                <label for="languages-select">Name</label>
+            </div>
+            <div class="form-floating col-6 mb-2">
+                <input class="form-control form-control-sm" aria-label="Email" name="email" type="email" id="comment-email" required />
+                <label for="comment-email">Email</label>
+            </div>
+            <div class="form-floating col-12 mb-2">
+                <textarea class="form-control" aria-label="Message" name="message" id="comment-message" required></textarea>
+                <label for="comment-message">Message</label>
+            </div>
+        </div>
+        <div class="text-end">
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </div>
+    </form>
+
+    {{- with .Resources.Match (printf "comments/%s/*" .Lang) }}
+        <div class="py-3">
+            {{- template "render-comments" ( dict
+                "Comments" .
+                "Resources" $.Resources 
+                "Lang" $.Lang
+                "DateFormat" $.Site.Params.DateFormat
+                "Sorting" $sorting
+            ) }}
+        </div>
+    {{- end }}
+
+    <div class="modal fade" id="comment-reply-modal" tabindex="-1" aria-labelledby="comment-reply-modal-title" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="comment-reply-modal-title">
+                        Reply to <span class="fw-bold" id="comment-reply-modal-to"></span>
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="staticman-reply-form" class="needs-validation mb-3" novalidate>
+                        <input name="slug" type="hidden" value="{{ $slug }}">
+                        <input name="reply_to" type="hidden" value="">
+                        <input name="root_id" type="hidden" value="">
+                        <div class="row g-3 mb-2">
+                            <div class="form-floating col-6 mb-2">
+                                <input class="form-control form-control-sm" aria-label="Name" name="name" type="text" id="comment-name" required />
+                                <label for="languages-select">Name</label>
+                            </div>
+                            <div class="form-floating col-6 mb-2">
+                                <input class="form-control form-control-sm" aria-label="Email" name="email" type="email" id="comment-email" required />
+                                <label for="comment-email">Email</label>
+                            </div>
+                            <div class="form-floating col-12 mb-2">
+                                <textarea class="form-control" aria-label="Message" name="message" id="comment-message" required></textarea>
+                                <label for="comment-message">Message</label>
+                            </div>
+                        </div>
+                        <div class="text-end">
+                            <button class="btn btn-primary" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{{- end }}
+
+{{- define "render-comments" }}
+  {{/* mapping from the comment id to the comment variable */}}
+  {{- $comments := dict }}
+  {{- range .Comments }}
+    {{- $comment := .Content | transform.Unmarshal }}
+    {{- $comments = merge $comments (dict $comment._id $comment) }}
+  {{- end }}
+  {{- range sort $comments "date" $.Sorting }}
+    <div class="pt-3 pb-2 border-top border-secondary border-opacity-25" id="comment-{{ ._id }}">
+        <div class="mb-3 d-flex flex-wrap align-items-center">
+            <img class="rounded-circle me-2" src="https://www.gravatar.com/avatar/{{.email}}" width="32px" height="32px" />
+            <span class="fw-bold me-2">{{ .name }}</span>
+            <span class="mtext-muted fs-sm">{{ .date | int | time | time.Format $.DateFormat }}</span>
+        </div>
+        <div class="mb-3 text-surface">
+          {{- if .reply_to }}
+            {{- with index $comments .reply_to }}
+              <a class="fw-bold me-2" href="#comment-{{ .reply_to }}">@{{ .name }}</a>
+            {{- end }}
+          {{- end }}
+          {{- $message := replaceRE "<script[^>]*>[^<]*</script>" "~~invalid content~~" .message }}
+          {{- $message | markdownify }}
+        </div>
+        {{- $rootId := default ._id $.RootId }}
+        <div class="mb-1">
+            <button class="btn btn-sm btn-secondary staticman-reply-button px-1 py-0" data-bs-toggle="modal" data-bs-target="#comment-reply-modal"
+                data-root-id="{{ $rootId }}" data-comment-id="{{ ._id }}" data-comment-name="{{ .name }}">
+                <i class="fas fa-fw fa-reply"></i> Reply
+            </button>
+        </div>
+        {{- with $.Resources.Match (printf "comments/%s/%s/*" $.Lang ._id) }}
+            <div class="ps-3 pt-1 border-start border-secondary border-opacity-25">
+                {{- template "render-comments" ( dict
+                    "Comments" .
+                    "Resources" $.Resources 
+                    "Lang" $.Lang
+                    "DateFormat" $.DateFormat
+                    "Sorting" $.Sorting
+                    "RootId" $rootId
+                ) }}
+            </div>
+        {{- end }}
+      </div>
+  {{- end }}
+{{- end }}
