@@ -1,8 +1,9 @@
-{{- $.Scratch.Add "pages" slice -}}
-{{- $.Scratch.Add "authors" slice }}
-{{- $.Scratch.Add "categories" slice }}
-{{- $.Scratch.Add "series" slice }}
-{{- $.Scratch.Add "tags" slice }}
+{{- $scratch := newScratch -}}
+{{- $scratch.Add "pages" slice -}}
+{{- $scratch.Add "authors" slice }}
+{{- $scratch.Add "categories" slice }}
+{{- $scratch.Add "series" slice }}
+{{- $scratch.Add "tags" slice }}
 {{- range where .Site.AllPages "Kind" "page" -}}
     {{- $page := . }}
     {{- $date := .Date | time.Format ":date_long" -}}
@@ -45,20 +46,20 @@
       {{- range $page.GetTerms $taxonomyName }}
         {{- $terms = $terms | append (dict "title" .Title "url" .Permalink) }}
         {{- $termTitles = $termTitles | append .Title }}
-        {{- $.Scratch.Add ($taxonomyName | pluralize) (slice .Title) }}
+        {{- $scratch.Add ($taxonomyName | pluralize) (slice .Title) }}
       {{- end }}
       {{- $item = merge $item (dict
           $taxonomyName $terms
           (printf "%s_titles" $taxonomyName) (delimit $termTitles " ")
       )}}
     {{- end }}
-    {{- $.Scratch.Add "pages" (slice $item) }}
+    {{- $scratch.Add "pages" (slice $item) }}
 {{- end -}}
 {{- dict
-  "pages" ($.Scratch.Get "pages")
-  "authors" ($.Scratch.Get "authors"| uniq)
-  "categories" ($.Scratch.Get "categories"| uniq)
-  "series" ($.Scratch.Get "series" | uniq)
-  "tags" ($.Scratch.Get "tags"| uniq)
+  "pages" ($scratch.Get "pages")
+  "authors" ($scratch.Get "authors" | uniq)
+  "categories" ($scratch.Get "categories" | uniq)
+  "series" ($scratch.Get "series" | uniq)
+  "tags" ($scratch.Get "tags"| uniq)
  | jsonify 
 -}}
