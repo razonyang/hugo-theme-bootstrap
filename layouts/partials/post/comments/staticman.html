@@ -8,7 +8,7 @@
     ) }}
 
     {{- with .Resources.Match (printf "comments/%s/*" .Lang) }}
-        <div class="py-3">
+        <div class="staticman-comments py-3">
             {{- template "render-comments" ( dict
                 "Comments" .
                 "Resources" $.Resources 
@@ -72,11 +72,11 @@
     {{- $comments = merge $comments (dict $comment._id $comment) }}
   {{- end }}
   {{- range sort $comments "date" $.Sorting }}
-    <div class="pt-3 pb-2 border-top border-secondary border-opacity-25" id="comment-{{ ._id }}">
+    <div class="staticman-comment pt-3 pb-2 border-top border-secondary border-opacity-25" id="comment-{{ ._id }}">
         <div class="mb-3 d-flex flex-wrap align-items-center">
-            <img class="rounded-circle me-2" src="https://www.gravatar.com/avatar/{{.email}}" width="32px" height="32px" />
-            <span class="fw-bold me-2">{{ .name }}</span>
-            <span class="mtext-muted fs-sm">{{ .date | int | time | time.Format $.DateFormat }}</span>
+            <img class="staticman-comment-avatar rounded-circle me-2" src="https://www.gravatar.com/avatar/{{.email}}" width="32px" height="32px" />
+            <span class="staticman-comment-name fw-bold me-2">{{ .name }}</span>
+            <span class="staticman-comment-date mtext-muted fs-sm" data-timestamp="{{ .date }}">{{ .date | int | time | time.Format $.DateFormat }}</span>
         </div>
         <div class="mb-3 text-surface">
           {{- if .reply_to }}
