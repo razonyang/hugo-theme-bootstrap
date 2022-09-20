@@ -7,3 +7,7 @@ table {
     @extend .table-hover; /* stylelint-disable-line */
   }
 }
+
+.table-responsive {
+  margin-bottom: 1rem;
+}
