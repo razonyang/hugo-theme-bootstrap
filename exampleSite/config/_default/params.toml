@@ -140,6 +140,18 @@ viewer = true # Image Viewer
   # Optional values: github-light, github-dark, preferred-color-scheme, github-dark-orange, icy-dark, dark-blue, photon-dark.
   # theme = ""
 
+# [staticman]
+  # endpoint = "https://yourstaticmaninstance" # Required, replace with your own Staticman instance.
+  # repo = "user/repo" # Required
+  # service = "github" # Default to GitHub.
+  # branch = "main" # Default to master.
+  # property = "comments" # Default to comments.
+  # sorting = "desc" # Default to asc.
+  # reCaptchaKey = "" # The reCaptcha site key.
+  # reCaptchaSecret = "" # The reCaptcha encrypted secret. You'll need to encrypt plain secret via https://yourstaticmaninstance/v3/encrypt/PLAINSECRET.
+  # extraFields = [ "url" ] # Extra fields. Available fiedls: url.
+
+
 [giscus]
   repo = "razonyang/hugo-theme-bootstrap"
   repoId = "MDEwOlJlcG9zaXRvcnkzMDQzMzI4NTM="

@@ -99,6 +99,154 @@ disqusShortname = "yourdiscussshortname"
 | `giscus.lang` | String | - | Specify language, default to site language.
 | `giscus.lazyLoading` | Boolean | `true` | Enable lazy loading.
 
+## Staticman
+
+[Staticman](https://staticman.net/) is also supported out of box, but it may be too complex to set it up.
+
+### Advantages
+
+- The comments files are stored inside your repository, that is, the comments are rendered during the site build. It maybe useful for SEO, since it doesn't rely JS to load data dynamically, it's truly static.
+
+### Disadvantages
+
+- The user information are untrusted, such as email.
+
+### Preparations
+
+#### Staticman instance
+
+Firstly, we should set up a Staticman instance for handling comments requests.
+
+##### Self-Hosted Staticman instance
+
+Please see https://staticman.net/docs/getting-started.html#step-2-deploy-staticman for details.
+
+##### Public Staticman instance
+
+I set up a public staticman instance for testing, it should works with GitHub repositories only.
+
+> You'll need to install the [GitHub App](https://github.com/apps/hbs-staticman) for your repo, so that the instance has access to write comments files to your repo.
+
+- Endpoint: https://hbs-staticman.herokuapp.com
+
+#### Staticman Configuration
+
+Secondary, we need to create the `staticman.yml` under your site/repository root, so that Staticman instance can read the configuration and process comments requests.
+
+{{% alert "warning" %}}
+The `filename`, `path` are fixed, please **DO NOT** modify those parameters.
+{{% /alert %}}
+
+{{% alert "warning" %}}
+The `allowedFields` MUST include `name`, `email`, `message`, `reply_to` fields.
+{{% /alert %}}
+
+```yaml
+# Name of the property. You can have multiple properties with completely
+# different config blocks for different sections of your site.
+# For example, you can have one property to handle comment submission and
+# another one to handle posts.
+comments:
+  # (*) REQUIRED
+  #
+  # Names of the fields the form is allowed to submit. If a field that is
+  # not here is part of the request, an error will be thrown.
+  allowedFields: ["name", "email", "url", "message", "reply_to"]
+
+  # (*) REQUIRED
+  #
+  # Name of the branch being used. Must match the one sent in the URL of the
+  # request.
+  branch: "main"
+
+  # Text to use as the commit message or pull request title. Accepts placeholders.
+  commitMessage: "Add Staticman comment"
+
+  # (*) REQUIRED
+  #
+  # Destination path (filename) for the data files. Accepts placeholders.
+  filename: "{@id}" # DO NOT MODIFY
+
+  # The format of the generated data files. Accepted values are "json", "yaml"
+  # or "frontmatter"
+  format: "yaml"
+
+  # List of fields to be populated automatically by Staticman and included in
+  # the data file. Keys are the name of the field. The value can be an object
+  # with a `type` property, which configures the generated field, or any value
+  # to be used directly (e.g. a string, number or array)
+  generatedFields:
+    date:
+      type: date
+      options:
+        format: "timestamp-seconds"
+
+  # Whether entries need to be appproved before they are published to the main
+  # branch. If set to `true`, a pull request will be created for your approval.
+  # Otherwise, entries will be published to the main branch automatically.
+  moderation: false
+
+  # Name of the site. Used in notification emails.
+  name: "hbs.razonyang.com"
+
+  # Notification settings. When enabled, users can choose to receive notifications
+  # via email when someone adds a reply or a new comment. This requires an account
+  # with Mailgun, which you can get for free at http://mailgun.com.
+  #notifications:
+    # Enable notifications
+    #enabled: true
+
+    # (!) ENCRYPTED
+    #
+    # Mailgun API key
+    #apiKey: "1q2w3e4r"
+
+    # (!) ENCRYPTED
+    #
+    # Mailgun domain (encrypted)
+    #domain: "4r3e2w1q"
+
+  # (*) REQUIRED
+  #
+  # Destination path (directory) for the data files. Accepts placeholders.
+  path: "content/{options.slug}" # DO NOT MODIFY
+
+  # Names of required fields. If any of these isn't in the request or is empty,
+  # an error will be thrown.
+  requiredFields: ["name", "email", "message"]
+
+  # List of transformations to apply to any of the fields supplied. Keys are
+  # the name of the field and values are possible transformation types.
+  transforms:
+    email: md5 # DO NOT MODIFY, REQUIRED BY AVATAR.
+
+  reCaptcha:
+    enabled: false
+    siteKey: 
+    secret: 
+```
+
+#### Site Parameters
+
+Finally, tweak the following `staticman` parameters in `params.toml`.
+
+| Name | Type | Default | Description |
+|:---|:---|:--:|:---
+| `staticman` | Object | |
+| `staticman.endpoint` | String | - | THe Staticman instance endpoint. Required.
+| `staticman.repo` | String | - | Repository that with form `user/repo`. Required.
+| `staticman.service` | String | `github` | 
+| `staticman.branch` | String | `master` | Repository branch.
+| `staticman.property` | String | `comments` |
+| `staticman.sorting` | String | `asc` | Sorting comments, available options: `desc`.
+| `staticman.reCaptchaKey` | String | `-` | The reCaptcha site key.
+| `staticman.reCaptchaSecret` | String | `-` | The reCaptcha encrypted secret. You'll need to encrypt plain secret via https://yourstaticmaninstance/v3/encrypt/plainsecret.
+| `staticman.extraFields` | Array | `-` | Extra fields. Available fiedls: `url`.
+
+#### reCaptcha
+
+The reCaptcha secret is not the plain text version, you'll need to encrypt it via your Staticman instance `https://yourstaticmaninstance/v3/encrypt/PLAINSECRET`.
+
 ## 自定義評論小部件
 
 我們不打算支持所有的評論小部件，但別擔心，你完全可以自定義評論小部件。
