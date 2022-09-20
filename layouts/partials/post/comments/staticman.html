@@ -136,7 +136,7 @@
               <a class="fw-bold me-2" href="#comment-{{ .reply_to }}">@{{ .name }}</a>
             {{- end }}
           {{- end }}
-          {{- $message := replaceRE "<script[^>]*>[^<]*</script>" "~~invalid content~~" .message }}
+          {{- $message := replaceRE "(?i)<script[^>]*>[^<]*</script>" "<span class=\"text-muted\">~~invalid message~~</span>" .message }}
           {{- $message | markdownify }}
         </div>
         {{- $rootId := default ._id $.RootId }}
