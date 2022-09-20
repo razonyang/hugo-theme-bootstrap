@@ -1,10 +1,37 @@
 {{- if isset $.Site.Params "staticman" }}
     {{- $slug := printf "%scomments/%s" .File.Dir .Lang }}
     {{- $sorting := default "asc" $.Site.Params.staticman.sorting }}
+    {{- $reCaptchaKey := default "" $.Site.Params.staticman.reCaptchaKey }}
+    {{- $reCaptchaSecret := default "" $.Site.Params.staticman.reCaptchaSecret }}
+    {{- if $reCaptchaKey }}
+    <script>
+        function renderCaptchas() {
+            document.querySelectorAll('.g-recaptcha').forEach(function(item) {
+                const form = item.parentElement.closest('form')
+                const button = form.querySelector('button[type="submit"]')
+                grecaptcha.render(item, {
+                    sitekey : '{{ $reCaptchaKey }}',
+                    callback: function() {
+                        button.removeAttribute('disabled')
+                    },
+                    'expired-callback': function() {
+                        button.setAttribute('disabled', 'true')
+                    },
+                    'error-callback': function() {
+                        button.setAttribute('disabled', 'true')
+                    },
+                });
+            })
+        }
+    </script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=renderCaptchas&render=explicit" async defer></script>
+    {{- end }}
 
     {{- template "render-form" (dict
         "Id" "staticman-comment-form"
         "Slug" $slug
+        "ReCaptchaKey" $reCaptchaKey
+        "ReCaptchaSecret" $reCaptchaSecret
     ) }}
 
     {{- with .Resources.Match (printf "comments/%s/*" .Lang) }}
@@ -32,6 +59,8 @@
                     {{- template "render-form" (dict
                         "Id" "staticman-reply-form"
                         "Slug" $slug
+                        "ReCaptchaKey" $reCaptchaKey
+                        "ReCaptchaSecret" $reCaptchaSecret
                     ) }}
                 </div>
             </div>
@@ -59,7 +88,17 @@
         </div>
     </div>
     <div class="text-end">
-        <button class="btn btn-primary" type="submit">{{ i18n "comments_submit" }}</button>
+        {{- if .ReCaptchaKey }}
+            <input type="hidden" name="reCaptchaKey" value="{{ .ReCaptchaKey }}">
+            <input type="hidden" name="reCaptchaSecret" value="{{ .ReCaptchaSecret }}">
+            <div class="g-recaptcha mb-2"
+                data-sitekey="{{ .ReCaptchaKey }}"
+                data-callback="captchaCallback"
+                data-expired-callback="captchaExpired"
+                data-error-callback="captchaError"
+            ></div>
+        {{- end }}
+        <button class="btn btn-primary" type="submit" disabled>{{ i18n "comments_submit" }}</button>
     </div>
 </form>
 {{- end }}

@@ -38,6 +38,10 @@ class Staticman implements Component
             const data = {
                 options: {
                     slug: formData.get('slug'),
+                    reCaptcha: {
+                        siteKey: formData.get('reCaptchaKey'),
+                        secret: formData.get('reCaptchaSecret'),
+                    },
                 },
                 fields: {
                     name: formData.get('name'),
