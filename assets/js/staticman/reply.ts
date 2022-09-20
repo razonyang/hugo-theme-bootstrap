@@ -65,7 +65,7 @@ class Reply implements Component
 
         this.buttons.forEach((button) => {
             button.addEventListener('click', (e) => {
-                document.getElementById('comment-reply-modal-to').innerText = button.getAttribute('data-comment-name');
+                document.getElementById('comment-reply-modal-to').innerText = '@' + button.getAttribute('data-comment-name');
                 rootId.value = button.getAttribute('data-root-id');
                 replyTo.value = button.getAttribute('data-comment-id');
             });

@@ -79,6 +79,24 @@ other = "黃色"
 [comments]
 other = "評論"
 
+[comments_email]
+other = "郵箱"
+
+[comments_message]
+other = "內容"
+
+[comments_name]
+other = "名稱"
+
+[comments_reply]
+other = "回复"
+
+[comments_reply_to]
+other = "回复"
+
+[comments_submit]
+other = "提交"
+
 [contact_name]
 other = "名稱"
 
