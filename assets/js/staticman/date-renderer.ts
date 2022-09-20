@@ -31,7 +31,7 @@ class DateRenderer
         const now = new Date();
         this.items.forEach((item: HTMLElement) => {
             const timestamp = parseInt(item.getAttribute('data-timestamp'));
-            const date = new Date(parseInt(item.getAttribute('data-timestamp')) * 1000);
+            const date = new Date(timestamp * 1000);
             item.innerText = formatDistance(now, date, { addSuffix: true, locale: this.getLocale() })
         })
     }
