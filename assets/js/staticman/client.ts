@@ -15,7 +15,32 @@ class Client
         this.apiUrl = `${endpoint}/v3/entry/${service}/${repo}/${branch}/${property}`
     }
 
-    send(data) {
+    send(form: FormData) {
+        let slug = form.get('slug')
+
+        const rootId = form.get('root_id')
+        const replyTo = form.get('reply_to')
+        if (rootId && replyTo) {
+            slug += '/' + rootId
+        }
+
+        const data = {
+            options: {
+                slug: slug,
+                reCaptcha: {
+                    siteKey: form.get('reCaptchaKey'),
+                    secret: form.get('reCaptchaSecret'),
+                },
+            },
+            fields: {
+                reply_to: replyTo,
+                name: form.get('name'),
+                email: form.get('email'),
+                message: form.get('message'),
+                url: form.get('url'),
+            },
+        }
+
         return fetch(this.apiUrl, {
             method: 'POST',
             headers: {

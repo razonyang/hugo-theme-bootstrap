@@ -44,22 +44,8 @@ class Reply implements Component
             if (!rootId || !replyTo) {
                 throw new Error('invalid action');
             }
-            const data = {
-                options: {
-                    slug: formData.get('slug') + '/' + rootId,
-                    reCaptcha: {
-                        siteKey: formData.get('reCaptchaKey'),
-                        secret: formData.get('reCaptchaSecret'),
-                    }
-                },
-                fields: {
-                    reply_to: replyTo,
-                    name: formData.get('name'),
-                    email: formData.get('email'),
-                    message: formData.get('message'),
-                },
-            }
-            client.send(data).finally(() => {
+
+            client.send(formData).finally(() => {
                 this.lock = false;
                 button.removeAttribute('disabled');
                 close.click();

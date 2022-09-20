@@ -97,6 +97,9 @@ other = "Reply to"
 [comments_submit]
 other = "Submit"
 
+[comments_url]
+other = "URL"
+
 [contact_name]
 other = "Name"
 

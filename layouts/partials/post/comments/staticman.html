@@ -3,6 +3,7 @@
     {{- $sorting := default "asc" $.Site.Params.staticman.sorting }}
     {{- $reCaptchaKey := default "" $.Site.Params.staticman.reCaptchaKey }}
     {{- $reCaptchaSecret := default "" $.Site.Params.staticman.reCaptchaSecret }}
+    {{- $extraFields := default slice $.Site.Params.staticman.extraFields }}
     {{- if $reCaptchaKey }}
     <script>
         function renderCaptchas() {
@@ -32,6 +33,7 @@
         "Slug" $slug
         "ReCaptchaKey" $reCaptchaKey
         "ReCaptchaSecret" $reCaptchaSecret
+        "ExtraFields" $extraFields
     ) }}
 
     {{- with .Resources.Match (printf "comments/%s/*" .Lang) }}
@@ -61,6 +63,7 @@
                         "Slug" $slug
                         "ReCaptchaKey" $reCaptchaKey
                         "ReCaptchaSecret" $reCaptchaSecret
+                        "ExtraFields" $extraFields
                     ) }}
                 </div>
             </div>
@@ -74,14 +77,20 @@
     <input name="reply_to" type="hidden" value="">
     <input name="root_id" type="hidden" value="">
     <div class="row g-3 mb-2">
-        <div class="form-floating col-6 mb-2">
+        <div class="form-floating col-4 mb-2">
             <input class="form-control form-control-sm" aria-label="{{ i18n "comments_name" }}" name="name" type="text" id="comment-name" required />
             <label for="languages-select">{{ i18n "comments_name" }}</label>
         </div>
-        <div class="form-floating col-6 mb-2">
+        <div class="form-floating col-4 mb-2 ms-auto">
             <input class="form-control form-control-sm" aria-label="{{ i18n "comments_email" }}" name="email" type="email" id="comment-email" required />
             <label for="comment-email">{{ i18n "comments_email" }}</label>
         </div>
+        {{- if in .ExtraFields "url" }}
+        <div class="form-floating col-4 mb-2">
+            <input class="form-control form-control-sm" aria-label="{{ i18n "comments_url" }}" name="url" type="url" id="comment-url" />
+            <label for="comment-url">{{ i18n "comments_url" }}</label>
+        </div>
+        {{- end }}
         <div class="form-floating col-12 mb-2">
             <textarea class="form-control" aria-label="{{ i18n "comments_message" }}" name="message" id="comment-message" required></textarea>
             <label for="comment-message">{{ i18n "comments_message" }}</label>
@@ -112,12 +121,16 @@
   {{- end }}
   {{- range sort $comments "date" $.Sorting }}
     <div class="staticman-comment pt-3 pb-2 border-top border-secondary border-opacity-25" id="comment-{{ ._id }}">
-        <div class="mb-3 d-flex flex-wrap align-items-center">
+        <div class="mb-2 d-flex flex-wrap align-items-center">
             <img class="staticman-comment-avatar rounded-circle me-2" src="https://www.gravatar.com/avatar/{{.email}}" width="32px" height="32px" />
-            <span class="staticman-comment-name fw-bold me-2">{{ .name }}</span>
+            {{- if .url }}
+                <a class="staticman-comment-name fw-bold me-2" href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .name }}</a>
+            {{- else }}
+                <span class="staticman-comment-name fw-bold me-2">{{ .name }}</span>
+            {{- end }}
             <span class="staticman-comment-date mtext-muted fs-sm" data-timestamp="{{ .date }}">{{ .date | int | time | time.Format $.DateFormat }}</span>
         </div>
-        <div class="mb-3 text-surface">
+        <div class="mb-2 text-surface">
           {{- if .reply_to }}
             {{- with index $comments .reply_to }}
               <a class="fw-bold me-2" href="#comment-{{ .reply_to }}">@{{ .name }}</a>
@@ -127,7 +140,7 @@
           {{- $message | markdownify }}
         </div>
         {{- $rootId := default ._id $.RootId }}
-        <div class="mb-1">
+        <div class="mb-2">
             <button class="btn btn-sm btn-secondary staticman-reply-button px-1 py-0" data-bs-toggle="modal" data-bs-target="#comment-reply-modal"
                 data-root-id="{{ $rootId }}" data-comment-id="{{ ._id }}" data-comment-name="{{ .name }}">
                 <i class="fas fa-fw fa-reply"></i> {{ i18n "comments_reply" }}

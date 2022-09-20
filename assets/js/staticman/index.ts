@@ -35,21 +35,7 @@ class Staticman implements Component
             button.setAttribute('disabled', 'true');
             
             const formData = new FormData(this.form)
-            const data = {
-                options: {
-                    slug: formData.get('slug'),
-                    reCaptcha: {
-                        siteKey: formData.get('reCaptchaKey'),
-                        secret: formData.get('reCaptchaSecret'),
-                    },
-                },
-                fields: {
-                    name: formData.get('name'),
-                    email: formData.get('email'),
-                    message: formData.get('message'),
-                },
-            }
-            client.send(data).finally(() => {
+            client.send(formData).finally(() => {
                 this.lock = false;
                 button.removeAttribute('disabled');
                 this.form.reset();

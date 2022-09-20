@@ -97,6 +97,9 @@ other = "回复"
 [comments_submit]
 other = "提交"
 
+[comments_url]
+other = "URL"
+
 [contact_name]
 other = "名称"
 
