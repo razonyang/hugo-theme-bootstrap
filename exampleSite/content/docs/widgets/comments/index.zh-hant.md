@@ -108,6 +108,7 @@ disqusShortname = "yourdiscussshortname"
 
 - The comments files are stored inside your repository, that is, the comments are rendered during the site build. It maybe useful for SEO, since it doesn't rely JS to load data dynamically, it's truly static.
 - Handling spam: approve or reject comment via Git provider pull request, Google reCaptcha.
+- Native theme style.
 
 ### Disadvantages
 
