@@ -25,7 +25,11 @@ class Staticman implements Component
         const button = this.form.querySelector('button[type="submit"]');
 
         this.form.addEventListener('submit', (e) => {
-            e.preventDefault();
+            e.preventDefault()
+            if (!this.form.checkValidity()) {
+                e.stopPropagation()
+                return;
+            }
 
             if (this.lock !== false) {
                 return;

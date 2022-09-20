@@ -30,6 +30,10 @@ class Reply implements Component
 
         this.form.addEventListener('submit', (e) => {
             e.preventDefault()
+            if (!this.form.checkValidity()) {
+                e.stopPropagation()
+                return;
+            }
 
             if (this.lock !== false) {
                 return;
