@@ -5,6 +5,9 @@ class Client
 {
     private apiUrl: string;
 
+    private reCaptchaKey = '';
+    private reCaptchaSecret = '';
+
     constructor()
     {
         const endpoint = params.staticman.endpoint.replace(/\/*$/, "")
@@ -12,10 +15,17 @@ class Client
         const repo = params.staticman.repo
         const branch = params.staticman.branch ? params.staticman.branch : 'master'
         const property = params.staticman.property ? params.staticman.property : 'comments'
+        this.reCaptchaKey = params.staticman.recaptchakey ? params.staticman.recaptchakey : '';
+        this.reCaptchaSecret = params.staticman.recaptchasecret ? params.staticman.recaptchasecret : '';
         this.apiUrl = `${endpoint}/v3/entry/${service}/${repo}/${branch}/${property}`
     }
 
     send(form: FormData) {
+        const reCaptchaToken = form.get('reCaptchaToken')
+        if (this.reCaptchaKey && !reCaptchaToken) {
+            throw new Error('reCaptcha token missing')
+        }
+
         let slug = form.get('slug')
 
         const rootId = form.get('root_id')
@@ -25,11 +35,12 @@ class Client
         }
 
         const data = {
+            'g-recaptcha-response': reCaptchaToken,
             options: {
                 slug: slug,
                 reCaptcha: {
-                    siteKey: form.get('reCaptchaKey'),
-                    secret: form.get('reCaptchaSecret'),
+                    siteKey: this.reCaptchaKey,
+                    secret: this.reCaptchaSecret,
                 },
             },
             fields: {

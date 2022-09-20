@@ -2,7 +2,6 @@
     {{- $slug := printf "%scomments/%s" .File.Dir .Lang }}
     {{- $sorting := default "asc" $.Site.Params.staticman.sorting }}
     {{- $reCaptchaKey := default "" $.Site.Params.staticman.reCaptchaKey }}
-    {{- $reCaptchaSecret := default "" $.Site.Params.staticman.reCaptchaSecret }}
     {{- $extraFields := default slice $.Site.Params.staticman.extraFields }}
     {{- if $reCaptchaKey }}
     <script>
@@ -10,9 +9,11 @@
             document.querySelectorAll('.g-recaptcha').forEach(function(item) {
                 const form = item.parentElement.closest('form')
                 const button = form.querySelector('button[type="submit"]')
+                const tokenInput = form.querySelector('input[name="reCaptchaToken"]')
                 grecaptcha.render(item, {
                     sitekey : '{{ $reCaptchaKey }}',
-                    callback: function() {
+                    callback: function(token) {
+                        tokenInput.value = token
                         button.removeAttribute('disabled')
                     },
                     'expired-callback': function() {
@@ -32,7 +33,6 @@
         "Id" "staticman-comment-form"
         "Slug" $slug
         "ReCaptchaKey" $reCaptchaKey
-        "ReCaptchaSecret" $reCaptchaSecret
         "ExtraFields" $extraFields
     ) }}
 
@@ -62,7 +62,6 @@
                         "Id" "staticman-reply-form"
                         "Slug" $slug
                         "ReCaptchaKey" $reCaptchaKey
-                        "ReCaptchaSecret" $reCaptchaSecret
                         "ExtraFields" $extraFields
                     ) }}
                 </div>
@@ -98,8 +97,7 @@
     </div>
     <div class="text-end">
         {{- if .ReCaptchaKey }}
-            <input type="hidden" name="reCaptchaKey" value="{{ .ReCaptchaKey }}">
-            <input type="hidden" name="reCaptchaSecret" value="{{ .ReCaptchaSecret }}">
+            <input type="hidden" name="reCaptchaToken" value="" required>
             <div class="g-recaptcha mb-2"
                 data-sitekey="{{ .ReCaptchaKey }}"
                 data-callback="captchaCallback"
