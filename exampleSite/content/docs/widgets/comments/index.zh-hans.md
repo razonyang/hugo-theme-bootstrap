@@ -142,7 +142,7 @@ The `filename`, `path` are fixed, please **DO NOT** modify those parameters.
 {{% /alert %}}
 
 {{% alert "warning" %}}
-The `allowedFields` MUST include `name`, `email`, `message`, `reply_to` fields.
+The `allowedFields` MUST include `name`, `email`, `message`, `reply_to`, `root_id` fields.
 {{% /alert %}}
 
 ```yaml
@@ -155,7 +155,7 @@ comments:
   #
   # Names of the fields the form is allowed to submit. If a field that is
   # not here is part of the request, an error will be thrown.
-  allowedFields: ["name", "email", "url", "message", "reply_to"]
+  allowedFields: ["name", "email", "url", "message", "reply_to", "root_id"]
 
   # (*) REQUIRED
   #
@@ -213,7 +213,7 @@ comments:
   # (*) REQUIRED
   #
   # Destination path (directory) for the data files. Accepts placeholders.
-  path: "content/{options.slug}" # DO NOT MODIFY
+  path: "data/{options.slug}" # DO NOT MODIFY
 
   # Names of required fields. If any of these isn't in the request or is empty,
   # an error will be thrown.
