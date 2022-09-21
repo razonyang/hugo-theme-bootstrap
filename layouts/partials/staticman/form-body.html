@@ -38,5 +38,5 @@
             data-error-callback="captchaError"
         ></div>
     {{- end }}
-    <button class="btn btn-primary" type="submit" disabled>{{ i18n "comments_submit" }}</button>
+    <button class="btn btn-primary" type="submit"{{ if $reCaptchaKey }} disabled{{ end }}>{{ i18n "comments_submit" }}</button>
 </div>
