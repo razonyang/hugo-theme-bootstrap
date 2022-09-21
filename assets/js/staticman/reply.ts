@@ -1,61 +1,29 @@
-import Component from "js/component";
-import client from "./client";
+import client from "js/staticman/client";
+import Form from "js/staticman/form";
 
-class Reply implements Component
+class Reply extends Form
 {
     private buttons: Array<HTMLButtonElement>;
 
-    private form: HTMLFormElement;
-
-    private lock = false;
+    private modalCloseBtn: HTMLButtonElement
 
     constructor(form: string, buttons: string)
     {
-        this.form = document.getElementById(form) as HTMLFormElement;
+        super(form);
         this.buttons = Array.from(document.querySelectorAll(buttons)) as Array<HTMLButtonElement>;
+        this.modalCloseBtn = document.querySelector('#comment-reply-modal .btn-close') as HTMLButtonElement;
     }
 
     run()
     {
+        super.run();
+
         if (!this.form) {
-            return;
+            return
         }
 
         const replyTo: HTMLInputElement = this.form.querySelector('input[name="reply_to"]');
         const rootId: HTMLInputElement = this.form.querySelector('input[name="root_id"]');
-
-        const button = this.form.querySelector('button[type="submit"]');
-
-        const close = document.querySelector('#comment-reply-modal .btn-close') as HTMLButtonElement;
-
-        this.form.addEventListener('submit', (e) => {
-            e.preventDefault()
-            if (!this.form.checkValidity()) {
-                e.stopPropagation()
-                return;
-            }
-
-            if (this.lock !== false) {
-                return;
-            }
-
-            this.lock = true;
-            button.setAttribute('disabled', 'true');
-
-            const formData = new FormData(this.form)
-            const rootId = formData.get('root_id');
-            const replyTo = formData.get('reply_to');
-            if (!rootId || !replyTo) {
-                throw new Error('invalid action');
-            }
-
-            client.send(formData).finally(() => {
-                this.lock = false;
-                button.removeAttribute('disabled');
-                close.click();
-                this.form.reset();
-            });
-        })
 
         this.buttons.forEach((button) => {
             button.addEventListener('click', (e) => {
@@ -64,6 +32,22 @@ class Reply implements Component
                 replyTo.value = button.getAttribute('data-comment-id');
             });
         })
+    }
+
+    reset(): void {
+        super.reset();
+
+        this.modalCloseBtn.click();
+    }
+
+    submit(data: FormData): Promise<void> {
+        const rootId = data.get('root_id');
+        const replyTo = data.get('reply_to');
+        if (!rootId || !replyTo) {
+            throw new Error('invalid action');
+        }
+
+        return client.send(data)
     }
 }
 
