@@ -150,7 +150,7 @@ viewer = true # Image Viewer
   # reCaptchaKey = "" # The reCaptcha site key.
   # reCaptchaSecret = "" # The reCaptcha encrypted secret. You'll need to encrypt plain secret via https://yourstaticmaninstance/v3/encrypt/PLAINSECRET.
   # extraFields = [ "url" ] # Extra fields. Available fiedls: url.
-
+  # paginate = 5 # Default to 10.
 
 [giscus]
   repo = "razonyang/hugo-theme-bootstrap"

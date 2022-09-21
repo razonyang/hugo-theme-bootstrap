@@ -246,6 +246,7 @@ Finally, tweak the following `staticman` parameters in `params.toml`.
 | `staticman.reCaptchaKey` | String | `-` | The reCaptcha site key.
 | `staticman.reCaptchaSecret` | String | `-` | The reCaptcha encrypted secret. You'll need to encrypt plain secret via https://yourstaticmaninstance/v3/encrypt/plainsecret.
 | `staticman.extraFields` | Array | `-` | Extra fields. Available fiedls: `url`.
+| `staticman.paginate` | Integer | `10` | The number of comments per page.
 
 #### reCaptcha
 
