@@ -49,7 +49,9 @@ abstract class Form implements Component
 
     unlock() {
         this.locked = false
-        this.btnSubmit.removeAttribute('disabled');
+        if (!this.form.hasAttribute('data-g-recaptcha-id')) {
+            this.btnSubmit.removeAttribute('disabled');
+        }
     }
 
     reset() {
