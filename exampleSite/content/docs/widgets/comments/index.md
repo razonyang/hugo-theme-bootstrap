@@ -240,12 +240,6 @@ Finally, tweak the following `staticman` parameters in `params.toml`.
 | `staticman` | Object | |
 | `staticman.endpoint` | String | - | THe Staticman instance endpoint. Required.
 | `staticman.repo` | String | - | Repository that with form `user/repo`. Required.
-
-| Name | Type | Default | Description |
-|:---|:---|:--:|:---
-| `staticman` | Object | |
-| `staticman.endpoint` | String | - | THe Staticman instance endpoint. Required.
-| `staticman.repo` | String | - | Repository that with form `user/repo`. Required.
 | `staticman.service` | String | `github` | 
 | `staticman.branch` | String | `master` | Repository branch.
 | `staticman.property` | String | `comments` |
