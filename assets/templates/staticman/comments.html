@@ -11,7 +11,9 @@
     {{- partial "assets/init/js" . -}}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{- block "title" . -}}{{- partial "head/title" . -}}{{- end -}}</title>
+    {{- $currentPage := .Scratch.Get "commentsPage" }}
+    {{- $separator := .Site.Params.TitleSeparator }}
+    <title>{{ printf "%s %s %s %s " (i18n "comments") $separator (i18n "pagination_title" (dict "PageNumber" $currentPage)) $separator }}{{- partial "head/title" . -}}</title>
     {{- partial "head.html" . -}}
     {{- block "head-end" . -}}{{- end -}}
     {{- partial "hooks/head-end" . -}}
