@@ -1,6 +1,7 @@
 {{- $totalPages := div (add .TotalCount (sub .PageSize 1)) .PageSize }}
 {{- $page := .Page }}
 {{- $distance := 2 }}
+{{- if gt $totalPages 1 -}}
 <nav aria-label="Comments navigation">
   <ul class="pagination">
     {{- $divider := false }}
@@ -31,3 +32,4 @@
     {{- end }}
   </ul>
 </nav>
+{{- end }}
