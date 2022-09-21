@@ -1,0 +1,25 @@
+{{- if $.Site.Params.staticman.reCaptchaKey }}
+<script>
+    function renderCaptchas() {
+        document.querySelectorAll('.g-recaptcha').forEach(function(item) {
+            const form = item.parentElement.closest('form')
+            const button = form.querySelector('button[type="submit"]')
+            const tokenInput = form.querySelector('input[name="reCaptchaToken"]')
+            grecaptcha.render(item, {
+                sitekey : '{{ $.Site.Params.staticman.reCaptchaKey }}',
+                callback: function(token) {
+                    tokenInput.value = token
+                    button.removeAttribute('disabled')
+                },
+                'expired-callback': function() {
+                    button.setAttribute('disabled', 'true')
+                },
+                'error-callback': function() {
+                    button.setAttribute('disabled', 'true')
+                },
+            });
+        })
+    }
+</script>
+<script src="https://www.google.com/recaptcha/api.js?onload=renderCaptchas&render=explicit" async defer></script>
+{{- end }}

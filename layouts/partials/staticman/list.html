@@ -1,0 +1,17 @@
+
+{{- $max := mul .Page .PageSize }}
+{{- $min := sub $max .PageSize }}
+{{- $counter := 0 }}
+<div class="staticman-comments mb-3">
+{{- range sort .Comments ".Comment.date" .Sorting }}
+    {{- if and (ge $counter $min) (lt $counter $max) }}
+        {{- partial "staticman/list-item" (dict
+            "AllComments" $.AllComments
+            "Comment" .Comment
+            "Children" .Children
+            "DateFormat" $.DateFormat
+        ) }}
+    {{- end }}
+    {{- $counter = add $counter 1 }}
+{{- end }}
+</div>

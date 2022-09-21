@@ -1,161 +1,66 @@
 {{- if isset $.Site.Params "staticman" }}
-    {{- $slug := printf "%scomments/%s" .File.Dir .Lang }}
+    {{- template "walk-comments" . }}
+
+    {{/* generate comments pages */}}
+    {{- $paginate := default 10 $.Site.Params.staticman.paginate }}
     {{- $sorting := default "asc" $.Site.Params.staticman.sorting }}
-    {{- $reCaptchaKey := default "" $.Site.Params.staticman.reCaptchaKey }}
-    {{- $extraFields := default slice $.Site.Params.staticman.extraFields }}
-    {{- if $reCaptchaKey }}
-    <script>
-        function renderCaptchas() {
-            document.querySelectorAll('.g-recaptcha').forEach(function(item) {
-                const form = item.parentElement.closest('form')
-                const button = form.querySelector('button[type="submit"]')
-                const tokenInput = form.querySelector('input[name="reCaptchaToken"]')
-                grecaptcha.render(item, {
-                    sitekey : '{{ $reCaptchaKey }}',
-                    callback: function(token) {
-                        tokenInput.value = token
-                        button.removeAttribute('disabled')
-                    },
-                    'expired-callback': function() {
-                        button.setAttribute('disabled', 'true')
-                    },
-                    'error-callback': function() {
-                        button.setAttribute('disabled', 'true')
-                    },
-                });
-            })
-        }
-    </script>
-    <script src="https://www.google.com/recaptcha/api.js?onload=renderCaptchas&render=explicit" async defer></script>
+    {{- $comments := .Scratch.Get "comments" }}
+
+    {{- partial "staticman/recaptcha" . }}
+    {{- partial "staticman/reply-modal" . }}
+    {{- partial "staticman/form" . }}
+
+    {{- if $comments }}
+        {{- $tmpl := resources.Get "templates/staticman/comments.html" }}
+        {{- $commentsPages := div (add (len $comments) (sub $paginate 1)) $paginate }}
+        {{- $page := . }}
+        {{- range seq $commentsPages }}
+            {{- $commentsPageURL := printf "%s/comments/page/%d" $.RelPermalink . }}
+            {{- $page.Scratch.Set "commentsPage" . }}
+            {{- $commentsPage := $tmpl | resources.ExecuteAsTemplate $commentsPageURL $page }}
+            <a class="d-none" href="{{- $commentsPage.Permalink }}">{{- $commentsPage.Permalink }}</a>
+        {{- end }}
+        
+        {{- partial "staticman/list" (dict
+            "Comments" $comments
+            "AllComments" (.Scratch.Get "allComments")
+            "Page" 1
+            "Sorting" $sorting
+            "DateFormat" $.Site.Params.dateFormat
+            "PageSize" $paginate
+        ) }}
+        {{- partial "staticman/pagination" (dict
+            "TotalCount" (len $comments)
+            "Page" 1
+            "PageSize" $paginate
+            "PageLink" $.Permalink
+        ) }}
     {{- end }}
+{{- end }}
 
-    {{- template "render-form" (dict
-        "Id" "staticman-comment-form"
-        "Slug" $slug
-        "ReCaptchaKey" $reCaptchaKey
-        "ExtraFields" $extraFields
-    ) }}
-
+{{/* walk through the comments directory to collect comments and their children of current page */}}
+{{- define "walk-comments" }}
+    {{- $scratch := .Scratch }}
     {{- with .Resources.Match (printf "comments/%s/*" .Lang) }}
-        <div class="staticman-comments py-3">
-            {{- template "render-comments" ( dict
-                "Comments" .
-                "Resources" $.Resources 
-                "Lang" $.Lang
-                "DateFormat" $.Site.Params.DateFormat
-                "Sorting" $sorting
-            ) }}
-        </div>
+        {{- range . }}
+            {{- $comment := .Content | transform.Unmarshal }}
+            {{- $children := slice }}
+            {{- $scratch.SetInMap "allComments" $comment._id $comment }}
+            {{- with $.Resources.Match (printf "comments/%s/%s/*" $.Lang $comment._id) }}
+                {{- range . }}
+                    {{- $child := .Content | transform.Unmarshal }}
+                    {{- $children = $children | append $child }}
+                    {{/* allComments is a map that mapping from comment id to comment instance */}}
+                    {{/* it's used to get the information other comment reply to */}}
+                    {{- $scratch.SetInMap "allComments" $child._id $child }}
+                {{- end }}
+            {{- end }}
+            
+            {{/* comments stores the first level comments and their children of current page */}}
+            {{- $scratch.Add "comments" (slice (dict
+                "Comment" $comment
+                "Children" $children
+            )) }}
+        {{- end }}
     {{- end }}
-
-    <div class="modal fade" id="comment-reply-modal" tabindex="-1" aria-labelledby="comment-reply-modal-title" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="comment-reply-modal-title">
-                        {{ i18n "comments_reply_to" }} <span class="fw-bold" id="comment-reply-modal-to"></span>
-                    </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    {{- template "render-form" (dict
-                        "Id" "staticman-reply-form"
-                        "Slug" $slug
-                        "ReCaptchaKey" $reCaptchaKey
-                        "ExtraFields" $extraFields
-                    ) }}
-                </div>
-            </div>
-        </div>
-    </div>
-{{- end }}
-
-{{- define "render-form" }}
-<form id="{{ .Id }}" class="needs-validation mb-3" novalidate>
-    <input name="slug" type="hidden" value="{{ .Slug }}">
-    <input name="reply_to" type="hidden" value="">
-    <input name="root_id" type="hidden" value="">
-    <div class="row g-3 mb-2">
-        <div class="form-floating col-4 mb-2">
-            <input class="form-control form-control-sm" aria-label="{{ i18n "comments_name" }}" name="name" type="text" id="comment-name" required />
-            <label for="languages-select">{{ i18n "comments_name" }}</label>
-        </div>
-        <div class="form-floating col-4 mb-2 ms-auto">
-            <input class="form-control form-control-sm" aria-label="{{ i18n "comments_email" }}" name="email" type="email" id="comment-email" required />
-            <label for="comment-email">{{ i18n "comments_email" }}</label>
-        </div>
-        {{- if in .ExtraFields "url" }}
-        <div class="form-floating col-4 mb-2">
-            <input class="form-control form-control-sm" aria-label="{{ i18n "comments_url" }}" name="url" type="url" id="comment-url" />
-            <label for="comment-url">{{ i18n "comments_url" }}</label>
-        </div>
-        {{- end }}
-        <div class="form-floating col-12 mb-2">
-            <textarea class="form-control" aria-label="{{ i18n "comments_message" }}" name="message" id="comment-message" required></textarea>
-            <label for="comment-message">{{ i18n "comments_message" }}</label>
-        </div>
-    </div>
-    <div class="text-end">
-        {{- if .ReCaptchaKey }}
-            <input type="hidden" name="reCaptchaToken" value="" required>
-            <div class="g-recaptcha mb-2"
-                data-sitekey="{{ .ReCaptchaKey }}"
-                data-callback="captchaCallback"
-                data-expired-callback="captchaExpired"
-                data-error-callback="captchaError"
-            ></div>
-        {{- end }}
-        <button class="btn btn-primary" type="submit" disabled>{{ i18n "comments_submit" }}</button>
-    </div>
-</form>
-{{- end }}
-
-{{- define "render-comments" }}
-  {{/* mapping from the comment id to the comment variable */}}
-  {{- $comments := dict }}
-  {{- range .Comments }}
-    {{- $comment := .Content | transform.Unmarshal }}
-    {{- $comments = merge $comments (dict $comment._id $comment) }}
-  {{- end }}
-  {{- range sort $comments "date" $.Sorting }}
-    <div class="staticman-comment pt-3 pb-2 border-top border-secondary border-opacity-25" id="comment-{{ ._id }}">
-        <div class="mb-2 d-flex flex-wrap align-items-center">
-            <img class="staticman-comment-avatar rounded-circle me-2" src="https://www.gravatar.com/avatar/{{.email}}" width="32px" height="32px" />
-            {{- if .url }}
-                <a class="staticman-comment-name fw-bold me-2" href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .name }}</a>
-            {{- else }}
-                <span class="staticman-comment-name fw-bold me-2">{{ .name }}</span>
-            {{- end }}
-            <span class="staticman-comment-date mtext-muted fs-sm" data-timestamp="{{ .date }}">{{ .date | int | time | time.Format $.DateFormat }}</span>
-        </div>
-        <div class="mb-2 text-surface">
-          {{- if .reply_to }}
-            {{- with index $comments .reply_to }}
-              <a class="fw-bold me-2" href="#comment-{{ .reply_to }}">@{{ .name }}</a>
-            {{- end }}
-          {{- end }}
-          {{- $message := replaceRE "(?i)<script[^>]*>[^<]*</script>" "<span class=\"text-muted\">~~invalid message~~</span>" .message }}
-          {{- $message | markdownify }}
-        </div>
-        {{- $rootId := default ._id $.RootId }}
-        <div class="mb-2">
-            <button class="btn btn-sm btn-secondary staticman-reply-button px-1 py-0" data-bs-toggle="modal" data-bs-target="#comment-reply-modal"
-                data-root-id="{{ $rootId }}" data-comment-id="{{ ._id }}" data-comment-name="{{ .name }}">
-                <i class="fas fa-fw fa-reply"></i> {{ i18n "comments_reply" }}
-            </button>
-        </div>
-        {{- with $.Resources.Match (printf "comments/%s/%s/*" $.Lang ._id) }}
-            <div class="ps-3 pt-1 border-start border-secondary border-opacity-25">
-                {{- template "render-comments" ( dict
-                    "Comments" .
-                    "Resources" $.Resources 
-                    "Lang" $.Lang
-                    "DateFormat" $.DateFormat
-                    "Sorting" $.Sorting
-                    "RootId" $rootId
-                ) }}
-            </div>
-        {{- end }}
-      </div>
-  {{- end }}
 {{- end }}

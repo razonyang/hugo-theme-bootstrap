@@ -1,0 +1,34 @@
+<!doctype html>
+{{- $color := default "auto" $.Site.Params.color }}
+{{- if not (in (slice "light" "dark" "auto") $color) }}
+  {{- $color = "auto" }}
+{{- end }}
+<html class="position-relative" itemscope itemtype="http://schema.org/WebPage" lang="{{ .Lang }}"
+  data-bs-theme="{{ $color }}"
+  {{- with $.Site.Language.LanguageDirection }} dir="{{ . }}"{{ end }}
+  {{- with $.Site.Params.palette }} data-palette="{{ replace . " " "-" }}"{{ end }}>
+  <head>
+    {{- partial "assets/init/js" . -}}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{- block "title" . -}}{{- partial "head/title" . -}}{{- end -}}</title>
+    {{- partial "head.html" . -}}
+    {{- block "head-end" . -}}{{- end -}}
+    {{- partial "hooks/head-end" . -}}
+  </head>
+  <body>
+    {{- partial "header.html" . }}
+    {{- partial "hooks/main-begin" . }}
+    <main class="{{- partial "helpers/fullwidth" (dict "Page" . "Output" "container" "FullWidthOutput" "container-fluid") -}}">
+      <div class="row content">
+        {{- partialCached "noscript" . .Language.Lang }}
+        {{- partial "breadcrumb" . }}
+        {{- partial "staticman/comments" . }}
+      </div>
+    </main>
+    {{- partial "hooks/main-end" . }}
+    {{- partial "footer.html" . }}
+    {{- partial "body-end" . }}
+  </body>
+</html>
+
