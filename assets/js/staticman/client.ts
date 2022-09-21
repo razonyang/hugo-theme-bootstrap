@@ -61,6 +61,8 @@ class Client
         }).then((data) => {
             if (data.success === true) {
                 snackbar.show(this.sucessMessage(), 5000);
+            } else if (data.message) {
+                snackbar.show(data.message);
             } else {
                 snackbar.show(data.error.text);
             }
