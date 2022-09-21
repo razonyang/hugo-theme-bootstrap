@@ -6,9 +6,9 @@
             src="https://www.gravatar.com/avatar/{{ .Comment.email }}?d=mp&size=32"
             width="32px" height="32px" />
         {{- if .Comment.url }}
-            <a class="staticman-comment-name fw-bold me-2" href="{{ .Comment.url }}" target="_blank" rel="noopener noreferrer">{{ .Comment.name }}</a>
+            <a class="staticman-comment-name text-surface fw-bold me-2" href="{{ .Comment.url }}" target="_blank" rel="noopener noreferrer">{{ .Comment.name }}</a>
         {{- else }}
-            <span class="staticman-comment-name fw-bold me-2">{{ .Comment.name }}</span>
+            <span class="staticman-comment-name text-surface fw-bold me-2">{{ .Comment.name }}</span>
         {{- end }}
         <span class="staticman-comment-date mtext-muted fs-sm" data-timestamp="{{ .Comment.date }}">{{ .Comment.date | int | time | time.Format $dateFormat }}</span>
     </div>
