@@ -255,6 +255,7 @@ Finally, tweak the following `staticman` parameters in `params.toml`.
 | `staticman.extraFields` | Array | `-` | Extra fields. Available fiedls: `url`.
 | `staticman.requiredFields` | Array | `-` | Extra required fields. Available fields: `email` and the extra fields. `name` and `message` are always required.
 | `staticman.paginate` | Integer | `10` | The number of comments per page.
+| `staticman.moderation` | Boolean | `true` | Same as Staticman's moderation.
 
 #### reCaptcha
 

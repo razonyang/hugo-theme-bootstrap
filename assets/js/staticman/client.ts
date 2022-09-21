@@ -8,6 +8,8 @@ class Client
     private reCaptchaKey = '';
     private reCaptchaSecret = '';
 
+    private moderation: boolean;
+
     constructor()
     {
         const endpoint = params.staticman.endpoint.replace(/\/*$/, "")
@@ -17,6 +19,7 @@ class Client
         const property = params.staticman.property ? params.staticman.property : 'comments'
         this.reCaptchaKey = params.staticman.recaptchakey ? params.staticman.recaptchakey : '';
         this.reCaptchaSecret = params.staticman.recaptchasecret ? params.staticman.recaptchasecret : '';
+        this.moderation = "moderation" in params.staticman ? params.staticman.moderation : true;
         this.apiUrl = `${endpoint}/v3/entry/${service}/${repo}/${branch}/${property}`
     }
 
@@ -62,14 +65,23 @@ class Client
             return response.json();
         }).then((data) => {
             if (data.success === true) {
-                snackbar.show('Success.');
+                snackbar.show(this.sucessMessage(), 5000);
             } else {
                 snackbar.show(data.error.text);
             }
         }).catch((err) => {
             console.error(err)
-            snackbar.show('Failed to comment.');
+            snackbar.show('Comment failed.');
         })
+    }
+
+    sucessMessage(): string
+    {
+        if (this.moderation) {
+            return 'Comment successfully submitted! Your message will be shown once our moderators review it.';
+        }
+
+        return 'Comment successfully submitted! Your message will be shown in a few minutes.';
     }
 }
 

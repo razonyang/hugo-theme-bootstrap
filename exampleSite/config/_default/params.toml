@@ -152,6 +152,7 @@ viewer = true # Image Viewer
   # extraFields = [ "url" ] # Extra fields. Available fiedls: url.
   # requiredFields = [ "email", "url" ] # Extra required fields. Available fields: email and the extra fields.
   # paginate = 5 # Default to 10.
+  # moderation = false # Same as Staticman's moderation.
 
 [giscus]
   repo = "razonyang/hugo-theme-bootstrap"
