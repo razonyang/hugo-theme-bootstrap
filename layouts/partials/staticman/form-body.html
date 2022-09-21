@@ -1,4 +1,4 @@
-{{- $slug := printf "%scomments/%s" .File.Dir .Lang }}
+{{- $slug := printf "%s/comments/%s" .Lang .File.UniqueID }}
 {{- $sorting := default "asc" $.Site.Params.staticman.sorting }}
 {{- $reCaptchaKey := default "" $.Site.Params.staticman.reCaptchaKey }}
 {{- $requiredFields := default slice $.Site.Params.staticman.requiredFields }}

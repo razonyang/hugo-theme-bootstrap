@@ -22,7 +22,7 @@
                 </li>
             {{- else }}
                 <li class="page-item">
-                    <a class="page-link" href="{{ printf "%scomments/page/%d" $.PageLink . }}">{{ . }}</a>
+                    <a class="page-link" href="{{ printf "%scomments/page/%d.html" $.PageLink . }}">{{ . }}</a>
                 </li>
             {{- end }}
         {{- else if not $divider }}

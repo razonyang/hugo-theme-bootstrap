@@ -31,12 +31,6 @@ class Client
 
         let slug = form.get('slug')
 
-        const rootId = form.get('root_id')
-        const replyTo = form.get('reply_to')
-        if (rootId && replyTo) {
-            slug += '/' + rootId
-        }
-
         const data = {
             'g-recaptcha-response': reCaptchaToken,
             options: {
@@ -47,7 +41,8 @@ class Client
                 },
             },
             fields: {
-                reply_to: replyTo,
+                reply_to: form.get('reply_to'),
+                root_id: form.get('root_id'),
                 name: form.get('name'),
                 email: form.get('email'),
                 message: form.get('message'),

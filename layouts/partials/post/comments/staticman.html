@@ -14,13 +14,14 @@
         {{- $tmpl := resources.Get "templates/staticman/comments.html" }}
         {{- $commentsPages := div (add (len $comments) (sub $paginate 1)) $paginate }}
         {{- $page := . }}
+        {{- $homepage := .GetPage "/" }}
         {{- range seq $commentsPages }}
-            {{- $commentsPageURL := printf "%s/comments/page/%d" $.RelPermalink . }}
+            {{- $commentsPageURL := replace (printf "%s/comments/page/%d.html" $.Permalink .) ($homepage.Permalink) "" }}
+            {{- $commentsPageURL = printf "%s/%s" $.Site.LanguagePrefix $commentsPageURL }}
             {{- $page.Scratch.Set "commentsPage" . }}
             {{- $commentsPage := $tmpl | resources.ExecuteAsTemplate $commentsPageURL $page }}
             <a class="d-none" href="{{- $commentsPage.Permalink }}">{{- $commentsPage.Permalink }}</a>
         {{- end }}
-        
         {{- partial "staticman/list" (dict
             "Comments" $comments
             "AllComments" (.Scratch.Get "allComments")
@@ -41,26 +42,32 @@
 {{/* walk through the comments directory to collect comments and their children of current page */}}
 {{- define "walk-comments" }}
     {{- $scratch := .Scratch }}
-    {{- with .Resources.Match (printf "comments/%s/*" .Lang) }}
-        {{- range . }}
-            {{- $comment := .Content | transform.Unmarshal }}
-            {{- $children := slice }}
-            {{- $scratch.SetInMap "allComments" $comment._id $comment }}
-            {{- with $.Resources.Match (printf "comments/%s/%s/*" $.Lang $comment._id) }}
-                {{- range . }}
-                    {{- $child := .Content | transform.Unmarshal }}
-                    {{- $children = $children | append $child }}
-                    {{/* allComments is a map that mapping from comment id to comment instance */}}
-                    {{/* it's used to get the information other comment reply to */}}
-                    {{- $scratch.SetInMap "allComments" $child._id $child }}
+    {{- $slug := .File.UniqueID }}
+    {{- with index $.Site.Data .Lang  }}
+        {{- with index .comments $slug }}
+            {{- $allComments := . }}
+            {{- $comments := dict }}
+            {{- $scratch.Set "allComments" $allComments -}}
+            {{- range sort $allComments "date" "asc" }}
+                {{- if .root_id }}
+                    {{/* collect child comments */}}
+                    {{- $child := . }}
+                    {{/* ensure parent comment exists */}}
+                    {{- if isset $allComments .root_id}}
+                        {{- $parent := index $comments $child.root_id }}
+                        {{- $children := $parent.Children | append $child }}
+                        {{- $comments = merge $comments (dict $child.root_id (dict
+                            "Children" $children
+                        )) }}
+                    {{- end }}
+                {{- else }}
+                    {{- $comments = merge $comments (dict ._id (dict
+                        "Comment" .
+                        "Children" slice
+                    )) }}
                 {{- end }}
             {{- end }}
-            
-            {{/* comments stores the first level comments and their children of current page */}}
-            {{- $scratch.Add "comments" (slice (dict
-                "Comment" $comment
-                "Children" $children
-            )) }}
+            {{- $scratch.Set "comments" $comments }}
         {{- end }}
     {{- end }}
 {{- end }}
