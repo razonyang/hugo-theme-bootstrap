@@ -2,7 +2,9 @@
 {{- $allComments := .AllComments }}
 <div class="staticman-comment mb-3 ps-3 pt-3 pb-2 border-top border-start border-secondary border-opacity-25 rounded-top" id="comment-{{ .Comment._id }}">
     <div class="mb-2 d-flex flex-wrap align-items-center">
-        <img class="staticman-comment-avatar rounded-circle me-2" src="https://www.gravatar.com/avatar/{{ .Comment.email }}" width="32px" height="32px" />
+        <img class="staticman-comment-avatar rounded-circle me-2"
+            src="https://www.gravatar.com/avatar/{{ .Comment.email }}?d=mp&size=32"
+            width="32px" height="32px" />
         {{- if .Comment.url }}
             <a class="staticman-comment-name fw-bold me-2" href="{{ .Comment.url }}" target="_blank" rel="noopener noreferrer">{{ .Comment.name }}</a>
         {{- else }}
