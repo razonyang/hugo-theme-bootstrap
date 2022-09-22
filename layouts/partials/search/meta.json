@@ -1,0 +1,19 @@
+{{- $scratch := newScratch }}
+{{- $scratch.Add "authors" slice }}
+{{- $scratch.Add "categories" slice }}
+{{- $scratch.Add "series" slice }}
+{{- $scratch.Add "tags" slice }}
+{{- range .Sites -}}
+  {{- range $name, $taxonomy := .Taxonomies }}
+    {{- range $key, $value := $taxonomy }}
+      {{- $scratch.Add $name (slice $value.Page.Title) }}
+    {{- end }}
+  {{- end }}
+{{- end }}
+{{- dict
+  "authors" ($scratch.Get "authors" | uniq)
+  "categories" ($scratch.Get "categories" | uniq)
+  "series" ($scratch.Get "series" | uniq)
+  "tags" ($scratch.Get "tags"| uniq)
+ | jsonify 
+}}

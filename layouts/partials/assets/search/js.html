@@ -20,16 +20,19 @@
 {{- end -}}
 
 {{- $indexURL := relURL "/search/index.json" -}}
+{{- $metaURL := relURL "/search/meta.json" -}}
 {{- if gt (len $.Site.Home.AllTranslations) 1 -}}
   {{- $indexURL = relLangURL "/search/index.json" -}}
 {{- end -}}
 {{- $index := resources.Get "search/index.json" | resources.ExecuteAsTemplate $indexURL . -}}
+{{- $meta := resources.Get "search/meta.json" | resources.ExecuteAsTemplate $metaURL . -}}
 
 <script>
   window.searchResultContentWordCount = parseInt('{{ default 240 .Site.Params.search.resultContentWordCount }}');
   window.searchPaginate = parseInt('{{ default 10 .Site.Params.search.paginate }}');
   window.fuseOptions = JSON.parse('{{ $options | jsonify | safeHTML }}');
   window.searchIndex = '{{ $index.Permalink }}';
+  window.searchMetaIndex = '{{ $meta.Permalink }}';
 </script>
 {{- $options := dict "targetPath" "assets/search/bundle.min.js" "minify" hugo.IsProduction -}}
 {{- $script := resources.Get "search/index.ts" | js.Build $options | fingerprint -}}
