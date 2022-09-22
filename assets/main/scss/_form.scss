@@ -1,0 +1,10 @@
+.form-floating {
+    &.required {
+        label {
+            &:after {
+                content: "*";
+                color: red;
+            }
+        }
+    }
+}

@@ -59,7 +59,7 @@ Hugo Bootstrap Theme(HBS) 是一个快速、响应式、多用途和功能丰富
 - [Syntax Highlighting]({{< ref "/docs/look-and-feel#syntax-highlighting" >}}).
 - [Reward Widget]({{< ref "/docs/widgets/reward" >}}), AKA Buy Me a Coffee: any platform that supports QR code is supported.
 - Table of Contents.
-- [Comments]({{< ref "/docs/widgets/comments" >}}): Disqus, Utterances and Giscus can be used out of box, you can also integrate with other comments services.
+- [Comments]({{< ref "/docs/widgets/comments" >}}): Disqus, Utterances, Giscus and Staticman can be used out of box, you can also integrate with other comments services.
 - [Custom Assets]({{< ref "/docs/advanced/custom-assets" >}}): custom CSS and JS.
 - [Hooks]({{< ref "/docs/advanced/hooks" >}}): provides ability to add custom code on page.
 - [Social Links]({{< ref "/docs/widgets/social-links" >}}).

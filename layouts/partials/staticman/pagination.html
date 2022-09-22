@@ -1,0 +1,35 @@
+{{- $totalPages := div (add .TotalCount (sub .PageSize 1)) .PageSize }}
+{{- $page := .Page }}
+{{- $distance := 2 }}
+{{- if gt $totalPages 1 -}}
+<nav aria-label="Comments navigation">
+  <ul class="pagination">
+    {{- $divider := false }}
+    {{- range seq $totalPages }}
+        {{- if or
+            (eq 1 .)
+            (eq $totalPages .)
+            (and 
+                (ge . (sub $page $distance))
+                (le . (add $page $distance))
+            )
+        }}
+            {{- $divider = false }}
+            {{- $active := eq . $page }}
+            {{- if $active }}
+                <li class="page-item active" aria-current="page">
+                    <a class="page-link" href="javascript: void(0);">{{ . }}</a>
+                </li>
+            {{- else }}
+                <li class="page-item">
+                    <a class="page-link" href="{{ printf "%scomments/page/%d.html" $.PageLink . }}">{{ . }}</a>
+                </li>
+            {{- end }}
+        {{- else if not $divider }}
+            <li class="page-item px-2 opacity-50">...</li>
+            {{- $divider = true }}
+        {{- end }}
+    {{- end }}
+  </ul>
+</nav>
+{{- end }}

@@ -1,0 +1,36 @@
+<div class="{{ if default true .Params.sidebar }}col-lg-8{{ else }}col-lg-12{{ end }}">
+    {{- partial "staticman/recaptcha" . }}
+    {{- partial "staticman/reply-modal" . }}
+    {{- $currentPage := .Scratch.Get "commentsPage" }}
+    <div class="row card component">
+        <div class="card-body">
+            <h1 class="card-title post-title my-2 fs-4 mb-4">
+                {{ i18n "comments" }} - {{ i18n "pagination_title" (dict "PageNumber" $currentPage) }} - <a class="text-primary" href="{{ .Permalink }}">{{ .Title }}</a>
+            </h1>
+            {{- partial "staticman/form" . }}
+            {{- $paginate := default 10 $.Site.Params.staticman.paginate }}
+            {{- $sorting := default "asc" $.Site.Params.staticman.sorting }}
+            {{- $dateFormat := $.Site.Params.dateFormat }}
+            {{- $currentPage := .Scratch.Get "commentsPage" }}
+            {{- $allComments := .Scratch.Get "allComments" }}
+            {{- with .Scratch.Get "comments" }}
+                {{- $comments := . }}
+                {{- partial "staticman/list" (dict
+                    "Comments" .
+                    "AllComments" $allComments
+                    "Page" $currentPage
+                    "Sorting" $sorting
+                    "DateFormat" $dateFormat
+                    "PageSize" $paginate
+                ) }}
+                {{- partial "staticman/pagination" (dict
+                    "TotalCount" (len .)
+                    "Page" $currentPage
+                    "PageSize" $paginate
+                    "PageLink" $.Permalink
+                ) }}
+            {{- end }}
+        </div>
+    </div>
+</div>
+{{- partial "sidebar" . -}}

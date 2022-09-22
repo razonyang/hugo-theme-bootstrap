@@ -1,0 +1,44 @@
+{{- $dateFormat := .DateFormat }}
+{{- $allComments := .AllComments }}
+<div class="staticman-comment mb-3 ps-3 pt-3 pb-2 border-top border-start border-secondary border-opacity-25 rounded-top" id="comment-{{ .Comment._id }}">
+    <div class="mb-2 d-flex flex-wrap align-items-center">
+        <img class="staticman-comment-avatar rounded-circle me-2"
+            src="https://www.gravatar.com/avatar/{{ .Comment.email }}?d=mp&size=32"
+            width="32px" height="32px" />
+        {{- if .Comment.url }}
+            <a class="staticman-comment-name text-surface fw-bold me-2" href="{{ .Comment.url }}" target="_blank" rel="noopener noreferrer">{{ .Comment.name }}</a>
+        {{- else }}
+            <span class="staticman-comment-name text-surface fw-bold me-2">{{ .Comment.name }}</span>
+        {{- end }}
+        <span class="staticman-comment-date mtext-muted fs-sm" data-timestamp="{{ .Comment.date }}">{{ .Comment.date | int | time | time.Format $dateFormat }}</span>
+    </div>
+    <div class="mb-2 text-surface">
+    {{- if .Comment.reply_to }}
+        {{- with index $allComments .Comment.reply_to }}
+        <a class="fw-bold me-2" href="#comment-{{ $.Comment.reply_to }}">@{{ .name }}</a>
+        {{- end }}
+    {{- end }}
+    {{- $message := replaceRE "(?i)<script[^>]*>[^<]*</script>" "<span class=\"text-muted opacity-50\">~~invalid message~~</span>" .Comment.message }}
+    {{- $message | markdownify }}
+    </div>
+    {{- $rootId := default .Comment._id $.RootId }}
+    <div>
+        <button class="btn btn-sm btn-secondary staticman-reply-button px-1 py-0" data-bs-toggle="modal" data-bs-target="#comment-reply-modal"
+            data-root-id="{{ $rootId }}" data-comment-id="{{ .Comment._id }}" data-comment-name="{{ .Comment.name }}">
+            <i class="fas fa-fw fa-reply"></i> {{ i18n "comments_reply" }}
+        </button>
+    </div>
+    {{- with .Children }}
+        <div class="ps-3 mt-3 border-secondary border-opacity-25">
+        {{- range . }}
+            {{- partial "staticman/list-item" (dict
+                "AllComments" $allComments
+                "Comment" .
+                "Children" slice
+                "DateFormat" $dateFormat
+                "RootId" $rootId
+            ) }}
+        {{- end }}
+        </div>
+    {{- end }}
+</div>

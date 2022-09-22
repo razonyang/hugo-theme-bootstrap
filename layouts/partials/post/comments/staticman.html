@@ -1,0 +1,73 @@
+{{- if isset $.Site.Params "staticman" }}
+    {{- template "walk-comments" . }}
+
+    {{/* generate comments pages */}}
+    {{- $paginate := default 10 $.Site.Params.staticman.paginate }}
+    {{- $sorting := default "asc" $.Site.Params.staticman.sorting }}
+    {{- $comments := .Scratch.Get "comments" }}
+
+    {{- partial "staticman/recaptcha" . }}
+    {{- partial "staticman/reply-modal" . }}
+    {{- partial "staticman/form" . }}
+
+    {{- if $comments }}
+        {{- $tmpl := resources.Get "templates/staticman/comments.html" }}
+        {{- $commentsPages := div (add (len $comments) (sub $paginate 1)) $paginate }}
+        {{- $page := . }}
+        {{- $homepage := .GetPage "/" }}
+        {{- range seq $commentsPages }}
+            {{- $commentsPageURL := replace (printf "%s/comments/page/%d.html" $.Permalink .) ($homepage.Permalink) "" }}
+            {{- $commentsPageURL = printf "%s/%s" $.Site.LanguagePrefix $commentsPageURL }}
+            {{- $page.Scratch.Set "commentsPage" . }}
+            {{- $commentsPage := $tmpl | resources.ExecuteAsTemplate $commentsPageURL $page }}
+            <a class="d-none" href="{{- $commentsPage.Permalink }}">{{- $commentsPage.Permalink }}</a>
+        {{- end }}
+        {{- partial "staticman/list" (dict
+            "Comments" $comments
+            "AllComments" (.Scratch.Get "allComments")
+            "Page" 1
+            "Sorting" $sorting
+            "DateFormat" $.Site.Params.dateFormat
+            "PageSize" $paginate
+        ) }}
+        {{- partial "staticman/pagination" (dict
+            "TotalCount" (len $comments)
+            "Page" 1
+            "PageSize" $paginate
+            "PageLink" $.Permalink
+        ) }}
+    {{- end }}
+{{- end }}
+
+{{/* walk through the comments directory to collect comments and their children of current page */}}
+{{- define "walk-comments" }}
+    {{- $scratch := .Scratch }}
+    {{- $slug := .File.UniqueID }}
+    {{- with index $.Site.Data .Lang  }}
+        {{- with index .comments $slug }}
+            {{- $allComments := . }}
+            {{- $comments := dict }}
+            {{- $scratch.Set "allComments" $allComments -}}
+            {{- range sort $allComments "date" "asc" }}
+                {{- if .root_id }}
+                    {{/* collect child comments */}}
+                    {{- $child := . }}
+                    {{/* ensure parent comment exists */}}
+                    {{- if isset $allComments .root_id}}
+                        {{- $parent := index $comments $child.root_id }}
+                        {{- $children := $parent.Children | append $child }}
+                        {{- $comments = merge $comments (dict $child.root_id (dict
+                            "Children" $children
+                        )) }}
+                    {{- end }}
+                {{- else }}
+                    {{- $comments = merge $comments (dict ._id (dict
+                        "Comment" .
+                        "Children" slice
+                    )) }}
+                {{- end }}
+            {{- end }}
+            {{- $scratch.Set "comments" $comments }}
+        {{- end }}
+    {{- end }}
+{{- end }}

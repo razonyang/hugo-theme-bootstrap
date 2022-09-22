@@ -79,6 +79,27 @@ other = "Yellow"
 [comments]
 other = "Comments"
 
+[comments_email]
+other = "Email"
+
+[comments_message]
+other = "Message"
+
+[comments_name]
+other = "Name"
+
+[comments_reply]
+other = "Reply"
+
+[comments_reply_to]
+other = "Reply to"
+
+[comments_submit]
+other = "Submit"
+
+[comments_url]
+other = "URL"
+
 [contact_name]
 other = "Name"
 
