@@ -1,6 +1,12 @@
 {{- $scratch := newScratch -}}
+{{- $paginate := default 100 .Site.Params.search.indexPaginate }}
+{{- $currentPage := .Scratch.Get "indexPage" }}
+{{- $max := mul $paginate $currentPage }}
+{{- $min := sub $max $paginate }}
 {{- $scratch.Add "pages" slice -}}
+{{- $counter := 0 }}
 {{- range where .Site.AllPages "Kind" "page" -}}
+  {{- if and (ge $counter $min) (lt $counter $max) }}
     {{- $page := . }}
     {{- $date := .Date | time.Format ":date_long" -}}
     {{- $title := .Title }}
@@ -49,5 +55,7 @@
       )}}
     {{- end }}
     {{- $scratch.Add "pages" (slice $item) }}
+  {{- end }}
+  {{- $counter = add $counter 1 }}
 {{- end -}}
 {{- $scratch.Get "pages"| jsonify }}

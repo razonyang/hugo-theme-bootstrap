@@ -8,7 +8,7 @@ declare global {
     fuseOptions;
     searchResultContentWordCount: number;
     searchPaginate: number;
-    searchIndex: string;
+    searchIndies: string[];
     searchMetaIndex: string;
   }
 }

@@ -3,7 +3,7 @@ import Form from './form';
 
 class Engine {
   private fuse: Fuse;
-  private pages;
+  private pages = [];
 
   constructor(form: Form, callback: (data: FormData) => void) {
     const options = Object.assign(window.fuseOptions, {
@@ -20,11 +20,20 @@ class Engine {
         'tags_titles',
       ],
     });
-    fetch(window.searchIndex).then((response)=>{
-      return response.json();
-    }).then((response) => {
-      this.pages = response;
-      console.debug('Fuse.js options', options)
+
+    const promises = []
+    for (const i in window.searchIndies) {
+      promises.push(fetch(window.searchIndies[i], {
+        method: 'GET',
+      }).then((response) => {
+        return response.json();
+      }))
+    }
+
+    Promise.all(promises).then((values) => {
+      for (const i in values) {
+        this.pages.push(...values[i])
+      }
       this.fuse = new Fuse(this.pages, options);
       callback(form.data());
     }).catch((err) => {
