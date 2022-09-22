@@ -1,7 +1,7 @@
-import Mustache from 'mustache';
 import Mark from 'mark.js/dist/mark.js';
-import Form from './form';
+import Mustache from 'mustache';
 import Engine from './engine';
+import Form from './form';
 
 declare global {
   interface Window {
@@ -9,6 +9,7 @@ declare global {
     searchResultContentWordCount: number;
     searchPaginate: number;
     searchIndex: string;
+    searchMetaIndex: string;
   }
 }
 
@@ -79,6 +80,22 @@ export class Search {
         this.hideLoadingSpinner();
       });
     });
+
+    fetch(window.searchMetaIndex).then((response) => {
+      return response.json()
+    }).then((data) => {
+      for (const i in data) {
+        const datalist = document.querySelector(`#${i}-list`);
+        const terms = data[i]
+        for (const j in terms) {
+          const option = document.createElement('option');
+          option.value = terms[j];
+          datalist.appendChild(option);
+        }
+      }
+    }).catch((err) => {
+      console.error('unable to load search meta index', err)
+    })
   }
 
   hideLoadMoreBtn() {

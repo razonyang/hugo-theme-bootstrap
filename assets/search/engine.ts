@@ -23,27 +23,13 @@ class Engine {
     fetch(window.searchIndex).then((response)=>{
       return response.json();
     }).then((response) => {
-      const pages = response.pages;
-      this.pages = pages;
-      const taxonomies = ['categories', 'authors', 'series', 'tags'];
-      for (const i in taxonomies) {
-        const datalist = document.querySelector(
-          '#' + taxonomies[i] + '-list'
-        );
-        const terms = response[i]
-        for (const j in terms) {
-          const option = document.createElement('option');
-          option.value = terms[j];
-          datalist.appendChild(option);
-        }
-      }
+      this.pages = response;
       console.debug('Fuse.js options', options)
-      this.fuse = new Fuse(pages, options);
+      this.fuse = new Fuse(this.pages, options);
       callback(form.data());
     }).catch((err) => {
       console.error('unable to load search index',err)
     }).finally(() => {
-
     })
   }
 
