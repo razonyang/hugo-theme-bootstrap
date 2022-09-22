@@ -218,7 +218,7 @@ comments:
 
   # Names of required fields. If any of these isn't in the request or is empty,
   # an error will be thrown.
-  requiredFields: ["name", "email", "message"]
+  requiredFields: ["name", "message"]
 
   # List of transformations to apply to any of the fields supplied. Keys are
   # the name of the field and values are possible transformation types.
@@ -227,7 +227,7 @@ comments:
 
   reCaptcha:
     enabled: false
-    siteKey: 
+    siteKey: ""
     secret: 
 ```
 
