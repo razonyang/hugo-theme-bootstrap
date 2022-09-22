@@ -44,14 +44,11 @@
     ) -}}
     {{- range $taxonomyName, $value := $.Site.Taxonomies }}
       {{- $terms := slice }}
-      {{- $termTitles := slice }}
       {{- range $page.GetTerms $taxonomyName }}
         {{- $terms = $terms | append (dict "title" .Title "url" .RelPermalink) }}
-        {{- $termTitles = $termTitles | append .Title }}
       {{- end }}
       {{- $item = merge $item (dict
           $taxonomyName $terms
-          (printf "%s_titles" $taxonomyName) (delimit $termTitles " ")
       )}}
     {{- end }}
     {{- $scratch.Add "pages" (slice $item) }}

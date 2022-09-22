@@ -32,7 +32,14 @@ class Engine {
 
     Promise.all(promises).then((values) => {
       for (const i in values) {
-        this.pages.push(...values[i])
+        for (const j in values[i]) {
+          const value = values[i][j]
+          value['authors_titles'] = value['authors'].map(item => item.title).join(" ");
+          value['categories_titles'] = value['categories'].map(item => item.title).join(" ");
+          value['series_titles'] = value['series'].map(item => item.title).join(" ");
+          value['tags_titles'] = value['tags'].map(item => item.title).join(" ");
+          this.pages.push(value)
+        }
       }
       this.fuse = new Fuse(this.pages, options);
       callback(form.data());
