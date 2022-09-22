@@ -25,7 +25,7 @@
 {{- end -}}
 {{- $meta := resources.Get "search/meta.json" | resources.ExecuteAsTemplate $metaURL . -}}
 {{- $pages := where .Site.AllPages "Kind" "page" }}
-{{- $paginate := default 100 .Site.Params.search.indexPaginate }}
+{{- $paginate := default 1000 .Site.Params.search.indexPaginate }}
 {{- $totalPages := div (add (len $pages) (sub $paginate 1)) $paginate }}
 {{- $tmpl := resources.Get "search/index.json" }}
 {{- $page := . }}

@@ -46,6 +46,7 @@ title = "Search"
 |---|:-:|:-:|---
 | `search` | Object | - | 搜尋配置。
 | `search.paginate` | Integer | `10` | 分頁。
+| `search.indexPaginate` | Integer | `1000` | Index file pagination.
 | `search.resultContentWordCount` | Integer | `240` | 搜尋結果內容最大字數。
 | `search.fuse` | Object | - | [Fuse.js 引數](https://fusejs.io/api/options.html)
 | `search.fuse.ignoreLocation` | Boolean | `true` |
