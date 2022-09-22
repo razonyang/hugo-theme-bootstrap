@@ -1,5 +1,5 @@
 {{- $scratch := newScratch -}}
-{{- $paginate := default 100 .Site.Params.search.indexPaginate }}
+{{- $paginate := default 1000 .Site.Params.search.indexPaginate }}
 {{- $currentPage := .Scratch.Get "indexPage" }}
 {{- $max := mul $paginate $currentPage }}
 {{- $min := sub $max $paginate }}
