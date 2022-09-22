@@ -24,10 +24,10 @@
       {{- if not $featured }}{{ $featured = $images.GetMatch "{*cover*,*thumbnail*}" }}{{ end -}}
       {{- with $featured -}}
         {{- $smallImage := $featured.Resize "180x" -}}
-        {{- $smallImg = $smallImage.Permalink -}}
+        {{- $smallImg = $smallImage.RelPermalink -}}
         {{- $largeImage := $featured.Resize "500x" -}}
-        {{- $largeImg = $largeImage.Permalink -}}
-        {{- $img = $featured.Permalink -}}
+        {{- $largeImg = $largeImage.RelPermalink -}}
+        {{- $img = $featured.RelPermalink -}}
       {{- end -}}
     {{- end -}}
     {{- $item := (dict 
@@ -35,7 +35,7 @@
       "langName" .Language.LanguageName
       "title" $title 
       "content" .Plain 
-      "permalink" .Permalink 
+      "permalink" .RelPermalink
       "date" $date 
       "timestamp" .Date.Unix
       "img" $img 
@@ -46,7 +46,7 @@
       {{- $terms := slice }}
       {{- $termTitles := slice }}
       {{- range $page.GetTerms $taxonomyName }}
-        {{- $terms = $terms | append (dict "title" .Title "url" .Permalink) }}
+        {{- $terms = $terms | append (dict "title" .Title "url" .RelPermalink) }}
         {{- $termTitles = $termTitles | append .Title }}
       {{- end }}
       {{- $item = merge $item (dict
