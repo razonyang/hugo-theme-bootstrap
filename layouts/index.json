@@ -1,1 +1,1 @@
-{{- partial "search/index.json" . -}}
+{{/* for compatibility */}}
