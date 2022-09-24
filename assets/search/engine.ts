@@ -31,6 +31,7 @@ class Engine {
     }
 
     Promise.all(promises).then((values) => {
+      this.fuse = new Fuse([], options);
       const taxonomies = ['authors', 'categories', 'series', 'tags'];
       for (const i in values) {
         for (const j in values[i]) {
@@ -43,10 +44,12 @@ class Engine {
               value[name+'_titles'] = '';
             }
           }
-          this.pages.push(value)
+          this.fuse.add(value)
+          this.pages.push({
+            timestamp: value['timestamp']
+          })
         }
       }
-      this.fuse = new Fuse(this.pages, options);
       callback(form.data());
     }).catch((err) => {
       console.error('unable to load search index',err)
