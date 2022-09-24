@@ -1,5 +1,5 @@
 {{- partial "head/meta/robots" . }}
 {{- partial "head/meta/social" . }}
 {{- partial "head/meta/redirect" . }}
-{{- partial "head/meta/manifest" . }}
+{{- partialCached "head/meta/manifest" . .Site }}
 {{- partial "head/meta/translations" . }}

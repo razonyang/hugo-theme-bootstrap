@@ -1,11 +1,11 @@
-{{- partial "assets/google-adsense" . -}}
+{{- partialCached "assets/google-adsense" . -}}
 {{- if  eq .Site.Language.LanguageDirection "rtl" }}
-  {{- partial "assets/main/css-rtl" . }}
+  {{- partialCached "assets/main/css-rtl" . }}
 {{- else }}
-  {{- partial "assets/main/css" . }}
+  {{- partialCached "assets/main/css" . }}
 {{- end }}
 {{- partial "assets/math/css" . }}
-{{- partial "assets/viewer/css" . }}
-{{- partial "assets/docsearch/css" . -}}
-{{- partial "assets/plausible-analytics/js" . -}}
+{{- partialCached "assets/viewer/css" . }}
+{{- partialCached "assets/docsearch/css" . -}}
+{{- partialCached "assets/plausible-analytics/js" . -}}
 {{- partial "assets/search/head" . }}
