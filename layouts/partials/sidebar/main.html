@@ -1,4 +1,4 @@
-{{- partial "sidebar/profile" . }}
+{{- partialCached "sidebar/profile" . .Site }}
 {{- partialCached "sidebar/taxonomies-toggle" . }}
 {{- partialCached "sidebar/posts-toggle" . }}
 {{- if ne "content" .Site.Params.tocPosition }}

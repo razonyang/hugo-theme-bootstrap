@@ -1,9 +1,9 @@
 <div class="container">
   {{- if not .IsHome }}
     {{- partial "breadcrumb" . }}
-    {{- partial "sections" . }}
+    {{- partialCached "sections" . .Section }}
   {{- end }}
-  {{- partial "author/profile" . }}
+  {{- partialCached "author/profile" . .Section }}
   {{- partial "hooks/list-begin" . }}
   <div class="posts mb-4">
   {{- range .Paginator.Pages }}
