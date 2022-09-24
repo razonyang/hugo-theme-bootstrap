@@ -20,6 +20,7 @@ class Engine {
         'tags_titles',
       ],
     });
+    console.debug('fuse.js options', options)
 
     const promises = []
     for (const i in window.searchIndies) {
