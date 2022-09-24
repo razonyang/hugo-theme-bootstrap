@@ -31,13 +31,18 @@ class Engine {
     }
 
     Promise.all(promises).then((values) => {
+      const taxonomies = ['authors', 'categories', 'series', 'tags'];
       for (const i in values) {
         for (const j in values[i]) {
           const value = values[i][j]
-          value['authors_titles'] = value['authors'].map(item => item.title).join(" ");
-          value['categories_titles'] = value['categories'].map(item => item.title).join(" ");
-          value['series_titles'] = value['series'].map(item => item.title).join(" ");
-          value['tags_titles'] = value['tags'].map(item => item.title).join(" ");
+          for (const k in taxonomies) {
+            const name = taxonomies[k]
+            if (name in value) {
+              value[name+'_titles'] = value[name].map(item => item.title).join(" ");
+            } else {
+              value[name+'_titles'] = '';
+            }
+          }
           this.pages.push(value)
         }
       }
