@@ -7,7 +7,7 @@
   {{- $filepath := path.Join "static" "images" "icons" $filename }}
   {{- if fileExists $filepath }}
     {{- $file := readFile $filepath }}
-    <link rel="{{ $rel }}" href="{{ printf "images/icons/%s" $filename | absURL }}?version={{ $file | md5 }}" sizes="{{ .size }}">
+    <link rel="{{ $rel }}" href="{{ printf "/images/icons/%s" $filename | absURL }}?version={{ $file | md5 }}" sizes="{{ .size }}">
   {{- else }}
     {{- $img := $favicon.Resize .size }}
     <link rel="{{ $rel }}" href="{{ $img.Permalink }}" sizes="{{ .size }}" type="{{ $img.MediaType }}">
