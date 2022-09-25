@@ -28,6 +28,7 @@
 {{- $tmpl := resources.Get "search/index.json" }}
 {{- $page := . }}
 {{- $searchIndies := slice }}
+{{- $preload := default true $.Site.Params.search.indexPreload }}
 {{- range seq $totalPages }}
   {{- $indexURL := relURL (printf "/search/index.%d.json" .) }}
   {{- if gt (len $.Site.Home.AllTranslations) 1 -}}
@@ -36,7 +37,9 @@
   {{- $page.Scratch.Set "indexPage" . }}
   {{- $index := $tmpl | resources.ExecuteAsTemplate $indexURL $page }}
   {{- $searchIndies = $searchIndies | append $index.Permalink }}
+  {{- if $preload }}
   <link rel="preload" href="{{ $index.Permalink }}" as="fetch" type="application/json" crossorigin="anonymous">
+  {{- end }}
 {{- end }}
 
 <script>

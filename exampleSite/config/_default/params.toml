@@ -171,6 +171,7 @@ viewer = true # Image Viewer
   # paginate = 5 # Pagination. Default to 10.
   # resultContentWordCount = 240 # The maximum word count of result content for displaying.
   indexPaginate = 100 # The number of pages per index file. Default to 1000.
+  # indexPreload = false # Do not preload index files.
   # Fuse.js options, the following options are available. See https://fusejs.io/api/options.html.
   [search.fuse]
     # ignoreLocation = true
