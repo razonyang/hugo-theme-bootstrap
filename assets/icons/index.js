@@ -194,6 +194,6 @@ let icons = [
   faTipeee,
 ];
 
-config.searchPseudoElements = false; // This options will become a permission killer, especially in search page, it tooks a long time to render.
+config.searchPseudoElements = false; // This option will become a permission killer, especially in search page, it tooks a long time to render.
 library.add(...icons.concat(customIcons));
 dom.watch();
