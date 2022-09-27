@@ -43,7 +43,7 @@
 {{- end }}
 
 <script>
-  window.searchResultContentWordCount = parseInt('{{ default 240 .Site.Params.search.resultContentWordCount }}');
+  window.searchResultContentWordCount = parseInt('{{ default 240 .Site.Params.search.resultContentCharactersCount }}');
   window.searchPaginate = parseInt('{{ default 10 .Site.Params.search.paginate }}');
   window.fuseOptions = JSON.parse('{{ $options | jsonify | safeHTML }}');
   window.searchIndies = JSON.parse('{{ $searchIndies | jsonify }}');

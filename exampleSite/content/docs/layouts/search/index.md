@@ -47,7 +47,7 @@ title = "Search"
 | `search` | Object | - | Search configuration.
 | `search.paginate` | Integer | `10` | Pagination.
 | `search.indexPaginate` | Integer | `1000` | Index file pagination.
-| `search.resultContentWordCount` | Integer | `240` | The maximum word count of result content for displaying.
+| `search.resultContentCharactersCount` | Integer | `240` | The maximum characters count of result content for displaying.
 | `search.fuse` | Object | - | [Fuse.js options](https://fusejs.io/api/options.html).
 | `search.fuse.ignoreLocation` | Boolean | `true` |
 | `search.fuse.location` | Integer | - |

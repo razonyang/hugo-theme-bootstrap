@@ -18,7 +18,7 @@ export class Search {
 
   public stat: HTMLElement;
 
-  public resultContentWordCount: number;
+  public resultContentCharactersCount: number;
 
   public highlightOptions = {
     element: 'span',
@@ -70,7 +70,7 @@ export class Search {
     this.tmplNoResults = document.getElementById('templateNoResults').innerHTML;
     this.tmplStat = document.getElementById('templateStat').innerHTML;
     this.tmplResult = document.getElementById('templateResult').innerHTML;
-    this.resultContentWordCount = window.searchResultContentWordCount;
+    this.resultContentCharactersCount = window.searchResultContentWordCount;
     this.paginate = window.searchPaginate;
 
     this.loadMore = document.getElementById('btnLoadMore');
@@ -204,13 +204,13 @@ export class Search {
         });
       });
       let { content } = result.item;
-      if (content.length > this.resultContentWordCount) {
+      if (content.length > this.resultContentCharactersCount) {
         let contentStart = 0;
         if (contentKeywords.length > 0) {
           const pos = content.indexOf(contentKeywords[0]);
           if (
             pos + contentKeywords[0].length >
-            this.resultContentWordCount - 1
+            this.resultContentCharactersCount - 1
           ) {
             contentStart = pos;
           }
@@ -219,7 +219,7 @@ export class Search {
           (contentStart === 0 ? '' : '...') +
           content.substring(
             contentStart,
-            contentStart + this.resultContentWordCount
+            contentStart + this.resultContentCharactersCount
           )
         }...`;
       }
