@@ -33,6 +33,11 @@ authors = ["RazonYang"]
 
 > 请注意，不管使用的是哪种安装方式，你最后总是需要通过 `hugo mod npm pack` 和 `npm install` 拉取并安装依赖。
 
+### 额外的依赖
+
+如果你打算添加额外的依赖，则需要将其定义在 `package.hugo.json`，而非 `package.json`。
+这是因为 `hugo mod npm pack` 总是会覆盖 `package.json`，其合并了主题的 `package.hugo.json` 和你站点的 `package.hugo.json`。
+
 ### Git Submodule
 
 {{% code/upgradation-git-submodule %}}

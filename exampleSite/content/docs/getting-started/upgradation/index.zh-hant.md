@@ -27,6 +27,11 @@ authors = ["RazonYang"]
 
 > 本文將使用 `[version]` 占位符代表版本，請自行替換為要安裝的版本即可。
 
+### 額外的依賴
+
+如果你打算添加額外的依賴，則需要將其定義在 `package.hugo.json`，而非 `package.json`。
+這是因為 `hugo mod npm pack` 總是會覆蓋 `package.json`，其合併了主題的 `package.hugo.json` 和你站點的 `package.hugo.json`。
+
 ## 升級
 
 請根據安裝方式的不同選擇對應的升級步驟：[Git Submodule](#git-submodule) 和 [Hugo Module](#hugo-module)。

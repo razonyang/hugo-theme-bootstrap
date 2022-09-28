@@ -33,6 +33,11 @@ Please choose the upgrade step depending on the installation method: [Git Submod
 
 > Note that no matter which install method you use, you will always end up needing to pull and install dependencies via `hugo mod npm pack` and `npm install`.
 
+### Additional Dependencies
+
+If you intend to add additional dependencies, you need to define it in `package.hugo.json` instead of `package.json`.
+That's because the `hugo mod npm pack` will always override the `package.json`, which merges theme's `package.hugo.json` and your site's `package.hugo.json`.
+
 ### Git Submodule
 
 {{% code/upgradation-git-submodule %}}
