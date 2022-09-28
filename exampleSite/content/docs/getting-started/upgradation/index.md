@@ -44,11 +44,11 @@ That's because the `hugo mod npm pack` will always override the `package.json`, 
 
 - `git fetch` pull the latest branch and tag information form the theme repository.
 - `git checkout [version]` switch to the `[version]` version.
-- `hugo mod npm pack` and `npm install` to pull and install the latest dependencies form the theme.
+- `hugo mod npm pack` and `npm update` to pull and update the latest dependencies form the theme.
 
 ### Hugo Module
 
 {{% code/upgradation-hugo-module %}}
 
 - `hugo mod tidy` clean up any redundant dependencies.
-- `hugo mod npm pack` and `npm install` pull and install the latest dependencies form the theme.
+- `hugo mod npm pack` and `npm update` pull and update the latest dependencies form the theme.

@@ -44,11 +44,11 @@ authors = ["RazonYang"]
 
 - `git fetch` 获取主题仓库最新的分支和标签信息。
 - `git checkout [version]` 切换到 `[version]` 版本。
-- `hugo mod npm pack` 和 `npm install` 拉取并安装主题最新的依赖。
+- `hugo mod npm pack` 和 `npm update` 拉取并安装主题最新的依赖。
 
 ### Hugo Module
 
 {{% code/upgradation-hugo-module %}}
 
 - `hugo mod tidy` 清理多余的依赖。
-- `hugo mod npm pack` 和 `npm install` 拉取并安装主题最新的依赖。
+- `hugo mod npm pack` 和 `npm update` 拉取并安装主题最新的依赖。
