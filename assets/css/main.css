@@ -24,8 +24,8 @@
 	--hbs-body-font-size: 1rem;
 	--hbs-body-font-weight: 400;
 	--hbs-body-line-height: 1.5;
-	--hbs-body-color: #212529;
-	--hbs-body-bg: #fff
+	--hbs-body-color: #dee2e6;
+	--hbs-body-bg: var(--hbs-primary-text-on-surface);
 }
 
 *,
@@ -5792,7 +5792,9 @@ fieldset:disabled .btn {
 	--hbs-primary-text-on-navbar: #e1e1e1;
 	--hbs-accent-text-on-navbar: var(--hbs-primary-light);
 	--hbs-accent: var(--hbs-primary-light);
-	--hbs-accent-dark: var(--hbs-primary)
+	--hbs-accent-dark: var(--hbs-primary);
+	--hbs-body-color: #212529;
+	--hbs-body-bg: #e9ecef;
 }
 
 #modeSwitcher {

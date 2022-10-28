@@ -250,3 +250,7 @@ export class Search {
 }
 
 export default Search;
+function encodeURIComponent(query: any) {
+  throw new Error('Function not implemented.');
+}
+
