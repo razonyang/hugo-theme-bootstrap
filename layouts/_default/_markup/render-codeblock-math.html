@@ -1,0 +1,4 @@
+{{ .Page.Store.Set "hasKaTeX" true -}}
+<p>$$
+{{ .Inner | safeHTML }}
+$$</p>
