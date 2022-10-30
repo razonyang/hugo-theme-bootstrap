@@ -1,3 +1,3 @@
-{{- if or .Params.diagram .Site.Params.diagram -}}
+{{- if or .Params.diagram .Site.Params.diagram (.HasShortcode "mermaid") (.Page.Store.Get "hasMermaid") -}}
 {{ partial "assets/mermaid/js" . }}
 {{- end -}}

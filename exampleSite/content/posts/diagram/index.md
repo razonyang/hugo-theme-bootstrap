@@ -7,7 +7,6 @@ draft = false
 comment = true
 toc = true
 reward = true
-diagram = true
 categories = [
   "Markdown"
 ]
@@ -26,15 +25,9 @@ Please see also [Mermaid](https://mermaid-js.github.io).
 
 <!--more-->
 
-## Prerequisites
-
-The diagram is disabled by default, you'll need to enable the `diagram` in front matter, otherwise the diagram won't be rendered.
-
-{{< code-toggle >}}
-diagram = true
-{{< /code-toggle >}}
-
 ## Usage
+
+### Via Shortcode
 
 ```markdown
 {{</* mermaid */>}}
@@ -42,7 +35,7 @@ YOUR DIAGRAM INSTRUCTIONS
 {{</* /mermaid */>}}
 ```
 
-You can also wrap it with other shortcodes, such as `text/align-center`.
+You can also wrap the shortcode with other shortcodes, such as `text/align-center`.
 
 ```markdown
 {{%/* text/align-center */%}}
@@ -51,6 +44,14 @@ YOUR DIAGRAM INSTRUCTIONS
 {{</* /mermaid */>}}
 {{%/* /text/align-center */%}}
 ```
+
+### Mermaid code block
+
+````markdown
+```mermaid
+YOUR DIAGRAM INSTRUCTIONS
+```
+````
 
 ## Examples
 
@@ -102,8 +103,8 @@ sequenceDiagram
 
 ### Class Diagram
 
-```markdown
-{{</* mermaid */>}}
+````markdown
+```mermaid
 classDiagram
     Animal <|-- Duck
     Animal <|-- Fish
@@ -125,11 +126,10 @@ classDiagram
       +bool is_wild
       +run()
     }
-{{</* /mermaid */>}}
 ```
+````
 
-{{% text/align-center %}}
-{{< mermaid >}}
+```mermaid
 classDiagram
     Animal <|-- Duck
     Animal <|-- Fish
@@ -151,5 +151,4 @@ classDiagram
       +bool is_wild
       +run()
     }
-{{< /mermaid >}}
-{{% /text/align-center %}}
+```
