@@ -64,7 +64,7 @@ graph TD
     B --> C{Let me think}
     C -->|One| D[Laptop]
     C -->|Two| E[iPhone]
-    C -->|Three| F[fa:fa-car Car]
+    C -->|Three| F[fas:fa-car Car]
 {{</* /mermaid */>}}
 ```
 
@@ -75,9 +75,11 @@ graph TD
     B --> C{Let me think}
     C -->|One| D[Laptop]
     C -->|Two| E[iPhone]
-    C -->|Three| F[fa:fa-car Car]
+    C -->|Three| F[fas:fa-car Car]
 {{< /mermaid >}}
 {{% /text/align-center %}}
+
+We need to [import the `faCar` solid icon]({{< ref "docs/look-and-feel#icons" >}}) first, in order to use the `fas:fa-car` FontAwesome icon.
 
 ### Sequence Diagram
 
