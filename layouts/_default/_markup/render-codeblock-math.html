@@ -1,0 +1,4 @@
+{{ .Page.Store.Set "hasKaTeX" true -}}
+<div class="math-output">$$
+{{ .Inner | safeHTML }}
+$$</div>
