@@ -1,4 +1,4 @@
 const options = {
-  theme: 'dark',
+  // theme: 'dark',
 };
 export default options;
