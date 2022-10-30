@@ -15,7 +15,7 @@ Mathematical notation in a Hugo project can be enabled by using third party Java
 
 This theme supports [KaTeX](https://katex.org/).
 
-- When using a `math` [code block](#math-code-block), KaTeX is activated automatically (needs hugo 0.93.0 or higher).
+- When using a `math` [code block](#math-code-block) or `katex` shortcode, KaTeX is activated automatically.
 - To manually enable KaTeX globally set the parameter `math` to `true` in a project's configuration file.
 - To enable KaTeX on a per page basis include the parameter `math: true` in the frontmatter of the content files.
 
@@ -25,9 +25,15 @@ This theme supports [KaTeX](https://katex.org/).
 
 ### Inline
 
-Such as \\(\KaTeX\\) and $\LaTeX$.
+Such as `\\(\KaTeX\\)`(\\(\KaTeX\\)) and `$\LaTeX$`($\LaTeX$).
 
 ### Block
+
+```markdown
+$$
+FORMULA
+$$
+```
 
 $$
   \(\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…\)
@@ -37,15 +43,29 @@ $$
   \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } } 
 \\]
 
-### Math code block
-see [GitLab Flavored Markdown](https://docs.gitlab.com/ee/user/markdown.html#math)
+### Math code block(recommended)
+
+See [GitLab Flavored Markdown](https://docs.gitlab.com/ee/user/markdown.html#math).
+
+````markdown
+```math
+FORMULA
+```
+````
 
 The probability of getting \\(k\\) heads when flipping \\(n\\) coins is:
+
 ```math
-\tag*{(1)}  P(E) = {n \choose k} p^k (1-p)^{n-k}
+\tag*{(1)} P(E) = {n \choose k} p^k (1-p)^{n-k}
 ```
 
-### Multiple lines
+### Multiple lines via shortcode(recommended)
+
+```markdown
+{{</* katex */>}}
+FORMULA
+{{</* /katex */>}}
+```
 
 {{< katex >}}
   \begin{array}{l}
