@@ -1,0 +1,7 @@
+{{- return
+    or
+    .Params.math
+    .Site.Params.math
+    (.HasShortcode "katex")
+    (.Page.Store.Get "hasKaTeX")
+}}

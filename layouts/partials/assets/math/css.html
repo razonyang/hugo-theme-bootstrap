@@ -1,7 +1,3 @@
-{{ $needKaTeX  := or .Params.math .Site.Params.math -}}
-{{ if ge hugo.Version "0.93.0" -}}
-  {{ $needKaTeX  = or $needKaTeX  (.Page.Store.Get "hasKaTeX") -}}
-{{ end -}}
-{{- if $needKaTeX }}
+{{- if (partial "assets/math/enable" .) }}
   {{- partial "assets/katex/css" . }}
 {{- end -}}
