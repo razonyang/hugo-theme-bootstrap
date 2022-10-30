@@ -18,3 +18,11 @@
         }
     }
 }
+
+.mermaid {
+    .svg-inline--fa {
+        > path {
+            fill: var(--#{$prefix}primary) !important;
+        }
+    }
+}
