@@ -41,7 +41,7 @@ BLOCK ALERT
 {{</* /alert */>}}
 ```
 
-> The parameter `type` is optional. Default to `info`, availiable values: `info`, `success`, `warning` and `danger`.
+> The parameter `type` is optional. Default to `info`, available values: `info`, `success`, `warning` and `danger`.
 
 ### 带有标题
 
