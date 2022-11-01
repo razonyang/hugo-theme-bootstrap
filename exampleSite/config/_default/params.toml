@@ -113,7 +113,7 @@ viewer = true # Image Viewer
 
 [analytics]
   # baidu = "" # Baidu Analytics
-  # plausible = "razonyang.com,hbs.razonyang.com" # Multiple domains separate by comma.
+  # plausible = "razonyang.com,hbs.razonyang.com" # Multiple domains separated by comma.
   # plausibleScript = "" # Specify the self-hosted script or extended script. Default to https://plausible.io/js/script.js.
 
 # Site verification
@@ -149,7 +149,7 @@ viewer = true # Image Viewer
   # sorting = "desc" # Default to asc.
   # reCaptchaKey = "" # The reCaptcha site key.
   # reCaptchaSecret = "" # The reCaptcha encrypted secret. You'll need to encrypt plain secret via https://yourstaticmaninstance/v3/encrypt/PLAINSECRET.
-  # extraFields = [ "url" ] # Extra fields. Available fiedls: url.
+  # extraFields = [ "url" ] # Extra fields. Available fields: url.
   # requiredFields = [ "email", "url" ] # Extra required fields. Available fields: email and the extra fields.
   # paginate = 5 # Default to 10.
   # moderation = false # Same as Staticman's moderation.

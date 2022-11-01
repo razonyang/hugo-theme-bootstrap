@@ -17,7 +17,7 @@ images = []
 navWeight = 960
 +++
 
-HBS suppports multiple languages out of box, such as English, Simplified Chinese, Traditional Chinese, French, Russian etc.
+HBS supports multiple languages out of box, such as English, Simplified Chinese, Traditional Chinese, French, Russian etc.
 
 <!--more-->
 

@@ -49,7 +49,7 @@ But don't worry, there are two ways to solve this problem.
 
 Just create a file called `extra_stats.json` with the same form of `hugo_stats.json` on your site root, and put the extra CSS into it manually.
 
-> `extra_stats.json` MUST be commited to your repo.
+> `extra_stats.json` MUST be committed to your repo.
 
 ### Put HTML Block into `*.html` Files
 

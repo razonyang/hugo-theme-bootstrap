@@ -36,7 +36,7 @@ It's able to disable it via custom SCSS.
 {{% code/scss-variables-disable-logo-animation %}}
 ```
 
-But the previous style which we don't need still present in CSS bundle, since we just overrided it by the custom SCSS.
+But the previous style which we don't need is still present in CSS bundle, since we just overrode it by the custom SCSS.
 
 ```css
 {{% code/scss-variables-disable-logo-animation-output %}}
