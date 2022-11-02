@@ -42,7 +42,7 @@ There is also a [list of websites that use this theme](https://github.com/razony
 
 ## Contributions
 
-Thank you very much to the following contributors, sponsors and backers(sort by contributed or funding time).
+Thank you very much to the following contributors, sponsors and backers (sort by contributed or funding time).
 
 ### Contributors
 
