@@ -2,7 +2,7 @@
 {{- $toc := .TableOfContents -}}
 {{- $valid := and $toc (and (ne $toc "<nav id=\"TableOfContents\"></nav>") (gt .WordCount .Site.Params.tocWordCount)) -}}
 {{- if and $enable $valid -}}
-<a class="action{{ if eq .Type "docs" }} d-lg-none{{ end }}" href="#postTOC" aria-controls="Table of contents" role="button" title="Table of contents">
+<a class="action action-toc{{ if eq .Type "docs" }} d-lg-none{{ end }}" href="#postTOC" aria-controls="Table of contents" role="button" title="Table of contents">
   <i class="fas fa-fw fa-list-alt"></i>
 </a>
 {{- end -}}
