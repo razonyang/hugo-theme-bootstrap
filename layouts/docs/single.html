@@ -1,5 +1,5 @@
 {{ define "content" }}
-{{- partial "docs/nav" . .FirstSection -}}
+{{- partial "docs/nav" . -}}
 <div class="{{ if default true .Params.sidebar }}col-lg-7{{ else }}col-lg-10{{ end }} ms-auto">
   <div class="container-fluid">
     {{- partial "breadcrumb" . -}}
