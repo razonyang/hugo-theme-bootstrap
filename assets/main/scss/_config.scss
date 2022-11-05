@@ -19,12 +19,12 @@ $breadcrumb-divider: quote("{{ with $params.breadcrumbDivider }}{{ . }}{{ else }
 // Palettes
 $preferPalette: '{{ default "blue" $params.palette }}';
 $validPalettes: true;
-{{- if isset $params "palette" -}}
-    {{- if eq 0 (len $params.palettes) -}}
+{{- with $params.palettes -}}
+    {{- if eq 0 (len .) -}}
         $validPalettes: false;
     {{- else -}}
         $validPalettes: [];
-        {{- range $params.palettes -}}
+        {{- range . -}}
             $validPalettes: append($validPalettes, '{{ replace . " " "-" }}');
         {{- end -}}
     {{- end -}}
