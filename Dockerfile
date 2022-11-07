@@ -10,7 +10,7 @@ WORKDIR /src/exampleSite
 RUN npm install
 RUN npm install -g @fullhuman/postcss-purgecss rtlcss
 RUN hugo version
-RUN hugo --themesDir=../../ --theme=src -b ${HUGO_BASEURL}
+RUN hugo -b ${HUGO_BASEURL}
 
 # Final stage
 FROM nginx
