@@ -55,7 +55,7 @@
       {{- $link := printf .url $user }}
       {{- $url := urls.Parse $user }}
       {{- if $url.Scheme }}{{ $link = $url.String }}{{ end }}
-      <a class="nav-link social-link{{ with $linkClass }} {{ . }}{{ end }}" target="_blank" href="{{ $link }}" title="{{ printf "social_%s" $key | i18n }}" rel="noopener noreferrer">
+      <a class="nav-link social-link{{ with $linkClass }} {{ . }}{{ end }}" target="_blank" href="{{ $link }}" title="{{ printf "social_%s" $key | i18n }}" rel="me">
         <i class="fa-fw{{ with $size }} {{ . }}{{ end }} {{ default ( printf "fab fa-%s" $key ) .icon }}"></i>
         {{- if $iconText }}
         <span{{ with $iconTextClass }} class="{{ . }}"{{ end }}>{{ default (title $key) .title }}</span>
@@ -79,7 +79,7 @@
     {{- end }}
   {{- end }}
   {{- with $rss }}
-  <a class="nav-link social-link{{ with $linkClass }} {{ . }}{{ end }}" target="_blank" href="{{ .Permalink }}" title="{{ "social_rss" | i18n }}" rel="noopener noreferrer">
+  <a class="nav-link social-link{{ with $linkClass }} {{ . }}{{ end }}" target="_blank" href="{{ .Permalink }}" title="{{ "social_rss" | i18n }}" rel="me">
     <i class="fas fa-fw{{ with $size }} {{ . }}{{ end }} fa-rss"></i>
     {{- if $iconText }}
     <span{{ with $iconTextClass }} class="{{ . }}"{{ end }}>RSS</span>
