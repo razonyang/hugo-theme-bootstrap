@@ -25,5 +25,8 @@ body {
 }
 
 a {
+  color: inherit;
   text-decoration: none;
+
+  --#{$prefix}link-hover-color-rgb: var(--#{$prefix}primary-rgb);
 }
