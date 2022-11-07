@@ -38,7 +38,7 @@
     "webpack-cli": "^4.9.1"
   },
   "scripts": {
-    "serve": "hugo server --source=exampleSite --themesDir=../../ --buildDrafts --disableFastRender",
+    "serve": "cd exampleSite && hugo server --buildDrafts --disableFastRender",
     "build": "webpack",
     "pack": "hugo mod npm pack"
   },

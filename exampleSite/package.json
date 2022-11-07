@@ -75,6 +75,6 @@
   "version": "0.1.0",
   "scripts": {
     "watch": "onchange -i -k '**/*.html' -- npm run dev",
-    "dev": "hugo server --themesDir=../../ --buildDrafts --disableFastRender --gc"
+    "dev": "hugo server --buildDrafts --disableFastRender --gc"
   }
 }

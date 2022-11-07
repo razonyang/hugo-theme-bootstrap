@@ -1,7 +1,7 @@
 baseURL = "https://example.com"
 title = "Hugo Theme Bootstrap Docs v1"
-theme = "hugo-theme-bootstrap" # install via git submodule
-# theme = "github.com/razonyang/hugo-theme-bootstrap" # install via hugo module
+# theme = "hugo-theme-bootstrap" # install via git submodule
+theme = "github.com/razonyang/hugo-theme-bootstrap" # install via hugo module
 copyright = "Copyright © 2016-{year} Razon Yang. All Rights Reserved."
 
 # Multilingual mode

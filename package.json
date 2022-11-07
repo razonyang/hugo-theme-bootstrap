@@ -97,7 +97,7 @@
   },
   "scripts": {
     "watch": "onchange -i -k '**/*.html' -- npm run dev",
-    "dev": "cd exampleSite && hugo server --themesDir=../../ --buildDrafts --disableFastRender --gc",
+    "dev": "cd exampleSite && hugo server --buildDrafts --disableFastRender --gc",
     "lint": "npm run eslint & npm run stylelint",
     "eslint": "eslint assets --ext .ts --ext .js --fix",
     "stylelint": "stylelint assets/**/*.scss --fix"
