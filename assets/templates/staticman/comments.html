@@ -21,7 +21,7 @@
   <body>
     {{- partial "header.html" . }}
     {{- partial "hooks/main-begin" . }}
-    <main class="{{- partialCached "functions/container-class" . -}}">
+    <main class="{{- partialCached "functions/container-class" . .FirstSection -}}">
       <div class="row content">
         {{- partialCached "noscript" . .Language.Lang }}
         {{- partial "breadcrumb" . }}
