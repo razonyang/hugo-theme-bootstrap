@@ -19,7 +19,7 @@
   <body>
     {{- partial "header.html" . }}
     {{- partial "hooks/main-begin" . }}
-    <main class="{{- partial "helpers/fullwidth" (dict "Page" . "Output" "container" "FullWidthOutput" "container-fluid") -}}">
+    <main class="{{- partialCached "functions/container-class" . -}}">
       <div class="row content">
         {{- partialCached "noscript" . .Language.Lang }}
         {{- block "content" . }}{{ end }}

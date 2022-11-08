@@ -1,7 +1,7 @@
 {{- $baseURL := $.Site.BaseURL }}
 {{- $dropdownMenuToggle := default true $.Site.Params.topAppBar.dropdownMenuToggle }}
 <nav class="top-app-bar shadow navbar navbar-expand-lg{{ if $.Site.Params.fixedHeader }} fixed-top{{ end }}">
-  <div class="{{- partial "helpers/fullwidth" (dict "Page" . "Output" "container" "FullWidthOutput" "container-fluid") -}}">
+  <div class="{{- partialCached "functions/container-class" . -}}">
     {{- if eq .Type "docs" }}
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDocsNav"
       aria-controls="offcanvasDocsCatalog" aria-expanded="false" aria-label="Toggle docs navigation">

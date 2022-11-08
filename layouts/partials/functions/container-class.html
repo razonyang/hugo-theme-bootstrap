@@ -1,0 +1,2 @@
+{{- $fullWidth := partialCached "functions/full-width" . }}
+{{- return cond $fullWidth "container-fluid" "container" -}}
