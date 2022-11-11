@@ -26,6 +26,7 @@ Page parameters are located in page's [Front Matter](https://gohugo.io/content-m
 | Name | Type  | Default | Description
 |---|:-:|:-:|---
 | **Page** 
+| `title` | String | - | Page title.
 | `description` | String | - | Page description.
 | `keywords` | Array | - | Page keywords.
 | `comment` | Boolean | `true` | Whether to enable comments. It won't work if `comment` has been disabled globally.

@@ -26,6 +26,7 @@ authors = ["RazonYang"]
 | 名称 | 类型  | 默认值 | 说明
 |---|:-:|:-:|---
 | **Page** 
+| `title` | String | - | 页面标题
 | `description` | String | - | 页面描述
 | `keywords` | Array | - | 页面关键词
 | `comment` | Boolean | `true` | 是否开启评论，如果评论已被全局关闭，该参数无效

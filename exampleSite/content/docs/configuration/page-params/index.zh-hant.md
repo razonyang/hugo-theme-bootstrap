@@ -26,6 +26,7 @@ authors = ["RazonYang"]
 | 名稱 | 類型  | 默認值 | 說明
 |---|:-:|:-:|---
 | **Page** 
+| `title` | String | - | 頁面標題
 | `description` | String | - | 頁面描述
 | `keywords` | Array | - | 頁面關鍵詞
 | `comment` | Boolean | `true` | 是否開啟評論，如果評論已被全局關閉，該參數無效
