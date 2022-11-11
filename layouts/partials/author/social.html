@@ -1,0 +1,10 @@
+{{- with .Params.social }}
+    {{- partial "helpers/social-links" (dict
+        "links" .
+        "size" "fa-2x"
+        "class" "justify-content-md-start mb-1"
+        "OutputFormats" $.OutputFormats
+        "home" ($.GetPage "/")
+        "params" $.Site.Params
+    ) -}}
+{{- end }}

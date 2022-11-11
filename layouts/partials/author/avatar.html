@@ -1,0 +1,17 @@
+{{- $avatar := .Resources.GetMatch "avatar*" -}}
+{{- with $avatar}}
+<div class="flex-shrink-0 d-flex align-items-center">
+    {{- $img := .Resize "120x120" }}
+    <picture>
+        <img class="img-fluid author-img mb-3 rounded-circle" width="{{ $img.Width }}" height="{{ $img.Height }}" alt="author avatar" src="{{ $img.Permalink }}" title="{{ .Title }}" />
+    </picture>
+</div>
+{{- else }}
+<picture>
+    {{- $hash := "" }}
+    {{- with .Params.social.email }}{{ $hash = md5 . }}{{ end }}
+    <img class="img-fluid author-img rounded-circle mb-3" width="120" height="120" alt="author avatar"
+        src="https://www.gravatar.com/avatar/{{ $hash }}?s=120"
+        title="{{ .Title }}" />
+</picture>
+{{- end }}
