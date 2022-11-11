@@ -205,7 +205,7 @@ social:
 - `description`: The introduction.
 - `social`: [Social links]({{< ref "/docs/widgets/social-links" >}}).
 
-The author image should be placed at the same folder with pattern `avatar*`, such as `/content/authors/foo/avatar.png`.
+The author image should be placed at the same folder with pattern `avatar*`, such as `/content/authors/foo/avatar.png`. If there is no avatar, the `social.email` will be used to generate Gravatar avatar.
 
 ## 下一步
 

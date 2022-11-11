@@ -7,9 +7,24 @@
       {{- $count := len .Pages -}}
       <div class="taxonomy row card component">
         <div class="card-header">
+          {{- if eq .Data.Plural "authors" }}
+            <div class="author d-flex mt-2 flex-column flex-md-row align-items-center">
+                {{- partial "author/avatar" .Page }}
+                <div class="text-center text-md-start flex-grow-1 ms-0 ms-md-4">
+                    <h2 class="taxonomy-title card-title author-name fs-4 mb-2 text-surface">
+                      <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+                    </h2>
+                    {{- with .Page.Description }}
+                    <div class="author-description mb-2">{{ . }}</div>
+                    {{- end }}
+                    {{- partial "author/social" .Page }}
+                </div>
+            </div>
+          {{- else }}
           <h2 class="taxonomy-title card-title fs-4 my-2 text-surface">
             <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
           </h2>
+          {{- end }}
         </div>
         <div class="card-body">
           <div class="taxonomy-meta mt-1 mb-3">
