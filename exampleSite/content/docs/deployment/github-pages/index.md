@@ -1,7 +1,7 @@
 +++
 # type = "docs"
 title = "Deploy to GitHub Pages"
-linkTitle = "Github Pages"
+linkTitle = "GitHub Pages"
 date = 2022-07-13T10:30:23+08:00
 # description = "" # Used by description meta tag, summary will be used instead if not set or empty.
 featured = false
