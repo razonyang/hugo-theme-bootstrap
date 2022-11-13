@@ -284,6 +284,9 @@ other = "GitLab"
 [social_instagram]
 other = "Instagram"
 
+[social_itchio]
+other = "itch.io"
+
 [social_kaggle]
 other = "Kaggle"
 
