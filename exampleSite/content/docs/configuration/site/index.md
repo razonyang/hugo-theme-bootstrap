@@ -34,7 +34,7 @@ The site configuration is located in `config/_default/config.toml` by default.
 | `paginatePath` | String | `page` |
 | `enableRobotsTXT` | Boolean | `true` |
 | `disqusShortname` | String | - | [Disqus]({{< ref "/docs/widgets/comments#disqus" >}}) shortname.
-| `googleAnalytics` | String | - | Google Analytics.
+| `googleAnalytics` | String | - | Google Analytics, both of universal analytics and GA4 are supported.
 | `social` | Object | - | [Social Links]({{< ref "/docs/widgets/social-links" >}}).
 | `author` | Object | - | [Author Widget]({{< ref "/docs/widgets/author" >}}).
 
