@@ -1,7 +1,4 @@
-{{- $enable := and (default true .Params.toc) (default true .Site.Params.toc) -}}
-{{- $toc := .TableOfContents -}}
-{{- $valid := and $toc (and (ne $toc "<nav id=\"TableOfContents\"></nav>") (gt .WordCount .Site.Params.tocWordCount)) -}}
-{{- if and $enable $valid -}}
+{{- if partial "functions/toc" . -}}
 <a class="action action-toc{{ if eq .Type "docs" }} d-lg-none{{ end }}" href="#postTOC" aria-controls="Table of contents" role="button" title="Table of contents">
   <i class="fas fa-fw fa-list-alt"></i>
 </a>
