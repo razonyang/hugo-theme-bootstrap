@@ -1,12 +1,9 @@
-{{- $enable := and (default true .Params.toc) (default true .Site.Params.toc) -}}
-{{- $toc := .TableOfContents -}}
-{{- $valid := and $toc (and (ne $toc "<nav id=\"TableOfContents\"></nav>") (gt .WordCount .Site.Params.tocWordCount)) -}}
-{{- if and $enable $valid -}}
+{{- if partial "functions/toc" . -}}
 <div id="postTOC">
   <h2 class="mb-3">
     {{- i18n "table_of_contents" -}}
     <a class="anchor ms-1" href="#postTOC"><i class="fas fa-link"></i></a>
   </h2>
-  {{ $toc }}
+  {{ .TableOfContents }}
 </div>
 {{- end -}}
