@@ -69,6 +69,7 @@ github = "githubusername"
 | `github` | GitHub 使用者名稱 |
 | `gitlab` | GitLab 使用者名稱 |
 | `instagram` | Instagram 使用者名稱 |
+| `itchio` | itch.io 使用者名稱 |
 | `linkedin` | LinkedIn 使用者名稱 |
 | `quora` | Quora 使用者名稱 |
 | `stackoverflow` | Stack Overflow 使用者 ID |
