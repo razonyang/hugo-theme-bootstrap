@@ -3,5 +3,6 @@ title = "Authors"
 [menu.main]
   parent = "blog"
   weight = 5
-  pre = '<i class="fas fa-fw fa-user me-1"></i>'
+  [menu.main.params]
+    icon = '<i class="fas fa-fw fa-user"></i>'
 +++

@@ -23,7 +23,8 @@ authors = ["RazonYang"]
 [menu.footer]
   parent = "features"
   weight = 1
-  pre = '<i class="fas fa-fw fa-search me-1"></i>'
+  [menu.footer.params]
+    icon = '<i class="fas fa-fw fa-search text-info"></i>'
 +++
 
 如果您的站点中有许多文章，读者可能很难检索到文章，因此，我们添加了搜索功能。

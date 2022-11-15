@@ -1,6 +1,6 @@
 +++
 title = "觀感"
-linkTitleIcon = '<i class="fas fa-palette fa-fw"></i>'
+linkTitleIcon = '<i class="fas fa-palette fa-fw text-danger"></i>'
 date = 2021-12-03T19:42:57+08:00
 featured = false
 comment = true
@@ -29,7 +29,8 @@ authors = ["RazonYang"]
 [menu.footer]
   parent = "docs"
   weight = 3
-  pre = '<i class="fas fa-fw fa-palette me-1"></i>'
+  [menu.footer.params]
+    icon = '<i class="fas fa-fw fa-palette text-danger"></i>'
 +++
 
 默認情况下，使用此主題的網站具有預設字體、顏色和總體外觀。 但是，默認方案不可能滿足所有人的要求，但是不要擔心，你可以輕鬆地覆蓋主題預設值，例如調色板顏色、字體、語法高亮。

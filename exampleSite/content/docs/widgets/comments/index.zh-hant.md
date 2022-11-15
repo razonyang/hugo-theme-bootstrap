@@ -26,7 +26,8 @@ authors = ["RazonYang"]
 [menu.footer]
   parent = "features"
   weight = 7
-  pre = '<i class="fas fa-fw fa-comments me-1"></i>'
+  [menu.footer.params]
+    icon = '<i class="fas fa-fw fa-comments text-success"></i>'
 +++
 
 [Disqus](https://disqus.com/)、[Utterances](https://utteranc.es/) 和 [Giscus](https://giscus.app/) 評論小部件都是開箱即用的。本文將展示如何配置它們，甚至自定義你自己的評論小部件。

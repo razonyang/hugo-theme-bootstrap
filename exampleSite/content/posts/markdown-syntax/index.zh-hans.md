@@ -23,6 +23,8 @@ authors = ["Hugo"]
 [menu.footer]
   parent = "docs"
   weight = 4
+  [menu.footer.params]
+    icon = '<i class="fab fa-markdown fa-fw text-success"></i>'
 +++
 
 This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.

@@ -23,7 +23,8 @@ authors = ["RazonYang"]
 [menu.footer]
   parent = "features"
   weight = 1
-  pre = '<i class="fas fa-fw fa-search me-1"></i>'
+  [menu.footer.params]
+    icon = '<i class="fas fa-fw fa-search text-info"></i>'
 +++
 
 It may be difficult for readers to retrieve an article in the case if there are many articles in your site, therefore, we added the search feature.

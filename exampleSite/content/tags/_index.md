@@ -3,5 +3,6 @@ title = "Tags"
 [menu.main]
   parent = "blog"
   weight = 4
-  pre = '<i class="fas fa-fw fa-tags me-1"></i>'
+  [menu.main.params]
+    icon = '<i class="fas fa-fw fa-tags"></i>'
 +++

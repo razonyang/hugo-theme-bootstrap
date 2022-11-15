@@ -5,5 +5,6 @@ navWeight = 980
 [menu.footer]
   parent = "docs"
   weight = 2
-  pre = '<i class="fas fa-cog fa-fw me-1"></i>'
+  [menu.footer.params]
+    icon = '<i class="fas fa-cog fa-fw"></i>'
 +++
