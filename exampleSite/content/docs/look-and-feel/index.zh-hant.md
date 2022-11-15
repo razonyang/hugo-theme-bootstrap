@@ -173,3 +173,14 @@ JS 變量使用駝峰式命名，其對應的 class 名稱則是小寫的，且�
 | `<i class="fab fa-google"></i>` |
 
 > 如果圖標未正常顯示，請檢查前綴是否正確。
+
+#### 圖標顏色
+
+You can either specify the color CSS utilities or the `style` attribute for setting the icon color.
+
+| HTML |
+|---|
+| `<i class="fas fa-clock text-success"></i>` |
+| `<i class="fas fa-clock text-danger"></i>` |
+| `<i class="far fa-clock" style="color: blue"></i>` |
+| `<i class="far fa-clock" style="color: pink"></i>` |

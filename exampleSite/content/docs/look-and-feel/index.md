@@ -174,3 +174,14 @@ Takes the previously imported icons as an example:
 | `<i class="fab fa-google"></i>` |
 
 > If the icon is not displayed properly, please check that the prefix is ​​correct.
+
+#### Icon Color
+
+You can either specify the color CSS utilities or the `style` attribute for setting the icon color.
+
+| HTML |
+|---|
+| `<i class="fas fa-clock text-success"></i>` |
+| `<i class="fas fa-clock text-danger"></i>` |
+| `<i class="far fa-clock" style="color: blue"></i>` |
+| `<i class="far fa-clock" style="color: pink"></i>` |
