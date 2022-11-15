@@ -1,7 +1,7 @@
 +++
 title = "菜單"
 date = 2021-12-16T17:25:20+08:00
-featured = false
+featured = true
 comment = true
 toc = true
 reward = true
@@ -55,32 +55,8 @@ authors = ["RazonYang"]
 讓我們以 `main` 菜單為例：
 
 ```toml
-[[main]]
-  name = "FooBar"
-  identifier = "foobar"
-  weight = 1
-  pre = '<i class="fas fa-fw fa-chevron-circle-down me-1"></i>'
-[[main]]
-  name = "Foo"
-  identifier = "foo"
-  parent = "foobar"
-  url = "https://github.com/razonyang/hugo-theme-bootstrap"
-  weight = 1
-[[main]]
-  parent = "foobar"
-  identifier = "foobar-divider"
-  weight = 2
-  [main.params]
-    divider = true
-[[main]]
-  name = "Bar"
-  identifier = "bar"
-  parent = "foobar"
-  url = "https://github.com/razonyang/hugo-theme-bootstrap/discussions/new"
-  weight = 3
+{{% code/menu-main-configuration %}}
 ```
-
-![Main Menus](images/main.png#center)
 
 如圖所示，我們創建一個名為 `foobar`  的頂級菜單，其包含了子菜單和分隔符。
 
@@ -89,13 +65,7 @@ authors = ["RazonYang"]
 我們也可以通過頁面的 Front Matter 配置菜單。
 
 ```toml
-[menu.main]
-  parent = "support"
-  weight = 6
-[menu.footer]
-  parent = "support"
-  weight = 6
-  pre = '<i class="fas fa-fw fa-question-circle me-1"></i>'
+{{% code/menu-footer-configuration %}}
 ```
 
 代碼片段將頁面追加到 `main` 和 `footer` 菜單。
