@@ -1,0 +1,27 @@
+{{- $src := "" }}
+{{- $manual := false }}
+{{- if .IsNamedParams }}
+  {{- $src = .Get "src" }}
+  {{- with .Get "trigger" }}{{ $manual = eq "manual" . }}{{ end }}
+{{- else }}
+  {{- $src = .Get 0 }}
+{{- end }}
+<div class="game ratio ratio-16x9 my-2">
+    <div class="d-flex align-items-center justify-content-center">
+        {{- if $manual }}
+        <button class="btn btn-primary btn-load-game" style="z-index: 1;">
+            <i class="fas fa-play-circle me-1"></i>
+            {{- i18n "button_run_game" -}}
+        </button>
+        {{- end }}
+        <a role="button" class="btn-fullscreen-game position-absolute bottom-0 end-0 p-2 me-1 text-white{{ if $manual }} d-none{{ end }}" style="z-index: 1;"
+            title="{{ i18n "button_fullscreen" }}">
+            <i class="fas fa-expand"></i>
+        </a>
+    </div>
+    <iframe class="game-iframe{{ if $manual }} bg-dark{{ end }}"
+        allowfullscreen
+        scrolling="no"
+        {{ if $manual }}data-src="{{ $src }}" src="about:blank"{{ else }}src="{{ $src }}"{{ end }}>
+    </iframe>
+</div>

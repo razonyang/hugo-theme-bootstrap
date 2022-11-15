@@ -25,8 +25,14 @@ other = "Authors"
 [button_copy_url]
 other = "Copy URL"
 
+[button_fullscreen]
+other = "Fullscreen"
+
 [button_reload]
 other = "Reload"
+
+[button_run_game]
+other = "Run game"
 
 [button_social_share]
 other = "Share"
