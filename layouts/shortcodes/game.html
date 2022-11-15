@@ -7,19 +7,20 @@
   {{- $src = .Get 0 }}
 {{- end }}
 <div class="game ratio ratio-16x9 my-2">
-    <div class="d-flex align-items-center justify-content-center" style="z-index: 1;">
+    <div class="d-flex align-items-center justify-content-center">
         {{- if $manual }}
-        <button class="btn btn-warning btn-load-game">
+        <button class="btn btn-warning btn-load-game" style="z-index: 1;">
             <i class="fas fa-play-circle me-1"></i>
             Run Game
         </button>
         {{- end }}
-        <a role="button" class="btn-fullscreen-game position-absolute bottom-0 end-0 p-2 me-1 text-white{{ if $manual }} d-none{{ end }}">
+        <a role="button" class="btn-fullscreen-game position-absolute bottom-0 end-0 p-2 me-1 text-white{{ if $manual }} d-none{{ end }}" style="z-index: 1;">
             <i class="fas fa-expand"></i>
         </a>
     </div>
     <iframe class="game-iframe{{ if $manual }} bg-dark{{ end }}"
         allowfullscreen
+        scrolling="no"
         {{ if $manual }}data-src="{{ $src }}" src="about:blank"{{ else }}src="{{ $src }}"{{ end }}>
     </iframe>
 </div>
