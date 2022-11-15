@@ -54,6 +54,39 @@
       padding-left: 2.25rem;
     }
   }
+
+  .dropdown-item {
+    --#{$prefix}dropdown-item-padding-y: 0.5rem;
+
+    &:hover,
+    &:active,
+    &.active,
+    &:focus {
+      .dropdown-item-icon {
+        .svg-inline--fa {
+          color: var(--#{$prefix}primary);
+        }
+      }
+
+      .dropdown-item-description {
+        color: rgba(255,255,255, 0.7) !important;
+      }
+    }
+  }
+
+  .dropdown-item-icon {
+    background-color: var(--#{$prefix}secondary-bg);
+  }
+
+  .dropdown-item-description {
+    max-width: 280px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
 }
 
 @if not $colored-top-app-bar-in-dark {
