@@ -8,10 +8,7 @@
   [data-bs-target] {
     height: 15px;
     width: 15px;
-  }
-
-  .active {
-    background-color: var(--#{$prefix}primary);
+    background-color: var(--#{$prefix}primary) !important;
   }
 }
 
