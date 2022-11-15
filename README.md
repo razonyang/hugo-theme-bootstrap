@@ -71,3 +71,4 @@ Sponsors will appear on our website with their brands and logos.
 - [Natenom](https://github.com/Natenom)
 - [Wilson E. Alvarez](https://github.com/Rubonnek)
 - [Andre Ferreira](https://github.com/andrefpoli)
+- [Kurt Krueckeberg](https://github.com/kurt-krueckeberg)
