@@ -23,7 +23,7 @@ A detailed description of game shortcode.
 ## Usage
 
 ```markdown
-{{/* game "GAME_URL" */}}
+{{</* game "GAME_URL" */>}}
 ```
 
 or via named parameters
