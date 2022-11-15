@@ -58,7 +58,7 @@ authors = ["RazonYang"]
 {{% code/menu-main-configuration %}}
 ```
 
-如圖所示，我們創建一個名為 `foobar`  的頂級菜單，其包含了子菜單和分隔符。
+> See [Icons]({{< ref "docs/look-and-feel#icons" >}}) for importing icons and setting the icon's color.
 
 ### Front Matter
 

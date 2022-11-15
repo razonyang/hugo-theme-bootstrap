@@ -60,6 +60,8 @@ Let's take `main` menu as an example:
 {{% code/menu-main-configuration %}}
 ```
 
+> See [Icons]({{< ref "docs/look-and-feel#icons" >}}) for importing icons and setting the icon's color.
+
 ### Front Matter
 
 We can also configure menu via page front matter.
