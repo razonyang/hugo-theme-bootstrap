@@ -25,8 +25,14 @@ other = "作者"
 [button_copy_url]
 other = "复制链接"
 
+[button_fullscreen]
+other = "全屏"
+
 [button_reload]
 other = "刷新"
+
+[button_run_game]
+other = "开始游戏"
 
 [button_social_share]
 other = "分享"
