@@ -3,5 +3,6 @@ title = "Catégories"
 [menu.main]
   parent = "blog"
   weight = 3
-  pre = '<i class="fas fa-fw fa-folder me-1"></i>'
+  [menu.main.params]
+    icon = '<i class="fas fa-fw fa-folder"></i>'
 +++

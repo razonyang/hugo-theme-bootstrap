@@ -5,9 +5,11 @@ layout = "faq"
 [menu.main]
   parent = "support"
   weight = 6
-  pre = '<i class="fas fa-fw fa-question-circle me-1"></i>'
+  [menu.main.params]
+    icon = '<i class="fas fa-question-circle fa-fw text-info"></i>'
 [menu.footer]
   parent = "support"
   weight = 6
-  pre = '<i class="fas fa-fw fa-question-circle me-1"></i>'
+  [menu.footer.params]
+    icon = '<i class="fas fa-fw fa-question-circle"></i>'
 +++

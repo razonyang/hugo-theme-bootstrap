@@ -23,6 +23,8 @@ authors = ["Hugo"]
 [menu.footer]
   parent = "docs"
   weight = 4
+  [menu.footer.params]
+    icon = '<i class="fab fa-markdown fa-fw text-success"></i>'
 +++
 
 تعرض هذه المقالة أساسيات الكتابة بلغة ماركداون والتي يمكن استخدامها في ملفات المحتوى داخل هوجو، كما تعرض أيضا تنسيق عناصر HTML الأساسية باستخدام CSS في الثيم.

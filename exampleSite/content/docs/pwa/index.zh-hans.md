@@ -1,7 +1,7 @@
 +++
 title = "渐进式 web 应用程序"
 linkTitle = "PWA"
-linkTitleIcon = '<i class="fas fa-th-large fa-fw"></i>'
+linkTitleIcon = '<i class="fas fa-th-large fa-fw text-warning"></i>'
 date = 2021-12-03T19:39:01+08:00
 featured = false
 comment = true
@@ -30,7 +30,8 @@ videos = [
 [menu.footer]
   parent = "features"
   weight = 2
-  pre = '<i class="fas fa-th-large fa-fw me-1"></i>'
+  [menu.footer.params]
+    icon = '<i class="fas fa-fw fa-th-large"></i>'
 +++
 
 PWAs([渐进式 web 应用程序](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)) 是使用一些特定的技术和标准模式开发的，允许它们同时利用 web 和本机应用程序功能。

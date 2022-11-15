@@ -21,7 +21,8 @@ authors = ["RazonYang"]
 [menu.footer]
   parent = "features"
   weight = 7
-  pre = '<i class="fas fa-fw fa-coffee me-1"></i>'
+  [menu.footer.params]
+    icon = '<i class="fas fa-fw fa-coffee"></i>'
 +++
 
 打赏小部件，又称 buy me a coffee 小部件，其通过使用捐赠或小费，为读者提供了一种支持创作者的管道。

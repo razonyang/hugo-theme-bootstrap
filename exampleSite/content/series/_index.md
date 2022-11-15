@@ -3,5 +3,6 @@ title = "Series"
 [menu.main]
   parent = "blog"
   weight = 2
-  pre = '<i class="fas fa-fw fa-columns me-1"></i>'
+  [menu.main.params]
+    icon = '<i class="fas fa-fw fa-columns"></i>'
 +++

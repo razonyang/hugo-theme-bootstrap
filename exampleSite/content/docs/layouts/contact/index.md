@@ -25,7 +25,8 @@ authors = ["RazonYang"]
 [menu.footer]
   parent = "features"
   weight = 6
-  pre = '<i class="fas fa-fw fa-question-circle me-1"></i>'
+  [menu.footer.params]
+    icon = '<i class="fas fa-fw fa-question-circle"></i>'
 +++
 
 We can put our email address on [social links]({{< ref "/docs/widgets/social-links" >}}) so that readers can contact us. Unfortunately, emails will be more or less treated as spam and even filtered.

@@ -26,7 +26,8 @@ authors = ["RazonYang"]
 [menu.footer]
   parent = "features"
   weight = 7
-  pre = '<i class="fas fa-fw fa-comments me-1"></i>'
+  [menu.footer.params]
+    icon = '<i class="fas fa-fw fa-comments text-success"></i>'
 +++
 
 [Disqus](https://disqus.com/), [Utterances](https://utteranc.es/) and [Giscus](https://giscus.app/) comments widgets are supported out of box.
