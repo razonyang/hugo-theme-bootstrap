@@ -39,4 +39,10 @@ or via named parameters
 
 ## Examples
 
+### Auto Load
+
+{{< game "https://v6p9d9t4.ssl.hwcdn.net/html/6581665/FeatherParkWeb/index.html" >}}
+
+### Manual Load
+
 {{< game src="https://v6p9d9t4.ssl.hwcdn.net/html/6581665/FeatherParkWeb/index.html" trigger=manual >}}
