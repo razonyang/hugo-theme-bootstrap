@@ -1,0 +1,5 @@
+{{- $color := default "auto" $.Site.Params.color }}
+{{- if not (in (slice "light" "dark" "auto") $color) }}
+  {{- $color = "auto" }}
+{{- end }}
+{{- return $color -}}

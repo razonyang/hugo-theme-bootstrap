@@ -1,8 +1,5 @@
 <!doctype html>
-{{- $color := default "auto" $.Site.Params.color }}
-{{- if not (in (slice "light" "dark" "auto") $color) }}
-  {{- $color = "auto" }}
-{{- end }}
+{{- $color := partialCached "functions/color" . }}
 <html class="position-relative" itemscope itemtype="http://schema.org/WebPage" lang="{{ .Lang }}"
   data-bs-theme="{{ $color }}"
   {{- with $.Site.Language.LanguageDirection }} dir="{{ . }}"{{ end }}
