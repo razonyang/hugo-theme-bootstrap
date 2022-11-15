@@ -26,22 +26,39 @@
           {{- $url := .URL | absURL }}
           {{- $active := or (eq $currentPage.Permalink (absURL .URL)) ($currentPage.IsMenuCurrent "main" .) }}
           {{- if .HasChildren }}
-          <li class="nav-item col-6 col-lg-auto dropdown px-0">
+          <li class="nav-item col-12 col-lg-auto dropdown px-0">
             <a href="#"
               class="nav-link{{ if $dropdownMenuToggle }} dropdown-toggle{{ end }}{{ if $currentPage.HasMenuCurrent "main" . }} active{{ end }}"
               id="navbarDropdown{{ title .Identifier }}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              {{ .Pre }} {{- .Name -}} {{ .Post }}
+              {{- partial "helpers/menu-name" . }}
             </a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown{{ title .Identifier }}" data-bs-popper="none">
+              {{- with .Params.description }}
+                <li><h6 class="dropdown-header">{{ . }}</h6></li>
+              {{- end }}
               {{- range .Children }}
               {{- $childURL := .URL | absURL }}
               {{- if .Params.divider }}
               <li><hr class="dropdown-divider"></li>
               {{- else }}
               <li>
-                <a class="dropdown-item text-wrap text-lg-nowrap{{ if or (eq $currentPage.Permalink (absURL .URL)) ($currentPage.IsMenuCurrent "main" .) }} active{{ end }}"
+                <a class="dropdown-item d-flex align-items-center text-wrap text-lg-nowrap{{ if or (eq $currentPage.Permalink (absURL .URL)) ($currentPage.IsMenuCurrent "main" .) }} active{{ end }}"
                   href="{{ $childURL }}"{{ if not (hasPrefix $childURL $baseURL) }} target="_blank" rel="noopener noreferrer"{{ end }}>
-                  {{ .Pre }} {{- .Name -}} {{ .Post }}
+                  {{- .Pre -}}
+                  {{- with .Params.icon }}
+                    <span class="dropdown-item-icon me-2 p-2 rounded">
+                      {{ . | safeHTML }}
+                    </span>
+                  {{- end }}
+                  <div class="dropdown-item-content">
+                    <p class="dropdown-item-title {{ if .Params.description }}mb-1{{ else }}mb-0{{ end }}">{{- .Name -}}</p>
+                    {{- with .Params.description }}
+                      <p class="dropdown-item-description mb-0 text-secondary">
+                        {{- . -}}
+                      </p>
+                    {{- end }}
+                  </div>
+                  {{- .Post -}}
                 </a>
               </li>
               {{- end }}
@@ -51,7 +68,7 @@
           {{- else -}}
           <li class="nav-item col-6 col-lg-auto">
             <a class="nav-link py-2 px-0 px-lg-2{{ if $active }} active{{ end }}" href="{{ $url }}"{{ if not (hasPrefix $url $baseURL) }} target="_blank" rel="noopener noreferrer"{{ end }}>
-              {{ .Pre }} {{- .Name -}} {{ .Post }}
+              {{- partial "helpers/menu-name" . }}
             </a>
           </li>
           {{- end }}
