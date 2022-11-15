@@ -11,7 +11,7 @@ keywords = "Hugo, Bootstrap, Blog Theme"
 
 # logo = "images/logo.png" # Logo image. Default to "images/logo.webp".
 # logo = false # Disable Logo
-brand = "Docs v1"
+brand = "HBS v1"
 
 palette = "purple" # Default palette. Optional. You'll need to clear the browser cache after modifying this.
 # palettes = ["blue", "blue gray", "purple"] # Available palettes. Default to ALL.
