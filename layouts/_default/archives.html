@@ -8,7 +8,7 @@
 {{- $path := replace .Permalink $baseURL "" -}}
 {{- $date := split $path "/" -}}
 {{- $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections -}}
-<div class="{{ if default true .Params.sidebar }}col-lg-8{{ else }}col-lg-12{{ end }} mb-4">
+<div class="{{ if default true .Params.sidebar }}col-xxl-8{{ else }}col-xxl-12{{ end }} mb-4">
   <div class="container">
     {{- partial "breadcrumb" . -}}
     <div class="archives border-1 border-start ps-3 ms-2">

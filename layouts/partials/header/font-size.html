@@ -1,8 +1,8 @@
 {{- if isset $.Site.Params "fontsize" }}
-<li class="nav-item dropdown col-6 col-lg-auto">
-    <a class="nav-link px-0 py-2 px-lg-1" href="#" id="fontSizeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+<li class="nav-item dropdown col-6 col-xxl-auto">
+    <a class="nav-link px-0 py-2 px-xxl-1" href="#" id="fontSizeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
         <i class="fas fa-fw fa-font"></i>
-        <span class="d-lg-none">{{ i18n "font_size" }}</span>
+        <span class="d-xxl-none">{{ i18n "font_size" }}</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="fontSizeDropdown">
         {{- range slice "xs" "sm" "md" "lg" "xl" }}

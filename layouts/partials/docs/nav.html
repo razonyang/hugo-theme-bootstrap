@@ -1,5 +1,5 @@
-<aside class="docs-nav col-lg-2" tabindex="-1" data-bs-hide="focusout">
-  <div class="offcanvas-lg offcanvas-start" id="offcanvasDocsNav" aria-labelledby="offcanvasDocsNavLabel">
+<aside class="docs-nav col-xxl-2" tabindex="-1" data-bs-hide="focusout">
+  <div class="offcanvas-xxl offcanvas-start" id="offcanvasDocsNav" aria-labelledby="offcanvasDocsNavLabel">
     <div class="offcanvas-header border-bottom">
       <h5 class="offcanvas-title" id="offcanvasDocsNavLabel">Browse docs</h5>
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#offcanvasDocsNav"></button>
@@ -15,7 +15,7 @@
 {{- define "walk-nav" -}}
 {{- $section := .section -}}
 {{- $page := .page -}}
-<ul class="list-unstyled mb-2 w-100{{ if eq $section $page.FirstSection }} pe-lg-3{{ end }}">
+<ul class="list-unstyled mb-2 w-100{{ if eq $section $page.FirstSection }} pe-xl-3{{ end }}">
 {{- $expand := default false .page.Site.Params.docs.nav.expand -}}
     {{- $pages := sort (where $section.Pages "Params.navWeight" ">" 0) "Params.navWeight" "desc" -}}
     {{- $pages = union $pages (sort $section.Pages "Title") -}}
@@ -28,7 +28,7 @@
         {{- end -}}
         <li class="mb-2" tabindex="-1">
           <div class="py-1 d-flex justify-content-between align-items-center ms-3{{ if $active }} text-primary{{ end }}">
-            <a class="docs-nav-link" href="{{ .Permalink }}">{{- template "nav-title" . -}}</a>
+            <a class="docs-nav-link d-flex align-items-center" href="{{ .Permalink }}">{{- template "nav-title" . -}}</a>
             <a class="btn-toggle ms-1{{ if and (not $active) (not $expand) }} collapsed{{ end }}" role="button" data-bs-toggle="collapse"
               data-bs-target="#{{ $sectionId }}" aria-expanded="{{ if or $active $expand }}true{{ else }}false{{ end }}" aria-controls="{{ $sectionId }}">
               <i class="btn-toggle-icon fas fa-chevron-down ms-auto" data-fa-transform="rotate-270"></i>
@@ -42,7 +42,7 @@
         </li>
         {{- else -}}
         <li class="mb-2 py-1 ms-3{{ if eq .Permalink $page.Permalink }} text-primary{{ end }}" tabindex="-1">
-          <a class="docs-nav-link" href="{{ .Permalink }}"{{ if .Params.redirect }} target="_blank"{{ end }}>
+          <a class="docs-nav-link d-flex align-items-center" href="{{ .Permalink }}"{{ if .Params.redirect }} target="_blank"{{ end }}>
             {{- template "nav-title" . -}}
             {{- if .Params.redirect -}}
               <i class="ms-1 fas fa-external-link-square-alt"></i>

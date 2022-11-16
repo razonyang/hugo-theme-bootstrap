@@ -12,7 +12,8 @@
   --#{$prefix}navbar-brand-hover-color: var(--#{$prefix}on-primary);
   --#{$prefix}form-control-bg: var(--#{$prefix}primary-secondary);
 
-  .offcanvas-lg {
+  .offcanvas-lg,
+  .offcanvas-xxl {
     --#{$prefix}offcanvas-bg: var(--#{$prefix}primary);
     --#{$prefix}offcanvas-color: var(--#{$prefix}on-primary);
   }
@@ -46,7 +47,7 @@
   }
 
   .search-bar {
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(xxl) {
       width: 180px;
     }
 
@@ -98,7 +99,8 @@
 
       --#{$prefix}form-control-bg: var(--#{$prefix}surface-bg);
 
-      .offcanvas-lg {
+      .offcanvas-lg,
+      .offcanvas-xxl {
         --#{$prefix}offcanvas-bg: var(--#{$prefix}surface-bg);
         --#{$prefix}offcanvas-color: var(#{$prefix}surface-color-secondary);
       }

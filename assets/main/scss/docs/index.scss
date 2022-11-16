@@ -9,7 +9,7 @@
 .docs-nav {
   word-break: break-word;
 
-  @include media-breakpoint-up(lg) {
+  @include media-breakpoint-up(xxl) {
     position: sticky;
     top: 5rem;
     display: block !important;
@@ -35,7 +35,7 @@
 }
 
 .docs-sidebar {
-  @include media-breakpoint-up(lg) {
+  @include media-breakpoint-up(xxl) {
     top: 84px;
     height: calc(100vh - 84px);
     overflow-y: auto;

@@ -1,5 +1,5 @@
 {{ define "content" }}
-<div class="{{ if default true .Params.sidebar }}col-lg-8{{ else }}col-lg-12{{ end }}">
+<div class="{{ if default true .Params.sidebar }}col-xxl-8{{ else }}col-xxl-12{{ end }}">
   {{ partial "list" . }}
 </div>
 {{- partial "sidebar" . -}}
