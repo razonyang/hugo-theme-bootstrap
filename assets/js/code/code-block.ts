@@ -1,5 +1,5 @@
-import Snackbar from 'js/snackbar';
 import { default as params } from '@params';
+import Snackbar from 'js/snackbar';
 
 class CodeBlock {
   wrapper: HTMLElement;
@@ -48,7 +48,7 @@ class CodeBlock {
 
   appendLang() {
     const lang = this.code.getAttribute('data-lang');
-    if (lang) {
+    if (lang && lang != 'fallback') {
       const element = document.createElement('div');
       element.className =
         'lang position-absolute top-0 end-0 text-white fst-italic text-uppercase opacity-50 fs-xs pe-3 pt-0';
