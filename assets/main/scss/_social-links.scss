@@ -1,0 +1,8 @@
+.social-link {
+    position: relative;
+
+    &:hover {
+        top: -5px;
+        transition: top ease 0.5s;
+    }
+}
