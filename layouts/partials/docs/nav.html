@@ -15,7 +15,7 @@
 {{- define "walk-nav" -}}
 {{- $section := .section -}}
 {{- $page := .page -}}
-<ul class="list-unstyled mb-2 w-100{{ if eq $section $page.FirstSection }} pe-3{{ end }}">
+<ul class="list-unstyled mb-2 w-100{{ if eq $section $page.FirstSection }} pe-lg-3{{ end }}">
 {{- $expand := default false .page.Site.Params.docs.nav.expand -}}
     {{- $pages := sort (where $section.Pages "Params.navWeight" ">" 0) "Params.navWeight" "desc" -}}
     {{- $pages = union $pages (sort $section.Pages "Title") -}}
