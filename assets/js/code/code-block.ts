@@ -51,7 +51,7 @@ class CodeBlock {
     if (lang && lang != 'fallback') {
       const element = document.createElement('div');
       element.className =
-        'lang position-absolute top-0 end-0 text-white fst-italic text-uppercase opacity-50 fs-xs pe-3 pt-0';
+        'lang position-absolute top-0 end-0 text-white fst-italic text-uppercase opacity-50 fs-xs pe-3 pt-1';
       element.innerHTML = lang;
       this.wrapper.appendChild(element);
     }
@@ -62,7 +62,7 @@ class CodeBlock {
     if (title) {
       const element = document.createElement('div');
       element.className =
-        'title position-absolute bottom-0 end-0 text-white fst-italic opacity-50 pe-3 fs-xs user-select-all';
+        'title position-absolute bottom-0 end-0 mb-1 text-white fst-italic opacity-50 pe-3 fs-xs user-select-all';
       element.innerHTML = title;
       this.wrapper.appendChild(element);
     }
