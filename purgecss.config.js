@@ -21,7 +21,7 @@ const purgecss = require('@fullhuman/postcss-purgecss')({
       'end-0',
       'fs-lg', 'fs-sm', 'fs-xl', 'fs-xs', 'fst-italic',
       'justify-content-center',
-      'mb-0',
+      'mb-0', 'mb-1',
       'offcanvas-backdrop',
       'opacity-0', 'opacity-50', 'opacity-100', 'overflow-hidden',
       'p-1', 'pe-3', 'pt-0', 'pt-1', 'px-3', 'py-2', 'position-absolute', 'position-fixed', 'position-relative', 'position-sticky',
