@@ -1,7 +1,8 @@
 {{- $logo := (default "images/logo.webp" .Site.Params.logo) }}
-<a class="navbar-brand d-flex align-items-center flex-grow-1 flex-lg-grow-0 text-lg-start{{ if eq .Type "docs" }} text-center{{ end }} ms-2 ms-lg-0 mx-auto me-lg-2{{ if .IsHome }} active{{ end }}" href="{{ "" | absLangURL }}">
+<a class="navbar-brand d-flex align-items-center flex-grow-1 flex-lg-grow-0 justify-content-lg-start{{ if eq .Type "docs" }} justify-content-center{{ end }} ms-2 ms-lg-0 mx-auto me-lg-2{{ if .IsHome }} active{{ end }}"
+    href="{{ "" | absLangURL }}">
     {{- if $logo }}
-    {{ partial "helpers/image" (dict "filename" $logo "alt" "Logo" "class" "logo" "resources" .Resources) }}
+    {{ partialCached "helpers/image" (dict "filename" $logo "alt" "Logo" "class" "logo" "resources" .Resources) }}
     {{- end }}
     {{- with .Site.Params.brand }}{{ . }}{{ else }}{{ $.Site.Title }}{{ end }}
 </a>
