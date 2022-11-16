@@ -1,8 +1,8 @@
 {{- if gt (len $.Site.Home.AllTranslations) 1 }}
-<li class="nav-item dropdown py-1 py-lg-1 col-6 col-lg-auto">
-    <a class="nav-link px-0 px-lg-1" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+<li class="nav-item dropdown py-1 py-xxl-1 col-6 col-xxl-auto">
+    <a class="nav-link px-0 px-xxl-1" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
         <i class="fas fa-fw fa-globe"></i>
-        <span class="d-lg-none">{{ i18n "language" }}</span>
+        <span class="d-xxl-none">{{ i18n "language" }}</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
         {{- range $.Site.Home.AllTranslations }}
@@ -14,8 +14,8 @@
         {{- end -}}
     </ul>
 </li>
-<li class="nav-item py-1 col-12 col-lg-auto">
-  <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
-  <hr class="d-lg-none my-2">
+<li class="nav-item py-1 col-12 col-xxl-auto">
+  <div class="vr d-none d-xxl-flex h-100 mx-xxl-2 text-white"></div>
+  <hr class="d-xxl-none my-2">
 </li>
 {{- end -}}

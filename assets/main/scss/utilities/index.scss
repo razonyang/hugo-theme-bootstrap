@@ -6,3 +6,9 @@
     white-space: nowrap !important;
   }
 }
+
+.text-xxl-nowrap {
+  @include media-breakpoint-up(xxl) {
+    white-space: nowrap !important;
+  }
+}

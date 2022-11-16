@@ -8,6 +8,8 @@ class SidebarToggle implements Component {
 
   key = 'sidebar-toggle';
 
+  colClass = 'col-xxl-';
+
   constructor(public button: HTMLElement) {}
 
   run() {
@@ -42,8 +44,8 @@ class SidebarToggle implements Component {
   getWidth(element: HTMLElement) {
     let width = 0;
     element.classList.forEach((value) => {
-      if (value.indexOf('col-lg-') === 0) {
-        width = parseInt(value.replace('col-lg-', ''));
+      if (value.indexOf(this.colClass) === 0) {
+        width = parseInt(value.replace(this.colClass, ''));
       }
     });
 
@@ -72,8 +74,8 @@ class SidebarToggle implements Component {
 
   hide() {
     this.main.classList.replace(
-      'col-lg-' + this.getMainWidth(),
-      'col-lg-' + this.getFullWidth()
+      this.colClass + this.getMainWidth(),
+      this.colClass + this.getFullWidth()
     );
     this.sidebar.classList.add('d-none');
     this.button.classList.add('active');
@@ -82,8 +84,8 @@ class SidebarToggle implements Component {
 
   show() {
     this.main.classList.replace(
-      'col-lg-' + this.getFullWidth(),
-      'col-lg-' + this.getMainWidth()
+      this.colClass + this.getFullWidth(),
+      this.colClass + this.getMainWidth()
     );
     this.sidebar.classList.remove('d-none');
     this.button.classList.remove('active');
