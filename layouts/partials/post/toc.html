@@ -1,8 +1,8 @@
 {{- if partial "functions/toc" . -}}
-<div id="postTOC">
+<div id="postTOC" class="mb-4 text-surface">
   <h2 class="mb-3">
     {{- i18n "table_of_contents" -}}
-    <a class="anchor ms-1" href="#postTOC"><i class="fas fa-link"></i></a>
+    <a class="anchor ms-1" href="#postTOC"></a>
   </h2>
   {{ .TableOfContents }}
 </div>
