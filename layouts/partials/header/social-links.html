@@ -1,6 +1,6 @@
 {{- if .Site.Params.topAppBar.social }}
 <li class="nav-item py-2 py-xxl-1 col-12 col-xxl-auto">
-{{- $data := dict "links" .Site.Params.topAppBar.social "OutputFormats" $.OutputFormats "home" (.GetPage "/") "params" .Site.Params "iconText" true }}
+{{- $data := dict "links" .Site.Params.topAppBar.social "OutputFormats" $.OutputFormats "home" (.GetPage "/") "params" .Site.Params "iconText" true "color" false }}
 {{- $data = merge $data (dict "class" "flex-row" "linkClass" "col-6 col-xxl-auto p-1" "iconTextClass" "ms-1 d-xxl-none") }}
 {{- partial "helpers/social-links" $data }}
 </li>
