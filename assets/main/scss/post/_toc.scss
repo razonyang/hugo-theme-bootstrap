@@ -36,3 +36,9 @@
   background: var(--#{$prefix}surface-bg);
   color: var(--#{$prefix}surface-color);
 }
+
+.post {
+  #TableOfContents {
+    color: var(--#{$prefix}surface-color) !important;
+  }
+}
