@@ -173,7 +173,10 @@ other = "Your browser does not support JavaScript."
 other = "Oops! You're offline."
 
 [offline_info]
-other = "It seems there is a problem of your connection. Please check your network status."
+other = """
+<p>It seems there is a problem of your connection, please check your network status.</p>
+<p>Please get in touch with us if you think this is a server error. Thank you.</p>
+"""
 
 [pagination_title]
 other = "Page {{ .PageNumber }}"
