@@ -10,13 +10,13 @@
 <div class="profile-location"><i class="fas fa-fw fa-map-marker-alt"></i>{{ . | safeHTML }}</div>
 {{- end -}}
 {{- if .about -}}
-<div class="profile-about"><i class="fas fa-fw fa-user"></i><a target="_blank" rel="noopener noreferrer" href="{{ .about }}">{{ i18n "about_me" }}</a></div>
+<a class="profile-about" target="_blank" rel="noopener noreferrer" href="{{ .about }}"><i class="fas fa-fw fa-user"></i>{{ i18n "about_me" }}</a>
 {{- else -}}
 {{- with $.GetPage "about" -}}
-<div class="profile-about text-primary"><i class="fas fa-fw fa-user"></i><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></div>
+<a class="profile-about text-primary" href="{{ .Permalink }}"><i class="fas fa-fw fa-user"></i>{{ .LinkTitle }}</a>
 {{- end -}}
 {{- end -}}
 {{- with $.GetPage "contact" -}}
-<div class="profile-contact text-primary"><i class="fas fa-fw fa-question-circle"></i><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></div>
+<a class="profile-contact text-primary" href="{{ .Permalink }}"><i class="fas fa-fw fa-question-circle"></i>{{ .LinkTitle }}</a>
 {{- end -}}
 {{- end -}}
