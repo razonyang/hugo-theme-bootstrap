@@ -170,7 +170,10 @@ other = "你的瀏覽器不支持 JavaScript。"
 other = "哎喲！你離線了。"
 
 [offline_info]
-other = "看來你的連接有問題，請檢查你的網絡狀態。"
+other = """
+<p>看來你的連接有問題，請檢查你的網絡狀態。</p>
+<p>如果您認為這是服務器錯誤，請與我們聯系。 非常感謝。</p>
+"""
 
 [pagination_title]
 other = "第 {{ .PageNumber }} 頁"
