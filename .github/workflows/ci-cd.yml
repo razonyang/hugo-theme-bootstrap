@@ -28,6 +28,8 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
+          build-args: |
+            BUILDKIT_CONTEXT_KEEP_GIT_DIR=1
           tags: ccr.ccs.tencentyun.com/razonyang/hugo-theme-bootstrap:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max

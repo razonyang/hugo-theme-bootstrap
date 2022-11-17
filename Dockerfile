@@ -1,5 +1,5 @@
 # Build stage
-FROM klakegg/hugo:0.105.0-ext-ubuntu as builder
+FROM klakegg/hugo:ext-ubuntu as builder
 
 ## Build site
 WORKDIR /src
