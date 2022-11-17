@@ -25,7 +25,7 @@ app.attach(
   new TableWrapper(document.querySelectorAll('table')),
   new Docs(),
   new FormValidator(),
-  new TOC('#post-toc-container', '#TableOfContents'),
+  new TOC('#post-toc-container', '.sidebar #TableOfContents'),
   new Game(),
   ...components
 );
