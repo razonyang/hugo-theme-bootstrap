@@ -2,33 +2,34 @@
 {{- $filename := default "" (.Get "filename") -}}
 {{- $idSuffix := printf "%s%s" (replace $filename "/" "-") (delimit (shuffle (seq 1 9)) "") -}}
 {{- $langs := slice "toml" "yaml" "json" -}}
-<ul class="nav nav-tabs border-primary" role="tablist">
-{{- $i := 0 -}}
-{{- with $filename -}}
-    <li class="nav-item mb-0">
-        <span class="nav-link disabled text-primary p-1 fw-bold">{{ . }}.</span>
-    </li>
-{{- end -}}
-{{- range $langs -}}
-    {{- $id := printf "%s-%s" . $idSuffix -}}
-    <li class="nav-item mb-0" role="presentation">
-        <button class="nav-link p-1{{ if eq $i 0 }} active{{ end }}" id="{{ $id }}-tab" data-bs-toggle="tab" data-bs-target="#{{ $id }}" type="button" role="tab" 
-            aria-controls="home" aria-selected="{{ if eq $i 0 }}true{{ else }}false{{ end }}">
-            {{ . | upper }}
-        </button>
-    </li>
+<div class="code-toggle border border-secondary rounded px-2 pt-2">
+    <ul class="nav nav-tabs border-secondary mb-0" role="tablist">
+    {{- $i := 0 -}}
+    {{- range $langs -}}
+        {{- $id := printf "%s-%s" . $idSuffix -}}
+        <li class="nav-item mb-0" role="presentation">
+            <button class="nav-link p-1{{ if eq $i 0 }} active{{ end }}" id="{{ $id }}-tab" data-bs-toggle="tab" data-bs-target="#{{ $id }}" type="button" role="tab" 
+                aria-controls="home" aria-selected="{{ if eq $i 0 }}true{{ else }}false{{ end }}">
+                {{ . | upper }}
+            </button>
+        </li>
+        {{- $i = add $i 1 -}}
+    {{- end -}}
+    </ul>
+    <div class="tab-content">
+    {{- $i := 0 -}}
+    {{- range $langs -}}
+        {{- $lang := . }}
+        {{- $id := printf "%s-%s" . $idSuffix -}}
+        {{- $code := $.Inner | transform.Unmarshal | transform.Remarshal . -}}
+        {{- $code = replaceRE "\n+" "\n" $code -}}
+        <div class="tab-pane fade{{ if eq $i 0 }} show active{{ end }}" id="{{ $id }}" role="tabpanel" aria-labelledby="{{ $id }}-tab">
+            {{- with $filename -}}
+                <p class="user-select-all mt-2 mb-0 text-primary fw-bold">{{ . }}.{{ $lang }}</p>
+            {{- end -}}
+            {{- highlight $code . -}}
+        </div>
     {{- $i = add $i 1 -}}
-{{- end -}}
-</ul>
-<div class="tab-content">
-{{- $i := 0 -}}
-{{- range $langs -}}
-    {{- $id := printf "%s-%s" . $idSuffix -}}
-    {{- $code := $.Inner | transform.Unmarshal | transform.Remarshal . -}}
-    {{- $code = replaceRE "\n+" "\n" $code -}}
-    <div class="tab-pane fade{{ if eq $i 0 }} show active{{ end }}" id="{{ $id }}" role="tabpanel" aria-labelledby="{{ $id }}-tab">
-        {{- highlight $code . -}}
+    {{- end -}}
     </div>
-{{- $i = add $i 1 -}}
-{{- end -}}
 </div>
