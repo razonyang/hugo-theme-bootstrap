@@ -2,19 +2,19 @@
 {{- $filename := default "" (.Get "filename") -}}
 {{- $idSuffix := printf "%s%s" (replace $filename "/" "-") (delimit (shuffle (seq 1 9)) "") -}}
 {{- $langs := slice "toml" "yaml" "json" -}}
-<ul class="nav nav-tabs" role="tablist">
+<ul class="nav nav-tabs border-primary" role="tablist">
 {{- $i := 0 -}}
 {{- with $filename -}}
     <li class="nav-item mb-0">
-        <span class="nav-link disabled text-secondary px-2 py-1">{{ . }}.</span>
+        <span class="nav-link disabled text-primary p-1 fw-bold">{{ . }}.</span>
     </li>
 {{- end -}}
 {{- range $langs -}}
     {{- $id := printf "%s-%s" . $idSuffix -}}
     <li class="nav-item mb-0" role="presentation">
-        <button class="nav-link px-2 py-1 border-0{{ if eq $i 0 }} active{{ end }}" id="{{ $id }}-tab" data-bs-toggle="tab" data-bs-target="#{{ $id }}" type="button" role="tab" 
+        <button class="nav-link p-1{{ if eq $i 0 }} active{{ end }}" id="{{ $id }}-tab" data-bs-toggle="tab" data-bs-target="#{{ $id }}" type="button" role="tab" 
             aria-controls="home" aria-selected="{{ if eq $i 0 }}true{{ else }}false{{ end }}">
-            {{ . }}
+            {{ . | upper }}
         </button>
     </li>
     {{- $i = add $i 1 -}}
