@@ -21,12 +21,14 @@
             {{ . | markdownify }}
         </p>
         {{- end }}
-        <a role="button" class="iframe-fullscreen position-absolute bottom-0 end-0 p-2 me-1 text-white{{ if $manual }} d-none{{ end }}" style="z-index: 1;"
-            title="{{ i18n "button_fullscreen" }}">
-            <i class="fas fa-expand"></i>
-        </a>
+        <div class="iframe-panel-bottom position-absolute bottom-0 end-0 bg-dark opacity-75" style="z-index: 1;">
+            <a role="button" class="iframe-fullscreen px-2 py-1 text-white{{ if $manual }} d-none{{ end }}" style="z-index: 1;"
+                title="{{ i18n "button_fullscreen" }}">
+                <i class="fas fa-expand"></i>
+            </a>
+        </div>
     </div>
-    <iframe class="iframe{{ if $manual }} bg-dark{{ end }}"
+    <iframe class="iframe bg-dark"
         allowfullscreen
         scrolling="no"
         loading="lazy"

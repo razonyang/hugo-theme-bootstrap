@@ -36,7 +36,11 @@ or via named parameters
 | `loadInfo` | - | The information shown below the load button. Markdown is supported.
 
 ```markdown
-{{</* game src="GAME_URL" trigger=manual */>}}
+{{</* game
+    src="GAME_URL"
+    trigger=manual
+    loadInfo="The Game Information."
+*/>}}
 ```
 
 ## Examples
@@ -47,4 +51,4 @@ or via named parameters
 
 ### Manual Load
 
-{{< game src="https://v6p9d9t4.ssl.hwcdn.net/html/6581665/FeatherParkWeb/index.html" trigger=manual >}}
+{{< game src="https://v6p9d9t4.ssl.hwcdn.net/html/6581665/FeatherParkWeb/index.html" trigger=manual loadInfo="The Game Information." >}}

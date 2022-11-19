@@ -21,7 +21,6 @@ export default class IFrame implements Component {
                 iframe.addEventListener('load', () => {
                     // Show the fullscreen button if present.
                     btnFullscreen && btnFullscreen.classList.remove('d-none');
-                    iframe.classList.remove('bg-dark');
                 });
                 // Hide the load button.
                 btn.classList.add('d-none');
@@ -34,7 +33,7 @@ export default class IFrame implements Component {
     fullscreen() {
         document.querySelectorAll('.iframe-fullscreen').forEach((btn) => {
             btn.addEventListener('click', () => {
-                const iframe = btn.parentElement.nextElementSibling;
+                const iframe = btn.closest('.iframe-wrapper').querySelector('iframe');
                 iframe.requestFullscreen();
             });
         });
