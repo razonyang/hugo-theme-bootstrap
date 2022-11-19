@@ -33,6 +33,7 @@ or via named parameters
 |:-:|:-:|---
 | `src` | - | The game URL. Required.
 | `trigger` | `auto` | Set it as `manual` if you want to load the game manually.
+| `loadInfo` | - | The information shown below the load button. Markdown is supported.
 
 ```markdown
 {{</* game src="GAME_URL" trigger=manual */>}}
