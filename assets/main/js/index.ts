@@ -6,7 +6,7 @@ import Code from 'js/code';
 import Docs from 'js/docs';
 import FontSizeSelector from 'js/font-size-selector';
 import FormValidator from 'js/form-validator';
-import Game from 'js/game';
+import IFrame from 'js/iframe';
 import LoadingBar from 'js/loading-bar';
 import Scroller from 'js/scroller';
 import SidebarToggle from 'js/sidebar-toggle';
@@ -26,7 +26,7 @@ app.attach(
   new Docs(),
   new FormValidator(),
   new TOC('#post-toc-container', '.sidebar #TableOfContents'),
-  new Game(),
+  new IFrame(),
   ...components
 );
 app.run();

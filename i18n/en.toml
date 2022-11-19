@@ -160,6 +160,9 @@ other = "Language"
 [liberapay]
 other = "Liberapay"
 
+[load]
+other = "Load"
+
 [load_more]
 other = "Load More"
 

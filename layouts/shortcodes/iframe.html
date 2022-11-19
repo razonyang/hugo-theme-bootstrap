@@ -1,35 +1,43 @@
 {{- $src := "" }}
 {{- $manual := false }}
+{{- $lazyLoading := true }}
+{{- $loadButtonText := "load" }}
+{{- $fullscreen := true }}
 {{- $loadInfo := "" }}
 {{- if .IsNamedParams }}
   {{- $src = .Get "src" }}
   {{- with .Get "trigger" }}{{ $manual = eq "manual" . }}{{ end }}
+  {{- with .Get "fullscreen" }}{{ $fullscreen = . }}{{ end }}
   {{- with .Get "loadInfo" }}{{ $loadInfo = . }}{{ end }}
+  {{- with .Get "lazyLoading" }}{{ $lazyLoading = . }}{{ end }}
+  {{- with .Get "loadButtonText" }}{{ $loadButtonText = . }}{{ end }}
 {{- else }}
   {{- $src = .Get 0 }}
 {{- end }}
 <div class="iframe-wrapper ratio ratio-16x9 my-2">
-    <div class="d-flex flex-column align-items-center justify-content-center">
+    <div class="iframe-panel d-flex flex-column align-items-center justify-content-center">
         {{- if $manual }}
-        <button class="btn btn-primary iframe-load" style="z-index: 1;">
-            <i class="fas fa-play-circle me-1"></i>
-            {{- i18n "button_run_game" -}}
-        </button>
+            <button class="btn btn-primary iframe-load" style="z-index: 1;">
+                <i class="fas fa-play-circle me-1"></i>
+                {{- with i18n $loadButtonText }}{{ . }}{{ else }}{{ $loadButtonText | title }}{{ end -}}
+            </button>
         {{- end }}
         {{- with $loadInfo }}
         <p class="iframe-load-info text-secondary mt-3 px-2 text-center" style="z-index: 1;">
             {{ . | markdownify }}
         </p>
         {{- end }}
+        {{- if $fullscreen }}
         <a role="button" class="iframe-fullscreen position-absolute bottom-0 end-0 p-2 me-1 text-white{{ if $manual }} d-none{{ end }}" style="z-index: 1;"
             title="{{ i18n "button_fullscreen" }}">
             <i class="fas fa-expand"></i>
         </a>
+        {{- end }}
     </div>
     <iframe class="iframe{{ if $manual }} bg-dark{{ end }}"
         allowfullscreen
         scrolling="no"
-        loading="lazy"
+        {{ if $lazyLoading }}loading="lazy"{{ end }}
         {{ if $manual }}data-src="{{ $src }}" src="about:blank"{{ else }}src="{{ $src }}"{{ end }}>
     </iframe>
 </div>
