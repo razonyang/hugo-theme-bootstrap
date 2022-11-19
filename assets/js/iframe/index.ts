@@ -19,12 +19,13 @@ export default class IFrame implements Component {
                 iframe.setAttribute('src', iframe.getAttribute('data-src'));
                 iframe.removeAttribute('data-src');
                 iframe.addEventListener('load', () => {
+                    // Show the fullscreen button if present.
                     btnFullscreen && btnFullscreen.classList.remove('d-none');
                     iframe.classList.remove('bg-dark');
                 });
                 // Hide the load button.
                 btn.classList.add('d-none');
-                // Hide the description.
+                // Hide the load information.
                 loadInfo.classList.add('d-none');
             });
         });
