@@ -157,6 +157,9 @@ other = "主頁"
 [language]
 other = "語言"
 
+[load]
+other = "加載"
+
 [load_more]
 other = "加載更多"
 
