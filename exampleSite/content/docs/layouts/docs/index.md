@@ -62,9 +62,9 @@ In addition, we provide a parameter called `linkTitleIcon` to set the icon on th
 linkTitleIcon = '<i class="fas fa-columns fa-fw"></i>'
 {{< /code-toggle >}}
 
-### 权重于排序
+### Weight
 
-We sort documents according to the `navweight` parameter, upper weight gets higher precedence. For documents without 'navweight' specified, they are sorted alphabetically by `title`.
+We sort documents according to the `navWeight` parameter, upper weight gets higher precedence. For documents without 'navWeight' specified, they are sorted alphabetically by `title`.
 
 {{< code-toggle >}}
 navWeight = 1000
@@ -82,7 +82,7 @@ redirect = "https://github.com/razonyang/hugo-theme-bootstrap-skeleton"
 
 ### Widgets
 
-By default, the sidebar only contains the table of content, but you can add widgets via [hook] ({< ref "docs/advanced/hooks" >}}).
+By default, the sidebar only contains the table of content, but you can add widgets via [hook]({{< ref "docs/advanced/hooks" >}}).
 
 ```html {title="layouts/partials/hooks/docs/sidebar-end.html"}
 {{- partial "docs/repo" . }}

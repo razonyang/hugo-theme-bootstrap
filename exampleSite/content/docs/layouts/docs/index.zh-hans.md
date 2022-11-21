@@ -62,7 +62,7 @@ linkTitle = "Windows"
 linkTitleIcon = '<i class="fas fa-columns fa-fw"></i>'
 {{< /code-toggle >}}
 
-### 权重于排序
+### 权重与排序
 
 我们根据 `navWeight` 参数对文档进行排序，值越高则优先度越高。而对于没有指定 `navWeight` 的文档，则按照 `title` 进行字母升序排序。
 
