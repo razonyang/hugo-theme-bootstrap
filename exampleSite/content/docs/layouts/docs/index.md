@@ -62,7 +62,7 @@ In addition, we provide a parameter called `linkTitleIcon` to set the icon on th
 linkTitleIcon = '<i class="fas fa-columns fa-fw"></i>'
 {{< /code-toggle >}}
 
-### Navigation Weight
+### Weight
 
 We sort documents according to the `navWeight` parameter, upper weight gets higher precedence. For documents without 'navWeight' specified, they are sorted alphabetically by `title`.
 
