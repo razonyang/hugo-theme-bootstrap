@@ -82,7 +82,7 @@ redirect = "https://github.com/razonyang/hugo-theme-bootstrap-skeleton"
 
 ### Widgets
 
-By default, the sidebar only contains the table of content, but you can add widgets via [hook]({< ref "docs/advanced/hooks" >}}).
+By default, the sidebar only contains the table of content, but you can add widgets via [hook]({{< ref "docs/advanced/hooks" >}}).
 
 ```html {title="layouts/partials/hooks/docs/sidebar-end.html"}
 {{- partial "docs/repo" . }}
