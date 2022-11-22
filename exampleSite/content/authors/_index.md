@@ -4,5 +4,5 @@ title = "Authors"
   parent = "blog"
   weight = 5
   [menu.main.params]
-    icon = '<i class="fas fa-fw fa-user"></i>'
+    icon = '<i class="fas fa-fw fa-user text-danger"></i>'
 +++

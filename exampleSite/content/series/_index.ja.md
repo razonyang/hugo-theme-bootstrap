@@ -4,5 +4,5 @@ title = "シリーズ"
   parent = "blog"
   weight = 2
   [menu.main.params]
-    icon = '<i class="fas fa-fw fa-columns"></i>'
+    icon = '<i class="fas fa-fw fa-columns text-info"></i>'
 +++

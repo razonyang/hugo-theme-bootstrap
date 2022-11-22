@@ -4,5 +4,6 @@ title = "分类"
   parent = "blog"
   weight = 3
   [menu.main.params]
-    icon = '<i class="fas fa-fw fa-folder"></i>'
+    icon = '<i class="fas fa-fw fa-folder text-warning"></i>'
+    description = '分类列表'
 +++

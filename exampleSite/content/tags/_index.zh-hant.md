@@ -4,5 +4,6 @@ title = "標籤"
   parent = "blog"
   weight = 4
   [menu.main.params]
-    icon = '<i class="fas fa-fw fa-tags"></i>'
+    icon = '<i class="fas fa-fw fa-tags text-success"></i>'
+    description = '標籤列表'
 +++

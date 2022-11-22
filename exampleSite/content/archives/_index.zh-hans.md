@@ -4,5 +4,5 @@ title = "归档"
   parent = "blog"
   weight = 1
   [menu.main.params]
-    icon = '<i class="fas fa-fw fa-archive"></i>'
+    icon = '<i class="fas fa-fw fa-archive text-primary"></i>'
 +++

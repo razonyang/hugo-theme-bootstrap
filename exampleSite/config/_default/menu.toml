@@ -4,20 +4,20 @@
   weight = 1
   url = "https://hbs.razonyang.com/"
   [main.params]
-    icon = '<i class="fas fa-home text-success"></i>'
+    icon = '<i class="fas fa-home"></i>'
 [[main]]
   identifier = "blog"
   name = "Blog"
   weight = 2
   [main.params]
-    icon = '<i class="fas fa-fw fa-blog text-warning"></i>'
+    icon = '<i class="fas fa-fw fa-blog"></i>'
 [[main]]
   name = "Support"
   identifier = "support"
   weight = 40
   [main.params]
     description = 'The HBS Support Community'
-    icon = '<i class="fas fa-fw fa-info-circle text-info"></i>'
+    icon = '<i class="fas fa-fw fa-info-circle"></i>'
 [[main]]
   name = "Repository"
   identifier = "repository"
