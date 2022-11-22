@@ -5,7 +5,8 @@
 {{- $min := sub $max $paginate }}
 {{- $scratch.Add "pages" slice -}}
 {{- $counter := 0 }}
-{{- range where .Site.AllPages "Kind" "page" -}}
+{{- $pages := where (where .Site.AllPages "Kind" "page") "Params.index" "ne" false -}}
+{{- range $pages -}}
   {{- if and (ge $counter $min) (lt $counter $max) }}
     {{- $page := . }}
     {{- $date := .Date | time.Format ":date_long" -}}

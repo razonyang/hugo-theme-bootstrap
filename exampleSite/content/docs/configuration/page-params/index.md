@@ -42,6 +42,7 @@ Page parameters are located in page's [Front Matter](https://gohugo.io/content-m
 | `carousel` | Boolean | `false` | Show on carousel.
 | `nav` | Boolean | `true` | Turn on/off the navigations.
 | `sidebar` | Boolean | `true` | Show/Hide the sidebar.
+| `index` | Boolean | `true` | Index this page in client search engine or not.
 | **Creative Commons License**
 | `creativeCommons` | Object | - |
 | `creativeCommons.by` | Boolean | `true` | Credit must be given to you, the creator.
