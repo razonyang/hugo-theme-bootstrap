@@ -41,6 +41,7 @@ authors = ["RazonYang"]
 | `carousel` | Boolean | `false` | 是否在 Carousel 顯示
 | `nav` | Boolean | `true` | 是否顯示上一篇和下一篇
 | `sidebar` | Boolean | `true` | Show/Hide the sidebar.
+| `index` | Boolean | `true` | 是否在用戶端搜尋引擎中索引此頁面。
 | **Creative Commons License**
 | `creativeCommons` | Object | - |
 | `creativeCommons.by` | Boolean | `true` | 署名
