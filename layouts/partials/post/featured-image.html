@@ -1,7 +1,7 @@
 {{- if default false .Site.Params.post.featuredImage -}}
   {{- if .Params.images -}}
     {{- $formats := slice "avif" "webp" "jxl" -}}
-    <picture>
+    <picture class="d-flex justify-content-center">
       {{- $img := index .Params.images 0 -}}
       {{- $url := urls.Parse $img -}}
       {{- if not $url.Scheme -}}
@@ -13,17 +13,17 @@
           {{- end -}}
         {{- end -}}
       {{- end -}}
-      <img class="post-featured-img w-100 mb-3" alt="{{ .Title }}" src="{{ $img | absURL  }}"/>
+      <img class="post-featured-img h-auto w-auto mb-3" alt="{{ .Title }}" src="{{ $img | absURL  }}"/>
     </picture>
   {{- else -}}
     {{- $images := .Resources.ByType "image" -}}
     {{- $featured := $images.GetMatch "*feature*" -}}
     {{- with $featured -}}
-    <picture>
+    <picture class="d-flex justify-content-center">
       {{- $smallImg := $featured.Resize "x270" -}}
       {{- $largeImg := $featured.Resize "x480" -}}
       <source srcset="{{ $smallImg.Permalink }}" type="{{ $smallImg.MediaType }}" media="(max-width: 576px)" width="{{ $smallImg.Width }}" height="{{ $smallImg.Height }}">
-      <img class="post-featured-img w-100 mb-3" alt="{{ .Title }}" src="{{ $largeImg.Permalink }}" width="{{ $largeImg.Width }}" height="{{ $largeImg.Height }}" data-src="{{ $featured.Permalink }}"/>
+      <img class="post-featured-img h-auto w-auto mb-3" alt="{{ .Title }}" src="{{ $largeImg.Permalink }}" width="{{ $largeImg.Width }}" height="{{ $largeImg.Height }}" data-src="{{ $featured.Permalink }}"/>
     </picture>
     {{- end -}}
   {{- end -}}
