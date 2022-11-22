@@ -36,7 +36,7 @@ authors = ["RazonYang"]
 
 請根據安裝方式的不同選擇對應的升級步驟：[Git Submodule](#git-submodule) 和 [Hugo Module](#hugo-module)。
 
-> 請註意，不管使用的是哪種安裝方式，你最後總是需要通過 `hugo mod npm pack` 和 `npm install` 拉取並安裝依賴。
+> 請註意，不管使用的是哪種安裝方式，你最後總是需要通過 `hugo mod npm pack` 和 `npm update` 拉取並更新依賴。
 
 ### Git Submodule
 

@@ -25,13 +25,13 @@ This article explains how to upgrade the theme correctly.
 
 Before upgrading, it is necessary to introduce what a version is. In addition to the relative stable versions listed in [Releases](https://github.com/razonyang/hugo-theme-bootstrap/releases), you can use a branch such as `master`, `develop`, or even choose a certain `commit`.
 
-> This article will use the `[version]` placeholder to represent the version, just replace it with the version you want to install.
+> This article will use the `[version]` placeholder to represent the version, just replace it with the version you want to upgrade to.
 
 ## Upgrade
 
 Please choose the upgrade step depending on the installation method: [Git Submodule](#git-submodule) and [Hugo Module](#hugo-module).
 
-> Note that no matter which install method you use, you will always end up needing to pull and install dependencies via `hugo mod npm pack` and `npm install`.
+> Note that no matter which install method you use, you will always end up needing to pull and update dependencies via `hugo mod npm pack` and `npm update`.
 
 ### Additional Dependencies
 

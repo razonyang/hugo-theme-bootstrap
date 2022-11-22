@@ -31,7 +31,7 @@ authors = ["RazonYang"]
 
 请根据安装方式的不同选择对应的升级步骤：[Git Submodule](#git-submodule) 和 [Hugo Module](#hugo-module)。
 
-> 请注意，不管使用的是哪种安装方式，你最后总是需要通过 `hugo mod npm pack` 和 `npm install` 拉取并安装依赖。
+> 请注意，不管使用的是哪种安装方式，你最后总是需要通过 `hugo mod npm pack` 和 `npm update` 拉取并更新依赖。
 
 ### 额外的依赖
 
