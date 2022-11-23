@@ -1,57 +1,24 @@
 .post-panel-wrapper {
-  opacity: 0.75;
-  top: 84px;
   z-index: 1;
 
-  &:hover,
-  &:active {
-    opacity: 1;
-  }
-
   .post-panel {
-    text-align: right;
-    right: -0.5rem;
-    top: -0.5rem;
-    margin-top: 8px;
-
+    bottom: 20px;
     @extend .shadow; /* stylelint-disable-line */
 
     .action {
-      margin-top: 0.25rem;
-      padding: 0.125rem 0.125rem 0.25rem;
-      transition: opacity 1s ease-out;
+      margin: 0 0.25rem;
+      padding: 0.25rem 0;
 
-      &:not(:last-child) {
-        border-bottom: 1px #{$gray-500} solid;
-      }
-    }
-
-    .action-panel-toggler {
-      opacity: 0;
-      display: none;
-      border-bottom: none !important;
-    }
-
-    @include media-breakpoint-down(sm) {
-      opacity: 0.875;
-      right: -0.125rem;
-
-      .action {
-        opacity: 0;
-        display: none;
-      }
-
-      .action-panel-toggler {
-        opacity: 1;
-        display: block;
-      }
-
-      &:hover,
-      &:focus {
-        .action {
-          opacity: 1;
-          display: block;
+      &:not(:first-child) {
+        &::before {
+          content: "|";
+          padding-right: .5rem;
+          color: var(--#{$prefix}surface-color-disabled);;
         }
+      }
+
+      &:hover {
+        color: var(--#{$prefix}primary);
       }
     }
   }
