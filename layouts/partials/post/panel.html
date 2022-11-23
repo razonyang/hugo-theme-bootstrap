@@ -1,16 +1,13 @@
 {{- if default true .Site.Params.post.panel -}}
-<div class="post-panel-wrapper position-sticky">
-  <div class="d-flex flex-column component rounded post-panel position-absolute border">
+<div class="post-panel-wrapper position-relative d-flex justify-content-center">
+  <div class="d-flex flex-row justify-content-center rounded rounded-5 post-panel position-fixed px-3 py-1 surface shadow">
     {{ partial "hooks/post-panel-begin" . }}
-    <a class="action action-panel-toggler" role="button" title="Panel toggler">
-      <i class="fas fa-fw fa-chevron-circle-down"></i>
-    </a>
-    {{ partial "post/panel/sidebar-toggler" . }}
     {{ partial "post/panel/translations" . }}
     {{ partial "post/panel/reward" . }}
     {{ partial "post/panel/toc" . }}
     {{ partial "post/panel/copyright" . }}
     {{ partial "post/panel/comments" . }}
+    {{ partial "post/panel/sidebar-toggler" . }}
     {{ partial "hooks/post-panel-end" . }}
   </div>
 </div>
