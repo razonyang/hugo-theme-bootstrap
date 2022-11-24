@@ -1,10 +1,5 @@
 .btn-actions-panel {
-  bottom: 5rem;
-  right: 1.25rem;
-
-  @include media-breakpoint-down(sm) {
-    right: 0.75rem;
-  }
+  bottom: 4.5rem;
 }
 
 #offcanvasActionsPanel { /* stylelint-disable-line */

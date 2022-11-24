@@ -14,7 +14,7 @@ class Scroller implements Component {
     btn.className =
       'btn btn-sm btn-primary btn-scroll-to-top position-fixed opacity-0 p-1';
     btn.innerHTML =
-      '<i class="fas fa-fw fa-chevron-circle-down fa-2x" data-fa-transform="rotate-180"></i>';
+      '<i class="fas fa-fw fa-chevron-circle-down" data-fa-transform="rotate-180"></i>';
     window.document.body.append(btn);
     this.btn = btn;
   }

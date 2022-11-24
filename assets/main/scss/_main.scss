@@ -6,3 +6,16 @@ main {
     margin-top: if($fixedHeader, 76px, 18px);
   }
 }
+
+.btn-scroll-to-top,
+.btn-actions-panel {
+  right: 20px;
+
+  svg {
+    font-size: 1.5em;
+
+    @include media-breakpoint-up(md) {
+      font-size: 1.75em;
+    }
+  }
+}
