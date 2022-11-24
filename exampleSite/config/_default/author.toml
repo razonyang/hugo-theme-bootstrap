@@ -1,6 +1,6 @@
-name = "Razon Yang"
+name = "HBS (Hugo Bootstrap Theme)"
 # avatar = "images/profile.png" # Avatar image. Default to "images/profile.webp".
-bio = "Gopher, PHPer, Full Stack Engineer."
+bio = "Fast, responsive, multipurpose, open source (MIT license) and feature-rich Hugo theme."
 company = 'Company'
 # company = '<a href="https://example.com" target="_blank" rel="noopener noreferrer">Company</a>'
 location = "Earth"
@@ -15,7 +15,7 @@ location = "Earth"
 [social]
   email = "razonyang@gmail.com"
   github = "razonyang/hugo-theme-bootstrap"
-  twitter = "yourtwitterusername"
+  twitter = "razonyang"
   patreon = "razonyang"
   paypal = "razonyang"
   # rss = "" # Disable RSS link
