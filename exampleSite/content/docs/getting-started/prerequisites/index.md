@@ -24,7 +24,7 @@ Please make sure you meet the prerequisites prior to installing the theme.
 
 ## Configuration
 
-Since `0.68.0`, HBS requires the following configurations are be set.
+HBS requires the following configurations are be set.
 
 {{< code-toggle filename="config" >}}
 {{% config/build-write-stat %}}

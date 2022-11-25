@@ -24,7 +24,7 @@ authors = ["RazonYang"]
 
 ## Configuration
 
-自 `0.68.0`，HBS 要求设置以下配置。
+HBS 要求设置以下配置。
 
 {{< code-toggle filename="config" >}}
 {{% config/build-write-stat %}}
