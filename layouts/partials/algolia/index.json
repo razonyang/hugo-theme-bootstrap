@@ -2,11 +2,14 @@
 {{- $allPages := where (where .Site.AllPages "Kind" "page") "Params.index" "ne" false -}}
 {{- range $allPages -}}
     {{- $page := . }}
+    {{- $id := "" }}
+    {{- with .File }}{{ $id = .UniqueID }}{{- end }}
     {{- $title := .Title }}
     {{- if $.Site.Params.titleCase -}}
         {{- $title = title $title -}}
     {{- end -}}
-    {{- $item := (dict 
+    {{- $item := (dict
+        "objectID" $id  
         "title" $title 
         "content" .Plain
         "url" .Permalink
