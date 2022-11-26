@@ -26,6 +26,8 @@
   background: transparent;
   border: none;
   margin: 0;
+  padding: 0;
+  margin-left: .5rem;
 
   &:hover {
     background: transparent;
@@ -38,6 +40,8 @@
 
   .DocSearch-Search-Icon {
     color: var(--#{$prefix}navbar-color);
+    width: 16px;
+    height: 16px;
   }
 }
 
