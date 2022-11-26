@@ -5,9 +5,6 @@
 {{- $config := resources.Get "main/scss/_config.scss" | resources.ExecuteAsTemplate "main/scss/_config.scss" . }}
 {{- $main := resources.Get "main/scss/index.scss" }}
 {{- $styles := slice $config $main }}
-{{- if .Site.Params.algolia -}}
-  {{- $styles = $styles | append (resources.Get "js/algolia/index.scss") -}}
-{{- end -}}
 {{- $styles := $styles | resources.Concat "main/scss/main.css" | toCSS $options | resources.PostCSS $postCSSOptions | fingerprint }}
 {{- if hugo.IsProduction }}{{ $styles = $styles | resources.PostProcess }}{{ end }}
 <link data-precache rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous">

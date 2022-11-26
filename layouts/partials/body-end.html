@@ -1,6 +1,8 @@
 {{- partialCached "assets/main/js" . -}}
 {{- partialCached "assets/icons/js" . -}}
 {{- partial "assets/viewer/js" . -}}
+{{- partialCached "algolia/modal" . -}}
+{{- partialCached "assets/algolia/js" . -}}
 {{- partial "assets/math/js" . -}}
 {{- partial "assets/diagram/js" . -}}
 {{- partial "plugins/addthis" . -}}
@@ -11,5 +13,4 @@
 {{- partialCached "assets/docsearch/js" . -}}
 {{- partial "hooks/body-end" . -}}
 {{- partialCached "assets/service-worker/js" . -}}
-{{- partialCached "algolia/modal" . -}}
 {{- partialCached "assets/giscus/js" . -}}

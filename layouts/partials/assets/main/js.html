@@ -3,9 +3,6 @@
 {{- $options := dict "target" "es2015" "targetPath" "assets/main/bundle.min.js" "minify" hugo.IsProduction "params" $params -}}
 {{- $main := resources.Get "main/js/index.ts" }}
 {{- $scripts := slice $main -}}
-{{- if .Site.Params.algolia -}}
-  {{- $scripts = $scripts | append (resources.Get "js/algolia/index.ts") -}}
-{{- end -}}
 {{- if .Site.Params.utterances -}}
   {{- $scripts = $scripts | append (resources.Get "js/utterances/index.ts") -}}
 {{- end -}}

@@ -1,5 +1,15 @@
 @import '@algolia/autocomplete-theme-classic/dist/theme';
 
+// Configuration
+@import '../../main/scss/functions';
+@import '../../main/scss/variables';
+@import '../../main/scss/variables-theme';
+@import '../../main/scss/variables-theme-dark';
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/maps';
+@import '../../main/scss/mixins';
+@import 'bootstrap/scss/utilities';
+
 :root {
     --aa-primary-color-rgb: var(--#{$prefix}primary-rgb);
     --aa-description-highlight-background-color-rgb: var(--#{$prefix}primary-rgb);
