@@ -15,6 +15,7 @@ import { default as params } from '@params'
             panelContainer: '#algolia-container',
             panelPlacement: 'full-width',
             placeholder: 'Search',
+            // debug: true,
             getSources({ query }) {
                 return [
                     {
