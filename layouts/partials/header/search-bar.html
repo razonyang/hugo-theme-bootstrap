@@ -1,6 +1,6 @@
 {{- if or .Site.Params.algolia }}
 <hr class="vr d-none d-xxl-block ms-xxl-1">
-<button type="button" class="search-bar border-0 bg-transparent ms-xxl-1" data-bs-toggle="modal" data-bs-target="#search-modal">
+<button type="button" class="search-bar border-0 bg-transparent ms-xxl-2 px-xxl-0" data-bs-toggle="modal" data-bs-target="#search-modal">
   <i class="fas fa-search"></i>
 </button>
 {{- else if .Site.Params.docsearch }}
@@ -9,7 +9,7 @@
 {{- else if .Site.Params.searchBar }}
   {{- $page := .Site.GetPage "/search" }}
   <hr class="vr d-none d-xxl-block ms-xxl-1">
-  <button onclick="window.location.href = '{{ $page.Permalink }}'" class="search-bar border-0 bg-transparent ms-xxl-1">
+  <button onclick="window.location.href = '{{ $page.Permalink }}'" class="search-bar border-0 bg-transparent ms-xxl-2 px-xxl-0">
     <i class="fas fa-search"></i>
   </button>
 {{- end -}}
