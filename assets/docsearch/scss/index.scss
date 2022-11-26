@@ -31,6 +31,7 @@
 
   &:hover {
     background: transparent;
+    box-shadow: none;
   }
   
   @media (max-width: 1399.98px) {
@@ -40,8 +41,6 @@
 
   .DocSearch-Search-Icon {
     color: var(--#{$prefix}navbar-color);
-    width: 16px;
-    height: 16px;
   }
 }
 

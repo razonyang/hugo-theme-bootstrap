@@ -11,10 +11,11 @@ import { default as params } from '@params'
 
     window.addEventListener('load', () => {
         autocomplete({
-            container: '#algolia-container',
-            panelContainer: '#algolia-container',
+            container: '.search-bar',
+            // panelContainer: '#algolia-container',
             panelPlacement: 'full-width',
             placeholder: 'Search',
+            detachedMediaQuery: '',
             // debug: true,
             getSources({ query }) {
                 return [

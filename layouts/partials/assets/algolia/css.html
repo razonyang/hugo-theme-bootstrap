@@ -1,3 +1,4 @@
+{{- if .Site.Params.algolia }}
 {{- $outputStyle := "expanded" }}
 {{- if hugo.IsProduction }}{{ $outputStyle = "compressed" }}{{ end }}
 {{- $options := dict
@@ -7,3 +8,4 @@
 }}
 {{- $style := resources.Get "algolia/scss/index.scss" | toCSS $options | fingerprint }}
 <link data-precache rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous">
+{{- end -}}

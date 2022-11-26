@@ -1,11 +1,12 @@
-{{- if or .Site.Params.algolia }}
-<hr class="vr d-none d-xxl-block ms-xxl-1">
-<button type="button" class="search-bar border-0 bg-transparent ms-xxl-2 px-xxl-0" data-bs-toggle="modal" data-bs-target="#search-modal">
-  <i class="fas fa-search"></i>
-</button>
-{{- else if .Site.Params.docsearch }}
-<hr class="vr d-none d-xxl-block ms-xxl-1">
-<div class="search-bar d-flex align-items-center"></div>
+{{- if or .Site.Params.algolia .Site.Params.docsearch }}
+  {{- $indexURL := "" }}
+  {{- if .Site.Params.algolia }}
+      {{- $tmpl := resources.Get "algolia/index.json" }}
+      {{- $index := $tmpl | resources.ExecuteAsTemplate "algolia/index.json" . }}
+      {{- $indexURL = $index.Permalink }}
+  {{- end -}}
+  <hr class="vr d-none d-xxl-block ms-xxl-1">
+  <div class="search-bar d-flex align-items-center me-1 me-md-0" data-search-index="{{ $indexURL }}"></div>
 {{- else if .Site.Params.searchBar }}
   {{- $page := .Site.GetPage "/search" }}
   <hr class="vr d-none d-xxl-block ms-xxl-1">

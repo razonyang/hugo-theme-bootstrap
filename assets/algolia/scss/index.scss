@@ -22,10 +22,6 @@
     background: inherit;
 }
 
-.aa-DetachedOverlay {
-    z-index: 1070;
-}
-
 .aa-Autocomplete {
     width: 100%;
 }
@@ -45,7 +41,16 @@
     padding: 0;
 }
 
-.aa-Item {
+.aa-DetachedSearchButton {
+    background: transparent;
+    border: none;
     padding: 0;
-    margin: .5rem 0;
+}
+
+.aa-SubmitIcon {
+    color: var(--#{$prefix}navbar-color);
+}
+
+.aa-DetachedSearchButtonPlaceholder {
+    display: none;
 }
