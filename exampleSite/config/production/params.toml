@@ -2,7 +2,7 @@ metaRobots = "index, follow" # Default value for Meta Tag "robots"
 
 googleAdsense = "ca-pub-7827859788508375"
 
-#[docsearch]
-#  appId = "QJSHIZ7V63"
-#  apiKey = "664dc009c2ff1891823c07720e5f79ed"
-#  indexName = "razonyang_hbs_v1"
+[docsearch]
+  appId = "QJSHIZ7V63"
+  apiKey = "664dc009c2ff1891823c07720e5f79ed"
+  indexName = "razonyang_hbs_v1"
