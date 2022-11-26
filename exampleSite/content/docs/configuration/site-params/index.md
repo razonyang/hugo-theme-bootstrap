@@ -81,6 +81,10 @@ The site parameters are located in `config/_default/params.toml` by default.
 | `docsearch.apiKey` | String | - |
 | `docsearch.debug` | Boolean | `false` |
 | `docsearch.*` | Boolean/String/Number | - | https://docsearch.algolia.com/docs/api/
+| `algolia` | Object | - | [Algolia](https://www.algolia.com/) 
+| `algolia.appId` | String | - | App ID
+| `algolia.apiKey` | String | - | API key
+| `algolia.indexName` | String | - | Index name, the index file is located at `/algolia/index.json`, such as http://localhost:1313/algolia/index.json.
 | **Top App Bar**
 | `topAppBar` | Object | - |
 | `topAppBar.social` | Object | - | [Social Links]({{< ref "/docs/widgets/social-links" >}}).
