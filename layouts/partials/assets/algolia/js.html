@@ -1,3 +1,7 @@
-{{- $options := dict "targetPath" "assets/algolia/bundle.min.js" "minify" hugo.IsProduction -}}
+{{- $options := dict
+    "targetPath" "assets/algolia/bundle.min.js"
+    "minify" hugo.IsProduction
+    "params" .Site.Params
+-}}
 {{- $script := resources.Get "algolia/js/index.ts" | js.Build $options | fingerprint -}}
 <script data-precache defer src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>
