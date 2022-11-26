@@ -23,8 +23,25 @@
 }
 
 .DocSearch-Button { /* stylelint-disable-line */
+  background: transparent;
+  border: none;
+  margin: 0;
+
+  &:hover {
+    background: transparent;
+  }
+  
   @media (max-width: 1399.98px) {
     margin: 0;
     width: 100%;
   }
+
+  .DocSearch-Search-Icon {
+    color: var(--#{$prefix}navbar-color);
+  }
+}
+
+.DocSearch-Button-Placeholder,
+.DocSearch-Button-Keys {
+  display: none;
 }

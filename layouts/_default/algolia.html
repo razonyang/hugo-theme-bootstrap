@@ -1,0 +1,88 @@
+<html>
+    <head></head>
+    <body>
+        <div id="searchbox"></div>
+        <div id="hits"></div>
+        <div id="autocomplete"></div>
+        <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.14.2/dist/algoliasearch-lite.umd.js" integrity="sha256-dImjLPUsG/6p3+i7gVKBiDM8EemJAhQ0VvkRK2pVsQY=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.49.1/dist/instantsearch.production.min.js" integrity="sha256-3s8yn/IU/hV+UjoqczP+9xDS1VXIpMf3QYRUi9XoG0Y=" crossorigin="anonymous"></script>
+        <script>
+            const { connectAutocomplete } = instantsearch.connectors;
+// or directly use instantsearch.connectors.connectAutocomplete()
+            const searchClient = algoliasearch('6K24QAPFEO', '133b81d06bc092d2adc13ccc18c189d0');
+            const { index } = instantsearch.widgets;
+const search = instantsearch({
+  indexName: 'dev',
+  searchClient,
+});
+
+const renderIndexListItem = ({ indexId, hits }) => `
+  <li>
+    Index: ${indexId}
+    <ol>
+      ${hits
+        .map(
+          (hit, hitIndex) =>
+            `
+              <li>
+                <p>${instantsearch.highlight({ attribute: 'title', hit })}</p>
+              </li>
+            `
+        )
+        .join('')}
+    </ol>
+  </li>
+`;
+
+// Create the render function
+const renderAutocomplete = (renderOptions, isFirstRender) => {
+  const { indices, currentRefinement, refine, widgetParams } = renderOptions;
+
+  if (isFirstRender) {
+    const input = document.createElement('input');
+    const ul = document.createElement('ul');
+
+    input.addEventListener('input', event => {
+      refine(event.currentTarget.value);
+    });
+
+    widgetParams.container.appendChild(input);
+    widgetParams.container.appendChild(ul);
+
+    ul.addEventListener('click', (event) => {
+      if (event.target.className === 'btn-add-to-cart') {
+        const indexId = event.target.getAttribute('data-index-id');
+        const hitIndex = event.target.getAttribute('data-hit-index');
+        const index = indices.find(index => index.indexId === indexId);
+        const hit = index.hits[hitIndex];
+
+        console.log(111,hit)
+        index.sendEvent('conversion', hit, 'Product Added');
+      }
+    });
+  }
+
+  widgetParams.container.querySelector('input').value = currentRefinement;
+  widgetParams.container.querySelector('ul').innerHTML = indices
+    .map(renderIndexListItem)
+    .join('');
+};
+
+// Create the custom widget
+const customAutocomplete = connectAutocomplete(
+  renderAutocomplete
+);
+
+// Instantiate the custom widget
+search.addWidgets([
+//   index({ indexName: 'instant_search_price_asc' }),
+//   index({ indexName: 'instant_search_price_desc' }),
+
+  customAutocomplete({
+    container: document.querySelector('#autocomplete'),
+  })
+]);
+search.start();
+        </script>
+    </body>
+</html>

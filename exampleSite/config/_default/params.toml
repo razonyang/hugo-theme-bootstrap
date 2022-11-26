@@ -192,6 +192,11 @@ viewer = true # Image Viewer
 #  indexName = "razonyang_hbs"
 #  # debug = true
 
+[algolia]
+  appId = "6K24QAPFEO"
+  apiKey = "133b81d06bc092d2adc13ccc18c189d0"
+  indexName = "dev"
+
 [reward]
   alipay = "images/reward/alipay.png"
   wechat = "images/reward/wechat.png"

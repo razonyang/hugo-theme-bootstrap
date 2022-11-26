@@ -1,14 +1,15 @@
-{{- if .Site.Params.searchBar }}
+{{- if or .Site.Params.algolia }}
+<hr class="vr d-none d-xxl-block ms-xxl-1">
+<button type="button" class="search-bar border-0 bg-transparent ms-xxl-1" data-bs-toggle="modal" data-bs-target="#search-modal">
+  <i class="fas fa-search"></i>
+</button>
+{{- else if .Site.Params.docsearch }}
+<hr class="vr d-none d-xxl-block ms-xxl-1">
+<div class="search-bar d-flex align-items-center"></div>
+{{- else if .Site.Params.searchBar }}
   {{- $page := .Site.GetPage "/search" }}
-  {{- if ne $page.Permalink .Permalink -}}
-  <hr class="d-xxl-none">
-  <form class="search-bar ms-auto my-1" action="{{ with $page }}{{ .Permalink }}{{ end }}" novalidate>
-    <div class="input-group input-group-sm align-items-center">
-      <span class="btn btn-search disabled position-absolute left-0 border-0">
-        <i class="fas fa-fw fa-search fa-lg"></i>
-      </span>
-      <input class="py-2 form-control rounded search-input" name="q" type="search" aria-label="Search" required>
-    </div>
-  </form>
-  {{- end -}}
+  <hr class="vr d-none d-xxl-block ms-xxl-1">
+  <button onclick="window.location.href = '{{ $page.Permalink }}'" class="search-bar border-0 bg-transparent ms-xxl-1">
+    <i class="fas fa-search"></i>
+  </button>
 {{- end -}}

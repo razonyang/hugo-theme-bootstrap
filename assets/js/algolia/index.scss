@@ -1,0 +1,41 @@
+@import '@algolia/autocomplete-theme-classic/dist/theme';
+
+:root {
+    --aa-primary-color-rgb: var(--#{$prefix}primary-rgb);
+    --aa-description-highlight-background-color-rgb: var(--#{$prefix}primary-rgb);
+    --aa-text-color-rgb: var(--#{$prefix}body-color-rgb);
+    --aa-selected-color-rgb: var(--#{$prefix}primary-rgb);
+    --aa-background-color-rgb: var(--#{$prefix}body-bg-rgb);
+}
+
+.aa-Form {
+    background: inherit;
+}
+
+.aa-DetachedOverlay {
+    z-index: 1070;
+}
+
+.aa-Autocomplete {
+    width: 100%;
+}
+
+.aa-Panel {
+    --aa-panel-max-height: 240px;
+    box-shadow: none;
+    position: relative;
+    top: 0!important;
+
+    @include media-breakpoint-up(md) {
+        --aa-panel-max-height: 360px;
+    }
+}
+
+.aa-PanelLayout {
+    padding: 0;
+}
+
+.aa-Item {
+    padding: 0;
+    margin: .5rem 0;
+}

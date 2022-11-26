@@ -47,13 +47,7 @@
   }
 
   .search-bar {
-    @include media-breakpoint-up(xxl) {
-      width: 180px;
-    }
-
-    .search-input {
-      padding-left: 2.25rem;
-    }
+    color: var(--#{$prefix}on-primary-secondary);
   }
 
   .dropdown-item {

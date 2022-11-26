@@ -19,6 +19,7 @@
     <main class="{{- partialCached "functions/container-class" . .FirstSection -}}">
       <div class="row content">
         {{- partialCached "noscript" . .Language.Lang }}
+        <div id="autocomplete"></div>
         {{- block "content" . }}{{ end }}
       </div>
     </main>

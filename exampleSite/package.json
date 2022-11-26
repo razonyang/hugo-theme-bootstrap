@@ -1,6 +1,8 @@
 {
   "comments": {
     "dependencies": {
+      "@algolia/autocomplete-js": "github.com/razonyang/hugo-theme-bootstrap",
+      "@algolia/autocomplete-theme-classic": "github.com/razonyang/hugo-theme-bootstrap",
       "@babel/cli": "project",
       "@babel/core": "project",
       "@babel/preset-env": "project",
@@ -12,15 +14,18 @@
       "@fortawesome/free-solid-svg-icons": "project",
       "@fullhuman/postcss-purgecss": "project",
       "@popperjs/core": "project",
+      "algoliasearch": "project",
       "autoprefixer": "project",
       "bootstrap": "project",
+      "date-fns": "github.com/razonyang/hugo-theme-bootstrap",
       "fuse.js": "project",
+      "instantsearch.js": "project",
       "katex": "project",
       "mark.js": "project",
       "masonry-layout": "project",
       "mermaid": "project",
       "mustache": "project",
-      "onchange": "hugo-theme-bootstrap",
+      "onchange": "project",
       "postcss-cli": "project",
       "rtlcss": "project",
       "viewerjs": "project",
@@ -37,6 +42,8 @@
     }
   },
   "dependencies": {
+    "@algolia/autocomplete-js": "^1.7.3",
+    "@algolia/autocomplete-theme-classic": "^1.7.3",
     "@babel/cli": "^7.17.3",
     "@babel/core": "^7.17.4",
     "@babel/preset-env": "^7.16.11",
@@ -48,9 +55,12 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fullhuman/postcss-purgecss": "^4.1.3",
     "@popperjs/core": "^2.11.2",
+    "algoliasearch": "^4.14.2",
     "autoprefixer": "^10.4.2",
     "bootstrap": "github:twbs/bootstrap#new-masthead-darkmode",
+    "date-fns": "^2.29.3",
     "fuse.js": "^6.5.3",
+    "instantsearch.js": "^4.49.1",
     "katex": "^0.15.2",
     "mark.js": "^8.11.1",
     "masonry-layout": "^4.2.2",
@@ -72,9 +82,9 @@
     "webpack-cli": "^4.9.1"
   },
   "name": "exampleSite",
-  "version": "0.1.0",
   "scripts": {
-    "watch": "onchange -i -k '**/*.html' -- npm run dev",
-    "dev": "hugo server --buildDrafts --disableFastRender --gc"
-  }
+    "dev": "hugo server --buildDrafts --disableFastRender --gc",
+    "watch": "onchange -i -k '**/*.html' -- npm run dev"
+  },
+  "version": "0.1.0"
 }
