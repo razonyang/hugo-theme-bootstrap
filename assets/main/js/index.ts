@@ -14,19 +14,20 @@ import TableWrapper from 'js/table-wrapper';
 import TOC from 'js/toc';
 import components from './components';
 
+(new ActionsPanel()).run();
+(new Scroller()).run();
+(new LoadingBar()).run();
+(new SidebarToggle(document.querySelector('#sidebarToggler'))).run();
+(new FontSizeSelector()).run();
+(new Code()).run();
+(new TableWrapper(document.querySelectorAll('table'))).run();
+(new Docs()).run();
+(new FormValidator()).run();
+(new TOC('#post-toc-container', '.sidebar #TableOfContents')).run();
+(new IFrame()).run();
+
 const app = new App();
 app.attach(
-  new ActionsPanel(),
-  new Scroller(),
-  new LoadingBar(),
-  new SidebarToggle(document.querySelector('#sidebarToggler')),
-  new FontSizeSelector(),
-  new Code(),
-  new TableWrapper(document.querySelectorAll('table')),
-  new Docs(),
-  new FormValidator(),
-  new TOC('#post-toc-container', '.sidebar #TableOfContents'),
-  new IFrame(),
   ...components
 );
 app.run();

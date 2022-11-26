@@ -1,0 +1,16 @@
+{{- $pages := slice }}
+{{- $allPages := where (where .Site.AllPages "Kind" "page") "Params.index" "ne" false -}}
+{{- range $allPages -}}
+    {{- $page := . }}
+    {{- $title := .Title }}
+    {{- if $.Site.Params.titleCase -}}
+        {{- $title = title $title -}}
+    {{- end -}}
+    {{- $item := (dict 
+        "title" $title 
+        "content" .Plain
+        "url" .Permalink
+    ) -}}
+    {{- $pages = $pages | append $item }}
+{{- end }}
+{{- $pages| jsonify }}

@@ -24,7 +24,7 @@ const purgecss = require('@fullhuman/postcss-purgecss')({
       'mb-0', 'mb-1',
       'offcanvas-backdrop',
       'opacity-0', 'opacity-50', 'opacity-100', 'overflow-hidden',
-      'p-1', 'pe-3', 'pt-0', 'pt-1', 'px-3', 'py-2', 'position-absolute', 'position-fixed', 'position-relative', 'position-sticky',
+      'p-1', 'pe-3', 'pt-0', 'pt-1', 'px-2', 'py-1', 'px-3', 'py-2', 'position-absolute', 'position-fixed', 'position-relative', 'position-sticky',
       'rounded', 'rounded-top',
       'show',
       'text-nowrap', 'text-pre-wrap', 'text-uppercase', 'text-white', 'top-0', 'text-bg-secondary', 'text-success', 'text-truncate',

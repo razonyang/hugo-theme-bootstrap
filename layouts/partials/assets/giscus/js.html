@@ -1,0 +1,25 @@
+{{- with .Site.Params.giscus }}
+{{- $langs := dict "zh-cn" "zh-CN" "zh-tw" "zh-TW" "zh-hk" "zh-TW" "zh-hans" "zh-CN" "zh-hant" "zh-TW" -}}
+{{- $validLangs := slice "ar" "de" "gsw" "es" "en" "fr" "id" "it" "ja" "ko" "pl" "pt" "ro" "ru" "tr" "vi" "zh-CN" "zh-TW" -}}
+{{- $lang := default $.Site.Language.Lang .lang }}
+{{- with index $langs $lang }}{{ $lang = . }}{{ end }}
+{{- if not (in $validLangs $lang) }}
+  {{- warnf "[giscus] lang %q is unsupported, fallback to %q" $lang "en" }}
+  {{- $lang = "en" }}
+{{- end }}
+<script src="https://giscus.app/client.js"
+    data-repo="{{ .repo }}"
+    data-repo-id="{{ .repoId }}"
+    data-category="{{ .category }}"
+    data-category-id="{{ .categoryId }}"
+    data-mapping="{{ default "pathname" .mapping }}"
+    data-reactions-enabled="{{ if default true .reactions }}1{{ else }}0{{ end }}"
+    data-emit-metadata="{{ if default false .metadata }}1{{ else }}0{{ end }}"
+    data-input-position="{{ default "top" .inputPosition }}"
+    data-theme="{{ default "preferred_color_scheme" .theme }}"
+    data-lang="{{ $lang }}"
+    {{ with default true .lazyLoading }}data-loading="lazy"{{ end }}
+    crossorigin="anonymous"
+    defer>
+</script>
+{{- end }}
