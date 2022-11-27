@@ -58,3 +58,10 @@
 .aa-DetachedSearchButtonPlaceholder {
     display: none;
 }
+
+.aa-noResults {
+    padding: 1rem .5rem;
+    text-align: center;
+    background: var(--#{$prefix}secondary);
+    color: white;
+}
