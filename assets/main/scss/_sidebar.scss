@@ -2,7 +2,7 @@
   @if $fixedSidebar {
     @include media-breakpoint-up(lg) {
       height: calc(100vh - 84px);
-      overflow: scroll;
+      overflow-y: scroll;
       position: sticky;
       top: 84px;
     }
