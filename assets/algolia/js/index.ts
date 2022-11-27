@@ -83,6 +83,9 @@ import { default as params } from '@params'
           },
         ];
       },
+      renderNoResults({ state, render, html }, root) {
+        render(html`<div class="aa-noResults">No results for "${state.query}".</div>`, root);
+      },
     });
 
     window.addEventListener('keydown', (event) => {
