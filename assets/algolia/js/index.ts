@@ -29,7 +29,7 @@ import { default as params } from '@params'
                     indexName: params.algolia.indexname,
                     query,
                     params: {
-                      hitsPerPage: 10,
+                      hitsPerPage: 5,
                       attributesToSnippet: ['title:10', 'content:35'],
                       snippetEllipsisText: '…',
                     },
@@ -41,6 +41,23 @@ import { default as params } from '@params'
               return item.url;
             },
             templates: {
+              header({ html }) {
+                return html`<div class="aa-Header">
+                  <a class="badge bg-secondary mx-2" data-bs-toggle="collapse" href="#aa-shortcuts" role="button" aria-expanded="false" aria-controls="aa-shortcuts">
+                    Shortcuts
+                  </a>
+                  <div class="collapse p-2" id="aa-shortcuts">
+                    <div class="card card-body pb-0">
+                      <ul class="list-unstyled">
+                        <li class="my-2"><kbd>CTRL</kbd>+<kbd>K</kbd> to open</li>
+                        <li class="my-2"><kbd>ESC</kbd> to close</li>
+                        <li class="my-2"><kbd>↑</kbd> <kbd>↓</kbd> to navigate</li>
+                        <li class="my-2"><kbd>ENTER</kbd> to select</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>`;
+              },
               item({ item, components, html }) {
                 return html`<a href="${item.url}" class="aa-ItemWrapper surface px-2 py-1 rounded">
                         <div class="aa-ItemContent">
