@@ -60,8 +60,11 @@ import { default as params } from '@params'
                 </div>`;
               },
               item({ item, components, html }) {
-                return html`<a href="${item.url}" class="aa-ItemWrapper surface px-2 py-1 rounded">
+                return html`<a href="${item.url}" class="aa-ItemWrapper surface p-2 rounded">
                         <div class="aa-ItemContent">
+                          <div class="aa-ItemIcon aa-ItemIcon--alignTop">
+                            <i class="fas fa-fw fa-file-alt"></i>
+                          </div>
                           <div class="aa-ItemContentBody">
                             <div class="aa-ItemContentTitle mb-1 text-surface">
                               ${components.Highlight({
