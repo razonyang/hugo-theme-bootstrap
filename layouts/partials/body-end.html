@@ -12,4 +12,6 @@
 {{- partialCached "assets/docsearch/js" . -}}
 {{- partial "hooks/body-end" . -}}
 {{- partialCached "assets/service-worker/js" . -}}
+{{- if and .IsPage (not .IsHome) }}
 {{- partialCached "assets/giscus/js" . -}}
+{{- end }}
