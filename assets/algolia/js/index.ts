@@ -16,6 +16,7 @@ import { default as params } from '@params'
       panelPlacement: 'full-width',
       placeholder: 'Search',
       detachedMediaQuery: '',
+      stallThreshold: params.algolia.stallthreshold ? params.algolia.stallthreshold : 300,
       // debug: true,
       getSources({ query }) {
         return [
@@ -29,7 +30,7 @@ import { default as params } from '@params'
                     indexName: params.algolia.indexname,
                     query,
                     params: {
-                      hitsPerPage: 5,
+                      hitsPerPage: params.algolia.paginate ? params.algolia.paginate : 5,
                       attributesToSnippet: ['title:10', 'content:35'],
                       snippetEllipsisText: '…',
                     },

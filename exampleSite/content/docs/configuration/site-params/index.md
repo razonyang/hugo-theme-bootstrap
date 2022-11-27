@@ -85,6 +85,8 @@ The site parameters are located in `config/_default/params.toml` by default.
 | `algolia.appId` | String | - | App ID
 | `algolia.apiKey` | String | - | API key
 | `algolia.indexName` | String | - | Index name, the index file is located at `/algolia/index.json`, such as http://localhost:1313/algolia/index.json.
+| `algolia.paginate` | Number | `5` |
+| `algolia.stallThreshold` | Number | `300` | How many milliseconds must elapse before considering the autocomplete experience stalled.
 | **Top App Bar**
 | `topAppBar` | Object | - |
 | `topAppBar.social` | Object | - | [Social Links]({{< ref "/docs/widgets/social-links" >}}).
