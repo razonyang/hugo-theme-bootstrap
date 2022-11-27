@@ -87,6 +87,8 @@ authors = ["RazonYang"]
 | `algolia.appId` | String | - | App ID
 | `algolia.apiKey` | String | - | API key
 | `algolia.indexName` | String | - | Index name, the index file is located at `/algolia/index.json`, such as http://localhost:1313/algolia/index.json.
+| `algolia.paginate` | Number | `5` |
+| `algolia.stallThreshold` | Number | `300` | How many milliseconds must elapse before considering the autocomplete experience stalled.
 | **顶部应用栏**
 | `topAppBar` | Object | - |
 | `topAppBar.social` | Object | - | [社交链接]({{< ref "/docs/widgets/social-links" >}})。
