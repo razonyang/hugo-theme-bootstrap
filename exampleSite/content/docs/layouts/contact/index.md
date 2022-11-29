@@ -60,7 +60,7 @@ Once created, the link will appear in the profile widget.
 
 ## Backends
 
-It is designed to be compatible with most backends, such as [Netlify form](https://docs.netlify.com/forms/setup), [Getform](https://getform.io/), [Formspree](https://formspree.io/) and [Fabform.io](https://fabform.io/).
+It is designed to be compatible with most backends, such as [Netlify form](https://docs.netlify.com/forms/setup), [Getform](https://getform.io/), [Formspree](https://formspree.io/) and [Fabform.io](https://fabform.io/). Also works with self-hosted alternative [Formailer](https://github.com/djatwood/formailer).
 
 ### Netlify
 
@@ -69,6 +69,12 @@ It is designed to be compatible with most backends, such as [Netlify form](https
 > The demo site uses Getform instead of Netlify form, because the Netlify will upgrade your form level automatically if you exceed the limit of current plan, which will lead to additional expenses.
 
 > Please make sure the `contact.endpoint` parameter is empty if you intend to use Netlify form.
+
+### Formailer
+
+[Formailer](https://github.com/djatwood/formailer) is supported with a [contact form hook]({{< ref "/docs/advanced/hooks" >}}) to inject a missing input to the form.
+
+> See also [Google Cloud Functions example](https://github.com/djatwood/formailer/tree/main/examples/gcf) upstream.
 
 ### Others
 
