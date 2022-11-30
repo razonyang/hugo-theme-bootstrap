@@ -59,7 +59,7 @@ layout = "contact"
 
 ## 後端
 
-其被設計成可以相容大部分後端，比如：[Netlify form](https://docs.netlify.com/forms/setup)、[Getform](https://getform.io/) 和 [Formspree](https://formspree.io/)，以及  [Formailer](https://github.com/djatwood/formailer)。
+其被設計成可以相容大部分後端，比如：[Netlify form](https://docs.netlify.com/forms/setup)、[Getform](https://getform.io/) 和 [Formspree](https://formspree.io/)，以及 [Formailer](https://github.com/djatwood/formailer)。
 
 ### Netlify
 
