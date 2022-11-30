@@ -59,7 +59,7 @@ layout = "contact"
 
 ## 後端
 
-其被設計成可以相容大部分後端，比如：[Netlify form](https://docs.netlify.com/forms/setup)、[Getform](https://getform.io/) 和 [Formspree](https://formspree.io/)。
+其被設計成可以相容大部分後端，比如：[Netlify form](https://docs.netlify.com/forms/setup)、[Getform](https://getform.io/) 和 [Formspree](https://formspree.io/)，以及  [Formailer](https://github.com/djatwood/formailer)。
 
 ### Netlify
 
@@ -68,6 +68,12 @@ layout = "contact"
 > 演示網站使用 Getform 而不是 Netlify form，因為當你超過當前套餐限定時，Netlify 會自動升級你的套餐，這會導致額外的支出。
 
 > 如果你打算使用 Netlify form，請確保 `contact.endpoint` 參數為空。
+
+### Formailer
+
+[Formailer](https://github.com/djatwood/formailer) is supported with a [contact form hook]({{< ref "/docs/advanced/hooks" >}}) to inject a missing input to the form.
+
+> See also [Google Cloud Functions example](https://github.com/djatwood/formailer/tree/main/examples/gcf) upstream.
 
 ### 其他
 
