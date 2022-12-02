@@ -1,2 +1,2 @@
-{{- $anchor := printf "<a class=\"anchor ms-1 d-none\" href=\"#%s\">§</a>" .Anchor | safeHTML -}}
+{{- $anchor := printf "<a class=\"anchor ms-1\" href=\"#%s\"></a>" .Anchor | safeHTML -}}
 {{ printf "<h%d id=\"%s\" data-numberify>%s%s</h%d>" .Level .Anchor .PlainText $anchor .Level | safeHTML }}
