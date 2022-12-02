@@ -5,7 +5,10 @@ other = "Huch! Seite nicht gefunden."
 other = "Wir haben uns Mühe gegeben und gesucht, aber wir konnten die gesuchte Seite wirklich nicht finden."
 
 [about_me]
-other = "über"
+other = "Über mich"
+
+[actions]
+other = "Aktionen"
 
 [alipay]
 other = "Alipay"
@@ -16,11 +19,20 @@ other = "Alle"
 [archives]
 other = "Archiv"
 
+[authors]
+other = "Autoren"
+
 [button_copy_url]
 other = "URL kopieren"
 
+[button_fullscreen]
+other = "Vollbild"
+
 [button_reload]
-other = "neu laden"
+other = "Neuladen"
+
+[button_run_game]
+other = "Spiel starten"
 
 [button_social_share]
 other = "teilen"
@@ -29,7 +41,7 @@ other = "teilen"
 other = "OK"
 
 [buy_me_a_coffee]
-other = "Buy me a coffee"
+other = "Kauf mir 'nen Kaffee"
 
 [categories]
 other = "Kategorien"
@@ -56,7 +68,7 @@ other = "Indigo"
 other = "Orange"
 
 [color_pink]
-other = "Pink"
+other = "Rosa"
 
 [color_purple]
 other = "Purpur"
@@ -73,11 +85,32 @@ other = "Gelb"
 [comments]
 other = "Kommentare"
 
+[comments_email]
+other = "E-Mail"
+
+[comments_message]
+other = "Nachricht"
+
+[comments_name]
+other = "Name"
+
+[comments_reply]
+other = "Antworten"
+
+[comments_reply_to]
+other = "Antworten auf"
+
+[comments_submit]
+other = "Absenden"
+
+[comments_url]
+other = "URL"
+
 [contact_name]
 other = "Name"
 
 [contact_email]
-other = "Email"
+other = "E-Mail"
 
 [contact_email_help]
 other = "Wir werden Deine Daten niemals weitergeben."
@@ -116,7 +149,7 @@ other = "Extra groß"
 other = "Extra klein"
 
 [go_back]
-other = "zurück"
+other = "Zurück"
 
 [home]
 other = "Blog"
@@ -127,8 +160,11 @@ other = "Sprache"
 [liberapay]
 other = "Liberapay"
 
+[load]
+other = "Laden"
+
 [load_more]
-other = "mehr"
+other = "Mehr laden"
 
 [mode]
 other = "Modus"
@@ -137,10 +173,13 @@ other = "Modus"
 other = "Dein Browser unterstützt kein JavaScript."
 
 [offline_title]
-other = "Du bist vom Internet getrennt."
+other = "Ups! Du bist vom Internet getrennt."
 
 [offline_info]
-other = "Es scheint ein Problem mit Deiner Internetverbindung zu geben. Bitte überprüfe den Zustand Deines Netzwerkes."
+other = """
+<p>Es scheint ein Problem mit Deiner Internetverbindung zu geben. Bitte überprüfe den Zustand Deines Netzwerkes.</p>
+<p>Bitte trete mit uns in Kontakt, wenn du meinst, dass es sich um einen Server-Fehler handelt. Vielen Dank.</p>
+"""
 
 [pagination_title]
 other = "Seite {{ .PageNumber }}"
@@ -159,32 +198,62 @@ one = "{{ .Count }} Beitrag insgesamt"
 other = "{{ .Count }} Beiträge insgesamt"
 
 [post_date]
-other = "erstellt am {{ .createdOn }}{{ with .updatedOn }}, aktualisiert am {{ . }}{{ end }}."
+other = "Erstellt am {{ .createdOn }}{{ with .updatedOn }}, aktualisiert am {{ . }}{{ end }}."
+
+[posts]
+other = "Beiträge"
+
+[profile]
+other = "Profil"
 
 [read_more]
-other = "mehr lesen"
+other = "Mehr lesen"
 
 [reading_time]
-one = "{{ .ReadingTime }} Minute Lesezeit"
-other = "{{ .ReadingTime }} Minuten Lesezeit"
+one = "{{ .ReadingTime }} Min. Lesezeit"
+other = "{{ .ReadingTime }} Min. Lesezeit"
 
 [recent_posts]
-other = "letzte Beiträge"
+other = "Neueste Beiträge"
 
 [related_posts]
-other = "siehe auch"
+other = "Ähnliche Beiträge"
+
+[repo_action_edit]
+other = "Diese Seite bearbeiten"
+
+[repo_action_view]
+other = "Seiten-Quelltext betrachen"
+
+[repo_title]
+other = "Repository"
 
 [search]
-other = "Suche"
+other = "Suchen"
+
+[search_advanced]
+other = "Erweitert"
+
+[search_date]
+other = "Datum"
 
 [search_missing_keywords]
-other = "Suchbegriff eingeben"
+other = "Bitte einen Suchbegriff eingeben"
 
 [search_no_results]
 other = "keine Ergebnisse gefunden"
 
+[search_score]
+other = "Wertung"
+
+[search_sorting]
+other = "Sortierung"
+
 [search_stat]
 other = "{{ .Total }} Ergebnisse gefunden"
+
+[sections]
+other = "Abschnitte"
 
 [series]
 other = "Serien"
@@ -192,14 +261,134 @@ other = "Serien"
 [settings]
 other = "Einstellungen"
 
+[social_artstation]
+other = "ArtStation"
+
+[social_bilibili]
+other = "Bilibili"
+
+[social_bitbucket]
+other = "Bitbucket"
+
+[social_discord]
+other = "Discord"
+
+[social_discourse]
+other = "Discourse"
+
+[social_dockerhub]
+other = "Docker Hub"
+
+[social_email]
+other = "E-Mail"
+
+[social_facebook]
+other = "Facebook"
+
+[social_facebookgroup]
+other = "Facebook-Gruppe"
+
+[social_github]
+other = "GitHub"
+
+[social_gitlab]
+other = "GitLab"
+
+[social_instagram]
+other = "Instagram"
+
+[social_itchio]
+other = "itch.io"
+
+[social_kaggle]
+other = "Kaggle"
+
+[social_lastfm]
+other = "Last.fm"
+
+[social_liberapay]
+other = "Liberapay"
+
+[social_linkedin]
+other = "LinkedIn"
+
+[social_mastodon]
+other = "Mastodon"
+
+[social_medium]
+other = "Medium"
+
+[social_patreon]
+other = "Patreon"
+
+[social_paypal]
+other = "PayPal"
+
+[social_pinterest]
+other = "Pinterest"
+
+[social_qq]
+other = "QQ"
+
+[social_quora]
+other = "Quora"
+
+[social_reddit]
+other = "Reddit"
+
+[social_rss]
+other = "RSS"
+
+[social_stackoverflow]
+other = "Stack Overflow"
+
+[social_telegram]
+other = "Telegram"
+
+[social_tipeee]
+other = "Tipeee"
+
+[social_tiktok]
+other = "TikTok"
+
+[social_tumblr]
+other = "Tumblr"
+
+[social_twitter]
+other = "Twitter"
+
+[social_website]
+other = "Website"
+
+[social_weibo]
+other = "Weibo"
+
+[social_xing]
+other = "XING"
+
+[social_youtube]
+other = "YouTube"
+
+[social_zhihu]
+other = "Zhihu"
+
+[stats]
+other = "Statistiken"
+
 [table_of_contents]
 other = "Inhaltsverzeichnis"
 
 [tags]
-other = "Themen"
+other = "Tags"
+
+[taxonomies]
+other = "Klassifizierung"
+
+[tipeee]
+other = "Tipeee"
 
 [try_again]
-other = "nochmals versuchen"
+other = "Erneut versuchen"
 
 [wechat]
 other = "WeChat"
