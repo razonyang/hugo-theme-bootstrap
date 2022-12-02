@@ -46,8 +46,8 @@
     margin-bottom: 1rem;
 
     &:hover {
-      .anchor { /* stylelint-disable-line */
-        display: inline-block !important; /* stylelint-disable-line */
+      .anchor::after { /* stylelint-disable-line */
+        content: '§'; /* stylelint-disable-line */
       }
     }
   }
