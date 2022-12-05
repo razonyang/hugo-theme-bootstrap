@@ -3,7 +3,7 @@ import { default as params } from '@params';
 import { default as customOptions } from './options';
 
 const defaultOptions = {
-  container: '.search-bar',
+  container: '.search-button',
 };
 
 const replacements = {

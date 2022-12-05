@@ -77,7 +77,7 @@ authors = ["RazonYang"]
 | `archive` | Object | - | [归档]({{< ref "/docs/layouts/archives" >}})。
 | `search` | Object | - | [搜索]({{< ref "/docs/layouts/search" >}})。
 | `docsearch` | Object | - | [DocSearch](https://docsearch.algolia.com/)
-| `docsearch.container` | String | `.search-bar` |
+| `docsearch.container` | String | `.search-button` |
 | `docsearch.appId` | String | - |
 | `docsearch.indexName` | String | - |
 | `docsearch.apiKey` | String | - |

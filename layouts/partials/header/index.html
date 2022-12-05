@@ -70,6 +70,7 @@
           {{- end }}
           {{- end }}
         </ul>
+        {{ partial "header/search-bar" . }}
         {{- if or (default true .Site.Params.topAppBar.colorToggle) (isset $.Site.Params "fontsize") ( gt (len $.Site.Home.AllTranslations) 1) (.Site.Params.Palettes) (.Site.Params.topAppBar.social) -}}
         <hr class="d-xxl-none">
         <ul class="navbar-nav flex-row flex-wrap align-items-center ms-md-auto">
@@ -87,7 +88,7 @@
         aria-controls="navbarMenus" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fas fa-ellipsis-h"></i>
       </button>
-      {{- partial "header/search-bar" . }}
+      {{- partial "header/search-button" . }}
     </div>
   </div>
 </nav>
