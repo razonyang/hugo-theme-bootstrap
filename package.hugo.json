@@ -16,7 +16,7 @@
     "@popperjs/core": "^2.11.2",
     "algoliasearch": "^4.14.2",
     "autoprefixer": "^10.4.2",
-    "bootstrap": "github:twbs/bootstrap#new-masthead-darkmode",
+    "bootstrap": "github:twbs/bootstrap#main",
     "date-fns": "^2.29.3",
     "@docsearch/js": "^3.1.0",
     "fuse.js": "^6.5.3",
