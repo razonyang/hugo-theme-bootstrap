@@ -1,16 +1,14 @@
-{{- if or .Site.Params.algolia .Site.Params.docsearch }}
-  {{- $indexURL := "" }}
-  {{- if .Site.Params.algolia }}
-      {{- $tmpl := resources.Get "algolia/index.json" }}
-      {{- $index := $tmpl | resources.ExecuteAsTemplate "algolia/index.json" . }}
-      {{- $indexURL = $index.Permalink }}
-  {{- end -}}
-  <hr class="vr d-none d-xxl-block ms-xxl-1">
-  <div class="search-bar d-flex align-items-center me-1 me-md-0" data-search-index="{{ $indexURL }}"></div>
-{{- else if .Site.Params.searchBar }}
+{{- if .Site.Params.searchBar }}
   {{- $page := .Site.GetPage "/search" }}
-  <hr class="vr d-none d-xxl-block ms-xxl-1">
-  <button onclick="window.location.href = '{{ $page.Permalink }}'" class="search-bar border-0 bg-transparent ms-xxl-2 px-xxl-0">
-    <i class="fas fa-search"></i>
-  </button>
+  {{- if ne $page.Permalink .Permalink -}}
+    <hr class="d-xxl-none">
+    <form class="search-bar ms-auto my-1" action="{{ with $page }}{{ .Permalink }}{{ end }}" novalidate>
+      <div class="input-group input-group-sm align-items-center">
+        <span class="btn btn-search disabled position-absolute left-0 border-0">
+          <i class="fas fa-fw fa-search fa-lg"></i>
+        </span>
+        <input class="py-2 form-control rounded search-input" name="q" type="search" aria-label="Search" required>
+      </div>
+    </form>
+  {{- end }}
 {{- end -}}

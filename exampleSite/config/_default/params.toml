@@ -48,7 +48,7 @@ googleAdsense = ""
 # tagCount = 10 # The number of tags shown in sidebar. Turn off by setting it to false.
 # seriesCount = 20 # The number of series shown in sidebar. Turn off by setting it to false.
 # taxonomyPaginate = 5 # Default to 10.
-taxonomyPostCount = 20 # The number of taxonomy's posts. Turn off by setting it to false.
+taxonomyPostCount = 20    # The number of taxonomy's posts. Turn off by setting it to false.
 countTaxonomyPosts = true # Count posts of taxonomy.
 # taxonomySortingMethod = "popularity" # Sorting taxonomies by popularity, sort alphabetically by default.
 
@@ -58,10 +58,8 @@ countTaxonomyPosts = true # Count posts of taxonomy.
 pinnedPostCount = 3 # The number of pinned posts.
 
 # Custom CSS and JS
-customCSS = [
-]
-customJS = [
-]
+customCSS = []
+customJS = []
 
 tocWordCount = 1 # TOC is displayed only if the post's word count exceeds this value.
 
@@ -73,214 +71,214 @@ viewer = true # Image Viewer
 # rss = "home" # link the RSS button to homepage all the times.
 
 [sidebar]
-  # fixed = true
-  # archives = true # Enable archives widget
-  # taxonomiesToggle = false # Disable taxonomy toggle
-  # taxonomiesToggleArchives = false # Don't show the archives on taxonomies toggle widget.
-  # categories = true # Enable categories widget
-  # tags = true # Enable tags widget
-  # series = true # Enable series widget
-  # authors = true # Enable authors widget
-  # postsToggle = false # Disable posts toggle
-  # featuredPosts = true # Enable featured posts widget
-  # recentPosts = true # Enable featured posts widget
-  # collapsed = true # Collapse sidebar widgets by default on small screens.
+# fixed = true
+# archives = true # Enable archives widget
+# taxonomiesToggle = false # Disable taxonomy toggle
+# taxonomiesToggleArchives = false # Don't show the archives on taxonomies toggle widget.
+# categories = true # Enable categories widget
+# tags = true # Enable tags widget
+# series = true # Enable series widget
+# authors = true # Enable authors widget
+# postsToggle = false # Disable posts toggle
+# featuredPosts = true # Enable featured posts widget
+# recentPosts = true # Enable featured posts widget
+# collapsed = true # Collapse sidebar widgets by default on small screens.
 
 [codeBlock]
-  # maxLines = 8
-  lineNos = false # true/false represents that show/hide the line numbers by default.
+# maxLines = 8
+lineNos = false # true/false represents that show/hide the line numbers by default.
 
 [post]
-  # excerpt = "description"
-  # excerptMaxLength = 120
-  # copyright = false # Whether to display copyright section on each post.
-  # plainifyExcerpt = false # Format excerpt in HTML if false.
-  featuredImage = true # Show the featured image above the content.
-  numberifyHeadings = true # Count headings automatically.
-  # numberifyHeadingsEndLevel = 4 # The depth of headings to count. Default to 6.
-  numberifyHeadingsSeparator = "." # The separator between of number and headings.
-  # tocStyleType = "decimal" # The TOC's CSS list-style-type property.
-  imageTitleAsCaption = true
-  # panel = false # Disable the post panel.
-  # nav = false # Disable post navigations.
-  # The page position after clicking the read more button, read more from content if true. Default to the beginning of page.
-  # It supports only of the manual summaries splitting via <!--more-->.
-  # readMoreFromContent = true
+# excerpt = "description"
+# excerptMaxLength = 120
+# copyright = false # Whether to display copyright section on each post.
+# plainifyExcerpt = false # Format excerpt in HTML if false.
+featuredImage = true     # Show the featured image above the content.
+numberifyHeadings = true # Count headings automatically.
+# numberifyHeadingsEndLevel = 4 # The depth of headings to count. Default to 6.
+numberifyHeadingsSeparator = "." # The separator between of number and headings.
+# tocStyleType = "decimal" # The TOC's CSS list-style-type property.
+imageTitleAsCaption = true
+# panel = false # Disable the post panel.
+# nav = false # Disable post navigations.
+# The page position after clicking the read more button, read more from content if true. Default to the beginning of page.
+# It supports only of the manual summaries splitting via <!--more-->.
+# readMoreFromContent = true
 
 [archive]
-  # basePath = "/archiv" # The base path of archive pages.
-  # dateFormat = "01-02" # Archive date format. Default to "Jan 2".
+# basePath = "/archiv" # The base path of archive pages.
+# dateFormat = "01-02" # Archive date format. Default to "Jan 2".
 
 [analytics]
-  # baidu = "" # Baidu Analytics
-  # plausible = "razonyang.com,hbs.razonyang.com" # Multiple domains separated by comma.
-  # plausibleScript = "" # Specify the self-hosted script or extended script. Default to https://plausible.io/js/script.js.
+# baidu = "" # Baidu Analytics
+# plausible = "razonyang.com,hbs.razonyang.com" # Multiple domains separated by comma.
+# plausibleScript = "" # Specify the self-hosted script or extended script. Default to https://plausible.io/js/script.js.
 
 # Site verification
 [siteVerification]
-  google = ""
-  bing = ""
-  baidu = ""
-  baiduUnion = "" # Baidu Union
-  so = ""
-  sogou = ""
-  shenma = ""
+google = ""
+bing = ""
+baidu = ""
+baiduUnion = "" # Baidu Union
+so = ""
+sogou = ""
+shenma = ""
 
 [creativeCommons]
-  # by = true # Credit must be given to you, the creator.
-  # nc = true # Only noncommercial use of your work is permitted.
-  # nd = true # No derivatives or adaptations of your work are permitted.
-  # sa = true # Adaptations must be shared under the same terms.
+# by = true # Credit must be given to you, the creator.
+# nc = true # Only noncommercial use of your work is permitted.
+# nd = true # No derivatives or adaptations of your work are permitted.
+# sa = true # Adaptations must be shared under the same terms.
 
 # [utterances]
-  # repo = "razonyang/hugo-theme-bootstrap" # Replace with your repository.
-  # issueTerm = "pathname" # pathname, url, title, og:title
-  # label = "comment"
-  # By default, light and dark mode correspond to github-light and github-dark, respectively.
-  # Optional values: github-light, github-dark, preferred-color-scheme, github-dark-orange, icy-dark, dark-blue, photon-dark.
-  # theme = ""
+# repo = "razonyang/hugo-theme-bootstrap" # Replace with your repository.
+# issueTerm = "pathname" # pathname, url, title, og:title
+# label = "comment"
+# By default, light and dark mode correspond to github-light and github-dark, respectively.
+# Optional values: github-light, github-dark, preferred-color-scheme, github-dark-orange, icy-dark, dark-blue, photon-dark.
+# theme = ""
 
 # [staticman]
-  # endpoint = "https://yourstaticmaninstance" # Required, replace with your own Staticman instance.
-  # repo = "user/repo" # Required
-  # service = "github" # Default to GitHub.
-  # branch = "main" # Default to master.
-  # property = "comments" # Default to comments.
-  # sorting = "desc" # Default to asc.
-  # reCaptchaKey = "" # The reCaptcha site key.
-  # reCaptchaSecret = "" # The reCaptcha encrypted secret. You'll need to encrypt plain secret via https://yourstaticmaninstance/v3/encrypt/PLAINSECRET.
-  # extraFields = [ "url" ] # Extra fields. Available fields: url.
-  # requiredFields = [ "email", "url" ] # Extra required fields. Available fields: email and the extra fields.
-  # paginate = 5 # Default to 10.
-  # moderation = false # Same as Staticman's moderation.
+# endpoint = "https://yourstaticmaninstance" # Required, replace with your own Staticman instance.
+# repo = "user/repo" # Required
+# service = "github" # Default to GitHub.
+# branch = "main" # Default to master.
+# property = "comments" # Default to comments.
+# sorting = "desc" # Default to asc.
+# reCaptchaKey = "" # The reCaptcha site key.
+# reCaptchaSecret = "" # The reCaptcha encrypted secret. You'll need to encrypt plain secret via https://yourstaticmaninstance/v3/encrypt/PLAINSECRET.
+# extraFields = [ "url" ] # Extra fields. Available fields: url.
+# requiredFields = [ "email", "url" ] # Extra required fields. Available fields: email and the extra fields.
+# paginate = 5 # Default to 10.
+# moderation = false # Same as Staticman's moderation.
 
 [giscus]
-  repo = "razonyang/hugo-theme-bootstrap"
-  repoId = "MDEwOlJlcG9zaXRvcnkzMDQzMzI4NTM="
-  category = "General"
-  categoryId = "MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyODkzODg2"
-  # theme = "dark" # Default to auto.
-  # mapping = "title" # Default to pathname.
-  # inputPosition = "bottom" # Default to top.
-  # reactions = false # Disable reactions.
-  # metadata = true # Emit discussion metadata.
-  # lang = "en" # Specify language, default to site language.
-  # lazyLoading = false # Default to true.
+repo = "razonyang/hugo-theme-bootstrap"
+repoId = "MDEwOlJlcG9zaXRvcnkzMDQzMzI4NTM="
+category = "General"
+categoryId = "MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyODkzODg2"
+# theme = "dark" # Default to auto.
+# mapping = "title" # Default to pathname.
+# inputPosition = "bottom" # Default to top.
+# reactions = false # Disable reactions.
+# metadata = true # Emit discussion metadata.
+# lang = "en" # Specify language, default to site language.
+# lazyLoading = false # Default to true.
 
 [search]
-  # paginate = 5 # Pagination. Default to 10.
-  # resultContentCharactersCount = 20 # The maximum characters count of result content for displaying.
-  indexPaginate = 100 # The number of pages per index file. Default to 1000.
-  # indexPreload = false # Do not preload index files.
-  # Fuse.js options, the following options are available. See https://fusejs.io/api/options.html.
-  [search.fuse]
-    # ignoreLocation = true
-    # location = 0
-    # isCaseSensitive = true
-    minMatchCharLength = 3
-    # threshold = 0.6
-    # distance = 100
-    # findAllMatches = true
-    # ignoreFieldNorm = true
-    # fieldNormWeight = 0
+# paginate = 5 # Pagination. Default to 10.
+# resultContentCharactersCount = 20 # The maximum characters count of result content for displaying.
+indexPaginate = 100 # The number of pages per index file. Default to 1000.
+# indexPreload = false # Do not preload index files.
+# Fuse.js options, the following options are available. See https://fusejs.io/api/options.html.
+[search.fuse]
+# ignoreLocation = true
+# location = 0
+# isCaseSensitive = true
+minMatchCharLength = 3
+# threshold = 0.6
+# distance = 100
+# findAllMatches = true
+# ignoreFieldNorm = true
+# fieldNormWeight = 0
 
 #[docsearch]
 #  # https://docsearch.algolia.com/docs/api
-#  # container = ".search-bar" # replace it if necessary, default to '.search-bar'.
+#  # container = ".search-button" # replace it if necessary, default to '.search-button'.
 #  appId = "QJSHIZ7V63"
 #  apiKey = "664dc009c2ff1891823c07720e5f79ed"
 #  indexName = "razonyang_hbs"
 #  # debug = true
 
-#[algolia]
-#  appId = "6K24QAPFEO"
-#  apiKey = "133b81d06bc092d2adc13ccc18c189d0"
-#  indexName = "tests"
-#  paginate = 10
-#  stallThreshold = 500
+# [algolia]
+# appId = "6K24QAPFEO"
+# apiKey = "133b81d06bc092d2adc13ccc18c189d0"
+# indexName = "tests"
+# paginate = 10
+# stallThreshold = 500
 
 [reward]
-  alipay = "images/reward/alipay.png"
-  wechat = "images/reward/wechat.png"
-  #paypal = "images/reward/paypal.png"
-  #patreon = "images/reward/patreon.png"
-  #liberapay = "images/reward/liberapay.png"
+alipay = "images/reward/alipay.png"
+wechat = "images/reward/wechat.png"
+#paypal = "images/reward/paypal.png"
+#patreon = "images/reward/patreon.png"
+#liberapay = "images/reward/liberapay.png"
 
 #[share]
-  #addThis = "" # AddThis pubid.
+#addThis = "" # AddThis pubid.
 
 # [actionsPanel]
-  # disabled = true
+# disabled = true
 
 [fontSize] # Comment or remove this settings to disable font size switcher.
-  # extraSmall = ".8rem"
-  # small = ".9rem"
-  # large = "1.1rem"
-  # extraLarge = "1.2rem"
+# extraSmall = ".8rem"
+# small = ".9rem"
+# large = "1.1rem"
+# extraLarge = "1.2rem"
 
 [pwa]
-  [pwa.manifest]
-    # name = "" # Default to site title.
-    short_name = "HBS"
-    # display = "fullscreen" # Default to standalone.
-    # description = "" # Default to site description.
-    # theme_color = ""
-    # background_color = ""
+[pwa.manifest]
+# name = "" # Default to site title.
+short_name = "HBS"
+# display = "fullscreen" # Default to standalone.
+# description = "" # Default to site description.
+# theme_color = ""
+# background_color = ""
 
-    # Icons
-    # [[pwa.manifest.icons]]
-    #   sizes = "96x96"
-    #   src = "/images/icons/icon-96x96.png"
-    # [[pwa.manifest.icons]]
-    #   sizes = "144x144"
-    #   src = "/images/icons/icon-144x144.png"
-  [pwa.precache]
-    # fonts = [
-    #   "/assets/katex/fonts/KaTeX_Math-Italic.woff2"
-    # ]
-    # images = [
-    #   "/images/logo.webp",
-    #   "/images/profile.webp"
-    # ]
-    # pages = [
-    #   "/"
-    # ]
-    # scripts = [
-    #   "/assets/js/foo.js"
-    # ]
-    # styles = [
-    #   "https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-    # ]
+# Icons
+# [[pwa.manifest.icons]]
+#   sizes = "96x96"
+#   src = "/images/icons/icon-96x96.png"
+# [[pwa.manifest.icons]]
+#   sizes = "144x144"
+#   src = "/images/icons/icon-144x144.png"
+[pwa.precache]
+# fonts = [
+#   "/assets/katex/fonts/KaTeX_Math-Italic.woff2"
+# ]
+# images = [
+#   "/images/logo.webp",
+#   "/images/profile.webp"
+# ]
+# pages = [
+#   "/"
+# ]
+# scripts = [
+#   "/assets/js/foo.js"
+# ]
+# styles = [
+#   "https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+# ]
 
 [contact]
-  endpoint = "https://getform.io/f/56041c81-9e03-4c24-b9c5-61238854d4cd" # Backend endpoint, remove this line if you're using Netlify.
-  # file = true # Enable file upload
-  # fileField = "image" # The name of file field.
-  [contact.reCaptcha]
-    siteKey = "6LcWQH0gAAAAAJPZN9S-wrugRUukNOiHfxmFOSM5"
+endpoint = "https://getform.io/f/56041c81-9e03-4c24-b9c5-61238854d4cd" # Backend endpoint, remove this line if you're using Netlify.
+# file = true # Enable file upload
+# fileField = "image" # The name of file field.
+[contact.reCaptcha]
+siteKey = "6LcWQH0gAAAAAJPZN9S-wrugRUukNOiHfxmFOSM5"
 
 [repo]
-  url = "https://github.com/razonyang/hugo-theme-bootstrap"
-  # branch = "main"
-  subPath = "exampleSite"
-  # dateFormat = "02/01/2006, 15:04:05 PM"
+url = "https://github.com/razonyang/hugo-theme-bootstrap"
+# branch = "main"
+subPath = "exampleSite"
+# dateFormat = "02/01/2006, 15:04:05 PM"
 
 # [fullWidthInSections]
-  # docs = true
+# docs = true
 
 [topAppBar]
-  # colorToggle = false # Disable the color toggle
-  # coloredInDark = true # Colored in dark mode
-  # dropdownMenuToggle = false # Hide the dropdown menu toggle.
-  [topAppBar.social]
-    github = "razonyang/hugo-theme-bootstrap"
-    patreon = "razonyang"
-    paypal = "razonyang"
-    # rss = "" # Disable RSS link
+# colorToggle = false # Disable the color toggle
+# coloredInDark = true # Colored in dark mode
+# dropdownMenuToggle = false # Hide the dropdown menu toggle.
+[topAppBar.social]
+github = "razonyang/hugo-theme-bootstrap"
+patreon = "razonyang"
+paypal = "razonyang"
+# rss = "" # Disable RSS link
 
 [docs]
-  [docs.nav]
-    expand = true # Expand docs navigations.
+[docs.nav]
+expand = true # Expand docs navigations.
 
 [feeds]
-  # content = true
+# content = true

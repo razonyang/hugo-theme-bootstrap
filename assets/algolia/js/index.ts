@@ -11,7 +11,7 @@ import { default as params } from '@params'
 
   window.addEventListener('load', () => {
     autocomplete({
-      container: '.search-bar',
+      container: '.search-button',
       // panelContainer: '#algolia-container',
       panelPlacement: 'full-width',
       placeholder: 'Search',

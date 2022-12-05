@@ -75,7 +75,7 @@ The site parameters are located in `config/_default/params.toml` by default.
 | `archive` | Object | - | [Archive]({{< ref "/docs/layouts/archives" >}}).
 | `search` | Object | - | [Search]({{< ref "/docs/layouts/search" >}}).
 | `docsearch` | Object | - | [DocSearch](https://docsearch.algolia.com/) 
-| `docsearch.container` | String | `.search-bar` |
+| `docsearch.container` | String | `.search-button` |
 | `docsearch.appId` | String | - |
 | `docsearch.indexName` | String | - |
 | `docsearch.apiKey` | String | - |

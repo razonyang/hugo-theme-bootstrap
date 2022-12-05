@@ -47,6 +47,16 @@
   }
 
   .search-bar {
+    @include media-breakpoint-up(xxl) {
+      width: 180px;
+    }
+
+    .search-input {
+      padding-left: 2.25rem;
+    }
+  }
+
+  .search-button {
     color: var(--#{$prefix}on-primary-secondary);
   }
 
@@ -64,7 +74,7 @@
       }
 
       .dropdown-item-description {
-        color: rgba(255,255,255, 0.7) !important;
+        color: rgba(255, 255, 255, 0.7) !important;
       }
     }
   }
@@ -78,7 +88,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     font-size: 0.8rem;
-    
+
     @include media-breakpoint-down(md) {
       display: none;
     }
