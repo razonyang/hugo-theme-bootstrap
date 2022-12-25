@@ -12,6 +12,6 @@
 {{- partialCached "assets/docsearch/js" . -}}
 {{- partial "hooks/body-end" . -}}
 {{- partialCached "assets/service-worker/js" . -}}
-{{- if and .IsPage (not .IsHome) }}
+{{- if and .IsPage (not .IsHome) (default true .Site.Params.comment) (default true .Params.comment) }}
 {{- partialCached "assets/giscus/js" . -}}
 {{- end }}
