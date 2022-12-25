@@ -2,6 +2,7 @@
 title = "FAQs"
 description = "Frequently Asked Questions"
 layout = "faq"
+comment = false
 [menu.main]
   parent = "support"
   weight = 6

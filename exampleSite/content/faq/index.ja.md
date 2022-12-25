@@ -1,6 +1,7 @@
 +++
 title = "よくある質問"
 layout = "faq"
+comment = false
 [menu.main]
   parent = "support"
   weight = 6

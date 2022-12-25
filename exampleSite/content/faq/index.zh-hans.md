@@ -1,6 +1,7 @@
 +++
 title = "常见问题"
 layout = "faq"
+comment = false
 [menu.main]
   parent = "support"
   weight = 6
