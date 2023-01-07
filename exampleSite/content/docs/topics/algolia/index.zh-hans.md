@@ -93,8 +93,8 @@ jobs:
           algolia-index-name: prod
 ```
 
-And then create the `ALGOLIA_APP_ID` and `ALGOLIA_APP_KEY` secrets for your repository.
+And then create the `ALGOLIA_APP_ID` and `ALGOLIA_API_KEY` secrets for your repository.
 
-> `ALGOLIA_APP_KEY` is the **admin** API key, **not** search only API key.
+> `ALGOLIA_API_KEY` is the **admin** API key, **not** search only API key.
 
 Once the GitHub action was created, the index file will be uploaded automatically on `git push`.
