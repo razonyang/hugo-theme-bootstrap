@@ -6,7 +6,7 @@
     {{- $filename := printf "images/icons/icon-%s.png" . -}}
     {{- if fileExists (path.Join "static" $filename) -}}
       {{- $icons = $icons | append (dict "src" ($filename | absURL) "sizes" .) -}}
-    {{- else if $favicon }}
+    {{- else }}
       {{- $icons = $icons | append (dict "src" ($favicon.Resize .).RelPermalink "sizes" .) -}}
     {{- end -}}
 {{- end -}}
