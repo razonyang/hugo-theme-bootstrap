@@ -116,7 +116,9 @@ class Engine {
         if (lang) {
           params.$and.push({ lang: '=' + lang });
         }
-        resolve(this.fuse.search(params))
+        resolve(this.fuse.search(params, {
+          limit: parseInt(window.searchMaxResults),
+        }))
       }, 1)
     })
   }
