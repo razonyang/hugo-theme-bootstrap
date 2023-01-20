@@ -58,6 +58,20 @@
     }
 }
 
+.aa-Item {
+    mark {
+        background: inherit;
+        padding: 0 0.075em;
+        text-decoration: underline;
+    }
+
+    &[aria-selected="true"] {
+        mark {
+            color: inherit;
+        }
+    }
+}
+
 .aa-ItemIcon {
     height: 100%;
     background: transparent;
