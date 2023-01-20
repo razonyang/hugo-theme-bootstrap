@@ -23,6 +23,7 @@ aliases = [
 ]
 navWeight = 900
 authors = ["RazonYang"]
+featuredImageAlt = "Menu example"
 +++
 
 We predefined two types of menus: `main` and `footer`, represents the top app bar menus and the footer menus, respectively.

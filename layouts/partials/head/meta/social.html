@@ -10,3 +10,8 @@
   <meta property="og:image" content="{{ $image | absURL }}"/>
   <meta name="twitter:image" content="{{ $image | absURL }}"/>
 {{- end -}}
+{{- if ne .Site.Params.logo false }}
+  {{- $alt := partialCached "functions/featured-img-alt" . . }}
+  <meta property="og:image:alt" content="{{ $alt }}" />
+  <meta name="twitter:image:alt" content="{{ $alt }}" />
+{{- end -}}

@@ -55,3 +55,4 @@ authors = ["RazonYang"]
 | `featuredPostCount` | Integer/Boolean | `5` | 精選文章數，`false` 則隱藏。
 | `recentPostCount` | Integer/Boolean | `5` | 最近文章數，`false` 則隱藏。
 | `relatedPostCount` | Integer/Boolean | `5` | 相關文章數，`false` 則隱藏。
+| `featuredImageAlt` | String | - | 封面的可選文字，若未指定則使用頁面標題。
