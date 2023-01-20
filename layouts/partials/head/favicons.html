@@ -16,7 +16,7 @@
   {{- if fileExists $filepath }}
     {{- $file := readFile $filepath }}
     <link rel="{{ $rel }}" href="{{ printf "/images/icons/%s" $filename | absURL }}?version={{ $file | md5 }}" sizes="{{ .size }}">
-  {{- else if $favicon }}
+  {{- else }}
     {{- $img := $favicon.Resize .size }}
     <link rel="{{ $rel }}" href="{{ $img.RelPermalink }}" sizes="{{ .size }}" type="{{ $img.MediaType }}">
   {{- end }}
