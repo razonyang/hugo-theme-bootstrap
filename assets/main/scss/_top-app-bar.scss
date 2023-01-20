@@ -115,6 +115,12 @@ $header-caret-width: 0.35em;
       display: none;
     }
   }
+
+  .social-link {
+    &:hover {
+      top: unset;
+    }
+  }
 }
 
 @if not $colored-top-app-bar-in-dark {
