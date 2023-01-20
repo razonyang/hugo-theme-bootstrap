@@ -41,8 +41,9 @@ However, the default scheme cannot satisfy everyone, but don't worry, you can ea
 ## Favicons
 
 HBS generates icons in multiple sizes base on the file `assets/favicon.webp` (higher priority) or `assets/favicon.png`.
-
 Just save your own favicon image as the same path to override the defaults.
+
+You'll need to override the mask icon `assets/safari-pinned-tab.svg` as well.
 
 > The static icons `static/images/icons/icon-{size}.png` have higher priority for backwards compatibility.
 
