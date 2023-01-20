@@ -40,7 +40,19 @@ However, the default scheme cannot satisfy everyone, but don't worry, you can ea
 
 ## Favicons
 
-HBS generates icons in multiple sizes base on the file `assets/favicon.png`.
+HBS generates icons in multiple sizes base on the file `assets/favicon.webp` (higher priority) or `assets/favicon.png`.
+
+Just save your own favicon image as the same path to override the defaults.
+
+> The static icons `static/images/icons/icon-{size}.png` have higher priority for backwards compatibility.
+
+### Custom Sizes
+
+You're able to change the sizes you want via `params` file.
+
+{{< code-toggle >}}
+  {{< code/look-and-feel-favicon-sizes >}}
+{{< /code-toggle >}}
 
 ## Background Image
 

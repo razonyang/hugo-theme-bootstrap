@@ -1,12 +1,12 @@
 {{- $params := dict "lang" $.Language.Lang "name" $.Site.Title "description" $.Site.Params.description "start_url" "/" "scope" "/" "display" "standalone" -}}
-{{- $favicon := resources.Get "favicon.png" }}
+{{- $favicon := partialCached "functions/favicon" . }}
 {{- $icons := slice -}}
 {{- $iconSizes := slice "48x48" "72x72" "96x96" "144x144" "192x192" "256x256" "512x512" -}}
 {{- range $iconSizes -}}
     {{- $filename := printf "images/icons/icon-%s.png" . -}}
     {{- if fileExists (path.Join "static" $filename) -}}
       {{- $icons = $icons | append (dict "src" ($filename | absURL) "sizes" .) -}}
-    {{- else }}
+    {{- else if $favicon }}
       {{- $icons = $icons | append (dict "src" ($favicon.Resize .).Permalink "sizes" .) -}}
     {{- end -}}
 {{- end -}}

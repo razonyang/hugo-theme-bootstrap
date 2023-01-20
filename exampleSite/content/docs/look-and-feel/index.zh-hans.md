@@ -39,7 +39,19 @@ authors = ["RazonYang"]
 
 ## Favicons
 
-HBS 会根据 `assets/favicon.png` 自动生成不同尺寸的图标文件。
+HBS 会根据 `assets/favicon.webp`（更高的优先权）或 `assets/favicon.png` 自动生成不同尺寸的图标文件。
+
+只需将自己的收藏夹图像保存为相同路径即可覆盖默认的图片。
+
+> 静态图标 `static/images/icons/icon-{size}.png` 拥有更高的优先权，以向后兼容。
+
+### 自定义大小
+
+你也可以通过 `params` 文件修改图标大小。
+
+{{< code-toggle >}}
+  {{< code/look-and-feel-favicon-sizes >}}
+{{< /code-toggle >}}
 
 ## 背景图片
 
