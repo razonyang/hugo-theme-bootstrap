@@ -48,6 +48,7 @@ title = "Search"
 | `search` | Object | - | 搜尋配置。
 | `search.paginate` | Integer | `10` | 分頁。
 | `search.indexPaginate` | Integer | `1000` | Index file pagination.
+| `search.maxResults` | Number | `100` | 至多返回的搜索結果數目。
 | `search.resultContentCharactersCount` | Integer | `240` | 搜尋結果內容最大字符數。
 | `search.fuse` | Object | - | [Fuse.js 引數](https://fusejs.io/api/options.html)
 | `search.fuse.ignoreLocation` | Boolean | `true` |

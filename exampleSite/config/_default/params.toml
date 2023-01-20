@@ -170,6 +170,7 @@ categoryId = "MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyODkzODg2"
 # resultContentCharactersCount = 20 # The maximum characters count of result content for displaying.
 indexPaginate = 100 # The number of pages per index file. Default to 1000.
 # indexPreload = false # Do not preload index files.
+# maxResults = 50
 # Fuse.js options, the following options are available. See https://fusejs.io/api/options.html.
 [search.fuse]
 # ignoreLocation = true

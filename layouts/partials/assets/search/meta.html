@@ -48,4 +48,5 @@
   window.fuseOptions = JSON.parse('{{ $options | jsonify | safeHTML }}');
   window.searchIndies = JSON.parse('{{ $searchIndies | jsonify }}');
   window.searchMetaIndex = '{{ $meta.RelPermalink }}';
+  window.searchMaxResults = '{{ default 100 .Site.Params.search.maxResults }}';
 </script>
