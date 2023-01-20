@@ -11,7 +11,7 @@ class ActionsPanel implements Component {
     btn.setAttribute('data-bs-toggle', 'offcanvas');
     btn.setAttribute('data-bs-target', '#offcanvasActionsPanel');
     btn.className =
-      'btn btn-sm btn-primary btn-actions-panel position-fixed p-1';
+      'btn btn-link btn-actions-panel position-fixed p-0';
     btn.innerHTML = '<i class="fas fa-fw fa-th-large"></i>';
     window.document.body.append(btn);
     this.btn = btn;
