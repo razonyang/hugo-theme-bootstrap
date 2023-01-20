@@ -23,12 +23,12 @@
         {{- if .IsSection -}}
         {{- $sectionId := printf "nav-%s" .File.UniqueID -}}
         {{- $active := false -}}
-        {{- if hasPrefix $page.Permalink .Permalink -}}
+        {{- if hasPrefix $page.RelPermalink .RelPermalink -}}
           {{- $active = true -}}
         {{- end -}}
         <li class="mb-2" tabindex="-1">
           <div class="py-1 d-flex justify-content-between align-items-center ms-3{{ if $active }} text-primary{{ end }}">
-            <a class="docs-nav-link d-flex align-items-center" href="{{ .Permalink }}">{{- template "nav-title" . -}}</a>
+            <a class="docs-nav-link d-flex align-items-center" href="{{ .RelPermalink }}">{{- template "nav-title" . -}}</a>
             <a class="btn-toggle ms-1{{ if and (not $active) (not $expand) }} collapsed{{ end }}" role="button" data-bs-toggle="collapse"
               data-bs-target="#{{ $sectionId }}" aria-expanded="{{ if or $active $expand }}true{{ else }}false{{ end }}" aria-controls="{{ $sectionId }}">
               <i class="btn-toggle-icon fas fa-chevron-down ms-auto" data-fa-transform="rotate-270"></i>
@@ -41,8 +41,8 @@
           </div>
         </li>
         {{- else -}}
-        <li class="mb-2 py-1 ms-3{{ if eq .Permalink $page.Permalink }} text-primary{{ end }}" tabindex="-1">
-          <a class="docs-nav-link d-flex align-items-center" href="{{ .Permalink }}"{{ if .Params.redirect }} target="_blank"{{ end }}>
+        <li class="mb-2 py-1 ms-3{{ if eq .RelPermalink $page.RelPermalink }} text-primary{{ end }}" tabindex="-1">
+          <a class="docs-nav-link d-flex align-items-center" href="{{ .RelPermalink }}"{{ if .Params.redirect }} target="_blank"{{ end }}>
             {{- template "nav-title" . -}}
             {{- if .Params.redirect -}}
               <i class="ms-1 fas fa-external-link-square-alt"></i>

@@ -22,8 +22,8 @@
     <picture class="d-flex justify-content-center">
       {{- $smallImg := $featured.Resize "x270" -}}
       {{- $largeImg := $featured.Resize "x480" -}}
-      <source srcset="{{ $smallImg.Permalink }}" type="{{ $smallImg.MediaType }}" media="(max-width: 576px)" width="{{ $smallImg.Width }}" height="{{ $smallImg.Height }}">
-      <img class="post-featured-img h-auto w-auto mb-3" alt="{{ .Title }}" src="{{ $largeImg.Permalink }}" width="{{ $largeImg.Width }}" height="{{ $largeImg.Height }}" data-src="{{ $featured.Permalink }}"/>
+      <source srcset="{{ $smallImg.RelPermalink }}" type="{{ $smallImg.MediaType }}" media="(max-width: 576px)" width="{{ $smallImg.Width }}" height="{{ $smallImg.Height }}">
+      <img class="post-featured-img h-auto w-auto mb-3" alt="{{ .Title }}" src="{{ $largeImg.RelPermalink }}" width="{{ $largeImg.Width }}" height="{{ $largeImg.Height }}" data-src="{{ $featured.RelPermalink }}"/>
     </picture>
     {{- end -}}
   {{- end -}}

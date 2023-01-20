@@ -3,7 +3,7 @@
   {{- if .Site.Params.algolia }}
       {{- $tmpl := resources.Get "algolia/index.json" }}
       {{- $index := $tmpl | resources.ExecuteAsTemplate "algolia/index.json" . }}
-      {{- $indexURL = $index.Permalink }}
+      {{- $indexURL = $index.RelPermalink }}
   {{- end -}}
   <hr class="vr d-none d-xxl-block ms-xxl-1">
   <div class="search-button d-flex align-items-center me-1 me-md-0 px-2" data-search-index="{{ $indexURL }}"></div>

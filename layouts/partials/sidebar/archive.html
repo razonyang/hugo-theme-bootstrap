@@ -8,7 +8,7 @@
       <div class="card-header">
         <h2 class="card-title my-2 fs-4 text-surface d-none d-lg-block">
             {{- with $archivePage }}
-            <a href="{{ .Permalink }}">{{ i18n "archives" }}</a>
+            <a href="{{ .RelPermalink }}">{{ i18n "archives" }}</a>
             {{- else }}
             {{ i18n "archives" }}
             {{- end }}

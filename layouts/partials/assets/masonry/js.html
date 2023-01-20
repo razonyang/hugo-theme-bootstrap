@@ -2,5 +2,5 @@
 {{- $options := dict "target" "es2015" "targetPath" "assets/masonry/bundle.min.js" "minify" hugo.IsProduction -}}
 {{- $main := resources.Get "masonry/index.ts" }}
 {{- $script := $main | js.Build $options | fingerprint -}}
-<script data-precache src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous" defer></script>
+<script data-precache src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous" defer></script>
 {{- end -}}

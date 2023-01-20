@@ -14,7 +14,7 @@
             <div class="carousel-inner">
             {{- $i := 0 }}
             {{- range $pages }}
-                <a class="carousel-item{{ if eq $i 0 }} active{{ end }}" href="{{ .Permalink }}">
+                <a class="carousel-item{{ if eq $i 0 }} active{{ end }}" href="{{ .RelPermalink }}">
                     {{- template "carousel-thumbnail" (dict "page" . "lazyLoading" (ne $i 0)) }}
                     <div class="carousel-caption ps-3 text-center text-lg-start start-0 end-0 mb-2">
                         <h5 class="mb-4 mb-lg-2">{{ .Title }}</h5>
@@ -56,17 +56,17 @@
   {{- with $featured }}
     {{- $ratio := div $featured.Width $featured.Height }}
     {{- $smallImage := $featured.Crop "320x180 smart" }}
-    {{- $smallImageURL = $smallImage.Permalink }}
+    {{- $smallImageURL = $smallImage.RelPermalink }}
     {{- $mediumImage := $featured.Crop "480x270 smart" }}
-    {{- $mediumImageURL = $mediumImage.Permalink }}
+    {{- $mediumImageURL = $mediumImage.RelPermalink }}
     {{- $largeImage := $featured.Crop "800x450 smart" }}
-    {{- $largeImageURL = $largeImage.Permalink }}
+    {{- $largeImageURL = $largeImage.RelPermalink }}
   {{- end }}
 {{- end }}
 <picture>
     <source srcset="{{ $smallImageURL }}" media="(max-width: 576px)">
     <source srcset="{{ $mediumImageURL }}" media="(max-width: 991.98px)">
     <img class="d-block w-100" alt="{{ .Title }}" src="{{ $largeImageURL }}"{{ if $lazyLoading }} loading="lazy"{{ end }}
-        {{ with $featured }} data-src="{{ .Permalink }}"{{ end }}/>
+        {{ with $featured }} data-src="{{ .RelPermalink }}"{{ end }}/>
 </picture>
 {{- end -}}

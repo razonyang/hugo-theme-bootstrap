@@ -18,12 +18,12 @@
     <link rel="{{ $rel }}" href="{{ printf "/images/icons/%s" $filename | absURL }}?version={{ $file | md5 }}" sizes="{{ .size }}">
   {{- else if $favicon }}
     {{- $img := $favicon.Resize .size }}
-    <link rel="{{ $rel }}" href="{{ $img.Permalink }}" sizes="{{ .size }}" type="{{ $img.MediaType }}">
+    <link rel="{{ $rel }}" href="{{ $img.RelPermalink }}" sizes="{{ .size }}" type="{{ $img.MediaType }}">
   {{- end }}
 {{- end -}}
 
 {{- $maskIcon := resources.Get "safari-pinned-tab.svg" }}
-<link rel="mask-icon" href="{{ $maskIcon.Permalink }}" color="#6f42c1">
+<link rel="mask-icon" href="{{ $maskIcon.RelPermalink }}" color="#6f42c1">
 {{- $fallbackIcon := "images/icons/favicon.ico" }}
 {{- $fallbackIconPath := path.Join "static" $fallbackIcon }}
 {{- if fileExists $fallbackIconPath }}

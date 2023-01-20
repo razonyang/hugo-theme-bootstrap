@@ -13,10 +13,10 @@
 <a class="profile-about" target="_blank" rel="noopener noreferrer" href="{{ .about }}"><i class="fas fa-fw fa-user"></i>{{ i18n "about_me" }}</a>
 {{- else -}}
 {{- with $.GetPage "about" -}}
-<a class="profile-about text-primary" href="{{ .Permalink }}"><i class="fas fa-fw fa-user"></i>{{ .LinkTitle }}</a>
+<a class="profile-about text-primary" href="{{ .RelPermalink }}"><i class="fas fa-fw fa-user"></i>{{ .LinkTitle }}</a>
 {{- end -}}
 {{- end -}}
 {{- with $.GetPage "contact" -}}
-<a class="profile-contact text-primary" href="{{ .Permalink }}"><i class="fas fa-fw fa-question-circle"></i>{{ .LinkTitle }}</a>
+<a class="profile-contact text-primary" href="{{ .RelPermalink }}"><i class="fas fa-fw fa-question-circle"></i>{{ .LinkTitle }}</a>
 {{- end -}}
 {{- end -}}

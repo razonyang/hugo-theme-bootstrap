@@ -5,10 +5,10 @@
 {{- $paths := slice "/manifest.json" }}
 {{- $pages := slice "/offline" }}
 {{- range $site := $.Sites }}
-  {{- if eq $homepage "/" }}{{ with $site.GetPage "/" }}{{ $homepage = .Permalink }}{{ end }}{{ end }}
+  {{- if eq $homepage "/" }}{{ with $site.GetPage "/" }}{{ $homepage = .RelPermalink }}{{ end }}{{ end }}
   {{- $langs = $langs | append $site.Language.Lang }}
   {{- range $pages }}
-    {{- with $site.GetPage . }}{{- $fallbacks = $fallbacks | append .Permalink }}{{ end }}
+    {{- with $site.GetPage . }}{{- $fallbacks = $fallbacks | append .RelPermalink }}{{ end }}
   {{- end }}
   {{ range $paths }}
     {{- $fallbacks = $fallbacks | append ((printf "%s%s" (strings.TrimPrefix "/" $site.LanguagePrefix) .) | absURL ) }}
@@ -16,7 +16,7 @@
 {{- end }}
 
 {{- $fallbackImage := "images/offline.png" }}
-{{- $fallbacks =  $fallbacks | append (resources.Get $fallbackImage).Permalink }}
+{{- $fallbacks =  $fallbacks | append (resources.Get $fallbackImage).RelPermalink }}
 
 {{- $precache := default dict .Site.Params.pwa.precache }}
 const precache = JSON.parse('{{ $precache | jsonify }}');

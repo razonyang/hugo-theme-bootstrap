@@ -16,7 +16,7 @@
         <ul class="archive-posts post-list list-unstyled ms-1">
             {{- range .Pages -}}
             <li class="mb-2">
-                <a class="post-title" href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a>
+                <a class="post-title" href="{{ .RelPermalink }}">{{ partial "helpers/title" . }}</a>
                 <span class="float-end post-date">{{ .Date.Format (default "Jan 2" $.Site.Params.archive.dateFormat) }}</span>
             </li>
             {{- end -}}

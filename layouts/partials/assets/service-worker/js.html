@@ -6,7 +6,7 @@
 <script>
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('{{ $script.Permalink }}').then(function(reg) {
+    navigator.serviceWorker.register('{{ $script.RelPermalink }}').then(function(reg) {
       console.log('Successfully registered service worker', reg);
     }).catch(function(err) {
       console.warn('Error whilst registering service worker', err);

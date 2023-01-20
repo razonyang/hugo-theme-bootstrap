@@ -1,5 +1,5 @@
 {{- if eq .Type "search" -}}
 {{- $options := dict "targetPath" "assets/search/bundle.min.js" "minify" hugo.IsProduction -}}
 {{- $script := resources.Get "search/index.ts" | js.Build $options | fingerprint -}}
-<script data-precache src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>
+<script data-precache src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>
 {{- end -}}
