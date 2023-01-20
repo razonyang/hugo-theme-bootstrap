@@ -1,4 +1,5 @@
 {{- if default false .Site.Params.post.featuredImage -}}
+  {{- $alt := partialCached "functions/featured-img-alt" . . }}
   {{- if .Params.images -}}
     {{- $formats := slice "avif" "webp" "jxl" -}}
     <picture class="d-flex justify-content-center">
@@ -13,7 +14,7 @@
           {{- end -}}
         {{- end -}}
       {{- end -}}
-      <img class="post-featured-img h-auto w-auto mb-3" alt="{{ .Title }}" src="{{ $img | absURL  }}"/>
+      <img class="post-featured-img h-auto w-auto mb-3" alt="{{ $alt }}" src="{{ $img | absURL  }}"/>
     </picture>
   {{- else -}}
     {{- $images := .Resources.ByType "image" -}}
@@ -23,7 +24,7 @@
       {{- $smallImg := $featured.Resize "x270" -}}
       {{- $largeImg := $featured.Resize "x480" -}}
       <source srcset="{{ $smallImg.RelPermalink }}" type="{{ $smallImg.MediaType }}" media="(max-width: 576px)" width="{{ $smallImg.Width }}" height="{{ $smallImg.Height }}">
-      <img class="post-featured-img h-auto w-auto mb-3" alt="{{ .Title }}" src="{{ $largeImg.RelPermalink }}" width="{{ $largeImg.Width }}" height="{{ $largeImg.Height }}" data-src="{{ $featured.RelPermalink }}"/>
+      <img class="post-featured-img h-auto w-auto mb-3" alt="{{ $alt }}" src="{{ $largeImg.RelPermalink }}" width="{{ $largeImg.Width }}" height="{{ $largeImg.Height }}" data-src="{{ $featured.RelPermalink }}"/>
     </picture>
     {{- end -}}
   {{- end -}}
