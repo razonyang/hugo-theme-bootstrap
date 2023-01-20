@@ -1,4 +1,10 @@
 .btn-scroll-to-top {
   bottom: 1.25rem;
   transition: opacity 0.5s;
+
+  &.scrolling {
+    bottom: 100%;
+    transition: bottom 1s;
+    color: var(--#{$prefix}primary);
+  }
 }
