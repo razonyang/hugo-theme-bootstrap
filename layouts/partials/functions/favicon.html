@@ -1,0 +1,8 @@
+{{- $favicon := false }}
+{{- range slice "favicon.webp" "favicon.png" }}
+  {{- $favicon = resources.Get . }}
+  {{- if $favicon }}
+    {{- break }}
+  {{- end }}
+{{- end }}
+{{- return $favicon -}}
