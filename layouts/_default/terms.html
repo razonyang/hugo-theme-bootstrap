@@ -12,7 +12,7 @@
                 {{- partial "author/avatar" .Page }}
                 <div class="text-center text-md-start flex-grow-1 ms-0 ms-md-4">
                     <h2 class="taxonomy-title card-title author-name fs-4 mb-2 text-surface">
-                      <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+                      <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a>
                     </h2>
                     {{- with .Page.Description }}
                     <div class="author-description mb-2">{{ . }}</div>
@@ -22,7 +22,7 @@
             </div>
           {{- else }}
           <h2 class="taxonomy-title card-title fs-4 my-2 text-surface">
-            <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+            <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a>
           </h2>
           {{- end }}
         </div>
@@ -35,7 +35,7 @@
           <ul class="taxonomy-posts post-list list-unstyled ms-1">
             {{- range first $postCount .Pages -}}
             <li class="taxonomy-post mb-2">
-              <a class="post-title" href="{{ .Permalink }}">{{ .Title }}</a>
+              <a class="post-title" href="{{ .RelPermalink }}">{{ .Title }}</a>
               <span class="float-end post-date">{{ .Date | time.Format $.Site.Params.dateFormat }}</span>
             </li>
             {{- end -}}
@@ -44,7 +44,7 @@
         </div>
         {{- if gt $count $postCount -}}
         <div class="card-footer">
-          <a class="btn btn-sm btn-outline-primary" href="{{ .Page.Permalink }}">{{ i18n "read_more" }}</a>
+          <a class="btn btn-sm btn-outline-primary" href="{{ .Page.RelPermalink }}">{{ i18n "read_more" }}</a>
         </div>
         {{- end -}}
       </div>

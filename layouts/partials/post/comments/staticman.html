@@ -16,11 +16,11 @@
         {{- $page := . }}
         {{- $homepage := .GetPage "/" }}
         {{- range seq $commentsPages }}
-            {{- $commentsPageURL := replace (printf "%s/comments/page/%d.html" $.Permalink .) ($homepage.Permalink) "" }}
+            {{- $commentsPageURL := replace (printf "%s/comments/page/%d.html" $.RelPermalink .) ($homepage.RelPermalink) "" }}
             {{- $commentsPageURL = printf "%s/%s" $.Site.LanguagePrefix $commentsPageURL }}
             {{- $page.Scratch.Set "commentsPage" . }}
             {{- $commentsPage := $tmpl | resources.ExecuteAsTemplate $commentsPageURL $page }}
-            <a class="d-none" href="{{- $commentsPage.Permalink }}">{{- $commentsPage.Permalink }}</a>
+            <a class="d-none" href="{{- $commentsPage.RelPermalink }}">{{- $commentsPage.RelPermalink }}</a>
         {{- end }}
         {{- partial "staticman/list" (dict
             "Comments" $comments
@@ -34,7 +34,7 @@
             "TotalCount" (len $comments)
             "Page" 1
             "PageSize" $paginate
-            "PageLink" $.Permalink
+            "PageLink" $.RelPermalink
         ) }}
     {{- end }}
 {{- end }}

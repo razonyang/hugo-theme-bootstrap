@@ -5,7 +5,7 @@
     <div class="row card component">
         <div class="card-body">
             <h1 class="card-title post-title my-2 fs-4 mb-4">
-                {{ i18n "comments" }} - {{ i18n "pagination_title" (dict "PageNumber" $currentPage) }} - <a class="text-primary" href="{{ .Permalink }}">{{ .Title }}</a>
+                {{ i18n "comments" }} - {{ i18n "pagination_title" (dict "PageNumber" $currentPage) }} - <a class="text-primary" href="{{ .RelPermalink }}">{{ .Title }}</a>
             </h1>
             {{- partial "staticman/form" . }}
             {{- $paginate := default 10 $.Site.Params.staticman.paginate }}
@@ -27,7 +27,7 @@
                     "TotalCount" (len .)
                     "Page" $currentPage
                     "PageSize" $paginate
-                    "PageLink" $.Permalink
+                    "PageLink" $.RelPermalink
                 ) }}
             {{- end }}
         </div>

@@ -1,6 +1,6 @@
 {{- $dest := .Destination -}}
 {{- if hasPrefix $dest "#" -}}
-  {{- $dest = printf "%s%s" .Page.Permalink $dest -}}
+  {{- $dest = printf "%s%s" .Page.RelPermalink $dest -}}
 {{- end -}}
 {{- $target := $dest | safeURL -}}
 {{- $destHost := (urls.Parse .Destination).Host -}}

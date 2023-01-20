@@ -8,7 +8,7 @@
       {{- range . -}}
         {{- if gt .Pages.Len 0 -}}
         <li class="nav-item post-section my-2 mx-1">
-          <a class="btn btn-sm btn-secondary" href="{{ .Permalink }}">{{- .Title -}}</a>
+          <a class="btn btn-sm btn-secondary" href="{{ .RelPermalink }}">{{- .Title -}}</a>
         </li>
         {{- end -}}
       {{- end -}}

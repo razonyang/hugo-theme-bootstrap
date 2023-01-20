@@ -1,3 +1,3 @@
 {{- $options := dict "targetPath" "assets/katex/bundle.min.js" "minify" hugo.IsProduction -}}
 {{- $script := resources.Get "katex/js/index.ts" | js.Build $options | fingerprint -}}
-<script data-precache defer src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>
+<script data-precache defer src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>

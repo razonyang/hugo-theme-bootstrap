@@ -10,7 +10,7 @@
       <ul class="post-list list-unstyled">
         {{- range . -}}
         <li class="mb-3 border-bottom">
-          <a class="post-title" href="{{ .Permalink }}">
+          <a class="post-title" href="{{ .RelPermalink }}">
             {{ partial "helpers/title" . }}
           </a>
           <span class="post-meta post-date float-end">{{ partial "helpers/post-date" . }}</span>

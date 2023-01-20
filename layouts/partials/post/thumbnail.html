@@ -37,8 +37,8 @@
   {{- $smallImage := $featured.Resize "180x" -}}
   {{- $largeImage := $featured.Resize "500x" -}}
   <picture>
-    <source srcset="{{ $largeImage.Permalink }}" media="(max-width: 576px)" height="{{ $largeImage.Height }}" width="{{ $largeImage.Width }}">
-    <img class="img-fluid" height="{{ $smallImage.Height }}" width="{{ $smallImage.Width }}" alt="{{ .Title }}" src="{{ $smallImage.Permalink  }}" data-src="{{ $featured.Permalink }}" loading="lazy"/>
+    <source srcset="{{ $largeImage.RelPermalink }}" media="(max-width: 576px)" height="{{ $largeImage.Height }}" width="{{ $largeImage.Width }}">
+    <img class="img-fluid" height="{{ $smallImage.Height }}" width="{{ $smallImage.Width }}" alt="{{ .Title }}" src="{{ $smallImage.RelPermalink  }}" data-src="{{ $featured.RelPermalink }}" loading="lazy"/>
   </picture>
   {{- end -}}
 {{- end -}}

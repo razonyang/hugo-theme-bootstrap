@@ -1,8 +1,8 @@
 {{- if .Site.Params.searchBar }}
   {{- $page := .Site.GetPage "/search" }}
-  {{- if ne $page.Permalink .Permalink -}}
+  {{- if ne $page.RelPermalink .RelPermalink -}}
     <hr class="d-xxl-none">
-    <form class="search-bar ms-auto my-1" action="{{ with $page }}{{ .Permalink }}{{ end }}" novalidate>
+    <form class="search-bar ms-auto my-1" action="{{ with $page }}{{ .RelPermalink }}{{ end }}" novalidate>
       <div class="input-group input-group-sm align-items-center">
         <span class="btn btn-search disabled position-absolute left-0 border-0">
           <i class="fas fa-fw fa-search fa-lg"></i>

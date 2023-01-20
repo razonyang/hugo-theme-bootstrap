@@ -3,7 +3,7 @@
 <div class="flex-shrink-0 d-flex align-items-center">
     {{- $img := .Resize "120x120" }}
     <picture>
-        <img class="img-fluid author-img mb-3 rounded-circle" width="{{ $img.Width }}" height="{{ $img.Height }}" alt="author avatar" src="{{ $img.Permalink }}" title="{{ .Title }}" />
+        <img class="img-fluid author-img mb-3 rounded-circle" width="{{ $img.Width }}" height="{{ $img.Height }}" alt="author avatar" src="{{ $img.RelPermalink }}" title="{{ .Title }}" />
     </picture>
 </div>
 {{- else }}

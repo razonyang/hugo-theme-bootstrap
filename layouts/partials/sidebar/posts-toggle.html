@@ -90,7 +90,7 @@
         </div>
         {{- end }}
         <div class="flex-grow-1 d-flex flex-column h-auto justify-content-center{{ if $thumbnail }} ms-3{{ end }}">
-            <a class="post-title" href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a>
+            <a class="post-title" href="{{ .RelPermalink }}">{{ partial "helpers/title" . }}</a>
             <div class="post-meta mt-2">
                 <span class="post-date">{{ .Date | time.Format $.Site.Params.dateFormat }}</span>
             </div>

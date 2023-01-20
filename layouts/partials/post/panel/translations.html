@@ -6,7 +6,7 @@
     </a>
     <div class="dropdown-menu">
       {{- range .Translations -}}
-      <a class="dropdown-item post-translation" href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
+      <a class="dropdown-item post-translation" href="{{ .RelPermalink }}">{{ .Language.LanguageName }}</a>
       {{- end -}}
     </div>
   </div>
