@@ -47,13 +47,13 @@ import { default as params } from '@params'
                   <a class="badge bg-secondary mx-2" data-bs-toggle="collapse" href="#aa-shortcuts" role="button" aria-expanded="false" aria-controls="aa-shortcuts">
                     Shortcuts
                   </a>
-                  <div class="collapse p-2" id="aa-shortcuts">
-                    <div class="card card-body pb-0">
-                      <ul class="list-unstyled">
-                        <li class="my-2"><kbd>CTRL</kbd>+<kbd>K</kbd> to open</li>
-                        <li class="my-2"><kbd>ESC</kbd> to close</li>
-                        <li class="my-2"><kbd>↑</kbd> <kbd>↓</kbd> to navigate</li>
-                        <li class="my-2"><kbd>ENTER</kbd> to select</li>
+                  <div class="collapse p-2 pb-0 fs-sm" id="aa-shortcuts">
+                    <div class="card card-body p-2 pb-0">
+                      <ul class="d-flex list-unstyled mb-2">
+                        <li class="m-1"><kbd>CTRL</kbd>+<kbd>K</kbd> to open</li>
+                        <li class="m-1"><kbd>ESC</kbd> to close</li>
+                        <li class="m-1"><kbd>↑</kbd> <kbd>↓</kbd> to navigate</li>
+                        <li class="m-1"><kbd>ENTER</kbd> to select</li>
                       </ul>
                     </div>
                   </div>
