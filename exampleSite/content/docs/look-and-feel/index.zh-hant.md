@@ -40,8 +40,9 @@ authors = ["RazonYang"]
 ## Favicons
 
 HBS 會根據 `assets/favicon.webp`（更高的優先權）或 `assets/favicon.png` 自動生成不同尺寸的圖標文件。
-
 只需將自己的我的最愛影像保存為相同路徑即可覆蓋默認的圖片。
+
+您還需要覆蓋 mask 圖標 `assets/safari pined tab.svg`。
 
 > 靜態圖標 `static/images/icons/icon-{size}.png` 擁有更高的優先權，以向後兼容。
 
