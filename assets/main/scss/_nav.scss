@@ -7,3 +7,10 @@
   --#{$prefix}nav-pills-link-active-bg: var(--#{$prefix}primary);
   --#{$prefix}nav-pills-link-active-color: var(--#{$prefix}on-primary);
 }
+
+.nav-pills,
+.nav-tabs {
+  .nav-item {
+    margin-bottom: 0;
+  }
+}

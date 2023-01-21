@@ -1,0 +1,3 @@
+{{- $parentName := .Parent.Get 0 }}
+{{- $name := .Get 0 }}
+{{- .Page.Store.SetInMap (printf "toggle-%s-items" $parentName) $name .Inner -}}
