@@ -57,6 +57,7 @@
     "mustache": "^4.2.0",
     "onchange": "^7.1.0",
     "postcss-cli": "^9.1.0",
+    "prettier-plugin-go-template": "^0.0.13",
     "rtlcss": "^3.5.0",
     "viewerjs": "^1.10.4",
     "webpack": "^5.69.1",
