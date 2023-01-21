@@ -1,0 +1,37 @@
+{{- $name := .Get 0 }}
+{{- if eq .Inner "" }}{{ end }}
+{{- $items := .Page.Store.Get (printf "toggle-%s-items" $name) }}
+<ul class="nav nav-tabs toggle" id="toggle-{{ $name }}" role="tablist">
+    {{- $count := 0 }}
+  {{- range $itemName, $item := $items }}
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link{{ if eq $count 0 }} active{{ end }}"
+        id="toggle-{{ $name }}-{{ $itemName }}-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#toggle-{{ $name }}-{{ $itemName }}-tab-pane"
+        type="button"
+        role="tab"
+        aria-controls="toggle-{{ $name }}-{{ $itemName }}-tab-pane"
+        aria-selected="{{ cond (eq $count 0) `true` `false` }}">
+        {{ $itemName | upper }}
+      </button>
+    </li>
+    {{- $count = add $count 1 }}
+  {{- end }}
+</ul>
+<div class="tab-content mb-3" id="toggle-{{ $name }}-content">
+    {{- $count := 0 }}
+  {{- range $itemName, $item := $items }}
+    <div
+      class="tab-pane fade{{ if eq $count 0 }} show active{{ end }}"
+      id="toggle-{{ $name }}-{{ $itemName }}-tab-pane"
+      role="tabpanel"
+      aria-labelledby="toggle-{{ $name }}-{{ $itemName }}-tab"
+      tabindex="0">
+      {{ $item }}
+    </div>
+    {{- $count = add $count 1 }}
+  {{- end }}
+</div>
+
