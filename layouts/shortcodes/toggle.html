@@ -14,7 +14,7 @@
         role="tab"
         aria-controls="toggle-{{ $name }}-{{ $itemName }}-tab-pane"
         aria-selected="{{ cond (eq $count 0) `true` `false` }}">
-        {{ $itemName | upper }}
+        {{ $itemName }}
       </button>
     </li>
     {{- $count = add $count 1 }}
