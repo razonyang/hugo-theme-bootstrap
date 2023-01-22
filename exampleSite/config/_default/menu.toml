@@ -107,18 +107,32 @@
   weight = 3
 
 [[footer]]
-  identifier = "demo"
-  name = "Demo"
+  identifier = "sponsor"
+  name = "Sponsor"
   weight = 4
 [[footer]]
-  identifier = "demo-netlify"
-  parent = "demo"
-  name = "Netlify"
+  identifier = "sponsor-paypal"
+  parent = "sponsor"
+  name = "PayPal"
   weight = 1
-  url = "https://hbs.razonyang.com"
+  url = "https://paypal.me/razonyang"
+  pre = '<i class="fab fa-fw fa-paypal me-1" style="color: darkblue;"></i>'
 [[footer]]
-  identifier = "demo-china"
-  parent = "demo"
-  name = "China"
+  identifier = "sponsor-ko-fi"
+  parent = "sponsor"
+  name = "Ko-fi"
   weight = 2
-  url = "https://hbs-cn.razonyang.com"
+  url = "https://ko-fi.com/razonyang"
+[[footer]]
+  identifier = "sponsor-opencollective"
+  parent = "sponsor"
+  name = "Open Collective"
+  weight = 3
+  url = "https://opencollective.com/hbs"
+[[footer]]
+  identifier = "sponsor-patreon"
+  parent = "sponsor"
+  name = "Patreon"
+  weight = 4
+  url = "https://www.patreon.com/razonyang"
+  pre = '<i class="fab fa-fw fa-patreon me-1 text-danger"></i>'
