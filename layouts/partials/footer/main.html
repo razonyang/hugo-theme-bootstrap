@@ -1,5 +1,13 @@
 {{- partialCached "footer/actions-panel" . -}}
-{{- partialCached "footer/menu" . -}}
-{{- partial "footer/social-links" . -}}
-{{- partialCached "footer/copyright" . -}}
-{{- partialCached "footer/powered-by" . -}}
+<div class="row text-center{{ if .Site.Menus.footer }} text-lg-start{{ end }}">
+  <div class="col-12 mt-2{{ if .Site.Menus.footer }} col-lg-3{{ end }}">
+    <p class="mb-2">{{ .Site.Title }}</p>
+    <p class="text-secondary mb-2"><small>{{ .Site.Params.Description }}</small></p>
+    {{- partialCached "footer/copyright" . -}}
+    {{- partialCached "footer/powered-by" . -}}
+    {{- partial "footer/social-links" . -}}
+  </div>
+  <div class="col-12 col-lg-8 offset-0 offset-lg-1">
+    {{- partialCached "footer/menu" . -}}
+  </div>
+</div>
