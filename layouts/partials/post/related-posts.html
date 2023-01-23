@@ -1,24 +1,30 @@
-{{- $count := default .Params.relatedPostCount .Site.Params.relatedPostCount -}}
+{{- $count := default .Site.Params.relatedPostCount .Params.relatedPostCount -}}
 {{- $relatedPosts := where (.Site.RegularPages.Related .) "Section" "in" .Site.Params.mainSections -}}
 {{- if and $count $relatedPosts -}}
   {{- with ($relatedPosts | first $count) -}}
-  <section class="related-posts row card component">
-    <div class="card-header">
-      <h2 class="card-title fs-4 my-2 text-surface">{{ i18n "related_posts" }}</h2>
-    </div>
-    <div class="card-body">
-      <ul class="post-list list-unstyled">
-        {{- range . -}}
-        <li class="mb-3 border-bottom">
-          <a class="post-title" href="{{ .RelPermalink }}">
-            {{ partial "helpers/title" . }}
-          </a>
-          <span class="post-meta post-date float-end">{{ partial "helpers/post-date" . }}</span>
-          <div class="post-summary my-3">{{ partial "post/excerpt" . }}</div>
-        </li>
-        {{- end -}}
-      </ul>
-    </div>
-  </section>
+    <section class="related-posts row card component">
+      <div class="card-header">
+        <h2 class="card-title fs-4 my-2 text-surface">
+          {{ i18n "related_posts" }}
+        </h2>
+      </div>
+      <div class="card-body">
+        <ul class="post-list list-unstyled">
+          {{- range . -}}
+            <li class="mb-3 border-bottom">
+              <a class="post-title" href="{{ .RelPermalink }}">
+                {{ partial "helpers/title" . }}
+              </a>
+              <span class="post-meta post-date float-end"
+                >{{ partial "helpers/post-date" . }}</span
+              >
+              <div class="post-summary my-3">
+                {{ partial "post/excerpt" . }}
+              </div>
+            </li>
+          {{- end -}}
+        </ul>
+      </div>
+    </section>
   {{- end -}}
 {{- end -}}
