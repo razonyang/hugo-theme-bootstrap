@@ -1,99 +1,141 @@
 {{- $collapsed := default false .Site.Params.sidebar.collapsed }}
 {{- if default true .Site.Params.sidebar.postsToggle }}
-{{- $recentCount := default .Params.recentPostCount .Site.Params.recentPostCount }}
-{{- $recentSections := .Site.Params.mainSections }}
-{{- if in (slice "posts" "docs") .Type }}
-  {{- $recentSections = slice .Type }}
-{{- end }}
-{{- $recentPosts := slice }}
-{{- if $recentCount }}
-  {{- $recentPosts = first $recentCount (where site.RegularPages.ByDate.Reverse "Type" "in" $recentSections) }}
-{{- end }}
+  {{- $recentCount := default .Site.Params.recentPostCount .Params.recentPostCount }}
+  {{ warnf "%v" $recentCount }}
+  {{- $recentSections := .Site.Params.mainSections }}
+  {{- if in (slice "posts" "docs") .Type }}
+    {{- $recentSections = slice .Type }}
+  {{- end }}
+  {{- $recentPosts := slice }}
+  {{- if $recentCount }}
+    {{- $recentPosts = first $recentCount (where site.RegularPages.ByDate.Reverse "Type" "in" $recentSections) }}
+  {{- end }}
 
-{{- $featuredPosts := slice }}
-{{- $featuredcount := default .Params.featuredPostCount .Site.Params.featuredPostCount }}
-{{- if $featuredcount }}
-  {{- $featuredPosts = first $featuredcount (where (where site.RegularPages "Type" "in" site.Params.mainSections) ".Params.featured" "eq" true) }}
-{{- end }}
+  {{- $featuredPosts := slice }}
+  {{- $featuredCount := default .Site.Params.featuredPostCount .Params.featuredPostCount }}
+  {{- if $featuredCount }}
+    {{- $featuredPosts = first $featuredCount (where (where site.RegularPages "Type" "in" site.Params.mainSections) ".Params.featured" "eq" true) }}
+  {{- end }}
 
-{{- if or $featuredPosts $recentPosts }}
-<div class="accordion posts-toggle">
-    <section class="row card component accordion-item">
+  {{- if or $featuredPosts $recentPosts }}
+    <div class="accordion posts-toggle">
+      <section class="row card component accordion-item">
         <div class="accordion-header card-header border-0">
-            <a
-                class="accordion-button d-lg-none mb-1 shadow-none p-0 bg-transparent{{ if $collapsed }} collapsed{{ end }}"
-                type="button" data-bs-toggle="collapse" data-bs-target="#posts-toggle" aria-expanded="{{ if $collapsed }}false{{ else }}true{{ end }}" aria-controls="posts-toggle">
-                {{ i18n "posts" }}
-            </a>
+          <a
+            class="accordion-button d-lg-none mb-1 shadow-none p-0 bg-transparent{{ cond $collapsed ` collapsed` `` }}"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#posts-toggle"
+            aria-expanded="{{ cond $collapsed `false` `true` }}"
+            aria-controls="posts-toggle">
+            {{ i18n "posts" }}
+          </a>
         </div>
-        <div class="card-body collapse accordion-collapse accordion-body d-lg-block{{ if not $collapsed }} show{{ end }}" id="posts-toggle">
-            <ul class="nav nav-pills nav-fill" id="myTab" role="tablist">
-                {{- if $featuredPosts }}
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="featured-posts-tab" data-bs-toggle="tab" data-bs-target="#featured-posts" 
-                        type="button" role="tab" aria-controls="featured-posts" aria-selected="true">
-                        {{ i18n "featured_posts" }}
-                    </button>
-                </li>
-                {{- end }}
-                {{- if $recentPosts }}
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link{{ if not $featuredPosts }} active{{ end }}" id="recent-posts-tab" data-bs-toggle="tab" data-bs-target="#recent-posts" 
-                        type="button" role="tab" aria-controls="recent-posts" aria-selected="true">
-                        {{ i18n "recent_posts" }}
-                    </button>
-                </li>
-                {{- end }}
-            </ul>
-            
-            <div class="tab-content mt-3">
-                {{- with $featuredPosts }}
-                <div class="tab-pane active" id="featured-posts" role="tabpanel" aria-labelledby="featured-posts-tab" tabindex="0">
-                    <ul class="post-list list-unstyled ms-1">
-                    {{- range . }}
+        <div
+          class="card-body collapse accordion-collapse accordion-body d-lg-block{{ cond (not $collapsed) ` show` `` }}"
+          id="posts-toggle">
+          <ul class="nav nav-pills nav-fill" id="myTab" role="tablist">
+            {{- if $featuredPosts }}
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link active"
+                  id="featured-posts-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#featured-posts"
+                  type="button"
+                  role="tab"
+                  aria-controls="featured-posts"
+                  aria-selected="true">
+                  {{ i18n "featured_posts" }}
+                </button>
+              </li>
+            {{- end }}
+            {{- if $recentPosts }}
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link{{ cond (not $featuredPosts) ` active` `` }}"
+                  id="recent-posts-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#recent-posts"
+                  type="button"
+                  role="tab"
+                  aria-controls="recent-posts"
+                  aria-selected="true">
+                  {{ i18n "recent_posts" }}
+                </button>
+              </li>
+            {{- end }}
+          </ul>
+
+          <div class="tab-content mt-3">
+            {{- with $featuredPosts }}
+              <div
+                class="tab-pane active"
+                id="featured-posts"
+                role="tabpanel"
+                aria-labelledby="featured-posts-tab"
+                tabindex="0">
+                <ul class="post-list list-unstyled ms-1">
+                  {{- range . }}
                     <li class="mb-2">
-                        {{- template "post-item" . }}
+                      {{- template "post-item" . }}
                     </li>
-                    {{- end }}
-                    </ul>
-                </div>
-                {{- end }}
-                {{- with $recentPosts }}
-                <div class="tab-pane{{ if not $featuredPosts }} active{{ end }}" id="recent-posts" role="tabpanel" aria-labelledby="recent-posts-tab" tabindex="0">
-                    <ul class="post-list list-unstyled ms-1">
-                    {{- range . }}
+                  {{- end }}
+                </ul>
+              </div>
+            {{- end }}
+            {{- with $recentPosts }}
+              <div
+                class="tab-pane{{ cond (not $featuredPosts) ` active` `` }}"
+                id="recent-posts"
+                role="tabpanel"
+                aria-labelledby="recent-posts-tab"
+                tabindex="0">
+                <ul class="post-list list-unstyled ms-1">
+                  {{- range . }}
                     <li class="mb-2">
-                        {{- template "post-item" . }}
+                      {{- template "post-item" . }}
                     </li>
-                    {{- end }}
-                    </ul>
-                </div>
-                {{- end }}
-            </div>
+                  {{- end }}
+                </ul>
+              </div>
+            {{- end }}
+          </div>
         </div>
-    </section>
-</div>
-{{- end }}
+      </section>
+    </div>
+  {{- end }}
 {{- end -}}
 
 {{- define "post-item" }}
-    {{- $thumbnail := false }}
-    {{- with .Params.images }}{{ if isset . 0 }}{{ $thumbnail = true }}{{ end }}{{ end }}
-    {{- $images := .Resources.ByType "image" -}}
-    {{- $featured := $images.GetMatch "*feature*" -}}
-    {{- if not $featured }}{{ $featured = $images.GetMatch "{*cover*,*thumbnail*}" }}{{ end -}}
-    {{- with $featured -}}{{ $thumbnail = true }}{{ end }}
-    <div class="d-flex">
-        {{- if $thumbnail }}
-        <div class="flex-shrink-0 d-flex justify-content-center align-items-center" style="max-width: 100px">
-            {{- partial "post/thumbnail" . }}
-        </div>
-        {{- end }}
-        <div class="flex-grow-1 d-flex flex-column h-auto justify-content-center{{ if $thumbnail }} ms-3{{ end }}">
-            <a class="post-title" href="{{ .RelPermalink }}">{{ partial "helpers/title" . }}</a>
-            <div class="post-meta mt-2">
-                <span class="post-date">{{ .Date | time.Format $.Site.Params.dateFormat }}</span>
-            </div>
-        </div>
+  {{- $thumbnail := false }}
+  {{- with .Params.images }}
+    {{ if isset . 0 }}{{ $thumbnail = true }}{{ end }}
+  {{ end }}
+  {{- $images := .Resources.ByType "image" -}}
+  {{- $featured := $images.GetMatch "*feature*" -}}
+  {{- if not $featured }}
+    {{ $featured = $images.GetMatch "{*cover*,*thumbnail*}" }}
+  {{ end -}}
+  {{- with $featured -}}{{ $thumbnail = true }}{{ end }}
+  <div class="d-flex">
+    {{- if $thumbnail }}
+      <div
+        class="flex-shrink-0 d-flex justify-content-center align-items-center"
+        style="max-width: 100px">
+        {{- partial "post/thumbnail" . }}
+      </div>
+    {{- end }}
+    <div
+      class="flex-grow-1 d-flex flex-column h-auto justify-content-center{{ cond $thumbnail ` ms-3` `` }}">
+      <a class="post-title" href="{{ .RelPermalink }}">
+        {{ partial "helpers/title" . }}
+      </a>
+      <div class="post-meta mt-2">
+        <span class="post-date">
+          {{ .Date | time.Format $.Site.Params.dateFormat }}
+        </span>
+      </div>
     </div>
+  </div>
 {{- end }}
