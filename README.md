@@ -1,5 +1,6 @@
 # Hugo Bootstrap Theme
 
+![Used By](https://img.shields.io/badge/dynamic/json?color=success&label=used-by&query=repositories_humanize&logo=hugo&url=https://api.razonyang.com/v1/github/dependents/razonyang/hugo-theme-bootstrap)
 [![PageSpeed insights](https://img.shields.io/badge/pagespeed-90%2B-success?style=flat-square)](https://pagespeed.web.dev/report?url=https://hbs-skeleton.netlify.app/)
 [![GitHub contributors](https://img.shields.io/github/contributors/razonyang/hugo-theme-bootstrap?style=flat-square)](https://github.com/razonyang/hugo-theme-bootstrap/graphs/contributors)
 [![Financial Contributors](https://opencollective.com/hbs/tiers/badge.svg)](https://opencollective.com/hbs)
@@ -17,8 +18,8 @@ A fast, responsive and feature-rich Hugo theme for personal blog and documentati
 
 - https://hbs.razonyang.com/ - Deploy on Netlify.
 - https://hbs-cn.razonyang.com/ - Self-Hosted server located in China.
-
-There is also a [list of websites that use this theme](https://github.com/razonyang/hugo-theme-bootstrap/blob/master/USERS.md).
+- [Repositories](https://github.com/razonyang/hugo-theme-bootstrap/network/dependents) that using this theme.
+- [Websites](https://github.com/razonyang/hugo-theme-bootstrap/blob/master/USERS.md) that using this theme.
 
 ## Docs
 
