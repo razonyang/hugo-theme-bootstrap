@@ -1,6 +1,6 @@
 # Hugo Bootstrap Theme
 
-![Used By](https://img.shields.io/badge/dynamic/json?color=success&label=used-by&query=repositories_humanize&logo=hugo&url=https://api.razonyang.com/v1/github/dependents/razonyang/hugo-theme-bootstrap)
+[![Used By](https://img.shields.io/badge/dynamic/json?color=success&label=used-by&query=repositories_humanize&logo=hugo&url=https://api.razonyang.com/v1/github/dependents/razonyang/hugo-theme-bootstrap)](https://github.com/razonyang/hugo-theme-bootstrap/network/dependents)
 [![PageSpeed insights](https://img.shields.io/badge/pagespeed-90%2B-success?style=flat-square)](https://pagespeed.web.dev/report?url=https://hbs-skeleton.netlify.app/)
 [![GitHub contributors](https://img.shields.io/github/contributors/razonyang/hugo-theme-bootstrap?style=flat-square)](https://github.com/razonyang/hugo-theme-bootstrap/graphs/contributors)
 [![Financial Contributors](https://opencollective.com/hbs/tiers/badge.svg)](https://opencollective.com/hbs)
