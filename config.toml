@@ -1,3 +1,9 @@
+[module]
+[module.hugoVersion]
+extended = true
+min = "0.97.0"
+
+[params]
 breadcrumb = true
 dateFormat = ":date_long"
 countTaxonomyPosts = false
@@ -26,4 +32,3 @@ titleCase = false
 titleSeparator = "-"
 tocWordCount = 280
 viewer = true
-
