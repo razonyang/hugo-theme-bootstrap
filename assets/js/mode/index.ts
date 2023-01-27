@@ -73,11 +73,13 @@ class ModeToggle implements Component {
       }
     });
 
-    const icon = document
-      .querySelector('.mode-item[data-color-mode="' + mode + '"] .mode-icon')
-      .cloneNode(true) as HTMLElement;
+    const icon = document.querySelector('.mode-item[data-color-mode="' + mode + '"] .mode-icon')?.cloneNode(true) as HTMLElement;
+    if (!icon) {
+      return
+    }
+
     icon.setAttribute('id', 'modeIcon');
-    document.querySelector('#modeIcon').replaceWith(icon);
+    document.querySelector('#modeIcon')?.replaceWith(icon);
   }
 
   setMode(value: string) {
