@@ -1,0 +1,9 @@
+{{- $img := partialCached "post/thumbnail" . . }}
+{{- with $img }}
+  {{ . }}
+{{- else }}
+  <div
+    class="post-card-default-img card-img-top d-flex align-items-center justify-content-center bg-body-secondary mb-1">
+    NO IMAGE
+  </div>
+{{- end }}

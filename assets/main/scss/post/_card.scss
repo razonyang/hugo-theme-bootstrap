@@ -1,0 +1,15 @@
+.post-card {
+  img {
+    @extend .card-img-top;
+
+    height: 120px;
+    margin-bottom: 0.5rem;
+    object-fit: cover;
+  }
+}
+
+.post-card-default-img {
+  filter: blur(1px);
+  height: 120px;
+  width: 100%;
+}
