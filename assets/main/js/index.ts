@@ -13,6 +13,7 @@ import SidebarToggle from 'js/sidebar-toggle';
 import TableWrapper from 'js/table-wrapper';
 import TOC from 'js/toc';
 import components from './components';
+import 'js/slide';
 
 (new ActionsPanel()).run();
 (new Scroller()).run();

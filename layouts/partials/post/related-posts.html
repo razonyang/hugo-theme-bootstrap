@@ -8,22 +8,22 @@
           {{ i18n "related_posts" }}
         </h2>
       </div>
-      <div class="card-body">
-        <ul class="post-list list-unstyled">
+      <div class="card-body slide px-1">
+        <div class="slide-inner row gx-0">
           {{- range . -}}
-            <li class="mb-3 border-bottom">
-              <a class="post-title" href="{{ .RelPermalink }}">
-                {{ partial "helpers/title" . }}
-              </a>
-              <span class="post-meta post-date float-end">
-                {{ partial "helpers/post-date" . }}
-              </span>
-              <div class="post-summary my-3">
-                {{ partial "post/excerpt" . }}
-              </div>
-            </li>
-          {{- end -}}
-        </ul>
+          <div class="col-12 col-md-6 col-lg-4 me-2">
+            {{ partial "post/card" . }}
+          </div>
+        {{- end -}}
+        </div>
+        <button class="slide-control-left">
+          <i class="fas fa-2x fa-chevron-circle-down" data-fa-transform="rotate-90"></i>
+          <span class="visually-hidden">Left</span>
+        </button>
+        <button class="slide-control-right">
+          <i class="fas fa-2x fa-chevron-circle-down" data-fa-transform="rotate-270"></i>
+          <span class="visually-hidden">Right</span>
+        </button>
       </div>
     </section>
   {{- end -}}
