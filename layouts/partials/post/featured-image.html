@@ -17,8 +17,7 @@
       <img class="post-featured-img h-auto w-auto mb-3" alt="{{ $alt }}" src="{{ $img | absURL  }}"/>
     </picture>
   {{- else -}}
-    {{- $images := .Resources.ByType "image" -}}
-    {{- $featured := $images.GetMatch "*feature*" -}}
+    {{- $featured := partialCached "functions/featured-img" . . -}}
     {{- with $featured -}}
     <picture class="d-flex justify-content-center">
       {{- $smallImg := $featured.Resize "x270" -}}

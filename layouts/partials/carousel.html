@@ -50,16 +50,14 @@
     {{ $mediumImageURL = $smallImageURL }}
     {{ $largeImageURL = $smallImageURL }}
 {{- else }}
-  {{- $images := .page.Resources.ByType "image" }}
-  {{- $featured = $images.GetMatch "*feature*" }}
-  {{- if not $featured }}{{ $featured = $images.GetMatch "{*cover*,*thumbnail*}" }}{{ end }}
+  {{- $featured := partialCached "functions/thumbnail" .page .page }}
   {{- with $featured }}
-    {{- $ratio := div $featured.Width $featured.Height }}
-    {{- $smallImage := $featured.Crop "320x180 smart" }}
+    {{- $ratio := div .Width $featured.Height }}
+    {{- $smallImage := .Crop "320x180 smart" }}
     {{- $smallImageURL = $smallImage.RelPermalink }}
-    {{- $mediumImage := $featured.Crop "480x270 smart" }}
+    {{- $mediumImage := .Crop "480x270 smart" }}
     {{- $mediumImageURL = $mediumImage.RelPermalink }}
-    {{- $largeImage := $featured.Crop "800x450 smart" }}
+    {{- $largeImage := .Crop "800x450 smart" }}
     {{- $largeImageURL = $largeImage.RelPermalink }}
   {{- end }}
 {{- end }}

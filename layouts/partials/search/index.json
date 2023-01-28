@@ -20,15 +20,13 @@
     {{- if .Params.Images -}}
       {{- $img = index .Params.Images 0 | absURL -}}
     {{- else -}}
-      {{- $images := .Resources.ByType "image" -}}
-      {{- $featured := $images.GetMatch "*feature*" -}}
-      {{- if not $featured }}{{ $featured = $images.GetMatch "{*cover*,*thumbnail*}" }}{{ end -}}
+      {{- $featured := partialCached "functions/thumbnail" . . }}
       {{- with $featured -}}
-        {{- $smallImage := $featured.Resize "180x" -}}
+        {{- $smallImage := .Resize "180x" -}}
         {{- $smallImg = $smallImage.RelPermalink -}}
-        {{- $largeImage := $featured.Resize "500x" -}}
+        {{- $largeImage := .Resize "500x" -}}
         {{- $largeImg = $largeImage.RelPermalink -}}
-        {{- $img = $featured.RelPermalink -}}
+        {{- $img = .RelPermalink -}}
       {{- end -}}
     {{- end -}}
     {{- $item := (dict 
