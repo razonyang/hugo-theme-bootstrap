@@ -1,7 +1,6 @@
 {{- $collapsed := default false .Site.Params.sidebar.collapsed }}
 {{- if default true .Site.Params.sidebar.postsToggle }}
   {{- $recentCount := default .Site.Params.recentPostCount .Params.recentPostCount }}
-  {{ warnf "%v" $recentCount }}
   {{- $recentSections := .Site.Params.mainSections }}
   {{- if in (slice "posts" "docs") .Type }}
     {{- $recentSections = slice .Type }}
