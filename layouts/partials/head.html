@@ -1,5 +1,5 @@
 {{- partialCached "head/favicons" . }}
-<meta name="keywords" content="{{ if .IsPage }}{{ delimit .Keywords ", " }}{{ else }}{{ $.Site.Params.keywords }}{{ end }}" />
+<meta name="keywords" content="{{ with .Keywords }}{{ delimit . ", " }}{{ else }}{{ $.Site.Params.keywords }}{{ end }}" />
 {{- $description := default .Site.Params.description (default .Summary .Description) }}
 {{- with $description }}
   <meta name="description" content="{{ . }}" />
