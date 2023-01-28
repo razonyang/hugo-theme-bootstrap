@@ -11,7 +11,7 @@
     {{- partial "header/brand" . }}
     <div class="offcanvas-xxl offcanvas-end flex-grow-1" data-bs-scroll="true" tabindex="-1" id="navbarMenus" aria-labelledby="navbarMenusLabel">
       <div class="offcanvas-header px-4 pb-0">
-        <h5 class="offcanvas-title" id="navbarMenusLabel">{{- with .Site.Params.brand }}{{ . }}{{ else }}{{ $.Site.Title }}{{ end }}</h5>
+        <div class="offcanvas-title h5" id="navbarMenusLabel">{{- with .Site.Params.brand }}{{ . }}{{ else }}{{ $.Site.Title }}{{ end }}</div>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" data-bs-target="#navbarMenus" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body p-4 pt-0 p-xxl-0">
