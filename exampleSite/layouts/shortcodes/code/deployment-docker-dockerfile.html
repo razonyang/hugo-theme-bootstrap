@@ -1,7 +1,7 @@
 ###############
 # Build Stage #
 ###############
-FROM klakegg/hugo:ext-ubuntu as builder
+FROM razonyang/hugo as builder
 
 WORKDIR /src
 COPY . /src
