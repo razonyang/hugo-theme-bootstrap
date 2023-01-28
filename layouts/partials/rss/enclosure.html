@@ -8,8 +8,7 @@
     <enclosure url="{{ $img | absURL  }}" length="{{ len $file }}" type="image/{{ path.Ext $filename }}" />
   {{- end -}}
 {{- else -}}
-  {{- $images := .Resources.ByType "image" -}}
-  {{- $featured := $images.GetMatch "*feature*" -}}
+  {{- $featured := partialCached "functions/thumbnail" . . }}
   {{- with $featured -}}
       <enclosure url="{{ $featured.Permalink }}" length="{{ len $featured.Content }}" type="{{ $featured.MediaType }}" />
   {{- end -}}

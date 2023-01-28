@@ -1,0 +1,5 @@
+{{- $img := partialCached "functions/featured-img" . . }}
+{{- if not $img }}
+  {{- $img = .Resources.GetMatch "{*cover*,*thumbnail*}" }}
+{{- end }}
+{{- return $img -}}
