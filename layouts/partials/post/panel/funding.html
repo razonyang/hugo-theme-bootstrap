@@ -1,0 +1,52 @@
+{{- $funding := .Site.Params.funding }}
+{{- if isset .Params "funding" }}
+  {{- $funding = .Params.funding }}
+{{- end }}
+{{- $icons := dict
+  "alipay" "alipay"
+  "wechat" "weixin"
+  "paypal" "paypal"
+  "patreon" "patreon"
+}}
+{{- $urls := dict 
+  "ko_fi" "https://ko-fi.com/%s"
+  "patreon" "https://www.patreon.com/%s"
+  "paypal" "https://paypal.me/%s"
+  "open_collective" "https://opencollective.com/%s"
+}}
+{{- with $funding }}
+  <div class="action btn-group dropup">
+    <button
+      type="button"
+      class="btn btn-link p-0"
+      data-bs-toggle="dropdown"
+      aria-expanded="false"
+      title="{{ i18n `buy_me_a_coffee` }}">
+      <i class="fas fa-fw fa-coffee"></i>
+    </button>
+    <ul class="dropdown-menu">
+      {{- range $name, $id := . }}
+        {{- $url := absURL $id }}
+        {{- with index $urls $name }}
+          {{- $url = printf . $id }}
+        {{- end }}
+        <li>
+          <a
+            href="{{ $url }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            role="button"
+            class="dropdown-item d-flex align-items-center"
+            data-bs-theme-value="light">
+            {{- with index $icons $name }}
+              <i class="fab fa-fw fa-{{ . }} me-1"></i>
+            {{- else }}
+              <i class="fas fa-fw fa-heart me-1"></i>
+            {{- end }}
+            {{- default ($name | title) (printf "funding_%s" $name | i18n) -}}
+          </a>
+        </li>
+      {{- end }}
+    </ul>
+  </div>
+{{- end -}}

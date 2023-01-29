@@ -148,6 +148,21 @@ other = "Extra Large"
 [font_size_xs]
 other = "Extra Small"
 
+[funding_alipay]
+other = "Alipay"
+
+[funding_ko_fi]
+other = "Ko-fi"
+
+[funding_open_collective]
+other = "Open Collective"
+
+[funding_patreon]
+other = "Patreon"
+
+[funding_wechat]
+other = "Wechat"
+
 [go_back]
 other = "Go back"
 

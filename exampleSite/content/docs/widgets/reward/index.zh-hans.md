@@ -18,14 +18,16 @@ aliases = [
   "/zh-cn/posts/widgets/reward"
 ]
 authors = ["RazonYang"]
-[menu.footer]
-  parent = "features"
-  weight = 7
-  [menu.footer.params]
-    icon = '<i class="fas fa-fw fa-coffee"></i>'
+# [menu.footer]
+#   parent = "features"
+#   weight = 7
+#   [menu.footer.params]
+#     icon = '<i class="fas fa-fw fa-coffee"></i>'
 +++
 
 打赏小部件，又称 buy me a coffee 小部件，其通过使用捐赠或小费，为读者提供了一种支持创作者的管道。
+
+然而其只能用于二维码收款，其他请移步 [funding widget]({{< ref "docs/widgets/funding" >}})。
 
 <!--more-->
 
