@@ -20,11 +20,11 @@ aliases = [
   "/zh-tw/docs/archives"
 ]
 authors = ["RazonYang"]
-[menu.footer]
-  parent = "docs"
-  weight = 7
-  [menu.footer.params]
-    icon = '<i class="fas fa-fw fa-file-archive"></i>'
+# [menu.footer]
+#   parent = "docs"
+#   weight = 7
+#   [menu.footer.params]
+#     icon = '<i class="fas fa-fw fa-file-archive"></i>'
 +++
 
 歸檔頁面按照年份對文章進行歸檔。

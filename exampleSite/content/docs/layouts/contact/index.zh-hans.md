@@ -22,11 +22,11 @@ aliases = [
   "/zh-cn/docs/layouts/contact-form"
 ]
 authors = ["RazonYang"]
-[menu.footer]
-  parent = "features"
-  weight = 6
-  [menu.footer.params]
-    icon = '<i class="fas fa-fw fa-question-circle"></i>'
+# [menu.footer]
+#   parent = "features"
+#   weight = 6
+#   [menu.footer.params]
+#     icon = '<i class="fas fa-fw fa-question-circle"></i>'
 +++
 
 我们可以将邮件地址放在 [社交链接]({{< ref "/docs/widgets/social-links" >}})上，以便读者联系我们。但不幸的是，邮件或多或少会被当成垃圾邮件，甚至被过滤。因此我们带来了一个联系表单的功能。

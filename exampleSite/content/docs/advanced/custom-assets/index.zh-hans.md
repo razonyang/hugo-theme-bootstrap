@@ -21,9 +21,9 @@ aliases = [
   "/zh-cn/docs/custom-assets"
 ]
 authors = ["RazonYang"]
-[menu.footer]
-  parent = "docs"
-  weight = 6
+# [menu.footer]
+#   parent = "docs"
+#   weight = 6
 +++
 
 作为一个可定制的主题，其提供了定制资源的能力，无论是定制 CSS 和 JS，还是引入第三方 CSS 和 JS。
