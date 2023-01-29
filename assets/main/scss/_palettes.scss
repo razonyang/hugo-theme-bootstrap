@@ -52,6 +52,7 @@ $palette-classes: 'btn', 'btn-outline';
       --#{$prefix}primary-secondary-rgb: #{to-rgb($primary-secondary)};
       --#{$prefix}on-primary: #{$on-primary};
       --#{$prefix}on-primary-rgb: #{to-rgb($on-primary)};
+      --#{$prefix}primary-text: #{shade-color($color, 30%)} !important;
       --#{$prefix}on-primary-secondary: #{$on-primary-secondary};
       --#{$prefix}on-primary-secondary-rgb: #{to-rgb($on-primary-secondary)};
       --#{$prefix}on-primary-disabled: #{$on-primary-disabled};
@@ -70,6 +71,7 @@ $palette-classes: 'btn', 'btn-outline';
       &[data-bs-theme='dark'] {
         --#{$prefix}primary: #{$primary-tint};
         --#{$prefix}primary-rgb: #{to-rgb($primary-tint)} !important;
+        --#{$prefix}primary-text: #{tint-color($color, 30%)} !important;
         --#{$prefix}accent-bg: #{$primary-tint} !important;
         --#{$prefix}accent-color: #{$on-primary} !important;
         --#{$prefix}accent-border: #{$primary-tint} !important;
