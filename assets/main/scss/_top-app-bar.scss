@@ -32,10 +32,6 @@ $header-caret-width: 0.35em;
     }
   }
 
-  .form-control {
-    color: var(--#{$prefix}on-primary);
-  }
-
   a {
     &:hover {
       text-decoration: none;
