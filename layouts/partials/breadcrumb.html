@@ -1,7 +1,7 @@
 {{- if and .Site.Params.breadcrumb (default true .Params.breadcrumb) -}}
 <nav class="row card component" aria-label="breadcrumb">
   <div class="card-body pb-0">
-    <ol class="breadcrumb">
+    <ol class="hbs-breadcrumb breadcrumb flex-nowrap">
       {{- template "breadcrumbnav" (dict "p1" . "p2" . "titleCase" $.Site.Params.titleCase) -}}
     </ol>
   </div>
