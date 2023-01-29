@@ -236,6 +236,9 @@ other = "Advanced"
 [search_date]
 other = "Date"
 
+[search_input_placeholder]
+other = "Type to search"
+
 [search_missing_keywords]
 other = "Please enter search keywords"
 

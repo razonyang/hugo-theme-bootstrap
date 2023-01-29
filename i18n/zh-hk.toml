@@ -226,6 +226,9 @@ other = "高級"
 [search_date]
 other = "日期"
 
+[search_input_placeholder]
+other = "請輸入關鍵詞"
+
 [search_missing_keywords]
 other = "請輸入搜索關鍵詞"
 
