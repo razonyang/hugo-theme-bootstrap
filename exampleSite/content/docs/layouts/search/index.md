@@ -50,6 +50,7 @@ title = "Search"
 | `search.indexPaginate` | Integer | `1000` | Index file pagination.
 | `search.maxResults` | Number | `100` | The max number of search results.
 | `search.resultContentCharactersCount` | Integer | `240` | The maximum characters count of result content for displaying.
+| `search.shortcut` | Array | `["/"]` | The search shortcut, i.e. `["Control", "/"]`, disable it by a empty array `[]`.
 | `search.fuse` | Object | - | [Fuse.js options](https://fusejs.io/api/options.html).
 | `search.fuse.ignoreLocation` | Boolean | `true` |
 | `search.fuse.location` | Integer | - |

@@ -248,6 +248,9 @@ other = "No results found"
 [search_score]
 other = "Score"
 
+[search_shortcut]
+other = "{{ .Shortcut }} to search"
+
 [search_sorting]
 other = "Sorting"
 
