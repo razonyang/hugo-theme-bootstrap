@@ -238,6 +238,9 @@ other = "找不到相关结果"
 [search_score]
 other = "评分"
 
+[search_shortcut]
+other = "按 {{ .Shortcut }} 搜索"
+
 [search_sorting]
 other = "排序"
 

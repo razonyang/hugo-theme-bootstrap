@@ -14,6 +14,7 @@ import TableWrapper from 'js/table-wrapper';
 import TOC from 'js/toc';
 import components from './components';
 import 'js/slide';
+import 'js/search';
 
 (new ActionsPanel()).run();
 (new Scroller()).run();
