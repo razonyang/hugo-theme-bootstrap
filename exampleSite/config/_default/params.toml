@@ -279,7 +279,7 @@ paypal = "razonyang"
 
 [docs]
 [docs.nav]
-expand = true # Expand docs navigations.
+expand = false # Expand docs navigations.
 
 [feeds]
 # content = true
