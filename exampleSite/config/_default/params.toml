@@ -199,12 +199,20 @@ minMatchCharLength = 3
 # paginate = 10
 # stallThreshold = 500
 
-[reward]
-alipay = "images/reward/alipay.png"
-wechat = "images/reward/wechat.png"
+# [reward]
+# alipay = "images/reward/alipay.png"
+# wechat = "images/reward/wechat.png"
 #paypal = "images/reward/paypal.png"
 #patreon = "images/reward/patreon.png"
 #liberapay = "images/reward/liberapay.png"
+
+[funding]
+alipay = "https://razonyang.com/images/reward/alipay.webp"
+wechat = "https://razonyang.com/images/reward/wechat.webp"
+ko_fi = "razonyang"
+patreon = "razonyang"
+open_collective = "hbs"
+paypal = "razonyang"
 
 #[share]
 #addThis = "" # AddThis pubid.

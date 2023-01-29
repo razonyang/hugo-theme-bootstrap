@@ -148,6 +148,21 @@ other = "特大號"
 [font_size_xs]
 other = "特小號"
 
+[funding_alipay]
+other = "支付寶"
+
+[funding_ko_fi]
+other = "Ko-fi"
+
+[funding_open_collective]
+other = "Open Collective"
+
+[funding_patreon]
+other = "Patreon"
+
+[funding_wechat]
+other = "微信"
+
 [go_back]
 other = "返回"
 

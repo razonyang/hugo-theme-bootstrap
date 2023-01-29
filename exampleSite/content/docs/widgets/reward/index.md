@@ -19,14 +19,16 @@ aliases = [
   "/en/posts/widgets/reward"
 ]
 authors = ["RazonYang"]
-[menu.footer]
-  parent = "features"
-  weight = 7
-  [menu.footer.params]
-    icon = '<i class="fas fa-fw fa-coffee"></i>'
+# [menu.footer]
+#   parent = "features"
+#   weight = 7
+#   [menu.footer.params]
+#     icon = '<i class="fas fa-fw fa-coffee"></i>'
 +++
 
 The reward widget, AKA buy me a coffee widget, gives the readers a way to support a creator through the use of donations or tips.
+
+However, it limited to the QR code image, please take a look at the [funding widget]({{< ref "docs/widgets/funding" >}}).
 
 <!--more-->
 
