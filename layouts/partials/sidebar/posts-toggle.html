@@ -22,9 +22,9 @@
         <div class="accordion-header card-header border-0">
           <a
             class="accordion-button d-lg-none mb-1 shadow-none p-0 bg-transparent{{ cond $collapsed ` collapsed` `` }}"
-            type="button"
+            role="button"
             data-bs-toggle="collapse"
-            data-bs-target="#posts-toggle"
+            href="#posts-toggle"
             aria-expanded="{{ cond $collapsed `false` `true` }}"
             aria-controls="posts-toggle">
             {{ i18n "posts" }}
