@@ -95,4 +95,10 @@ $palette-classes: 'btn', 'btn-outline';
   width: 1.5rem;
 }
 
+.palette-dropdown-menu {
+  &.show {
+    display: flex !important;
+  }
+}
+
 /*! purgecss end ignore */

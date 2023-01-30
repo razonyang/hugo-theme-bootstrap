@@ -4,9 +4,8 @@
         <i class="fas fa-fw fa-palette"></i>
         <span class="d-xxl-none">{{ i18n "palette" }}</span>
     </a>
-    <ul class="dropdown-menu dropdown-menu-end px-2" aria-labelledby="paletteDropdown">
-        <div class="row">
-            {{- range .Site.Params.Palettes }}
+    <ul class="palette-dropdown-menu dropdown-menu dropdown-menu-end px-2 row g-2" aria-labelledby="paletteDropdown">
+        {{- range .Site.Params.Palettes }}
             {{- $key := replace . " " "-" }}
             {{- $title := replace . " " "_" | printf "color_%s" | i18n }}
             <li class="col-4 my-1">
@@ -14,8 +13,7 @@
                     class="btn btn-sm w-100 palette text-bg-{{ $key }}" data-palette="{{ $key }}">
                 </a>
             </li>
-            {{- end }}
-        </div>
+        {{- end }}
     </ul>
 </li>
 {{- end -}}
