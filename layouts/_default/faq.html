@@ -33,11 +33,11 @@
                     <div class="faq accordion-item">
                         <h2 class="accordion-header faq-question">
                             <button class="accordion-button{{ if ne 0 $j }} collapsed{{ end }}" type="button" data-bs-toggle="collapse" data-bs-target="#{{ $id }}"
-                              aria-expanded="{{ if eq 0 $j }}true{{ else }}false{{ end }}" aria-controls="{{ $id }}">
+                              aria-expanded="{{ if eq 0 $j }}true{{ else }}false{{ end }}">
                                 {{- .question -}}
                             </button>
                         </h2>
-                        <div id="{{ $id }}" class="accordion-collapse collapse{{ if eq 0 $j }} show{{ end }}" aria-labelledby="{{ $id }}" data-bs-parent="#faq-{{ $i }}">
+                        <div id="{{ $id }}" class="accordion-collapse collapse{{ if eq 0 $j }} show{{ end }}" data-bs-parent="#faq-{{ $i }}">
                             <div class="faq-answer accordion-body surface">
                                 {{- .answer | $.Page.RenderString -}}
                             </div>
