@@ -4,7 +4,7 @@
     <div class="g-recaptcha" data-sitekey="{{ .siteKey }}" data-callback="reCaptchaCallback"
         data-expired-callback="reCaptchaExpiredCallback"></div>
 </div>
-<script type="javascript">
+<script>
     var reCaptchaLabel = document.querySelector('#reCaptchaLabel');
     var reCaptchaOnload = function () {
         document.querySelector('#g-recaptcha-response').setAttribute("required", true);
