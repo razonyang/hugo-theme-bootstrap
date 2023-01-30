@@ -97,19 +97,33 @@ For example: `![Center](/featured-sample.webp#center)`.
 
 ### Float Start
 
-![Float Start](/featured-sample.webp?height=120px#float-start)
+{{% clearfix %}}
+![Float Start](featured-sample.webp?height=120px#float-start) Adding the `#float-start` fragment for floating images to the start, we have to wrap it inside `clearfix` shortcode to avoid breaking the layout.
 
-Adding the `#float-start` fragment for floating images to the start.
+Please note that use `%%` instead of `<>` to render content as Markdown fully.
+{{% /clearfix %}}
 
-For example: `![Float Start](/featured-sample.webp#float-start)`.
+For example.
+
+````
+{{/% clearfix %/}}
+![Float Start](/featured-sample.webp#float-start) TEXTS AROUNDS THE IMAGE.
+{{/% /clearfix %/}}
+````
 
 ### Float End
 
-![Float End](/featured-sample.webp?height=120px#float-end)
+{{% clearfix %}}
+![Float End](/featured-sample.webp?height=120px#float-end) Similarly, we can also float images to the end by adding the `#float-end` fragment.
+{{% /clearfix %}}
 
-Similarly, we can also float images to the end by adding the `#float-end` fragment.
+For example.
 
-For example: `![Float End](/featured-sample.webp#float-end)`.
+````
+{{/% clearfix %/}}
+![Float End](/featured-sample.webp#float-end) TEXTS AROUNDS THE IMAGE.
+{{/% /clearfix %/}}
+````
 
 ## Caption
 
