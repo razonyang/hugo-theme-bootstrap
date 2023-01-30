@@ -11,7 +11,7 @@
             </a>
         </div>
         <div class="card-body collapse accordion-collapse accordion-body d-lg-block{{ if not $collapsed }} show{{ end }}" id="taxonomies-toggle">
-            <ul class="nav nav-pills nav-fill" id="myTab" role="tablist">
+            <ul class="nav nav-pills nav-fill" role="tablist">
                 {{- $counter := 0 }}
                 {{- range $expected := $.Site.Params.sidebarTaxonomies }}
                 {{- range $key, $value := $.Site.Taxonomies }}
@@ -23,7 +23,7 @@
                     {{- with $value.ByCount }}
                     <li class="nav-item" role="presentation">
                         <button class="nav-link{{ if eq $counter 0 }} active{{ end }}" id="taxonomy{{ $key | title }}Tab" data-bs-toggle="tab" data-bs-target="#taxonomy{{ $key | title }}" 
-                            type="button" role="tab" aria-controls="{{ i18n $key }}" aria-selected="true">
+                            type="button" role="tab" aria-controls="taxonomy{{ $key | title }}" aria-selected="true">
                             {{ i18n $key }}
                         </button>
                     </li>
@@ -80,7 +80,7 @@
                 {{- end }}
                 {{- end }}
                 {{- if $archives }}
-                <div class="tab-pane" id="taxonomyArchive" role="tabpanel" aria-labelledby="taxonomyArchiveTab" tabindex="0">
+                <div class="tab-pane" id="taxonomyArchives" role="tabpanel" aria-labelledby="taxonomyArchiveTab" tabindex="0">
                     {{- partial "sidebar/archive-items" . }}
                 </div>
                 {{- end }}
