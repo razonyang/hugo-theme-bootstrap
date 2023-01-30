@@ -1,6 +1,6 @@
 {{- if partial "functions/toc" . -}}
 {{ $withoutSidebar := eq .Params.sidebar false }}
-<div id="postTOC" class="mt-2 mb-3{{ if not $withoutSidebar }} d-block d-xxl-none{{ end }}">
+<div class="mt-2 mb-3{{ if not $withoutSidebar }} d-block d-xxl-none{{ end }}">
     <h2 class="text-surface mb-3">{{ i18n "table_of_contents" }}</h2>
     <div id="post-toc-container">
         {{/* Output the TOC if sidebar is disabled. */}}
