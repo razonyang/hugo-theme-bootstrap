@@ -2,7 +2,7 @@
 {{- if default true .Site.Params.sidebar.taxonomiesToggle }}
 {{- $archives := default true $.Site.Params.sidebar.taxonomiesToggleArchives }}
 <div class="accordion taxonomies-toggle">
-    <section class="row card component accordion-item">
+    <div class="row card component accordion-item">
         <div class="accordion-header card-header border-0">
             <a
                 class="accordion-button d-lg-none mb-1 shadow-none p-0 bg-transparent{{ if $collapsed }} collapsed{{ end }}"
@@ -35,7 +35,7 @@
                 {{- end }}
                 {{- if $archives }}
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="taxonomyArchivesTab" data-bs-toggle="tab" data-bs-target="#taxonomyArchive" 
+                    <button class="nav-link" id="taxonomyArchivesTab" data-bs-toggle="tab" data-bs-target="#taxonomyArchives" 
                         type="button" role="tab" aria-controls="taxonomyArchives" aria-selected="true">
                         {{ i18n "archives" }}
                     </button>
@@ -86,6 +86,6 @@
                 {{- end }}
             </div>
         </div>
-    </section>
+    </div>
 </div>
 {{- end -}}
