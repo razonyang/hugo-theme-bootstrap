@@ -1,10 +1,10 @@
 {{- with $.Site.Params.contact.reCaptcha -}}
 <div class="mb-3">
-    <label for="g-recaptcha-response" id="reCaptchaLabel" class="form-label text-danger">reCAPTCHA</label>
+    <label id="reCaptchaLabel" class="form-label text-danger">reCAPTCHA</label>
     <div class="g-recaptcha" data-sitekey="{{ .siteKey }}" data-callback="reCaptchaCallback"
         data-expired-callback="reCaptchaExpiredCallback"></div>
 </div>
-<script text="javascript">
+<script>
     var reCaptchaLabel = document.querySelector('#reCaptchaLabel');
     var reCaptchaOnload = function () {
         document.querySelector('#g-recaptcha-response').setAttribute("required", true);

@@ -12,14 +12,14 @@
   {{- if $taxonomyCount }}
     {{- with $value.ByCount }}
       <div class="accordion {{ $key }}-taxonomies">
-        <section class="row card component">
+         class="row card component">
           <div class="card-header">
             <h2 class="card-title my-2 fs-4 text-surface d-none d-lg-block">
               <a href="{{ absLangURL (urlize $key) }}">{{ i18n $key }}</a>
             </h2>
             <a
               class="accordion-button d-lg-none mb-1 shadow-none p-0 bg-transparent text-surface{{ if $collapsed }} collapsed{{ end }}"
-              type="button" data-bs-toggle="collapse" data-bs-target="#taxonomy-{{ $key }}" aria-expanded="{{ if $collapsed }}false{{ else }}true{{ end }}" aria-controls="taxonomy-{{ $key }}">
+              role="button" data-bs-toggle="collapse" href="#taxonomy-{{ $key }}" aria-expanded="{{ if $collapsed }}false{{ else }}true{{ end }}" aria-controls="taxonomy-{{ $key }}">
                 {{ i18n $key }}
             </a>
           </div>

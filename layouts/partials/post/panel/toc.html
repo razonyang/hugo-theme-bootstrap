@@ -1,5 +1,10 @@
 {{- if partial "functions/toc" . -}}
-<a class="action action-toc{{ if eq .Type "docs" }} d-xxl-none{{ end }}" href="#postTOC" aria-controls="Table of contents" role="button" title="Table of contents">
+{{- if ne .Type "docs" }}
+  <a class="action action-toc d-none d-xxl-block" href="#postTOC" role="button" title="Table of contents">
+    <i class="fas fa-fw fa-list-alt"></i>
+  </a>
+{{- end }}
+<a class="action action-toc d-block d-xxl-none" href="#post-toc-container" role="button" title="Table of contents">
   <i class="fas fa-fw fa-list-alt"></i>
 </a>
 {{- end -}}
