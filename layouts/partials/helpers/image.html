@@ -42,7 +42,6 @@
 {{- end -}}
 {{- $className := default "img-fluid" .class -}}
 {{- $posClassName := "" -}}
-{{- $clearfix := false -}}
 {{- if eq $url.Fragment "center" -}}
   {{- $posClassName = "mx-auto d-block" -}}
 {{- else if or (eq $url.Fragment "floatleft") (eq $url.Fragment "float-start") -}}
@@ -50,13 +49,11 @@
     {{- warnf "The floatleft fragment is deprecated, will be removed in the future, please use float-start instead." }}
   {{- end }}
   {{- $posClassName = "float-start me-2" -}}
-  {{- $clearfix = true -}}
 {{- else if or (eq $url.Fragment "floatright") (eq $url.Fragment "float-end") -}}
   {{- if eq $url.Fragment "floatright" }}
     {{- warnf "The floatright fragment is deprecated, will be removed in the future, please use float-end instead." }}
   {{- end }}
   {{- $posClassName = "float-end ms-2" -}}
-  {{- $clearfix = true -}}
 {{- end -}}
 
 {{- if and $pageResource $resizable $img }}
@@ -125,9 +122,6 @@
 
 {{- $caption := and (default false .page.Site.Params.post.imageTitleAsCaption) .title }}
 
-{{- if $clearfix }}
-<div class="clearfix">
-{{- end }}
 {{- if $caption -}}
 {{- $className = printf "%s figure-img" $className -}}
 <figure class="figure{{ with $posClassName }} {{ . }}{{ end }}">
@@ -150,6 +144,3 @@
 <figcaption class="figure-caption">{{ .title }}</figcaption>
 </figure>
 {{- end }}
-{{- if $clearfix }}
-</div>
-{{- end -}}
