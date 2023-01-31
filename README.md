@@ -54,6 +54,7 @@ Sponsors will appear on our website with their brands and logos.
 
 | Sponsor                                                                                                | Description                                                                                                      |
 | ------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------- |
+| [![Digital Ocean](https://opensource.nyc3.cdn.digitaloceanspaces.com/attribution/assets/SVG/DO_Logo_horizontal_blue.svg)](https://www.digitalocean.com/?utm_medium=opensource&utm_source=hugo-theme-bootstrap)   | One of most popular cloud infrastructure providers.                                    |
 | [![Netlify](https://www.netlify.com/img/global/badges/netlify-color-accent.svg)](https://netlify.app/) | the docs site is deployed on Netlify with [Open Source Plan](https://www.netlify.com/legal/open-source-policy/). |
 | [![DocSearch](https://docsearch.algolia.com/img/docsearch-logo.svg)](https://docsearch.algolia.com/)   | We use DocSearch instead of built-in local search on the documentations site.                                    |
 
