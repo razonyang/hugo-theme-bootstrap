@@ -132,7 +132,7 @@ I set up a public staticman instance for testing, it should works with GitHub re
 
 > You'll need to install the [GitHub App](https://github.com/apps/hbs-staticman) for your repo, so that the instance has access to write comments files to your repo.
 
-- Endpoint: https://hbs-staticman.herokuapp.com
+- Endpoint: `https://hbs-staticman.herokuapp.com`
 
 #### Staticman Configuration
 

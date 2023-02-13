@@ -101,7 +101,7 @@ $ npm install
 
 ### Preview your site
 
-- Start hugo's built-in webserver to [preview](http://localhost:1313/) your website:
+Start hugo's built-in webserver, and then navigate to `http://localhost:1313/`.
 
 ```bash
 $ hugo server

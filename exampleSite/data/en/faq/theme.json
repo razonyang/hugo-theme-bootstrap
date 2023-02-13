@@ -4,7 +4,7 @@
     "questions": [
         {
             "question": "How to set up the FAQ page?",
-            "answer": "See also [FAQ Page](/v1/en/posts/faq)."
+            "answer": "See also [FAQ Page]({{< ref `docs/layouts/faq` >}})."
         },
         {
             "question": "Does FAQ page support Markdown syntax?",
@@ -12,7 +12,7 @@
         },
         {
             "question": "How to add more icons?",
-            "answer": "See also [Look and Feel](/v1/en/posts/look-and-feel#icons)."
+            "answer": "See also [Look and Feel]({{< ref `docs/look-and-feel#icons` >}})."
         },
         {
             "question": "How to remove a language?",
@@ -20,7 +20,7 @@
         },
         {
             "question": "How to add new language?",
-            "answer": "- Put your new language into `config/_default/languages.toml`.\n- [Write Articles](/v1/en/docs/content/)."
+            "answer": "- Put your new language into `config/_default/languages.toml`.\n- [Write Articles]({{< ref `docs/content` >}})."
         }
     ]
 }

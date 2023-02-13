@@ -4,7 +4,7 @@
     "questions": [
         {
             "question": "如何設置 FAQ 頁面？",
-            "answer": "請參閱 [FAQ 頁面](/zh-tw/posts/faq)。"
+            "answer": "請參閱 [FAQ 頁面]({{< ref `docs/layouts/faq` >}})。"
         },
         {
             "question": "FAQ 頁面支持 Markdown 格式嗎？",
@@ -12,7 +12,7 @@
         },
         {
             "question": "如何添加圖標？",
-            "answer": "請參閱 [圖標](/zh-tw/posts/look-and-feel#圖標)。"
+            "answer": "請參閱 [圖標]({{< ref `docs/look-and-feel#圖標` >}})。"
         },
         {
             "question": "如何刪除語言？",
@@ -20,7 +20,7 @@
         },
         {
             "question": "如何添加新語言？",
-            "answer": "- 在 `config/_default/languages.toml` 添加新語言。\n- [書寫文章](/zh-tw/docs/content)。"
+            "answer": "- 在 `config/_default/languages.toml` 添加新語言。\n- [書寫文章]({{< ref `docs/content` >}})。"
         }
     ]
 }
