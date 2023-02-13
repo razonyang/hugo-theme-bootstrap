@@ -4,7 +4,7 @@
     "questions": [
         {
             "question": "FAQページの設置方法は？",
-            "answer": "こちらもご覧下さい [FAQ Page](/v1/ja/posts/faq)."
+            "answer": "こちらもご覧下さい [FAQ Page]({{< ref `docs/layouts/faq` >}})."
         },
         {
             "question": "FAQページはMarkdown構文に対応していますか？",
@@ -12,7 +12,7 @@
         },
         {
             "question": "アイコンを増やすには？",
-            "answer": "こちらもご覧下さい [Look and Feel](/v1/ja/posts/look-and-feel#icons)."
+            "answer": "こちらもご覧下さい [Look and Feel]({{< ref path=`docs/look-and-feel#icons` lang=en >}})."
         },
         {
             "question": "言語を削除するには？",
@@ -20,7 +20,7 @@
         },
         {
             "question": "新しい言語を追加するには？",
-            "answer": "- 新しい言語を `config/_default/languages.toml`に追加\n- [Write Articles](/v1/en/docs/content/)."
+            "answer": "- 新しい言語を `config/_default/languages.toml`に追加\n- [Write Articles]({{< ref path=`docs/content` lang=en >}})."
         }
     ]
 }

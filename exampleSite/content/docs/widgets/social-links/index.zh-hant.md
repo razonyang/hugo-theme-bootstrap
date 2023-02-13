@@ -83,7 +83,7 @@ github = "githubusername"
 | `dockerhub` | Docker Hub 使用者名稱 |
 | `bitbucket` | Bitbucket Workspace ID |
 | `kaggle` | Kaggle 使用者名稱 |
-| `medium` | Medium 使用者名稱或自定義域名（比如：https://custom.domain.tld） |
+| `medium` | Medium 使用者名稱或自定義域名（比如：https://razonyang.com） |
 | `lastfm` | Last.fm 使用者名稱 |
 | `bibibili` | BiliBili 使用者 ID |
 | `youtube` | Youtube 頻道 ID |

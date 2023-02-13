@@ -4,7 +4,7 @@
     "questions": [
         {
             "question": "如何设置 FAQ 页面？",
-            "answer": "请参阅 [FAQ 页面](/zh-cn/posts/faq)。"
+            "answer": "请参阅 [FAQ 页面]({{< ref `docs/layouts/faq` >}})。"
         },
         {
             "question": "FAQ 页面支持 Markdown 格式吗？",
@@ -12,7 +12,7 @@
         },
         {
             "question": "如何添加图标？",
-            "answer": "请参阅 [图标](/zh-cn/posts/look-and-feel#图标)。"
+            "answer": "请参阅 [图标]({{< ref `docs/look-and-feel#图标` >}})。"
         },
         {
             "question": "如何删除语言？",
@@ -20,7 +20,7 @@
         },
         {
             "question": "如何添加新语言？",
-            "answer": "- 在 `config/_default/languages.toml` 添加新语言。\n- [书写文章](/zh-cn/docs/content)。"
+            "answer": "- 在 `config/_default/languages.toml` 添加新语言。\n- [书写文章]({{< ref `docs/content` >}})。"
         }
     ]
 }

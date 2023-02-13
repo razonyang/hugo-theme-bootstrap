@@ -83,7 +83,7 @@ github = "githubusername"
 | `dockerhub` | Docker Hub Username |
 | `bitbucket` | Bitbucket Workspace ID |
 | `kaggle` | Kaggle Username |
-| `medium` | Medium Username or custom domain(e.g. https://custom.domain.tld) |
+| `medium` | Medium Username or custom domain(e.g. https://razonyang.com) |
 | `lastfm` | Last.fm Username |
 | `bibibili` | BiliBili User ID |
 | `youtube` | Youtube Channel ID |
