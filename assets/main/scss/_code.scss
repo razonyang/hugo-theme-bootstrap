@@ -56,15 +56,15 @@ pre {
   }
 }
 
-@if ($code-select) {
-  :not(pre)>code {
+@if $code-select {
+  :not(pre) > code {
     user-select: all;
   }
 }
 
 .code-toggle {
   .highlight-wrapper {
-    margin-top: .5rem;
+    margin-top: 0.5rem;
   }
 
   .nav-tabs {

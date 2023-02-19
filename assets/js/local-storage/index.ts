@@ -1,21 +1,21 @@
-import { default as params } from '@params';
+import { default as params } from "@params";
 
 class PathLocalStorage {
-  private prefix = 'hbs:';
+  private prefix = "hbs:";
 
   constructor(public baseURL: string) {
-    if (baseURL.substring(0, 2) === '//') {
-      baseURL = 'http:' + baseURL;
+    if (baseURL.substring(0, 2) === "//") {
+      baseURL = "http:" + baseURL;
     }
     let url: URL;
     try {
       url = new URL(baseURL);
     } catch (e) {
-      url = new URL(baseURL, location.protocol + '//' + location.host);
+      url = new URL(baseURL, location.protocol + "//" + location.host);
     }
-    const pathname = url.pathname.replace(/^(\/+)/, '').replace(/(\/+)$/, '');
-    if (pathname !== '') {
-      this.prefix += pathname.replace('/', '-') + ':';
+    const pathname = url.pathname.replace(/^(\/+)/, "").replace(/(\/+)$/, "");
+    if (pathname !== "") {
+      this.prefix += pathname.replace("/", "-") + ":";
     }
   }
 

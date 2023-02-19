@@ -1,30 +1,30 @@
-import Component from 'js/component';
-import { default as LocalStorage } from 'js/local-storage';
+import Component from "js/component";
+import { default as LocalStorage } from "js/local-storage";
 
 class PaletteSelector implements Component {
-  key = 'palette';
+  key = "palette";
 
   run() {
     const palette = this.getPalette();
     if (palette) {
       this.setPalette(palette);
     }
-    window.addEventListener('load', () => {
+    window.addEventListener("load", () => {
       this.initPalette();
-    })
+    });
   }
 
   initPalette() {
     const selected = this.getPalette();
-    document.querySelectorAll('.palette').forEach((element) => {
-      const paletteId = element.getAttribute('id').replace('palette-', '');
+    document.querySelectorAll(".palette").forEach((element) => {
+      const paletteId = element.getAttribute("id").replace("palette-", "");
       if (paletteId === selected) {
-        element.classList.add('active');
+        element.classList.add("active");
       }
-      element.addEventListener('click', () => {
+      element.addEventListener("click", () => {
         this.setPalette(paletteId);
-        document.querySelector('.palette.active').classList.remove('active');
-        element.classList.add('active');
+        document.querySelector(".palette.active").classList.remove("active");
+        element.classList.add("active");
       });
     });
   }
@@ -35,18 +35,17 @@ class PaletteSelector implements Component {
       return palette;
     }
 
-    const paletteMeta =
-      document.documentElement.getAttribute('data-palette');
+    const paletteMeta = document.documentElement.getAttribute("data-palette");
     if (paletteMeta) {
       return paletteMeta;
     }
 
-    return '';
+    return "";
   }
 
   setPalette(palette: string) {
     console.debug(`switch to palette: ${palette}`);
-    document.documentElement.setAttribute('data-palette', palette);
+    document.documentElement.setAttribute("data-palette", palette);
     LocalStorage.setItem(this.key, palette);
   }
 }

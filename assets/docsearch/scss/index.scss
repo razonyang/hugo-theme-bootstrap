@@ -27,30 +27,28 @@
   border: none;
   margin: 0;
   padding: 0;
-  margin-left: .5rem;
+  margin-left: 0;
 
   &:hover {
     background: transparent;
     box-shadow: none;
   }
-  
+
   @media (max-width: 1399.98px) {
     margin: 0;
     width: 100%;
   }
 
-  .DocSearch-Search-Icon {
+  .DocSearch-Search-Icon { /* stylelint-disable-line */
     color: var(--#{$prefix}navbar-color);
     height: 1.125rem;
     width: 1.125rem;
   }
 }
 
-.DocSearch-Button {
-  margin-left: 0;
-}
-
+/* stylelint-disable */
 .DocSearch-Button-Placeholder,
 .DocSearch-Button-Keys {
   display: none;
 }
+/* stylelint-enable */

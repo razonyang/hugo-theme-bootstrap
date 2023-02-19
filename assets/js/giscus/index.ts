@@ -1,30 +1,30 @@
-import * as params from '@params';
-import { default as LocalStorage } from 'js/local-storage';
-import ModeToggle from 'js/mode';
+import * as params from "@params";
+import { default as LocalStorage } from "js/local-storage";
+import ModeToggle from "js/mode";
 
 class Giscus {
   run() {
     const theme = params.giscus.theme;
     if (!theme) {
-      document.addEventListener('hbs:mode', (e: CustomEvent) => {
+      document.addEventListener("hbs:mode", (e: CustomEvent) => {
         this.rerender(this.getTheme(e.detail.mode));
       });
       setTimeout(() => {
-        this.rerender(this.getTheme(LocalStorage.getItem('mode')));
+        this.rerender(this.getTheme(LocalStorage.getItem("mode")));
       }, 2000);
     }
   }
 
   getTheme(mode) {
-    if (mode === 'auto') {
+    if (mode === "auto") {
       mode = ModeToggle.getPreferredMode();
     }
-    return mode === 'dark' ? 'dark' : 'light';
+    return mode === "dark" ? "dark" : "light";
   }
 
   rerender(theme) {
     const iframe = document.querySelector<HTMLIFrameElement>(
-      'iframe.giscus-frame'
+      "iframe.giscus-frame"
     );
     if (!iframe) {
       return;
@@ -33,15 +33,15 @@ class Giscus {
       {
         giscus: {
           setConfig: {
-            theme: 'https://giscus.app/themes/' + theme + '.css',
+            theme: "https://giscus.app/themes/" + theme + ".css",
           },
         },
       },
-      'https://giscus.app'
+      "https://giscus.app"
     );
   }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   new Giscus().run();
 });

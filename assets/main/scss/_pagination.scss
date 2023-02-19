@@ -1,5 +1,6 @@
 .pagination {
   justify-content: center;
+
   --#{$prefix}pagination-active-bg: var(--#{$prefix}primary);
   --#{$prefix}pagination-active-border-color: var(--#{$prefix}primary);
 }

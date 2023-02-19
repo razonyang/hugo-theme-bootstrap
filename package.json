@@ -1,11 +1,26 @@
 {
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.30.6",
+    "@typescript-eslint/parser": "^5.30.6",
     "copy-webpack-plugin": "^11.0.0",
+    "eslint": "^8.19.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "2.7.1",
+    "stylelint": "^14.9.1",
+    "stylelint-config-standard": "^26.0.0",
+    "stylelint-config-standard-scss": "^5.0.0",
+    "typescript": "^4.7.4",
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1"
   },
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "watch": "onchange -i -k '**/*.html' -- npm run dev",
+    "dev": "cd exampleSite && hugo server --buildDrafts --disableFastRender --gc",
+    "lint": "npm run eslint && npm run stylelint",
+    "eslint": "eslint assets --ext .ts --ext .js",
+    "stylelint": "stylelint assets/**/*.scss"
   },
   "dependencies": {
     "katex": "^0.16.4"

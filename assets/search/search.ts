@@ -1,7 +1,7 @@
-import Mark from 'mark.js/dist/mark.js';
-import Mustache from 'mustache';
-import Engine from './engine';
-import Form from './form';
+import Mark from "mark.js/dist/mark.js";
+import Mustache from "mustache";
+import Engine from "./engine";
+import Form from "./form";
 
 declare global {
   interface Window {
@@ -21,8 +21,8 @@ export class Search {
   public resultContentCharactersCount: number;
 
   public highlightOptions = {
-    element: 'span',
-    className: 'text-primary',
+    element: "span",
+    className: "text-primary",
   };
 
   public tmplMissingKeywords: string;
@@ -45,7 +45,7 @@ export class Search {
 
   public loadMore: HTMLElement;
 
-  private title = '';
+  private title = "";
 
   private form: Form;
   private engine: Engine;
@@ -61,109 +61,117 @@ export class Search {
   }
 
   run() {
-    this.resultsElement = document.getElementById('searchResults');
-    this.stat = document.getElementById('searchStat');
-    this.loadingSpinner = document.getElementById('loadingSpinner');
+    this.resultsElement = document.getElementById("searchResults");
+    this.stat = document.getElementById("searchStat");
+    this.loadingSpinner = document.getElementById("loadingSpinner");
     this.tmplMissingKeywords = document.getElementById(
-      'templateMissingKeywords'
+      "templateMissingKeywords"
     ).innerHTML;
-    this.tmplNoResults = document.getElementById('templateNoResults').innerHTML;
-    this.tmplStat = document.getElementById('templateStat').innerHTML;
-    this.tmplResult = document.getElementById('templateResult').innerHTML;
+    this.tmplNoResults = document.getElementById("templateNoResults").innerHTML;
+    this.tmplStat = document.getElementById("templateStat").innerHTML;
+    this.tmplResult = document.getElementById("templateResult").innerHTML;
     this.resultContentCharactersCount = window.searchResultContentWordCount;
     this.paginate = window.searchPaginate;
 
-    this.loadMore = document.getElementById('btnLoadMore');
-    this.loadMore.addEventListener('click', () => {
+    this.loadMore = document.getElementById("btnLoadMore");
+    this.loadMore.addEventListener("click", () => {
       this.showLoadingSpinner();
       this.poplateResults().finally(() => {
         this.hideLoadingSpinner();
       });
     });
 
-    fetch(window.searchMetaIndex).then((response) => {
-      return response.json()
-    }).then((data) => {
-      for (const i in data) {
-        const datalist = document.querySelector(`#${i}-list`);
-        const terms = data[i]
-        for (const j in terms) {
-          const option = document.createElement('option');
-          option.value = terms[j];
-          datalist.appendChild(option);
+    fetch(window.searchMetaIndex)
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        for (const i in data) {
+          const datalist = document.querySelector(`#${i}-list`);
+          const terms = data[i];
+          for (const j in terms) {
+            const option = document.createElement("option");
+            option.value = terms[j];
+            datalist.appendChild(option);
+          }
         }
-      }
-    }).catch((err) => {
-      console.error('unable to load search meta index', err)
-    })
+      })
+      .catch((err) => {
+        console.error("unable to load search meta index", err);
+      });
   }
 
   hideLoadMoreBtn() {
-    this.loadMore.classList.add('d-none');
+    this.loadMore.classList.add("d-none");
   }
 
   showLoadMoreBtn() {
-    this.loadMore.classList.remove('d-none');
+    this.loadMore.classList.remove("d-none");
   }
 
   hideLoadingSpinner() {
-    if (!this.loadingSpinner.classList.contains('d-none')) {
-      this.loadingSpinner.classList.add('d-none');
+    if (!this.loadingSpinner.classList.contains("d-none")) {
+      this.loadingSpinner.classList.add("d-none");
     }
   }
 
   showLoadingSpinner() {
-    this.loadingSpinner.classList.remove('d-none');
+    this.loadingSpinner.classList.remove("d-none");
   }
 
   search(data: FormData) {
-    this.resultsElement.innerHTML = ''; // Clear previous results.
+    this.resultsElement.innerHTML = ""; // Clear previous results.
     this.showLoadingSpinner();
-    if (!data.has('q')) {
+    if (!data.has("q")) {
       this.stat.innerHTML = this.tmplMissingKeywords;
       this.hideLoadMoreBtn();
       this.hideLoadingSpinner();
       return;
     }
-    this.setPage(data.get('q'));
-    this.engine.search(data).then((results) => {
-      this.page = 1;
-      this.results = results;
-      if (this.results.length > this.paginate) {
-        this.showLoadMoreBtn();
-      } else {
-        this.hideLoadMoreBtn();
-      }
-    }).then(() => {
-      if (this.results.length > 0) {
-        this.poplateResultsInternal();
-      } else {
-        this.stat.innerHTML = this.tmplNoResults;
-      }
-    }).catch((err) => {
-      console.error(err)
-    }).finally(() => {
-      this.hideLoadingSpinner();
-    })
+    this.setPage(data.get("q"));
+    this.engine
+      .search(data)
+      .then((results) => {
+        this.page = 1;
+        this.results = results;
+        if (this.results.length > this.paginate) {
+          this.showLoadMoreBtn();
+        } else {
+          this.hideLoadMoreBtn();
+        }
+      })
+      .then(() => {
+        if (this.results.length > 0) {
+          this.poplateResultsInternal();
+        } else {
+          this.stat.innerHTML = this.tmplNoResults;
+        }
+      })
+      .catch((err) => {
+        console.error(err);
+      })
+      .finally(() => {
+        this.hideLoadingSpinner();
+      });
   }
 
   setPage(query) {
-    const title = (query ? `${query} - ` : '') + this.title;
+    const title = (query ? `${query} - ` : "") + this.title;
     const url = `${window.location.pathname}?q=${encodeURIComponent(query)}`;
     window.history.pushState(null, title, url);
     document.title = title; // history.pushState's title was ignored.
   }
 
   static normalizeTaxonomy(text, render) {
-    return render(text).toLowerCase().replaceAll(' ', '-');
+    return render(text).toLowerCase().replaceAll(" ", "-");
   }
 
   poplateResults() {
-    return new Promise(resolve => {
+    return new Promise((resolve) => {
       setTimeout(() => {
-        resolve(this.poplateResultsInternal())
-      }, 1)
-    })
+        resolve(this.poplateResultsInternal());
+      }, 1);
+    });
   }
 
   private poplateResultsInternal() {
@@ -174,7 +182,7 @@ export class Search {
       return;
     }
     this.loading = true;
-    this.loadMore.setAttribute('disabled', '');
+    this.loadMore.setAttribute("disabled", "");
     this.stat.innerHTML = Mustache.render(this.tmplStat, {
       total: this.results.length,
     });
@@ -193,10 +201,10 @@ export class Search {
         match.indices.forEach((index) => {
           const keyword = match.value.substring(index[0], index[1] + 1);
           switch (match.key) {
-            case 'title':
+            case "title":
               titleKeywords.push(keyword);
               break;
-            case 'content':
+            case "content":
               contentKeywords.push(keyword);
               break;
             default:
@@ -216,7 +224,7 @@ export class Search {
           }
         }
         content = `${
-          (contentStart === 0 ? '' : '...') +
+          (contentStart === 0 ? "" : "...") +
           content.substring(
             contentStart,
             contentStart + this.resultContentCharactersCount
@@ -225,7 +233,7 @@ export class Search {
       }
       const id = `searchResult${idx}`;
       this.resultsElement.insertAdjacentHTML(
-        'beforeend',
+        "beforeend",
         Mustache.render(this.tmplResult, {
           title: result.item.title,
           content,
@@ -249,15 +257,15 @@ export class Search {
       this.highlight(id, titleKeywords, contentKeywords);
     }
     this.loading = false;
-    this.loadMore.removeAttribute('disabled');
+    this.loadMore.removeAttribute("disabled");
     if (this.results.length <= this.paginate * this.page) {
       this.hideLoadMoreBtn();
     } else {
       this.showLoadMoreBtn();
     }
     this.page += 1;
-    const event = document.createEvent('HTMLEvents');
-    event.initEvent('hbs:viewer:update');
+    const event = document.createEvent("HTMLEvents");
+    event.initEvent("hbs:viewer:update");
     document.dispatchEvent(event);
   }
 

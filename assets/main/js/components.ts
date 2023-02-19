@@ -1,4 +1,4 @@
-import Component from 'js/component';
+import Component from "js/component";
 
 const components: Component[] = [];
 

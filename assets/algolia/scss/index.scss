@@ -11,103 +11,100 @@
 @import 'bootstrap/scss/utilities';
 
 :root {
-    --aa-primary-color-rgb: var(--#{$prefix}primary-rgb);
-    --aa-description-highlight-background-color-rgb: var(--#{$prefix}primary-rgb);
-    --aa-text-color-rgb: var(--#{$prefix}body-color-rgb);
-    --aa-selected-color-rgb: var(--#{$prefix}primary-rgb);
-    --aa-background-color-rgb: var(--#{$prefix}body-bg-rgb);
+  --aa-primary-color-rgb: var(--#{$prefix}primary-rgb);
+  --aa-description-highlight-background-color-rgb: var(--#{$prefix}primary-rgb);
+  --aa-text-color-rgb: var(--#{$prefix}body-color-rgb);
+  --aa-selected-color-rgb: var(--#{$prefix}primary-rgb);
+  --aa-background-color-rgb: var(--#{$prefix}body-bg-rgb);
 }
 
-.aa-Form {
+.aa-Form { /* stylelint-disable-line */
+  background: inherit;
+}
+
+.aa-Autocomplete { /* stylelint-disable-line */
+  width: 100%;
+}
+
+.aa-Panel { /* stylelint-disable-line */
+  --aa-panel-max-height: 240px;
+
+  box-shadow: none;
+  position: relative;
+  top: 0 !important;
+
+  @include media-breakpoint-up(md) {
+    --aa-panel-max-height: 360px;
+  }
+}
+
+.aa-Item { /* stylelint-disable-line */
+  padding: 0.25rem 0.5rem;
+
+  mark {
     background: inherit;
-}
+    padding: 0 0.075em;
+    text-decoration: underline;
+  }
 
-.aa-Autocomplete {
-    width: 100%;
-}
+  &[aria-selected='true'] {
+    background: transparent;
 
-.aa-Panel {
-    --aa-panel-max-height: 240px;
-    box-shadow: none;
-    position: relative;
-    top: 0 !important;
-
-    @include media-breakpoint-up(md) {
-        --aa-panel-max-height: 360px;
+    .aa-ItemWrapper { /* stylelint-disable-line */
+      background-color: var(--#{$prefix}primary) !important;
+      color: white !important;
     }
-}
 
-.aa-Item {
-    padding: .25rem .5rem;
-
-    &[aria-selected=true] {
-        background: transparent;
-
-        .aa-ItemWrapper {
-            background-color: var(--#{$prefix}primary) !important;
-            color: white !important;
-        }
-
-        .aa-ItemContentTitle {
-            color: white !important;
-        }
-
-        .aa-ItemContentDescription {
-            color: rgba(255,255,255, 0.75) !important;
-        }
+    .aa-ItemContentTitle { /* stylelint-disable-line */
+      color: white !important;
     }
-}
 
-.aa-Item {
+    .aa-ItemContentDescription { /* stylelint-disable-line */
+      color: rgba(255, 255, 255, 0.75) !important;
+    }
+
     mark {
-        background: inherit;
-        padding: 0 0.075em;
-        text-decoration: underline;
+      color: inherit;
     }
-
-    &[aria-selected="true"] {
-        mark {
-            color: inherit;
-        }
-    }
+  }
 }
 
-.aa-ItemIcon {
-    height: 100%;
-    background: transparent;
-    border: none;
-    box-shadow: none;
+.aa-ItemIcon { /* stylelint-disable-line */
+  height: 100%;
+  background: transparent;
+  border: none;
+  box-shadow: none;
 }
 
-.aa-ItemContentDescription {
-    white-space: nowrap;
+.aa-ItemContentDescription { /* stylelint-disable-line */
+  white-space: nowrap;
 }
 
-.aa-PanelLayout {
-    padding: 0;
+.aa-PanelLayout { /* stylelint-disable-line */
+  padding: 0;
 }
 
-.aa-DetachedSearchButton {
-    background: transparent;
-    border: none;
-    padding: 0;
+.aa-DetachedSearchButton { /* stylelint-disable-line */
+  background: transparent;
+  border: none;
+  padding: 0;
 }
 
-.aa-DetachedSearchButtonIcon {
-    width: 1.25rem;
+.aa-DetachedSearchButtonIcon { /* stylelint-disable-line */
+  width: 1.25rem;
 }
 
-.aa-SubmitIcon {
-    color: var(--#{$prefix}navbar-color);
+.aa-SubmitIcon { /* stylelint-disable-line */
+  color: var(--#{$prefix}navbar-color);
 }
 
-.aa-DetachedSearchButtonPlaceholder {
-    display: none;
+.aa-DetachedSearchButtonPlaceholder { /* stylelint-disable-line */
+  display: none;
 }
 
-.aa-noResults {
-    padding: 1rem .5rem;
-    text-align: center;
-    background: var(--#{$prefix}secondary);
-    color: white;
+.aa-noResults { /* stylelint-disable-line */
+  padding: 1rem 0.5rem;
+  text-align: center;
+  background: var(--#{$prefix}secondary);
+  color: white;
 }

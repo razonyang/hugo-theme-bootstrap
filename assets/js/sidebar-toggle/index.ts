@@ -1,14 +1,14 @@
-import Component from 'js/component';
-import { default as LocalStorage } from 'js/local-storage';
+import Component from "js/component";
+import { default as LocalStorage } from "js/local-storage";
 
 class SidebarToggle implements Component {
   main: HTMLElement;
 
   sidebar: HTMLElement;
 
-  key = 'sidebar-toggle';
+  key = "sidebar-toggle";
 
-  colClass = 'col-xxl-';
+  colClass = "col-xxl-";
 
   constructor(public button: HTMLElement) {}
 
@@ -17,14 +17,14 @@ class SidebarToggle implements Component {
       return;
     }
 
-    this.sidebar = document.querySelector('.content .sidebar');
+    this.sidebar = document.querySelector(".content .sidebar");
     this.main = this.sidebar.previousElementSibling as HTMLElement;
-    this.button.addEventListener('click', () => {
+    this.button.addEventListener("click", () => {
       this.toggle();
     });
 
     const val = LocalStorage.getItem(this.key);
-    if (val === 'hide' && this.isShown()) {
+    if (val === "hide" && this.isShown()) {
       this.hide();
     }
   }
@@ -38,14 +38,14 @@ class SidebarToggle implements Component {
   }
 
   isShown() {
-    return !this.sidebar.classList.contains('d-none');
+    return !this.sidebar.classList.contains("d-none");
   }
 
   getWidth(element: HTMLElement) {
     let width = 0;
     element.classList.forEach((value) => {
       if (value.indexOf(this.colClass) === 0) {
-        width = parseInt(value.replace(this.colClass, ''));
+        width = parseInt(value.replace(this.colClass, ""));
       }
     });
 
@@ -77,9 +77,9 @@ class SidebarToggle implements Component {
       this.colClass + this.getMainWidth(),
       this.colClass + this.getFullWidth()
     );
-    this.sidebar.classList.add('d-none');
-    this.button.classList.add('active');
-    LocalStorage.setItem(this.key, 'hide');
+    this.sidebar.classList.add("d-none");
+    this.button.classList.add("active");
+    LocalStorage.setItem(this.key, "hide");
   }
 
   show() {
@@ -87,8 +87,8 @@ class SidebarToggle implements Component {
       this.colClass + this.getFullWidth(),
       this.colClass + this.getMainWidth()
     );
-    this.sidebar.classList.remove('d-none');
-    this.button.classList.remove('active');
+    this.sidebar.classList.remove("d-none");
+    this.button.classList.remove("active");
     LocalStorage.removeItem(this.key);
   }
 }

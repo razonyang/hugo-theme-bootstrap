@@ -15,7 +15,7 @@
 
       &:not(:first-child) {
         &::before {
-          content: "|";
+          content: '|';
           padding-right: 0.5rem;
           color: var(--#{$prefix}surface-color-disabled);
         }

@@ -4,7 +4,8 @@
       "string-quotes": "single",
       "color-function-notation": "legacy",
       "scss/no-global-function-names": null,
-      "alpha-value-notation": "number"
+      "alpha-value-notation": "number",
+      "scss/at-extend-no-missing-placeholder": null
     },
     "ignoreFiles": [
       "assets/main/scss/_config.scss",

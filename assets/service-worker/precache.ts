@@ -36,7 +36,7 @@ function precacheAssets(config) {
       );
     })
     .catch((error) => {
-      console.error('unable to fetch and precache styles', error);
+      console.error("unable to fetch and precache styles", error);
     });
 }
 
