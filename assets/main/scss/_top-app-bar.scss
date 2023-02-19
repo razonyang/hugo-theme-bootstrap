@@ -48,15 +48,17 @@ $header-caret-width: 0.35em;
     @include media-breakpoint-up(xxl) {
       &.active {
         position: relative;
+
         --#{$prefix}body-color: var(--#{$prefix}body-color);
 
         &::before {
-          content: "";
+          content: '';
           position: absolute;
           left: calc(50% - #{$header-caret-width});
           top: calc(100% + #{$header-caret-width} * 1.25);
           border-left: $header-caret-width solid transparent;
           border-right: $header-caret-width solid transparent;
+
           // unable to access the :root variable --#{$prefix}body-bg, use SCSS variable instead.
           border-bottom: $header-caret-width solid #{$body-bg};
         }
@@ -78,25 +80,6 @@ $header-caret-width: 0.35em;
     color: var(--#{$prefix}on-primary-secondary);
   }
 
-  .dropdown-item {
-    --#{$prefix}dropdown-item-padding-y: 0.5rem;
-
-    &:hover,
-    &:active,
-    &.active,
-    &:focus {
-      .dropdown-item-icon {
-        .svg-inline--fa {
-          color: var(--#{$prefix}primary);
-        }
-      }
-
-      .dropdown-item-description {
-        color: rgba(255, 255, 255, 0.7) !important;
-      }
-    }
-  }
-
   .dropdown-item-icon {
     background-color: var(--#{$prefix}secondary-bg);
   }
@@ -109,6 +92,25 @@ $header-caret-width: 0.35em;
 
     @include media-breakpoint-down(md) {
       display: none;
+    }
+  }
+
+  .dropdown-item {
+    --#{$prefix}dropdown-item-padding-y: 0.5rem;
+
+    &:hover,
+    &:active,
+    &.active,
+    &:focus {
+      .dropdown-item-icon {
+        .svg-inline--fa { /* stylelint-disable-line */
+          color: var(--#{$prefix}primary);
+        }
+      }
+
+      .dropdown-item-description {
+        color: rgba(255, 255, 255, 0.7) !important;
+      }
     }
   }
 

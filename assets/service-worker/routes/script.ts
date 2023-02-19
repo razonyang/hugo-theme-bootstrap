@@ -1,12 +1,12 @@
-import { CacheableResponsePlugin } from 'workbox-cacheable-response';
-import { ExpirationPlugin } from 'workbox-expiration';
-import { Route } from 'workbox-routing';
-import { CacheFirst } from 'workbox-strategies';
+import { CacheableResponsePlugin } from "workbox-cacheable-response";
+import { ExpirationPlugin } from "workbox-expiration";
+import { Route } from "workbox-routing";
+import { CacheFirst } from "workbox-strategies";
 
 function scriptRoute(config) {
   return new Route(
     ({ request, sameOrigin }) => {
-      return sameOrigin && request.destination === 'script';
+      return sameOrigin && request.destination === "script";
     },
     new CacheFirst({
       cacheName: config.scriptsCacheName,

@@ -1,5 +1,5 @@
-import { Search } from './search';
+import { Search } from "./search";
 
-document.addEventListener('DOMContentLoaded', () => {
-  new Search(document.querySelector('#searchForm')).run();
+document.addEventListener("DOMContentLoaded", () => {
+  new Search(document.querySelector("#searchForm")).run();
 });

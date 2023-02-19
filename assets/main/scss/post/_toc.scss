@@ -1,33 +1,4 @@
-#TableOfContents,
-#post-toc-container > nav { /* stylelint-disable-line */
-  ol,
-  ul {
-    @if $tocStyleType {
-      list-style-type: #{$tocStyleType};
-    }
-
-    padding-left: 1rem;
-  }
-
-  >ol,
-  >ul {
-    @if $tocStyleType == none {
-      padding-left: 0;
-    }
-  }
-
-  ul,
-  li {
-    margin-bottom: 0.25rem;
-  }
-
-  a {
-    &.active {
-      color: var(--#{$prefix}primary);
-    }
-  }
-}
-
+/* stylelint-disable selector-id-pattern */
 #TableOfContents {
   @extend .surface; /* stylelint-disable-line */
 }
@@ -37,8 +8,43 @@
   color: var(--#{$prefix}surface-color);
 }
 
+@mixin toc {
+  ol,
+  ul {
+    @if $tocStyleType {
+      list-style-type: #{$tocStyleType};
+    }
+
+    padding-left: 1rem;
+  }
+
+  ul,
+  li {
+    margin-bottom: 0.25rem;
+  }
+
+  >ol,
+  >ul {
+    @if $tocStyleType == none {
+      padding-left: 0 !important;
+    }
+  }
+
+  a {
+    &.active {
+      color: var(--#{$prefix}primary);
+    }
+  }
+}
+
+#TableOfContents,
+#post-toc-container > nav { /* stylelint-disable-line */
+  @include toc;
+}
+
 .post {
   #TableOfContents {
     color: var(--#{$prefix}surface-color) !important;
   }
 }
+/* stylelint-enable selector-id-pattern */

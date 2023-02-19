@@ -1,4 +1,4 @@
-import { config, dom, library } from '@fortawesome/fontawesome-svg-core';
+import { config, dom, library } from "@fortawesome/fontawesome-svg-core";
 import {
   faAlipay,
   faArtstation,
@@ -38,15 +38,18 @@ import {
   faWeixin,
   faXing,
   faYoutube,
-  faZhihu
-} from '@fortawesome/free-brands-svg-icons';
-import { faStar } from '@fortawesome/free-regular-svg-icons';
+  faZhihu,
+} from "@fortawesome/free-brands-svg-icons";
+import { faStar } from "@fortawesome/free-regular-svg-icons";
 import {
   faAdjust,
   faArrowsAltV,
   faBars,
   faBuilding,
-  faCheckCircle, faChevronCircleDown, faChevronDown, faCode,
+  faCheckCircle,
+  faChevronCircleDown,
+  faChevronDown,
+  faCode,
   faCoffee,
   faCog,
   faColumns,
@@ -64,8 +67,11 @@ import {
   faFileAlt,
   faFileArchive,
   faFolder,
-  faFont, faGlobe, faHistory,
-  faHome, faInfoCircle,
+  faFont,
+  faGlobe,
+  faHistory,
+  faHome,
+  faInfoCircle,
   faLanguage,
   faLink,
   faList,
@@ -91,10 +97,10 @@ import {
   faTimes,
   faTv,
   faUndo,
-  faUser
-} from '@fortawesome/free-solid-svg-icons';
-import { default as customIcons } from './custom';
-import { faBilibili, faLiberapay, faOffline, faTipeee } from './icons';
+  faUser,
+} from "@fortawesome/free-solid-svg-icons";
+import { default as customIcons } from "./custom";
+import { faBilibili, faLiberapay, faOffline, faTipeee } from "./icons";
 
 let icons = [
   // Solid Icons

@@ -3,15 +3,15 @@ function catchHandler(config) {
 
   return async (options) => {
     const cache = await self.caches.open(config.fallbacksCacheName);
-    let fallback = '/offline/';
-    if (options.request.destination === 'image') {
+    let fallback = "/offline/";
+    if (options.request.destination === "image") {
       fallback = config.fallbacksImage;
     } else {
       const lang = getLanguageFromRequest(options.request, config);
-      if (lang !== '') {
-        fallback = '/' + lang + fallback;
+      if (lang !== "") {
+        fallback = "/" + lang + fallback;
       }
-      fallback = baseURL.pathname.replace(/\/+$/, '') + fallback;
+      fallback = baseURL.pathname.replace(/\/+$/, "") + fallback;
     }
     return (await cache.match(fallback)) || Response.error();
   };
@@ -19,13 +19,13 @@ function catchHandler(config) {
 
 function getLanguageFromRequest(request, config): string {
   let url: string = request.url.toString();
-  url = url.replace(config.baseURL, '');
-  const paths = url.split('/');
+  url = url.replace(config.baseURL, "");
+  const paths = url.split("/");
   if (paths.length > 0 && config.langs.includes(paths[0])) {
     return paths[0];
   }
 
-  return '';
+  return "";
 }
 
 export default catchHandler;

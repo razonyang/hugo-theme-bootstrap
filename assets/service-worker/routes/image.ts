@@ -1,12 +1,12 @@
-import { CacheableResponsePlugin } from 'workbox-cacheable-response';
-import { ExpirationPlugin } from 'workbox-expiration';
-import { Route } from 'workbox-routing';
-import { CacheFirst } from 'workbox-strategies';
+import { CacheableResponsePlugin } from "workbox-cacheable-response";
+import { ExpirationPlugin } from "workbox-expiration";
+import { Route } from "workbox-routing";
+import { CacheFirst } from "workbox-strategies";
 
 function imageRoute(config) {
   return new Route(
     ({ request }) => {
-      return request.destination === 'image';
+      return request.destination === "image";
     },
     new CacheFirst({
       cacheName: config.imagesCacheName,

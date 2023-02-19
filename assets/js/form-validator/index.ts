@@ -1,19 +1,19 @@
-import Component from 'js/component';
+import Component from "js/component";
 
 class FormValidator implements Component {
   run() {
-    const forms = document.querySelectorAll('.needs-validation');
+    const forms = document.querySelectorAll(".needs-validation");
 
     Array.prototype.slice.call(forms).forEach(function (form) {
       form.addEventListener(
-        'submit',
+        "submit",
         function (event) {
           if (!form.checkValidity()) {
             event.preventDefault();
             event.stopPropagation();
           }
 
-          form.classList.add('was-validated');
+          form.classList.add("was-validated");
         },
         false
       );

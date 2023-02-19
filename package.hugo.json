@@ -4,10 +4,6 @@
   "dependencies": {
     "@algolia/autocomplete-js": "^1.7.3",
     "@algolia/autocomplete-theme-classic": "^1.7.3",
-    "@babel/cli": "^7.17.3",
-    "@babel/core": "^7.17.4",
-    "@babel/preset-env": "^7.16.11",
-    "@babel/preset-typescript": "^7.16.7",
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-regular-svg-icons": "^5.15.4",
@@ -29,21 +25,11 @@
     "postcss-cli": "^9.1.0",
     "rtlcss": "^3.5.0",
     "viewerjs": "^1.10.4",
-    "webpack": "^5.69.1",
     "workbox-cacheable-response": "^6.4.2",
     "workbox-expiration": "^6.4.2",
     "workbox-precaching": "^6.4.2",
     "workbox-routing": "^6.4.2",
     "workbox-strategies": "^6.4.2"
-  },
-  "devDependencies": {
-    "copy-webpack-plugin": "^10.2.4",
-    "webpack-cli": "^4.9.1"
-  },
-  "scripts": {
-    "serve": "cd exampleSite && hugo server --buildDrafts --disableFastRender",
-    "build": "webpack",
-    "pack": "hugo mod npm pack"
   },
   "repository": {
     "type": "git",

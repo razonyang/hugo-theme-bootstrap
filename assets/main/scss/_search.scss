@@ -67,7 +67,7 @@
   width: fit-content;
 
   &::before {
-    content: "★★★★★";
+    content: '★★★★★';
   }
 
   span {
@@ -77,7 +77,7 @@
 
     &::before {
       color: gold;
-      content: "★★★★★";
+      content: '★★★★★';
     }
   }
 }

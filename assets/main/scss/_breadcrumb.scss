@@ -1,20 +1,20 @@
 .hbs-breadcrumb {
-    .breadcrumb-item {
-        max-width: 240px;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-    }
+  .breadcrumb-item {
+    max-width: 240px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
 
-    @include media-breakpoint-down(sm) {
-        .breadcrumb-item:not(:last-child):not(:first-child) {
-            &::after {
-                content: '...';
-            }
+  @include media-breakpoint-down(sm) {
+    .breadcrumb-item:not(:last-child, :first-child) {
+      &::after {
+        content: '...';
+      }
 
-            a {
-                display: none;
-            }
-        }
+      a {
+        display: none;
+      }
     }
+  }
 }

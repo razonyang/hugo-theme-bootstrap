@@ -1,1 +1,1 @@
-import 'masonry-layout/masonry';
+import "masonry-layout/masonry";

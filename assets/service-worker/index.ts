@@ -1,13 +1,13 @@
-import { registerRoute, setCatchHandler } from 'workbox-routing';
-import precacheAssets from './precache';
-import { catchHandler } from './handlers';
+import { registerRoute, setCatchHandler } from "workbox-routing";
+import precacheAssets from "./precache";
+import { catchHandler } from "./handlers";
 import {
   fontRoute,
   imageRoute,
   pageRoute,
   scriptRoute,
   styleRoute,
-} from './routes';
+} from "./routes";
 
 registerRoute(fontRoute(config));
 registerRoute(imageRoute(config));
@@ -15,14 +15,14 @@ registerRoute(pageRoute(config));
 registerRoute(scriptRoute(config));
 registerRoute(styleRoute(config));
 
-self.addEventListener('install', (event) => {
+self.addEventListener("install", (event) => {
   if (config.fallbacks) {
     event.waitUntil(
       caches
         .open(config.fallbacksCacheName)
         .then((cache) => cache.addAll(config.fallbacks))
         .catch((error) => {
-          console.log('unable to cache fallbacks:', error);
+          console.log("unable to cache fallbacks:", error);
         })
     );
   }
@@ -33,7 +33,7 @@ self.addEventListener('install', (event) => {
         .open(config.fontsCacheName)
         .then((cache) => cache.addAll(config.fonts))
         .catch((error) => {
-          console.log('unable to cache fonts:', error);
+          console.log("unable to cache fonts:", error);
         })
     );
   }
@@ -43,7 +43,7 @@ self.addEventListener('install', (event) => {
         .open(config.imagesCacheName)
         .then((cache) => cache.addAll(config.images))
         .catch((error) => {
-          console.log('unable to cache images:', error);
+          console.log("unable to cache images:", error);
         })
     );
   }
@@ -53,7 +53,7 @@ self.addEventListener('install', (event) => {
         .open(config.pagesCacheName)
         .then((cache) => cache.addAll(config.pages))
         .catch((error) => {
-          console.log('unable to cache pages:', error);
+          console.log("unable to cache pages:", error);
         })
     );
   }
@@ -63,7 +63,7 @@ self.addEventListener('install', (event) => {
         .open(config.scriptsCacheName)
         .then((cache) => cache.addAll(config.scripts))
         .catch((error) => {
-          console.log('unable to cache scripts:', error);
+          console.log("unable to cache scripts:", error);
         })
     );
   }
@@ -73,7 +73,7 @@ self.addEventListener('install', (event) => {
         .open(config.stylesCacheName)
         .then((cache) => cache.addAll(config.styles))
         .catch((error) => {
-          console.log('unable to cache styles:', error);
+          console.log("unable to cache styles:", error);
         })
     );
   }

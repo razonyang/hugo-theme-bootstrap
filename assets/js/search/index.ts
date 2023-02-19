@@ -1,40 +1,41 @@
-import { default as params } from '@params';
+import { default as params } from "@params";
 
 (() => {
-    'use strict'
+  "use strict";
 
-    const shortcut = params?.search?.shortcut === undefined ?
-        ['/'] : 
-        params.search.shortcut
+  const shortcut =
+    params?.search?.shortcut === undefined ? ["/"] : params.search.shortcut;
 
-    const keys = {}
+  const keys = {};
 
-    const press = (e: KeyboardEvent) => {
-        if (e.type === 'keydown') {
-            keys[e.key] = 1
-        } else {
-            delete keys[e.key]   
-        }
+  const press = (e: KeyboardEvent) => {
+    if (e.type === "keydown") {
+      keys[e.key] = 1;
+    } else {
+      delete keys[e.key];
+    }
+  };
+
+  const isPressed = (expectedKeys: Array<string>): boolean => {
+    for (const key of expectedKeys) {
+      if (!(key in keys)) {
+        return false;
+      }
     }
 
-    const isPressed = (expectedKeys: Array<string>): boolean => {
-        for (let key of expectedKeys) {
-            if (!(key in keys)) {
-                return false
-            }
-        }
+    return true;
+  };
 
-        return true
-    }
-    
-    if (shortcut.length > 0) {
-        document.addEventListener('keydown', (e) => {
-            press(e)
-            if (isPressed(shortcut)) {
-                (document.querySelector('input.search-input') as HTMLInputElement)?.focus()
-                e.preventDefault()
-            }
-        })
-        document.addEventListener('keyup', press)
-    }
-})()
+  if (shortcut.length > 0) {
+    document.addEventListener("keydown", (e) => {
+      press(e);
+      if (isPressed(shortcut)) {
+        (
+          document.querySelector("input.search-input") as HTMLInputElement
+        )?.focus();
+        e.preventDefault();
+      }
+    });
+    document.addEventListener("keyup", press);
+  }
+})();

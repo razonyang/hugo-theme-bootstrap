@@ -1,35 +1,35 @@
 .slide {
-    position: relative;
-    display: flex;
+  position: relative;
+  display: flex;
 }
 
 .slide-inner {
-    flex-wrap: nowrap;
-    overflow: hidden;
-    width: 100%;
-    margin: 0;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  width: 100%;
+  margin: 0;
+}
+
+.slide-control-left {
+  left: 0;
+  top: 0;
+}
+
+.slide-control-right {
+  right: 0;
+  top: 0;
 }
 
 .slide-control-left,
 .slide-control-right {
-    border: none;
-    background: transparent;
-    color: var(--#{$prefix}secondary);
-    height: 100%;
-    position: absolute;
-    width: 80px;
+  border: none;
+  background: transparent;
+  color: var(--#{$prefix}secondary);
+  height: 100%;
+  position: absolute;
+  width: 80px;
 
-    &:hover {
-        color: var(--#{$prefix}primary);
-    }
-}
-
-.slide-control-left {
-    left: 0;
-    top: 0;
-}
-
-.slide-control-right {
-    right: 0;
-    top: 0;
+  &:hover {
+    color: var(--#{$prefix}primary);
+  }
 }

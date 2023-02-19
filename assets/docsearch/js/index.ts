@@ -1,17 +1,17 @@
-import docsearch from '@docsearch/js';
-import { default as params } from '@params';
-import { default as customOptions } from './options';
+import docsearch from "@docsearch/js";
+import { default as params } from "@params";
+import { default as customOptions } from "./options";
 
 const defaultOptions = {
-  container: '.search-button',
+  container: ".search-button",
 };
 
 const replacements = {
-  appid: 'appId',
-  apikey: 'apiKey',
-  indexname: 'indexName',
-  disableuserpersonalization: 'disableUserPersonalization',
-  initialquery: 'initialQuery',
+  appid: "appId",
+  apikey: "apiKey",
+  indexname: "indexName",
+  disableuserpersonalization: "disableUserPersonalization",
+  initialquery: "initialQuery",
 };
 
 // Replace the parameter keys, since Hugo parameters are case-insensitive.
@@ -24,5 +24,5 @@ for (const name in params) {
 }
 
 options = Object.assign(defaultOptions, options, customOptions);
-console.debug('DocSearch options:', options);
+console.debug("DocSearch options:", options);
 docsearch(options);
