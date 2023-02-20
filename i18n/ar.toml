@@ -25,8 +25,14 @@ other = "الكُتَّاب"
 [button_copy_url]
 other = "نسخ الرابط"
 
+[button_fullscreen]
+other = "كامل الشاشة"
+
 [button_reload]
 other = "تحديث"
+
+[button_run_game]
+other = "تشغيل اللعبة"
 
 [button_social_share]
 other = "مشاركة"
@@ -79,6 +85,27 @@ other = "أصفر"
 [comments]
 other = "التعليقات"
 
+[comments_email]
+other = "البريد الإلكتروني"
+
+[comments_message]
+other = "الرسالة"
+
+[comments_name]
+other = "الاسم"
+
+[comments_reply]
+other = "رد"
+
+[comments_reply_to]
+other = "رد على"
+
+[comments_submit]
+other = "إرسال"
+
+[comments_url]	
+other = "العناون"
+
 [contact_name]
 other = "الاسم"
 
@@ -121,6 +148,21 @@ other = "كبير جدا"
 [font_size_xs]
 other = "صغير جدا"
 
+[funding_alipay]
+other = "علي باي"
+
+[funding_ko_fi]
+other = "Ko-fi"
+
+[funding_open_collective]
+other = "Open Collective"
+
+[funding_patreon]
+other = "باتريون"
+
+[funding_wechat]
+other = "وي شات"
+
 [go_back]
 other = "الرجوع للخلف"
 
@@ -132,6 +174,9 @@ other = "اللغة"
 
 [liberapay]
 other = "ليبرا باي"
+
+[load]
+other = "تحميل"
 
 [load_more]
 other = "تحميل المزيد"
@@ -146,7 +191,10 @@ other = "المتصفح الذي تستخدمه لا يدعم جافاسكريب
 other = "يبدو أنك غير متصل."
 
 [offline_info]
-other = "يبدو أن هناك مشكلة في اتصالك بالإنترنت. من فضلك تأكد من حالة الشبكة لديك."
+other = """
+<p>يبدو أن هناك مشكلة في اتصالك بالإنترنت. من فضلك تأكد من حالة الشبكة لديك.</p>
+<p>تواصل معنا من فضلك إن كنت تظن أن هذه المشكلة من الخادم. شكرا لك.</p>
+"""
 
 [pagination_title]
 other = "الصفحة {{ .PageNumber }}"
@@ -203,6 +251,9 @@ other = "بحث متقدم"
 [search_date]
 other = "التاريخ"
 
+[search_input_placeholder]
+other = "اكتب لبدء البحث"
+
 [search_missing_keywords]
 other = "من فضلك أدخل كلمات البحث"
 
@@ -211,6 +262,9 @@ other = "لا يوجد نتائج"
 
 [search_score]
 other = "التقييم"
+
+[search_shortcut]
+other = "اضغط {{ .Shortcut }} لبدء البحث"
 
 [search_sorting]
 other = "الترتيب"
@@ -226,6 +280,117 @@ other = "السلاسل"
 
 [settings]
 other = "الإعدادات"
+
+[social_artstation]
+other = "ArtStation"
+
+[social_bilibili]
+other = "Bilibili"
+
+[social_bitbucket]
+other = "Bitbucket"
+
+[social_discord]
+other = "ديسكورد"
+
+[social_discourse]
+other = "ديسكورس"
+
+[social_dockerhub]
+other = "Docker Hub"
+
+[social_email]
+other = "البريد الإلكتروني"
+
+[social_facebook]
+other = "فيس بوك"
+
+[social_facebookgroup]
+other = "مجموعة فيس بوك"
+
+[social_github]
+other = "جيت هب"
+
+[social_gitlab]
+other = "جيت لاب"
+
+[social_instagram]
+other = "إنستجرام"
+
+[social_itchio]
+other = "itch.io"
+
+[social_kaggle]
+other = "Kaggle"
+
+[social_lastfm]
+other = "Last.fm"
+
+[social_liberapay]
+other = "ليبر باي"
+
+[social_linkedin]
+other = "لينكدإن"
+
+[social_mastodon]
+other = "ماستودن"
+
+[social_medium]
+other = "ميديم"
+
+[social_patreon]
+other = "باتريون"
+
+[social_paypal]
+other = "بايبال"
+
+[social_pinterest]
+other = "بينتيريست"
+
+[social_qq]
+other = "QQ"
+
+[social_quora]
+other = "كورا"
+
+[social_reddit]
+other = "ريديت"
+
+[social_rss]
+other = "خلاصات RSS"
+
+[social_stackoverflow]
+other = "Stack Overflow"
+
+[social_telegram]
+other = "تليجرام"
+
+[social_tipeee]
+other = "تيبي"
+
+[social_tiktok]
+other = "تيك توك"
+
+[social_tumblr]
+other = "Tumblr"
+
+[social_twitter]
+other = "تويتر"
+
+[social_website]
+other = "موقع الويب"
+
+[social_weibo]
+other = "ويبو"
+
+[social_xing]
+other = "XING"
+
+[social_youtube]
+other = "يوتيوب"
+
+[social_zhihu]
+other = "Zhihu"
 
 [stats]
 other = "اﻹحصائيات"
