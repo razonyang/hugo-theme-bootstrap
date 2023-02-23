@@ -1,5 +1,6 @@
 {{- $img := partialCached "functions/featured-img" . . }}
 {{- if not $img }}
-  {{- $img = .Resources.GetMatch "{*cover*,*thumbnail*}" }}
+  {{- $images := partialCached "functions/page-images" . . }}
+  {{- $img = $images.GetMatch "{*cover*,*thumbnail*}" }}
 {{- end }}
 {{- return $img -}}
