@@ -1,1 +1,2 @@
-{{- return .Resources.GetMatch "*feature*" -}}
+{{- $images := partialCached "functions/page-images" . . }}
+{{- return $images.GetMatch "*feature*" -}}
