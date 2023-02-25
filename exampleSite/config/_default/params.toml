@@ -70,6 +70,8 @@ viewer = true # Image Viewer
 # backgroundImage = ['/images/bg-light.png', '/images/bg-dark.png']
 # rss = "home" # link the RSS button to homepage all the times.
 
+# externalLinkIcon = false
+
 [sidebar]
 # fixed = true
 # archives = true # Enable archives widget

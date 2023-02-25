@@ -6,5 +6,8 @@
 {{- $destHost := (urls.Parse .Destination).Host -}}
 {{- $external := and (ne $destHost "") (ne $destHost (urls.Parse .Page.Site.BaseURL).Host) -}}
 <a href="{{ $dest | safeURL }}"{{ with .Title}} title="{{ . }}"{{ end }}{{ if $external }} target="_blank" rel="noopener noreferrer"{{ end }}>
-  {{- .Text | safeHTML -}}{{- if $external -}}<i class="fas fa-external-link-square-alt ms-1"></i>{{- end -}}
+  {{- .Text | safeHTML -}}
+  {{- if and $external (default true site.Params.externalLinkIcon) -}}
+    <i class="fas fa-external-link-square-alt ms-1"></i>
+  {{- end -}}
 </a>
