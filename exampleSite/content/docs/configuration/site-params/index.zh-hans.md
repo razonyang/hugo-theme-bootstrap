@@ -64,6 +64,7 @@ authors = ["RazonYang"]
 | `fullWidthInSections` | Object | - | 为特定的 section 定义全宽，如：`posts`, `docs`。
 | `fixedHeader` | Boolean | `true` | 是否固定头部
 | `reward` | Object | - | [打赏小部件]({{< ref "/docs/widgets/reward" >}})，又称 Buy Me a Coffee 小部件。
+| `externalLinkIcon` | Boolean | `true` | 是否显示外部链接后的图标。
 | `share` | Object | - | 分享按钮
 | `share.addThis` | String | - | [AddThis](https://www.addthis.com) `pubid`。
 | `fontSize` | Object | 字体大小 | 注释或删除此参数可以禁用字体大小切换器。

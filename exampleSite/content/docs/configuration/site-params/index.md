@@ -63,6 +63,7 @@ The site parameters are located in `config/_default/params.toml` by default.
 | `fullWidthInSections` | Object | - | Specify the full width for particular sections, such as `posts`, `docs`.
 | `fixedHeader` | Boolean | `true` | Turn on/off fixed header.
 | `reward` | Object | - | [Reward Widget]({{< ref "/docs/widgets/reward" >}}), AKA Buy Me a Coffee Widget.
+| `externalLinkIcon` | Boolean | `true` | Whether to show the icons after the external links.
 | `share` | Object | - | Share buttons
 | `share.addThis` | String | - | [AddThis](https://www.addthis.com)'s `pubid`.
 | `fontSize` | Object | Font Sizes | Comment or remove this parameter to disable font size switcher.
