@@ -1,16 +1,19 @@
-{{- if or .Prev .Next -}}
-<div class="post-navs d-flex mb-3 justify-content-evenly">
-  <div class="post-nav post-prev">
-  {{- with .Prev -}}
-    <i class="fas fa-fw fa-chevron-left"></i>
-    <a href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a>
-  </div>
+{{ if eq .RelPermalink "/about/" }}
+{{ else }}
+  {{- if or .Prev .Next -}}
+    <div class="post-navs d-flex mb-3 justify-content-evenly">
+      <div class="post-nav post-prev">
+        {{- with .Prev -}}
+        <i aria-hidden="true" class="fas fa-fw fa-chevron-left"></i>
+        <a href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a>
+      </div>
+      {{- end -}}
+      {{- with .Next -}}
+      <div class="post-nav post-next">
+        <a href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a>
+        <i aria-hidden="true" class="fas fa-fw fa-chevron-right"></i>
+      </div>
+      {{- end -}}
+    </div>
   {{- end -}}
-  {{- with .Next -}}
-  <div class="post-nav post-next">
-    <a href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a>
-    <i class="fas fa-fw fa-chevron-right"></i>
-  </div>
-  {{- end -}}
-</div>
-{{- end -}}
+{{ end }}

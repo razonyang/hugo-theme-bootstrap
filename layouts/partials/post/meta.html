@@ -4,9 +4,12 @@
         {{ if gt .Lastmod .Date }}
             {{- $dateParams = merge $dateParams (dict "updatedOn" .Lastmod.Local) -}}
         {{ end }}
-        <span class="post-date" title="{{ i18n "post_date" $dateParams }}">
-            {{ .Date | time.Format (default "Jan 2, 2006" $.Site.Params.dateFormat) }}
-        </span>
+        {{ if eq .RelPermalink "/about/" }}
+        {{ else }}
+            <span class="post-date" title="{{ i18n "post_date" $dateParams }}">
+                {{ .Date | time.Format (default "Jan 2, 2006" $.Site.Params.dateFormat) }}
+            </span>
+        {{ end }}
     {{- end -}}
     {{- if and (default true (default .Site.Params.readingTime .Params.readingTime)) -}}
         <span class="post-reading-time">
