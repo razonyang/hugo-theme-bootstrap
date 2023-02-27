@@ -19,8 +19,7 @@
     <span class="post-taxonomies">
         {{- range $key, $value := .Site.Taxonomies -}}
             {{- range ($.GetTerms $key) -}}
-                <a href="{{ .Permalink }}" class="badge rounded-pill post-taxonomy post-taxonomies">{{ .Name }}</a>
-
+                <a href="{{ .Permalink }}" class="badge rounded-pill post-taxonomy post-taxonomies {{ cond (eq $key "author") "post-taxonomy-author" "" }}">{{ .Name }}</a>
             {{- end -}}
         {{- end -}}
     </span>
