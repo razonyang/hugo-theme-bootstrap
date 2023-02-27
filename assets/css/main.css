@@ -6298,6 +6298,15 @@ img {
 	font-size: .8rem
 }
 
+.post-meta .post-taxonomy.post-taxonomies.post-taxonomy-author{
+	color: var(--hbs-accent) !important;
+	opacity: .9;
+}
+
+.post-meta .post-taxonomy.post-taxonomies.post-taxonomy-author:hover, .post-meta .post-taxonomy.post-taxonomies.post-taxonomy-author:focus{
+	opacity: 1;
+}
+
 .post-summary {
   color: var(--hbs-primary-text-on-background);
 }
