@@ -64,10 +64,6 @@ $bgNavbarTogglerIcon: url('/images/icons/menu.png');
   }
 }
 
-.navbar-brand {
-  color: inherit;
-  text-decoration: none !important;
-}
 
 .navbar-settings, .navbar-social-share {
   @extend .navbar-toggler;
