@@ -212,11 +212,19 @@ sup {
 
 a {
 	color: #0d6efd;
-	text-decoration: underline
+	text-decoration: underline;
 }
 
 a:hover {
-	color: #0a58ca
+	color: #0a58ca;
+}
+
+.card-title.post-title a, .profile-about a{
+	animation: paths 0s step-end infinite;
+}
+
+.card-title.post-title a:hover, .card-title.post-title a:focus, .profile-about a:hover, .profile-about a:focus{
+	animation-duration: 5s;
 }
 
 a:not([href]):not([class]),
@@ -6604,6 +6612,11 @@ img {
 .profile .profile-contact {
 	align-items: center;
 	display: inline-flex;
+}
+
+.profile .profile-company,
+.profile .profile-location,
+.profile .profile-contact{
 	margin-right: .5rem
 }
 
