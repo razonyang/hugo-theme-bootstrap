@@ -1,11 +1,12 @@
 .archive {
   &::before {
-    background: var(--#{$prefix}secondary);
-    height: 0.5rem;
-    width: 0.5rem;
+    background: var(--#{$prefix}primary);
+    height: 1rem;
+    width: 1rem;
     border-radius: 50%;
     content: '';
-    margin-left: -0.785rem;
+    margin-left: -0.875rem;
+    margin-top: -0.5rem;
   }
 
   &::after {

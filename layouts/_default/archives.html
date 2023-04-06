@@ -11,7 +11,7 @@
 <div class="{{ if default true .Params.sidebar }}col-xxl-8{{ else }}col-xxl-12{{ end }} mb-4">
   <div class="container">
     {{- partial "breadcrumb" . -}}
-    <div class="archives border-1 border-start ps-3 ms-2">
+    <div class="archives border-3 border-start ps-3">
       {{- if index $date 0 -}}
         {{- partial "archives/year" (dict "page" . "pages" $pages "year" (index $date 0)) -}}
       {{- else -}}
