@@ -74,10 +74,10 @@ $header-caret-width: 0.35em;
     .search-input {
       padding-left: 2rem;
     }
-  }
 
-  .search-button {
-    color: var(--#{$prefix}on-primary-secondary);
+    .search-shortcut {
+      margin-top: 0.35rem;
+    }
   }
 
   .dropdown-item-icon {
