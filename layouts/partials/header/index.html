@@ -1,6 +1,6 @@
 {{- $baseURL := $.Site.BaseURL }}
 {{- $dropdownMenuToggle := default true $.Site.Params.topAppBar.dropdownMenuToggle }}
-<nav class="top-app-bar shadow navbar navbar-expand-xxl{{ if $.Site.Params.fixedHeader }} fixed-top{{ end }}">
+<nav class="top-app-bar shadow navbar navbar-expand-xxl">
   <div class="{{- partialCached "functions/container-class" . .FirstSection -}}">
     {{- if eq .Type "docs" }}
     <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDocsNav"
