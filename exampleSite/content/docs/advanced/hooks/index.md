@@ -35,6 +35,7 @@ In this article, we will introduce all hooks and provide some use cases.
 | Hook                       | Description                           |
 | -------------------------- | ------------------------------------- |
 | `head-end`                 | Before the `<head>` end               |
+| `body-begin`               | Follow the `<body>`                   |
 | `body-end`                 | Before the `<body>` end               |
 | `main-begin`               | Above of the `<main>`                 |
 | `main-end`                 | Follow the `<main>`                   |
