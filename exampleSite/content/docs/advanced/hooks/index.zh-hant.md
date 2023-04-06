@@ -35,6 +35,7 @@ authors = ["RazonYang"]
 | 鉤子                       | 描述                                |
 | -------------------------- | ----------------------------------- |
 | `head-end`                 | `<head>` 結束之前                   |
+| `body-begin`               | `<body>` 開始處                     |
 | `body-end`                 | `<body>` 結束之前                   |
 | `main-begin`               | `<main>` 上方                       |
 | `main-end`                 | `<main>` 下方                       |
