@@ -1,9 +1,5 @@
 {{- $placeholder := "search_input_placeholder" | i18n }}
-{{- $shortcut := slice "/" }}
-{{- if isset site.Params.search "shortcut" }}
-  {{- $shortcut = cond (gt (len site.Params.search.shortcut) 0) site.Params.search.shortcut slice }}
-{{- end }}
-{{- with $shortcut }}
+{{- with partialCached "functions/search-shortcut" . }}
   {{- $placeholder = i18n "search_shortcut" (dict "Shortcut" (delimit . "+")) }}
 {{- end }}
 {{- return $placeholder -}}
