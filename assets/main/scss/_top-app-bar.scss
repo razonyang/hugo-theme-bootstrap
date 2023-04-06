@@ -137,3 +137,9 @@ $header-caret-width: 0.35em;
     }
   }
 }
+
+.font-size-dropdown-menu,
+.mode-dropdown-menu,
+.language-dropdown-menu {
+  min-width: 1px;
+}

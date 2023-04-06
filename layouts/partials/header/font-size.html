@@ -4,7 +4,7 @@
         <i class="fas fa-fw fa-font"></i>
         <span class="d-xxl-none">{{ i18n "font_size" }}</span>
     </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="fontSizeDropdown">
+    <ul class="font-size-dropdown-menu dropdown-menu dropdown-menu-end" aria-labelledby="fontSizeDropdown">
         {{- range slice "xs" "sm" "md" "lg" "xl" }}
         <li>
             <button class="font-size-item dropdown-item{{ if eq . "md" }} active{{ end }}" data-size="{{ . }}">

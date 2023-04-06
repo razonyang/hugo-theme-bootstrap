@@ -9,7 +9,7 @@
         <i class="mode-icon fas fa-fw fa-{{ (index $modes $mode ).icon }}" id="modeIcon"></i>
         <span class="d-xxl-none">{{ i18n "mode" }}</span>
     </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="modeDropdown">
+    <ul class="mode-dropdown-menu dropdown-menu dropdown-menu-end" aria-labelledby="modeDropdown">
         {{- range slice "light" "dark" "auto" }}
         {{- $item := index $modes . }}
         <li class="mode-item{{ if eq $mode . }} active{{ end }}" data-color-mode="{{ . }}" data-icon="{{ $item.icon }}">
