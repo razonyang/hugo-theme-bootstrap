@@ -10,6 +10,8 @@
 
 .nav-pills,
 .nav-tabs {
+  --#{$prefix}nav-tabs-link-active-border-color: var(--#{$prefix}primary);
+
   .nav-item {
     margin-bottom: 0;
   }
