@@ -4,7 +4,7 @@
         <i class="fas fa-fw fa-globe"></i>
         <span class="d-xxl-none">{{ i18n "language" }}</span>
     </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+    <ul class="language-dropdown-menu dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
         {{- range $.Site.Home.AllTranslations }}
         <li>
         <a class="dropdown-item{{ if eq $.Lang .Language.Lang }} active{{ end }}" href="{{ .RelPermalink }}">
