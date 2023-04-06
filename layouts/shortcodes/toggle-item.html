@@ -1,3 +1,10 @@
-{{- $parentName := .Parent.Get 0 }}
 {{- $name := .Get 0 }}
-{{- .Page.Store.SetInMap (printf "toggle-%s-items" $parentName) $name .Inner -}}
+{{- $parentID := .Parent.Get 0 | printf "toggle-%s-items" }}
+{{- $weightID := printf "%s-weight" $parentID }}
+{{- $weight := default 0 (.Page.Store.Get $weightID) }}
+{{- .Page.Store.Add $weightID 1 }}
+{{- .Page.Store.SetInMap $parentID $name (dict
+  "Inner" .Inner
+  "Name" $name
+  "Weight" $weight) 
+-}}

@@ -1,37 +1,36 @@
 {{- $name := .Get 0 }}
+{{- $id := partialCached "functions/escape-html-id" $name $name }}
 {{- if eq .Inner "" }}{{ end }}
-{{- $items := .Page.Store.Get (printf "toggle-%s-items" $name) }}
+{{- $items := sort (.Page.Store.Get (printf "toggle-%s-items" $name)) "Weight" }}
 <ul class="nav nav-tabs toggle" id="toggle-{{ $name }}" role="tablist">
-  {{- $count := 0 }}
-  {{- range $itemName, $item := $items }}
+  {{- range $i, $item := $items }}
+    {{- $itemID := partialCached "functions/escape-html-id" $item.Name $item.Name }}
     <li class="nav-item" role="presentation">
       <button
-        class="nav-link{{ if eq $count 0 }} active{{ end }}"
-        id="toggle-{{ $name }}-{{ $itemName }}-tab"
+        class="nav-link{{ if eq $i 0 }} active{{ end }}"
+        id="toggle-{{ $id }}-{{ $itemID }}-tab"
         data-bs-toggle="tab"
-        data-bs-target="#toggle-{{ $name }}-{{ $itemName }}-tab-pane"
+        data-bs-target="#toggle-{{ $id }}-{{ $itemID }}-tab-pane"
         type="button"
         role="tab"
-        aria-controls="toggle-{{ $name }}-{{ $itemName }}-tab-pane"
-        aria-selected="{{ cond (eq $count 0) `true` `false` }}">
-        {{ $itemName }}
+        aria-controls="toggle-{{ $id }}-{{ $itemID }}-tab-pane"
+        aria-selected="{{ cond (eq $i 0) `true` `false` }}">
+        {{ $item.Name }}
       </button>
     </li>
-    {{- $count = add $count 1 }}
   {{- end }}
 </ul>
 <div class="tab-content mb-3" id="toggle-{{ $name }}-content">
-  {{- $count := 0 }}
-  {{- range $itemName, $item := $items }}
+  {{- range $i, $item := $items }}
+    {{- $itemID := partialCached "functions/escape-html-id" $item.Name $item.Name }}
     <div
-      class="tab-pane fade{{ if eq $count 0 }} show active{{ end }}"
-      id="toggle-{{ $name }}-{{ $itemName }}-tab-pane"
+      class="tab-pane fade{{ if eq $i 0 }} show active{{ end }}"
+      id="toggle-{{ $id }}-{{ $itemID }}-tab-pane"
       role="tabpanel"
-      aria-labelledby="toggle-{{ $name }}-{{ $itemName }}-tab"
+      aria-labelledby="toggle-{{ $id }}-{{ $itemID }}-tab"
       tabindex="0">
-      {{ $item }}
+      {{ $item.Inner }}
     </div>
-    {{- $count = add $count 1 }}
   {{- end }}
 </div>
 
