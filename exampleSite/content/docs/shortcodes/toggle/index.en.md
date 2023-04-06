@@ -55,8 +55,7 @@ The `toggle` shortcode is similar to the `code-toggle`, but it's more generic.
 {{< toggle languages >}}
   {{< toggle-item PHP >}}
     {{< highlight php >}}
-    <?php
-      echo "hello world"
+    echo "hello world"
     {{< /highlight >}}
   {{< /toggle-item >}}
 
@@ -73,4 +72,3 @@ The `toggle` shortcode is similar to the `code-toggle`, but it's more generic.
   {{< /toggle-item >}}
 
 {{< /toggle >}}
-
