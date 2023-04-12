@@ -1,6 +1,6 @@
 <!doctype html>
 {{- $color := partialCached "functions/color" . }}
-<html class="position-relative" itemscope itemtype="http://schema.org/WebPage" lang="{{ .Lang }}"
+<html class="position-relative" itemscope itemtype="https://schema.org/WebPage" lang="{{ .Lang }}"
   data-bs-theme="{{ $color }}"
   {{- with $.Site.Language.LanguageDirection }} dir="{{ . }}"{{ end }}
   {{- with $.Site.Params.palette }} data-palette="{{ replace . " " "-" }}"{{ end }}>
