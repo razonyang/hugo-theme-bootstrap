@@ -2,23 +2,12 @@ import Mark from "mark.js/dist/mark.js";
 import Mustache from "mustache";
 import Engine from "./engine";
 import Form from "./form";
-
-declare global {
-  interface Window {
-    fuseOptions;
-    searchResultContentWordCount: number;
-    searchPaginate: number;
-    searchIndies: string[];
-    searchMetaIndex: string;
-  }
-}
+import {default as params} from '@params';
 
 export class Search {
   public resultsElement: HTMLElement;
 
   public stat: HTMLElement;
-
-  public resultContentCharactersCount: number;
 
   public highlightOptions = {
     element: "span",
@@ -32,8 +21,6 @@ export class Search {
   public tmplStat: string;
 
   public tmplResult: string;
-
-  public paginate = 10;
 
   private page = 1;
 
@@ -49,8 +36,11 @@ export class Search {
 
   private form: Form;
   private engine: Engine;
+  private meta = '';
 
   constructor(form: HTMLFormElement) {
+    this.meta = document.querySelector('meta[name="search-meta"]').getAttribute('content');
+
     this.form = new Form(form, (data: FormData) => {
       this.search(data);
     });
@@ -70,8 +60,6 @@ export class Search {
     this.tmplNoResults = document.getElementById("templateNoResults").innerHTML;
     this.tmplStat = document.getElementById("templateStat").innerHTML;
     this.tmplResult = document.getElementById("templateResult").innerHTML;
-    this.resultContentCharactersCount = window.searchResultContentWordCount;
-    this.paginate = window.searchPaginate;
 
     this.loadMore = document.getElementById("btnLoadMore");
     this.loadMore.addEventListener("click", () => {
@@ -81,7 +69,9 @@ export class Search {
       });
     });
 
-    fetch(window.searchMetaIndex)
+
+
+    fetch(this.meta)
       .then((response) => {
         return response.json();
       })
@@ -134,7 +124,7 @@ export class Search {
       .then((results) => {
         this.page = 1;
         this.results = results;
-        if (this.results.length > this.paginate) {
+        if (this.results.length > params.paginate) {
           this.showLoadMoreBtn();
         } else {
           this.hideLoadMoreBtn();
@@ -186,15 +176,15 @@ export class Search {
     this.stat.innerHTML = Mustache.render(this.tmplStat, {
       total: this.results.length,
     });
-    let i = (this.page - 1) * this.paginate;
+    let i = (this.page - 1) * params.paginate;
     let count = 0;
     for (
       ;
-      i < this.results.length && count < this.paginate;
+      i < this.results.length && count < params.paginate;
       i += 1, count += 1
     ) {
       const result = this.results[i];
-      const idx = (this.page - 1) * this.paginate + i;
+      const idx = (this.page - 1) * params.paginate + i;
       const titleKeywords = [];
       const contentKeywords = [];
       result.matches.forEach((match) => {
@@ -212,13 +202,13 @@ export class Search {
         });
       });
       let { content } = result.item;
-      if (content.length > this.resultContentCharactersCount) {
+      if (content.length > params.resultContentWordCount) {
         let contentStart = 0;
         if (contentKeywords.length > 0) {
           const pos = content.indexOf(contentKeywords[0]);
           if (
             pos + contentKeywords[0].length >
-            this.resultContentCharactersCount - 1
+            params.resultContentWordCount - 1
           ) {
             contentStart = pos;
           }
@@ -227,7 +217,7 @@ export class Search {
           (contentStart === 0 ? "" : "...") +
           content.substring(
             contentStart,
-            contentStart + this.resultContentCharactersCount
+            contentStart + params.resultContentWordCount
           )
         }...`;
       }
@@ -258,7 +248,7 @@ export class Search {
     }
     this.loading = false;
     this.loadMore.removeAttribute("disabled");
-    if (this.results.length <= this.paginate * this.page) {
+    if (this.results.length <= params.paginate * this.page) {
       this.hideLoadMoreBtn();
     } else {
       this.showLoadMoreBtn();

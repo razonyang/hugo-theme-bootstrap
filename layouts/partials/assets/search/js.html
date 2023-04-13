@@ -1,5 +1,30 @@
 {{- if eq .Type "search" -}}
-{{- $options := dict "targetPath" "assets/search/bundle.min.js" "minify" hugo.IsProduction -}}
-{{- $script := resources.Get "search/index.ts" | js.Build $options | fingerprint -}}
-<script data-precache src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>
+  {{- $fuseOptions := dict "ignoreLocation" true -}}
+  {{- $fuseOptionWhitelist := dict
+    "ignorelocation" "ignoreLocation"
+    "iscasesensitive" "isCaseSensitive"
+    "minmatchcharlength" "minMatchCharLength"
+    "location" "location"
+    "threshold" "threshold"
+    "distance" "distance"
+    "findallmatches" "findAllMatches"
+    "ignorefieldnorm" "ignoreFieldNorm"
+    "fieldnormweight" "fieldNormWeight"
+  -}}
+  {{- with .Site.Params.search.fuse -}}
+    {{- range $key, $value := . -}}
+      {{- if isset $fuseOptionWhitelist $key -}}
+        {{- $fuseOptions = merge $fuseOptions (dict (index $fuseOptionWhitelist $key) $value) -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $params := dict 
+    "maxResults" (default 100 .Site.Params.search.maxResults)
+    "fuse" $fuseOptions
+    "paginate" (default 10 .Site.Params.search.paginate)
+    "resultContentWordCount" (default 240 .Site.Params.search.resultContentCharactersCount)
+  }}
+  {{- $options := dict "targetPath" "assets/search/bundle.min.js" "minify" hugo.IsProduction "params" $params -}}
+  {{- $script := resources.Get "search/index.ts" | js.Build $options | fingerprint -}}
+  <script data-precache src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>
 {{- end -}}
