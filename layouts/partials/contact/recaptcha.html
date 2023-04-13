@@ -4,20 +4,6 @@
     <div class="g-recaptcha" data-sitekey="{{ .siteKey }}" data-callback="reCaptchaCallback"
         data-expired-callback="reCaptchaExpiredCallback"></div>
 </div>
-<script>
-    var reCaptchaLabel = document.querySelector('#reCaptchaLabel');
-    var reCaptchaOnload = function () {
-        document.querySelector('#g-recaptcha-response').setAttribute("required", true);
-    }
-    var reCaptchaCallback = function() {
-        reCaptchaLabel.classList.remove('text-danger');
-        reCaptchaLabel.classList.add('text-success');
-    }
-
-    var reCaptchaExpiredCallback = function() {
-        reCaptchaLabel.classList.remove('text-success');
-        reCaptchaLabel.classList.add('text-danger');
-    }
-</script>
-<script src="https://www.google.com/recaptcha/api.js?onload=reCaptchaOnload"></script>
+{{- partialCached "staticman/assets/recaptcha" . . }}
+<script src="https://www.google.com/recaptcha/api.js?onload=reCaptchaOnload" defer></script>
 {{- end -}}

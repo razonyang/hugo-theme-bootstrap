@@ -1,12 +1,18 @@
 import Fuse from "fuse.js";
 import Form from "./form";
+import {default as params} from '@params';
 
 class Engine {
   private fuse: Fuse;
   private pages = [];
+  private indices: Array<string> = [];
 
   constructor(form: Form, callback: (data: FormData) => void) {
-    const options = Object.assign(window.fuseOptions, {
+    document.querySelectorAll('meta[name="search-index"]').forEach((el) => {
+      this.indices.push(el.getAttribute('content'))
+    })
+
+    const options = Object.assign(params.fuse, {
       useExtendedSearch: true,
       includeMatches: true,
       includeScore: true,
@@ -23,9 +29,9 @@ class Engine {
     console.debug("fuse.js options", options);
 
     const promises = [];
-    for (const i in window.searchIndies) {
+    for (const i in this.indices) {
       promises.push(
-        fetch(window.searchIndies[i], {
+        fetch(this.indices[i], {
           method: "GET",
         }).then((response) => {
           return response.json();
@@ -106,7 +112,7 @@ class Engine {
     return new Promise((resolve) => {
       // delay search for displaying the loading spinner.
       setTimeout(() => {
-        const params = {
+        const q = {
           $and: [
             {
               $or: [{ title: data.get("q") }, { content: data.get("q") }],
@@ -115,27 +121,27 @@ class Engine {
         };
         const author = data.get("author");
         if (author) {
-          params.$and.push({ authors_titles: author });
+          q.$and.push({ authors_titles: author });
         }
         const category = data.get("category");
         if (category) {
-          params.$and.push({ categories_titles: category });
+          q.$and.push({ categories_titles: category });
         }
         const series = data.get("series");
         if (series) {
-          params.$and.push({ series_titles: series });
+          q.$and.push({ series_titles: series });
         }
         const tag = data.get("tag");
         if (tag) {
-          params.$and.push({ tags_titles: tag });
+          q.$and.push({ tags_titles: tag });
         }
         const lang = data.get("lang");
         if (lang) {
-          params.$and.push({ lang: "=" + lang });
+          q.$and.push({ lang: "=" + lang });
         }
         resolve(
-          this.fuse.search(params, {
-            limit: parseInt(window.searchMaxResults),
+          this.fuse.search(q, {
+            limit: parseInt(params.maxResults),
           })
         );
       }, 1);

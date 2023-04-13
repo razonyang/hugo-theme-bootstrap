@@ -3,15 +3,8 @@
 {{- $index := resources.Get "service-worker/index.ts" }}
 {{- $config := resources.Get "service-worker/config.template.ts" | resources.ExecuteAsTemplate "service-worker/config.ts" . -}}
 {{- $script := slice $config $index | resources.Concat "service-worker/bundle.ts" | js.Build $options -}}
-<script>
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('{{ $script.RelPermalink }}').then(function(reg) {
-      console.log('Successfully registered service worker', reg);
-    }).catch(function(err) {
-      console.warn('Error whilst registering service worker', err);
-    });
-  });
-}
-</script>
+{{- $register := resources.Get "service-worker/register.ts" }}
+{{- $registerCtx := dict "src" $script.RelPermalink }}
+{{- $register = $register | resources.ExecuteAsTemplate "js/sw-register.js" $registerCtx }}
+<script src="{{ $register.RelPermalink }}" defer></script>
 {{- end -}}

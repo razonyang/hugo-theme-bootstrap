@@ -1,27 +1,9 @@
-{{- $options := dict "ignoreLocation" true -}}
-{{- $optionWhitelist := dict
-  "ignorelocation" "ignoreLocation"
-  "iscasesensitive" "isCaseSensitive"
-  "minmatchcharlength" "minMatchCharLength"
-  "location" "location"
-  "threshold" "threshold"
-  "distance" "distance"
-  "findallmatches" "findAllMatches"
-  "ignorefieldnorm" "ignoreFieldNorm"
-  "fieldnormweight" "fieldNormWeight"
--}}
-{{- with .Site.Params.search.fuse -}}
-  {{- range $key, $value := . -}}
-    {{- if isset $optionWhitelist $key -}}
-      {{- $options = merge $options (dict (index $optionWhitelist $key) $value) -}}
-    {{- end -}}
-  {{- end -}}
-{{- end -}}
 {{- $metaURL := relURL "/search/meta.json" -}}
 {{- if gt (len $.Site.Home.AllTranslations) 1 -}}
   {{- $metaURL = relLangURL "/search/meta.json" -}}
 {{- end -}}
 {{- $meta := resources.Get "search/meta.json" | resources.ExecuteAsTemplate $metaURL . -}}
+<meta name="search-meta" content="{{ $meta.RelPermalink }}">
 {{- $pages := where .Site.AllPages "Kind" "page" }}
 {{- $paginate := default 1000 .Site.Params.search.indexPaginate }}
 {{- $totalPages := div (add (len $pages) (sub $paginate 1)) $paginate }}
@@ -38,15 +20,7 @@
   {{- $index := $tmpl | resources.ExecuteAsTemplate $indexURL $page }}
   {{- $searchIndies = $searchIndies | append $index.RelPermalink }}
   {{- if $preload }}
+  <meta name="search-index" content="{{ $index.RelPermalink }}">
   <link rel="preload" href="{{ $index.RelPermalink }}" as="fetch" type="application/json" crossorigin="anonymous">
   {{- end }}
 {{- end }}
-
-<script>
-  window.searchResultContentWordCount = parseInt('{{ default 240 .Site.Params.search.resultContentCharactersCount }}');
-  window.searchPaginate = parseInt('{{ default 10 .Site.Params.search.paginate }}');
-  window.fuseOptions = JSON.parse('{{ $options | jsonify | safeHTML }}');
-  window.searchIndies = JSON.parse('{{ $searchIndies | jsonify }}');
-  window.searchMetaIndex = '{{ $meta.RelPermalink }}';
-  window.searchMaxResults = '{{ default 100 .Site.Params.search.maxResults }}';
-</script>

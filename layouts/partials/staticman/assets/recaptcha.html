@@ -1,0 +1,8 @@
+{{- $opts := dict
+  "minify" hugo.IsProduction
+  "targetPath" "js/staticman/recaptcha.js"
+  "params" (dict
+    "key" site.Params.staticman.reCaptchaKey)
+}}
+{{- $js := resources.Get "js/staticman/recaptcha.ts" | js.Build $opts }}
+<script src="{{ $js.RelPermalink }}"></script>
