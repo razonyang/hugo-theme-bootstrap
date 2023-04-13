@@ -7,5 +7,5 @@
 {{- $styles := slice $config $main }}
 {{- $styles := $styles | resources.Concat "main/scss/main.css" | toCSS $options | resources.PostCSS $postCSSOptions | fingerprint }}
 {{- if hugo.IsProduction }}{{ $styles = $styles | resources.PostProcess }}{{ end }}
-<link data-precache rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous">
+<link data-precache rel="stylesheet" type="text/css" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous">
 {{- partial "assets/main/custom" . }}

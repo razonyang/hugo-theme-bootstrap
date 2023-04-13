@@ -5,4 +5,4 @@
     "key" site.Params.staticman.reCaptchaKey)
 }}
 {{- $js := resources.Get "js/staticman/recaptcha.ts" | js.Build $opts }}
-<script src="{{ $js.RelPermalink }}"></script>
+<script src="{{ $js.RelPermalink }}" type="application/javascript"></script>

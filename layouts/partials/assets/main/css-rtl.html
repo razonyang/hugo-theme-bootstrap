@@ -6,5 +6,5 @@
 {{- $main := resources.Get "main/scss/index.scss" }}
 {{- $style := slice $config $main | resources.Concat "main/scss/main.rtl.css" | toCSS $options | resources.PostCSS $postCSSOptions | fingerprint }}
 {{- if hugo.IsProduction }}{{ $style = $style | resources.PostProcess }}{{ end }}
-<link data-precache rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous">
+<link data-precache rel="stylesheet" type="text/css" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous">
 {{- partial "assets/main/custom" . }}
