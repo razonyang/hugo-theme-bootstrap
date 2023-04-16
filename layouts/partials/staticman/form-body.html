@@ -7,25 +7,33 @@
 <input name="reply_to" type="hidden" value="">
 <input name="root_id" type="hidden" value="">
 <div class="row g-3 mb-2">
-    <div class="form-floating col-12 col-md-4 mb-2 required">
-        <input class="form-control form-control-sm" aria-label="{{ i18n "comments_name" }}" name="name" type="text" id="comment-name" required />
-        <label for="languages-select">{{ i18n "comments_name" }}</label>
+    <div class="col-12 col-md-4 mb-2">
+        <div class="form-floating required">
+            <input class="form-control form-control-sm" aria-label="{{ i18n "comments_name" }}" name="name" type="text" id="comment-name" required />
+            <label for="languages-select">{{ i18n "comments_name" }}</label>
+        </div>
     </div>
-    <div class="form-floating col-12 col-md-4 mb-2 ms-auto{{ if in $requiredFields "email" }} required{{ end }}">
-        <input class="form-control form-control-sm" aria-label="{{ i18n "comments_email" }}" name="email" type="email" id="comment-email"
-            {{ if in $requiredFields "email" }} required{{ end }}/>
-        <label for="comment-email">{{ i18n "comments_email" }}</label>
+    <div class="col-12 col-md-4 mb-2 ms-auto">
+        <div class="form-floating{{ if in $requiredFields "email" }} required{{ end }}">
+            <input class="form-control form-control-sm" aria-label="{{ i18n "comments_email" }}" name="email" type="email" id="comment-email"
+                {{ if in $requiredFields "email" }} required{{ end }}/>
+            <label for="comment-email">{{ i18n "comments_email" }}</label>
+        </div>
     </div>
     {{- if in $extraFields "url" }}
-    <div class="form-floating col-12 col-md-4 mb-2{{ if in $requiredFields "url" }} required{{ end }}">
-        <input class="form-control form-control-sm" aria-label="{{ i18n "comments_url" }}" name="url" type="url" id="comment-url"
-            {{ if in $requiredFields "url" }} required{{ end }}/>
-        <label for="comment-url">{{ i18n "comments_url" }}</label>
+    <div class="col-12 col-md-4 mb-2">
+        <div class="form-floating{{ if in $requiredFields "url" }} required{{ end }}">
+            <input class="form-control form-control-sm" aria-label="{{ i18n "comments_url" }}" name="url" type="url" id="comment-url"
+                {{ if in $requiredFields "url" }} required{{ end }}/>
+            <label for="comment-url">{{ i18n "comments_url" }}</label>
+        </div>
     </div>
     {{- end }}
-    <div class="form-floating col-12 mb-2 required">
-        <textarea class="form-control" aria-label="{{ i18n "comments_message" }}" name="message" id="comment-message" required></textarea>
-        <label for="comment-message">{{ i18n "comments_message" }}</label>
+    <div class="col-12 mb-2">
+        <div class="form-floating required">
+            <textarea class="form-control" aria-label="{{ i18n "comments_message" }}" name="message" id="comment-message" required></textarea>
+            <label for="comment-message">{{ i18n "comments_message" }}</label>
+        </div>
     </div>
 </div>
 <div class="text-end">
