@@ -4,10 +4,24 @@
   <head>
     {{- partial "assets/init/js" .Page -}}
     {{- partialCached "assets/main/css" .Page }}
+    {{- $isHome := eq .Permalink (site.Sites.First.Home.Permalink) }}
+    {{- if $isHome }}
+      {{- $homes := newScratch }}
+      {{- range site.Sites }}
+        {{- $homes.Set .Home.Lang .Home.Permalink }}
+      {{- end }}
+      {{- $opts := dict
+        "minify" hugo.IsProduction
+        "targetPath" "js/preferred-lang.js"
+        "params" (dict "homes" $homes.Values "fallback" .Permalink)
+      }}
+      {{- $js := resources.Get "js/preferred-lang/index.ts" | js.Build $opts }}
+      <script  src="{{ $js.RelPermalink }}"></script>
+    {{- end }}
     <title>{{ .Permalink }}</title>
     <link rel="canonical" href="{{ .Permalink }}"/>
     <meta name="robots" content="noindex">
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-    <meta http-equiv="refresh" content="0; url={{ .Permalink }}"/>
+    <meta http-equiv="refresh" content="{{ cond $isHome `5` `0` }}; url={{ .Permalink }}"/>
   </head>
 </html>
