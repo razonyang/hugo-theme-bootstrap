@@ -113,7 +113,7 @@ other = "Name"
 other = "E-Mail"
 
 [contact_email_help]
-other = "Wir werden Deine Daten niemals weitergeben."
+other = "Wir werden Deine E-Mail-Adresse niemals weitergeben."
 
 [contact_file]
 other = "Datei"
@@ -147,6 +147,21 @@ other = "Extra groß"
 
 [font_size_xs]
 other = "Extra klein"
+
+[funding_alipay]
+other = "Alipay"
+
+[funding_ko_fi]
+other = "Ko-fi"
+
+[funding_open_collective]
+other = "Open Collective"
+
+[funding_patreon]
+other = "Patreon"
+
+[funding_wechat]
+other = "Wechat"
 
 [go_back]
 other = "Zurück"
@@ -210,7 +225,6 @@ other = "Profil"
 other = "Mehr lesen"
 
 [reading_time]
-one = "{{ .ReadingTime }} Min. Lesezeit"
 other = "{{ .ReadingTime }} Min. Lesezeit"
 
 [recent_posts]
@@ -237,6 +251,9 @@ other = "Erweitert"
 [search_date]
 other = "Datum"
 
+[search_input_placeholder]
+other = "Zum Suchen tippen"
+
 [search_missing_keywords]
 other = "Bitte einen Suchbegriff eingeben"
 
@@ -245,6 +262,9 @@ other = "keine Ergebnisse gefunden"
 
 [search_score]
 other = "Wertung"
+
+[search_shortcut]
+other = "Drücke {{ .Shortcut }} zum Suchen"
 
 [search_sorting]
 other = "Sortierung"
