@@ -19,8 +19,8 @@
   {{- $page.Scratch.Set "indexPage" . }}
   {{- $index := $tmpl | resources.ExecuteAsTemplate $indexURL $page }}
   {{- $searchIndies = $searchIndies | append $index.RelPermalink }}
-  {{- if $preload }}
   <meta name="search-index" content="{{ $index.RelPermalink }}">
+  {{- if $preload }}
   <link rel="preload" href="{{ $index.RelPermalink }}" as="fetch" type="application/json" crossorigin="anonymous">
   {{- end }}
 {{- end }}
