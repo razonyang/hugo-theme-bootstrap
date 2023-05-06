@@ -65,7 +65,7 @@ The `[version]` can be one of [Releases](https://github.com/razonyang/hugo-theme
 
 > Replace `[version]` with `master` for getting latest changes.
 
-### Copy example site content into your site (Optional)
+### Copy example site content into your site
 
 - Clone the `hugo-theme-bootstrap-skeleton` repo into a temporary directory:
 
