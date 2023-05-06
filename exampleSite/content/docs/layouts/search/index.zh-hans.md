@@ -48,6 +48,7 @@ title = "Search"
 | `search` | Object | - | 搜索配置。
 | `search.paginate` | Integer | `10` | 分页。
 | `search.indexPaginate` | Integer | `1000` | Index file pagination.
+| `search.indexPreload` | Boolean | `true` | 是否预加载搜索索引。
 | `search.maxResults` | Number | `100` | 至多返回的搜索结果数目。
 | `search.shortcut` | Array | `["/"]` | 搜索快捷键，比如 `["Control", "/"]`，空数组 `[]` 则禁用。
 | `search.resultContentCharactersCount` | Integer | `240` | 搜索结果内容最大字符数。
