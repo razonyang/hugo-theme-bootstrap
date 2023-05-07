@@ -1,10 +1,9 @@
 # Build stage
-FROM razonyang/hugo as builder
+FROM hugomods/hugo as builder
 
 ## Build site
-WORKDIR /src
 COPY . /src
-ARG HUGO_BASEURL=/
+ARG HUGO_BASEURL=
 ENV HUGO_BASEURL=${HUGO_BASEURL}
 WORKDIR /src/exampleSite
 RUN npm install
@@ -13,6 +12,5 @@ RUN hugo version
 RUN hugo -b ${HUGO_BASEURL}
 
 # Final stage
-FROM nginx
-COPY --from=builder /src/exampleSite/public /app
-COPY ./docker/nginx/nginx.conf /etc/nginx/conf.d/default.conf
+FROM hugomods/hugo:nginx
+COPY --from=builder /src/exampleSite/public /site
