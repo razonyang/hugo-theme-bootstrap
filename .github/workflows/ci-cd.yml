@@ -30,6 +30,7 @@ jobs:
           push: true
           build-args: |
             BUILDKIT_CONTEXT_KEEP_GIT_DIR=1
+            HUGO_BASEURL=https://hbs-cn.razonyang.com/
           tags: ccr.ccs.tencentyun.com/razonyang/hugo-theme-bootstrap:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
