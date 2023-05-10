@@ -388,6 +388,15 @@ other = "標籤"
 [taxonomies]
 other = "Taxonomies"
 
+[theme_auto]
+other = "自動"
+
+[theme_dark]
+other = "深色"
+
+[theme_light]
+other = "淺色"
+
 [try_again]
 other = "再試一次"
 
