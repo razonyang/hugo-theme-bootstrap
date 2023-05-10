@@ -14,7 +14,7 @@
         {{- $item := index $modes . }}
         <li class="mode-item{{ if eq $mode . }} active{{ end }}" data-color-mode="{{ . }}" data-icon="{{ $item.icon }}">
             <button class="dropdown-item">
-                <i class="mode-icon fas fa-fw fa-{{ $item.icon }}"></i> {{ . | title }}
+                <i class="mode-icon fas fa-fw fa-{{ $item.icon }}"></i> {{ printf "theme_%s" . | i18n }}
             </button>
         </li>
         {{- end }}

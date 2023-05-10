@@ -404,6 +404,15 @@ other = "Tags"
 [taxonomies]
 other = "Taxonomies"
 
+[theme_auto]
+other = "Auto"
+
+[theme_dark]
+other = "Dark"
+
+[theme_light]
+other = "Light"
+
 [tipeee]
 other = "Tipeee"
 
