@@ -404,6 +404,15 @@ other = "Tags"
 [taxonomies]
 other = "Klassifizierung"
 
+[theme_auto]
+other = "Auto"
+
+[theme_dark]
+other = "Dunkel"
+
+[theme_light]
+other = "Hell"
+
 [tipeee]
 other = "Tipeee"
 
