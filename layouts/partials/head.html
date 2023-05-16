@@ -1,6 +1,9 @@
 {{- partial "head/favicons" . -}}
-<meta name="keywords" content="{{ if .IsPage }}{{ delimit .Keywords ", " }}{{ else }}{{ $.Site.Params.keywords }}{{ end }}" />
-<meta name="description" content="{{ if .IsPage }}{{ if .Description }}{{ .Description }}{{ else }}{{ .Summary }}{{ end }}{{ else }}{{ $.Site.Params.description }}{{ end }}" />
+<meta name="keywords" content="{{ with .Keywords }}{{ delimit . ", " }}{{ else }}{{ $.Site.Params.keywords }}{{ end }}" />
+{{- $description := default .Site.Params.description (default .Summary .Description) }}
+{{- with $description }}
+  <meta name="description" content="{{ . }}" />
+{{- end }}
 {{- partial "head/meta" . -}}
 {{- partial "head/feed" . -}}
 {{- partial "head/site-verification" . -}}
