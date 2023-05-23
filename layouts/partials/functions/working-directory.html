@@ -1,0 +1,7 @@
+{{- $dir := "" }}
+{{- if ge hugo.Version "0.112.0" }}
+  {{- $dir = hugo.WorkingDir }}
+{{- else }}
+  {{- $dir = os.Getenv "PWD" }}
+{{- end }}
+{{- return $dir }}
