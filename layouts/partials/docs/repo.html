@@ -2,8 +2,8 @@
 {{- $url := .url -}}
 {{- $branch := default "master" .branch -}}
 {{- $dateFormat := default "02/01/2006, 15:04:05 PM" .dateFormat -}}
+{{- $root := partialCached "functions/working-directory" . }}
 {{- $subPath := default "" .subPath -}}
-{{- $contentDir := default "content" $.Site.Language.ContentDir -}}
 {{- if $subPath -}}{{ $subPath = printf "/%s" $subPath }}{{- end -}}
 <div class="docs-repo row card component">
     <div class="card-header">
@@ -12,7 +12,7 @@
     <div class="card-body text-secondary-on-surface">
         <ul class="list-unstyled">
             {{- if $.File -}}
-            {{- $filePath := printf "%s%s/%s/%s" $branch $subPath $contentDir $.File.Path -}}
+            {{- $filePath := printf "%s/%s%s" $branch $subPath (strings.TrimPrefix $root $.File.Filename) -}}
             <li class="mb-1">
                 <a href="{{ printf "%s/blob/%s" $url $filePath }}" target="_blank" rel="noopener noreferrer">
                     <i class="fas fa-fw fa-file-archive"></i> {{ i18n "repo_action_view" }}

@@ -175,7 +175,7 @@ viewer = true # Image Viewer
 
 [repo]
   url = "https://github.com/razonyang/hugo-theme-bootstrap"
-  # branch = "main"
+  branch = "v0"
   subPath = "exampleSite"
   # dateFormat = "02/01/2006, 15:04:05 PM"
 
