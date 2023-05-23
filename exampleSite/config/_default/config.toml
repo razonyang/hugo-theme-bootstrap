@@ -45,3 +45,6 @@ timeout = "120s"
 
 [build]
   writeStats = true
+
+[security.funcs]
+  getenv = ['^HUGO_', '^CI$', 'PWD']
