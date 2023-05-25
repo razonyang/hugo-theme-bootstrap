@@ -22,7 +22,7 @@
   	--hbs-font-share-tech: "Share Tech", sans-serif;
 	--hbs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 	--hbs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-	--hbs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+	--hbs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(53, 51, 51, 0));
 	--hbs-body-font-family: var(--hbs-font-sans-serif);
 	--hbs-body-font-size: 1rem;
 	--hbs-body-font-weight: 400;
@@ -7198,3 +7198,35 @@ table {
   }
   
 /* glitch-effect end*/
+/* noise */
+.bg {
+	height: 100vh;
+	background-color: 'black';
+  }
+  
+  .bg:after {
+	animation: grain 8s steps(10) infinite;
+	background-image: url('https://grainy-gradients.vercel.app/noise.svg');
+	content: "";
+	height: 300%;
+	width: 300%;
+	left: -100%;
+	top: -110%;
+	opacity: 0.8;
+	position: fixed;
+	z-index: -1;
+  }
+  
+  @keyframes grain {
+	0%, 100% { transform:translate(0, 0) }
+	10% { transform:translate(-5%, -10%) }
+	20% { transform:translate(-15%, 5%) }
+	30% { transform:translate(5%, -25%) }
+	40% { transform:translate(-5%, 25%) }
+	50% { transform:translate(-15%, 10%) }
+	60% { transform:translate(15%, 0%) }
+	70% { transform:translate(0%, 15%) }
+	80% { transform:translate(5%, 35%) }
+	90% { transform:translate(-10%, 10%) }
+  }
+/* noise end */

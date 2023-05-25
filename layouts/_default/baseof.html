@@ -10,7 +10,7 @@
     {{- block "head-end" . -}}{{- end -}}
     {{- partial "hooks/head-end" . -}}
   </head>
-  <body>
+  <body class="bg">
     {{- $bootstrapScript := resources.Get "js/bootstrap.template.js" | resources.ExecuteAsTemplate "js/bootstrap.js" . | resources.Minify | resources.Fingerprint -}}
     <script>
       {{- $bootstrapScript.Content | safeJS -}}
