@@ -151,6 +151,9 @@ other = "صغير جدا"
 [funding_alipay]
 other = "علي باي"
 
+[funding_buymeacoffee]
+other = "Buy Me a Coffee"
+
 [funding_ko_fi]
 other = "Ko-fi"
 

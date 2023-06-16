@@ -38,6 +38,7 @@ authors = ["RazonYang"]
 | `funding.ko_fi`  | String | - | Ko-fi 用户名。
 | `funding.patreon` | String | - | Patreon 用户名。
 | `funding.open_collective` | String | - | Open Collective 用户名。
+| `funding.buymeacoffee` | String | - | Buy Me a Coffee 用户名。
 
 ## 页面配置
 

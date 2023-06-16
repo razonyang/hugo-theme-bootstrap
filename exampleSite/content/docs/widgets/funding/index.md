@@ -39,6 +39,7 @@ The `funding` is a key value pair that mapping from platform to their QR Code im
 | `funding.ko_fi`  | String | - | Ko-fi username.
 | `funding.patreon` | String | - | Patreon username.
 | `funding.open_collective` | String | - | Open Collective username.
+| `funding.buymeacoffee` | String | - | Buy Me a Coffee username.
 
 ## Page Parameter
 
