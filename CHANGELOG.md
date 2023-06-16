@@ -1,3 +1,12 @@
+# Changelog
+
+## [1.1.0](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.0.2...v1.1.0) (2023-06-16)
+
+
+### Features
+
+* **funding:** add support for Buy Me a Coffee ([decf0fe](https://github.com/razonyang/hugo-theme-bootstrap/commit/decf0fe9d3193c31aa6445e1da2296d2a6a3c3fa))
+
 HBS CHANGELOG
 =============
 
