@@ -151,6 +151,9 @@ other = "Bardzo mały"
 [funding_alipay]
 other = "Alipay"
 
+[funding_buymeacoffee]
+other = "Buy Me a Coffee"
+
 [funding_ko_fi]
 other = "Ko-fi"
 

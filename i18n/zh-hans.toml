@@ -151,6 +151,9 @@ other = "特小号"
 [funding_alipay]
 other = "支付宝"
 
+[funding_buymeacoffee]
+other = "Buy Me a Coffee"
+
 [funding_ko_fi]
 other = "Ko-fi"
 

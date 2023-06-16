@@ -211,6 +211,7 @@ minMatchCharLength = 3
 [funding]
 alipay = "https://razonyang.com/images/reward/alipay.webp"
 wechat = "https://razonyang.com/images/reward/wechat.webp"
+buymeacoffee = "razonyang"
 ko_fi = "razonyang"
 patreon = "razonyang"
 open_collective = "hbs"
