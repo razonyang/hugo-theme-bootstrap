@@ -1,0 +1,426 @@
+[404_title]
+other = "Oops! Página no encontrada."
+
+[404_info]
+other = "No hemos encontrado la página que estás buscando."
+
+[about_me]
+other = "Sobre Mí"
+
+[actions]
+other = "Actiones"
+
+[alipay]
+other = "Alipay"
+
+[all]
+other = "Todo"
+
+[archives]
+other = "Archivo"
+
+[authors]
+other = "Autores"
+
+[button_copy_url]
+other = "Copiar URL"
+
+[button_fullscreen]
+other = "Pantalla Completa"
+
+[button_reload]
+other = "Recarga"
+
+[button_run_game]
+other = "Corre juego"
+
+[button_social_share]
+other = "Compartir"
+
+[button_submit]
+other = "Enviar"
+
+[buy_me_a_coffee]
+other = "Cómprame un café"
+
+[categories]
+other = "Categorías"
+
+[color_blue]
+other = "Azul"
+
+[color_blue_gray]
+other = "Azul Gris"
+
+[color_brown]
+other = "Marrón"
+
+[color_cyan]
+other = "Cian"
+
+[color_green]
+other = "Verde"
+
+[color_indigo]
+other = "Índigo"
+
+[color_orange]
+other = "Naranja"
+
+[color_pink]
+other = "Rosado"
+
+[color_purple]
+other = "Púrpura"
+
+[color_red]
+other = "Rojo"
+
+[color_teal]
+other = "Verde Azulado"
+
+[color_yellow]
+other = "Amarillo"
+
+[comments]
+other = "Comentarios"
+
+[comments_email]
+other = "Email"
+
+[comments_message]
+other = "Mensaje"
+
+[comments_name]
+other = "Nombre"
+
+[comments_reply]
+other = "Responder"
+
+[comments_reply_to]
+other = "Responder a"
+
+[comments_submit]
+other = "Enviar"
+
+[comments_url]
+other = "URL"
+
+[contact_name]
+other = "Nombre"
+
+[contact_email]
+other = "Correo Electrónico"
+
+[contact_email_help]
+other = "Nunca compartiremos tu correo electrónico con nadie más."
+
+[contact_file]
+other = "Archivo"
+
+[contact_subject]
+other = "Sujeto"
+
+[contact_message]
+other = "Mensaje"
+
+[copyright]
+other = "Derechos de Autor"
+
+[featured_posts]
+other = "Publicaciones Presentadas"
+
+[font_size]
+other = "Tamaño de Fuente"
+
+[font_size_lg]
+other = "Grande"
+
+[font_size_md]
+other = "Mediano"
+
+[font_size_sm]
+other = "Pequeño"
+
+[font_size_xl]
+other = "Extra Grande"
+
+[font_size_xs]
+other = "Extra Pequeño"
+
+[funding_alipay]
+other = "Alipay"
+
+[funding_buymeacoffee]
+other = "Cómprame un café"
+
+[funding_ko_fi]
+other = "Ko-fi"
+
+[funding_open_collective]
+other = "Open Collective"
+
+[funding_patreon]
+other = "Patreon"
+
+[funding_wechat]
+other = "Wechat"
+
+[go_back]
+other = "Vuelve atrás"
+
+[home]
+other = "Inicio"
+
+[language]
+other = "Lenguaje"
+
+[liberapay]
+other = "Liberapay"
+
+[load]
+other = "Cargar"
+
+[load_more]
+other = "Cargar Más"
+
+[mode]
+other = "Modo"
+
+[noscript_info]
+other = "Tu navegador no soporta JavaScript."
+
+[offline_title]
+other = "Oops! No estás en línea."
+
+[offline_info]
+other = """
+<p>Al parecer, hay un problema con tu conexión, por favor revisa el estado de tu red.</p>
+<p>Por favor contáctanos si crees que es un error del servidor. Gracias</p>
+"""
+
+[pagination_title]
+other = "Página {{ .PageNumber }}"
+
+[palette]
+other = "Paleta"
+
+[patreon]
+other = "Patreon"
+
+[paypal]
+other = "Paypal"
+
+[post_count]
+one = "{{ .Count }} publicación en total"
+other = "{{ .Count }} publicaciones en total"
+
+[post_date]
+other = "creado en {{ .createdOn }}{{ with .updatedOn }}, actualizado en {{ . }}{{ end }}."
+
+[posts]
+other = "Publicaciones"
+
+[profile]
+other = "Perfil"
+
+[read_more]
+other = "Sigue Leyendo"
+
+[reading_time]
+other = "{{ .ReadingTime }} minutos de lectura"
+
+[recent_posts]
+other = "Publicaciones Recientes"
+
+[related_posts]
+other = "Publicaciones Relacionadas"
+
+[repo_action_edit]
+other = "Editar esta página"
+
+[repo_action_view]
+other = "Ver código fuente"
+
+[repo_title]
+other = "Repositorio"
+
+[search]
+other = "Buscar"
+
+[search_advanced]
+other = "Avanzado"
+
+[search_date]
+other = "Fecha"
+
+[search_input_placeholder]
+other = "E"
+
+[search_missing_keywords]
+other = "Por favor escriba las palabras clave"
+
+[search_no_results]
+other = "No se encontró ningún récord"
+
+[search_score]
+other = "Puntaje"
+
+[search_shortcut]
+other = "Presiona {{ .Shortcut }} para buscar"
+
+[search_sorting]
+other = "Ordenar"
+
+[search_stat]
+other = "{{ .Total }} resultados encontrados"
+
+[sections]
+other = "Secciones"
+
+[series]
+other = "Series"
+
+[settings]
+other = "Configuración"
+
+[social_artstation]
+other = "ArtStation"
+
+[social_bilibili]
+other = "Bilibili"
+
+[social_bitbucket]
+other = "Bitbucket"
+
+[social_discord]
+other = "Discord"
+
+[social_discourse]
+other = "Discourse"
+
+[social_dockerhub]
+other = "Docker Hub"
+
+[social_email]
+other = "Correo Electrónico"
+
+[social_facebook]
+other = "Facebook"
+
+[social_facebookgroup]
+other = "Facebook Group"
+
+[social_github]
+other = "GitHub"
+
+[social_gitlab]
+other = "GitLab"
+
+[social_instagram]
+other = "Instagram"
+
+[social_itchio]
+other = "itch.io"
+
+[social_kaggle]
+other = "Kaggle"
+
+[social_lastfm]
+other = "Last.fm"
+
+[social_liberapay]
+other = "Liberapay"
+
+[social_linkedin]
+other = "LinkedIn"
+
+[social_mastodon]
+other = "Mastodon"
+
+[social_medium]
+other = "Medium"
+
+[social_patreon]
+other = "Patreon"
+
+[social_paypal]
+other = "PayPal"
+
+[social_pinterest]
+other = "Pinterest"
+
+[social_qq]
+other = "QQ"
+
+[social_quora]
+other = "Quora"
+
+[social_reddit]
+other = "Reddit"
+
+[social_rss]
+other = "RSS"
+
+[social_stackoverflow]
+other = "Stack Overflow"
+
+[social_telegram]
+other = "Telegram"
+
+[social_tipeee]
+other = "Tipeee"
+
+[social_tiktok]
+other = "TikTok"
+
+[social_tumblr]
+other = "Tumblr"
+
+[social_twitter]
+other = "Twitter"
+
+[social_website]
+other = "Página Web"
+
+[social_weibo]
+other = "Weibo"
+
+[social_xing]
+other = "XING"
+
+[social_youtube]
+other = "YouTube"
+
+[social_zhihu]
+other = "Zhihu"
+
+[stats]
+other = "Status"
+
+[table_of_contents]
+other = "Contenido"
+
+[tags]
+other = "Etiquetas"
+
+[taxonomies]
+other = "Páginas de Etiqueta"
+
+[theme_auto]
+other = "Auto"
+
+[theme_dark]
+other = "Oscuro"
+
+[theme_light]
+other = "Claro"
+
+[tipeee]
+other = "Tipeee"
+
+[try_again]
+other = "Intenta otra vez"
+
+[wechat]
+other = "WeChat"
