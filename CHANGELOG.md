@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.1.0...v1.2.0) (2023-06-27)
+
+
+### Features
+
+* add Spanish translations ([#959](https://github.com/razonyang/hugo-theme-bootstrap/issues/959)) ([6854256](https://github.com/razonyang/hugo-theme-bootstrap/commit/68542561ad95ad2bc6cb8c535e5bd017fe1a28d6))
+
 ## [1.1.0](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.0.2...v1.1.0) (2023-06-16)
 
 
