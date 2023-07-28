@@ -27,8 +27,23 @@ $palettes: (
 );
 $theme-colors: map-remove($theme-colors, 'primary');
 $theme-colors: map-merge($theme-colors, $palettes);
+$palettes-rgb: (
+  'blue': to-rgb($palette-blue),
+  'blue-gray': to-rgb($palette-blue-gray),
+  'brown': to-rgb($palette-brown),
+  'cyan': to-rgb($palette-cyan),
+  'green': to-rgb($palette-green),
+  'indigo': to-rgb($palette-indigo),
+  'orange': to-rgb($palette-orange),
+  'pink': to-rgb($palette-pink),
+  'purple': to-rgb($palette-purple),
+  'red': to-rgb($palette-red),
+  'teal': to-rgb($palette-teal),
+  'yellow': to-rgb($palette-yellow),
+);
+$theme-colors-rgb: map-remove($theme-colors-rgb, 'primary');
+$theme-colors-rgb: map-merge($theme-colors-rgb, $palettes-rgb);
 $palette-classes: 'btn', 'btn-outline';
-
 @each $name, $color in $palettes {
   @if validate-palette($name) {
     $on-primary: color-contrast($color);
