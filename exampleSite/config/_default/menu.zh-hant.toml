@@ -1,0 +1,138 @@
+[[main]]
+  identifier = "home"
+  name = "Home"
+  weight = 1
+  url = "https://hbs.razonyang.com/"
+  [main.params]
+    icon = '<i class="fas fa-home"></i>'
+[[main]]
+  identifier = "blog"
+  name = "Blog"
+  weight = 2
+  [main.params]
+    icon = '<i class="fas fa-fw fa-blog"></i>'
+[[main]]
+  name = "Support"
+  identifier = "support"
+  weight = 40
+  [main.params]
+    description = 'The HBS Support Community'
+    icon = '<i class="fas fa-fw fa-info-circle"></i>'
+[[main]]
+  name = "Repository"
+  identifier = "repository"
+  parent = "support"
+  url = "https://github.com/razonyang/hugo-theme-bootstrap"
+  weight = 1
+  [main.params]
+    icon = '<i class="fab fa-fw fa-github text-primary"></i>'
+[[main]]
+  name = "Discussions"
+  identifier = "discussions"
+  parent = "support"
+  url = "https://github.com/razonyang/hugo-theme-bootstrap/discussions/new"
+  weight = 2
+  [main.params]
+    description = "Ask and discuss questions with others."
+    icon = '<i class="fas fa-fw fa-comments text-success"></i>'
+[[main]]
+  name = "Features Request"
+  identifier = "feature-request"
+  parent = "support"
+  url = "https://github.com/razonyang/hugo-theme-bootstrap/issues/new?template=feature_request.yml"
+  weight = 3
+  [main.params]
+    description = "Suggest new or updated features."
+    icon = '<i class="fas fa-fw fa-lightbulb text-warning"></i>'
+[[main]]
+  name = "Bug Report"
+  identifier = "bug-report"
+  parent = "support"
+  url = "https://github.com/razonyang/hugo-theme-bootstrap/issues/new?template=bug_report.yml"
+  weight = 3
+  [main.params]
+    description = "Tell us about a bug or issue."
+    icon = '<i class="fas fa-fw fa-bug text-danger"></i>'
+[[main]]
+  parent = "support"
+  weight = 4
+  [main.params]
+    divider = true
+
+[[footer]]
+  name = "Support"
+  identifier = "support"
+  weight = 1
+[[footer]]
+  name = "Repository"
+  identifier = "repository"
+  parent = "support"
+  url = "https://github.com/razonyang/hugo-theme-bootstrap"
+  weight = 1
+  [footer.params]
+    icon = '<i class="fab fa-fw fa-github text-primary"></i>'
+[[footer]]
+  name = "Discussions"
+  identifier = "discussions"
+  parent = "support"
+  url = "https://github.com/razonyang/hugo-theme-bootstrap/discussions/new"
+  weight = 2
+  [footer.params]
+    icon = '<i class="fas fa-fw fa-comments text-success"></i>'
+[[footer]]
+  name = "Features Request"
+  identifier = "feature-request"
+  parent = "support"
+  url = "https://github.com/razonyang/hugo-theme-bootstrap/issues/new?template=feature_request.md"
+  weight = 3
+  [footer.params]
+    icon = '<i class="fas fa-fw fa-lightbulb text-warning"></i>'
+[[footer]]
+  name = "Bug Report"
+  identifier = "bug-report"
+  parent = "support"
+  url = "https://github.com/razonyang/hugo-theme-bootstrap/issues/new?template=bug_report.md"
+  weight = 4
+  [footer.params]
+    icon = '<i class="fas fa-fw fa-bug text-danger"></i>'
+
+[[footer]]
+  name = "Docs"
+  identifier = "docs"
+  weight = 2
+
+[[footer]]
+  name = "Features"
+  identifier = "features"
+  weight = 3
+
+[[footer]]
+  identifier = "sponsor"
+  name = "Sponsor"
+  weight = 4
+[[footer]]
+  identifier = "sponsor-paypal"
+  parent = "sponsor"
+  name = "PayPal"
+  weight = 1
+  url = "https://paypal.me/razonyang"
+  pre = '<i class="fab fa-fw fa-paypal me-1" style="color: darkblue;"></i>'
+[[footer]]
+  identifier = "sponsor-ko-fi"
+  parent = "sponsor"
+  name = "Ko-fi"
+  weight = 2
+  url = "https://ko-fi.com/razonyang"
+[[footer]]
+  identifier = "sponsor-opencollective"
+  parent = "sponsor"
+  name = "Open Collective"
+  weight = 3
+  url = "https://opencollective.com/hbs"
+[[footer]]
+  identifier = "sponsor-patreon"
+  parent = "sponsor"
+  name = "Patreon"
+  weight = 4
+  url = "https://www.patreon.com/razonyang"
+  pre = '<i class="fab fa-fw fa-patreon me-1 text-danger"></i>'
