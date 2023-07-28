@@ -120,7 +120,7 @@ The site parameters are located in `config/_default/params.toml` by default.
 | `codeBlock.lineNos` | Boolean | `true` | `true`/`false` represents that show/hide the line numbers by default.
 | **Post** 
 | `post` | Object | - | 
-| `post.excerpt` | String | `Summary` | Options: `description`
+| ~~`post.excerpt`~~ | String | `Description` | Deleted since `v1.2.1`, the description will be used as the excerpt if not empty.
 | `post.excerptMaxLength` | Integer | `320` |
 | `post.copyright` | Boolean | `true` | Whether to display copyright section on each post.
 | `post.plainifyExcerpt` | Boolean | `true` | Format excerpt in HTML if `false`.

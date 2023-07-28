@@ -6,6 +6,9 @@
 <div class="card-body">
     {{- partial "post/meta" . -}}
     {{- partial "post/featured-image" . -}}
+    {{- with .Description }}
+      <p class="lead mb-3 text-body-emphasis">{{ . }}</p>
+    {{- end }}
     {{- partial "hooks/content-begin" . -}}
     {{- partial "post/toc-wrapper" . -}}
     {{- partial "post/content" . -}}
