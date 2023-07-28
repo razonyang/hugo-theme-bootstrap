@@ -123,7 +123,7 @@ authors = ["RazonYang"]
 | `codeBlock.lineNos` | Boolean | `true` | `true`/`false` 表示默认情况下显示/隐藏行号。
 | **Post** 
 | `post` | Object | - | 
-| `post.excerpt` | String | `Summary` | 可选项：`description`
+| ~~`post.excerpt`~~ | String | `Description` | 自 `v1.2.1` 删除，若 Description 不为空则作为摘要。
 | `post.excerptMaxLength` | Integer | `320` | 
 | `post.copyright` | Boolean | `true` | 是否在每个帖子上显示版权部分
 | `post.plainifyExcerpt` | Boolean | `true` | `false` 则格式化摘要为 HTML。

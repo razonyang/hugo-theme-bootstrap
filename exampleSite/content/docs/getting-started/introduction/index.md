@@ -2,7 +2,7 @@
 # type = "docs"
 title = "Introduction"
 date = 2022-06-13T16:32:09+08:00
-# description = "" # Used by description meta tag, summary will be used instead if not set or empty.
+description = "Hugo Bootstrap Theme(HBS) is a fast, responsive, multipurpose and feature-rich Hugo theme. It is used for blog and document sites typically."
 featured = false
 draft = false
 comment = true
@@ -18,10 +18,6 @@ images = []
 navWeight = 100
 authors = ["RazonYang"]
 +++
-
-Hugo Bootstrap Theme(HBS) is a fast, responsive, multipurpose and feature-rich Hugo theme. It is used for blog and document sites typically.
-
-<!--more-->
 
 ## Goals
 
