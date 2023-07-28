@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.2.2](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.2.1...v1.2.2) (2023-07-28)
+
+
+### Bug Fixes 🐞
+
+* adjust to Bootstrap v5.3.1 ([#967](https://github.com/razonyang/hugo-theme-bootstrap/issues/967)) ([faaf181](https://github.com/razonyang/hugo-theme-bootstrap/commit/faaf1818782f18dc99d1e8bc60b6ad63ed66a662))
+
+
+### Styles 🎨
+
+* align the search bar to middle of the header ([#969](https://github.com/razonyang/hugo-theme-bootstrap/issues/969)) ([d58856a](https://github.com/razonyang/hugo-theme-bootstrap/commit/d58856aec314d9769b052f7d65760c3dfa35ec0f))
+
 ## [1.2.1](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.2.0...v1.2.1) (2023-07-28)
 
 
