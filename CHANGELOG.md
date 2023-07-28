@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.2.1](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.2.0...v1.2.1) (2023-07-28)
+
+
+### ⚠ BREAKING CHANGES
+
+* remove the post.excerpt parameter
+
+### Miscellaneous Chores
+
+* release 1.2.1 ([6a73df1](https://github.com/razonyang/hugo-theme-bootstrap/commit/6a73df1ad24102a85323d6425f7f24574a60ed54))
+
+
+### Styles 🎨
+
+* show the description if set ([#964](https://github.com/razonyang/hugo-theme-bootstrap/issues/964)) ([2e5396d](https://github.com/razonyang/hugo-theme-bootstrap/commit/2e5396d9f259c07723b8ee6478041dfc2884fe60))
+* smoothly scroll on slide component, such as the related posts ([#962](https://github.com/razonyang/hugo-theme-bootstrap/issues/962)) ([7af2b5e](https://github.com/razonyang/hugo-theme-bootstrap/commit/7af2b5e726f7b15a77b8b6dbb5fda2ee23694ec9))
+
 ## [1.2.0](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.1.0...v1.2.0) (2023-06-27)
 
 
