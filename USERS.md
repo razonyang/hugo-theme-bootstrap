@@ -20,3 +20,4 @@
 - [MiniLessons](https://sharp-lamport-ea92ad.netlify.app/)
 - [NemuNote](https://nemulog.pages.dev/)
 - [arch.or.id](https://arch.or.id)
+- [Squey](https://squey.org): open-source visualization software for large amount of tabular data
