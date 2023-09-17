@@ -1,5 +1,5 @@
 [404_title]
-other = "Oops! Página no encontrada."
+other = "¡Oops! Página no encontrada."
 
 [404_info]
 other = "No hemos encontrado la página que estás buscando."
@@ -8,7 +8,7 @@ other = "No hemos encontrado la página que estás buscando."
 other = "Sobre Mí"
 
 [actions]
-other = "Actiones"
+other = "Acciones"
 
 [alipay]
 other = "Alipay"
@@ -68,7 +68,7 @@ other = "Índigo"
 other = "Naranja"
 
 [color_pink]
-other = "Rosado"
+other = "Rosa"
 
 [color_purple]
 other = "Púrpura"
@@ -119,7 +119,7 @@ other = "Nunca compartiremos tu correo electrónico con nadie más."
 other = "Archivo"
 
 [contact_subject]
-other = "Sujeto"
+other = "Asunto"
 
 [contact_message]
 other = "Mensaje"
@@ -128,7 +128,7 @@ other = "Mensaje"
 other = "Derechos de Autor"
 
 [featured_posts]
-other = "Publicaciones Presentadas"
+other = "Publicaciones Destacadas"
 
 [font_size]
 other = "Tamaño de Fuente"
@@ -167,13 +167,13 @@ other = "Patreon"
 other = "Wechat"
 
 [go_back]
-other = "Vuelve atrás"
+other = "Volver atrás"
 
 [home]
 other = "Inicio"
 
 [language]
-other = "Lenguaje"
+other = "Idioma"
 
 [liberapay]
 other = "Liberapay"
@@ -191,7 +191,7 @@ other = "Modo"
 other = "Tu navegador no soporta JavaScript."
 
 [offline_title]
-other = "Oops! No estás en línea."
+other = "¡Oops! No estás en línea."
 
 [offline_info]
 other = """
@@ -225,7 +225,7 @@ other = "Publicaciones"
 other = "Perfil"
 
 [read_more]
-other = "Sigue Leyendo"
+other = "Leer más"
 
 [reading_time]
 other = "{{ .ReadingTime }} minutos de lectura"
@@ -261,10 +261,10 @@ other = "E"
 other = "Por favor escriba las palabras clave"
 
 [search_no_results]
-other = "No se encontró ningún récord"
+other = "No se encontró ningún resultado"
 
 [search_score]
-other = "Puntaje"
+other = "Puntuación"
 
 [search_shortcut]
 other = "Presiona {{ .Shortcut }} para buscar"
@@ -309,7 +309,7 @@ other = "Correo Electrónico"
 other = "Facebook"
 
 [social_facebookgroup]
-other = "Facebook Group"
+other = "Grupo de Facebook"
 
 [social_github]
 other = "GitHub"
@@ -420,7 +420,7 @@ other = "Claro"
 other = "Tipeee"
 
 [try_again]
-other = "Intenta otra vez"
+other = "Inténtalo de nuevo"
 
 [wechat]
 other = "WeChat"
