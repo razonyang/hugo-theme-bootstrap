@@ -27,7 +27,7 @@ The site configuration is located in `config/_default/config.toml` by default.
 |---|:-:|:-:|---
 | `title` | String | - | Site title.
 | `baseURL` | String | - | Site base URL.
-| `copyright` | String | - | Site copyright. The `{year}` placeholder will be replaced with this year.
+| `copyright` | String | - | Site copyright. The `{year}` placeholder will be replaced with the current year.
 | `defaultContentLanguage` | String | `en` |
 | `defaultContentLanguageInSubdir` | Boolean | `false` |
 | `paginate` | Integer | `10` |
