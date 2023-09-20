@@ -17,7 +17,9 @@ images = []
 navWeight = 960
 +++
 
-HBS supports multiple languages out of box, such as English, Simplified Chinese, Traditional Chinese, French, Russian etc.
+HBS supports multiple languages out of box, such as English, Simplified Chinese, Traditional Chinese, French, Russian, etc.
+
+You can add your own translations on: [hugo-theme-bootstrap/i18n](https://github.com/razonyang/hugo-theme-bootstrap/tree/master/i18n)
 
 <!--more-->
 
@@ -33,7 +35,9 @@ HBS supports multiple languages out of box, such as English, Simplified Chinese,
 
 > You'll need to specify the `languageDirection` as `rtl` for Right-to-left writing languages.
 
-See also [Hugo Multilingual](https://gohugo.io/content-management/multilingual/).
+See also [Hugo Multilingual](https://gohugo.io/content-management/multilingual/).*
+
+> The parameter that controls the default language of the site must be located in the site configuration file. See `defaultContentLanguage` on [Site Configuration](https://hbs.razonyang.com/v1/en/docs/configuration/site/).
 
 ## Localization
 
