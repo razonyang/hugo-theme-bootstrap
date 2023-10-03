@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.2.4](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.2.3...v1.2.4) (2023-10-03)
+
+
+### Continuous Integration
+
+* **deps:** update packages ([#979](https://github.com/razonyang/hugo-theme-bootstrap/issues/979)) ([ab4a98b](https://github.com/razonyang/hugo-theme-bootstrap/commit/ab4a98bc56e04a9dd3d879b3bc0f5b480bd91363))
+
+
+### Documentation 📝
+
+* added another line encouraging people to add their own translation file to the GitHub repository. ([41ffa9a](https://github.com/razonyang/hugo-theme-bootstrap/commit/41ffa9aa6e39c8bf3877ff8fa085eb241c208bfd))
+* added clarification on defaultContentLanguage parameter ([41ffa9a](https://github.com/razonyang/hugo-theme-bootstrap/commit/41ffa9aa6e39c8bf3877ff8fa085eb241c208bfd))
+* added small description to defaultContentLanguage ([41ffa9a](https://github.com/razonyang/hugo-theme-bootstrap/commit/41ffa9aa6e39c8bf3877ff8fa085eb241c208bfd))
+* added Spanish to the language list ([41ffa9a](https://github.com/razonyang/hugo-theme-bootstrap/commit/41ffa9aa6e39c8bf3877ff8fa085eb241c208bfd))
+* reworded one line to avoid possible confusions ([41ffa9a](https://github.com/razonyang/hugo-theme-bootstrap/commit/41ffa9aa6e39c8bf3877ff8fa085eb241c208bfd))
+* update documentations ([#977](https://github.com/razonyang/hugo-theme-bootstrap/issues/977)) ([41ffa9a](https://github.com/razonyang/hugo-theme-bootstrap/commit/41ffa9aa6e39c8bf3877ff8fa085eb241c208bfd))
+
 ## [1.2.3](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.2.2...v1.2.3) (2023-09-17)
 
 
