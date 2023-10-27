@@ -107,7 +107,7 @@ You can use other web fonts easily, such as [Google Fonts](https://fonts.google.
 First of all, we import the font, and then override the `body-font-family` variable in `assets/main/scss/_custom.scss`:
 
 ```scss {title="assets/main/scss/_custom.scss"}
-@import 'https://fonts.googleapis.com/css2?family=Roboto&display=swap';
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 :root {
     --#{$prefix}body-font-family: 'Roboto', sans-serif;
 }
