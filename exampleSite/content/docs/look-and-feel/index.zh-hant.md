@@ -106,7 +106,7 @@ $palette-blue: darkblue;
 首先，我們導入字體，然後在 `assets/main/scss/_custom.scss` 覆蓋 `body-font-family` 變量：
 
 ```scss {title="assets/main/scss/_custom.scss"}
-@import 'https://fonts.googleapis.com/css2?family=Roboto&display=swap';
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 :root {
     --#{$prefix}body-font-family: 'Roboto', sans-serif;
 }
