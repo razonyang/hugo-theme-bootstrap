@@ -67,16 +67,21 @@ $header-caret-width: 0.35em;
   }
 
   .search-bar {
-    @include media-breakpoint-up(xxl) {
-      width: 180px;
-    }
-
     .search-input {
-      padding-left: 2rem;
+      padding-left: 2.25rem;
+      
+      @include media-breakpoint-up(xxl) {
+        width: 180px;
+        transition: 0.5s width ease-in-out;
+
+        &:focus {
+          width: 240px;
+        }
+      }
     }
 
     .search-shortcut {
-      margin-top: 0.35rem;
+      margin-top: 0.575rem;
     }
   }
 

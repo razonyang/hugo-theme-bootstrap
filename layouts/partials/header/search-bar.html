@@ -4,7 +4,7 @@
     {{- $shortcut := partialCached "functions/search-shortcut" . }}
     <hr class="d-xxl-none">
     <form class="search-bar ms-auto my-auto" action="{{ with $page }}{{ .RelPermalink }}{{ end }}" novalidate>
-      <div class="input-group input-group-sm align-items-center">
+      <div class="input-group align-items-center">
         <span class="btn btn-search disabled position-absolute left-0 border-0 px-1">
           <i class="fas fa-fw fa-search fa-lg"></i>
         </span>
@@ -18,7 +18,7 @@
           {{- with $shortcut }}
           <span class="search-shortcut position-absolute end-0 top-0 me-2">
             {{- range . }}
-            <kbd class="bg-primary rounded shadow">{{ . }}</kbd>
+            <kbd class="text-dark bg-white opacity-75 rounded-3 shadow border border-primary py-1 fw-bold">{{ . }}</kbd>
             {{- end }}
           </span>
           {{- end }}
