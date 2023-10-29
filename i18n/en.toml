@@ -419,6 +419,12 @@ other = "Light"
 [tipeee]
 other = "Tipeee"
 
+[toggle_sidebar]
+other = "Toggle sidebar"
+
+[translations]
+other = "Translations"
+
 [try_again]
 other = "Try again"
 
