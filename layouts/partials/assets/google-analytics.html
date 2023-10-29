@@ -1,5 +1,1 @@
-{{- if hasPrefix .Site.GoogleAnalytics "G-" -}}
-  {{- template "_internal/google_analytics.html" . -}}
-{{- else -}}
-  {{- template "_internal/google_analytics_async.html" . -}}
-{{- end -}}
+{{- template "_internal/google_analytics.html" . -}}
