@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.2.5](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.2.4...v1.2.5) (2023-10-29)
+
+
+### Documentation 📝
+
+* correct the example of fonts ([#984](https://github.com/razonyang/hugo-theme-bootstrap/issues/984)) ([4398698](https://github.com/razonyang/hugo-theme-bootstrap/commit/4398698f7528db26af583f0a5a7c8a0ec109f141))
+
+
+### Bug Fixes 🐞
+
+* **i18n:** translate more UI items ([#987](https://github.com/razonyang/hugo-theme-bootstrap/issues/987)) ([2f4daff](https://github.com/razonyang/hugo-theme-bootstrap/commit/2f4daffd16301e644792754e69821a1544ee27e6))
+
+
+### Styles 🎨
+
+* tweak search bar ([#988](https://github.com/razonyang/hugo-theme-bootstrap/issues/988)) ([581f060](https://github.com/razonyang/hugo-theme-bootstrap/commit/581f060e26d8bef704d48a3d84bcd7d1da1b4e28))
+
 ## [1.2.4](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.2.3...v1.2.4) (2023-10-03)
 
 
