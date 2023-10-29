@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.6](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.2.5...v1.2.6) (2023-10-29)
+
+
+### Bug Fixes 🐞
+
+* **google-analytics:** drop the deprecated template ([#991](https://github.com/razonyang/hugo-theme-bootstrap/issues/991)) ([1f4caaf](https://github.com/razonyang/hugo-theme-bootstrap/commit/1f4caafb7774f28d44a7cb39e8bd8a1060086211))
+
 ## [1.2.5](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.2.4...v1.2.5) (2023-10-29)
 
 
