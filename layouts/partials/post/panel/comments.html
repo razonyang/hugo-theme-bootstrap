@@ -1,5 +1,5 @@
 {{- if and (default true .Site.Params.comment) (default true .Params.comment) -}}
-<a class="action action-post-comments" href="#post-comments" role="button" aria-label="Comments" title="Comments">
+<a class="action action-post-comments" href="#post-comments" role="button" aria-label="Comments" title="{{ i18n `comments` }}">
   <i class="fas fa-fw fa-comments"></i>
 </a>
 {{- end -}}

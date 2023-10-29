@@ -400,6 +400,12 @@ other = "深色"
 [theme_light]
 other = "浅色"
 
+[toggle_sidebar]
+other = "切换侧边栏"
+
+[translations]
+other = "译文"
+
 [try_again]
 other = "再试一次"
 
