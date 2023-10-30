@@ -11,6 +11,7 @@ color = "auto"
 customCSS = []
 customJS = []
 diagram = false
+carouselPostCount = 5
 featuredPostCount = 5
 fixedHeader = true
 fullWidth = false
