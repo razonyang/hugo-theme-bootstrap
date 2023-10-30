@@ -49,6 +49,7 @@ authors = ["RazonYang"]
 | `color` | String | - | 顏色風格， `light`，`dark` 或者 `auto`（默認）。
 | `palette` | String | - | 默認配色，清理 Cookie 後生效。
 | `palettes` | Array | **ALL** | 可選配色，如需禁用此選項，可將其設為空值 `[]`。
+| `carouselPostCount` | Integer | `5` | 首頁幻燈片的文章數量。
 | `featuredPostCount` | Integer/Boolean | `5` | 精選文章數，`false` 則隱藏。
 | `recentPostCount` | Integer/Boolean | `5` | 最近文章數，`false` 則隱藏。
 | `relatedPostCount` | Integer/Boolean | `5` | 相關文章數，`false` 則隱藏。
