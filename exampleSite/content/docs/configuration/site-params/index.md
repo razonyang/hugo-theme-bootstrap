@@ -48,6 +48,7 @@ The site parameters are located in `config/_default/params.toml` by default.
 | `color` | String | - | Color mode, `light`, `dark` or `auto`. Default to `auto`.
 | `palette` | String | - | Default palette. This will take effect after clearing the Cookie.
 | `palettes` | Array | **ALL** | Available palettes. You can disable it by setting it to empty `[]`.
+| `carouselPostCount` | Integer | `5` | The number of posts shown on the homepage carousel.
 | `featuredPostCount` | Integer/Boolean | `5` | The number of featured posts shown in sidebar. Turn off by setting it to `false`.
 | `recentPostCount` | Integer/Boolean | `5` | The number of recent posts shown in sidebar. Turn off by setting it to `false`.
 | `relatedPostCount` | Integer/Boolean | `5` | The number of related posts. Turn off by setting it to `false`.
