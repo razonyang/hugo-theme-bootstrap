@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.3.0](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.2.6...v1.3.0) (2023-10-30)
+
+
+### Documentation 📝
+
+* document the carouselPostCount parameter ([b505bcd](https://github.com/razonyang/hugo-theme-bootstrap/commit/b505bcd1149fac73a70ba7f33ec365e673b0cbff))
+
+
+### Features ✨
+
+* add the carouselPostCount parameter which indicates the number of posts on homepage carousel ([c8ac437](https://github.com/razonyang/hugo-theme-bootstrap/commit/c8ac437b099af2ad53101e7dd9feee8636c2f12b))
+
 ## [1.2.6](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.2.5...v1.2.6) (2023-10-29)
 
 
