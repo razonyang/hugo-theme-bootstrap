@@ -1,4 +1,5 @@
-{{- $pages := first 3 (where $.Site.Pages "Params.carousel" true) }}
+{{- $count := default 5 site.Params.carouselPostCount }}
+{{- $pages := first $count (where $.Site.Pages "Params.carousel" true) }}
 {{- if and .IsHome $pages (eq .Paginator.PageNumber 1) }}
 <div class="container p-0 mb-4">
     <div class="row p-0 m-0">
