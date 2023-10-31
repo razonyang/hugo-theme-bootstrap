@@ -1,5 +1,12 @@
+{{- $social := default dict site.Params.social }}
+{{- if not $social }}
+  {{- with site.Social }}
+    {{- warnf "The social configuration and the social key in site configuration are deprecated. Use params.social instead." }}
+    {{- $social = . }}
+  {{- end }}
+{{- end }}
 {{- partial "helpers/social-links" (dict
-  "links" .Site.Social
+  "links" $social
   "size" (cond (isset .Site.Menus "footer") "" "fa-2x")
   "class" (cond (isset .Site.Menus "footer") "justify-content-between mb-2 mt-3" "mb-2 mt-3")
   "linkClass" "p-0 me-1 mb-2"

@@ -50,9 +50,10 @@ authors = ["RazonYang"]
 
 ### 页脚
 
-创建 `config/_default/social.toml` 文件，并填写以下配置：
+将以下内容放到 `config/_default/params.toml` 文件，以于页脚设置社交链接：
 
 ```toml
+[social]
 email = "user@domain.tld"
 github = "githubusername"
 ```

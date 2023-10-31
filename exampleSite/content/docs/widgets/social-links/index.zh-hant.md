@@ -50,9 +50,10 @@ authors = ["RazonYang"]
 
 ### 頁腳
 
-建立 `config/_default/social.toml` 檔案，並填寫以下配置：
+將以下內容放到 `config/_default/params.toml` 文件，以於頁腳設置社交鏈接：
 
 ```toml
+[social]
 email = "user@domain.tld"
 github = "githubusername"
 ```
@@ -96,5 +97,5 @@ github = "githubusername"
 | `paypal` | Paypal 使用者名稱 |
 | `patreon` | Patreon 使用者名稱 |
 | `tipeee` | Tipeee 使用者名稱 |
-| `rss` | 空字符串以禁用 RSS 链接 |
+| `rss` | 空字符串以禁用 RSS 鏈接 |
 | `website` | 網站 URL |
