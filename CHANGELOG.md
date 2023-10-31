@@ -1,5 +1,23 @@
 # Changelog
 
+## [1.3.1](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.3.0...v1.3.1) (2023-10-31)
+
+
+### Documentation 📝
+
+* replace the GoogleAnalytics parameter with services.googleAnalytics.ID ([7dd8dfe](https://github.com/razonyang/hugo-theme-bootstrap/commit/7dd8dfe332aa23322a808f7f20ada8ffa1ef91e7))
+
+
+### Bug Fixes 🐞
+
+* **archives:** correct the dateFormat parameter ([#999](https://github.com/razonyang/hugo-theme-bootstrap/issues/999)) ([065ba24](https://github.com/razonyang/hugo-theme-bootstrap/commit/065ba24049f76a4f48311aa98bcd56807c08e2b0))
+* **social:** replace site.Social with site.Params.social ([#1002](https://github.com/razonyang/hugo-theme-bootstrap/issues/1002)) ([5b2e093](https://github.com/razonyang/hugo-theme-bootstrap/commit/5b2e093c916fe3f9739b131317a7af4d023d93f5))
+
+
+### Internationalization 🌐
+
+* improve translations in Russian ([c0e8aab](https://github.com/razonyang/hugo-theme-bootstrap/commit/c0e8aabc491ff0d70b43aea3a4a422177b0149dc))
+
 ## [1.3.0](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.2.6...v1.3.0) (2023-10-30)
 
 
