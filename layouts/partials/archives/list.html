@@ -20,7 +20,7 @@
             {{- range first 5 .Pages -}}
             <li class="mb-2">
                 <a class="post-title" href="{{ .RelPermalink }}">{{ partial "helpers/title" . }}</a>
-                <span class="float-end post-date">{{ .Date.Format (default "Jan 2" $.Site.Params.archive.dateFormat) }}</span>
+                <span class="float-end post-date">{{ .Date | time.Format (default "Jan 2" site.Params.archive.dateFormat) }}</span>
             </li>
             {{- end -}}
             {{- if and (gt (len .Pages) 5) $yearPage -}}
