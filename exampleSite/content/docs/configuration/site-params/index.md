@@ -72,6 +72,7 @@ The site parameters are located in `config/_default/params.toml` by default.
 | `fontSize.extraSmall` | String | `.8rem` | Extra small font size.
 | `fontSize.large` | String | `1.1rem` | Large font size.
 | `fontSize.extraLarge` | String | `1.2rem` | Extra large font size.
+| `social` | Object | - | [Social Links]({{< ref "/docs/widgets/social-links" >}}).
 | `socialShare` | Boolean | `true` | Turn on/off built-on social share button.
 | `searchBar` | Boolean | `true` | Turn on/off built-on search bar.
 | `archive` | Object | - | [Archive]({{< ref "/docs/layouts/archives" >}}).

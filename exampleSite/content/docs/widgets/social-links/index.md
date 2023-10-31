@@ -50,9 +50,10 @@ Set up social links by editing a file `config/_default/author.toml` with the fol
 
 ### Footer
 
-Set up social links by creating a file `config/_default/social.toml` with the following content:
+Set up social links by putting the following content in `config/_default/params.toml`.
 
 ```toml
+[social]
 email = "user@domain.tld"
 github = "githubusername"
 ```

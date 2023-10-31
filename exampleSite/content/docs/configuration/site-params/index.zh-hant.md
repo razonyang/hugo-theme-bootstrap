@@ -73,6 +73,7 @@ authors = ["RazonYang"]
 | `fontSize.extraSmall` | String | `.8rem` | 更小的字體
 | `fontSize.large` | String | `1.1rem` | 大字體
 | `fontSize.extraLarge` | String | `1.2rem` | 更大的字體
+| `social` | Object | - | [社交鏈接]({{< ref "/docs/widgets/social-links" >}})。
 | `socialShare` | Boolean | `true` | 啟用/禁用內置的分享按鈕
 | `searchBar` | Boolean | `true` | 啟用/禁用搜索欄
 | **Archive**
