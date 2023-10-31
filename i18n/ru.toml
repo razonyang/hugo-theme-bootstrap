@@ -1,14 +1,47 @@
+[404_title]
+other = "Упс! Страница не найдена"
+
+[404_info]
+other = "Кажется, мы не можем найти страницу, которую вы ищете."
+
 [about_me]
 other = "Обо мне"
+
+[actions]
+other = "Действия"
 
 [alipay]
 other = "Alipay"
 
+[all]
+other = "Все"
+
 [archives]
 other = "Архив"
 
+[authors]
+other = "Автор"
+
+[button_copy_url]
+other = "Скопировать ссылку"
+
+[button_fullscreen]
+other = "Во весь экран"
+
+[button_reload]
+other = "Перезагрузить"
+
+[button_run_game]
+other = "Начать игру"
+
+[button_social_share]
+other = "Поделиться"
+
+[button_submit]
+other = "Отправить"
+
 [buy_me_a_coffee]
-other = "Buy me a coffee"
+other = "На чай"
 
 [categories]
 other = "Категории"
@@ -49,14 +82,92 @@ other = "Изумрудный"
 [color_yellow]
 other = "Желтый"
 
+[comments]
+other = "Комментарии"
+
+[comments_email]
+other = "Почта"
+
+[comments_message]
+other = "Комментарий"
+
+[comments_name]
+other = "Имя"
+
+[comments_reply]
+other = "Ответить"
+
+[comments_reply_to]
+other = "Ответить на"
+
+[comments_submit]
+other = "Отправить комментарий"
+
+[comments_url]
+other = "Ссылка"
+
+[contact_name]
+other = "Имя"
+
+[contact_email]
+other = "Написать письмо"
+
+[contact_email_help]
+other = "Мы никогда не передадим ваш адрес электронной почты кому-либо еще."
+
+[contact_file]
+other = "Файл"
+
+[contact_subject]
+other = "Тема"
+
+[contact_message]
+other = "Сообщение"
+
 [copyright]
 other = "Авторское право"
 
 [featured_posts]
-other = "Главные статьи"
+other = "Популярные статьи"
 
 [font_size]
 other = "Размер шрифта"
+
+[font_size_lg]
+other = "Большой"
+
+[font_size_md]
+other = "Средний"
+
+[font_size_sm]
+other = "Маленький"
+
+[font_size_xl]
+other = "Очень большой"
+
+[font_size_xs]
+other = "Очень маленький"
+
+[funding_alipay]
+other = "Alipay"
+
+[funding_buymeacoffee]
+other = "На чай"
+
+[funding_ko_fi]
+other = "Ko-fi"
+
+[funding_open_collective]
+other = "Открытый коллектив"
+
+[funding_patreon]
+other = "Patreon"
+
+[funding_wechat]
+other = "Wechat"
+
+[go_back]
+other = "Назад"
 
 [home]
 other = "Главная"
@@ -64,20 +175,57 @@ other = "Главная"
 [language]
 other = "Язык"
 
+[liberapay]
+other = "Liberapay"
+
+[load]
+other = "Загрузить"
+
 [load_more]
-other = "Читать далее"
+other = "Загрузить еще"
 
 [mode]
 other = "Режим"
+
+[noscript_info]
+other = "Ваш браузер не поддерживает JavaScript."
+
+[offline_title]
+other = "Упс! Нет подключения к интернету"
+
+[offline_info]
+other = """
+<p>Кажется, возникла проблема с вашим соединением. Проверьте состояние сети.</p>
+<p>Пожалуйста, свяжитесь с нами, если вы считаете, что это ошибка сервера. Спасибо.</p>
+"""
 
 [pagination_title]
 other = "{{ .PageNumber }} - страница"
 
 [palette]
-other = "Palitra"
+other = "Палитра"
+
+[patreon]
+other = "Patreon"
+
+[paypal]
+other = "Paypal"
+
+[post_count]
+one = "всего сообщений {{ .Count }}"
+other = "всего сообщений {{ .Count }}"
+
+[post_date]
+other = "создано {{ .createdOn }}{{ with .updatedOn }}, обновлено {{ . }}{{ end }}."
+
+[posts]
+other = "Статья"
+
+[profile]
+other = "Профиль"
 
 [read_more]
-other = "Read More"
+other = "Читать далее"
 
 [reading_time]
 other = "Читается за {{ .ReadingTime }} минуты"
@@ -88,8 +236,26 @@ other = "Последние обновления"
 [related_posts]
 other = "Похожие публикации"
 
+[repo_action_edit]
+other = "Редактировать эту страницу"
+
+[repo_action_view]
+other = "Посмотреть исходный код страницы"
+
+[repo_title]
+other = "Репозиторий"
+
 [search]
 other = "Поиск"
+
+[search_advanced]
+other = "Расширенный поиск"
+
+[search_date]
+other = "Дата"
+
+[search_input_placeholder]
+other = "Введите для поиска"
 
 [search_missing_keywords]
 other = "Введите ключевые слова"
@@ -97,8 +263,20 @@ other = "Введите ключевые слова"
 [search_no_results]
 other = "Результатов нет"
 
+[search_score]
+other = "Рейтинг"
+
+[search_shortcut]
+other = "Нажмите {{ .Shortcut }} для поиска"
+
+[search_sorting]
+other = "Сортировать"
+
 [search_stat]
-other = "Всего {{ .Total }} результатов"
+other = "Всего найдено: {{ .Total }}"
+
+[sections]
+other = "Разделы"
 
 [series]
 other = "Серии"
@@ -106,11 +284,149 @@ other = "Серии"
 [settings]
 other = "Настройки"
 
+[social_artstation]
+other = "ArtStation"
+
+[social_bilibili]
+other = "Bilibili"
+
+[social_bitbucket]
+other = "Bitbucket"
+
+[social_discord]
+other = "Discord"
+
+[social_discourse]
+other = "Discourse"
+
+[social_dockerhub]
+other = "Docker Hub"
+
+[social_email]
+other = "Почта"
+
+[social_facebook]
+other = "Facebook"
+
+[social_facebookgroup]
+other = "Facebook Group"
+
+[social_github]
+other = "GitHub"
+
+[social_gitlab]
+other = "GitLab"
+
+[social_instagram]
+other = "Instagram"
+
+[social_itchio]
+other = "itch.io"
+
+[social_kaggle]
+other = "Kaggle"
+
+[social_lastfm]
+other = "Last.fm"
+
+[social_liberapay]
+other = "Liberapay"
+
+[social_linkedin]
+other = "LinkedIn"
+
+[social_mastodon]
+other = "Mastodon"
+
+[social_medium]
+other = "Medium"
+
+[social_patreon]
+other = "Patreon"
+
+[social_paypal]
+other = "PayPal"
+
+[social_pinterest]
+other = "Pinterest"
+
+[social_qq]
+other = "QQ"
+
+[social_quora]
+other = "Quora"
+
+[social_reddit]
+other = "Reddit"
+
+[social_rss]
+other = "RSS"
+
+[social_stackoverflow]
+other = "Stack Overflow"
+
+[social_telegram]
+other = "Telegram"
+
+[social_tipeee]
+other = "Tipeee"
+
+[social_tiktok]
+other = "TikTok"
+
+[social_tumblr]
+other = "Tumblr"
+
+[social_twitter]
+other = "Twitter"
+
+[social_website]
+other = "Сайт"
+
+[social_weibo]
+other = "Weibo"
+
+[social_xing]
+other = "XING"
+
+[social_youtube]
+other = "YouTube"
+
+[social_zhihu]
+other = "Zhihu"
+
+[stats]
+other = "Статистика"
+
 [table_of_contents]
 other = "Содержание"
 
 [tags]
 other = "Теги"
+
+[taxonomies]
+other = "Таксономии"
+
+[theme_auto]
+other = "Авто"
+
+[theme_dark]
+other = "Тёмная"
+
+[theme_light]
+other = "Светлая"
+
+[tipeee]
+other = "Tipeee"
+
+[toggle_sidebar]
+other = "Вкл/Выкл боковую панель"
+
+[translations]
+other = "Перевод"
+
+[try_again]
+other = "Повторить"
 
 [wechat]
 other = "WeChat"
