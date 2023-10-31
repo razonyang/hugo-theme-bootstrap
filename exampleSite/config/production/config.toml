@@ -1,2 +1,5 @@
 baseURL = "https://hbs.razonyang.com/v1/"
-googleAnalytics = "G-R7DPHPZ86S"
+
+[services]
+  [services.googleAnalytics]
+    ID = 'G-R7DPHPZ86S'

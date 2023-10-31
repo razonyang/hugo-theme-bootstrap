@@ -16,9 +16,6 @@ paginate = 10
 # Disqus
 # disqusShortname = "yourdiscussshortname"
 
-# Google analytics
-# googleAnalytics = "UA-123-45"
-
 enableRobotsTXT = true
 
 enableEmoji = true
@@ -30,6 +27,11 @@ enableGitInfo = true
 pygmentsUseClasses = true
 
 timeout = "120s"
+
+[services]
+  # Google analytics
+  # [services.googleAnalytics]
+  #   ID = 'G-MEASUREMENT_ID'
 
 [blackfriday]
   hrefTargetBlank = true

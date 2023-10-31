@@ -34,7 +34,9 @@ authors = ["RazonYang"]
 | `paginatePath` | String | `page` |
 | `enableRobotsTXT` | Boolean | `true` |
 | `disqusShortname` | String | - | [Disqus]({{< ref "/docs/widgets/comments#disqus" >}}) shortname。
-| `googleAnalytics` | String | - | Google Analytics, both of universal analytics and GA4 are supported.
+| `services` | Object | - |
+| `services.googleAnalytics` | Object | - | Google Analytics, supports GA4 only.
+| `services.googleAnalytics.ID` | String | - | Measurement ID.
 | `author` | Object | - | [作者小部件]({{< ref "/docs/widgets/author" >}})。
 
 請參閱 [All Configuration Settings](https://gohugo.io/getting-started/configuration/#all-configuration-settings)。
