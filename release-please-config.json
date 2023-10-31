@@ -12,6 +12,7 @@
         { "type": "feat", "section": "Features ✨" },
         { "type": "feature", "section": "Features ✨" },
         { "type": "fix", "section": "Bug Fixes 🐞" },
+        { "type": "i18n", "section": "Internationalization 🌐" },
         { "type": "perf", "section": "Performance Improvements ⚡️" },
         { "type": "style", "section": "Styles 🎨" }
     ],
