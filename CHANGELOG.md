@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.4.1](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.4.0...v1.4.1) (2023-11-05)
+
+
+### Bug Fixes 🐞
+
+* correct archive month localization ([a464d74](https://github.com/razonyang/hugo-theme-bootstrap/commit/a464d74dca4aaa13b88abd053e15aed0554fecf0))
+* correct the broken style of archive month ([8c16acd](https://github.com/razonyang/hugo-theme-bootstrap/commit/8c16acdbf1c99a36285a2b6ca6b1f46b6d7aa659))
+
 ## [1.4.0](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.3.2...v1.4.0) (2023-11-05)
 
 
