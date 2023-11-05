@@ -17,7 +17,6 @@
     keywords = "Hugo, Bootstrap, 博客主题"
     [zh-hans.params.archive]
       dateFormat = "01-02"
-      monthFormat = "01"
 
 [zh-hant]
   languageName = "繁體中文"
@@ -27,7 +26,6 @@
     keywords = "Hugo, Bootstrap, 博客主題"
     [zh-hant.params.archive]
       dateFormat = "01-02"
-      monthFormat = "01"
 
 [ar]
   languageName = "العربية"
