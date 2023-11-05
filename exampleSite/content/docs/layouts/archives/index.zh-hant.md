@@ -51,5 +51,5 @@ $ tree content/archives
 | 名稱 | 類型 | 預設值 | 描述
 |---|:-:|:-:|---
 | `archive` | Object | - | Archive.
-| `archive.dateFormat` | Integer | `Jan 2` | Archive date format.
+| `archive.dateFormat` | String | `Jan 2` | Archive date format.
 | `archive.basePath` | String | `/archives` |

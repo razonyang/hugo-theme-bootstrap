@@ -51,5 +51,5 @@ The content of those files just contain a `title` parameter.
 | Name | Type | Default | Description
 |---|:-:|:-:|---
 | `archive` | Object | - | Archive.
-| `archive.dateFormat` | Integer | `Jan 2` | Archive date format.
+| `archive.dateFormat` | String | `Jan 2` | Archive date format.
 | `archive.basePath` | String | `/archives` |
