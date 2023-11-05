@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.3.2...v1.4.0) (2023-11-05)
+
+
+### Features ✨
+
+* add archive.monthFormat parameter ([f334678](https://github.com/razonyang/hugo-theme-bootstrap/commit/f334678e74000280d1385cde53a749286020c635))
+
 ## [1.3.2](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.3.1...v1.3.2) (2023-11-05)
 
 
