@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.3.2](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.3.1...v1.3.2) (2023-11-05)
+
+
+### Documentation 📝
+
+* correct the type of archive.dateFormat ([ba51a96](https://github.com/razonyang/hugo-theme-bootstrap/commit/ba51a9672457b66c134a8c70884161b57d30ad40))
+
+
+### Bug Fixes 🐞
+
+* correct the archive posts date format ([cde8594](https://github.com/razonyang/hugo-theme-bootstrap/commit/cde8594c0d3a32d2a8615da9e9bda36f7e1ef659))
+
 ## [1.3.1](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.3.0...v1.3.1) (2023-10-31)
 
 
