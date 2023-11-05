@@ -4,7 +4,7 @@
 {{- $pages = where $pages ".Date" ">=" $fromDate }}
 {{- $pages = where $pages ".Date" "<" $toDate }}
 {{- range $pages.GroupByDate "01" -}}
-{{- $month := (time (printf "2006-%s-01" .Key)).Format "January" -}}
+{{- $month := (time (printf "2006-%s-01" .Key)).Format (default "January" site.Params.archive.monthFormat) -}}
 <div class="archive card row component border-1" data-date="{{ $month }}">
     <div class="card-header">
         <h2 class="card-title fs-4 text-surface">{{ $month }}</h2>
