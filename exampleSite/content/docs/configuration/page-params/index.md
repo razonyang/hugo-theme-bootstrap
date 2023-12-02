@@ -57,3 +57,4 @@ Page parameters are located in page's [Front Matter](https://gohugo.io/content-m
 | `recentPostCount` | Integer/Boolean | `5` | The number of recent posts shown in sidebar. Turn off by setting it to `false`.
 | `relatedPostCount` | Integer/Boolean | `5` | The number of related posts. Turn off by setting it to `false`.
 | `featuredImageAlt` | String | - | The alternative text for featured images, fallback to page title if not present.
+| `numberifyHeadings` | Boolean | `true` | When `false`, headings won't be numebrified.
