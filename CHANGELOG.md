@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.5.0](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.4.1...v1.5.0) (2023-12-02)
+
+
+### Features ✨
+
+* add the numberifyHeadings page parameter ([#1011](https://github.com/razonyang/hugo-theme-bootstrap/issues/1011)) ([9947857](https://github.com/razonyang/hugo-theme-bootstrap/commit/99478576c0fa2e45ef4c55e1d8d4cb6a8f009d29))
+
+
+### Bug Fixes 🐞
+
+* bring the post.excerpt parameter back ([#1009](https://github.com/razonyang/hugo-theme-bootstrap/issues/1009)) ([ed07b2f](https://github.com/razonyang/hugo-theme-bootstrap/commit/ed07b2f47478446b9d9474db44761c253b9b62dc))
+
 ## [1.4.1](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.4.0...v1.4.1) (2023-11-05)
 
 
