@@ -91,7 +91,7 @@ viewer = true # Image Viewer
 lineNos = false # true/false represents that show/hide the line numbers by default.
 
 [post]
-# excerpt = "description"
+# excerpt = "" # uncomment to use summaries as excerpts.
 # excerptMaxLength = 120
 # copyright = false # Whether to display copyright section on each post.
 # plainifyExcerpt = false # Format excerpt in HTML if false.

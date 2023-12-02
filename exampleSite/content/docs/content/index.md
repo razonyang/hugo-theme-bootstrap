@@ -107,7 +107,7 @@ $ hugo new posts/new-post/index.zh-cn.md
 
 ## Summaries Selection Order
 
-1. If the `description` is not empty, then it'll be used.
+1. If the `description` is not empty, then it'll be used, to use summaries all the time, you should set the `post.excerpt` as _empty string_ explicitly.
 1. Manual splitting via <code>&lt;!--more--&gt;</code>.
 1. If `summary` on front matter isn't empty, then `summary` will be selected.
 1. The text of content will be cut off by `post.excerptMaxLength` and formatted in plain text or HTML when `post.plainifyExcerpt = true`.
