@@ -54,8 +54,6 @@ Thank you very much to the following contributors, sponsors and backers (sort by
 
 ### Sponsors
 
-[![Become a Sponsor](https://opencollective.com/hbs/tiers/sponsor.svg?avatarHeight=56)](https://opencollective.com/hbs#support)
-
 Sponsors will appear on our website with their brands and logos.
 
 | Sponsor                                                                                                | Description                                                                                                      |
@@ -66,15 +64,9 @@ Sponsors will appear on our website with their brands and logos.
 
 ### Backers
 
-[![Become a Backer](https://opencollective.com/hbs/tiers/backer.svg?avatarHeight=56)](https://opencollective.com/hbs#support)
-
-- [Dikea](https://github.com/Dikea)
-- [Sagar Behere](https://github.com/sagarbehere)
-- [Norbert Boros](https://github.com/Mecanik)
-- [Arvind Singh](https://github.com/ArvindRSingh)
-- [Vri](https://github.com/vrifox)
-- [Natenom](https://github.com/Natenom)
-- [Wilson E. Alvarez](https://github.com/Rubonnek)
-- [Andre Ferreira](https://github.com/andrefpoli)
-- [Kurt Krueckeberg](https://github.com/kurt-krueckeberg)
-- [Chris Munoz](https://github.com/cmpi66)
+| Backer | | |
+| --- | --- | --- |
+| [Dikea](https://github.com/Dikea) | [Sagar Behere](https://github.com/sagarbehere) | [Norbert Boros](https://github.com/Mecanik)
+| [Arvind Singh](https://github.com/ArvindRSingh) | [Vri](https://github.com/vrifox) | [Natenom](https://github.com/Natenom)
+| [Wilson E. Alvarez](https://github.com/Rubonnek) | [Andre Ferreira](https://github.com/andrefpoli) | [Kurt Krueckeberg](https://github.com/kurt-krueckeberg)
+| [Chris Munoz](https://github.com/cmpi66) | |
