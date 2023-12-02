@@ -1,9 +1,14 @@
+{{- $key := "description" }}
+{{- if isset site.Params.post "excerpt" }}
+  {{- $key = site.Params.post.excerpt }}
+{{- end }}
+{{- $useDescription := and (eq $key "description") .Description }}
 {{- $anchor := "" }}
 {{- if default false $.Site.Params.post.readMoreFromContent }}{{ $anchor = "#post-content-body" }}{{ end }}
 {{- $readMoreButton := printf "<div><a class=\"btn btn-sm btn-outline-primary btn-read-more\" href=\"%s%s\">%s</a></div>" .RelPermalink $anchor (i18n "read_more") | safeHTML }}
 {{- $content :=  "" }}
 {{- $readMore := true }}
-{{- if .Description }}
+{{- if $useDescription }}
   {{- $content = printf "<p>%s</p>" .Description | safeHTML }}
 {{- else if strings.Contains .RawContent "<!--more-->" }}
   {{- $content = .Summary }}
