@@ -10,7 +10,7 @@ A fast, responsive and feature-rich Hugo theme for personal blog and documentati
 
 ## News
 
-I created a new modular Hugo theme called [HB theme](https://github.com/hbstack/theme), it's recommended using it on your new static sites, for getting better performance, UI design and flexible.
+I created a new modular Hugo theme called [HB cards theme](https://github.com/hbstack/theme-cards), it's recommended using it on your new static sites, for getting better performance, UI design and flexible.
 
 > Those two theme are incompatible, and it's not recommended to apply the new theme on your old sites.
 
