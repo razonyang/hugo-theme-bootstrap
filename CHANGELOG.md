@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.1](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.5.0...v1.5.1) (2024-01-03)
+
+
+### Bug Fixes 🐞
+
+* hashing images to avoid caching issues ([#1012](https://github.com/razonyang/hugo-theme-bootstrap/issues/1012)) ([f590810](https://github.com/razonyang/hugo-theme-bootstrap/commit/f590810be422c62cbe9fdcf2436c3309adb41d04))
+
 ## [1.5.0](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.4.1...v1.5.0) (2023-12-02)
 
 
