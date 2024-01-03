@@ -22,7 +22,15 @@
     {{- $static = true -}}
     {{- $filename := path.Join "static" $url.Path -}}
     {{- if fileExists $filename -}}
-      {{- $link = .filename | absURL }}
+      {{- $hash := "" }}
+      {{- with os.Stat $filename }}
+        {{- $hash = .ModTime.Format "20060102150405" | md5 }}
+      {{- end }}
+      {{- if $hash }}
+       {{- $link = printf "%s?v=%s" .filename $hash | absURL }}
+      {{- else }}
+        {{- $link = .filename | absURL }}
+      {{- end }}
       {{- if not (in $unresizable $ext) -}}
         {{- $img = imageConfig $filename -}}
       {{- end -}}
