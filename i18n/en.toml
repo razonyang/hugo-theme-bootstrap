@@ -430,3 +430,7 @@ other = "Try again"
 
 [wechat]
 other = "WeChat"
+
+
+[browse_docs]
+other = "Browse docs"

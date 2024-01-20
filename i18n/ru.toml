@@ -430,3 +430,6 @@ other = "Повторить"
 
 [wechat]
 other = "WeChat"
+
+[browse_docs]
+other = "Список документов"
