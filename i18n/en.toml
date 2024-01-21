@@ -22,6 +22,9 @@ other = "Archives"
 [authors]
 other = "Authors"
 
+[browse_docs]
+other = "Browse docs"
+
 [button_copy_url]
 other = "Copy URL"
 
@@ -430,7 +433,3 @@ other = "Try again"
 
 [wechat]
 other = "WeChat"
-
-
-[browse_docs]
-other = "Browse docs"

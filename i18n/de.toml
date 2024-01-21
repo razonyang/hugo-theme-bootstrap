@@ -22,6 +22,9 @@ other = "Archiv"
 [authors]
 other = "Autoren"
 
+[browse_docs]
+other = "Browse docs"
+
 [button_copy_url]
 other = "URL kopieren"
 
