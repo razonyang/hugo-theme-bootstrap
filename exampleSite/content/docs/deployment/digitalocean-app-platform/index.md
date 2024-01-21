@@ -110,7 +110,7 @@ If everything goes fine, you should got only one resource, which is in type `Sta
 
 Please reviewing the billing section, you won't be charged if you deploy not more than 3 static sites.
 
-> Please note that exceeded bandwidth usage will be charged, read more on [pricing](https://docs.digitalocean.com/products/app-platform/details/pricing/).
+> Please note that exceeded transfer usage will be charged, read more on [pricing](https://docs.digitalocean.com/products/app-platform/details/pricing/).
 
 ![Billing](billing.png)
 
