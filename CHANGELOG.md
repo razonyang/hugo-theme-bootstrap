@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.2](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.5.1...v1.5.2) (2024-01-21)
+
+
+### Bug Fixes 🐞
+
+* **i18n:** translate "Browse docs" ([#1016](https://github.com/razonyang/hugo-theme-bootstrap/issues/1016)) ([0c6da30](https://github.com/razonyang/hugo-theme-bootstrap/commit/0c6da30f08ef4be514837ac93952f1673f01a8b2))
+
 ## [1.5.1](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.5.0...v1.5.1) (2024-01-03)
 
 
