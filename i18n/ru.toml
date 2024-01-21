@@ -22,6 +22,9 @@ other = "Архив"
 [authors]
 other = "Автор"
 
+[browse_docs]
+other = "Список документов"
+
 [button_copy_url]
 other = "Скопировать ссылку"
 

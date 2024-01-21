@@ -7,6 +7,9 @@ other = "Alipay"
 [archives]
 other = "Arxiv"
 
+[browse_docs]
+other = "Browse docs"
+
 [buy_me_a_coffee]
 other = "Buy me a coffee"
 

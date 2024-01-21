@@ -22,6 +22,9 @@ other = "الأرشيف"
 [authors]	
 other = "الكُتَّاب"
 
+[browse_docs]
+other = "Browse docs"
+
 [button_copy_url]
 other = "نسخ الرابط"
 

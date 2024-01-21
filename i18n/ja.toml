@@ -22,6 +22,9 @@ other = "アーカイブ"
 [authors]
 other = "執筆者"
 
+[browse_docs]
+other = "Browse docs"
+
 [button_copy_url]
 other = "URLをコピー"
 

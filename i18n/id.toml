@@ -16,6 +16,9 @@ other = "Semua"
 [archives]
 other = "Arsip"
 
+[browse_docs]
+other = "Browse docs"
+
 [button_copy_url]
 other = "Salin URL"
 

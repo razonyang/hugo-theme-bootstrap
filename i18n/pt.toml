@@ -13,6 +13,9 @@ other = "Alipay"
 [archives]
 other = "Arquivos"
 
+[browse_docs]
+other = "Browse docs"
+
 [button_copy_url]
 other = "Copiar URL"
 

@@ -22,6 +22,9 @@ other = "歸檔"
 [authors]
 other = "作者"
 
+[browse_docs]
+other = "瀏覽文檔"
+
 [button_copy_url]
 other = "複製連結"
 
