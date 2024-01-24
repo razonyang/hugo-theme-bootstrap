@@ -197,3 +197,15 @@ You can either specify the color CSS utilities or the `style` attribute for sett
 | `<i class="fas fa-clock text-danger"></i>` |
 | `<i class="far fa-clock" style="color: blue"></i>` |
 | `<i class="far fa-clock" style="color: pink"></i>` |
+
+> When using it in configurations, front matter and so on, you should need to quote/escape the code, otherwise YAML/TOML/JSON parsing may fail. For example,
+> 
+> ```md
+> ---
+> menu:
+>   main:
+>     params:
+>       icon: '<i class="far fa-clock" style="color: blue"></i>'
+> ---
+> ```
+> 
