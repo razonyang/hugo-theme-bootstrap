@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.5.3](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.5.2...v1.5.3) (2024-01-24)
+
+
+### Documentation 📝
+
+* deploy on DigitalOcean App Platform ([948b204](https://github.com/razonyang/hugo-theme-bootstrap/commit/948b204a26633cd1b2d6ffc53514c807163ef9a0))
+* update content-begin hook ([7380444](https://github.com/razonyang/hugo-theme-bootstrap/commit/7380444bec9a43a14abb0d0bea9adb6bb53c3e3b))
+
+
+### Bug Fixes 🐞
+
+* **i18n:** correct color_cyan translation in Russian ([c340404](https://github.com/razonyang/hugo-theme-bootstrap/commit/c340404ba2fde89b3bebb72c44d0dabb12e67c85))
+
 ## [1.5.2](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.5.1...v1.5.2) (2024-01-21)
 
 
