@@ -191,9 +191,13 @@ JS 变量使用驼峰式命名，其对应的 class 名称则是小写的，且�
 
 You can either specify the color CSS utilities or the `style` attribute for setting the icon color.
 
-| HTML |
-|---|
-| `<i class="fas fa-clock text-success"></i>` |
-| `<i class="fas fa-clock text-danger"></i>` |
-| `<i class="far fa-clock" style="color: blue"></i>` |
-| `<i class="far fa-clock" style="color: pink"></i>` |
+```md
+<i class="fas fa-clock text-success"></i>
+<i class="fas fa-clock text-danger"></i>
+'<i class="far fa-clock" style="color: blue"></i>'
+'<i class="far fa-clock" style="color: pink"></i>'
+```
+
+{{< alert warning >}}
+Where there are quotation marks, they should be exactly like that. Other options work without quotes.
+{{< /alert >}}
