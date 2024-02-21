@@ -28,6 +28,7 @@
             <ul class="list-unstyled">
                 {{- if $.File -}}
                 {{- $filePath := printf "%s/%s%s" $branch $subPath (strings.TrimPrefix $root $.File.Filename) -}}
+                {{- $filePath = replace $filePath "\\" "/" -}}
                 <li class="mb-1">
                     <a href="{{ printf $sourceUrlFormat $url $filePath }}" target="_blank" rel="noopener noreferrer">
                         <i class="fas fa-fw fa-file-archive text-success"></i> {{ i18n "repo_action_view" }}
