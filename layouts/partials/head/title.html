@@ -17,7 +17,7 @@
   {{- $pages := .Pages.ByTitle -}}
   {{- if eq $.Site.Params.taxonomySortingMethod "popularity" -}}{{- $pages = (sort $pages ".Data.Pages" "desc") -}}{{- end -}}
   {{- $paginator = .Paginate $pages .Site.Params.taxonomyPaginate -}}
-{{- else -}}
+{{- else if not .IsPage -}}
   {{- $paginator = .Paginate .RegularPagesRecursive -}}
 {{- end -}}
 {{- if $paginator -}}
