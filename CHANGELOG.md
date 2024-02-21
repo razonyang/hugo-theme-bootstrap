@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.5](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.5.4...v1.5.5) (2024-02-21)
+
+
+### Bug Fixes 🐞
+
+* repo widget file paths on Windows computers ([#1029](https://github.com/razonyang/hugo-theme-bootstrap/issues/1029)) ([129b573](https://github.com/razonyang/hugo-theme-bootstrap/commit/129b57324b1a7c4010fd26afdd56edab33cc62ea))
+
 ## [1.5.4](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.5.3...v1.5.4) (2024-02-21)
 
 
