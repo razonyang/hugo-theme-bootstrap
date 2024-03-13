@@ -112,6 +112,7 @@ imageTitleAsCaption = true
 # dateFormat = "01-02" # Archive date format. Default to "Jan 2".
 
 [analytics]
+# google = "" # Google Analytics
 # baidu = "" # Baidu Analytics
 # plausible = "razonyang.com,hbs.razonyang.com" # Multiple domains separated by comma.
 # plausibleScript = "" # Specify the self-hosted script or extended script. Default to https://plausible.io/js/script.js.
