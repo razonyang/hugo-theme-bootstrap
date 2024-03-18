@@ -44,7 +44,7 @@ authors = ["RazonYang"]
 | `params` | Object | 菜單參數。
 | `params.divider` | Boolean | `true` 表示分隔符。
 
-請參閱 [Menu Entry Properties](https://gohugo.io/variables/menus/)。
+請參閱 [Menu Entry Properties](https://gohugo.io/content-management/menus/#properties-front-matter)。
 
 ## 用法
 
