@@ -47,7 +47,7 @@ This article will briefly introduce how to use the menus.
 | `params.icon` | String | The icon HTML.
 | `params.description` | String | The description for top app bar's dropdown menus only.
 
-See also [Menu Entry Properties](https://gohugo.io/variables/menus/).
+See also [Menu Entry Properties](https://gohugo.io/content-management/menus/#properties-front-matter).
 
 ## Usage
 
