@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.5.6](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.5.5...v1.5.6) (2024-04-19)
+
+
+### Documentation 📝
+
+* fix broken link to the documentation for menu properties on Hugo site. ([#1033](https://github.com/razonyang/hugo-theme-bootstrap/issues/1033)) ([9af5a21](https://github.com/razonyang/hugo-theme-bootstrap/commit/9af5a21e87e0d7d98232cd7f3ccf4dedf17b78b1))
+
+
+### Bug Fixes 🐞
+
+* **i18n:** update Ukrainian localization file ([#1037](https://github.com/razonyang/hugo-theme-bootstrap/issues/1037)) ([379a6a4](https://github.com/razonyang/hugo-theme-bootstrap/commit/379a6a474e901e0d401994aad54817605aafa38c))
+
 ## [1.5.5](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.5.4...v1.5.5) (2024-02-21)
 
 
