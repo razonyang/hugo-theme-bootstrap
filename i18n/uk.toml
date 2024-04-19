@@ -1,14 +1,47 @@
+[404_title]
+other = "Упс! Сторінка не знайдена"
+
+[404_info]
+other = "Здається, ми не можемо знайти сторінку, яку ви шукаєте."
+
 [about_me]
 other = "Про мене"
+
+[actions]
+other = "Дії"
 
 [alipay]
 other = "Alipay"
 
+[all]
+other = "Все"
+
 [archives]
 other = "Архів"
 
+[authors]
+other = "Автор"
+
 [browse_docs]
-other = "Browse docs"
+other = "Список документів"
+
+[button_copy_url]
+other = "Копіювати посилання"
+
+[button_fullscreen]
+other = "На весь екран"
+
+[button_reload]
+other = "Перезавантажити"
+
+[button_run_game]
+other = "Почати гру"
+
+[button_social_share]
+other = "Поширити"
+
+[button_submit]
+other = "Відправити"
 
 [buy_me_a_coffee]
 other = "Донат на каву"
@@ -52,14 +85,92 @@ other = "Бірюзовий"
 [color_yellow]
 other = "Жовтий"
 
+[comments]
+other = "Коментарі"
+
+[comments_email]
+other = "Пошта"
+
+[comments_message]
+other = "Коментар"
+
+[comments_name]
+other = "Ім'я"
+
+[comments_reply]
+other = "Відповісти"
+
+[comments_reply_to]
+other = "Відповісти на"
+
+[comments_submit]
+other = "Надіслати коментар"
+
+[comments_url]
+other = "Посилання"
+
+[contact_name]
+other = "Ім'я"
+
+[contact_email]
+other = "Написати лист"
+
+[contact_email_help]
+other = "Ми ніколи не передамо вашу адресу електронної пошти третім особам."
+
+[contact_file]
+other = "Файл"
+
+[contact_subject]
+other = "Тема"
+
+[contact_message]
+other = "Повідомлення"
+
 [copyright]
-other = "Авторское право"
+other = "Авторське право"
 
 [featured_posts]
 other = "Головні статті"
 
 [font_size]
-other = "Розмір шрифта"
+other = "Розмір шрифту"
+
+[font_size_lg]
+other = "Великий"
+
+[font_size_md]
+other = "Середній"
+
+[font_size_sm]
+other = "Маленький"
+
+[font_size_xl]
+other = "Дуже великий"
+
+[font_size_xs]
+other = "Дуже маленький"
+
+[funding_alipay]
+other = "Alipay"
+
+[funding_buymeacoffee]
+other = "Buy Me a Coffee"
+
+[funding_ko_fi]
+other = "Ko-fi"
+
+[funding_open_collective]
+other = "Open Collective"
+
+[funding_patreon]
+other = "Patreon"
+
+[funding_wechat]
+other = "Wechat"
+
+[go_back]
+other = "Повернутись"
 
 [home]
 other = "Головна"
@@ -67,20 +178,57 @@ other = "Головна"
 [language]
 other = "Мова"
 
+[liberapay]
+other = "Liberapay"
+
+[load]
+other = "Завантажити"
+
 [load_more]
 other = "Завантажити більше"
 
 [mode]
 other = "Режим"
 
+[noscript_info]
+other = "Ваш браузер не підтримує JavaScript."
+
+[offline_title]
+other = "Упс! Відсутнє підключення до інтернету"
+
+[offline_info]
+other = """
+<p>Здається, виникла проблема з вашим з'єднанням. Перевірте стан мережі.</p>
+<p>Будь ласка, зв'яжіться з нами, якщо ви вважаєте, що це помилка сервера. Дякуємо.</p>
+"""
+
 [pagination_title]
 other = "{{ .PageNumber }} - сторінка"
 
 [palette]
-other = "Palitra"
+other = "Палітра"
+
+[patreon]
+other = "Patreon"
+
+[paypal]
+other = "PayPal"
+
+[post_count]
+one = "всього повідомлень {{ .Count }}"
+other = "всього повідомлень {{ .Count }}"
+
+[post_date]
+other = "створено {{ .createdOn }}{{ with .updatedOn }}, оновлено {{ . }}{{ end }}."
+
+[posts]
+other = "Стаття"
+
+[profile]
+other = "Профіль"
 
 [read_more]
-other = "Read More"
+other = "Детальніше"
 
 [reading_time]
 other = "Читається за {{ .ReadingTime }} хв."
@@ -89,31 +237,199 @@ other = "Читається за {{ .ReadingTime }} хв."
 other = "Останні оновлення"
 
 [related_posts]
-other = "Похожие публикации"
+other = "Схожі публікації"
+
+[repo_action_edit]
+other = "Редагувати цю сторінку"
+
+[repo_action_view]
+other = "Переглянути вихідний код сторінки"
+
+[repo_title]
+other = "Репозиторій"
 
 [search]
 other = "Пошук"
+
+[search_advanced]
+other = "Розширений пошук"
+
+[search_date]
+other = "Дата"
+
+[search_input_placeholder]
+other = "Введіть для пошуку"
 
 [search_missing_keywords]
 other = "Задайте ключові слова"
 
 [search_no_results]
-other = "Результатів нема"
+other = "Результатів немає"
+
+[search_score]
+other = "Рейтинг"
+
+[search_shortcut]
+other = "Натисніть {{ .Shortcut }} для пошуку"
+
+[search_sorting]
+other = "Сортувати"
 
 [search_stat]
 other = "Всього {{ .Total }} результатів"
+
+[sections]
+other = "Розділи"
 
 [series]
 other = "Серії"
 
 [settings]
-other = "Налашування"
+other = "Налаштування"
+
+[social_artstation]
+other = "ArtStation"
+
+[social_bilibili]
+other = "Bilibili"
+
+[social_bitbucket]
+other = "Bitbucket"
+
+[social_discord]
+other = "Discord"
+
+[social_discourse]
+other = "Discourse"
+
+[social_dockerhub]
+other = "Docker Hub"
+
+[social_email]
+other = "Пошта"
+
+[social_facebook]
+other = "Facebook"
+
+[social_facebookgroup]
+other = "Facebook Group"
+
+[social_github]
+other = "GitHub"
+
+[social_gitlab]
+other = "GitLab"
+
+[social_instagram]
+other = "Instagram"
+
+[social_itchio]
+other = "itch.io"
+
+[social_kaggle]
+other = "Kaggle"
+
+[social_lastfm]
+other = "Last.fm"
+
+[social_liberapay]
+other = "Liberapay"
+
+[social_linkedin]
+other = "LinkedIn"
+
+[social_mastodon]
+other = "Mastodon"
+
+[social_medium]
+other = "Medium"
+
+[social_patreon]
+other = "Patreon"
+
+[social_paypal]
+other = "PayPal"
+
+[social_pinterest]
+other = "Pinterest"
+
+[social_qq]
+other = "QQ"
+
+[social_quora]
+other = "Quora"
+
+[social_reddit]
+other = "Reddit"
+
+[social_rss]
+other = "RSS"
+
+[social_stackoverflow]
+other = "Stack Overflow"
+
+[social_telegram]
+other = "Telegram"
+
+[social_tipeee]
+other = "Tipeee"
+
+[social_tiktok]
+other = "TikTok"
+
+[social_tumblr]
+other = "Tumblr"
+
+[social_twitter]
+other = "Twitter"
+
+[social_website]
+other = "Сайт"
+
+[social_weibo]
+other = "Weibo"
+
+[social_xing]
+other = "XING"
+
+[social_youtube]
+other = "YouTube"
+
+[social_zhihu]
+other = "Zhihu"
+
+[stats]
+other = "Статистика"
 
 [table_of_contents]
 other = "Зміст"
 
 [tags]
 other = "Теги"
+
+[taxonomies]
+other = "Таксономії"
+
+[theme_auto]
+other = "Авто"
+
+[theme_dark]
+other = "Темна"
+
+[theme_light]
+other = "Світла"
+
+[tipeee]
+other = "Tipeee"
+
+[toggle_sidebar]
+other = "Увімк./Вимк. бокову панель"
+
+[translations]
+other = "Переклад"
+
+[try_again]
+other = "Повторити"
 
 [wechat]
 other = "WeChat"
