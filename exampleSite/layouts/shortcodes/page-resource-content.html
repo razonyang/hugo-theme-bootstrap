@@ -1,0 +1,6 @@
+{{- $name := .Get 0 }}
+{{- with .Page.Resources.GetMatch $name }}
+  {{- .Content | $.Page.RenderString }}
+{{- else }}
+  {{- warnf "no such page resource: %s" $name }}
+{{- end }}

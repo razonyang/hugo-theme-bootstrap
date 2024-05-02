@@ -1,3 +1,4 @@
+```yml
 name: GitHub Pages
 on:
   push:
@@ -7,7 +8,7 @@ permissions:
   contents: write
 jobs:
   build-and-deploy:
-    concurrency: ci-${{ printf "{{" }} github.ref {{ printf "}}" }}
+    concurrency: ci-${{ github.ref }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
@@ -25,9 +26,9 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ~/.npm
-          key: ${{ printf "{{" }} runner.os {{ printf "}}" }}-node-${{ printf "{{" }} hashFiles('**/package-lock.json') {{ printf "}}" }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
-            ${{ printf "{{" }} runner.os {{ printf "}}" }}-node-
+            ${{ runner.os }}-node-            
 
       - name: Install dependencies
         run: npm install
@@ -44,5 +45,6 @@ jobs:
       - name: Deploy 🚀
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ printf "{{" }} secrets.GITHUB_TOKEN {{ printf "}}" }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
+```

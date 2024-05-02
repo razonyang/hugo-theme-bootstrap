@@ -25,8 +25,6 @@ This article explains how to deploy sites to [GitHub Pages](https://pages.github
 
 Create `.github/workflows/gh-pages.yml` in the site root.
 
-```yaml
-{{% code/deployment-github-pages-workflow %}}
-```
+{{< page-resource-content "code/workflow" >}}
 
 > See also [Starter Template GitHub Pages Workflow](https://github.com/razonyang/hugo-theme-bootstrap-skeleton/blob/main/.github/workflows/gh-pages.yml)。

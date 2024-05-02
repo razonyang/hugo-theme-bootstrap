@@ -25,8 +25,6 @@ images = []
 
 于根目录创建 Workflow `.github/workflows/gh-pages.yml`：
 
-```yaml
-{{% code/deployment-github-pages-workflow %}}
-```
+{{< page-resource-content "code/workflow" >}}
 
 > 也可以参考[新手模板的 GitHub Pages Workflow](https://github.com/razonyang/hugo-theme-bootstrap-skeleton/blob/main/.github/workflows/gh-pages.yml)。
