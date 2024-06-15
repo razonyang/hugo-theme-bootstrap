@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.7](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.5.6...v1.5.7) (2024-06-15)
+
+
+### Bug Fixes 🐞
+
+* avoid paginating on non pagination pages ([#1039](https://github.com/razonyang/hugo-theme-bootstrap/issues/1039)) ([399c304](https://github.com/razonyang/hugo-theme-bootstrap/commit/399c304ebdddee4aa150bbab47b964815b0ba261))
+
 ## [1.5.6](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.5.5...v1.5.6) (2024-04-19)
 
 
