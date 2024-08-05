@@ -1,4 +1,9 @@
-{{- with .Site.Author -}}
+{{- $author := site.Params.author }}
+{{- with site.Author }}
+  {{- $author = . }}
+  {{- warnf "The author key in site configuration is deprecated. Use params.author instead." }}
+{{- end }}
+{{- with $author -}}
 {{- $attributes := printf "data-viewer-invisible" | safeHTMLAttr -}}
 {{- partial "helpers/image" (dict "filename" (default "images/profile.webp" .avatar) "class" "profile-avatar rounded-circle" "alt" .name "resources" $.Resources "attributes" $attributes) -}}
 {{- end -}}

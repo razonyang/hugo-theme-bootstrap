@@ -24,10 +24,19 @@ The author widget is located in the sidebar, in order to introduce yourself brie
 
 <!--more-->
 
-## Site Configuration
+## Site Parameters
 
-The configuration file is located in `config/_default/author.toml` by default.
-You can turn it off by removing the `author` configuration.
+{{% alert warning %}}
+`config/_default/author.toml` is deprecated, please use `params.author` instead.
+{{% /alert %}}
+
+```toml
+// params.toml
+[author]
+name = "Foobar"
+[author.params]
+[author.social]
+```
 
 | Name | Type | Default | Description
 |---|:-:|:-:|---
@@ -41,3 +50,4 @@ You can turn it off by removing the `author` configuration.
 | `author.params` | Object | - |
 | `author.params.layout` | String | - | Optional values: `compact`.
 | `author.social` | Object | - | [Social Links]({{< ref "/docs/widgets/social-links" >}}).
+

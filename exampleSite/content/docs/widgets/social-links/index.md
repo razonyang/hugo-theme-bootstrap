@@ -40,10 +40,10 @@ There are three places you can put social links to: top app bar, [Author Widget]
 
 ### Author Widget
 
-Set up social links by editing a file `config/_default/author.toml` with the following content:
+Set up social links by editing a file `config/_default/params.toml` with the following content:
 
 ```toml
-[social]
+[author.social]
   email = "user@domain.tld"
   github = "githubusername"
 ```

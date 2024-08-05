@@ -40,10 +40,10 @@ authors = ["RazonYang"]
 
 ### 作者小部件
 
-編輯 `config/_default/author.toml` 文件，並填寫以下配置：
+編輯 `config/_default/params.toml` 文件，並填寫以下配置：
 
 ```toml
-[social]
+[author.social]
   email = "user@domain.tld"
   github = "githubusername"
 ```

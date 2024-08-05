@@ -1,4 +1,9 @@
-{{- with .Site.Author -}}
+{{- $author := site.Params.author }}
+{{- with site.Author }}
+  {{- $author = . }}
+  {{- warnf "The author key in site configuration is deprecated. Use params.author instead." }}
+{{- end }}
+{{- with $author -}}
 <div class="profile-name fw-fold fs-lg">{{ .name }}</div>
 {{- with .bio -}}
 <div class="profile-bio">{{ . }}</div>
