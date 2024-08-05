@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.8](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.5.7...v1.5.8) (2024-08-05)
+
+
+### Bug Fixes 🐞
+
+* deprecate site.Author ([#1042](https://github.com/razonyang/hugo-theme-bootstrap/issues/1042)) ([9fccbf6](https://github.com/razonyang/hugo-theme-bootstrap/commit/9fccbf65c5273df456db5a5f16092d942543dc8d))
+
 ## [1.5.7](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.5.6...v1.5.7) (2024-06-15)
 
 
