@@ -24,11 +24,19 @@ authors = ["RazonYang"]
 
 <!--more-->
 
-## 網站配置
+## 網站參數
 
-默認地，設定檔位於 `config/_ default/author.toml`。
+{{% alert warning %}}
+`config/_default/author.toml` 已被棄用，請使用 `params.author` 代替。
+{{% /alert %}}
 
-你可以通過移除 `author` 配置禁用小部件。
+```toml
+// params.toml
+[author]
+name = "Foobar"
+[author.params]
+[author.social]
+```
 
 | 名稱 | 類型 | 預設值 | 描述
 |---|:-:|:-:|---

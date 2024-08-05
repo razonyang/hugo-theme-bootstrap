@@ -1,5 +1,10 @@
-{{- if .Site.Author }}
-{{- $layout := default "" .Site.Author.params.layout }}
+{{- $author := site.Params.author }}
+{{- with site.Author }}
+  {{- $author = . }}
+  {{- warnf "The author key in site configuration is deprecated. Use params.author instead." }}
+{{- end }}
+{{- if $author }}
+{{- $layout := default "" $author.params.layout }}
 {{- if eq $layout "compact" }}
   {{- partial "sidebar/profile/compact" . }}
 {{- else }}

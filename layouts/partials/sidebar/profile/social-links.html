@@ -1,3 +1,8 @@
-{{- with .Site.Author.social -}}
+{{- $author := site.Params.author }}
+{{- with site.Author }}
+  {{- $author = . }}
+  {{- warnf "The author key in site configuration is deprecated. Use params.author instead." }}
+{{- end }}
+{{- with $author.social -}}
 {{- partial "helpers/social-links" (dict "class" "mt-1 justify-content-around" "links" . "size" "fa-2x" "OutputFormats" $.OutputFormats "home" ($.GetPage "/") "params" $.Site.Params) -}}
 {{- end -}}

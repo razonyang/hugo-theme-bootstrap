@@ -24,10 +24,19 @@ authors = ["RazonYang"]
 
 <!--more-->
 
-## 站点配置
+## 站点参数
 
-默认地，配置文件位于 `config/_default/author.toml`。
-你可以通过移除 `author` 配置禁用小部件。
+{{% alert warning %}}
+`config/_default/author.toml` 已被弃用，请使用 `params.author` 代替。
+{{% /alert %}}
+
+```toml
+// params.toml
+[author]
+name = "Foobar"
+[author.params]
+[author.social]
+```
 
 | 名称 | 类型 | 默认值 | 描述
 |---|:-:|:-:|---
