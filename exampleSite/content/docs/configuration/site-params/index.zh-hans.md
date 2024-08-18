@@ -165,7 +165,7 @@ authors = ["RazonYang"]
 | `actionsPanel` | Object | - |
 | `actionsPanel.disabled` | Boolean | `false` | 禁用 actions panel。
 | `repo` | Object | - | See [Repository widget]({{< ref "docs/widgets/repository" >}}).
-| `docsNav` | Object | - | 文档布局导航。
-| `docsNav.reduceFontSize` | Boolean | `true` | 为 `false` 时，不缩小子导航菜单的字体大小。
+| `docs.nav` | Object | - | 文档布局导航。
+| `docs.nav.reduceFontSize` | Boolean | `true` | 为 `false` 时，不缩小子导航菜单的字体大小。
 
 > 除了 Google 站长工具外，其他搜索引擎站长工具无法与 `hugo --minify` 同时使用，这是因为它们无法识别优化后的元标签。

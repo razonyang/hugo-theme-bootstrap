@@ -292,6 +292,7 @@ paypal = "razonyang"
 [docs]
 [docs.nav]
 expand = false # Expand docs navigations.
+reduceFontSize = true
 
 [feeds]
 # content = true
@@ -356,6 +357,3 @@ location = "Earth"
   patreon = "razonyang"
   paypal = "razonyang"
   # rss = "" # Disable RSS link
-
-# [docsNav]
-# reduceFontSize = false

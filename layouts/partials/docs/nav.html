@@ -35,7 +35,7 @@
             </a>
           </div>
           <div class="docs-nav-subnavs border-start mt-2 collapse {{ if or $active $expand}} show{{ end }}{{ if $active }} border-primary{{ end }}" id="{{ $sectionId }}">
-            <div class="btn-toggle-nav fw-normal ms-2{{ cond (default true site.Params.docsNav.reduceFontSize) ` small` `` }}">
+            <div class="btn-toggle-nav fw-normal ms-2{{ cond (default true site.Params.docs.nav.reduceFontSize) ` small` `` }}">
               {{ template "walk-nav" (dict "section" . "page" $page) }}
             </div>
           </div>
