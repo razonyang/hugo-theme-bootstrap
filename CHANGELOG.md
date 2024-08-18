@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.0](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.5.8...v1.6.0) (2024-08-18)
+
+
+### Features ✨
+
+* add the docsNav.reduceFontSize parameter ([#1046](https://github.com/razonyang/hugo-theme-bootstrap/issues/1046)) ([052f160](https://github.com/razonyang/hugo-theme-bootstrap/commit/052f16047b698c896c6da92a88e598d5a37c304c))
+
 ## [1.5.8](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.5.7...v1.5.8) (2024-08-05)
 
 
