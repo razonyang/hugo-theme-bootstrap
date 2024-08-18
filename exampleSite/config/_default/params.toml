@@ -356,3 +356,6 @@ location = "Earth"
   patreon = "razonyang"
   paypal = "razonyang"
   # rss = "" # Disable RSS link
+
+# [docsNav]
+# reduceFontSize = false

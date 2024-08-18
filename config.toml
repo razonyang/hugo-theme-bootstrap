@@ -33,3 +33,6 @@ titleCase = false
 titleSeparator = "-"
 tocWordCount = 280
 viewer = true
+
+[params.docsNav]
+reduceFontSize = true
