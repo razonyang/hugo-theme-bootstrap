@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.1](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.6.0...v1.6.1) (2024-08-18)
+
+
+### Bug Fixes 🐞
+
+* rename `docsNav.reduceFontSize` to `docs.nav.reduceFontSize` ([5ce293e](https://github.com/razonyang/hugo-theme-bootstrap/commit/5ce293eecb5de853a16456a592423b2ae277ebcb))
+
 ## [1.6.0](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.5.8...v1.6.0) (2024-08-18)
 
 
