@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.6.2](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.6.1...v1.6.2) (2024-08-19)
+
+
+### Bug Fixes 🐞
+
+* code block maxlines not working all the time ([#1050](https://github.com/razonyang/hugo-theme-bootstrap/issues/1050)) ([f2f722c](https://github.com/razonyang/hugo-theme-bootstrap/commit/f2f722c079d4a41c8bf211371a383dacbc148a44)), closes [#1049](https://github.com/razonyang/hugo-theme-bootstrap/issues/1049)
+
+
+### Styles 🎨
+
+* set max-height for code block to partially avoid CLS issue ([f2f722c](https://github.com/razonyang/hugo-theme-bootstrap/commit/f2f722c079d4a41c8bf211371a383dacbc148a44))
+
 ## [1.6.1](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.6.0...v1.6.1) (2024-08-18)
 
 
