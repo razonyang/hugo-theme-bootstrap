@@ -17,8 +17,11 @@ class SidebarToggle implements Component {
       return;
     }
 
-    this.sidebar = document.querySelector(".content .sidebar");
-    this.main = this.sidebar.previousElementSibling as HTMLElement;
+    this.sidebar = document.querySelector(".content .sidebar") as HTMLElement;
+    if (!this.sidebar) {
+      return;
+    }
+    this.main = this.sidebar.closest('main') as HTMLElement;
     this.button.addEventListener("click", () => {
       this.toggle();
     });
@@ -38,57 +41,16 @@ class SidebarToggle implements Component {
   }
 
   isShown() {
-    return !this.sidebar.classList.contains("d-none");
-  }
-
-  getWidth(element: HTMLElement) {
-    let width = 0;
-    element.classList.forEach((value) => {
-      if (value.indexOf(this.colClass) === 0) {
-        width = parseInt(value.replace(this.colClass, ""));
-      }
-    });
-
-    return width;
-  }
-
-  fullWidth?: number;
-
-  getFullWidth() {
-    if (!this.fullWidth) {
-      this.fullWidth = this.getWidth(this.sidebar) + this.getMainWidth();
-    }
-
-    return this.fullWidth;
-  }
-
-  mainWidth?: number;
-
-  getMainWidth() {
-    if (!this.mainWidth) {
-      this.mainWidth = this.getWidth(this.main);
-    }
-
-    return this.mainWidth;
+    return !this.main.classList.contains("sidebar-none");
   }
 
   hide() {
-    this.main.classList.replace(
-      this.colClass + this.getMainWidth(),
-      this.colClass + this.getFullWidth()
-    );
-    this.sidebar.classList.add("d-none");
-    this.button.classList.add("active");
+    this.main.classList.add('sidebar-none')
     LocalStorage.setItem(this.key, "hide");
   }
 
   show() {
-    this.main.classList.replace(
-      this.colClass + this.getFullWidth(),
-      this.colClass + this.getMainWidth()
-    );
-    this.sidebar.classList.remove("d-none");
-    this.button.classList.remove("active");
+    this.main.classList.remove('sidebar-none')
     LocalStorage.removeItem(this.key);
   }
 }

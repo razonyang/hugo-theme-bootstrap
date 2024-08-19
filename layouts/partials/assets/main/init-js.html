@@ -1,0 +1,8 @@
+{{- $js := resources.Get "main/init/index.ts" }}
+{{- $params := dict "baseURL" .Site.BaseURL -}}
+{{- $options := dict
+  "targetPath" "js/main-init.js"
+  "params" $params
+}}
+{{- $js := $js | js.Build $options | fingerprint -}}
+<script data-precache src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" crossorigin="anonymous"></script>

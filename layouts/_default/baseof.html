@@ -18,6 +18,7 @@
     {{- partial "header.html" . }}
     {{- partial "hooks/main-begin" . }}
     <main class="{{- partialCached "functions/container-class" . .FirstSection -}}">
+      {{- partialCached "assets/main/init-js" . }}
       <div class="row content">
         {{- partialCached "noscript" . .Language.Lang }}
         {{- block "content" . }}{{ end }}

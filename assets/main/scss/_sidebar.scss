@@ -8,3 +8,11 @@
     }
   }
 }
+
+main {
+  &.sidebar-none {
+    .sidebar {
+      display: none !important;
+    }
+  }
+}

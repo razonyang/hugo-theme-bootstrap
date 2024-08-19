@@ -1,6 +1,6 @@
 {{ define "content" }}
 {{- partial "docs/nav" . -}}
-<div class="{{ if default true .Params.sidebar }}col-xxl-7{{ else }}col-xxl-10{{ end }} ms-auto">
+<div class="col ms-auto">
   <div class="container-fluid">
     {{- partial "breadcrumb" . -}}
     {{- partial "docs/post" . -}}
