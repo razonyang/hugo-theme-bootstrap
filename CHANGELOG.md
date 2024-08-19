@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.4](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.6.3...v1.6.4) (2024-08-19)
+
+
+### Bug Fixes 🐞
+
+* sidebar toggle on list and single page ([f8b09f2](https://github.com/razonyang/hugo-theme-bootstrap/commit/f8b09f2a585a3876fa8f896fecb348df71f8eafb))
+
 ## [1.6.3](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.6.2...v1.6.3) (2024-08-19)
 
 
