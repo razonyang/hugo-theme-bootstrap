@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.3](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.6.2...v1.6.3) (2024-08-19)
+
+
+### Bug Fixes 🐞
+
+* sidebar toggle CLS issue ([#1054](https://github.com/razonyang/hugo-theme-bootstrap/issues/1054)) ([c4468f5](https://github.com/razonyang/hugo-theme-bootstrap/commit/c4468f58cf5dd2b777f30e46e5bcc77533e88a35)), closes [#1053](https://github.com/razonyang/hugo-theme-bootstrap/issues/1053)
+
 ## [1.6.2](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.6.1...v1.6.2) (2024-08-19)
 
 
