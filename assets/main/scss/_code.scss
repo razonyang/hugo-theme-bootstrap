@@ -47,6 +47,7 @@ pre {
   color: var(--#{$prefix}body-color);
   padding: 1rem;
   position: relative;
+  max-height: 360px;
 
   code {
     padding: 0;
