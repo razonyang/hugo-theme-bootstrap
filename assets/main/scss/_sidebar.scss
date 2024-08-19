@@ -14,5 +14,11 @@ main {
     .sidebar {
       display: none !important;
     }
+
+    .content {
+      > div:first-of-type {
+        width: 100%!important;
+      }
+    }
   }
 }
