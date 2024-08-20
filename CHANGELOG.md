@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.5](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.6.4...v1.6.5) (2024-08-20)
+
+
+### Bug Fixes 🐞
+
+* remove usage of deprecated functions and variables of upstream ([#1057](https://github.com/razonyang/hugo-theme-bootstrap/issues/1057)) ([c8b52e6](https://github.com/razonyang/hugo-theme-bootstrap/commit/c8b52e6205979e7cf550614b50a6f79cabb89e99))
+
 ## [1.6.4](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.6.3...v1.6.4) (2024-08-19)
 
 
