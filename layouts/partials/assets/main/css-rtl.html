@@ -4,7 +4,7 @@
 {{- $options := dict "targetPath" "assets/main/bundle.rtl.min.css" "outputStyle" $outputStyle "includePaths" (slice "node_modules") }}
 {{- $config := resources.Get "main/scss/_config.scss" | resources.ExecuteAsTemplate "main/scss/_config.rtl.scss" . }}
 {{- $main := resources.Get "main/scss/index.scss" }}
-{{- $style := slice $config $main | resources.Concat "main/scss/main.rtl.css" | toCSS $options | resources.PostCSS $postCSSOptions | fingerprint }}
+{{- $style := slice $config $main | resources.Concat "main/scss/main.rtl.css" | toCSS $options | css.PostCSS $postCSSOptions | fingerprint }}
 {{- if hugo.IsProduction }}{{ $style = $style | resources.PostProcess }}{{ end }}
 <link data-precache rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous">
 {{- partial "assets/main/custom" . }}

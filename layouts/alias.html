@@ -4,7 +4,7 @@
   <head>
     {{- partial "assets/init/js" .Page -}}
     {{- partialCached "assets/main/css" .Page }}
-    {{- $isHome := eq .Permalink (site.Sites.First.Home.Permalink) }}
+    {{- $isHome := eq .Permalink (site.Sites.Default.Home.Permalink) }}
     {{- if $isHome }}
       {{- $homes := newScratch }}
       {{- range site.Sites }}
