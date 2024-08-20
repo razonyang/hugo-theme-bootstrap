@@ -1,7 +1,7 @@
 [module]
 [module.hugoVersion]
 extended = true
-min = "0.97.0"
+min = "0.128.0"
 
 [params]
 breadcrumb = true
