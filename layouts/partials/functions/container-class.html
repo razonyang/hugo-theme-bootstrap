@@ -1,2 +1,6 @@
 {{- $fullWidth := partialCached "functions/full-width" .FirstSection }}
-{{- return cond $fullWidth "container-fluid" "container" -}}
+{{- $class := "" }}
+{{- if default true .Params.sidebar }}
+  {{- $class = "sidebar" }}
+{{- end }}
+{{- return (cond $fullWidth "container-fluid" "container" | printf "%s %s" $class ) -}}
