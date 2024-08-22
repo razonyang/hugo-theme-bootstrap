@@ -73,20 +73,6 @@ $ cp themes/hugo-theme-bootstrap/archetypes/default.md archetypes/notes.md
 
 同样地，你也可以为 `posts`、`docs` 等自定义原型。
 
-## Sections 模板
-
-你可能还想在 `notes` 中使用和 `docs` 一样的列表布局。
-
-```html {title="layouts/notes/list.html"}
-{{ define "content" }}
-{{- partial "docs/nav" . -}}
-<div class="col ms-auto">
-  {{ partial "docs/list" . }}
-</div>
-{{- partial "docs/sidebar" . -}}
-{{ end }}
-```
-
 ## 书写文章
 
 > 假设默认语言为 `en`。

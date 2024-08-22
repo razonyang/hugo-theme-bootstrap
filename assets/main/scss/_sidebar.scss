@@ -9,16 +9,28 @@
   }
 }
 
-main {
+main.sidebar {
   &.sidebar-none {
     .sidebar {
       display: none !important;
     }
 
-    .content {
-      > div:first-of-type {
-        width: 100%!important;
-      }
+    .content-posts {
+      @extend .col-xxl-12;
+    }
+
+    .content-docs {
+      @extend .col-xxl-10;
+    }
+  }
+
+
+  &:not(.sidebar-none) {
+    .content-docs {
+      @extend .col-xxl-7;
+    }
+    .content-posts {
+      @extend .col-xxl-8;
     }
   }
 }

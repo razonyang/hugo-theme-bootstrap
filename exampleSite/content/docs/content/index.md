@@ -74,20 +74,6 @@ And the append `type = "docs"` on the front matter of `archetypes/notes.md`. Now
 
 Similarly, you can also custom the archetypes for `posts`, `docs` and so on.
 
-## Sections Template
-
-You may also want to use the same list layout of `docs` on `notes`.
-
-```html {title="layouts/notes/list.html"}
-{{ define "content" }}
-{{- partial "docs/nav" . -}}
-<div class="col ms-auto">
-  {{ partial "docs/list" . }}
-</div>
-{{- partial "docs/sidebar" . -}}
-{{ end }}
-```
-
 ## Write New Articles
 
 > Suppose the default language is `en`.
