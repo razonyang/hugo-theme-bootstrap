@@ -10,6 +10,13 @@
 }
 
 main.sidebar {
+  .content-docs {
+    @extend .col-xxl-7;
+  }
+  .content-posts {
+    @extend .col-xxl-8;
+  }
+
   &.sidebar-none {
     .sidebar {
       display: none !important;
@@ -21,16 +28,6 @@ main.sidebar {
 
     .content-docs {
       @extend .col-xxl-10;
-    }
-  }
-
-
-  &:not(.sidebar-none) {
-    .content-docs {
-      @extend .col-xxl-7;
-    }
-    .content-posts {
-      @extend .col-xxl-8;
     }
   }
 }
