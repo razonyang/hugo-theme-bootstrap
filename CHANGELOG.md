@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.6.6](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.6.5...v1.6.6) (2024-08-22)
+
+
+### Bug Fixes 🐞
+
+* add sidebar-none into PurgeCSS safelist ([f3ab300](https://github.com/razonyang/hugo-theme-bootstrap/commit/f3ab3004429c7510d0c38a9dd4b35b43b2af287d))
+* broken layouts ([#1060](https://github.com/razonyang/hugo-theme-bootstrap/issues/1060)) ([4438926](https://github.com/razonyang/hugo-theme-bootstrap/commit/4438926211e05997d65d61f83ed1ba38d43c6755))
+* table CLS issue ([7cc1115](https://github.com/razonyang/hugo-theme-bootstrap/commit/7cc1115bfb92632797d9a40951e7070ea6688091)), closes [#1062](https://github.com/razonyang/hugo-theme-bootstrap/issues/1062)
+
 ## [1.6.5](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.6.4...v1.6.5) (2024-08-20)
 
 
