@@ -8,6 +8,11 @@
 
 .docs-nav {
   word-break: break-word;
+  scrollbar-width: thin;
+
+  &:hover {
+    scrollbar-color: var(--#{$prefix}primary) rgba(0,0,0,0);
+  }
 
   @include media-breakpoint-up(xxl) {
     position: sticky;

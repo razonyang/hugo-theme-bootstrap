@@ -1,15 +1,16 @@
 .sidebar {
+  scrollbar-width: thin;
+
+  &:hover {
+    scrollbar-color: var(--#{$prefix}primary) rgba(0,0,0,0);
+  }
+
   @if $fixedSidebar {
     @include media-breakpoint-up(lg) {
       height: calc(100vh - 84px);
       overflow: auto;
       position: sticky;
-      scrollbar-width: thin;
       top: 84px;
-
-      &:hover {
-        scrollbar-color: var(--#{$prefix}primary) rgba(0,0,0,0);
-      }
     }
   }
 }
