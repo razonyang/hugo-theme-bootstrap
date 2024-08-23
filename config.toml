@@ -4,6 +4,7 @@ extended = true
 min = "0.128.0"
 
 [params]
+sass_transpiler = "libsass" # dartsass is recommended, since libsass is deprecated.
 breadcrumb = true
 dateFormat = ":date_long"
 countTaxonomyPosts = false

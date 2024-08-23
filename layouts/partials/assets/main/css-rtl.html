@@ -1,7 +1,12 @@
 {{- $postCSSOptions := (dict "config" "assets/main/config/rtl") }}
 {{- $outputStyle := "expanded" }}
 {{- if hugo.IsProduction }}{{ $outputStyle = "compressed" }}{{ end }}
-{{- $options := dict "targetPath" "assets/main/bundle.rtl.min.css" "outputStyle" $outputStyle "includePaths" (slice "node_modules") }}
+{{- $options := dict
+  "transpiler" (default "libsass" site.Params.sass_transpiler)
+  "targetPath" "assets/main/bundle.rtl.min.css"
+  "outputStyle" $outputStyle
+  "includePaths" (slice "node_modules")
+}}
 {{- $config := resources.Get "main/scss/_config.scss" | resources.ExecuteAsTemplate "main/scss/_config.rtl.scss" . }}
 {{- $main := resources.Get "main/scss/index.scss" }}
 {{- $style := slice $config $main | resources.Concat "main/scss/main.rtl.css" | toCSS $options | css.PostCSS $postCSSOptions | fingerprint }}

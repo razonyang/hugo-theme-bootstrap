@@ -25,6 +25,7 @@ authors = ["RazonYang"]
 
 | 名稱 | 類型 | 默認值 | 說明
 |---|:-:|:-:|---
+| `sass_transpiler` | string | `libsass` | 推薦使用 `dartsass`，因為 `libsass` 已被棄用。
 | **Page** 
 | `mainSections` | Array | `["posts"]` | 主要的 sections
 | `titleCase` | Boolean | `false` | 標題首字母是否大寫

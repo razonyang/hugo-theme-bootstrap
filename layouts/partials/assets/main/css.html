@@ -1,7 +1,12 @@
 {{- $postCSSOptions := dict "config" "postcss.config.js" }}
 {{- $outputStyle := "expanded" }}
 {{- if hugo.IsProduction }}{{ $outputStyle = "compressed" }}{{ end }}
-{{- $options := dict "targetPath" "assets/main/bundle.min.css" "outputStyle" $outputStyle "includePaths" (slice "node_modules") }}
+{{- $options := dict
+  "transpiler" (default "libsass" site.Params.sass_transpiler)
+  "targetPath" "assets/main/bundle.min.css"
+  "outputStyle" $outputStyle
+  "includePaths" (slice "node_modules")
+}}
 {{- $config := resources.Get "main/scss/_config.scss" | resources.ExecuteAsTemplate "main/scss/_config.scss" . }}
 {{- $main := resources.Get "main/scss/index.scss" }}
 {{- $styles := slice $config $main }}

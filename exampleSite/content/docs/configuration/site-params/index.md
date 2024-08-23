@@ -25,6 +25,7 @@ The site parameters are located in `config/_default/params.toml` by default.
 
 | Name | Type | Default | Description
 |---|:-:|:-:|---
+| `sass_transpiler` | string | `libsass` | `dartsass` is recommended, since `libsass` is deprecated.
 | **Page** 
 | `mainSections` | Array | `["posts"]` | Main sections
 | `titleCase` | Boolean | `false` | Capitalized title or not

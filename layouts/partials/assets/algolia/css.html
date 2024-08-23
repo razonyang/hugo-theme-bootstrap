@@ -2,6 +2,7 @@
 {{- $outputStyle := "expanded" }}
 {{- if hugo.IsProduction }}{{ $outputStyle = "compressed" }}{{ end }}
 {{- $options := dict
+    "transpiler" (default "libsass" site.Params.sass_transpiler)
     "targetPath" "assets/algolia/bundle.min.css"
     "outputStyle" $outputStyle
     "includePaths" (slice "node_modules")
