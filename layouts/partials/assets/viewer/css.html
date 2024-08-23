@@ -1,7 +1,12 @@
 {{- if .Site.Params.viewer }}
     {{- $outputStyle := "expanded" }}
     {{- if hugo.IsProduction }}{{ $outputStyle = "compressed" }}{{ end }}
-    {{- $options := dict "targetPath" "assets/viewer/bundle.min.css" "outputStyle" $outputStyle "includePaths" (slice "node_modules") }}
+    {{- $options := dict  
+      "transpiler" (default "libsass" site.Params.sass_transpiler)
+      "targetPath" "assets/viewer/bundle.min.css"
+      "outputStyle" $outputStyle
+      "includePaths" (slice "node_modules")
+    }}
     {{- $style := resources.Get "viewer/scss/index.scss" | toCSS $options | fingerprint }}
     <link data-precache rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous">
 {{- end -}}
