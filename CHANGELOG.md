@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.7.0](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.6.6...v1.7.0) (2024-08-23)
+
+
+### Features ✨
+
+* add the sass_transpiler parameter, default to libsass ([#1066](https://github.com/razonyang/hugo-theme-bootstrap/issues/1066)) ([94c4b15](https://github.com/razonyang/hugo-theme-bootstrap/commit/94c4b15cabfabe4a478b5e26c92d3244c287d676))
+
+
+### Bug Fixes 🐞
+
+* correct sidebar, header and footer layouts when enabling sidebar.fixed ([#1064](https://github.com/razonyang/hugo-theme-bootstrap/issues/1064)) ([cd9b2fa](https://github.com/razonyang/hugo-theme-bootstrap/commit/cd9b2fa19c6f8d04cc5466d15572612d3852d6a6))
+
+
+### Styles 🎨
+
+* **sidebar:** change overflow as auto, width as thin and color when hovering ([6b9029c](https://github.com/razonyang/hugo-theme-bootstrap/commit/6b9029cdcaafb2ed6538f9d6fe4582215215f15e))
+
 ## [1.6.6](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.6.5...v1.6.6) (2024-08-22)
 
 
