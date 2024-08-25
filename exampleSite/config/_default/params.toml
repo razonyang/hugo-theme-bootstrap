@@ -1,3 +1,5 @@
+sass_transpiler = "dartsass"
+
 mainSections = ["posts", "docs"] # Default to ["posts"].
 
 # titleSeparator = "|" # Title separator. Default to "-".
