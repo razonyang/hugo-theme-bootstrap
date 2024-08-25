@@ -1,4 +1,4 @@
-sass_transpiler = "dartsass"
+# sass_transpiler = "dartsass"
 
 mainSections = ["posts", "docs"] # Default to ["posts"].
 
