@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.7.1](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.7.0...v1.7.1) (2024-08-29)
+
+
+### Bug Fixes 🐞
+
+* correct taxonomy titles ([ff31f29](https://github.com/razonyang/hugo-theme-bootstrap/commit/ff31f296f2a913fc65337f36899a51e9ca26e5ce))
+
+
+### Styles 🎨
+
+* change scrollbar width and hover color for docs nav and sidebar ([8aa8ded](https://github.com/razonyang/hugo-theme-bootstrap/commit/8aa8ded23b0469d302211c35d3c58d502632c82a))
+
 ## [1.7.0](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.6.6...v1.7.0) (2024-08-23)
 
 
