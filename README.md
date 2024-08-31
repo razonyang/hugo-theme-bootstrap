@@ -69,4 +69,4 @@ Sponsors will appear on our website with their brands and logos.
 | [Dikea](https://github.com/Dikea) | [Sagar Behere](https://github.com/sagarbehere) | [Norbert Boros](https://github.com/Mecanik)
 | [Arvind Singh](https://github.com/ArvindRSingh) | [Vri](https://github.com/vrifox) | [Natenom](https://github.com/Natenom)
 | [Wilson E. Alvarez](https://github.com/Rubonnek) | [Andre Ferreira](https://github.com/andrefpoli) | [Kurt Krueckeberg](https://github.com/kurt-krueckeberg)
-| [Chris Munoz](https://github.com/cmpi66) | |
+| [Chris Munoz](https://github.com/cmpi66) | [Juan Jesús Alejo Sillero](https://github.com/JuanJesusAlejoSillero) |
