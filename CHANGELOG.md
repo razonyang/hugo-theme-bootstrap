@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.2](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.7.1...v1.7.2) (2024-09-04)
+
+
+### Bug Fixes 🐞
+
+* adapt to Hugo v0.134.0 Summary changes ([0272f5d](https://github.com/razonyang/hugo-theme-bootstrap/commit/0272f5d85a05fe72e013bc55df3ab89bf1a68a7d))
+
 ## [1.7.1](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.7.0...v1.7.1) (2024-08-29)
 
 
