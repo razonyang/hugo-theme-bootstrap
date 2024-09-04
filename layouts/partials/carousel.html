@@ -19,7 +19,7 @@
                     {{- template "carousel-thumbnail" (dict "page" . "lazyLoading" (ne $i 0)) }}
                     <div class="carousel-caption ps-3 text-center text-lg-start start-0 end-0 mb-2">
                         <h5 class="mb-4 mb-lg-2">{{ .Title }}</h5>
-                        <div class="d-none d-lg-flex mb-lg-4">{{ .Summary }}</div>
+                        <div class="d-none d-lg-flex mb-lg-4">{{ .Summary | plainify }}</div>
                     </div>
                 </a>
                 {{- $i = add $i 1 }}
