@@ -8,6 +8,12 @@
 
 A fast, responsive and feature-rich Hugo theme for personal blog and documentations.
 
+## Notes
+
+No new feature requests will be accepted for this theme, you can either give the [newer modular theme](https://github.com/hbstack/theme-cards) a try, or extend the theme with existing hooks or override templates.
+
+**But don't worry, bug fixes and adaptations to the new Hugo version will still be implemented.**
+
 ## News
 
 I created a new modular Hugo theme called [HB cards theme](https://github.com/hbstack/theme-cards), it's recommended using it on your new static sites, for getting better performance, UI design and flexible.
