@@ -10,6 +10,21 @@ other = "關於我"
 [actions]
 other = "操作"
 
+[alert_caution]
+other = '小心'
+
+[alert_important]
+other = '重要'
+
+[alert_note]
+other = '注意'
+
+[alert_tip]
+other = '提示'
+
+[alert_warning]
+other = '警告'
+
 [alipay]
 other = "支付寶"
 
