@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.8.1](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.8.0...v1.8.1) (2024-10-09)
+
+
+### Documentation 📝
+
+* mention blockquote alerts on alert shortcode ([bf23edb](https://github.com/razonyang/hugo-theme-bootstrap/commit/bf23edb44e2d4931515e2c2c054ff275df91cf50))
+
+
+### Bug Fixes 🐞
+
+* add default style for alert links ([658a243](https://github.com/razonyang/hugo-theme-bootstrap/commit/658a24331531b42cf9fcd403f9ba2aab29599966))
+
 ## [1.8.0](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.7.2...v1.8.0) (2024-10-09)
 
 
