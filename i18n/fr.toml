@@ -1,6 +1,21 @@
 [about_me]
 other = "À propos"
 
+[alert_caution]
+other = 'Caution'
+
+[alert_important]
+other = 'Important'
+
+[alert_note]
+other = 'Note'
+
+[alert_tip]
+other = 'Tip'
+
+[alert_warning]
+other = 'Warning'
+
 [alipay]
 other = "Alipay"
 

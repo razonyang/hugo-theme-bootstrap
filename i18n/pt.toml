@@ -7,6 +7,21 @@ other = "Não conseguimos encontrar a página que procura."
 [about_me]
 other = "Sobre"
 
+[alert_caution]
+other = 'Caution'
+
+[alert_important]
+other = 'Important'
+
+[alert_note]
+other = 'Note'
+
+[alert_tip]
+other = 'Tip'
+
+[alert_warning]
+other = 'Warning'
+
 [alipay]
 other = "Alipay"
 

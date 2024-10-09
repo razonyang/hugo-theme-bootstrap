@@ -1,0 +1,39 @@
+{{- $icons := dict
+  "caution" `<i class="fas fa-exclamation-triangle me-2"></i>`
+  "important" `<i class="fas fa-exclamation-circle me-2"></i>`
+  "note" `<i class="fas fa-info-circle me-2"></i>`
+  "question" `<i class="fas fa-question-circle me-2"></i>`
+  "tip" `<i class="fas fa-lightbulb me-2"></i>`
+  "warning" `<i class="fas fa-exclamation-circle me-2"></i>`
+}}
+{{- $icon := default "" (index $icons .AlertType) | safeHTML }}
+{{- $styles := dict
+  "caution" "danger"
+  "important" "primary"
+  "note" "info"
+  "question" "warning"
+  "tip" "success"
+  "warning" "warning"
+}}
+{{- $title := or .AlertTitle (printf "alert_%s" .AlertType | i18n) (title .AlertType) }}
+<blockquote class="alert alert-{{ default .AlertType (index $styles .AlertType) }}" role="alert">
+  {{- $alertID := printf "blockquote-alert-%d-%s" .Ordinal .AlertType  }}
+  {{- with .AlertSign }}
+    <a
+      class="alert-heading fw-bold text-decoration-none"
+      data-bs-toggle="collapse"
+      href="#{{ $alertID }}">
+      {{ $icon }}{{ $title }}
+    </a>
+    <div
+      class="collapse mt-3{{ cond (eq . `+`) ` show` `` }}"
+      id="{{ $alertID }}">
+      {{ $.Text }}
+    </div>
+  {{- else }}
+    <p class="alert-heading fw-bold">
+      {{ $icon }}{{ $title }}
+    </p>
+    {{ .Text }}
+  {{- end }}
+</blockquote>

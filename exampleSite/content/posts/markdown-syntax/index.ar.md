@@ -68,6 +68,50 @@ authors = ["Hugo"]
 
 [^1]: هذا النص مقتبس من لا شيء.
 
+### Blockquote Alerts
+
+```markdown
+> [!NOTE]
+> Useful information that users should know, even when skimming content.
+
+> [!TIP]
+> Helpful advice for doing things better or more easily.
+
+> [!IMPORTANT]
+> Key information users need to know to achieve their goal.
+
+> [!WARNING]
+> Urgent info that needs immediate user attention to avoid problems.
+
+> [!CAUTION]
+> Advises about risks or negative outcomes of certain actions.
+
+> [!QUESTION]+ Can alerts be foldable?
+> Yes, they can, you just need to append the `+` or `-` sign to the type.
+>
+> Click the heading to preview.
+```
+
+> [!NOTE]
+> Useful information that users should know, even when skimming content.
+
+> [!TIP]
+> Helpful advice for doing things better or more easily.
+
+> [!IMPORTANT]
+> Key information users need to know to achieve their goal.
+
+> [!WARNING]
+> Urgent info that needs immediate user attention to avoid problems.
+
+> [!CAUTION]
+> Advises about risks or negative outcomes of certain actions.
+
+> [!QUESTION]+ Can alerts be foldable?
+> Yes, they can, you just need to append the `+` or `-` sign to the type.
+>
+> Click the heading to preview.
+
 ## الجداول
 
 يدعم هوجو كتابة الجداول على الرغم من أنها ليست جزءًا من المواصفات القياسية للغة ماركداون.

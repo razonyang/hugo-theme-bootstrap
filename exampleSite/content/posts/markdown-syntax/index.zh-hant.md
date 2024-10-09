@@ -63,6 +63,50 @@ The blockquote element represents content that is quoted from another source, op
 
 [^1]: The above quote is excerpted from Rob Pike's [talk](https://www.youtube.com/watch?v=PAAkCSZUG1c) during Gopherfest, November 18, 2015.
 
+### Blockquote Alerts
+
+```markdown
+> [!NOTE]
+> Useful information that users should know, even when skimming content.
+
+> [!TIP]
+> Helpful advice for doing things better or more easily.
+
+> [!IMPORTANT]
+> Key information users need to know to achieve their goal.
+
+> [!WARNING]
+> Urgent info that needs immediate user attention to avoid problems.
+
+> [!CAUTION]
+> Advises about risks or negative outcomes of certain actions.
+
+> [!QUESTION]+ Can alerts be foldable?
+> Yes, they can, you just need to append the `+` or `-` sign to the type.
+>
+> Click the heading to preview.
+```
+
+> [!NOTE]
+> Useful information that users should know, even when skimming content.
+
+> [!TIP]
+> Helpful advice for doing things better or more easily.
+
+> [!IMPORTANT]
+> Key information users need to know to achieve their goal.
+
+> [!WARNING]
+> Urgent info that needs immediate user attention to avoid problems.
+
+> [!CAUTION]
+> Advises about risks or negative outcomes of certain actions.
+
+> [!QUESTION]+ Can alerts be foldable?
+> Yes, they can, you just need to append the `+` or `-` sign to the type.
+>
+> Click the heading to preview.
+
 ## Tables
 
 Tables aren't part of the core Markdown spec, but Hugo supports supports them out-of-the-box.
