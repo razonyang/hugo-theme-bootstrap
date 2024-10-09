@@ -25,6 +25,9 @@ authors = ["RazonYang"]
 
 <!--more-->
 
+> [!IMPORTANT]
+> 自 `v1.8.0`，你无需使用短代码即可创建警告消息，详情请参阅 [blockquote alerts]({{< relref "posts/markdown-syntax#blockquote-alerts" >}})。
+
 ## 語法
 
 ### Inline

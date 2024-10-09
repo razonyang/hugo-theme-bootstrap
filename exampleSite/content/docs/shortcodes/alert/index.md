@@ -25,6 +25,9 @@ This article shows how to use the `alert` shortcode.
 
 <!--more-->
 
+> [!IMPORTANT]
+> Since `v1.8.0`, you can create alerts without shortcode, see [blockquote alerts]({{< relref "posts/markdown-syntax#blockquote-alerts" >}}).
+
 ## Syntax
 
 ### Inline
