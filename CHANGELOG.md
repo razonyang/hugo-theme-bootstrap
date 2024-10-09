@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.8.0](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.7.2...v1.8.0) (2024-10-09)
+
+
+### Features ✨
+
+* add support for blockquote alerts ([#1072](https://github.com/razonyang/hugo-theme-bootstrap/issues/1072)) ([c9fcc75](https://github.com/razonyang/hugo-theme-bootstrap/commit/c9fcc759bbcddf51dc2171c4092fbaf544edae25))
+
+
+### Bug Fixes 🐞
+
+* missing alerts primary style ([#1070](https://github.com/razonyang/hugo-theme-bootstrap/issues/1070)) ([f523716](https://github.com/razonyang/hugo-theme-bootstrap/commit/f523716f40c702f073e5bf0e0be562aad4133202))
+
 ## [1.7.2](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.7.1...v1.7.2) (2024-09-04)
 
 
