@@ -75,6 +75,8 @@ Please note that you'll need to enable the `markup.goldmark.renderer.unsafe` con
 
 ## Examples
 
+{{< alert primary >}}Primary{{< /alert >}}
+
 {{< alert >}}Info{{< /alert >}}
 
 {{< alert success >}}

@@ -1,0 +1,6 @@
+.alert-primary {
+  --#{$prefix}alert-color: var(--#{$prefix}on-primary);
+  --#{$prefix}alert-bg: var(--#{$prefix}primary);
+  --#{$prefix}alert-border-color: var(--#{$prefix}primary);
+  --#{$prefix}alert-link-color: var(--#{$prefix}on-primary);
+}

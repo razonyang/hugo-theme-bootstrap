@@ -75,6 +75,8 @@ $ echo 'An example of alert shortcode with the Markdown syntax'
 
 ## 例子
 
+{{< alert primary >}}Primary{{< /alert >}}
+
 {{< alert >}}Info{{< /alert >}}
 
 {{< alert success >}}
