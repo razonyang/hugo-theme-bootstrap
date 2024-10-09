@@ -4,3 +4,10 @@
   --#{$prefix}alert-border-color: var(--#{$prefix}primary);
   --#{$prefix}alert-link-color: var(--#{$prefix}on-primary);
 }
+
+.alert {
+  a {
+    color: var(--#{$prefix}alert-link-color) !important;
+    text-decoration: underline;
+  }
+}
