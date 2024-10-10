@@ -11,19 +11,19 @@ other = "Обо мне"
 other = "Действия"
 
 [alert_caution]
-other = 'Caution'
+other = 'Осторожно'
 
 [alert_important]
-other = 'Important'
+other = 'Важно'
 
 [alert_note]
-other = 'Note'
+other = 'Примечание'
 
 [alert_tip]
-other = 'Tip'
+other = 'Совет'
 
 [alert_warning]
-other = 'Warning'
+other = 'Внимание'
 
 [alipay]
 other = "Alipay"
@@ -128,7 +128,7 @@ other = "Ссылка"
 other = "Имя"
 
 [contact_email]
-other = "Написать письмо"
+other = "Ваш E-mail"
 
 [contact_email_help]
 other = "Мы никогда не передадим ваш адрес электронной почты кому-либо еще."
