@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.2](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.8.1...v1.8.2) (2024-10-10)
+
+
+### Bug Fixes 🐞
+
+* **i18n:** update ru.toml ([#1074](https://github.com/razonyang/hugo-theme-bootstrap/issues/1074)) ([4157d07](https://github.com/razonyang/hugo-theme-bootstrap/commit/4157d07e7676173677f7a50eb36ff590e5c3c4f8))
+
 ## [1.8.1](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.8.0...v1.8.1) (2024-10-09)
 
 
