@@ -36,7 +36,7 @@
 }
 
 .docs-nav-title-icon {
-  margin-left: -1.5rem;
+  margin-left: -.5rem;
 }
 
 .docs-sidebar {
@@ -49,4 +49,8 @@
       background: transparent;
     }
   }
+}
+
+.docs-nav-active-item {
+  margin-left: -.58rem;
 }

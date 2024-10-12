@@ -27,21 +27,28 @@
           {{- $active = true -}}
         {{- end -}}
         <li class="mb-2" tabindex="-1">
-          <div class="py-1 d-flex justify-content-between align-items-center ms-3{{ if $active }} text-primary{{ end }}">
+          <div class="py-1 d-flex justify-content-between align-items-center{{ if $active }} text-primary{{ end }}">
             <a class="docs-nav-link d-flex align-items-center" href="{{ .RelPermalink }}">{{- template "nav-title" . -}}</a>
             <a class="btn-toggle ms-1{{ if and (not $active) (not $expand) }} collapsed{{ end }}" role="button" data-bs-toggle="collapse"
               data-bs-target="#{{ $sectionId }}" aria-expanded="{{ if or $active $expand }}true{{ else }}false{{ end }}" aria-controls="{{ $sectionId }}">
               <i class="btn-toggle-icon fas fa-chevron-down ms-auto" data-fa-transform="rotate-270"></i>
             </a>
           </div>
-          <div class="docs-nav-subnavs border-start mt-2 collapse {{ if or $active $expand}} show{{ end }}{{ if $active }} border-primary{{ end }}" id="{{ $sectionId }}">
+          <div class="docs-nav-subnavs border-start mt-2 collapse {{ if or $active $expand }} show{{ end }}" id="{{ $sectionId }}">
             <div class="btn-toggle-nav fw-normal ms-2{{ cond (default true site.Params.docs.nav.reduceFontSize) ` small` `` }}">
               {{ template "walk-nav" (dict "section" . "page" $page) }}
             </div>
           </div>
         </li>
         {{- else -}}
-        <li class="mb-2 py-1 ms-3{{ if eq .RelPermalink $page.RelPermalink }} text-primary{{ end }}" tabindex="-1">
+        {{- $class := "mb-2 py-1" }}
+        {{- if eq .RelPermalink $page.RelPermalink }}
+          {{- $class = printf "%s text-primary" $class }}
+          {{- if ne $section.FirstSection $section }}
+            {{- $class = printf "%s border-2 border-start border-primary ps-2 docs-nav-active-item" $class }}
+          {{- end }}
+        {{- end }}
+        <li class="{{ $class }}" tabindex="-1">
           <a class="docs-nav-link d-flex align-items-center" href="{{ .RelPermalink }}"{{ if .Params.redirect }} target="_blank"{{ end }}>
             {{- template "nav-title" . -}}
             {{- if .Params.redirect -}}
