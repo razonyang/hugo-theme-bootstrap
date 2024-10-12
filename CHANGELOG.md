@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.8.3](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.8.2...v1.8.3) (2024-10-12)
+
+
+### Styles 🎨
+
+* tweak active docs nav item border color ([#1077](https://github.com/razonyang/hugo-theme-bootstrap/issues/1077)) ([a71e7c5](https://github.com/razonyang/hugo-theme-bootstrap/commit/a71e7c54757d155e6762ad87d2736a80c9231761))
+* tweak margin top for the headings of foldable blockquote alerts ([ec46859](https://github.com/razonyang/hugo-theme-bootstrap/commit/ec46859282355b22942949b84f46552a8841b6c1))
+
 ## [1.8.2](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.8.1...v1.8.2) (2024-10-10)
 
 
