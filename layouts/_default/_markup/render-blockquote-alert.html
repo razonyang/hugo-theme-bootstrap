@@ -26,7 +26,7 @@
       {{ $icon }}{{ $title }}
     </a>
     <div
-      class="collapse mt-3{{ cond (eq . `+`) ` show` `` }}"
+      class="collapse mt-1{{ cond (eq . `+`) ` show` `` }}"
       id="{{ $alertID }}">
       {{ $.Text }}
     </div>
