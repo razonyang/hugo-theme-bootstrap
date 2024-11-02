@@ -1,0 +1,37 @@
+{{- $pages := slice }}
+{{- with .CurrentSection }}
+  {{- $pages = .Pages }}
+{{- end }}
+{{- $sortedPages := sort (where $pages "Params.navWeight" ">" 0) "Params.navWeight" "desc" -}}
+{{- $pages = union $sortedPages (sort $pages "Title") -}}
+{{- $prev := false }}
+{{- $next := false }}
+{{- range $i, $page := $pages }}
+  {{- if eq $page.RelPermalink $.RelPermalink }}
+    {{- if gt $i 0 }}
+      {{- $prev = index $pages (sub $i 1) }}
+    {{- end }}
+    {{- with index $pages (add $i 1) }}
+      {{- $next = . }}
+    {{- end }}
+    {{- break }}
+  {{- end }}
+{{- end }}
+{{- if and (default true .Site.Params.post.nav) (default true .Params.nav) (or $prev $next) -}}
+<div class="card-footer">
+  <div class="post-navs d-flex justify-content-evenly">
+    {{- with $prev -}}
+    <div class="post-nav post-prev">
+      <i class="fas fa-fw fa-chevron-down post-prev-icon me-1" data-fa-transform="rotate-90"></i>
+      <a href="{{ .RelPermalink }}">{{ partial "helpers/title" . }}</a>
+    </div>
+    {{- end -}}
+    {{- with $next -}}
+    <div class="post-nav post-next">
+      <a href="{{ .RelPermalink }}">{{ partial "helpers/title" . }}</a>
+      <i class="fas fa-fw fa-chevron-down post-next-icon ms-1" data-fa-transform="rotate-270"></i>
+    </div>
+    {{- end -}}
+  </div>
+</div>
+{{- end -}}
