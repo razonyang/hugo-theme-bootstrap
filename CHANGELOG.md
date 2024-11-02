@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.4](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.8.3...v1.8.4) (2024-11-02)
+
+
+### Bug Fixes 🐞
+
+* broken previous doc link and next doc link ([#1080](https://github.com/razonyang/hugo-theme-bootstrap/issues/1080)) ([bc4d8bb](https://github.com/razonyang/hugo-theme-bootstrap/commit/bc4d8bb3590da222136135019a246a317ded4be7))
+
 ## [1.8.3](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.8.2...v1.8.3) (2024-10-12)
 
 
