@@ -17,7 +17,7 @@ other = 'Achtung'
 other = 'Wichtig'
 
 [alert_note]
-other = 'Notiz'
+other = 'Hinweis'
 
 [alert_tip]
 other = 'Tipp'
