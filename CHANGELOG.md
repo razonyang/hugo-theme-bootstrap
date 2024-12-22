@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.0](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.8.5...v1.9.0) (2024-12-22)
+
+
+### Features ✨
+
+* add the topAppBar.expandBreakpoint parameter ([#1090](https://github.com/razonyang/hugo-theme-bootstrap/issues/1090)) ([7e74d54](https://github.com/razonyang/hugo-theme-bootstrap/commit/7e74d54bb886b225ae9bb29ae9ee66f9940a1f2a))
+
 ## [1.8.5](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.8.4...v1.8.5) (2024-12-21)
 
 
