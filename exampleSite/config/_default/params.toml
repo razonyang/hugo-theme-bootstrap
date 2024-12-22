@@ -285,6 +285,7 @@ subPath = "exampleSite"
 # colorToggle = false # Disable the color toggle
 # coloredInDark = true # Colored in dark mode
 # dropdownMenuToggle = false # Hide the dropdown menu toggle.
+# expandBreakpoint = "xl" # expand the content above the specific breakpoint: lg, xl, xxl.
 [topAppBar.social]
 github = "razonyang/hugo-theme-bootstrap"
 patreon = "razonyang"

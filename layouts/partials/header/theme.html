@@ -1,13 +1,14 @@
 {{- if default true .Site.Params.topAppBar.colorToggle }}
-<li class="nav-item dropdown col-6 col-xxl-auto">
+{{- $expandBreakpoint := default "xxl" site.Params.topAppBar.expandBreakpoint }}
+<li class="nav-item dropdown col-6 col-{{ $expandBreakpoint }}-auto">
     {{- $modes := dict "light" (dict "icon" "sun") "dark" (dict "icon" "moon") "auto" (dict "icon" "adjust") }}
     {{- $mode := default "auto" $.Site.Params.color }}
     {{- if not (in (slice "light" "dark" "auto") $mode) }}
       {{- $mode = "auto" }}
     {{- end }}
-    <a class="nav-link px-0 py-2 px-xxl-1" href="#" id="modeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link px-0 py-2 px-{{ $expandBreakpoint }}-1" href="#" id="modeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
         <i class="mode-icon fas fa-fw fa-{{ (index $modes $mode ).icon }}" id="modeIcon"></i>
-        <span class="d-xxl-none">{{ i18n "mode" }}</span>
+        <span class="d-{{ $expandBreakpoint }}-none">{{ i18n "mode" }}</span>
     </a>
     <ul class="mode-dropdown-menu dropdown-menu dropdown-menu-end" aria-labelledby="modeDropdown">
         {{- range slice "light" "dark" "auto" }}

@@ -94,6 +94,7 @@ authors = ["RazonYang"]
 | `topAppBar.colorToggle` | Boolean | `true` | 开启或禁用颜色/模式开关。
 | `topAppBar.coloredInDark` | Boolean | `false` | 在深色模式下着色。
 | `topAppBar.dropdownMenuToggle` | Boolean | `true` | 隐藏下拉菜单的按钮。
+| `topAppBar.expandBreakpoint` | string | `xxl` | 在此断点以上展开内容，如：`lg`、`xl`、`xxl`。
 | **Webmaster Site Verification** 
 | `siteVerification` | Object | - |
 | `siteVerification.google` | String | - | Google

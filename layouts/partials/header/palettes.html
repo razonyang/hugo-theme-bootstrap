@@ -1,8 +1,9 @@
 {{- if .Site.Params.Palettes }}
-<li class="nav-item dropdown col-6 col-xxl-auto">
-    <a class="nav-link px-0 py-2 px-xxl-1" href="#" id="paletteDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+{{- $expandBreakpoint := default "xxl" site.Params.topAppBar.expandBreakpoint }}
+<li class="nav-item dropdown col-6 col-{{ $expandBreakpoint }}-auto">
+    <a class="nav-link px-0 py-2 px-{{ $expandBreakpoint }}-1" href="#" id="paletteDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
         <i class="fas fa-fw fa-palette"></i>
-        <span class="d-xxl-none">{{ i18n "palette" }}</span>
+        <span class="d-{{ $expandBreakpoint }}-none">{{ i18n "palette" }}</span>
     </a>
     <ul class="palette-dropdown-menu dropdown-menu dropdown-menu-end px-2 row g-2" aria-labelledby="paletteDropdown">
         {{- range .Site.Params.Palettes }}
