@@ -1,6 +1,7 @@
 {{- $baseURL := $.Site.BaseURL }}
 {{- $dropdownMenuToggle := default true $.Site.Params.topAppBar.dropdownMenuToggle }}
-<nav class="top-app-bar shadow navbar navbar-expand-xxl">
+{{- $expandBreakpoint := default "xxl" site.Params.topAppBar.expandBreakpoint }}
+<nav class="top-app-bar shadow navbar navbar-expand-{{ $expandBreakpoint }}">
   <div class="{{- partialCached "functions/container-class" . .FirstSection -}}">
     {{- if eq .Type "docs" }}
     <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDocsNav"
@@ -9,20 +10,20 @@
     </button>
     {{- end }}
     {{- partial "header/brand" . }}
-    <div class="offcanvas-xxl offcanvas-end flex-grow-1" data-bs-scroll="true" tabindex="-1" id="navbarMenus" aria-labelledby="navbarMenusLabel">
+    <div class="offcanvas-{{ $expandBreakpoint }} offcanvas-end flex-grow-1" data-bs-scroll="true" tabindex="-1" id="navbarMenus" aria-labelledby="navbarMenusLabel">
       <div class="offcanvas-header px-4 pb-0">
         <div class="offcanvas-title h5" id="navbarMenusLabel">{{- with .Site.Params.brand }}{{ . }}{{ else }}{{ $.Site.Title }}{{ end }}</div>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" data-bs-target="#navbarMenus" aria-label="Close"></button>
       </div>
-      <div class="offcanvas-body p-4 pt-0 p-xxl-0">
-        <hr class="d-xxl-none">
+      <div class="offcanvas-body p-4 pt-0 p-{{ $expandBreakpoint }}-0">
+        <hr class="d-{{ $expandBreakpoint }}-none">
         <ul class="navbar-nav flex-row flex-wrap align-items-center me-auto">
           {{- $currentPage := . }}
           {{- range .Site.Menus.main }}
           {{- $url := .URL | absURL }}
           {{- $active := or (eq $currentPage.Permalink (absURL .URL)) ($currentPage.IsMenuCurrent "main" .) }}
           {{- if .HasChildren }}
-          <li class="nav-item col-12 col-xxl-auto dropdown px-0">
+          <li class="nav-item col-12 col-{{ $expandBreakpoint }}-auto dropdown px-0">
             <a href="#"
               class="nav-link{{ if $dropdownMenuToggle }} dropdown-toggle{{ end }}{{ if $currentPage.HasMenuCurrent "main" . }} active{{ end }}"
               id="navbarDropdown{{ title .Identifier }}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -38,7 +39,7 @@
               <li><hr class="dropdown-divider"></li>
               {{- else }}
               <li>
-                <a class="dropdown-item d-flex align-items-center text-wrap text-xxl-nowrap{{ if or (eq $currentPage.Permalink (absURL .URL)) ($currentPage.IsMenuCurrent "main" .) }} active{{ end }}"
+                <a class="dropdown-item d-flex align-items-center text-wrap text-{{ $expandBreakpoint }}-nowrap{{ if or (eq $currentPage.Permalink (absURL .URL)) ($currentPage.IsMenuCurrent "main" .) }} active{{ end }}"
                   href="{{ $childURL }}"{{ if not (hasPrefix $childURL $baseURL) }} target="_blank" rel="noopener noreferrer"{{ end }}>
                   {{- .Pre -}}
                   {{- with .Params.icon }}
@@ -62,8 +63,8 @@
             </ul>
           </li>
           {{- else -}}
-          <li class="nav-item col-6 col-xxl-auto">
-            <a class="nav-link py-2 px-0 px-xxl-2{{ if $active }} active{{ end }}" href="{{ $url }}"{{ if not (hasPrefix $url $baseURL) }} target="_blank" rel="noopener noreferrer"{{ end }}>
+          <li class="nav-item col-6 col-{{ $expandBreakpoint }}-auto">
+            <a class="nav-link py-2 px-0 px-{{ $expandBreakpoint }}-2{{ if $active }} active{{ end }}" href="{{ $url }}"{{ if not (hasPrefix $url $baseURL) }} target="_blank" rel="noopener noreferrer"{{ end }}>
               {{- partial "helpers/menu-name" . }}
             </a>
           </li>
@@ -72,7 +73,7 @@
         </ul>
         {{ partial "header/search-bar" . }}
         {{- if or (default true .Site.Params.topAppBar.colorToggle) (isset $.Site.Params "fontsize") ( gt (len $.Site.Home.AllTranslations) 1) (.Site.Params.Palettes) (.Site.Params.topAppBar.social) -}}
-        <hr class="d-xxl-none">
+        <hr class="d-{{ $expandBreakpoint }}-none">
         <ul class="navbar-nav flex-row flex-wrap align-items-center ms-md-auto">
           {{- partial "header/social-links" . }}
           {{- partialCached "header/languages" . }}

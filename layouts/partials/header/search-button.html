@@ -5,6 +5,7 @@
       {{- $index := $tmpl | resources.ExecuteAsTemplate "algolia/index.json" . }}
       {{- $indexURL = $index.RelPermalink }}
   {{- end -}}
-  <hr class="vr d-none d-xxl-block ms-xxl-1">
-  <div class="search-button d-flex align-items-center ms-0 ms-xxl-2 p-0" data-search-index="{{ $indexURL }}"></div>
+  {{- $expandBreakpoint := default "xxl" site.Params.topAppBar.expandBreakpoint }}
+  <hr class="vr d-none d-{{ $expandBreakpoint }}-block ms-{{ $expandBreakpoint }}-1">
+  <div class="search-button d-flex align-items-center ms-0 ms-{{ $expandBreakpoint }}-2 p-0" data-search-index="{{ $indexURL }}"></div>
 {{- end -}}

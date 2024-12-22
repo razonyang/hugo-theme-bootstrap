@@ -1,11 +1,12 @@
 {{- if .Site.Params.topAppBar.social }}
-<li class="nav-item py-2 py-xxl-1 col-12 col-xxl-auto">
+{{- $expandBreakpoint := default "xxl" site.Params.topAppBar.expandBreakpoint }}
+<li class="nav-item py-2 py-{{ $expandBreakpoint }}-1 col-12 col-{{ $expandBreakpoint }}-auto">
 {{- $data := dict "links" .Site.Params.topAppBar.social "OutputFormats" $.OutputFormats "home" (.GetPage "/") "params" .Site.Params "iconText" true "color" false }}
-{{- $data = merge $data (dict "class" "flex-row" "linkClass" "col-6 col-xxl-auto p-1" "iconTextClass" "ms-1 d-xxl-none") }}
+{{- $data = merge $data (dict "class" "flex-row" "linkClass" (printf "col-6 col-%s-auto p-1" $expandBreakpoint) "iconTextClass" (printf "ms-1 d-%s-none" $expandBreakpoint)) }}
 {{- partial "helpers/social-links" $data }}
 </li>
-<li class="nav-item py-2 py-xxl-1 col-12 col-xxl-auto">
-  <div class="vr d-none d-xxl-flex h-100 mx-xxl-2 text-white"></div>
-  <hr class="d-xxl-none my-2">
+<li class="nav-item py-2 py-{{ $expandBreakpoint }}-1 col-12 col-{{ $expandBreakpoint }}-auto">
+  <div class="vr d-none d-{{ $expandBreakpoint }}-flex h-100 mx-{{ $expandBreakpoint }}-2 text-white"></div>
+  <hr class="d-{{ $expandBreakpoint }}-none my-2">
 </li>
 {{- end -}}

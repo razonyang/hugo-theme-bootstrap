@@ -92,6 +92,7 @@ The site parameters are located in `config/_default/params.toml` by default.
 | `topAppBar.colorToggle` | Boolean | `true` | Turn on/off the color/mode toggle.
 | `topAppBar.coloredInDark` | Boolean | `false` | Colored in dark mode.
 | `topAppBar.dropdownMenuToggle` | Boolean | `true` | Hide the dropdown menu toggle.
+| `topAppBar.expandBreakpoint` | string | `xxl` | Expand content above this breakpoint, e.g. `lg`, `xl`, `xxl`.
 | **Webmaster Site Verification** 
 | `siteVerification` | Object | - |
 | `siteVerification.google` | String | - | Google
