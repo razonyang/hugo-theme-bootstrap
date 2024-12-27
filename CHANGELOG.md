@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.3](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.9.2...v1.9.3) (2024-12-27)
+
+
+### Bug Fixes 🐞
+
+* revert a2254fdd3303a53dfa41ccef0744743d59c56fac, since feed scheme was not supported all OSes ([535c2ec](https://github.com/razonyang/hugo-theme-bootstrap/commit/535c2ec176e8c61d6e04b22887b8a0e8c5b79be3))
+
 ## [1.9.2](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.9.1...v1.9.2) (2024-12-27)
 
 
