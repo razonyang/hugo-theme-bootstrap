@@ -12,7 +12,6 @@ import Scroller from "js/scroller";
 import SidebarToggle from "js/sidebar-toggle";
 import TableWrapper from "js/table-wrapper";
 import TOC from "js/toc";
-import RSS from "js/rss";
 import components from "./components";
 import "js/slide";
 import "js/search";
@@ -28,7 +27,6 @@ new Docs().run();
 new FormValidator().run();
 new TOC("#post-toc-container", ".sidebar #TableOfContents").run();
 new IFrame().run();
-new RSS().run();
 
 const app = new App();
 app.attach(...components);

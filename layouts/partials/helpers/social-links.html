@@ -82,7 +82,7 @@
     {{- end }}
   {{- end }}
   {{- with $rss }}
-  <a class="nav-link social-link{{ with $linkClass }} {{ . }}{{ end }}" target="_blank" href="{{ .RelPermalink }}" title="{{ "social_rss" | i18n }}" rel="me">
+  <a class="nav-link social-link{{ with $linkClass }} {{ . }}{{ end }}" target="_blank" href="feed:{{ .Permalink }}" title="{{ "social_rss" | i18n }}" rel="me">
     <i class="fas fa-fw{{ with $size }} {{ . }}{{ end }} fa-rss"{{ if and $color }} style="color: #ea6221;"{{ end }}></i>
     {{- if $iconText }}
     <span{{ with $iconTextClass }} class="{{ . }}"{{ end }}>RSS</span>
