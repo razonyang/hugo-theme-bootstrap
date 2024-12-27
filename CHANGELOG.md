@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.2](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.9.1...v1.9.2) (2024-12-27)
+
+
+### Bug Fixes 🐞
+
+* replace RSS feed links with `feed` on all browsers ([a2254fd](https://github.com/razonyang/hugo-theme-bootstrap/commit/a2254fdd3303a53dfa41ccef0744743d59c56fac))
+
 ## [1.9.1](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.9.0...v1.9.1) (2024-12-27)
 
 
