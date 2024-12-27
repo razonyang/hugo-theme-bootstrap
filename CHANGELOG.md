@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.1](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.9.0...v1.9.1) (2024-12-27)
+
+
+### Bug Fixes 🐞
+
+* replace `http` or `https` protocol with `feed` on Safari browser ([#1093](https://github.com/razonyang/hugo-theme-bootstrap/issues/1093)) ([ccd065d](https://github.com/razonyang/hugo-theme-bootstrap/commit/ccd065d4aa1b8455c7b4120836e4b7b5eccc647c))
+
 ## [1.9.0](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.8.5...v1.9.0) (2024-12-22)
 
 
