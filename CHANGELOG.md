@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.4](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.9.3...v1.9.4) (2025-01-29)
+
+
+### Bug Fixes 🐞
+
+* **i18n:** update German translations ([#1098](https://github.com/razonyang/hugo-theme-bootstrap/issues/1098)) ([67ab569](https://github.com/razonyang/hugo-theme-bootstrap/commit/67ab569c0b4e11861fd4821ff97e76fd464c7151))
+
 ## [1.9.3](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.9.2...v1.9.3) (2024-12-27)
 
 
