@@ -75,6 +75,7 @@ authors = ["RazonYang"]
 | `fontSize.large` | String | `1.1rem` | 大字体
 | `fontSize.extraLarge` | String | `1.2rem` | 更大的字体
 | `social` | Object | - | [社交链接]({{< ref "/docs/widgets/social-links" >}})。
+| `socialColor` | Boolean | `true` | 为 `false` 时，移除社交链接的颜色。 |
 | `socialShare` | Boolean | `true` | 启用/禁用内置的分享按钮
 | `searchBar` | Boolean | `true` | 启用/禁用搜索栏
 | **Archive**

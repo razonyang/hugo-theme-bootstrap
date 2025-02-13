@@ -74,6 +74,8 @@ viewer = true # Image Viewer
 
 # externalLinkIcon = false
 
+socialColor = false # Remove color from social links if false.
+
 [sidebar]
 # fixed = true
 # archives = true # Enable archives widget
@@ -300,6 +302,7 @@ reduceFontSize = true
 [feeds]
 # content = true
 
+# Set socialColor as false to disable the color.
 [social]
 email = "user@domain.tld"
 # facebook = "yourfacebookusername"
