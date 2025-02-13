@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.10.0](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.9.5...v1.10.0) (2025-02-13)
+
+
+### Features ✨
+
+* add the `socialAnimation` parameter, remove animation from social links if `false` ([#1106](https://github.com/razonyang/hugo-theme-bootstrap/issues/1106)) ([1a87992](https://github.com/razonyang/hugo-theme-bootstrap/commit/1a879923b523f998b92298ab8078366d881126e3))
+* add the `socialColor` parameter, remove color from social links if `false` ([#1104](https://github.com/razonyang/hugo-theme-bootstrap/issues/1104)) ([c314550](https://github.com/razonyang/hugo-theme-bootstrap/commit/c314550b6893c1c889c2a5a8eebf35a8c23f064d)), closes [#1103](https://github.com/razonyang/hugo-theme-bootstrap/issues/1103)
+
 ## [1.9.5](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.9.4...v1.9.5) (2025-02-13)
 
 
