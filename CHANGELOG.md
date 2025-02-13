@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.9.5](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.9.4...v1.9.5) (2025-02-13)
+
+
+### Bug Fixes 🐞
+
+* add X social link ([#1101](https://github.com/razonyang/hugo-theme-bootstrap/issues/1101)) ([ead86cf](https://github.com/razonyang/hugo-theme-bootstrap/commit/ead86cf89164601465e5da873ed9f5d3e6def052))
+* correct social share links ([ead86cf](https://github.com/razonyang/hugo-theme-bootstrap/commit/ead86cf89164601465e5da873ed9f5d3e6def052))
+
 ## [1.9.4](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.9.3...v1.9.4) (2025-01-29)
 
 
