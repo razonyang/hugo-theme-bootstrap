@@ -40,7 +40,7 @@
 -}}
 {{- $size := default "" .size }}
 {{- $linkClass := default "" .linkClass }}
-{{- $color := default true .color }}
+{{- $color := default (default true site.Params.socialColor) .color }}
 {{- $iconText := default false .iconText }}
 {{- $iconTextClass := default "ms-1" .iconTextClass }}
 
