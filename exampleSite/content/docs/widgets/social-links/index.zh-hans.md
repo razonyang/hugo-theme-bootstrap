@@ -76,6 +76,7 @@ github = "githubusername"
 | `stackoverflow` | Stack Overflow 用户 ID |
 | `tumblr` | Tumblr 用户名 |
 | `twitter` | Twitter 用户名 |
+| `x` | X 用户名 |
 | `weibo` | 微博用户名 |
 | `zhihu` | 知乎用户名 |
 | `reddit` | Reddit 用户名 |

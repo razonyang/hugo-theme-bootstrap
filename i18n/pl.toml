@@ -404,6 +404,9 @@ other = "Website"
 [social_weibo]
 other = "Weibo"
 
+[social_x]
+other = "X"
+
 [social_xing]
 other = "XING"
 
