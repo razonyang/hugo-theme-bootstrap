@@ -38,3 +38,4 @@ $tocStyleType: '{{ default "none" $params.post.tocStyleType }}';
 $enable-viewer: {{ default true $params.viewer }};
 
 $socialColor: {{ default true $params.socialColor }};
+$socialAnimation: {{ default true $params.socialAnimation }};
