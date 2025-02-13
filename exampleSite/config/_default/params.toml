@@ -74,6 +74,7 @@ viewer = true # Image Viewer
 
 # externalLinkIcon = false
 
+# socialAnimation = false # Remove animation from social links if false.
 socialColor = false # Remove color from social links if false.
 
 [sidebar]
