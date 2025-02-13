@@ -388,6 +388,9 @@ other = "站點"
 [social_weibo]
 other = "微博"
 
+[social_x]
+other = "X"
+
 [social_xing]
 other = "XING"
 
