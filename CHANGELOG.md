@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.11.0](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.10.0...v1.11.0) (2025-02-15)
+
+
+### Features ✨
+
+* add the `beian` parameters for websites hosted in China ([#1109](https://github.com/razonyang/hugo-theme-bootstrap/issues/1109)) ([e52c6cf](https://github.com/razonyang/hugo-theme-bootstrap/commit/e52c6cfad45c0cf79756c734bbc3cd103db23883)), closes [#1108](https://github.com/razonyang/hugo-theme-bootstrap/issues/1108)
+
 ## [1.10.0](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.9.5...v1.10.0) (2025-02-13)
 
 
