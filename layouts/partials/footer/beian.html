@@ -1,0 +1,29 @@
+{{ with site.Params.beian }}
+    <div class="beian d-flex flex-wrap text-secondary justify-content-center gap-1">
+        {{ with .psbNumber }}
+            <a
+              class="d-inline-flex align-items-center"
+                target="_blank"
+                href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode={{ index (findRE `\d+` .) 0 }}">
+                <img class="beian-psb-icon w-auto me-1" src="{{ `/images/beian-psb-icon.png` | absURL }}" alt="公安备案" width="20" height="20" />
+                {{- . -}}
+            </a>
+        {{ end }}
+        {{ with.icpNumber }}
+            <a
+            class="d-inline-flex align-items-center"
+                target="_blank"
+                href="https://beian.miit.gov.cn/">
+                {{- . -}}
+            </a>
+        {{ end }}
+        {{ with.moeNumber }}
+            <a
+            class="d-inline-flex align-items-center"
+                target="_blank"
+                href="https://icp.gov.moe/?keyword={{ index (findRE `\d+` .) 0 }}">
+                {{- . -}}
+            </a>
+        {{ end }}
+    </div>
+{{ end }}

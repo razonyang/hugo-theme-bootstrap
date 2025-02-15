@@ -168,5 +168,9 @@ The site parameters are located in `config/_default/params.toml` by default.
 | `repo` | Object | - | See [Repository widget]({{< ref "docs/widgets/repository" >}}).
 | `docs.nav` | Object | - | Docs layout navigation.
 | `docs.nav.reduceFontSize` | Boolean | `true` | When `false`, don't reduce the font size of children navigation.
+| `beian` | Object | - | 备案 in pinyin, for websites hosted in China.
+| `beian.icpNumber` | string | - | ICP filing number.
+| `beian.psbNumber` | string | - | PSB filing number.
+| `beian.moeNumber` | string | - | Moe filing number.
 
 > Except the Google webmaster tool, the other webmaster tools cannot work with `hugo --minify`, because they cannot recognize the minified meta tag.

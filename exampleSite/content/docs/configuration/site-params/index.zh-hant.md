@@ -171,5 +171,9 @@ authors = ["RazonYang"]
 | `repo` | Object | - | See [Repository widget]({{< ref "docs/widgets/repository" >}}).
 | `docs.nav` | Object | - | 文檔佈局導航。
 | `docs.nav.reduceFontSize` | Boolean | `true` | 為 `false` 時，不縮小子導航菜單的字體大小。
+| `beian` | Object | - | 中國國內網站備案資訊。
+| `beian.icpNumber` | string | - | ICP 備案號。
+| `beian.psbNumber` | string | - | 公安備案號。
+| `beian.moeNumber` | string | - | 萌 ICP 備案號。
 
 > 除了 Google 站長工具外，其他搜索引擎站長工具無法與 `hugo --minify` 同時使用，這是因為它們無法識別優化後的元標簽。

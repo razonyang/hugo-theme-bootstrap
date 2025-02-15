@@ -364,3 +364,9 @@ location = "Earth"
   patreon = "razonyang"
   paypal = "razonyang"
   # rss = "" # Disable RSS link
+
+# 备案 in pinyin, for websites hosted in China.
+# [beian]
+# icpNumber = "京ICP证123456号-1" # ICP number.
+# psbNumber = "京公网安备12345678901234号" # Public Security Bureau number.
+# moeNumber = "萌ICP备12345678号" # See https://icp.gov.moe/.
