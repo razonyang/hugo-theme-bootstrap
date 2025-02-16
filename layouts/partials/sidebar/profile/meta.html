@@ -6,7 +6,7 @@
 {{- with $author -}}
 <div class="profile-name fw-fold fs-lg">{{ .name }}</div>
 {{- with .bio -}}
-<div class="profile-bio">{{ . }}</div>
+<div class="profile-bio">{{ . | safeHTML }}</div>
 {{- end -}}
 {{- with .company -}}
 <div class="profile-company"><i class="fas fa-fw fa-building"></i>{{ . | safeHTML }}</div>
