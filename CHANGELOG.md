@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.12.0](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.11.0...v1.12.0) (2025-02-17)
+
+
+### Features ✨
+
+* allow using HTML in profile bio ([5c2a553](https://github.com/razonyang/hugo-theme-bootstrap/commit/5c2a5530546edced77d25974dfe90e1673c16aa8))
+
+
+### Bug Fixes 🐞
+
+* docsearch ([440095f](https://github.com/razonyang/hugo-theme-bootstrap/commit/440095f12428dd1c661496178083c7f22f8f7d36))
+
 ## [1.11.0](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.10.0...v1.11.0) (2025-02-15)
 
 
