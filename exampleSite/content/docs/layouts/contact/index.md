@@ -64,7 +64,9 @@ It is designed to be compatible with most backends, such as [Netlify form](https
 
 ### Netlify
 
-[Netlify form](https://docs.netlify.com/forms/setup) are supported out of box, therefore, you don't need to specify the `contact.endpoint` parameter.
+[Netlify form](https://docs.netlify.com/forms/setup) are supported out of box, you MUST not to specify the `contact.endpoint` parameter.
+
+Please configure the `SITE_RECAPTCHA_KEY` and `SITE_RECAPTCHA_SECRET` environment variables if reCAPTCHA 2 is enabled, see also [Custom reCAPTCHA 2](https://docs.netlify.com/forms/spam-filters/#custom-recaptcha-2).
 
 > The demo site uses Getform instead of Netlify form, because the Netlify will upgrade your form level automatically if you exceed the limit of current plan, which will lead to additional expenses.
 
