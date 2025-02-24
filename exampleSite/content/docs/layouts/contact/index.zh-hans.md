@@ -63,7 +63,9 @@ layout = "contact"
 
 ### Netlify
 
-[Netlify form](https://docs.netlify.com/forms/setup) 可开箱即用，因此，你无需指定 `contact.endpoint` 参数。
+[Netlify form](https://docs.netlify.com/forms/setup) 可开箱即用，你不应该指定 `contact.endpoint` 参数。
+
+当启用 reCAPTCHA 2 时，请配置 `SITE_RECAPTCHA_KEY` 和 `SITE_RECAPTCHA_SECRET` 环境变量，详情请参阅 [Custom reCAPTCHA 2](https://docs.netlify.com/forms/spam-filters/#custom-recaptcha-2)。
 
 > 演示站点使用 Getform 而不是 Netlify form，因为当你超过当前套餐限定时， Netlify 会自动升级你的套餐，这会导致额外的支出。
 
