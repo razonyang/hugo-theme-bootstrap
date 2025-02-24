@@ -1,3 +1,4 @@
 {{- with .Site.Params.giscus }}
+{{ $.Store.Set "hasGiscus" true }}
 <div class="giscus"></div>
 {{- end }}
