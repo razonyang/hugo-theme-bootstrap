@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.12.1](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.12.0...v1.12.1) (2025-02-24)
+
+
+### Documentation 📝
+
+* update netlify form ([#1126](https://github.com/razonyang/hugo-theme-bootstrap/issues/1126)) ([5988732](https://github.com/razonyang/hugo-theme-bootstrap/commit/598873217a7c4f6d56de4539e8c8fae37e19cd58))
+
+
+### Bug Fixes 🐞
+
+* do not show Giscus on non posts layout ([#1124](https://github.com/razonyang/hugo-theme-bootstrap/issues/1124)) ([32044b2](https://github.com/razonyang/hugo-theme-bootstrap/commit/32044b2e5b0054dab10a09057397ff766ce0dcff))
+
 ## [1.12.0](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.11.0...v1.12.0) (2025-02-17)
 
 
