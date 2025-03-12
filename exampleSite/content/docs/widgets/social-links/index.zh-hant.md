@@ -100,3 +100,4 @@ github = "githubusername"
 | `tipeee` | Tipeee 使用者名稱 |
 | `rss` | 空字符串以禁用 RSS 鏈接 |
 | `website` | 網站 URL |
+| `codeberg` | Codeberg 使用者名稱 |

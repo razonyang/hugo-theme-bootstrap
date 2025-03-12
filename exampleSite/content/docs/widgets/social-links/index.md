@@ -100,3 +100,4 @@ github = "githubusername"
 | `tipeee` | Tipeee Username |
 | `rss` | Empty string for disabling the RSS link |
 | `website` | Website URL |
+| `codeberg` | Codeberg Username |

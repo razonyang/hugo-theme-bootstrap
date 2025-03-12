@@ -236,6 +236,9 @@ other = "シリーズ"
 [settings]
 other = "設定"
 
+[social_codeberg]
+other = "Codeberg"
+
 [table_of_contents]
 other = "目次"
 

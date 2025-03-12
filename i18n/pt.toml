@@ -189,6 +189,9 @@ other = "Séries"
 [settings]
 other = "Configurações"
 
+[social_codeberg]
+other = "Codeberg"
+
 [table_of_contents]
 other = "Índice"
 

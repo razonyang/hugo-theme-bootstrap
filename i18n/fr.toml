@@ -124,6 +124,9 @@ other = "Séries"
 [settings]
 other = "Réglages"
 
+[social_codeberg]
+other = "Codeberg"
+
 [table_of_contents]
 other = "Sommaire"
 
