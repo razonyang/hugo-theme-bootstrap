@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.13.0](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.12.1...v1.13.0) (2025-03-12)
+
+
+### Features ✨
+
+* add support for Codeberg social link ([#1128](https://github.com/razonyang/hugo-theme-bootstrap/issues/1128)) ([71f1ace](https://github.com/razonyang/hugo-theme-bootstrap/commit/71f1acecb68fae3498d05ee2038ed33cb4437942)), closes [#1127](https://github.com/razonyang/hugo-theme-bootstrap/issues/1127)
+
 ## [1.12.1](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.12.0...v1.12.1) (2025-02-24)
 
 
