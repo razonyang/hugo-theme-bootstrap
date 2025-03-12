@@ -311,6 +311,9 @@ other = "Bilibili"
 [social_bitbucket]
 other = "Bitbucket"
 
+[social_codeberg]
+other = "Codeberg"
+
 [social_discord]
 other = "Discord"
 

@@ -305,6 +305,7 @@ reduceFontSize = true
 
 # Set socialColor as false to disable the color.
 [social]
+#codeberg = "yourcodebergusername"
 email = "user@domain.tld"
 # facebook = "yourfacebookusername"
 github = "razonyang/hugo-theme-bootstrap"

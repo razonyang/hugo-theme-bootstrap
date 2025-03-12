@@ -200,6 +200,9 @@ other = "Seri"
 [settings]
 other = "Pengaturan"
 
+[social_codeberg]
+other = "Codeberg"
+
 [table_of_contents]
 other = "Konten"
 
