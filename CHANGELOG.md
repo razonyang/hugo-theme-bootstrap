@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.13.1](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.13.0...v1.13.1) (2025-03-15)
+
+
+### Bug Fixes 🐞
+
+* allow using negative number as navWeight ([#1131](https://github.com/razonyang/hugo-theme-bootstrap/issues/1131)) ([fba06f2](https://github.com/razonyang/hugo-theme-bootstrap/commit/fba06f2ccc129cccfa023ce8da2cbf0c6bd24fef)), closes [#1130](https://github.com/razonyang/hugo-theme-bootstrap/issues/1130)
+* sorting docs navigation items in LinkTitle rather than Title ([fba06f2](https://github.com/razonyang/hugo-theme-bootstrap/commit/fba06f2ccc129cccfa023ce8da2cbf0c6bd24fef))
+
 ## [1.13.0](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.12.1...v1.13.0) (2025-03-12)
 
 
