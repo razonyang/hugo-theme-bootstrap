@@ -2,8 +2,8 @@
 {{- with .CurrentSection }}
   {{- $pages = .Pages }}
 {{- end }}
-{{- $sortedPages := sort (where $pages "Params.navWeight" ">" 0) "Params.navWeight" "desc" -}}
-{{- $pages = union $sortedPages (sort $pages "Title") -}}
+{{- $sortedPages := sort (where $pages "Params.navWeight" "ne" nil) "Params.navWeight" "desc" -}}
+{{- $pages = union $sortedPages (sort $pages "LinkTitle") -}}
 {{- $prev := false }}
 {{- $next := false }}
 {{- range $i, $page := $pages }}
