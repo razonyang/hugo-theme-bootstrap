@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.13.2](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.13.1...v1.13.2) (2025-04-17)
+
+
+### Bug Fixes 🐞
+
+* replace `template` syntax with `partial` for pagination ([#1137](https://github.com/razonyang/hugo-theme-bootstrap/issues/1137)) ([8d47749](https://github.com/razonyang/hugo-theme-bootstrap/commit/8d47749fb47bc7810049be8014911dee54a3eb7d))
+
 ## [1.13.1](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.13.0...v1.13.1) (2025-03-15)
 
 
