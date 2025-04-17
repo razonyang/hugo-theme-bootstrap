@@ -1,7 +1,7 @@
 [module]
 [module.hugoVersion]
 extended = true
-min = "0.134.0"
+min = "0.146.5"
 
 [params]
 sass_transpiler = "libsass" # dartsass is recommended, since libsass is deprecated.
