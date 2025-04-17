@@ -50,10 +50,8 @@ A detailed description of online IDE shortcodes, such as JSFiddle, CodePen, JSRu
 
 {{< jsrun "QG6Kp" >}}
 
-## Gist
+## Gist (Deprecated)
 
 ```markdown
 {{</* gist razonyang f82a9399c2f682df36432f0ef828c451 */>}}
 ```
-
-{{< gist razonyang f82a9399c2f682df36432f0ef828c451 >}}
