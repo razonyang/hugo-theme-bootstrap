@@ -62,42 +62,42 @@ github = "githubusername"
 
 > The value can be changed to a full URL if necessary.
 
-| Platform | User Identifier |
-|---|---|
-| `email` | Email Address |
-| `facebook` | Facebook Username |
-| `facebookgroup` | Facebook Group Name |
-| `github` | GitHub Username |
-| `gitlab` | GitLab Username |
-| `instagram` | Instagram Username |
-| `itchio` | itch.io Username |
-| `linkedin` | LinkedIn Username |
-| `quora` | Quora Username |
-| `stackoverflow` | Stack Overflow User ID |
-| `tumblr` | Tumblr Username |
-| `twitter` | Twitter Username |
-| `x` | X username |
-| `weibo` | Weibo Username |
-| `zhihu` | Zhihu Username |
-| `reddit` | Reddit Username |
-| `telegram` | Telegram Username |
-| `qq` | QQ Number |
-| `dockerhub` | Docker Hub Username |
-| `bitbucket` | Bitbucket Workspace ID |
-| `kaggle` | Kaggle Username |
-| `medium` | Medium Username or custom domain(e.g. https://razonyang.com) |
-| `lastfm` | Last.fm Username |
-| `bibibili` | BiliBili User ID |
-| `youtube` | Youtube Channel ID |
-| `discord` | Discord Invite Code |
-| `discourse` | Forum URL |
-| `tiktok` | TikTok Username |
-| `pinterest` | Pinterest Username |
-| `mastodon` | Mastodon Username |
-| `liberapay` | Liberapay Username |
-| `paypal` | Paypal Username |
-| `patreon` | Patreon Username |
-| `tipeee` | Tipeee Username |
-| `rss` | Empty string for disabling the RSS link |
-| `website` | Website URL |
-| `codeberg` | Codeberg Username |
+| Platform        | User Identifier                                              |
+| --------------- | ------------------------------------------------------------ |
+| `bibibili`      | BiliBili User ID                                             |
+| `bitbucket`     | Bitbucket Workspace ID                                       |
+| `codeberg`      | Codeberg Username                                            |
+| `discord`       | Discord Invite Code                                          |
+| `discourse`     | Forum URL                                                    |
+| `dockerhub`     | Docker Hub Username                                          |
+| `email`         | Email Address                                                |
+| `facebook`      | Facebook Username                                            |
+| `facebookgroup` | Facebook Group Name                                          |
+| `github`        | GitHub Username                                              |
+| `gitlab`        | GitLab Username                                              |
+| `instagram`     | Instagram Username                                           |
+| `itchio`        | itch.io Username                                             |
+| `kaggle`        | Kaggle Username                                              |
+| `lastfm`        | Last.fm Username                                             |
+| `liberapay`     | Liberapay Username                                           |
+| `linkedin`      | LinkedIn Username                                            |
+| `mastodon`      | Mastodon Username                                            |
+| `medium`        | Medium Username or custom domain(e.g. https://razonyang.com) |
+| `patreon`       | Patreon Username                                             |
+| `paypal`        | Paypal Username                                              |
+| `pinterest`     | Pinterest Username                                           |
+| `qq`            | QQ Number                                                    |
+| `quora`         | Quora Username                                               |
+| `reddit`        | Reddit Username                                              |
+| `rss`           | Empty string for disabling the RSS link                      |
+| `stackoverflow` | Stack Overflow User ID                                       |
+| `telegram`      | Telegram Username                                            |
+| `tiktok`        | TikTok Username                                              |
+| `tipeee`        | Tipeee Username                                              |
+| `tumblr`        | Tumblr Username                                              |
+| `twitter`       | Twitter Username                                             |
+| `website`       | Website URL                                                  |
+| `weibo`         | Weibo Username                                               |
+| `x`             | X username                                                   |
+| `youtube`       | Youtube Channel ID                                           |
+| `zhihu`         | Zhihu Username                                               |
