@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.13.3](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.13.2...v1.13.3) (2025-05-12)
+
+
+### Documentation 📝
+
+* sort social media table ([#1140](https://github.com/razonyang/hugo-theme-bootstrap/issues/1140)) ([37c7c85](https://github.com/razonyang/hugo-theme-bootstrap/commit/37c7c85d0023206be453c07a802675e95d5a9c36))
+
 ## [1.13.2](https://github.com/razonyang/hugo-theme-bootstrap/compare/v1.13.1...v1.13.2) (2025-04-17)
 
 
